@@ -1,0 +1,188 @@
+{
+  "metadata": {
+    "siteNumber": "0970",
+    "customerName": "Einstein Montgomery Hospital",
+    "customerID": "CUST-0970",
+    "contractEffectiveDate": "2025-05-23",
+    "contractEndDate": "",
+    "contractStatus": "active",
+    "lastModifiedDate": "2025-05-23",
+    "contractVersion": "1.0",
+    "contractType": "Fixed Fee; Per Labor Hour",
+    "accountManager": "Robert Weist",
+    "paymentTerms": "Due by 20th of the Month",
+    "notes": "2/1/25 New Contract. Monthly Fixed fee of $590.42 for Manager. PLH Rate: 16.73 OT rate 1.5 times",
+    "location": {
+      "region": NaN,
+      "district": "D - PA/Central New Jersey",
+      "state": "PA",
+      "city": "East Norriton",
+      "address": "555 West Germantown Pike, East Norriton, PA 19403",
+      "siteType": ""
+    }
+  },
+  "original": {
+    "id": "8e215d74-91d8-ef11-8eea-0022480a57ac",
+    "purchaseOrder": "P.O. # EMM0018010",
+    "paymentTerms": "Due by 20th of the Month",
+    "billingType": "Arrears",
+    "incrementMonth": "February",
+    "incrementAmount": 3.0,
+    "consumerPriceIndex": false,
+    "notes": "2/1/25 New Contract. Monthly Fixed fee of $590.42 for Manager. PLH Rate: 16.73 OT rate 1.5 times",
+    "deviationAmount": 2500.0,
+    "deviationPercentage": 10.0,
+    "deposits": false,
+    "contractType": "Per Labor Hour",
+    "supportingReports": [
+      "HoursBackupReport"
+    ],
+    "invoiceGrouping": {
+      "enabled": false,
+      "invoiceGroups": []
+    },
+    "fixedFee": {
+      "enabled": true,
+      "serviceRates": [
+        {
+          "id": "7ad52ba3-f8ea-ef11-be1f-7c1e5259f653",
+          "name": "Parking Management",
+          "displayName": "Parking Management",
+          "code": "4715",
+          "fee": 608.13,
+          "startDate": "2025-02-14T17:25:09",
+          "endDate": null,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "perLaborHour": {
+      "enabled": true,
+      "hoursBackupReport": true,
+      "jobRates": [
+        {
+          "id": "96c481d6-b7e0-ef11-a731-7c1e527e6e28",
+          "name": "Valet Services",
+          "displayName": "GSA",
+          "rate": 15.08,
+          "overtimeRate": 22.62,
+          "jobCode": "GSA",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "97c481d6-b7e0-ef11-a731-7c1e527e6e28",
+          "name": "Valet Services",
+          "displayName": "GSC",
+          "rate": 17.23,
+          "overtimeRate": 25.85,
+          "jobCode": "GSC",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "perOccupiedRoom": {
+      "enabled": false,
+      "roomRate": 0.0,
+      "invoiceGroup": 1
+    },
+    "revenueShare": {
+      "enabled": false,
+      "thresholdStructures": []
+    },
+    "bellServiceFee": {
+      "enabled": false,
+      "bellServices": []
+    },
+    "midMonthAdvance": {
+      "enabled": false,
+      "midMonthAdvances": []
+    },
+    "depositedRevenue": {
+      "enabled": false,
+      "depositData": []
+    },
+    "billableAccounts": {
+      "enabled": false,
+      "billableAccountsData": []
+    },
+    "managementAgreement": {
+      "enabled": false,
+      "ManagementFees": []
+    }
+  },
+  "flattened": {
+    "contract_id": "8e215d74-91d8-ef11-8eea-0022480a57ac",
+    "contract_purchaseOrder": "P.O. # EMM0018010",
+    "contract_paymentTerms": "Due by 20th of the Month",
+    "contract_billingType": "Arrears",
+    "contract_incrementMonth": "February",
+    "contract_incrementAmount": 3.0,
+    "contract_consumerPriceIndex": false,
+    "contract_notes": "2/1/25 New Contract. Monthly Fixed fee of $590.42 for Manager. PLH Rate: 16.73 OT rate 1.5 times",
+    "contract_deviationAmount": 2500.0,
+    "contract_deviationPercentage": 10.0,
+    "contract_deposits": false,
+    "contract_contractType": "Per Labor Hour",
+    "contract_supportingReports_1": "HoursBackupReport",
+    "contract_invoiceGrouping_enabled": false,
+    "contract_fixedFee_enabled": true,
+    "contract_fixedFee_serviceRates_1_id": "7ad52ba3-f8ea-ef11-be1f-7c1e5259f653",
+    "contract_fixedFee_serviceRates_1_name": "Parking Management",
+    "contract_fixedFee_serviceRates_1_displayName": "Parking Management",
+    "contract_fixedFee_serviceRates_1_code": "4715",
+    "contract_fixedFee_serviceRates_1_fee": 608.13,
+    "contract_fixedFee_serviceRates_1_startDate": "2025-02-14T17:25:09",
+    "contract_fixedFee_serviceRates_1_endDate": null,
+    "contract_fixedFee_serviceRates_1_invoiceGroup": 1,
+    "contract_perLaborHour_enabled": true,
+    "contract_perLaborHour_hoursBackupReport": true,
+    "contract_perLaborHour_jobRates_1_id": "96c481d6-b7e0-ef11-a731-7c1e527e6e28",
+    "contract_perLaborHour_jobRates_1_name": "Valet Services",
+    "contract_perLaborHour_jobRates_1_displayName": "GSA",
+    "contract_perLaborHour_jobRates_1_rate": 15.08,
+    "contract_perLaborHour_jobRates_1_overtimeRate": 22.62,
+    "contract_perLaborHour_jobRates_1_jobCode": "GSA",
+    "contract_perLaborHour_jobRates_1_startDate": null,
+    "contract_perLaborHour_jobRates_1_endDate": null,
+    "contract_perLaborHour_jobRates_1_invoiceGroup": 1,
+    "contract_perLaborHour_jobRates_2_id": "97c481d6-b7e0-ef11-a731-7c1e527e6e28",
+    "contract_perLaborHour_jobRates_2_name": "Valet Services",
+    "contract_perLaborHour_jobRates_2_displayName": "GSC",
+    "contract_perLaborHour_jobRates_2_rate": 17.23,
+    "contract_perLaborHour_jobRates_2_overtimeRate": 25.85,
+    "contract_perLaborHour_jobRates_2_jobCode": "GSC",
+    "contract_perLaborHour_jobRates_2_startDate": null,
+    "contract_perLaborHour_jobRates_2_endDate": null,
+    "contract_perLaborHour_jobRates_2_invoiceGroup": 1,
+    "contract_perOccupiedRoom_enabled": false,
+    "contract_perOccupiedRoom_roomRate": 0.0,
+    "contract_perOccupiedRoom_invoiceGroup": 1,
+    "contract_revenueShare_enabled": false,
+    "contract_bellServiceFee_enabled": false,
+    "contract_midMonthAdvance_enabled": false,
+    "contract_depositedRevenue_enabled": false,
+    "contract_billableAccounts_enabled": false,
+    "contract_managementAgreement_enabled": false,
+    "contract_enabled_components": [
+      "fixedFee",
+      "perLaborHour"
+    ],
+    "contract_payroll_accounts_enabled": [],
+    "contract_expense_accounts_enabled": [],
+    "contract_financials": {
+      "annualContractValue": 0.0,
+      "estimatedMonthlyRevenue": 0.0,
+      "contractTerm": 36,
+      "contractTermUnit": "Months",
+      "contractType": "Fixed Fee; Per Labor Hour",
+      "billingType": "Arrears",
+      "district": "D - PA/Central New Jersey",
+      "region": NaN,
+      "siteNumber": "0970"
+    }
+  }
+}

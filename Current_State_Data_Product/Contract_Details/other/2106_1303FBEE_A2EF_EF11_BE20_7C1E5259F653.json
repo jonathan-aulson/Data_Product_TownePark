@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "siteNumber": "2106",
+    "customerName": "Gaylord Opryland Bell",
+    "customerID": "CUST-2106",
+    "contractEffectiveDate": "2025-05-23",
+    "contractEndDate": "",
+    "contractStatus": "active",
+    "lastModifiedDate": "2025-05-23",
+    "contractVersion": "1.0",
+    "contractType": "Per Occupied Room; Bell Service",
+    "accountManager": "Ryan Wood",
+    "paymentTerms": "Due in 30 Days",
+    "notes": "1/1 annual increase per occupied room - see setup tab for changes\n1/1/24 New contract executed March 2025. 2025 fee is 1.39 and increases every year by $0.04 on 1/1.",
+    "location": {
+      "region": NaN,
+      "district": "D - Nashville",
+      "state": "TN",
+      "city": "Nashville",
+      "address": "2800 Opryland Drive, Nashville, TN 37214",
+      "siteType": ""
+    }
+  },
+  "original": {
+    "id": "1403fbee-a2ef-ef11-be20-7c1e5259f653",
+    "purchaseOrder": null,
+    "paymentTerms": "Due in 30 Days",
+    "billingType": "Arrears",
+    "incrementMonth": "January",
+    "incrementAmount": 0.0,
+    "consumerPriceIndex": false,
+    "notes": "1/1 annual increase per occupied room - see setup tab for changes\n1/1/24 New contract executed March 2025. 2025 fee is 1.39 and increases every year by $0.04 on 1/1.",
+    "deviationAmount": 2500.0,
+    "deviationPercentage": 10.0,
+    "deposits": false,
+    "contractType": "Other",
+    "supportingReports": [],
+    "invoiceGrouping": {
+      "enabled": false,
+      "invoiceGroups": []
+    },
+    "fixedFee": {
+      "enabled": false,
+      "serviceRates": []
+    },
+    "perLaborHour": {
+      "enabled": false,
+      "hoursBackupReport": true,
+      "jobRates": []
+    },
+    "perOccupiedRoom": {
+      "enabled": true,
+      "roomRate": 1.39,
+      "invoiceGroup": 1
+    },
+    "revenueShare": {
+      "enabled": false,
+      "thresholdStructures": []
+    },
+    "bellServiceFee": {
+      "enabled": true,
+      "bellServices": [
+        {
+          "id": "cc360a19-a3ef-ef11-be20-7c1e5259f653",
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "midMonthAdvance": {
+      "enabled": false,
+      "midMonthAdvances": []
+    },
+    "depositedRevenue": {
+      "enabled": false,
+      "depositData": []
+    },
+    "billableAccounts": {
+      "enabled": false,
+      "billableAccountsData": []
+    },
+    "managementAgreement": {
+      "enabled": false,
+      "ManagementFees": []
+    }
+  },
+  "flattened": {
+    "contract_id": "1403fbee-a2ef-ef11-be20-7c1e5259f653",
+    "contract_purchaseOrder": null,
+    "contract_paymentTerms": "Due in 30 Days",
+    "contract_billingType": "Arrears",
+    "contract_incrementMonth": "January",
+    "contract_incrementAmount": 0.0,
+    "contract_consumerPriceIndex": false,
+    "contract_notes": "1/1 annual increase per occupied room - see setup tab for changes\n1/1/24 New contract executed March 2025. 2025 fee is 1.39 and increases every year by $0.04 on 1/1.",
+    "contract_deviationAmount": 2500.0,
+    "contract_deviationPercentage": 10.0,
+    "contract_deposits": false,
+    "contract_contractType": "Other",
+    "contract_invoiceGrouping_enabled": false,
+    "contract_fixedFee_enabled": false,
+    "contract_perLaborHour_enabled": false,
+    "contract_perLaborHour_hoursBackupReport": true,
+    "contract_perOccupiedRoom_enabled": true,
+    "contract_perOccupiedRoom_roomRate": 1.39,
+    "contract_perOccupiedRoom_invoiceGroup": 1,
+    "contract_revenueShare_enabled": false,
+    "contract_bellServiceFee_enabled": true,
+    "contract_bellServiceFee_bellServices_1_id": "cc360a19-a3ef-ef11-be20-7c1e5259f653",
+    "contract_bellServiceFee_bellServices_1_invoiceGroup": 1,
+    "contract_midMonthAdvance_enabled": false,
+    "contract_depositedRevenue_enabled": false,
+    "contract_billableAccounts_enabled": false,
+    "contract_managementAgreement_enabled": false,
+    "contract_enabled_components": [
+      "perOccupiedRoom",
+      "bellServiceFee"
+    ],
+    "contract_payroll_accounts_enabled": [],
+    "contract_expense_accounts_enabled": [],
+    "contract_financials": {
+      "annualContractValue": 0.0,
+      "estimatedMonthlyRevenue": 0.0,
+      "contractTerm": 36,
+      "contractTermUnit": "Months",
+      "contractType": "Per Occupied Room; Bell Service",
+      "billingType": "Arrears",
+      "district": "D - Nashville",
+      "region": NaN,
+      "siteNumber": "2106"
+    }
+  }
+}

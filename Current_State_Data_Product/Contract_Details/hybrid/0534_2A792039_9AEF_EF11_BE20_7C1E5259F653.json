@@ -1,0 +1,165 @@
+{
+  "metadata": {
+    "siteNumber": "0534",
+    "customerName": "Nebraska Methodist Hospital",
+    "customerID": "CUST-0534",
+    "contractEffectiveDate": "2025-05-23",
+    "contractEndDate": "",
+    "contractStatus": "active",
+    "lastModifiedDate": "2025-05-23",
+    "contractVersion": "1.0",
+    "contractType": "Fixed Fee; Per Labor Hour",
+    "accountManager": "Rosalind Kumar",
+    "paymentTerms": "Due in 30 Days",
+    "notes": NaN,
+    "location": {
+      "region": NaN,
+      "district": "D - Kansas City",
+      "state": "NE",
+      "city": "Omaha",
+      "address": "8303 Dodge Street, Omaha, NE 68114",
+      "siteType": ""
+    }
+  },
+  "original": {
+    "id": "2b792039-9aef-ef11-be20-7c1e5259f653",
+    "purchaseOrder": null,
+    "paymentTerms": "Due in 30 Days",
+    "billingType": "Arrears",
+    "incrementMonth": "January",
+    "incrementAmount": 0.0,
+    "consumerPriceIndex": false,
+    "notes": null,
+    "deviationAmount": 2500.0,
+    "deviationPercentage": 10.0,
+    "deposits": false,
+    "contractType": "Fixed Fee",
+    "supportingReports": [],
+    "invoiceGrouping": {
+      "enabled": false,
+      "invoiceGroups": []
+    },
+    "fixedFee": {
+      "enabled": true,
+      "serviceRates": [
+        {
+          "id": "2d399c6f-9aef-ef11-be20-7c1e5259f653",
+          "name": "Valet Services",
+          "displayName": "Valet Services",
+          "code": "4700",
+          "fee": 38642.0,
+          "startDate": "2025-02-20T14:53:29",
+          "endDate": null,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "perLaborHour": {
+      "enabled": true,
+      "hoursBackupReport": true,
+      "jobRates": [
+        {
+          "id": "2f399c6f-9aef-ef11-be20-7c1e5259f653",
+          "name": "Valet Services",
+          "displayName": "Additional Services",
+          "rate": 19.95,
+          "overtimeRate": 19.95,
+          "jobCode": "GSA3",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "perOccupiedRoom": {
+      "enabled": false,
+      "roomRate": 0.0,
+      "invoiceGroup": 1
+    },
+    "revenueShare": {
+      "enabled": false,
+      "thresholdStructures": []
+    },
+    "bellServiceFee": {
+      "enabled": false,
+      "bellServices": []
+    },
+    "midMonthAdvance": {
+      "enabled": false,
+      "midMonthAdvances": []
+    },
+    "depositedRevenue": {
+      "enabled": false,
+      "depositData": []
+    },
+    "billableAccounts": {
+      "enabled": false,
+      "billableAccountsData": []
+    },
+    "managementAgreement": {
+      "enabled": false,
+      "ManagementFees": []
+    }
+  },
+  "flattened": {
+    "contract_id": "2b792039-9aef-ef11-be20-7c1e5259f653",
+    "contract_purchaseOrder": null,
+    "contract_paymentTerms": "Due in 30 Days",
+    "contract_billingType": "Arrears",
+    "contract_incrementMonth": "January",
+    "contract_incrementAmount": 0.0,
+    "contract_consumerPriceIndex": false,
+    "contract_notes": null,
+    "contract_deviationAmount": 2500.0,
+    "contract_deviationPercentage": 10.0,
+    "contract_deposits": false,
+    "contract_contractType": "Fixed Fee",
+    "contract_invoiceGrouping_enabled": false,
+    "contract_fixedFee_enabled": true,
+    "contract_fixedFee_serviceRates_1_id": "2d399c6f-9aef-ef11-be20-7c1e5259f653",
+    "contract_fixedFee_serviceRates_1_name": "Valet Services",
+    "contract_fixedFee_serviceRates_1_displayName": "Valet Services",
+    "contract_fixedFee_serviceRates_1_code": "4700",
+    "contract_fixedFee_serviceRates_1_fee": 38642.0,
+    "contract_fixedFee_serviceRates_1_startDate": "2025-02-20T14:53:29",
+    "contract_fixedFee_serviceRates_1_endDate": null,
+    "contract_fixedFee_serviceRates_1_invoiceGroup": 1,
+    "contract_perLaborHour_enabled": true,
+    "contract_perLaborHour_hoursBackupReport": true,
+    "contract_perLaborHour_jobRates_1_id": "2f399c6f-9aef-ef11-be20-7c1e5259f653",
+    "contract_perLaborHour_jobRates_1_name": "Valet Services",
+    "contract_perLaborHour_jobRates_1_displayName": "Additional Services",
+    "contract_perLaborHour_jobRates_1_rate": 19.95,
+    "contract_perLaborHour_jobRates_1_overtimeRate": 19.95,
+    "contract_perLaborHour_jobRates_1_jobCode": "GSA3",
+    "contract_perLaborHour_jobRates_1_startDate": null,
+    "contract_perLaborHour_jobRates_1_endDate": null,
+    "contract_perLaborHour_jobRates_1_invoiceGroup": 1,
+    "contract_perOccupiedRoom_enabled": false,
+    "contract_perOccupiedRoom_roomRate": 0.0,
+    "contract_perOccupiedRoom_invoiceGroup": 1,
+    "contract_revenueShare_enabled": false,
+    "contract_bellServiceFee_enabled": false,
+    "contract_midMonthAdvance_enabled": false,
+    "contract_depositedRevenue_enabled": false,
+    "contract_billableAccounts_enabled": false,
+    "contract_managementAgreement_enabled": false,
+    "contract_enabled_components": [
+      "fixedFee",
+      "perLaborHour"
+    ],
+    "contract_payroll_accounts_enabled": [],
+    "contract_expense_accounts_enabled": [],
+    "contract_financials": {
+      "annualContractValue": 0.0,
+      "estimatedMonthlyRevenue": 0.0,
+      "contractTerm": 36,
+      "contractTermUnit": "Months",
+      "contractType": "Fixed Fee; Per Labor Hour",
+      "billingType": "Arrears",
+      "district": "D - Kansas City",
+      "region": NaN,
+      "siteNumber": "0534"
+    }
+  }
+}

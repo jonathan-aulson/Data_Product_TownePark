@@ -1,0 +1,179 @@
+{
+  "metadata": {
+    "siteNumber": "0500",
+    "customerName": "Mercy Medical Center - Cedar Rapids",
+    "customerID": "CUST-0500",
+    "contractEffectiveDate": "2025-05-23",
+    "contractEndDate": "",
+    "contractStatus": "active",
+    "lastModifiedDate": "2025-05-23",
+    "contractVersion": "1.0",
+    "contractType": "Fixed Fee",
+    "accountManager": "Bronson Lovan",
+    "paymentTerms": "Due in 30 Days",
+    "notes": "3% increase every 6/1",
+    "location": {
+      "region": NaN,
+      "district": "D - Kansas City",
+      "state": "IA",
+      "city": "Cedar Rapids",
+      "address": "701 10th Street SE, Cedar Rapids, IA 52403",
+      "siteType": ""
+    }
+  },
+  "original": {
+    "id": "465f46f8-90d8-ef11-8eea-0022480a57ac",
+    "purchaseOrder": "PO10002648",
+    "paymentTerms": "Due in 30 Days",
+    "billingType": "Advanced",
+    "incrementMonth": "June",
+    "incrementAmount": 3.0,
+    "consumerPriceIndex": false,
+    "notes": "3% increase every 6/1",
+    "deviationAmount": 2500.0,
+    "deviationPercentage": 10.0,
+    "deposits": false,
+    "contractType": "Fixed Fee",
+    "supportingReports": [],
+    "invoiceGrouping": {
+      "enabled": false,
+      "invoiceGroups": []
+    },
+    "fixedFee": {
+      "enabled": true,
+      "serviceRates": [
+        {
+          "id": "db639b55-8825-f011-8c4e-7c1e5259f653",
+          "name": "Valet Services",
+          "displayName": "Valet - Lundy Pavilion Entrance",
+          "code": "4700",
+          "fee": 3832.51,
+          "startDate": "2025-05-01T00:00:00",
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "4dc4c55b-8825-f011-8c4e-7c1e5259f653",
+          "name": "Valet Services",
+          "displayName": "Valet - Heart Center",
+          "code": "4700",
+          "fee": 7646.97,
+          "startDate": "2025-05-01T00:00:00",
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "62c4c55b-8825-f011-8c4e-7c1e5259f653",
+          "name": "Valet Services",
+          "displayName": "Valet - Hall Perrine Cancer Center",
+          "code": "4700",
+          "fee": 11498.03,
+          "startDate": "2025-05-01T00:00:00",
+          "endDate": null,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "perLaborHour": {
+      "enabled": false,
+      "hoursBackupReport": false,
+      "jobRates": []
+    },
+    "perOccupiedRoom": {
+      "enabled": false,
+      "roomRate": 0.0,
+      "invoiceGroup": 1
+    },
+    "revenueShare": {
+      "enabled": false,
+      "thresholdStructures": []
+    },
+    "bellServiceFee": {
+      "enabled": false,
+      "bellServices": []
+    },
+    "midMonthAdvance": {
+      "enabled": false,
+      "midMonthAdvances": []
+    },
+    "depositedRevenue": {
+      "enabled": false,
+      "depositData": []
+    },
+    "billableAccounts": {
+      "enabled": false,
+      "billableAccountsData": []
+    },
+    "managementAgreement": {
+      "enabled": false,
+      "ManagementFees": []
+    }
+  },
+  "flattened": {
+    "contract_id": "465f46f8-90d8-ef11-8eea-0022480a57ac",
+    "contract_purchaseOrder": "PO10002648",
+    "contract_paymentTerms": "Due in 30 Days",
+    "contract_billingType": "Advanced",
+    "contract_incrementMonth": "June",
+    "contract_incrementAmount": 3.0,
+    "contract_consumerPriceIndex": false,
+    "contract_notes": "3% increase every 6/1",
+    "contract_deviationAmount": 2500.0,
+    "contract_deviationPercentage": 10.0,
+    "contract_deposits": false,
+    "contract_contractType": "Fixed Fee",
+    "contract_invoiceGrouping_enabled": false,
+    "contract_fixedFee_enabled": true,
+    "contract_fixedFee_serviceRates_1_id": "db639b55-8825-f011-8c4e-7c1e5259f653",
+    "contract_fixedFee_serviceRates_1_name": "Valet Services",
+    "contract_fixedFee_serviceRates_1_displayName": "Valet - Lundy Pavilion Entrance",
+    "contract_fixedFee_serviceRates_1_code": "4700",
+    "contract_fixedFee_serviceRates_1_fee": 3832.51,
+    "contract_fixedFee_serviceRates_1_startDate": "2025-05-01T00:00:00",
+    "contract_fixedFee_serviceRates_1_endDate": null,
+    "contract_fixedFee_serviceRates_1_invoiceGroup": 1,
+    "contract_fixedFee_serviceRates_2_id": "4dc4c55b-8825-f011-8c4e-7c1e5259f653",
+    "contract_fixedFee_serviceRates_2_name": "Valet Services",
+    "contract_fixedFee_serviceRates_2_displayName": "Valet - Heart Center",
+    "contract_fixedFee_serviceRates_2_code": "4700",
+    "contract_fixedFee_serviceRates_2_fee": 7646.97,
+    "contract_fixedFee_serviceRates_2_startDate": "2025-05-01T00:00:00",
+    "contract_fixedFee_serviceRates_2_endDate": null,
+    "contract_fixedFee_serviceRates_2_invoiceGroup": 1,
+    "contract_fixedFee_serviceRates_3_id": "62c4c55b-8825-f011-8c4e-7c1e5259f653",
+    "contract_fixedFee_serviceRates_3_name": "Valet Services",
+    "contract_fixedFee_serviceRates_3_displayName": "Valet - Hall Perrine Cancer Center",
+    "contract_fixedFee_serviceRates_3_code": "4700",
+    "contract_fixedFee_serviceRates_3_fee": 11498.03,
+    "contract_fixedFee_serviceRates_3_startDate": "2025-05-01T00:00:00",
+    "contract_fixedFee_serviceRates_3_endDate": null,
+    "contract_fixedFee_serviceRates_3_invoiceGroup": 1,
+    "contract_perLaborHour_enabled": false,
+    "contract_perLaborHour_hoursBackupReport": false,
+    "contract_perOccupiedRoom_enabled": false,
+    "contract_perOccupiedRoom_roomRate": 0.0,
+    "contract_perOccupiedRoom_invoiceGroup": 1,
+    "contract_revenueShare_enabled": false,
+    "contract_bellServiceFee_enabled": false,
+    "contract_midMonthAdvance_enabled": false,
+    "contract_depositedRevenue_enabled": false,
+    "contract_billableAccounts_enabled": false,
+    "contract_managementAgreement_enabled": false,
+    "contract_enabled_components": [
+      "fixedFee"
+    ],
+    "contract_payroll_accounts_enabled": [],
+    "contract_expense_accounts_enabled": [],
+    "contract_financials": {
+      "annualContractValue": 0.0,
+      "estimatedMonthlyRevenue": 0.0,
+      "contractTerm": 36,
+      "contractTermUnit": "Months",
+      "contractType": "Fixed Fee",
+      "billingType": "Advanced",
+      "district": "D - Kansas City",
+      "region": NaN,
+      "siteNumber": "0500"
+    }
+  }
+}

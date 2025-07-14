@@ -1,0 +1,299 @@
+{
+  "metadata": {
+    "siteNumber": "0429",
+    "customerName": "Anaheim Marriott",
+    "customerID": "CUST-0429",
+    "contractEffectiveDate": "2025-05-23",
+    "contractEndDate": "",
+    "contractStatus": "active",
+    "lastModifiedDate": "2025-05-23",
+    "contractVersion": "1.0",
+    "contractType": "Per Labor Hour; Invoice Grouping; Revenue Share; Mid Month Advance; Deposited Revenue",
+    "accountManager": "Edgar Islas",
+    "paymentTerms": "Due in 30 Days",
+    "notes": "Bell PLH rate increases 2.5% on 1/1\n4/1/25 rate was never increased in 2024, catching it up. Increasing to $24.84.",
+    "location": {
+      "region": NaN,
+      "district": "D - Orange County",
+      "state": "CA",
+      "city": "Anaheim",
+      "address": "700 West Convention Way, Anaheim, CA 92802",
+      "siteType": ""
+    }
+  },
+  "original": {
+    "id": "8cf43664-d9ee-ef11-be20-7c1e5259f653",
+    "purchaseOrder": null,
+    "paymentTerms": "Due in 30 Days",
+    "billingType": "Arrears",
+    "incrementMonth": "January",
+    "incrementAmount": 0.0,
+    "consumerPriceIndex": false,
+    "notes": "Bell PLH rate increases 2.5% on 1/1\n4/1/25 rate was never increased in 2024, catching it up. Increasing to $24.84.",
+    "deviationAmount": 2500.0,
+    "deviationPercentage": 10.0,
+    "deposits": false,
+    "contractType": "Revenue Share",
+    "supportingReports": [
+      "MixOfSales",
+      "ParkingDepartmentReport",
+      "ValidationReport"
+    ],
+    "invoiceGrouping": {
+      "enabled": true,
+      "invoiceGroups": [
+        {
+          "id": "f8da15f5-d9ee-ef11-be20-7c1e5259f653",
+          "groupNumber": 1,
+          "title": "Rev Share",
+          "description": null,
+          "vendorId": null,
+          "siteNumber": null,
+          "customerName": null,
+          "billingContactEmails": null
+        },
+        {
+          "id": "fada15f5-d9ee-ef11-be20-7c1e5259f653",
+          "groupNumber": 2,
+          "title": "PLH",
+          "description": null,
+          "vendorId": null,
+          "siteNumber": null,
+          "customerName": null,
+          "billingContactEmails": null
+        }
+      ]
+    },
+    "fixedFee": {
+      "enabled": false,
+      "serviceRates": []
+    },
+    "perLaborHour": {
+      "enabled": true,
+      "hoursBackupReport": true,
+      "jobRates": [
+        {
+          "id": "f5da15f5-d9ee-ef11-be20-7c1e5259f653",
+          "name": "Bell",
+          "displayName": "Bell",
+          "rate": 24.84,
+          "overtimeRate": 24.84,
+          "jobCode": "BELL",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 2
+        },
+        {
+          "id": "f6da15f5-d9ee-ef11-be20-7c1e5259f653",
+          "name": "Concierge",
+          "displayName": "Room Steward",
+          "rate": 26.0,
+          "overtimeRate": 32.5,
+          "jobCode": "ROOMSTEW",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 2
+        }
+      ]
+    },
+    "perOccupiedRoom": {
+      "enabled": false,
+      "roomRate": 0.0,
+      "invoiceGroup": 1
+    },
+    "revenueShare": {
+      "enabled": true,
+      "thresholdStructures": [
+        {
+          "id": "fbda15f5-d9ee-ef11-be20-7c1e5259f653",
+          "revenueCodes": [
+            "ADJ",
+            "OR1",
+            "OR2",
+            "SD1",
+            "SD2",
+            "SD3",
+            "SM1",
+            "SM2",
+            "SM3",
+            "SO1",
+            "SO2",
+            "SO3",
+            "VD1",
+            "VD2",
+            "VD3",
+            "VM1",
+            "VM2",
+            "VM3",
+            "VO1",
+            "VO2",
+            "VO3"
+          ],
+          "accumulationType": "Monthly",
+          "tiers": [
+            {
+              "sharePercentage": 24.0,
+              "amount": 0.0
+            }
+          ],
+          "validationThresholdType": "RevenuePercentage",
+          "validationThresholdAmount": 3.0,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "bellServiceFee": {
+      "enabled": false,
+      "bellServices": []
+    },
+    "midMonthAdvance": {
+      "enabled": true,
+      "midMonthAdvances": [
+        {
+          "id": "f1da15f5-d9ee-ef11-be20-7c1e5259f653",
+          "amount": 30000.0,
+          "lineTitle": "MidMonthBilling",
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "depositedRevenue": {
+      "enabled": true,
+      "depositData": [
+        {
+          "id": "f4da15f5-d9ee-ef11-be20-7c1e5259f653",
+          "towneParkResponsibleForParkingTax": false,
+          "depositedRevenueEnabled": true,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "billableAccounts": {
+      "enabled": false,
+      "billableAccountsData": []
+    },
+    "managementAgreement": {
+      "enabled": false,
+      "ManagementFees": []
+    }
+  },
+  "flattened": {
+    "contract_id": "8cf43664-d9ee-ef11-be20-7c1e5259f653",
+    "contract_purchaseOrder": null,
+    "contract_paymentTerms": "Due in 30 Days",
+    "contract_billingType": "Arrears",
+    "contract_incrementMonth": "January",
+    "contract_incrementAmount": 0.0,
+    "contract_consumerPriceIndex": false,
+    "contract_notes": "Bell PLH rate increases 2.5% on 1/1\n4/1/25 rate was never increased in 2024, catching it up. Increasing to $24.84.",
+    "contract_deviationAmount": 2500.0,
+    "contract_deviationPercentage": 10.0,
+    "contract_deposits": false,
+    "contract_contractType": "Revenue Share",
+    "contract_supportingReports_1": "MixOfSales",
+    "contract_supportingReports_2": "ParkingDepartmentReport",
+    "contract_supportingReports_3": "ValidationReport",
+    "contract_invoiceGrouping_enabled": true,
+    "contract_invoiceGrouping_invoiceGroups_1_id": "f8da15f5-d9ee-ef11-be20-7c1e5259f653",
+    "contract_invoiceGrouping_invoiceGroups_1_groupNumber": 1,
+    "contract_invoiceGrouping_invoiceGroups_1_title": "Rev Share",
+    "contract_invoiceGrouping_invoiceGroups_1_description": null,
+    "contract_invoiceGrouping_invoiceGroups_1_vendorId": null,
+    "contract_invoiceGrouping_invoiceGroups_1_siteNumber": null,
+    "contract_invoiceGrouping_invoiceGroups_1_customerName": null,
+    "contract_invoiceGrouping_invoiceGroups_1_billingContactEmails": null,
+    "contract_invoiceGrouping_invoiceGroups_2_id": "fada15f5-d9ee-ef11-be20-7c1e5259f653",
+    "contract_invoiceGrouping_invoiceGroups_2_groupNumber": 2,
+    "contract_invoiceGrouping_invoiceGroups_2_title": "PLH",
+    "contract_invoiceGrouping_invoiceGroups_2_description": null,
+    "contract_invoiceGrouping_invoiceGroups_2_vendorId": null,
+    "contract_invoiceGrouping_invoiceGroups_2_siteNumber": null,
+    "contract_invoiceGrouping_invoiceGroups_2_customerName": null,
+    "contract_invoiceGrouping_invoiceGroups_2_billingContactEmails": null,
+    "contract_fixedFee_enabled": false,
+    "contract_perLaborHour_enabled": true,
+    "contract_perLaborHour_hoursBackupReport": true,
+    "contract_perLaborHour_jobRates_1_id": "f5da15f5-d9ee-ef11-be20-7c1e5259f653",
+    "contract_perLaborHour_jobRates_1_name": "Bell",
+    "contract_perLaborHour_jobRates_1_displayName": "Bell",
+    "contract_perLaborHour_jobRates_1_rate": 24.84,
+    "contract_perLaborHour_jobRates_1_overtimeRate": 24.84,
+    "contract_perLaborHour_jobRates_1_jobCode": "BELL",
+    "contract_perLaborHour_jobRates_1_startDate": null,
+    "contract_perLaborHour_jobRates_1_endDate": null,
+    "contract_perLaborHour_jobRates_1_invoiceGroup": 2,
+    "contract_perLaborHour_jobRates_2_id": "f6da15f5-d9ee-ef11-be20-7c1e5259f653",
+    "contract_perLaborHour_jobRates_2_name": "Concierge",
+    "contract_perLaborHour_jobRates_2_displayName": "Room Steward",
+    "contract_perLaborHour_jobRates_2_rate": 26.0,
+    "contract_perLaborHour_jobRates_2_overtimeRate": 32.5,
+    "contract_perLaborHour_jobRates_2_jobCode": "ROOMSTEW",
+    "contract_perLaborHour_jobRates_2_startDate": null,
+    "contract_perLaborHour_jobRates_2_endDate": null,
+    "contract_perLaborHour_jobRates_2_invoiceGroup": 2,
+    "contract_perOccupiedRoom_enabled": false,
+    "contract_perOccupiedRoom_roomRate": 0.0,
+    "contract_perOccupiedRoom_invoiceGroup": 1,
+    "contract_revenueShare_enabled": true,
+    "contract_revenueShare_thresholdStructures_1_id": "fbda15f5-d9ee-ef11-be20-7c1e5259f653",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_1": "ADJ",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_2": "OR1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_3": "OR2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_4": "SD1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_5": "SD2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_6": "SD3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_7": "SM1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_8": "SM2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_9": "SM3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_10": "SO1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_11": "SO2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_12": "SO3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_13": "VD1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_14": "VD2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_15": "VD3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_16": "VM1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_17": "VM2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_18": "VM3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_19": "VO1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_20": "VO2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_21": "VO3",
+    "contract_revenueShare_thresholdStructures_1_accumulationType": "Monthly",
+    "contract_revenueShare_thresholdStructures_1_tiers_1_sharePercentage": 24.0,
+    "contract_revenueShare_thresholdStructures_1_tiers_1_amount": 0.0,
+    "contract_revenueShare_thresholdStructures_1_validationThresholdType": "RevenuePercentage",
+    "contract_revenueShare_thresholdStructures_1_validationThresholdAmount": 3.0,
+    "contract_revenueShare_thresholdStructures_1_invoiceGroup": 1,
+    "contract_bellServiceFee_enabled": false,
+    "contract_midMonthAdvance_enabled": true,
+    "contract_midMonthAdvance_midMonthAdvances_1_id": "f1da15f5-d9ee-ef11-be20-7c1e5259f653",
+    "contract_midMonthAdvance_midMonthAdvances_1_amount": 30000.0,
+    "contract_midMonthAdvance_midMonthAdvances_1_lineTitle": "MidMonthBilling",
+    "contract_midMonthAdvance_midMonthAdvances_1_invoiceGroup": 1,
+    "contract_depositedRevenue_enabled": true,
+    "contract_depositedRevenue_depositData_1_id": "f4da15f5-d9ee-ef11-be20-7c1e5259f653",
+    "contract_depositedRevenue_depositData_1_towneParkResponsibleForParkingTax": false,
+    "contract_depositedRevenue_depositData_1_depositedRevenueEnabled": true,
+    "contract_depositedRevenue_depositData_1_invoiceGroup": 1,
+    "contract_billableAccounts_enabled": false,
+    "contract_managementAgreement_enabled": false,
+    "contract_enabled_components": [
+      "perLaborHour",
+      "revenueShare",
+      "midMonthAdvance",
+      "depositedRevenue"
+    ],
+    "contract_payroll_accounts_enabled": [],
+    "contract_expense_accounts_enabled": [],
+    "contract_financials": {
+      "annualContractValue": 0.0,
+      "estimatedMonthlyRevenue": 0.0,
+      "contractTerm": 36,
+      "contractTermUnit": "Months",
+      "contractType": "Per Labor Hour; Invoice Grouping; Revenue Share; Mid Month Advance; Deposited Revenue",
+      "billingType": "Arrears",
+      "district": "D - Orange County",
+      "region": NaN,
+      "siteNumber": "0429"
+    }
+  }
+}

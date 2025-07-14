@@ -1,0 +1,208 @@
+{
+  "metadata": {
+    "siteNumber": "0338",
+    "customerName": "Baltimore Washington Medical Center",
+    "customerID": "CUST-0338",
+    "contractEffectiveDate": "2025-05-23",
+    "contractEndDate": "",
+    "contractStatus": "active",
+    "lastModifiedDate": "2025-05-23",
+    "contractVersion": "1.0",
+    "contractType": "Fixed Fee; Per Labor Hour",
+    "accountManager": "Kevin Marks",
+    "paymentTerms": "Due in 45 Days",
+    "notes": "Service fee increases by 3% OR ECI annually as of anniversary date (7/1)",
+    "location": {
+      "region": NaN,
+      "district": "D - Annapolis",
+      "state": "MD",
+      "city": "Glen Burnie",
+      "address": "301 Hospital Drive, Glen Burnie, MD 21061",
+      "siteType": ""
+    }
+  },
+  "original": {
+    "id": "602ea9dc-90d8-ef11-8eea-0022480a57ac",
+    "purchaseOrder": "777024746",
+    "paymentTerms": "Due in 45 Days",
+    "billingType": "Arrears",
+    "incrementMonth": "July",
+    "incrementAmount": 3.0,
+    "consumerPriceIndex": false,
+    "notes": "Service fee increases by 3% OR ECI annually as of anniversary date (7/1)",
+    "deviationAmount": 2500.0,
+    "deviationPercentage": 10.0,
+    "deposits": false,
+    "contractType": "Per Labor Hour",
+    "supportingReports": [
+      "HoursBackupReport"
+    ],
+    "invoiceGrouping": {
+      "enabled": false,
+      "invoiceGroups": []
+    },
+    "fixedFee": {
+      "enabled": true,
+      "serviceRates": [
+        {
+          "id": "2adbf7b0-b7e0-ef11-a730-002248251de6",
+          "name": "Parking Management",
+          "displayName": "Account Manager Fee",
+          "code": "4715",
+          "fee": 7096.27,
+          "startDate": "2025-01-27T15:44:05",
+          "endDate": null,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "perLaborHour": {
+      "enabled": true,
+      "hoursBackupReport": true,
+      "jobRates": [
+        {
+          "id": "f6f2f4b6-b7e0-ef11-a730-002248251de6",
+          "name": "Valet Services",
+          "displayName": "GSA",
+          "rate": 25.03,
+          "overtimeRate": 37.55,
+          "jobCode": "GSA",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "f8f2f4b6-b7e0-ef11-a730-002248251de6",
+          "name": "Valet Services",
+          "displayName": "GSC",
+          "rate": 25.03,
+          "overtimeRate": 37.55,
+          "jobCode": "GSC",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "5079a1ae-02e3-ef11-a730-002248251de6",
+          "name": "Valet Services",
+          "displayName": "Additional GSA",
+          "rate": 25.03,
+          "overtimeRate": 37.55,
+          "jobCode": "GARAGE",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "perOccupiedRoom": {
+      "enabled": false,
+      "roomRate": 0.0,
+      "invoiceGroup": 1
+    },
+    "revenueShare": {
+      "enabled": false,
+      "thresholdStructures": []
+    },
+    "bellServiceFee": {
+      "enabled": false,
+      "bellServices": []
+    },
+    "midMonthAdvance": {
+      "enabled": false,
+      "midMonthAdvances": []
+    },
+    "depositedRevenue": {
+      "enabled": false,
+      "depositData": []
+    },
+    "billableAccounts": {
+      "enabled": false,
+      "billableAccountsData": []
+    },
+    "managementAgreement": {
+      "enabled": false,
+      "ManagementFees": []
+    }
+  },
+  "flattened": {
+    "contract_id": "602ea9dc-90d8-ef11-8eea-0022480a57ac",
+    "contract_purchaseOrder": "777024746",
+    "contract_paymentTerms": "Due in 45 Days",
+    "contract_billingType": "Arrears",
+    "contract_incrementMonth": "July",
+    "contract_incrementAmount": 3.0,
+    "contract_consumerPriceIndex": false,
+    "contract_notes": "Service fee increases by 3% OR ECI annually as of anniversary date (7/1)",
+    "contract_deviationAmount": 2500.0,
+    "contract_deviationPercentage": 10.0,
+    "contract_deposits": false,
+    "contract_contractType": "Per Labor Hour",
+    "contract_supportingReports_1": "HoursBackupReport",
+    "contract_invoiceGrouping_enabled": false,
+    "contract_fixedFee_enabled": true,
+    "contract_fixedFee_serviceRates_1_id": "2adbf7b0-b7e0-ef11-a730-002248251de6",
+    "contract_fixedFee_serviceRates_1_name": "Parking Management",
+    "contract_fixedFee_serviceRates_1_displayName": "Account Manager Fee",
+    "contract_fixedFee_serviceRates_1_code": "4715",
+    "contract_fixedFee_serviceRates_1_fee": 7096.27,
+    "contract_fixedFee_serviceRates_1_startDate": "2025-01-27T15:44:05",
+    "contract_fixedFee_serviceRates_1_endDate": null,
+    "contract_fixedFee_serviceRates_1_invoiceGroup": 1,
+    "contract_perLaborHour_enabled": true,
+    "contract_perLaborHour_hoursBackupReport": true,
+    "contract_perLaborHour_jobRates_1_id": "f6f2f4b6-b7e0-ef11-a730-002248251de6",
+    "contract_perLaborHour_jobRates_1_name": "Valet Services",
+    "contract_perLaborHour_jobRates_1_displayName": "GSA",
+    "contract_perLaborHour_jobRates_1_rate": 25.03,
+    "contract_perLaborHour_jobRates_1_overtimeRate": 37.55,
+    "contract_perLaborHour_jobRates_1_jobCode": "GSA",
+    "contract_perLaborHour_jobRates_1_startDate": null,
+    "contract_perLaborHour_jobRates_1_endDate": null,
+    "contract_perLaborHour_jobRates_1_invoiceGroup": 1,
+    "contract_perLaborHour_jobRates_2_id": "f8f2f4b6-b7e0-ef11-a730-002248251de6",
+    "contract_perLaborHour_jobRates_2_name": "Valet Services",
+    "contract_perLaborHour_jobRates_2_displayName": "GSC",
+    "contract_perLaborHour_jobRates_2_rate": 25.03,
+    "contract_perLaborHour_jobRates_2_overtimeRate": 37.55,
+    "contract_perLaborHour_jobRates_2_jobCode": "GSC",
+    "contract_perLaborHour_jobRates_2_startDate": null,
+    "contract_perLaborHour_jobRates_2_endDate": null,
+    "contract_perLaborHour_jobRates_2_invoiceGroup": 1,
+    "contract_perLaborHour_jobRates_3_id": "5079a1ae-02e3-ef11-a730-002248251de6",
+    "contract_perLaborHour_jobRates_3_name": "Valet Services",
+    "contract_perLaborHour_jobRates_3_displayName": "Additional GSA",
+    "contract_perLaborHour_jobRates_3_rate": 25.03,
+    "contract_perLaborHour_jobRates_3_overtimeRate": 37.55,
+    "contract_perLaborHour_jobRates_3_jobCode": "GARAGE",
+    "contract_perLaborHour_jobRates_3_startDate": null,
+    "contract_perLaborHour_jobRates_3_endDate": null,
+    "contract_perLaborHour_jobRates_3_invoiceGroup": 1,
+    "contract_perOccupiedRoom_enabled": false,
+    "contract_perOccupiedRoom_roomRate": 0.0,
+    "contract_perOccupiedRoom_invoiceGroup": 1,
+    "contract_revenueShare_enabled": false,
+    "contract_bellServiceFee_enabled": false,
+    "contract_midMonthAdvance_enabled": false,
+    "contract_depositedRevenue_enabled": false,
+    "contract_billableAccounts_enabled": false,
+    "contract_managementAgreement_enabled": false,
+    "contract_enabled_components": [
+      "fixedFee",
+      "perLaborHour"
+    ],
+    "contract_payroll_accounts_enabled": [],
+    "contract_expense_accounts_enabled": [],
+    "contract_financials": {
+      "annualContractValue": 0.0,
+      "estimatedMonthlyRevenue": 0.0,
+      "contractTerm": 36,
+      "contractTermUnit": "Months",
+      "contractType": "Fixed Fee; Per Labor Hour",
+      "billingType": "Arrears",
+      "district": "D - Annapolis",
+      "region": NaN,
+      "siteNumber": "0338"
+    }
+  }
+}

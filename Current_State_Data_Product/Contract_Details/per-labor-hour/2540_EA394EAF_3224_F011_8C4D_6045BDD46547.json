@@ -1,0 +1,188 @@
+{
+  "metadata": {
+    "siteNumber": "2540",
+    "customerName": "South Denver Cardiology",
+    "customerID": "CUST-2540",
+    "contractEffectiveDate": "2025-05-23",
+    "contractEndDate": "",
+    "contractStatus": "active",
+    "lastModifiedDate": "2025-05-23",
+    "contractVersion": "1.0",
+    "contractType": "Per Labor Hour",
+    "accountManager": "Michael Harrison",
+    "paymentTerms": "Due in 30 Days",
+    "notes": "PLH. AM - $50.06. GSA - $31.08. 1.5 times OT rate for GSA. 1/1 annual increase of 3% or ECI.",
+    "location": {
+      "region": NaN,
+      "district": "D - Denver",
+      "state": "CO",
+      "city": "Littleton",
+      "address": "1000 SouthPark Drive, Littleton, CO 80120",
+      "siteType": ""
+    }
+  },
+  "original": {
+    "id": "eb394eaf-3224-f011-8c4d-6045bdd46547",
+    "purchaseOrder": null,
+    "paymentTerms": "Due in 30 Days",
+    "billingType": "Arrears",
+    "incrementMonth": "January",
+    "incrementAmount": 3.0,
+    "consumerPriceIndex": false,
+    "notes": "PLH. AM - $50.06. GSA - $31.08. 1.5 times OT rate for GSA. 1/1 annual increase of 3% or ECI.",
+    "deviationAmount": 2500.0,
+    "deviationPercentage": 10.0,
+    "deposits": false,
+    "contractType": "Per Labor Hour",
+    "supportingReports": [
+      "HoursBackupReport"
+    ],
+    "invoiceGrouping": {
+      "enabled": false,
+      "invoiceGroups": []
+    },
+    "fixedFee": {
+      "enabled": false,
+      "serviceRates": []
+    },
+    "perLaborHour": {
+      "enabled": true,
+      "hoursBackupReport": true,
+      "jobRates": [
+        {
+          "id": "b23b949b-3324-f011-8c4d-6045bdd46547",
+          "name": "Valet Services",
+          "displayName": "Account Manager",
+          "rate": 50.06,
+          "overtimeRate": 50.06,
+          "jobCode": "ACCTMGR",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "b43b949b-3324-f011-8c4d-6045bdd46547",
+          "name": "Valet Services",
+          "displayName": "GSA",
+          "rate": 31.08,
+          "overtimeRate": 46.62,
+          "jobCode": "GSA",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "b53b949b-3324-f011-8c4d-6045bdd46547",
+          "name": "Valet Services",
+          "displayName": "GSC",
+          "rate": 31.08,
+          "overtimeRate": 46.62,
+          "jobCode": "GSC",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "perOccupiedRoom": {
+      "enabled": false,
+      "roomRate": 0.0,
+      "invoiceGroup": 1
+    },
+    "revenueShare": {
+      "enabled": false,
+      "thresholdStructures": []
+    },
+    "bellServiceFee": {
+      "enabled": false,
+      "bellServices": []
+    },
+    "midMonthAdvance": {
+      "enabled": false,
+      "midMonthAdvances": []
+    },
+    "depositedRevenue": {
+      "enabled": false,
+      "depositData": []
+    },
+    "billableAccounts": {
+      "enabled": false,
+      "billableAccountsData": []
+    },
+    "managementAgreement": {
+      "enabled": false,
+      "ManagementFees": []
+    }
+  },
+  "flattened": {
+    "contract_id": "eb394eaf-3224-f011-8c4d-6045bdd46547",
+    "contract_purchaseOrder": null,
+    "contract_paymentTerms": "Due in 30 Days",
+    "contract_billingType": "Arrears",
+    "contract_incrementMonth": "January",
+    "contract_incrementAmount": 3.0,
+    "contract_consumerPriceIndex": false,
+    "contract_notes": "PLH. AM - $50.06. GSA - $31.08. 1.5 times OT rate for GSA. 1/1 annual increase of 3% or ECI.",
+    "contract_deviationAmount": 2500.0,
+    "contract_deviationPercentage": 10.0,
+    "contract_deposits": false,
+    "contract_contractType": "Per Labor Hour",
+    "contract_supportingReports_1": "HoursBackupReport",
+    "contract_invoiceGrouping_enabled": false,
+    "contract_fixedFee_enabled": false,
+    "contract_perLaborHour_enabled": true,
+    "contract_perLaborHour_hoursBackupReport": true,
+    "contract_perLaborHour_jobRates_1_id": "b23b949b-3324-f011-8c4d-6045bdd46547",
+    "contract_perLaborHour_jobRates_1_name": "Valet Services",
+    "contract_perLaborHour_jobRates_1_displayName": "Account Manager",
+    "contract_perLaborHour_jobRates_1_rate": 50.06,
+    "contract_perLaborHour_jobRates_1_overtimeRate": 50.06,
+    "contract_perLaborHour_jobRates_1_jobCode": "ACCTMGR",
+    "contract_perLaborHour_jobRates_1_startDate": null,
+    "contract_perLaborHour_jobRates_1_endDate": null,
+    "contract_perLaborHour_jobRates_1_invoiceGroup": 1,
+    "contract_perLaborHour_jobRates_2_id": "b43b949b-3324-f011-8c4d-6045bdd46547",
+    "contract_perLaborHour_jobRates_2_name": "Valet Services",
+    "contract_perLaborHour_jobRates_2_displayName": "GSA",
+    "contract_perLaborHour_jobRates_2_rate": 31.08,
+    "contract_perLaborHour_jobRates_2_overtimeRate": 46.62,
+    "contract_perLaborHour_jobRates_2_jobCode": "GSA",
+    "contract_perLaborHour_jobRates_2_startDate": null,
+    "contract_perLaborHour_jobRates_2_endDate": null,
+    "contract_perLaborHour_jobRates_2_invoiceGroup": 1,
+    "contract_perLaborHour_jobRates_3_id": "b53b949b-3324-f011-8c4d-6045bdd46547",
+    "contract_perLaborHour_jobRates_3_name": "Valet Services",
+    "contract_perLaborHour_jobRates_3_displayName": "GSC",
+    "contract_perLaborHour_jobRates_3_rate": 31.08,
+    "contract_perLaborHour_jobRates_3_overtimeRate": 46.62,
+    "contract_perLaborHour_jobRates_3_jobCode": "GSC",
+    "contract_perLaborHour_jobRates_3_startDate": null,
+    "contract_perLaborHour_jobRates_3_endDate": null,
+    "contract_perLaborHour_jobRates_3_invoiceGroup": 1,
+    "contract_perOccupiedRoom_enabled": false,
+    "contract_perOccupiedRoom_roomRate": 0.0,
+    "contract_perOccupiedRoom_invoiceGroup": 1,
+    "contract_revenueShare_enabled": false,
+    "contract_bellServiceFee_enabled": false,
+    "contract_midMonthAdvance_enabled": false,
+    "contract_depositedRevenue_enabled": false,
+    "contract_billableAccounts_enabled": false,
+    "contract_managementAgreement_enabled": false,
+    "contract_enabled_components": [
+      "perLaborHour"
+    ],
+    "contract_payroll_accounts_enabled": [],
+    "contract_expense_accounts_enabled": [],
+    "contract_financials": {
+      "annualContractValue": 0.0,
+      "estimatedMonthlyRevenue": 0.0,
+      "contractTerm": 36,
+      "contractTermUnit": "Months",
+      "contractType": "Per Labor Hour",
+      "billingType": "Arrears",
+      "district": "D - Denver",
+      "region": NaN,
+      "siteNumber": "2540"
+    }
+  }
+}

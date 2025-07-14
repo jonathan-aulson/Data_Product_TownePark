@@ -1,0 +1,168 @@
+{
+  "metadata": {
+    "siteNumber": "2499",
+    "customerName": "Jefferson Moss-Magee Rehab Hospital\u00a0",
+    "customerID": "CUST-2499",
+    "contractEffectiveDate": "2025-05-23",
+    "contractEndDate": "",
+    "contractStatus": "active",
+    "lastModifiedDate": "2025-05-23",
+    "contractVersion": "1.0",
+    "contractType": "Fixed Fee; Per Labor Hour",
+    "accountManager": "Darius Shuler",
+    "paymentTerms": "Due in 30 Days",
+    "notes": "The per labor hour fee will\nincrease by a mutually acceptable amount, not to exceed the greater of 5% or the\nEmployment Cost Index December 1, 2028 and each December 1st thereafter through\nthe Agreement term.",
+    "location": {
+      "region": NaN,
+      "district": "D - PA/Central New Jersey",
+      "state": "PA",
+      "city": "Philadelphia",
+      "address": "1500 South Columbus Blvd, Philadelphia, PA 19147",
+      "siteType": ""
+    }
+  },
+  "original": {
+    "id": "ea2223a2-6ff0-ef11-be20-7c1e5259f653",
+    "purchaseOrder": null,
+    "paymentTerms": "Due in 30 Days",
+    "billingType": "Arrears",
+    "incrementMonth": "January",
+    "incrementAmount": 0.0,
+    "consumerPriceIndex": false,
+    "notes": "The per labor hour fee will\nincrease by a mutually acceptable amount, not to exceed the greater of 5% or the\nEmployment Cost Index December 1, 2028 and each December 1st thereafter through\nthe Agreement term.",
+    "deviationAmount": 2500.0,
+    "deviationPercentage": 10.0,
+    "deposits": false,
+    "contractType": "Per Labor Hour",
+    "supportingReports": [
+      "HoursBackupReport"
+    ],
+    "invoiceGrouping": {
+      "enabled": false,
+      "invoiceGroups": []
+    },
+    "fixedFee": {
+      "enabled": true,
+      "serviceRates": [
+        {
+          "id": "c96ac341-70f0-ef11-be20-7c1e5259f653",
+          "name": "Valet Services",
+          "displayName": "Valet Services",
+          "code": "4700",
+          "fee": 583.0,
+          "startDate": "2025-02-21T16:24:04",
+          "endDate": null,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "perLaborHour": {
+      "enabled": true,
+      "hoursBackupReport": true,
+      "jobRates": [
+        {
+          "id": "ca6ac341-70f0-ef11-be20-7c1e5259f653",
+          "name": "Valet Services",
+          "displayName": "Valet Services - GSC",
+          "rate": 21.53,
+          "overtimeRate": 32.3,
+          "jobCode": "GSC",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "perOccupiedRoom": {
+      "enabled": false,
+      "roomRate": 0.0,
+      "invoiceGroup": 1
+    },
+    "revenueShare": {
+      "enabled": false,
+      "thresholdStructures": []
+    },
+    "bellServiceFee": {
+      "enabled": false,
+      "bellServices": []
+    },
+    "midMonthAdvance": {
+      "enabled": false,
+      "midMonthAdvances": []
+    },
+    "depositedRevenue": {
+      "enabled": false,
+      "depositData": []
+    },
+    "billableAccounts": {
+      "enabled": false,
+      "billableAccountsData": []
+    },
+    "managementAgreement": {
+      "enabled": false,
+      "ManagementFees": []
+    }
+  },
+  "flattened": {
+    "contract_id": "ea2223a2-6ff0-ef11-be20-7c1e5259f653",
+    "contract_purchaseOrder": null,
+    "contract_paymentTerms": "Due in 30 Days",
+    "contract_billingType": "Arrears",
+    "contract_incrementMonth": "January",
+    "contract_incrementAmount": 0.0,
+    "contract_consumerPriceIndex": false,
+    "contract_notes": "The per labor hour fee will\nincrease by a mutually acceptable amount, not to exceed the greater of 5% or the\nEmployment Cost Index December 1, 2028 and each December 1st thereafter through\nthe Agreement term.",
+    "contract_deviationAmount": 2500.0,
+    "contract_deviationPercentage": 10.0,
+    "contract_deposits": false,
+    "contract_contractType": "Per Labor Hour",
+    "contract_supportingReports_1": "HoursBackupReport",
+    "contract_invoiceGrouping_enabled": false,
+    "contract_fixedFee_enabled": true,
+    "contract_fixedFee_serviceRates_1_id": "c96ac341-70f0-ef11-be20-7c1e5259f653",
+    "contract_fixedFee_serviceRates_1_name": "Valet Services",
+    "contract_fixedFee_serviceRates_1_displayName": "Valet Services",
+    "contract_fixedFee_serviceRates_1_code": "4700",
+    "contract_fixedFee_serviceRates_1_fee": 583.0,
+    "contract_fixedFee_serviceRates_1_startDate": "2025-02-21T16:24:04",
+    "contract_fixedFee_serviceRates_1_endDate": null,
+    "contract_fixedFee_serviceRates_1_invoiceGroup": 1,
+    "contract_perLaborHour_enabled": true,
+    "contract_perLaborHour_hoursBackupReport": true,
+    "contract_perLaborHour_jobRates_1_id": "ca6ac341-70f0-ef11-be20-7c1e5259f653",
+    "contract_perLaborHour_jobRates_1_name": "Valet Services",
+    "contract_perLaborHour_jobRates_1_displayName": "Valet Services - GSC",
+    "contract_perLaborHour_jobRates_1_rate": 21.53,
+    "contract_perLaborHour_jobRates_1_overtimeRate": 32.3,
+    "contract_perLaborHour_jobRates_1_jobCode": "GSC",
+    "contract_perLaborHour_jobRates_1_startDate": null,
+    "contract_perLaborHour_jobRates_1_endDate": null,
+    "contract_perLaborHour_jobRates_1_invoiceGroup": 1,
+    "contract_perOccupiedRoom_enabled": false,
+    "contract_perOccupiedRoom_roomRate": 0.0,
+    "contract_perOccupiedRoom_invoiceGroup": 1,
+    "contract_revenueShare_enabled": false,
+    "contract_bellServiceFee_enabled": false,
+    "contract_midMonthAdvance_enabled": false,
+    "contract_depositedRevenue_enabled": false,
+    "contract_billableAccounts_enabled": false,
+    "contract_managementAgreement_enabled": false,
+    "contract_enabled_components": [
+      "fixedFee",
+      "perLaborHour"
+    ],
+    "contract_payroll_accounts_enabled": [],
+    "contract_expense_accounts_enabled": [],
+    "contract_financials": {
+      "annualContractValue": 0.0,
+      "estimatedMonthlyRevenue": 0.0,
+      "contractTerm": 36,
+      "contractTermUnit": "Months",
+      "contractType": "Fixed Fee; Per Labor Hour",
+      "billingType": "Arrears",
+      "district": "D - PA/Central New Jersey",
+      "region": NaN,
+      "siteNumber": "2499"
+    }
+  }
+}

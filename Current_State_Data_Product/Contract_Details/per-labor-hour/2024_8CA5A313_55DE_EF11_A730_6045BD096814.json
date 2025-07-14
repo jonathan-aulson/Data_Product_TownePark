@@ -1,0 +1,188 @@
+{
+  "metadata": {
+    "siteNumber": "2024",
+    "customerName": "MLH Riddle Hospital",
+    "customerID": "CUST-2024",
+    "contractEffectiveDate": "2025-05-23",
+    "contractEndDate": "",
+    "contractStatus": "active",
+    "lastModifiedDate": "2025-05-23",
+    "contractVersion": "1.0",
+    "contractType": "Per Labor Hour",
+    "accountManager": "Bridget Philipps",
+    "paymentTerms": "Due in 45 Days",
+    "notes": NaN,
+    "location": {
+      "region": NaN,
+      "district": "D - PA/Central New Jersey",
+      "state": "PA",
+      "city": "Media",
+      "address": "1068 W Baltimore Pike, Media, PA 19063",
+      "siteType": ""
+    }
+  },
+  "original": {
+    "id": "8da5a313-55de-ef11-a730-6045bd096814",
+    "purchaseOrder": null,
+    "paymentTerms": "Due in 45 Days",
+    "billingType": "Arrears",
+    "incrementMonth": "March",
+    "incrementAmount": 3.0,
+    "consumerPriceIndex": false,
+    "notes": null,
+    "deviationAmount": 0.0,
+    "deviationPercentage": 0.0,
+    "deposits": false,
+    "contractType": "Per Labor Hour",
+    "supportingReports": [
+      "HoursBackupReport"
+    ],
+    "invoiceGrouping": {
+      "enabled": false,
+      "invoiceGroups": []
+    },
+    "fixedFee": {
+      "enabled": false,
+      "serviceRates": []
+    },
+    "perLaborHour": {
+      "enabled": true,
+      "hoursBackupReport": true,
+      "jobRates": [
+        {
+          "id": "40a96b80-f50d-f011-9989-6045bda98ba1",
+          "name": "Valet Services",
+          "displayName": "Greeter - Riddle",
+          "rate": 28.41,
+          "overtimeRate": 28.41,
+          "jobCode": "GREETSVCAMB",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "49a96b80-f50d-f011-9989-6045bda98ba1",
+          "name": "Valet Services",
+          "displayName": "Assistant Director of Operations - Riddle",
+          "rate": 33.33,
+          "overtimeRate": 33.33,
+          "jobCode": "ASSOCM",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "09224c85-f50d-f011-9989-7c1e5247bfde",
+          "name": "Valet Services",
+          "displayName": "Director of Operations - Riddle",
+          "rate": 46.44,
+          "overtimeRate": 46.44,
+          "jobCode": "DOO",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "perOccupiedRoom": {
+      "enabled": false,
+      "roomRate": 0.0,
+      "invoiceGroup": 1
+    },
+    "revenueShare": {
+      "enabled": false,
+      "thresholdStructures": []
+    },
+    "bellServiceFee": {
+      "enabled": false,
+      "bellServices": []
+    },
+    "midMonthAdvance": {
+      "enabled": false,
+      "midMonthAdvances": []
+    },
+    "depositedRevenue": {
+      "enabled": false,
+      "depositData": []
+    },
+    "billableAccounts": {
+      "enabled": false,
+      "billableAccountsData": []
+    },
+    "managementAgreement": {
+      "enabled": false,
+      "ManagementFees": []
+    }
+  },
+  "flattened": {
+    "contract_id": "8da5a313-55de-ef11-a730-6045bd096814",
+    "contract_purchaseOrder": null,
+    "contract_paymentTerms": "Due in 45 Days",
+    "contract_billingType": "Arrears",
+    "contract_incrementMonth": "March",
+    "contract_incrementAmount": 3.0,
+    "contract_consumerPriceIndex": false,
+    "contract_notes": null,
+    "contract_deviationAmount": 0.0,
+    "contract_deviationPercentage": 0.0,
+    "contract_deposits": false,
+    "contract_contractType": "Per Labor Hour",
+    "contract_supportingReports_1": "HoursBackupReport",
+    "contract_invoiceGrouping_enabled": false,
+    "contract_fixedFee_enabled": false,
+    "contract_perLaborHour_enabled": true,
+    "contract_perLaborHour_hoursBackupReport": true,
+    "contract_perLaborHour_jobRates_1_id": "40a96b80-f50d-f011-9989-6045bda98ba1",
+    "contract_perLaborHour_jobRates_1_name": "Valet Services",
+    "contract_perLaborHour_jobRates_1_displayName": "Greeter - Riddle",
+    "contract_perLaborHour_jobRates_1_rate": 28.41,
+    "contract_perLaborHour_jobRates_1_overtimeRate": 28.41,
+    "contract_perLaborHour_jobRates_1_jobCode": "GREETSVCAMB",
+    "contract_perLaborHour_jobRates_1_startDate": null,
+    "contract_perLaborHour_jobRates_1_endDate": null,
+    "contract_perLaborHour_jobRates_1_invoiceGroup": 1,
+    "contract_perLaborHour_jobRates_2_id": "49a96b80-f50d-f011-9989-6045bda98ba1",
+    "contract_perLaborHour_jobRates_2_name": "Valet Services",
+    "contract_perLaborHour_jobRates_2_displayName": "Assistant Director of Operations - Riddle",
+    "contract_perLaborHour_jobRates_2_rate": 33.33,
+    "contract_perLaborHour_jobRates_2_overtimeRate": 33.33,
+    "contract_perLaborHour_jobRates_2_jobCode": "ASSOCM",
+    "contract_perLaborHour_jobRates_2_startDate": null,
+    "contract_perLaborHour_jobRates_2_endDate": null,
+    "contract_perLaborHour_jobRates_2_invoiceGroup": 1,
+    "contract_perLaborHour_jobRates_3_id": "09224c85-f50d-f011-9989-7c1e5247bfde",
+    "contract_perLaborHour_jobRates_3_name": "Valet Services",
+    "contract_perLaborHour_jobRates_3_displayName": "Director of Operations - Riddle",
+    "contract_perLaborHour_jobRates_3_rate": 46.44,
+    "contract_perLaborHour_jobRates_3_overtimeRate": 46.44,
+    "contract_perLaborHour_jobRates_3_jobCode": "DOO",
+    "contract_perLaborHour_jobRates_3_startDate": null,
+    "contract_perLaborHour_jobRates_3_endDate": null,
+    "contract_perLaborHour_jobRates_3_invoiceGroup": 1,
+    "contract_perOccupiedRoom_enabled": false,
+    "contract_perOccupiedRoom_roomRate": 0.0,
+    "contract_perOccupiedRoom_invoiceGroup": 1,
+    "contract_revenueShare_enabled": false,
+    "contract_bellServiceFee_enabled": false,
+    "contract_midMonthAdvance_enabled": false,
+    "contract_depositedRevenue_enabled": false,
+    "contract_billableAccounts_enabled": false,
+    "contract_managementAgreement_enabled": false,
+    "contract_enabled_components": [
+      "perLaborHour"
+    ],
+    "contract_payroll_accounts_enabled": [],
+    "contract_expense_accounts_enabled": [],
+    "contract_financials": {
+      "annualContractValue": 0.0,
+      "estimatedMonthlyRevenue": 0.0,
+      "contractTerm": 36,
+      "contractTermUnit": "Months",
+      "contractType": "Per Labor Hour",
+      "billingType": "Arrears",
+      "district": "D - PA/Central New Jersey",
+      "region": NaN,
+      "siteNumber": "2024"
+    }
+  }
+}
