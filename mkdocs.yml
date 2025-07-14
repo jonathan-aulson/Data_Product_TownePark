@@ -1,12 +1,12 @@
 # Project information
 site_name: Towne Park Documentation
 site_description: Comprehensive documentation for Towne Park financial systems
-site_url: https://your-organization.github.io/towne-park-docs/
+site_url: https://your-organization.github.io/Data_Product_TownePark/
 site_author: Towne Park Team
 
 # Repository
-repo_name: your-organization/towne-park-docs
-repo_url: https://github.com/your-organization/towne-park-docs
+repo_name: jonathan-aulson/Data_Product_TownePark
+repo_url: https://github.com/jonathan-aulson/Data_Product_TownePark
 edit_uri: edit/main/docs/
 
 # Copyright
@@ -69,9 +69,9 @@ extra:
     provider: mike
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/your-organization
+      link: https://github.com/jonathan-aulson
     - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/company/towne-park
+      link: https://linkedin.com/company/allata
 
 # Navigation
 nav:
