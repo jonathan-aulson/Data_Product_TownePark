@@ -75,41 +75,41 @@ extra:
 
 # Navigation
 nav:
-  - Home: Future_State_Data_Product/index.md
+  - Home: /Future_State_Data_Product/index.md
   - Systems:
     - Billing:
-      - Overview: systems/billing/overview.md
-      - Architecture: systems/billing/architecture.md
-      - Integrations: systems/billing/integrations.md
+      - Overview: /systems/billing/overview.md
+      - Architecture: /systems/billing/architecture.md
+      - Integrations: /systems/billing/integrations.md
     - Forecasting:
-      - Overview: systems/forecasting/overview.md
-      - Architecture: systems/forecasting/architecture.md
-      - Integrations: systems/forecasting/integrations.md
+      - Overview: /systems/forecasting/overview.md
+      - Architecture: /systems/forecasting/architecture.md
+      - Integrations: /systems/forecasting/integrations.md
   - Business Rules:
     - Contract Types:
-      - Revenue Share: business-rules/contract-types/revenue-share.md
-      - Fixed Fee: business-rules/contract-types/fixed-fee.md
-      - Per Labor Hour: business-rules/contract-types/per-labor-hour.md
-      - Management Agreement: business-rules/contract-types/management-agreement.md
+      - Revenue Share: /business-rules/contract-types/revenue-share.md
+      - Fixed Fee: /business-rules/contract-types/fixed-fee.md
+      - Per Labor Hour: /business-rules/contract-types/per-labor-hour.md
+      - Management Agreement: /business-rules/contract-types/management-agreement.md
     - Billing:
-      - Invoice Calculation: business-rules/billing/invoice-calculation.md
-      - Validation: business-rules/billing/validation.md
-      - Bell Service Fee: business-rules/billing/bell-service-fee.md
+      - Invoice Calculation: /business-rules/billing/invoice-calculation.md
+      - Validation: /business-rules/billing/validation.md
+      - Bell Service Fee: /business-rules/billing/bell-service-fee.md
     - Forecasting:
-      - Payroll: business-rules/forecasting/payroll.md
-      - Revenue: business-rules/forecasting/revenue.md
-      - Statistics: business-rules/forecasting/statistics.md
+      - Payroll: /business-rules/forecasting/payroll.md
+      - Revenue: /business-rules/forecasting/revenue.md
+      - Statistics: /business-rules/forecasting/statistics.md
   - Technical:
-    - Frontend: technical/frontend/index.md
-    - Backend: technical/backend/index.md
-    - Database: technical/database/index.md
-    - Integrations: technical/integrations/index.md
+    - Frontend: /technical/frontend/index.md
+    - Backend: /technical/backend/index.md
+    - Database: /technical/database/index.md
+    - Integrations: /technical/integrations/index.md
   - User Processes:
-    - Account Manager: user-processes/account-manager/index.md
-    - Billing Admin: user-processes/billing-admin/index.md
-    - District Manager: user-processes/district-manager/index.md
+    - Account Manager: /user-processes/account-manager/index.md
+    - Billing Admin: /user-processes/billing-admin/index.md
+    - District Manager: /user-processes/district-manager/index.md
   - Configuration:
-    - Contract Setup: configuration/contract-setup/index.md
-    - User Access: configuration/user-access/index.md
-    - System Settings: configuration/system-settings/index.md
-  - Glossary: glossary.md
+    - Contract Setup: /configuration/contract-setup/index.md
+    - User Access: /configuration/user-access/index.md
+    - System Settings: /configuration/system-settings/index.md
+  - Glossary: /glossary.md

@@ -22,11 +22,11 @@ This documentation is organized into the following sections:
 
 | System | Description |
 |--------|-------------|
-| [Billing](systems/billing/overview.md) | Our comprehensive billing system that handles customer contracts, invoice generation, and revenue management |
-| [Forecasting](systems/forecasting/overview.md) | Financial forecasting system that supports budgeting, projection, and analysis |
+| [Billing](/Future_State_Data_Product/systems/billing/overview.md) | Our comprehensive billing system that handles customer contracts, invoice generation, and revenue management |
+| [Forecasting](/Future_State_Data_Product/systems/forecasting/overview.md) | Financial forecasting system that supports budgeting, projection, and analysis |
 
 ## Getting Started
 
-- [Billing System Overview](systems/billing/overview.md)
-- [Forecasting System Overview](systems/forecasting/overview.md)
-- [Common Business Rules](business-rules/contract-types/revenue-share.md)
+- [Billing System Overview](/Future_State_Data_Product/systems/billing/overview.md)
+- [Forecasting System Overview](/Future_State_Data_Product/systems/forecasting/overview.md)
+- [Common Business Rules](/Future_State_Data_Product/business-rules/contract-types/revenue-share.md)
