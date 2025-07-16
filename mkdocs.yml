@@ -1,115 +1,95 @@
-# Project information
-site_name: Towne Park Documentation
-site_description: Comprehensive documentation for Towne Park financial systems
-site_url: https://your-organization.github.io/Data_Product_TownePark/
-site_author: Towne Park Team
+site_name: Towne Park Data Product
+site_url: http://example.org/
 
-# Repository
-repo_name: jonathan-aulson/Data_Product_TownePark
-repo_url: https://github.com/jonathan-aulson/Data_Product_TownePark
-edit_uri: edit/main/docs/
-
-# Copyright
-copyright: Copyright &copy; 2025 Towne Park
-
-# Configuration
 theme:
   name: material
   features:
-    - navigation.instant
-    - navigation.tracking
     - navigation.tabs
     - navigation.sections
     - navigation.expand
-    - search.highlight
-    - search.share
     - search.suggest
-    - content.code.copy
-  palette:
-    # Use Towne Park colors here
-    primary: indigo
-    accent: indigo
-  icon:
-    logo: material/library
-  language: en
+    - search.highlight
 
-# Extensions
-markdown_extensions:
-  - admonition
-  - attr_list
-  - codehilite
-  - def_list
-  - footnotes
-  - meta
-  - pymdownx.details
-  - pymdownx.highlight
-  - pymdownx.superfences
-  - pymdownx.tabbed
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-  - toc:
-      permalink: true
-
-# Plugins
 plugins:
   - search
-  - awesome-pages
-  - git-revision-date-localized:
-      type: date
-  - minify:
-      minify_html: true
+  - git-revision-date-localized
   - macros
 
-# Extra settings
-extra:
-  version:
-    provider: mike
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/jonathan-aulson
-    - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/company/allata
+markdown_extensions:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - md_in_html
+  - admonition
+  - tables
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
 
-# Navigation
+extra_javascript:
+  - https://unpkg.com/mermaid/dist/mermaid.min.js
+  - javascripts/extra.js
+
+extra_css:
+  - stylesheets/extra.css
+
 nav:
-  - Home: Data_Product_TownePark/Future_State_Data_Product/docs/index.md
+  - Home: index.md
+  - Documentation Overview: Future_State_Data_Product/README.md 
   - Systems:
     - Billing:
-      - Overview: Data_Product_TownePark/Future_State_Data_Product/systems/billing/overview.md
-      - Architecture: Data_Product_TownePark/Future_State_Data_Product/systems/billing/architecture.md
-      - Integrations: Data_Product_TownePark/Future_State_Data_Product/systems/billing/integrations.md
+      - Overview: Future_State_Data_Product/systems/billing/overview.md
+      - Architecture: Future_State_Data_Product/systems/billing/architecture.md
+      - Integrations: Future_State_Data_Product/systems/billing/integrations.md
+      - Generate Invoices: Future_State_Data_Product/systems/billing/generate-invoices.md 
     - Forecasting:
-      - Overview: Data_Product_TownePark/Future_State_Data_Product/systems/forecasting/overview.md
-      - Architecture: Data_Product_TownePark/Future_State_Data_Product/systems/forecasting/architecture.md
-      - Integrations: Data_Product_TownePark/Future_State_Data_Product/systems/forecasting/integrations.md
+      - Overview: Future_State_Data_Product/systems/forecasting/overview.md
+      - Project Discovery: Future_State_Data_Product/systems/forecasting/20250716_Forecasting_SystemOverview_Discovery.md
+      - Master Architecture: Future_State_Data_Product/systems/forecasting/20250716_Forecasting_SystemOverview_MasterArchitecture.md
+      - Architecture: Future_State_Data_Product/systems/forecasting/architecture.md
+      - Integrations: Future_State_Data_Product/systems/forecasting/integrations.md
   - Business Rules:
     - Contract Types:
-      - Revenue Share: Data_Product_TownePark/Future_State_Data_Product/business-rules/contract-types/revenue-share.md
-      - Fixed Fee: Data_Product_TownePark/Future_State_Data_Product/business-rules/contract-types/fixed-fee.md
-      - Per Labor Hour: Data_Product_TownePark/Future_State_Data_Product/business-rules/contract-types/per-labor-hour.md
-      - Management Agreement: Data_Product_TownePark/Future_State_Data_Product/business-rules/contract-types/management-agreement.md
+      - Revenue Share: Future_State_Data_Product/business-rules/contract-types/revenue-share.md
+      - Fixed Fee: Future_State_Data_Product/business-rules/contract-types/fixed-fee.md
+      - Per Labor Hour: Future_State_Data_Product/business-rules/contract-types/per-labor-hour.md
+      - Management Agreement: Future_State_Data_Product/business-rules/contract-types/management-agreement.md
     - Billing:
-      - Invoice Calculation: Data_Product_TownePark/Future_State_Data_Product/business-rules/billing/invoice-calculation.md
-      - Validation: Data_Product_TownePark/Future_State_Data_Product/business-rules/billing/validation.md
-      - Bell Service Fee: Data_Product_TownePark/Future_State_Data_Product/business-rules/billing/bell-service-fee.md
+      - Invoice Calculation: Future_State_Data_Product/business-rules/billing/invoice-calculation.md
+      - Validation: Future_State_Data_Product/business-rules/billing/validation.md
+      - Bell Service Fee: Future_State_Data_Product/business-rules/billing/bell-service-fee.md
     - Forecasting:
-      - Payroll: Data_Product_TownePark/Future_State_Data_Product/business-rules/forecasting/payroll.md
-      - Revenue: Data_Product_TownePark/Future_State_Data_Product/business-rules/forecasting/revenue.md
-      - Statistics: Data_Product_TownePark/Future_State_Data_Product/business-rules/forecasting/statistics.md
+      - Process Workflow: Future_State_Data_Product/business-rules/forecasting/20250716_Forecasting_BusinessRules_ProcessWorkflow.md
+      - Payroll: Future_State_Data_Product/business-rules/forecasting/payroll.md
+      - Revenue: Future_State_Data_Product/business-rules/forecasting/revenue.md
+      - Statistics: Future_State_Data_Product/business-rules/forecasting/statistics.md
   - Technical:
-    - Frontend: Data_Product_TownePark/Future_State_Data_Product/technical/frontend/index.md
-    - Backend: Data_Product_TownePark/Future_State_Data_Product/technical/backend/index.md
-    - Database: Data_Product_TownePark/Future_State_Data_Product/technical/database/index.md
-    - Integrations: Data_Product_TownePark/Future_State_Data_Product/technical/integrations/index.md
+    - Frontend: Future_State_Data_Product/technical/frontend/index.md
+    - Backend:
+      - Overview: Future_State_Data_Product/technical/backend/index.md
+      - Billing Architecture: Future_State_Data_Product/technical/backend/20250716_Billing_TechnicalArchitecture_Development.md
+    - Database: Future_State_Data_Product/technical/database/index.md
+    - Integrations: Future_State_Data_Product/technical/integrations/index.md
   - User Processes:
-    - Account Manager: Data_Product_TownePark/Future_State_Data_Product/user-processes/account-manager/index.md
-    - Billing Admin: Data_Product_TownePark/Future_State_Data_Product/user-processes/billing-admin/index.md
-    - District Manager: Data_Product_TownePark/Future_State_Data_Product/user-processes/district-manager/index.md
+    - Account Manager: Future_State_Data_Product/user-processes/account-manager/index.md
+    - Billing Admin:
+      - Billing Admin: Future_State_Data_Product/user-processes/billing-admin/index.md
+      - Generate Invoices: Future_State_Data_Product/user-processes/billing-admin/generate-invoices.md
+    - District Manager:
+      - Overview: Future_State_Data_Product/user-processes/district-manager/index.md
+      - Pilot & Rollout Process: Future_State_Data_Product/user-processes/district-manager/20250716_Forecasting_PilotRollout_ProcessWorkflow.md
   - Configuration:
-    - Contract Setup: Data_Product_TownePark/Future_State_Data_Product/configuration/contract-setup/index.md
-    - User Access: Data_Product_TownePark/Future_State_Data_Product/configuration/user-access/index.md
-    - System Settings: Data_Product_TownePark/Future_State_Data_Product/configuration/system-settings/index.md
-  - Glossary: Data_Product_TownePark/Future_State_Data_Product/glossary.md
+    - Contract Setup: Future_State_Data_Product/configuration/contract-setup/index.md
+    - User Access: Future_State_Data_Product/configuration/user-access/index.md
+    - System Settings:
+      - Overview: Future_State_Data_Product/configuration/system-settings/index.md
+      - Development Standards: Future_State_Data_Product/configuration/system-settings/20250716_Development_ConfigurationGuide_Standards.md
+  - Glossary: Future_State_Data_Product/glossary.md

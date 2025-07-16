@@ -44,3 +44,4 @@ The system handles approximately $1 billion in annual revenue processing.
 - [Billing System Architecture](architecture.md)
 - [Revenue Share Business Rules](../../business-rules/contract-types/revenue-share.md)
 - [Invoice Generation Process](../../user-processes/billing-admin/generate-invoices.md)
+

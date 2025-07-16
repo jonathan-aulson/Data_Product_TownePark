@@ -1,0 +1,16 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+    margin: 1rem 0;
+}
+
+.grid-item {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.cards {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
