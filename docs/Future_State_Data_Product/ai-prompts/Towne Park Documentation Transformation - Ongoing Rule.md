@@ -18,8 +18,11 @@ This rule automatically triggers comprehensive documentation transformation for 
 
 **IMPORTANT NOTES FOR ALL TRANSFORMATIONS:**
 - **Processed_Files Directory**: The `Processed_Files/` directory ALREADY EXISTS in the project workspace
-- **Power Platform Code**: The Towne Park Power Platform code directory is located at `Towne-Park-Billing-PA-Solution/` and DOES EXIST
-- **Code Validation**: ALWAYS validate against the existing Power Platform code when applicable
+- **Comprehensive Source Code Access**: The complete Towne Park system source code is now available in the `Towne-Park-Billing-Source-Code/` directory
+- **Multiple Repository Structure**: Each subdirectory corresponds to a different Azure DevOps repository comprising the entire system
+- **Code Validation Capability**: ALWAYS validate documentation against actual source code implementations across all repositories
+- **Documentation Preservation**: The Documentarian NEVER modifies source code - only reads and comprehends for accuracy validation
+- **Discrepancy Escalation**: When conflicts between documentation and code are found, IMMEDIATELY escalate to user for resolution
 - **File Processing**: ALWAYS move processed files to the existing `Processed_Files/` folder after transformation
 
 ## 🚨 CRITICAL RULE PRINCIPLES

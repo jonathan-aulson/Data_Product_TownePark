@@ -87,7 +87,8 @@ Initialize Cyclical Documentation Transformation Process:
 - [ ] Read and analyze the selected file following Enhanced AI Prompt guidelines
 - [ ] Perform content inventory and quality assessment
 - [ ] Transform the document according to the transformation protocol
-- [ ] Validate against Power Platform code when applicable
+- [ ] Validate against comprehensive source code across all repositories (Towne-Park-Billing-Source-Code/)
+- [ ] Escalate any discrepancies between documentation and source code implementation to user
 - [ ] Save transformed documentation in appropriate docs folder location
 - [ ] Update mkdocs.yml navigation
 - [ ] Update docs/index.md navigation elements
