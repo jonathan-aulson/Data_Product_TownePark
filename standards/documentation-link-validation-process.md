@@ -148,6 +148,6 @@ find docs/ -name "*.md" -exec grep -l "](.*\.md)" {} \; | xargs -I {} python val
 
 ## Related Documentation
 
-- [Documentation Standards](documentation-standards.md)
-- [Quality Assurance Process](quality-assurance-process.md)
-- [MkDocs Configuration](../configuration/mkdocs-configuration.md)
+- [Documentation Standards](documentation-standards.md) 🔄 PLANNED
+- [Quality Assurance Process](quality-assurance-process.md) 🔄 PLANNED
+- [MkDocs Configuration](../configuration/mkdocs-configuration.md) 🔄 PLANNED

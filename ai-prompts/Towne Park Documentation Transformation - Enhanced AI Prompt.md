@@ -615,7 +615,7 @@ After creating or modifying any documents in the docs/ folder, you MUST update b
 nav:
   - Systems:
     - Billing:
-      - [New Document Title]: Future_State_Data_Product/systems/billing/new-document.md
+      - [New Document Title]: ../systems/billing/overview.md
 ```
 
 **Navigation Rules:**
@@ -630,29 +630,29 @@ nav:
 **For System Documents:**
 ```markdown
 # Add to Quick Navigation table
-| [New System Document](Future_State_Data_Product/systems/billing/new-document.md) |
+| [New System Document](../systems/billing/overview.md) |
 
 # Add to Documentation Structure section
 - **Systems Documentation** - Technical details about core systems
-  - [New System Document](Future_State_Data_Product/systems/billing/new-document.md)
+  - [New System Document](../systems/billing/overview.md)
 ```
 
 **For Business Rules:**
 ```markdown
 # Add to Business Rules card or Quick Navigation
-[:octicons-arrow-right-24: New Business Rule](Future_State_Data_Product/business-rules/domain/new-rule.md)
+[:octicons-arrow-right-24: New Business Rule](../business-rules/overview.md)
 ```
 
 **For Technical Documentation:**
 ```markdown
 # Add to Technical Reference section
 - **Technical Reference** - Implementation details
-  - [New Technical Doc](Future_State_Data_Product/technical/component/new-spec.md)
+  - [New Technical Doc](../technical/overview.md)
 ```
 
 **For Latest Updates Table:**
 ```markdown
-| [New Document](path/to/document.md) | YYYY-MM-DD | Brief description of the document |
+| [New Document](../overview.md) | YYYY-MM-DD | Brief description of the document |
 ```
 
 #### **Step 3: Navigation Update Verification** ✅
@@ -675,17 +675,17 @@ Navigation Update Checklist:
 nav:
   - Systems:
     - Billing:
-      - PowerBill Overview: Future_State_Data_Product/systems/billing/20250716_Billing_SystemOverview_PowerBill.md
+      - PowerBill Overview: ../systems/billing/20250716_Billing_SystemOverview_PowerBill.md
 ```
 
 ```markdown
 # docs/index.md additions
-| [PowerBill Overview](Future_State_Data_Product/systems/billing/20250716_Billing_SystemOverview_PowerBill.md) |
+| [PowerBill Overview](../systems/billing/20250716_Billing_SystemOverview_PowerBill.md) |
 
 - **Systems Documentation** - Technical details about core systems
-  - [PowerBill Overview](Future_State_Data_Product/systems/billing/20250716_Billing_SystemOverview_PowerBill.md)
+  - [PowerBill Overview](../systems/billing/20250716_Billing_SystemOverview_PowerBill.md)
 
-| [PowerBill Overview](Future_State_Data_Product/systems/billing/20250716_Billing_SystemOverview_PowerBill.md) | 2025-07-16 | Comprehensive PowerBill system overview with architecture and business impact |
+| [PowerBill Overview](../systems/billing/20250716_Billing_SystemOverview_PowerBill.md) | 2025-07-16 | Comprehensive PowerBill system overview with architecture and business impact |
 ```
 
 #### **Example 2: Adding Technical Specification**
@@ -694,15 +694,15 @@ nav:
 nav:
   - Technical:
     - Database:
-      - Forecasting Data Sources: Future_State_Data_Product/technical/database/20250716_Forecasting_DataSources_TechnicalSpec.md
+      - Forecasting Data Sources: ../technical/database/20250716_Forecasting_DataSources_TechnicalSpec.md
 ```
 
 ```markdown
 # docs/index.md additions
-| [Forecasting Data Sources](Future_State_Data_Product/technical/database/20250716_Forecasting_DataSources_TechnicalSpec.md) |
+| [Forecasting Data Sources](../technical/database/20250716_Forecasting_DataSources_TechnicalSpec.md) |
 
 - **Technical Reference** - Implementation details
-  - [Forecasting Data Sources](Future_State_Data_Product/technical/database/20250716_Forecasting_DataSources_TechnicalSpec.md)
+  - [Forecasting Data Sources](../technical/database/20250716_Forecasting_DataSources_TechnicalSpec.md)
 ```
 
 #### **Example 3: Adding Business Rules Document**
@@ -711,15 +711,15 @@ nav:
 nav:
   - Business Rules:
     - Billing:
-      - ROI Analysis: Future_State_Data_Product/business-rules/billing/20250716_Billing_ROIAnalysis_SuccessMetrics.md
+      - ROI Analysis: ../business-rules/billing/20250716_Billing_ROIAnalysis_SuccessMetrics.md
 ```
 
 ```markdown
 # docs/index.md additions
-| [ROI Analysis](Future_State_Data_Product/business-rules/billing/20250716_Billing_ROIAnalysis_SuccessMetrics.md) |
+| [ROI Analysis](../business-rules/billing/20250716_Billing_ROIAnalysis_SuccessMetrics.md) |
 
 - **Business Rules** - Policies and business logic
-  - [ROI Analysis](Future_State_Data_Product/business-rules/billing/20250716_Billing_ROIAnalysis_SuccessMetrics.md)
+  - [ROI Analysis](../business-rules/billing/20250716_Billing_ROIAnalysis_SuccessMetrics.md)
 ```
 
 ### **NAVIGATION MAINTENANCE RULES**

@@ -654,13 +654,17 @@ bs_totalduetoowner: =bs_amountoverthreshold - bs_totalduetotownepark
 
 ## Related Documentation
 
-- [Revenue Share Contract Configuration](../configuration/contracts/revenue-share-setup.md)
-- [Management Agreement Setup Guide](../configuration/contracts/management-agreement-setup.md)
-- [Per Labor Hour Configuration](../configuration/contracts/per-labor-hour-setup.md)
-- [Fixed Fee Contract Setup](../configuration/contracts/fixed-fee-setup.md)
+- [Revenue Share Contract Configuration](../configuration/contracts/revenue-share-setup.md) 🔄 PLANNED
+- [Management Agreement Setup Guide](../configuration/contracts/management-agreement-setup.md) 🔄 PLANNED
+- [Per Labor Hour Configuration](../configuration/contracts/per-labor-hour-setup.md) 🔄 PLANNED
+- [Fixed Fee Contract Setup](../configuration/contracts/fixed-fee-setup.md) 🔄 PLANNED
+- [Contract Escalation Rules](./contract-escalation-rules.md) ✓ VERIFIED
+- [Billing System Overview](../../systems/billing/overview.md) ✓ VERIFIED
+- [Forecasting Business Rules](../forecasting/forecasting-calculation-rules.md) 🔄 PLANNED
+- [GL Account Mapping Guide](../../technical/integrations/gl-account-mapping.md) 🔄 PLANNED
+- [Tax Calculation Rules](./tax-calculation-rules.md) 🔄 PLANNED
+- [Invoice Generation Process](../../user-processes/billing-admin/invoice-generation-workflow.md) 🔄 PLANNED
+## Quick Links
+
 - [Contract Escalation Rules](./contract-escalation-rules.md)
 - [Billing System Overview](../../systems/billing/overview.md)
-- [Forecasting Business Rules](../forecasting/forecasting-calculation-rules.md)
-- [GL Account Mapping Guide](../../technical/integrations/gl-account-mapping.md)
-- [Tax Calculation Rules](./tax-calculation-rules.md)
-- [Invoice Generation Process](../../user-processes/billing-admin/invoice-generation-workflow.md)

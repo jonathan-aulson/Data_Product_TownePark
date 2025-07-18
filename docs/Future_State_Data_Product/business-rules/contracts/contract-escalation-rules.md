@@ -252,12 +252,11 @@ Contract escalation rules define the systematic approach for adjusting contract 
 
 ## Related Documentation
 
-- [Contract Management System Overview](../systems/contracts/20250716_Contracts_SystemOverview_PowerBill.md)
-- [Contract Data Schema Technical Specification](../technical/database/contracts-data-schema.md)
-- [Escalation Processing User Guide](../user-processes/contract-admin/escalation-processing.md)
-- [Escalation Configuration Guide](../configuration/contracts/escalation-configuration.md)
+- [Contract Management System Overview](../systems/contracts/20250716_Contracts_SystemOverview_PowerBill.md) 🔄 PLANNED
+- [Contract Data Schema Technical Specification](../technical/database/contracts-data-schema.md) 🔄 PLANNED
+- [Escalation Processing User Guide](../user-processes/contract-admin/escalation-processing.md) 🔄 PLANNED
+- [Escalation Configuration Guide](../configuration/contracts/escalation-configuration.md) 🔄 PLANNED
+- [PLH Rate Escalation Procedures](plh-rate-escalation.md) ✓ VERIFIED
+## Quick Links
+
 - [PLH Rate Escalation Procedures](plh-rate-escalation.md)
-
----
-
-*This document is part of Towne Park's comprehensive data product documentation. For questions or updates, contact the Contract Administration Team.*

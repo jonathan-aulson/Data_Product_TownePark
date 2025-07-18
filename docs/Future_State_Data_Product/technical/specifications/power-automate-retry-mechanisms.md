@@ -685,14 +685,17 @@ load_test_scenarios:
 
 ## Related Documentation
 
-- [Power Platform Architecture](../architecture/power-platform-architecture.md)
-- [Error Handling Standards](../../standards/error-handling-standards.md)
-- [Monitoring and Alerting Guide](../../operations/monitoring-alerting-guide.md)
-- [SharePoint Delta Token Management](sharepoint-delta-token-management.md)
-- [System Resilience Guidelines](../../standards/system-resilience-guidelines.md)
+- [Power Platform Architecture](../architecture/power-platform-architecture.md) 🔄 PLANNED
+- [Error Handling Standards](../../standards/error-handling-standards.md) 🔄 PLANNED
+- [Monitoring and Alerting Guide](../../operations/monitoring-alerting-guide.md) 🔄 PLANNED
+- [SharePoint Delta Token Management](sharepoint-delta-token-management.md) ✓ VERIFIED
+- [System Resilience Guidelines](../../standards/system-resilience-guidelines.md) 🔄 PLANNED
 
 ## Revision History
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | 2025-07-17 | Data Product Team | Initial technical specification from Sprint 25 user stories |
+## Quick Links
+
+- [SharePoint Delta Token Management](sharepoint-delta-token-management.md)

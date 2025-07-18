@@ -1,9 +1,9 @@
 # Documentation Link Validation Report
 
 ## Summary
-- **Total Links**: 1481
-- **Broken Links**: 199
-- **Valid Links**: 1134
+- **Total Links**: 1490
+- **Broken Links**: 189
+- **Valid Links**: 1153
 - **External Links**: 90
 - **Planned Links**: 0
 - **Other Links**: 45
@@ -12,88 +12,13 @@
 
 - **File**: `docs\Future_State_Data_Product\ai-prompts\Towne Park Documentation Transformation - Enhanced AI Prompt.md`
   - **Line**: 0
-  - **Text**: New System Document
-  - **URL**: `Future_State_Data_Product/systems/billing/new-document.md`
-
-- **File**: `docs\Future_State_Data_Product\ai-prompts\Towne Park Documentation Transformation - Enhanced AI Prompt.md`
-  - **Line**: 0
-  - **Text**: New System Document
-  - **URL**: `Future_State_Data_Product/systems/billing/new-document.md`
-
-- **File**: `docs\Future_State_Data_Product\ai-prompts\Towne Park Documentation Transformation - Enhanced AI Prompt.md`
-  - **Line**: 0
   - **Text**: :octicons-arrow-right-24: New Business Rule
-  - **URL**: `Future_State_Data_Product/business-rules/domain/new-rule.md`
-
-- **File**: `docs\Future_State_Data_Product\ai-prompts\Towne Park Documentation Transformation - Enhanced AI Prompt.md`
-  - **Line**: 0
-  - **Text**: New Technical Doc
-  - **URL**: `Future_State_Data_Product/technical/component/new-spec.md`
+  - **URL**: `../business-rules/overview.md`
 
 - **File**: `docs\Future_State_Data_Product\ai-prompts\Towne Park Documentation Transformation - Enhanced AI Prompt.md`
   - **Line**: 0
   - **Text**: New Document
-  - **URL**: `path/to/document.md`
-
-- **File**: `docs\Future_State_Data_Product\ai-prompts\Towne Park Documentation Transformation - Enhanced AI Prompt.md`
-  - **Line**: 0
-  - **Text**: PowerBill Overview
-  - **URL**: `Future_State_Data_Product/systems/billing/20250716_Billing_SystemOverview_PowerBill.md`
-
-- **File**: `docs\Future_State_Data_Product\ai-prompts\Towne Park Documentation Transformation - Enhanced AI Prompt.md`
-  - **Line**: 0
-  - **Text**: PowerBill Overview
-  - **URL**: `Future_State_Data_Product/systems/billing/20250716_Billing_SystemOverview_PowerBill.md`
-
-- **File**: `docs\Future_State_Data_Product\ai-prompts\Towne Park Documentation Transformation - Enhanced AI Prompt.md`
-  - **Line**: 0
-  - **Text**: PowerBill Overview
-  - **URL**: `Future_State_Data_Product/systems/billing/20250716_Billing_SystemOverview_PowerBill.md`
-
-- **File**: `docs\Future_State_Data_Product\ai-prompts\Towne Park Documentation Transformation - Enhanced AI Prompt.md`
-  - **Line**: 0
-  - **Text**: Forecasting Data Sources
-  - **URL**: `Future_State_Data_Product/technical/database/20250716_Forecasting_DataSources_TechnicalSpec.md`
-
-- **File**: `docs\Future_State_Data_Product\ai-prompts\Towne Park Documentation Transformation - Enhanced AI Prompt.md`
-  - **Line**: 0
-  - **Text**: Forecasting Data Sources
-  - **URL**: `Future_State_Data_Product/technical/database/20250716_Forecasting_DataSources_TechnicalSpec.md`
-
-- **File**: `docs\Future_State_Data_Product\ai-prompts\Towne Park Documentation Transformation - Enhanced AI Prompt.md`
-  - **Line**: 0
-  - **Text**: ROI Analysis
-  - **URL**: `Future_State_Data_Product/business-rules/billing/20250716_Billing_ROIAnalysis_SuccessMetrics.md`
-
-- **File**: `docs\Future_State_Data_Product\ai-prompts\Towne Park Documentation Transformation - Enhanced AI Prompt.md`
-  - **Line**: 0
-  - **Text**: ROI Analysis
-  - **URL**: `Future_State_Data_Product/business-rules/billing/20250716_Billing_ROIAnalysis_SuccessMetrics.md`
-
-- **File**: `docs\Future_State_Data_Product\ai-prompts\Towne Park Documentation Transformation - Ongoing Rule.md`
-  - **Line**: 0
-  - **Text**: PowerBill Overview
-  - **URL**: `Future_State_Data_Product/systems/billing/20250716_Billing_SystemOverview_PowerBill.md`
-
-- **File**: `docs\Future_State_Data_Product\ai-prompts\Towne Park Documentation Transformation - Ongoing Rule.md`
-  - **Line**: 0
-  - **Text**: PowerBill Overview
-  - **URL**: `Future_State_Data_Product/systems/billing/20250716_Billing_SystemOverview_PowerBill.md`
-
-- **File**: `docs\Future_State_Data_Product\ai-prompts\Towne Park Documentation Transformation - Ongoing Rule.md`
-  - **Line**: 0
-  - **Text**: PowerBill Overview
-  - **URL**: `Future_State_Data_Product/systems/billing/20250716_Billing_SystemOverview_PowerBill.md`
-
-- **File**: `docs\Future_State_Data_Product\configuration\overview.md`
-  - **Line**: 0
-  - **Text**: Customer Site Configuration
-  - **URL**: `customer-sites/index.md`
-
-- **File**: `docs\Future_State_Data_Product\configuration\overview.md`
-  - **Line**: 0
-  - **Text**: Role-Based Permissions
-  - **URL**: `../business-rules/user-access/role-based-permissions.md`
+  - **URL**: `../overview.md`
 
 - **File**: `docs\Future_State_Data_Product\standards\broken-link-cleanup-strategy.md`
   - **Line**: 0
@@ -597,11 +522,6 @@
 
 - **File**: `docs\Future_State_Data_Product\systems\customer-sites\overview.md`
   - **Line**: 0
-  - **Text**: Customer Sites Configuration
-  - **URL**: `../../configuration/customer-sites/index.md`
-
-- **File**: `docs\Future_State_Data_Product\systems\customer-sites\overview.md`
-  - **Line**: 0
   - **Text**: Business Rules Documentation
   - **URL**: `../../business-rules/customer-sites/index.md`
 
@@ -634,6 +554,11 @@
   - **Line**: 0
   - **Text**: Forecasting User Processes
   - **URL**: `../../user-processes/forecasting/index.md`
+
+- **File**: `docs\Future_State_Data_Product\configuration\customer-sites\index.md`
+  - **Line**: 0
+  - **Text**: Site Classification Rules
+  - **URL**: `../../business-rules/customer-sites/index.md`
 
 - **File**: `docs\Future_State_Data_Product\configuration\customer-sites\site-setup-configuration.md`
   - **Line**: 0
@@ -1005,6 +930,31 @@
   - **Text**: Forecasting User Processes
   - **URL**: `../../user-processes/forecasting/index.md`
 
+- **File**: `docs\Future_State_Data_Product\business-rules\user-access\index.md`
+  - **Line**: 0
+  - **Text**: Authentication Requirements
+  - **URL**: `authentication-requirements.md`
+
+- **File**: `docs\Future_State_Data_Product\business-rules\user-access\index.md`
+  - **Line**: 0
+  - **Text**: Authorization Policies
+  - **URL**: `authorization-policies.md`
+
+- **File**: `docs\Future_State_Data_Product\business-rules\user-access\index.md`
+  - **Line**: 0
+  - **Text**: Technical Security
+  - **URL**: `../../technical/security/index.md`
+
+- **File**: `docs\Future_State_Data_Product\business-rules\user-access\role-based-permissions.md`
+  - **Line**: 0
+  - **Text**: User Access Configuration
+  - **URL**: `../../../configuration/user-access/index.md`
+
+- **File**: `docs\Future_State_Data_Product\business-rules\user-access\role-based-permissions.md`
+  - **Line**: 0
+  - **Text**: System Security
+  - **URL**: `../../../technical/security/index.md`
+
 ## Valid Links
 
 - `docs\index.md` → `Future_State_Data_Product/systems/billing/overview.md`
@@ -1017,7 +967,7 @@
 - `docs\index.md` → `Future_State_Data_Product/business-rules/contract-types/fixed-fee.md`
 - `docs\index.md` → `Future_State_Data_Product/technical/frontend/index.md`
 - `docs\index.md` → `Future_State_Data_Product/user-processes/account-manager/index.md`
-- ... and 1124 more
+- ... and 1143 more
 
 ## External Links
 

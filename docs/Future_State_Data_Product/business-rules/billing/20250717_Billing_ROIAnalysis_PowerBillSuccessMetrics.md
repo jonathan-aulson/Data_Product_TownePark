@@ -369,22 +369,13 @@ bs_totalduetoowner: =bs_revenueamount - bs_totalduetotownepark
 
 ## Related Documentation
 
-### System Documentation
-- [PowerBill System Overview](../systems/billing/20250716_Billing_SystemOverview_PowerBill.md)
-- [Billing System Generate Invoices](../systems/billing/generate-invoices.md)
-
-### Business Rules
-- [PLH Rate Escalation](../business-rules/contracts/plh-rate-escalation.md)
-- [Service Fee Escalation ECI](../business-rules/contracts/service-fee-escalation-eci.md)
-
-### User Processes
-- [Billing Admin Generate Invoices](../user-processes/billing-admin/generate-invoices.md)
-
-### Technical Specifications
-- [Forecasting Data Sources Technical Spec](../technical/database/20250716_Forecasting_DataSources_TechnicalSpec.md)
-
-### Configuration
-- [Development Configuration Guide Standards](../configuration/system-settings/20250716_Development_ConfigurationGuide_Standards.md)
+- [PowerBill System Overview](../systems/billing/20250716_Billing_SystemOverview_PowerBill.md) 🔄 PLANNED
+- [Billing System Generate Invoices](../systems/billing/generate-invoices.md) 🔄 PLANNED
+- [PLH Rate Escalation](../business-rules/contracts/plh-rate-escalation.md) 🔄 PLANNED
+- [Service Fee Escalation ECI](../business-rules/contracts/service-fee-escalation-eci.md) 🔄 PLANNED
+- [Billing Admin Generate Invoices](../user-processes/billing-admin/generate-invoices.md) 🔄 PLANNED
+- [Forecasting Data Sources Technical Spec](../technical/database/20250716_Forecasting_DataSources_TechnicalSpec.md) 🔄 PLANNED
+- [Development Configuration Guide Standards](../configuration/system-settings/20250716_Development_ConfigurationGuide_Standards.md) 🔄 PLANNED
 
 ## Data Quality and Limitations
 

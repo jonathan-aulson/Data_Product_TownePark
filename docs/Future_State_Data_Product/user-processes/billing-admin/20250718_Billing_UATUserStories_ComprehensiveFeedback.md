@@ -495,11 +495,11 @@ This comprehensive feedback represents real-world testing scenarios and requirem
 
 ## Related Documentation
 
-- [Billing System Overview](../systems/billing/20250716_Billing_SystemOverview_PowerBill.md)
-- [Contract Management Business Rules](../business-rules/contracts/)
-- [Revenue Calculation Business Rules](../business-rules/billing/)
-- [User Access Control Configuration](../configuration/user-access/)
-- [Great Plains Integration Technical Specifications](../technical/integrations/)
+- [Billing System Overview](../systems/billing/20250716_Billing_SystemOverview_PowerBill.md) 🔄 PLANNED
+- [Contract Management Business Rules](../business-rules/contracts/) 🔗 EXTERNAL
+- [Revenue Calculation Business Rules](../business-rules/billing/) 🔗 EXTERNAL
+- [User Access Control Configuration](../configuration/user-access/) 🔗 EXTERNAL
+- [Great Plains Integration Technical Specifications](../technical/integrations/) 🔗 EXTERNAL
 
 ## Code Validation Report
 

@@ -135,12 +135,15 @@ The XML payload sent to Great Plains must include:
 
 ## Related Documentation
 
-- [Great Plains Integration Technical Specification](../../technical/integrations/great-plains-integration-spec.md)
-- [PowerBill System Overview](../../systems/billing/powerbill-system-overview.md)
-- [Billing Process Workflows](../../user-processes/billing-admin/billing-workflows.md)
+- [Great Plains Integration Technical Specification](../../technical/integrations/great-plains-integration-spec.md) 🔄 PLANNED
+- [PowerBill System Overview](../../systems/billing/powerbill-system-overview.md) ✓ VERIFIED
+- [Billing Process Workflows](../../user-processes/billing-admin/billing-workflows.md) 🔄 PLANNED
 
 ## Revision History
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | 2025-07-17 | Data Product Team | Initial documentation from Sprint 25 user stories |
+## Quick Links
+
+- [PowerBill System Overview](../../systems/billing/powerbill-system-overview.md)

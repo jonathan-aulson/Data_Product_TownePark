@@ -72,8 +72,7 @@ The implementation of this rule within the billing system should ensure accurate
 
 ## Related Documentation
 
-*   [Billing System Overview](../../systems/billing/20250716_Billing_SystemOverview_PowerBill.md)
-*   [PLH Rate Escalation](plh-rate-escalation.md)
+
 
 ## Code Validation
 

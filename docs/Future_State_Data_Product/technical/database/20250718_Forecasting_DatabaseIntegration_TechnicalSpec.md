@@ -590,10 +590,10 @@ RETURN
 
 ## Related Documentation
 
-- [Forecasting Business Rules](../business-rules/forecasting/20250718_Forecasting_BusinessRules_CalculationsAndValidations.md)
-- [Account Manager User Processes](../user-processes/account-manager/20250718_Forecasting_UserProcesses_AccountManagerWorkflows.md)
-- [System Configuration Guidelines](../configuration/system-settings/)
-- [API Documentation](../integrations/)
+- [Forecasting Business Rules](../business-rules/forecasting/20250718_Forecasting_BusinessRules_CalculationsAndValidations.md) 🔄 PLANNED
+- [Account Manager User Processes](../user-processes/account-manager/20250718_Forecasting_UserProcesses_AccountManagerWorkflows.md) 🔄 PLANNED
+- [System Configuration Guidelines](../configuration/system-settings/) 🔗 EXTERNAL
+- [API Documentation](../integrations/) 🔗 EXTERNAL
 
 ## Code Validation Report
 

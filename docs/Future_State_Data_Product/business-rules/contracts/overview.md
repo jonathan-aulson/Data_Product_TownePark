@@ -253,11 +253,11 @@ Rules governing the resolution of contract exceptions.
 
 ## Related Documentation
 
-- [Contract Business Rules Index](index.md)
-- [PLH Rate Escalation](plh-rate-escalation.md)
-- [Service Fee Escalation ECI](service-fee-escalation-eci.md)
-- [Contract Types Overview](../contract-types/overview.md)
-- [Contract Systems](../../systems/contracts/index.md)
+- [Contract Business Rules Index](index.md) ✓ VERIFIED
+- [PLH Rate Escalation](plh-rate-escalation.md) ✓ VERIFIED
+- [Service Fee Escalation ECI](service-fee-escalation-eci.md) ✓ VERIFIED
+- [Contract Types Overview](../contract-types/overview.md) ✓ VERIFIED
+- [Contract Systems](../../systems/contracts/index.md) 🔄 PLANNED
 
 ## Quick Links
 

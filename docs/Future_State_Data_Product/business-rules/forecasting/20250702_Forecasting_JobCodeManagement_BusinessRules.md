@@ -414,8 +414,14 @@ ELSE
 
 ## Related Documentation
 
+- [Forecasting Job Group Management User Process](../../user-processes/forecasting/20250702_Forecasting_JobGroupManagement_UserProcess.md) ✓ VERIFIED
+- [Forecasting Data Integration Technical Specification](../../technical/forecasting/20250702_Forecasting_DataIntegration_TechnicalSpec.md) ✓ VERIFIED
+- [Customer Site Management](../../systems/customer-sites/customer-site-directory.md) ✓ VERIFIED
+- [Forecasting System Overview](../../systems/forecasting/20250716_Forecasting_SystemOverview_Integrated.md) ✓ VERIFIED
+- [Workforce Planning Configuration](../../configuration/forecasting/workforce-planning-configuration.md) 🔄 PLANNED
+## Quick Links
+
 - [Forecasting Job Group Management User Process](../../user-processes/forecasting/20250702_Forecasting_JobGroupManagement_UserProcess.md)
 - [Forecasting Data Integration Technical Specification](../../technical/forecasting/20250702_Forecasting_DataIntegration_TechnicalSpec.md)
 - [Customer Site Management](../../systems/customer-sites/customer-site-directory.md)
 - [Forecasting System Overview](../../systems/forecasting/20250716_Forecasting_SystemOverview_Integrated.md)
-- [Workforce Planning Configuration](../../configuration/forecasting/workforce-planning-configuration.md)

@@ -174,12 +174,8 @@ The Contract Management System within Towne Park's PowerBill platform serves as 
 
 ## Related Documentation
 
-- [Contract Escalation Business Rules](../business-rules/contracts/contract-escalation-rules.md)
-- [Contract Data Schema Technical Specification](../technical/database/contracts-data-schema.md)
-- [Contract Setup User Process](../user-processes/contract-admin/contract-setup-workflow.md)
-- [Contract Configuration Guide](../configuration/contracts/contract-configuration-guide.md)
-- [Billing System Integration](../systems/billing/billing-system-integration.md)
-
----
-
-*This document is part of Towne Park's comprehensive data product documentation. For questions or updates, contact the Data Product Team.*
+- [Contract Escalation Business Rules](../business-rules/contracts/contract-escalation-rules.md) 🔄 PLANNED
+- [Contract Data Schema Technical Specification](../technical/database/contracts-data-schema.md) 🔄 PLANNED
+- [Contract Setup User Process](../user-processes/contract-admin/contract-setup-workflow.md) 🔄 PLANNED
+- [Contract Configuration Guide](../configuration/contracts/contract-configuration-guide.md) 🔄 PLANNED
+- [Billing System Integration](../systems/billing/billing-system-integration.md) 🔄 PLANNED

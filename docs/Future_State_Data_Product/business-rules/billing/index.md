@@ -218,10 +218,10 @@ Business rules for handling negative invoices and GL entity mapping.
 
 ## Related Documentation
 
-- [Contract Business Rules](../contracts/index.md)
-- [Forecasting Business Rules](../forecasting/index.md)
-- [Billing System Documentation](../../systems/billing/overview.md)
-- [User Processes](../../user-processes/billing-admin/index.md)
+- [Contract Business Rules](../contracts/index.md) ✓ VERIFIED
+- [Forecasting Business Rules](../forecasting/index.md) ✓ VERIFIED
+- [Billing System Documentation](../../systems/billing/overview.md) ✓ VERIFIED
+- [User Processes](../../user-processes/billing-admin/index.md) ✓ VERIFIED
 
 ## Quick Links
 

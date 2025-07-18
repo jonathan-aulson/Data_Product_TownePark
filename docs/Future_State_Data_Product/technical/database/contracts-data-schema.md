@@ -510,11 +510,13 @@ WHERE avg_fragmentation_in_percent > 10
 
 ## Related Documentation
 
+- [Contract Management System Overview](../../systems/contracts/20250716_Contracts_SystemOverview_PowerBill.md) ✓ VERIFIED
+- [Contract Escalation Business Rules](../../business-rules/contracts/contract-escalation-rules.md) ✓ VERIFIED
+- [Contract Setup User Process](../../user-processes/contract-admin/contract-setup-workflow.md) ✓ VERIFIED
+- [Contract Configuration Guide](../../configuration/contracts/contract-configuration-guide.md) ✓ VERIFIED
+## Quick Links
+
 - [Contract Management System Overview](../../systems/contracts/20250716_Contracts_SystemOverview_PowerBill.md)
 - [Contract Escalation Business Rules](../../business-rules/contracts/contract-escalation-rules.md)
 - [Contract Setup User Process](../../user-processes/contract-admin/contract-setup-workflow.md)
 - [Contract Configuration Guide](../../configuration/contracts/contract-configuration-guide.md)
-
----
-
-*This document is part of Towne Park's comprehensive data product documentation. For questions or updates, contact the Database Administration Team.*

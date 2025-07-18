@@ -625,3 +625,7 @@ public class BillableAccountsController : ControllerBase
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | 2025-07-16 | Data Product Team | Initial technical specifications from Sprint 28 user stories |
+## Quick Links
+
+- [Forecasting Data Sources Technical Specification](20250716_Forecasting_DataSources_TechnicalSpec.md)
+- [EDW Budget Integration Specifications](../integrations/budget-integration.md)

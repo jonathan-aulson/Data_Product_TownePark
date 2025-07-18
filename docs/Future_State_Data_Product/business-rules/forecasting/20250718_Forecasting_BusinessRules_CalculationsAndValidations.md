@@ -463,10 +463,11 @@ This document defines the comprehensive business rules, calculation formulas, an
 ## Integration Points
 
 ### Related Documentation
-- [Account Manager User Processes](../user-processes/account-manager/20250718_Forecasting_UserProcesses_AccountManagerWorkflows.md)
-- [Forecasting Technical Specifications](../technical/forecasting/)
-- [Database Integration Specifications](../technical/database/)
-- [System Configuration Guidelines](../configuration/system-settings/)
+
+- [Account Manager User Processes](../user-processes/account-manager/20250718_Forecasting_UserProcesses_AccountManagerWorkflows.md) 🔄 PLANNED
+- [Forecasting Technical Specifications](../technical/forecasting/) 🔗 EXTERNAL
+- [Database Integration Specifications](../technical/database/) 🔗 EXTERNAL
+- [System Configuration Guidelines](../configuration/system-settings/) 🔗 EXTERNAL
 
 ## Validation Requirements
 

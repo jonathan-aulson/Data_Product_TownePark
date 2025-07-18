@@ -232,10 +232,10 @@ Business rules for group and transient business logic and calculations.
 
 ## Related Documentation
 
-- [Billing Business Rules](../billing/index.md)
-- [Contract Business Rules](../contracts/index.md)
-- [Forecasting System Documentation](../../systems/forecasting/overview.md)
-- [User Processes](../../user-processes/forecasting/index.md)
+- [Billing Business Rules](../billing/index.md) ✓ VERIFIED
+- [Contract Business Rules](../contracts/index.md) ✓ VERIFIED
+- [Forecasting System Documentation](../../systems/forecasting/overview.md) ✓ VERIFIED
+- [User Processes](../../user-processes/forecasting/index.md) 🔄 PLANNED
 
 ## Quick Links
 

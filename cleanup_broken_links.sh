@@ -3,27 +3,8 @@
 
 echo 'Broken links found in the following files:'
 echo '  docs\Future_State_Data_Product\ai-prompts\Towne Park Documentation Transformation - Enhanced AI Prompt.md:'
-echo '    Line 0: [New System Document](Future_State_Data_Product/systems/billing/new-document.md)'
-echo '    Line 0: [New System Document](Future_State_Data_Product/systems/billing/new-document.md)'
-echo '    Line 0: [:octicons-arrow-right-24: New Business Rule](Future_State_Data_Product/business-rules/domain/new-rule.md)'
-echo '    Line 0: [New Technical Doc](Future_State_Data_Product/technical/component/new-spec.md)'
-echo '    Line 0: [New Document](path/to/document.md)'
-echo '    Line 0: [PowerBill Overview](Future_State_Data_Product/systems/billing/20250716_Billing_SystemOverview_PowerBill.md)'
-echo '    Line 0: [PowerBill Overview](Future_State_Data_Product/systems/billing/20250716_Billing_SystemOverview_PowerBill.md)'
-echo '    Line 0: [PowerBill Overview](Future_State_Data_Product/systems/billing/20250716_Billing_SystemOverview_PowerBill.md)'
-echo '    Line 0: [Forecasting Data Sources](Future_State_Data_Product/technical/database/20250716_Forecasting_DataSources_TechnicalSpec.md)'
-echo '    Line 0: [Forecasting Data Sources](Future_State_Data_Product/technical/database/20250716_Forecasting_DataSources_TechnicalSpec.md)'
-echo '    Line 0: [ROI Analysis](Future_State_Data_Product/business-rules/billing/20250716_Billing_ROIAnalysis_SuccessMetrics.md)'
-echo '    Line 0: [ROI Analysis](Future_State_Data_Product/business-rules/billing/20250716_Billing_ROIAnalysis_SuccessMetrics.md)'
-
-echo '  docs\Future_State_Data_Product\ai-prompts\Towne Park Documentation Transformation - Ongoing Rule.md:'
-echo '    Line 0: [PowerBill Overview](Future_State_Data_Product/systems/billing/20250716_Billing_SystemOverview_PowerBill.md)'
-echo '    Line 0: [PowerBill Overview](Future_State_Data_Product/systems/billing/20250716_Billing_SystemOverview_PowerBill.md)'
-echo '    Line 0: [PowerBill Overview](Future_State_Data_Product/systems/billing/20250716_Billing_SystemOverview_PowerBill.md)'
-
-echo '  docs\Future_State_Data_Product\configuration\overview.md:'
-echo '    Line 0: [Customer Site Configuration](customer-sites/index.md)'
-echo '    Line 0: [Role-Based Permissions](../business-rules/user-access/role-based-permissions.md)'
+echo '    Line 0: [:octicons-arrow-right-24: New Business Rule](../business-rules/overview.md)'
+echo '    Line 0: [New Document](../overview.md)'
 
 echo '  docs\Future_State_Data_Product\standards\broken-link-cleanup-strategy.md:'
 echo '    Line 0: [Document Name](relative/path/to/document.md)'
@@ -188,7 +169,6 @@ echo '    Line 0: [Forecasting Data Integration](../../technical/integration/cus
 echo '  docs\Future_State_Data_Product\systems\customer-sites\overview.md:'
 echo '    Line 0: [Customer Sites Index](index.md)'
 echo '    Line 0: [Site Admin User Processes](../../user-processes/site-admin/index.md)'
-echo '    Line 0: [Customer Sites Configuration](../../configuration/customer-sites/index.md)'
 echo '    Line 0: [Business Rules Documentation](../../business-rules/customer-sites/index.md)'
 
 echo '  docs\Future_State_Data_Product\systems\forecasting\20250716_Forecasting_PayrollForecasting_SystemOverview.md:'
@@ -200,6 +180,9 @@ echo '    Line 0: [EDW Budget Integration](../technical/integrations/budget-inte
 
 echo '  docs\Future_State_Data_Product\systems\forecasting\overview.md:'
 echo '    Line 0: [Forecasting User Processes](../../user-processes/forecasting/index.md)'
+
+echo '  docs\Future_State_Data_Product\configuration\customer-sites\index.md:'
+echo '    Line 0: [Site Classification Rules](../../business-rules/customer-sites/index.md)'
 
 echo '  docs\Future_State_Data_Product\configuration\customer-sites\site-setup-configuration.md:'
 echo '    Line 0: [Territory Assignment Rules](../../business-rules/customer-sites/territory-assignment-rules.md)'
@@ -310,3 +293,12 @@ echo '    Line 0: [User Processes](../../user-processes/forecasting/index.md)'
 echo '  docs\Future_State_Data_Product\business-rules\forecasting\overview.md:'
 echo '    Line 0: [Forecasting System Documentation](../../systems/forecasting/index.md)'
 echo '    Line 0: [Forecasting User Processes](../../user-processes/forecasting/index.md)'
+
+echo '  docs\Future_State_Data_Product\business-rules\user-access\index.md:'
+echo '    Line 0: [Authentication Requirements](authentication-requirements.md)'
+echo '    Line 0: [Authorization Policies](authorization-policies.md)'
+echo '    Line 0: [Technical Security](../../technical/security/index.md)'
+
+echo '  docs\Future_State_Data_Product\business-rules\user-access\role-based-permissions.md:'
+echo '    Line 0: [User Access Configuration](../../../configuration/user-access/index.md)'
+echo '    Line 0: [System Security](../../../technical/security/index.md)'

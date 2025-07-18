@@ -410,8 +410,14 @@ FOR each required field:
 
 ## Related Documentation
 
+- [Billing Account Validation User Process](../../user-processes/billing-admin/20250702_Billing_AccountValidation_UserProcess.md) ✓ VERIFIED
+- [Great Plains Integration Technical Specification](../../technical/integrations/great-plains-integration.md) ✓ VERIFIED
+- [Billing System Overview](../../systems/billing/20250716_Billing_SystemOverview_PowerBill.md) ✓ VERIFIED
+- [Data Quality Standards](../../standards/data-quality-standards.md) ✓ VERIFIED
+- [Financial Controls and Compliance](../../configuration/billing/financial-controls-configuration.md) 🔄 PLANNED
+## Quick Links
+
 - [Billing Account Validation User Process](../../user-processes/billing-admin/20250702_Billing_AccountValidation_UserProcess.md)
 - [Great Plains Integration Technical Specification](../../technical/integrations/great-plains-integration.md)
 - [Billing System Overview](../../systems/billing/20250716_Billing_SystemOverview_PowerBill.md)
 - [Data Quality Standards](../../standards/data-quality-standards.md)
-- [Financial Controls and Compliance](../../configuration/billing/financial-controls-configuration.md)

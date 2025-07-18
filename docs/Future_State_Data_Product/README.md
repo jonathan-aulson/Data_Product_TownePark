@@ -10,7 +10,6 @@ This repository contains comprehensive documentation for Towne Park's data produ
 - [User Processes](user-processes/): End-user workflows
 - [Configuration](configuration/): System configuration guides
 - [Glossary](./glossary.md): Terminology definitions
+## Quick Links
 
-
-
-
+- [Glossary](./glossary.md)

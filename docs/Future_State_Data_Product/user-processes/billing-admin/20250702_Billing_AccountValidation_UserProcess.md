@@ -361,8 +361,14 @@ This user process guide provides comprehensive instructions for billing administ
 
 ## Related Documentation
 
+- [Billing Account Validation Business Rules](../../business-rules/billing/20250702_Billing_AccountValidation_BusinessRules.md) ✓ VERIFIED
+- [Great Plains Integration Technical Specification](../../technical/integrations/great-plains-integration.md) ✓ VERIFIED
+- [Billing System Overview](../../systems/billing/20250716_Billing_SystemOverview_PowerBill.md) ✓ VERIFIED
+- [Batch Processing Configuration Guide](../../configuration/billing/batch-processing-configuration.md) 🔄 PLANNED
+- [Data Quality Standards](../../standards/data-quality-standards.md) ✓ VERIFIED
+## Quick Links
+
 - [Billing Account Validation Business Rules](../../business-rules/billing/20250702_Billing_AccountValidation_BusinessRules.md)
 - [Great Plains Integration Technical Specification](../../technical/integrations/great-plains-integration.md)
 - [Billing System Overview](../../systems/billing/20250716_Billing_SystemOverview_PowerBill.md)
-- [Batch Processing Configuration Guide](../../configuration/billing/batch-processing-configuration.md)
 - [Data Quality Standards](../../standards/data-quality-standards.md)

@@ -348,6 +348,13 @@ This user process guide provides comprehensive instructions for managing job gro
 
 ## Related Documentation
 
+- [Forecasting Data Integration Technical Specification](../../technical/forecasting/20250702_Forecasting_DataIntegration_TechnicalSpec.md) ✓ VERIFIED
+- [Job Code Management Business Rules](../../business-rules/forecasting/20250702_Forecasting_JobCodeManagement_BusinessRules.md) ✓ VERIFIED
+- [Customer Site Management](../../systems/customer-sites/customer-site-directory.md) ✓ VERIFIED
+- [Forecasting System Overview](../../systems/forecasting/20250716_Forecasting_SystemOverview_Integrated.md) ✓ VERIFIED
+- [Admin User Access Configuration](../../configuration/user-access/role-based-permissions.md) ✓ VERIFIED
+## Quick Links
+
 - [Forecasting Data Integration Technical Specification](../../technical/forecasting/20250702_Forecasting_DataIntegration_TechnicalSpec.md)
 - [Job Code Management Business Rules](../../business-rules/forecasting/20250702_Forecasting_JobCodeManagement_BusinessRules.md)
 - [Customer Site Management](../../systems/customer-sites/customer-site-directory.md)

@@ -196,19 +196,19 @@ System Overview Document:
 nav:
   - Systems:
     - Billing:
-      - PowerBill Overview: Future_State_Data_Product/systems/billing/20250716_Billing_SystemOverview_PowerBill.md
+      - PowerBill Overview: ../systems/billing/20250716_Billing_SystemOverview_PowerBill.md
 ```
 
 ```markdown
 # docs/index.md - Quick Navigation Table
-| [PowerBill Overview](Future_State_Data_Product/systems/billing/20250716_Billing_SystemOverview_PowerBill.md) |
+| [PowerBill Overview](../systems/billing/20250716_Billing_SystemOverview_PowerBill.md) |
 
 # docs/index.md - Documentation Structure
 - **Systems Documentation** - Technical details about core systems
-  - [PowerBill Overview](Future_State_Data_Product/systems/billing/20250716_Billing_SystemOverview_PowerBill.md)
+  - [PowerBill Overview](../systems/billing/20250716_Billing_SystemOverview_PowerBill.md)
 
 # docs/index.md - Latest Updates Table
-| [PowerBill Overview](Future_State_Data_Product/systems/billing/20250716_Billing_SystemOverview_PowerBill.md) | 2025-07-16 | Comprehensive PowerBill system overview with architecture and business impact |
+| [PowerBill Overview](../systems/billing/20250716_Billing_SystemOverview_PowerBill.md) | 2025-07-16 | Comprehensive PowerBill system overview with architecture and business impact |
 ```
 ```
 

@@ -312,10 +312,10 @@ Processes for external system integration and partnerships.
 
 ## Related Documentation
 
-- [Forecasting User Processes Index](index.md)
-- [Account Manager Processes](../account-manager/index.md)
-- [District Manager Processes](../district-manager/index.md)
-- [Forecasting System Documentation](../../systems/forecasting/index.md)
+- [Forecasting User Processes Index](index.md) 🔄 PLANNED
+- [Account Manager Processes](../account-manager/index.md) ✓ VERIFIED
+- [District Manager Processes](../district-manager/index.md) ✓ VERIFIED
+- [Forecasting System Documentation](../../systems/forecasting/index.md) 🔄 PLANNED
 
 ## Quick Links
 

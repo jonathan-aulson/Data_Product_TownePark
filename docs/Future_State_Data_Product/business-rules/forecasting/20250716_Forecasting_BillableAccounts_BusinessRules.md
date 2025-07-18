@@ -205,3 +205,6 @@ The Billable Accounts feature enables Account Managers to forecast Internal Reve
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0 | 2025-07-16 | Data Product Team | Initial documentation from Sprint 28 user stories |
+## Quick Links
+
+- [PLH Rate Escalation Rules](../contracts/plh-rate-escalation.md)
