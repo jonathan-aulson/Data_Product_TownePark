@@ -1,0 +1,820 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_sql": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "bs_TowneParkEDW"
+        },
+        "api": {
+          "name": "shared_sql"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "fcbdb5d3-5548-4a66-b4d1-9b02370c4804"
+          },
+          "type": "Request",
+          "kind": "Button",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "title": "DepositedRevenue",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "Stringified Array of Deposited Revenue",
+                  "x-ms-content-hint": "TEXT"
+                },
+                "number": {
+                  "title": "InvoiceGroup",
+                  "type": "number",
+                  "x-ms-dynamically-added": true,
+                  "description": "Target invoice group",
+                  "x-ms-content-hint": "NUMBER"
+                },
+                "text_1": {
+                  "title": "ContractType",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "Comma separated string of Contract Types integer values",
+                  "x-ms-content-hint": "TEXT"
+                },
+                "date": {
+                  "description": "Start date for service period",
+                  "format": "date",
+                  "title": "ServicePeriodStart",
+                  "type": "string",
+                  "x-ms-content-hint": "DATE",
+                  "x-ms-dynamically-added": true
+                },
+                "date_1": {
+                  "description": "End date for service period",
+                  "format": "date",
+                  "title": "ServiceEndDate",
+                  "type": "string",
+                  "x-ms-content-hint": "DATE",
+                  "x-ms-dynamically-added": true
+                },
+                "text_2": {
+                  "description": "Customer Site number (i.e. \"0452\")",
+                  "title": "SiteNumber",
+                  "type": "string",
+                  "x-ms-content-hint": "TEXT",
+                  "x-ms-dynamically-added": true
+                }
+              },
+              "required": [
+                "text",
+                "number",
+                "text_1",
+                "date",
+                "date_1",
+                "text_2"
+              ]
+            }
+          }
+        }
+      },
+      "actions": {
+        "Condition_Check_For_Null_Fields": {
+          "actions": {
+            "Respond_to_a_Power_App_or_flow": {
+              "type": "Response",
+              "kind": "PowerApp",
+              "inputs": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "lineitems": {
+                      "title": "LineItems",
+                      "type": "string",
+                      "x-ms-content-hint": "TEXT",
+                      "x-ms-dynamically-added": true
+                    },
+                    "invoicesubtotal": {
+                      "title": "InvoiceSubTotal",
+                      "type": "number",
+                      "x-ms-content-hint": "NUMBER",
+                      "x-ms-dynamically-added": true
+                    }
+                  },
+                  "additionalProperties": {}
+                },
+                "statusCode": 200,
+                "body": {
+                  "lineitems": "@{variables('LineItems')}",
+                  "invoicesubtotal": "@variables('DepositedRevenueAmount')"
+                }
+              }
+            },
+            "Terminate": {
+              "runAfter": {
+                "Respond_to_a_Power_App_or_flow": [
+                  "Succeeded"
+                ]
+              },
+              "type": "Terminate",
+              "inputs": {
+                "runStatus": "Succeeded"
+              }
+            }
+          },
+          "runAfter": {
+            "Initialize_DepositedRevenueAmount_Variable": [
+              "Succeeded"
+            ],
+            "Initialize_variable_LineItems": [
+              "Succeeded"
+            ],
+            "Initialize_variable_TaxAmountDueToTownePark": [
+              "Succeeded"
+            ],
+            "Initialize_variable_TaxesPaid": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {}
+          },
+          "expression": {
+            "or": [
+              {
+                "equals": [
+                  "@triggerBody()?['text']",
+                  "@null"
+                ]
+              },
+              {
+                "equals": [
+                  "@empty(triggerBody()?['text'])",
+                  "@null"
+                ]
+              },
+              {
+                "equals": [
+                  "@triggerBody()?['number']",
+                  "@null"
+                ]
+              },
+              {
+                "equals": [
+                  "@triggerBody()?['text_1']",
+                  "@null"
+                ]
+              },
+              {
+                "equals": [
+                  "@empty(triggerBody()?['text_1'])",
+                  "@null"
+                ]
+              }
+            ]
+          },
+          "type": "If"
+        },
+        "Compose_ContractType_Array": {
+          "runAfter": {
+            "Condition_Check_For_Null_Fields": [
+              "Succeeded"
+            ]
+          },
+          "type": "Compose",
+          "inputs": "@split(triggerBody()?['text_1'], ',')"
+        },
+        "Condition_Check_If_Contract_Does_not_Contain_Deposited_Revenue": {
+          "actions": {
+            "Respond_to_a_Power_App_or_flow-copy": {
+              "type": "Response",
+              "kind": "PowerApp",
+              "inputs": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "lineitems": {
+                      "title": "LineItems",
+                      "type": "string",
+                      "x-ms-content-hint": "TEXT",
+                      "x-ms-dynamically-added": true
+                    },
+                    "invoicesubtotal": {
+                      "title": "InvoiceSubTotal",
+                      "type": "number",
+                      "x-ms-content-hint": "NUMBER",
+                      "x-ms-dynamically-added": true
+                    }
+                  },
+                  "additionalProperties": {}
+                },
+                "statusCode": 200,
+                "body": {
+                  "lineitems": "@{variables('LineItems')}",
+                  "invoicesubtotal": "@variables('DepositedRevenueAmount')"
+                }
+              }
+            },
+            "Terminate_1": {
+              "runAfter": {
+                "Respond_to_a_Power_App_or_flow-copy": [
+                  "Succeeded"
+                ]
+              },
+              "type": "Terminate",
+              "inputs": {
+                "runStatus": "Succeeded"
+              }
+            }
+          },
+          "runAfter": {
+            "Compose_ContractType_Array": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {}
+          },
+          "expression": {
+            "and": [
+              {
+                "equals": [
+                  "@contains(triggerBody()?['text_1'], '126840007')",
+                  "@false"
+                ]
+              }
+            ]
+          },
+          "type": "If"
+        },
+        "Parse_DepositedRevenue_JSON": {
+          "runAfter": {
+            "Condition_Check_If_Contract_Does_not_Contain_Deposited_Revenue": [
+              "Succeeded"
+            ]
+          },
+          "type": "ParseJson",
+          "inputs": {
+            "content": "@triggerBody()?['text']",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "bs_invoicegroup": {
+                    "type": "integer"
+                  },
+                  "bs_towneparkresponsibleforparkingtax": {
+                    "type": "boolean"
+                  },
+                  "bs_depositedrevenueenabled": {
+                    "type": [
+                      "boolean",
+                      "null"
+                    ]
+                  },
+                  "bs_depositedrevenueid": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "Compose_Get_First_Record": {
+          "runAfter": {
+            "Parse_DepositedRevenue_JSON": [
+              "Succeeded"
+            ]
+          },
+          "type": "Compose",
+          "inputs": "@first(body('Parse_DepositedRevenue_JSON'))"
+        },
+        "Condition": {
+          "actions": {
+            "Respond_to_a_Power_App_or_flow-copy-copy": {
+              "type": "Response",
+              "kind": "PowerApp",
+              "inputs": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "lineitems": {
+                      "title": "LineItems",
+                      "type": "string",
+                      "x-ms-content-hint": "TEXT",
+                      "x-ms-dynamically-added": true
+                    },
+                    "invoicesubtotal": {
+                      "title": "InvoiceSubTotal",
+                      "type": "number",
+                      "x-ms-content-hint": "NUMBER",
+                      "x-ms-dynamically-added": true
+                    }
+                  },
+                  "additionalProperties": {}
+                },
+                "statusCode": 200,
+                "body": {
+                  "lineitems": "@{variables('LineItems')}",
+                  "invoicesubtotal": "@variables('DepositedRevenueAmount')"
+                }
+              }
+            },
+            "Terminate_2": {
+              "runAfter": {
+                "Respond_to_a_Power_App_or_flow-copy-copy": [
+                  "Succeeded"
+                ]
+              },
+              "type": "Terminate",
+              "inputs": {
+                "runStatus": "Succeeded"
+              }
+            }
+          },
+          "runAfter": {
+            "Compose_Get_First_Record": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {}
+          },
+          "expression": {
+            "and": [
+              {
+                "not": {
+                  "equals": [
+                    "@outputs('Compose_Get_First_Record')?['bs_invoicegroup']",
+                    "@triggerBody()?['number']"
+                  ]
+                }
+              }
+            ]
+          },
+          "type": "If"
+        },
+        "Respond_to_a_Power_App_or_flow_1": {
+          "runAfter": {
+            "Condition_Check_towneparkresponsibleforparkingtax_is_true": [
+              "Succeeded"
+            ],
+            "Condition_Check_depositRevenueEnabled_is_true": [
+              "Succeeded"
+            ]
+          },
+          "type": "Response",
+          "kind": "PowerApp",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "invoicesubtotal": {
+                  "title": "InvoiceSubTotal",
+                  "type": "number",
+                  "x-ms-content-hint": "NUMBER",
+                  "x-ms-dynamically-added": true
+                },
+                "lineitems": {
+                  "title": "LineItems",
+                  "type": "string",
+                  "x-ms-content-hint": "TEXT",
+                  "x-ms-dynamically-added": true
+                }
+              },
+              "additionalProperties": {}
+            },
+            "statusCode": 200,
+            "body": {
+              "invoicesubtotal": "@add(variables('DepositedRevenueAmount'),variables('TaxAmountDueToTownePark'))",
+              "lineitems": "@{variables('LineItems')}"
+            }
+          }
+        },
+        "Initialize_DepositedRevenueAmount_Variable": {
+          "runAfter": {},
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "DepositedRevenueAmount",
+                "type": "float",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "Initialize_variable_LineItems": {
+          "runAfter": {},
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "LineItems",
+                "type": "array",
+                "value": []
+              }
+            ]
+          }
+        },
+        "Condition_Check_towneparkresponsibleforparkingtax_is_true": {
+          "actions": {
+            "Scope_towneParkResponsibleForParkingTax_true": {
+              "actions": {
+                "Get_rows_From_EDW_-_towneParkResposinbleForParkingTax": {
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "server": "default",
+                      "database": "default",
+                      "table": "[dbo].[vwREVENUE_DAILY_DETAIL_INVOICE]",
+                      "$apply": "filter(SITE eq '@{triggerBody()?['text_2']}' \nand DEPOSIT_FLAG ne 'Y' \nand REVENUE_CATEGORY ne 'Per Man Hour'\nand REVENUE_CATEGORY ne 'Other Revenue'   \nand year(DATE) eq @{formatDateTime(triggerBody()?['date'], 'yyyy')} \nand month(DATE) eq @{formatDateTime(triggerBody()?['date'], 'MM')})\n/aggregate(NETEXTERNALREVENUE with sum as TowneParkResponsibleForParkingTax)",
+                      "$select": "TowneParkResponsibleForParkingTax"
+                    },
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_sql",
+                      "operationId": "GetItems_V2",
+                      "connectionName": "shared_sql"
+                    }
+                  }
+                },
+                "Get_rows_TaxRate": {
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "server": "default",
+                      "database": "default",
+                      "table": "[dbo].[vwREVENUE_DAILY_DETAIL_INVOICE]",
+                      "$filter": "SITE eq '@{triggerBody()?['text_2']}' \nand DEPOSIT_FLAG eq 'N' \nand REVENUE_CATEGORY ne 'Per Man Hour'\nand REVENUE_CATEGORY ne 'Other Revenue'   \nand year(DATE) eq @{formatDateTime(triggerBody()?['date'], 'yyyy')} \nand month(DATE) eq @{formatDateTime(triggerBody()?['date'], 'MM')}",
+                      "$top": 5,
+                      "$select": "TAXRATE, DEPOSIT_FLAG"
+                    },
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_sql",
+                      "operationId": "GetItems_V2",
+                      "connectionName": "shared_sql"
+                    }
+                  }
+                },
+                "Compose_Client_Collected_Parking_Tax_due_to_Towne_Park_amount": {
+                  "runAfter": {
+                    "Compose_tax_rate": [
+                      "Succeeded"
+                    ],
+                    "Compose_net_external_revenue": [
+                      "Succeeded"
+                    ]
+                  },
+                  "type": "Compose",
+                  "inputs": "@mul(outputs('Compose_net_external_revenue'),outputs('Compose_tax_rate'))"
+                },
+                "Compose_LineItem_Client_Collected_Parking_Tax_due_to_Towne_Park": {
+                  "runAfter": {
+                    "Increment_variable_TaxAmountDueToTownePark": [
+                      "Succeeded"
+                    ]
+                  },
+                  "type": "Compose",
+                  "inputs": {
+                    "title": "Client Collected Parking Tax due to Towne Park",
+                    "description": "",
+                    "code": "4790",
+                    "amount": "@outputs('Compose_Client_Collected_Parking_Tax_due_to_Towne_Park_amount')",
+                    "metaData": {
+                      "lineItemType": "paidParkingTax",
+                      "isPaidParkingTax": true
+                    }
+                  }
+                },
+                "Append_to_array_variable_LineItem_Client_Collected_Parking_Tax_due_to_Towne_Par": {
+                  "runAfter": {
+                    "Compose_LineItem_Client_Collected_Parking_Tax_due_to_Towne_Park": [
+                      "Succeeded"
+                    ]
+                  },
+                  "type": "AppendToArrayVariable",
+                  "inputs": {
+                    "name": "LineItems",
+                    "value": "@outputs('Compose_LineItem_Client_Collected_Parking_Tax_due_to_Towne_Park')"
+                  }
+                },
+                "Increment_variable_TaxAmountDueToTownePark": {
+                  "runAfter": {
+                    "Compose_Client_Collected_Parking_Tax_due_to_Towne_Park_amount": [
+                      "Succeeded"
+                    ]
+                  },
+                  "type": "IncrementVariable",
+                  "inputs": {
+                    "name": "TaxAmountDueToTownePark",
+                    "value": "@outputs('Compose_Client_Collected_Parking_Tax_due_to_Towne_Park_amount')"
+                  }
+                },
+                "Compose_tax_rate": {
+                  "runAfter": {
+                    "Get_rows_TaxRate": [
+                      "Succeeded"
+                    ]
+                  },
+                  "type": "Compose",
+                  "inputs": "@coalesce(first(outputs('Get_rows_TaxRate')?['body/value'])?['TAXRATE'], 0)"
+                },
+                "Compose_net_external_revenue": {
+                  "runAfter": {
+                    "Get_rows_From_EDW_-_towneParkResposinbleForParkingTax": [
+                      "Succeeded"
+                    ]
+                  },
+                  "type": "Compose",
+                  "inputs": "@coalesce(first(outputs('Get_rows_From_EDW_-_towneParkResposinbleForParkingTax')?['body/value'])?['TowneParkResponsibleForParkingTax'], 0)"
+                }
+              },
+              "type": "Scope"
+            }
+          },
+          "runAfter": {
+            "Condition": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {}
+          },
+          "expression": {
+            "and": [
+              {
+                "equals": [
+                  "@outputs('Compose_Get_First_Record')?['bs_towneparkresponsibleforparkingtax']",
+                  "@true"
+                ]
+              }
+            ]
+          },
+          "type": "If"
+        },
+        "Initialize_variable_TaxAmountDueToTownePark": {
+          "runAfter": {},
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "TaxAmountDueToTownePark",
+                "type": "float",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "Condition_Check_depositRevenueEnabled_is_true": {
+          "actions": {
+            "Scope_depositRevenueEnabled_true": {
+              "actions": {
+                "Get_rows_From_EDW": {
+                  "runAfter": {
+                    "Compose_Aggregate_Column": [
+                      "Succeeded"
+                    ]
+                  },
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "server": "default",
+                      "database": "default",
+                      "table": "[dbo].[vwREVENUE_DAILY_DETAIL_INVOICE]",
+                      "$apply": "filter(SITE eq '@{triggerBody()?['text_2']}' and DEPOSIT_FLAG eq 'Y' and year(DATE) eq @{formatDateTime(triggerBody()?['date'], 'yyyy')} and month(DATE) eq @{formatDateTime(triggerBody()?['date'], 'MM')})/aggregate(@{outputs('Compose_Aggregate_Column')} with sum as RevenueParkingTax)",
+                      "$select": "RevenueParkingTax"
+                    },
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_sql",
+                      "operationId": "GetItems_V2",
+                      "connectionName": "shared_sql"
+                    }
+                  }
+                },
+                "Parse_JSON_From_EDW": {
+                  "runAfter": {
+                    "Get_rows_From_EDW": [
+                      "Succeeded"
+                    ]
+                  },
+                  "type": "ParseJson",
+                  "inputs": {
+                    "content": "@body('Get_rows_From_EDW')",
+                    "schema": {
+                      "type": "object",
+                      "properties": {
+                        "@@odata.context": {
+                          "type": "string"
+                        },
+                        "value": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "@@odata.etag": {
+                                "type": "string"
+                              },
+                              "ItemInternalId": {
+                                "type": "string"
+                              },
+                              "RevenueParkingTax": {
+                                "type": "number"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "Set_DepositedRevenueAmount": {
+                  "runAfter": {
+                    "Parse_JSON_From_EDW": [
+                      "Succeeded"
+                    ]
+                  },
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "DepositedRevenueAmount",
+                    "value": "@if(equals(length(body('Parse_JSON_From_EDW')?['value']), 0), 0, first(body('Parse_JSON_From_EDW')?['value'])?['RevenueParkingTax'])\r\n"
+                  }
+                },
+                "Compose_RevenueParkingTax_as_negative_number": {
+                  "runAfter": {
+                    "Set_DepositedRevenueAmount": [
+                      "Succeeded"
+                    ]
+                  },
+                  "type": "Compose",
+                  "inputs": "@mul(variables('DepositedRevenueAmount'), -1)"
+                },
+                "Compose_LineItem_Less_Towne_Park_Deposited_Revenue": {
+                  "runAfter": {
+                    "Set_DepositedRevenueAmount_as_negative_variable": [
+                      "Succeeded"
+                    ]
+                  },
+                  "type": "Compose",
+                  "inputs": {
+                    "title": "Less: Towne Park Deposited Revenue",
+                    "description": "",
+                    "code": "4790",
+                    "amount": "@outputs('Compose_RevenueParkingTax_as_negative_number')",
+                    "metaData": {
+                      "lineItemType": "depositedRevenue",
+                      "isDepositedRevenue": true,
+                      "taxesPaid": "@variables('TaxesPaid')"
+                    }
+                  }
+                },
+                "Compose_Aggregate_Column": {
+                  "type": "Compose",
+                  "inputs": "@if(outputs('Compose_Get_First_Record')?['bs_towneparkresponsibleforparkingtax'], 'NETEXTERNALREVENUE', 'EXTERNALREVENUE')"
+                },
+                "Append_to_array_variable_LineItem_Less_Towne_Park_Deposited_Revenue": {
+                  "runAfter": {
+                    "Compose_LineItem_Less_Towne_Park_Deposited_Revenue": [
+                      "Succeeded"
+                    ]
+                  },
+                  "type": "AppendToArrayVariable",
+                  "inputs": {
+                    "name": "LineItems",
+                    "value": "@outputs('Compose_LineItem_Less_Towne_Park_Deposited_Revenue')"
+                  }
+                },
+                "Set_DepositedRevenueAmount_as_negative_variable": {
+                  "runAfter": {
+                    "Compose_RevenueParkingTax_as_negative_number": [
+                      "Succeeded"
+                    ],
+                    "Condition_towneparkresponsibleforparkingtax_is_true": [
+                      "Succeeded"
+                    ]
+                  },
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "DepositedRevenueAmount",
+                    "value": "@outputs('Compose_RevenueParkingTax_as_negative_number')"
+                  }
+                },
+                "Condition_towneparkresponsibleforparkingtax_is_true": {
+                  "actions": {
+                    "Get_rows_TaxRate_copy": {
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "parameters": {
+                          "server": "default",
+                          "database": "default",
+                          "table": "[dbo].[vwREVENUE_DAILY_DETAIL_INVOICE]",
+                          "$filter": "SITE eq '@{triggerBody()?['text_2']}' \nand DEPOSIT_FLAG eq 'N' \nand REVENUE_CATEGORY ne 'Per Man Hour'\nand REVENUE_CATEGORY ne 'Other Revenue'   \nand year(DATE) eq @{formatDateTime(triggerBody()?['date'], 'yyyy')} \nand month(DATE) eq @{formatDateTime(triggerBody()?['date'], 'MM')}",
+                          "$top": 5,
+                          "$select": "TAXRATE, DEPOSIT_FLAG"
+                        },
+                        "host": {
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_sql",
+                          "operationId": "GetItems_V2",
+                          "connectionName": "shared_sql"
+                        }
+                      }
+                    },
+                    "Compose_tax_rate-copy": {
+                      "runAfter": {
+                        "Get_rows_TaxRate_copy": [
+                          "Succeeded"
+                        ]
+                      },
+                      "type": "Compose",
+                      "inputs": "@coalesce(first(outputs('Get_rows_TaxRate_copy')?['body/value'])?['TAXRATE'], 0)"
+                    },
+                    "Set_variable_TaxesPaid": {
+                      "runAfter": {
+                        "Compose_tax_rate-copy": [
+                          "Succeeded"
+                        ]
+                      },
+                      "type": "SetVariable",
+                      "inputs": {
+                        "name": "TaxesPaid",
+                        "value": "@mul(variables('DepositedRevenueAmount'),outputs('Compose_tax_rate-copy'))"
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "Set_DepositedRevenueAmount": [
+                      "Succeeded"
+                    ]
+                  },
+                  "else": {
+                    "actions": {}
+                  },
+                  "expression": {
+                    "and": [
+                      {
+                        "equals": [
+                          "@outputs('Compose_Get_First_Record')?['bs_towneparkresponsibleforparkingtax']",
+                          "@true"
+                        ]
+                      }
+                    ]
+                  },
+                  "type": "If"
+                }
+              },
+              "type": "Scope"
+            }
+          },
+          "runAfter": {
+            "Condition": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {}
+          },
+          "expression": {
+            "and": [
+              {
+                "equals": [
+                  "@outputs('Compose_Get_First_Record')?['bs_depositedrevenueenabled']",
+                  "@true"
+                ]
+              }
+            ]
+          },
+          "type": "If"
+        },
+        "Initialize_variable_TaxesPaid": {
+          "runAfter": {},
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "TaxesPaid",
+                "type": "float",
+                "value": 0
+              }
+            ]
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

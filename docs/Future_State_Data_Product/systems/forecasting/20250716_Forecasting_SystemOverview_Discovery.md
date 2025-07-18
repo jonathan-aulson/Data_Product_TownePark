@@ -339,8 +339,8 @@ The future system will include these major capability areas:
 
 ## Related Documentation
 
-- [Forecasting Business Rules](../business-rules/forecasting/20250716_Forecasting_BusinessRules_ProcessWorkflow.md)
-- [Forecasting Technical Architecture](../technical/backend/20250716_Forecasting_TechnicalArchitecture_Integration.md)
+- [Forecasting Business Rules](../../business-rules/forecasting/20250716_Forecasting_BusinessRules_ProcessWorkflow.md)
+- [Billing Technical Architecture](../../technical/backend/20250716_Billing_TechnicalArchitecture_Development.md)
 - [Billing System Overview](../billing/overview.md)
 - [User Process - Account Manager Forecasting](../../user-processes/account-manager/forecasting-workflow.md)
 - [User Process - District Manager Forecasting](../../user-processes/district-manager/forecasting-review.md)

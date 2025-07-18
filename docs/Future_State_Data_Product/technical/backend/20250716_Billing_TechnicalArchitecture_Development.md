@@ -557,10 +557,10 @@ Generates timestamped markdown file with comprehensive documentation following A
 
 ## Related Documentation
 
-- [Billing System Overview](../systems/billing/overview.md)
+- [Billing System Overview](../../systems/billing/20250716_Billing_SystemOverview_PowerBill.md)
 - [Billing Business Rules](../../business-rules/billing/calculation-rules.md)
 - [User Process - Billing Admin](../../user-processes/billing-admin/generate-invoices.md)
-- [Forecasting System Integration](../systems/forecasting/20250716_Forecasting_SystemOverview_Discovery.md)
+- [Forecasting System Integration](../../systems/forecasting/20250716_Forecasting_SystemOverview_Discovery.md)
 - [Database Technical Specifications](../database/schema-design.md)
 
 ## Implementation Guidelines

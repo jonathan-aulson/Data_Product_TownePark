@@ -696,9 +696,9 @@ public class Startup
 
 ## Related Documentation
 
-- [Billing Technical Architecture](../technical/backend/20250716_Billing_TechnicalArchitecture_Development.md)
-- [Forecasting System Overview](../systems/forecasting/20250716_Forecasting_SystemOverview_Discovery.md)
-- [Business Rules - Forecasting](../business-rules/forecasting/20250716_Forecasting_BusinessRules_ProcessWorkflow.md)
+- [Billing Technical Architecture](../../technical/backend/20250716_Billing_TechnicalArchitecture_Development.md)
+- [Forecasting System Overview](../../systems/forecasting/20250716_Forecasting_SystemOverview_Discovery.md)
+- [Business Rules - Forecasting](../../business-rules/forecasting/20250716_Forecasting_BusinessRules_ProcessWorkflow.md)
 - [User Access Configuration](../user-access/role-based-permissions.md)
 - [System Settings Overview](./system-configuration-overview.md)
 

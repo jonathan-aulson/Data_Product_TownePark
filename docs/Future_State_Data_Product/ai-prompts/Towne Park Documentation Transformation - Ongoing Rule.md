@@ -14,6 +14,14 @@ tags: ["documentation", "automation", "transformation", "ongoing", "towne-park"]
 
 This rule automatically triggers comprehensive documentation transformation for Towne Park's financial systems whenever new documentation is added or existing documentation is updated. It ensures continuous maintenance of the structured knowledge base while preserving 100% information fidelity.
 
+## 🏗️ CRITICAL PROJECT INFRASTRUCTURE
+
+**IMPORTANT NOTES FOR ALL TRANSFORMATIONS:**
+- **Processed_Files Directory**: The `Processed_Files/` directory ALREADY EXISTS in the project workspace
+- **Power Platform Code**: The Towne Park Power Platform code directory is located at `Towne-Park-Billing-PA-Solution/` and DOES EXIST
+- **Code Validation**: ALWAYS validate against the existing Power Platform code when applicable
+- **File Processing**: ALWAYS move processed files to the existing `Processed_Files/` folder after transformation
+
 ## 🚨 CRITICAL RULE PRINCIPLES
 
 ### **PRINCIPLE 1: ZERO-TOLERANCE FOR INFORMATION LOSS**
@@ -100,14 +108,17 @@ The AI system MUST follow the Enhanced AI Prompt exactly, including:
 2. **Information Quality Assessment** (as defined in Enhanced AI Prompt)
 3. **Transformation Strategy Planning** (as defined in Enhanced AI Prompt)
 4. **Document Structure Creation** (following exact templates)
-5. **Content Transformation** (preserving all information)
-6. **Navigation System Updates** (mandatory for all transformations)
-7. **Quality Assurance Verification** (all checks must pass)
+5. **Code Validation Analysis** (mandatory for all applicable content)
+6. **Content Transformation** (preserving all information)
+7. **Navigation System Updates** (mandatory for all transformations)
+8. **Quality Assurance Verification** (all checks must pass)
 
 #### **TRANSFORMATION OUTPUT REQUIREMENTS:**
 ```markdown
 For each transformation session, the AI MUST produce:
 - [ ] All target documents with complete YAML frontmatter
+- [ ] **MANDATORY: Code validation analysis for applicable content**
+- [ ] **MANDATORY: Code validation reports integrated into documents**
 - [ ] Comprehensive cross-reference updates
 - [ ] **MANDATORY: Updated mkdocs.yml navigation structure**
 - [ ] **MANDATORY: Updated docs/index.md navigation elements**
@@ -117,6 +128,32 @@ For each transformation session, the AI MUST produce:
 - [ ] List of items requiring human verification
 - [ ] Updated taxonomy and directory structure
 - [ ] Navigation update verification checklist
+```
+
+#### **MANDATORY CODE VALIDATION REQUIREMENTS:**
+```markdown
+Code Validation Protocol (CANNOT BE SKIPPED):
+
+1. **Validation Scope Assessment** ✅
+   - Identify business rules, workflows, and technical configurations in source content
+   - Map content elements to relevant Power Platform code files
+   - Document validation opportunities and limitations
+
+2. **Direct Code Analysis** ✅
+   - Read relevant files from Towne-Park-Billing-PA-Solution/ local copy (DIRECTORY EXISTS)
+   - Extract formulas, workflow logic, and configuration details
+   - Compare code implementation with documented descriptions
+
+3. **Validation Reporting** ✅
+   - Include "Code Validation Report" section in applicable documents
+   - Document verification status: ✅ Verified, ⚠️ Discrepancy, ❓ Incomplete, 🔍 Requires Review
+   - Provide specific code references and evidence
+   - Include recommendations for resolving discrepancies
+
+4. **Code Reference Integration** ✅
+   - Link to relevant code files with correct relative paths
+   - Quote exact code snippets for validation evidence
+   - Document code copy date and validation methodology
 ```
 
 #### **MANDATORY NAVIGATION UPDATE PROTOCOL:**
@@ -233,6 +270,7 @@ Deployment Protocol:
    - [ ] Deploy to production only after staging validation
    - [ ] Update search indexes
    - [ ] Notify stakeholders of changes
+   - [ ] Move processed files to Processed_Files folder (ALREADY EXISTS)
    - [ ] Archive original source documents
 
 3. **Post-Deployment Monitoring**:
