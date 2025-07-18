@@ -155,7 +155,8 @@ nav:
       - Data Table Editing Process: Future_State_Data_Product/user-processes/account-manager/20250716_Forecasting_DataTableEditing_UserProcess.md
       - Statistics Pagination Process: Future_State_Data_Product/user-processes/account-manager/20250716_Forecasting_StatisticsPagination_UserProcess.md
     - Billing Admin:
-      - Overview: Future_State_Data_Product/user-processes/billing-admin/index.md
+      - Overview: Future_State_Data_Product/user-processes/billing-admin/overview.md
+      - Billing Admin Index: Future_State_Data_Product/user-processes/billing-admin/index.md
       - Generate Invoices: Future_State_Data_Product/user-processes/billing-admin/generate-invoices.md
       - Customer Migration: Future_State_Data_Product/user-processes/billing-admin/customer-migration.md
       - Account Validation User Process: Future_State_Data_Product/user-processes/billing-admin/20250702_Billing_AccountValidation_UserProcess.md
