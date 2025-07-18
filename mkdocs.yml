@@ -44,6 +44,7 @@ extra_css:
 nav:
   - Home: index.md
   - Documentation Overview: Future_State_Data_Product/README.md
+  - TP Product Roadmap: Future_State_Data_Product/TP Product Roadmap.md
   - Transformation Session Log: Future_State_Data_Product/20250716_Transformation_Session_Log.md
   - Code Validation Analysis: Future_State_Data_Product/20250716_Contracts_CodeValidation_Analysis.md
   - AI Prompts:
@@ -61,6 +62,7 @@ nav:
       - Generate Invoices: Future_State_Data_Product/systems/billing/generate-invoices.md
     - Forecasting:
       - Overview: Future_State_Data_Product/systems/forecasting/overview.md
+      - Comprehensive Master Overview: Future_State_Data_Product/systems/forecasting/20250718_Forecasting_SystemOverview_ComprehensiveMaster.md
       - Project Discovery: Future_State_Data_Product/systems/forecasting/20250716_Forecasting_SystemOverview_Discovery.md
       - Master Architecture: Future_State_Data_Product/systems/forecasting/20250716_Forecasting_SystemOverview_MasterArchitecture.md
       - Integrated System Overview: Future_State_Data_Product/systems/forecasting/20250716_Forecasting_SystemOverview_Integrated.md
@@ -74,6 +76,7 @@ nav:
       - Contract Management System Overview: Future_State_Data_Product/systems/contracts/20250716_Contracts_SystemOverview_PowerBill.md
   - Business Rules:
     - Contract Types:
+      - Overview: Future_State_Data_Product/business-rules/contract-types/overview.md
       - Revenue Share: Future_State_Data_Product/business-rules/contract-types/revenue-share.md
       - Fixed Fee: Future_State_Data_Product/business-rules/contract-types/fixed-fee.md
       - Per Labor Hour: Future_State_Data_Product/business-rules/contract-types/per-labor-hour.md
@@ -91,6 +94,7 @@ nav:
       - Account Validation Business Rules: Future_State_Data_Product/business-rules/billing/20250702_Billing_AccountValidation_BusinessRules.md
     - Forecasting:
       - Calculations and Validations: Future_State_Data_Product/business-rules/forecasting/20250718_Forecasting_BusinessRules_CalculationsAndValidations.md
+      - Development Decisions: Future_State_Data_Product/business-rules/forecasting/20250718_Forecasting_BusinessRules_DevelopmentDecisions.md
       - Process Workflow: Future_State_Data_Product/business-rules/forecasting/20250716_Forecasting_BusinessRules_ProcessWorkflow.md
       - Billable Accounts Business Rules: Future_State_Data_Product/business-rules/forecasting/20250716_Forecasting_BillableAccounts_BusinessRules.md
       - Sprint 26 Features Business Rules: Future_State_Data_Product/business-rules/forecasting/20250717_Forecasting_BusinessRules_Sprint26Features.md
@@ -113,6 +117,7 @@ nav:
       - Overview: Future_State_Data_Product/technical/backend/index.md
       - ALM Strategy for Power Platform: Future_State_Data_Product/technical/backend/20250718_Architecture_ALMStrategy_PowerPlatform.md
       - AI Integration Technical Spec: Future_State_Data_Product/technical/backend/20250718_Development_AIIntegration_TechnicalSpec.md
+      - Forecasting Technical Architecture & API Design: Future_State_Data_Product/technical/backend/20250718_Forecasting_TechnicalArchitecture_APIDesign.md
       - Billing Architecture: Future_State_Data_Product/technical/backend/20250716_Billing_TechnicalArchitecture_Development.md
     - Database:
       - Overview: Future_State_Data_Product/technical/database/index.md
@@ -168,9 +173,12 @@ nav:
     - Customer Sites:
       - Site Setup Configuration: Future_State_Data_Product/configuration/customer-sites/site-setup-configuration.md
     - Contract Setup: Future_State_Data_Product/configuration/contract-setup/index.md
-    - User Access: Future_State_Data_Product/configuration/user-access/index.md
+    - User Access:
+      - Overview: Future_State_Data_Product/configuration/user-access/index.md
+      - Role-Based Permissions: Future_State_Data_Product/configuration/user-access/role-based-permissions.md
     - System Settings:
       - Overview: Future_State_Data_Product/configuration/system-settings/index.md
+      - System Configuration Overview: Future_State_Data_Product/configuration/system-settings/system-configuration-overview.md
       - Power Platform Licensing Analysis: Future_State_Data_Product/configuration/system-settings/20250718_Architecture_LicensingAnalysis_PowerPlatform.md
       - Development Standards: Future_State_Data_Product/configuration/system-settings/20250716_Development_ConfigurationGuide_Standards.md
       - Comprehensive Development Standards: Future_State_Data_Product/configuration/system-settings/20250718_Development_Standards_ComprehensiveGuide.md
@@ -181,4 +189,5 @@ nav:
       - Architecture Team Meeting Notes: Future_State_Data_Product/team-notes/AulsonJonathan-Notes/20250718_Architecture_TeamMeetingNotes_WeeklySync.md
     - Development Team Notes:
       - Daily Scrum Team Notes: Future_State_Data_Product/team-notes/20250718_Development_DailyScrum_TeamNotes.md
+      - Sprint Planning Project Management: Future_State_Data_Product/team-notes/20250718_Development_SprintPlanning_ProjectManagement.md
   - Glossary: Future_State_Data_Product/glossary.md
