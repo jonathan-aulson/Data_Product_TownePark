@@ -57,6 +57,7 @@ nav:
     - Billing:
       - Overview: Future_State_Data_Product/systems/billing/overview.md
       - PowerBill System Overview: Future_State_Data_Product/systems/billing/20250716_Billing_SystemOverview_PowerBill.md
+      - PowerBill System Overview (Detailed): Future_State_Data_Product/systems/billing/powerbill-system-overview.md
       - Architecture: Future_State_Data_Product/systems/billing/architecture.md
       - Integrations: Future_State_Data_Product/systems/billing/integrations.md
       - Generate Invoices: Future_State_Data_Product/systems/billing/generate-invoices.md
@@ -138,6 +139,7 @@ nav:
       - SharePoint Delta Token Management: Future_State_Data_Product/technical/specifications/sharepoint-delta-token-management.md
     - Integrations:
       - Integration Strategy for Hybrid Connections: Future_State_Data_Product/technical/integrations/20250718_Architecture_IntegrationStrategy_HybridConnections.md
+      - Great Plains Integration: Future_State_Data_Product/technical/integrations/great-plains-integration.md
       - Billing Integrations: Future_State_Data_Product/technical/integrations/billing-integrations.md
       - Budget Integration: Future_State_Data_Product/technical/integrations/budget-integration.md
       - Leads Integration: Future_State_Data_Product/technical/integrations/leads-integration.md
@@ -184,6 +186,9 @@ nav:
       - Comprehensive Development Standards: Future_State_Data_Product/configuration/system-settings/20250718_Development_Standards_ComprehensiveGuide.md
       - Definition of Done Comprehensive Guide: Future_State_Data_Product/configuration/system-settings/20250718_Development_DefinitionOfDone_ComprehensiveGuide.md
       - Pull Request Review Guide: Future_State_Data_Product/configuration/system-settings/20250718_Development_PRReview_ComprehensiveGuide.md
+  - Standards:
+    - Overview: Future_State_Data_Product/standards/index.md
+    - Data Quality Standards: Future_State_Data_Product/standards/data-quality-standards.md
   - Team Notes:
     - Jonathan Aulson Notes:
       - Architecture Team Meeting Notes: Future_State_Data_Product/team-notes/AulsonJonathan-Notes/20250718_Architecture_TeamMeetingNotes_WeeklySync.md
