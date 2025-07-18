@@ -1,0 +1,435 @@
+{
+  "properties": {
+    "connectionReferences": {},
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "ClientId (bs_ClientId)": {
+          "defaultValue": "64edd46c-4d95-4e0d-b1c2-e583260f7c4b",
+          "type": "String",
+          "metadata": {
+            "schemaName": "bs_ClientId",
+            "description": "Service Principal Secret Id"
+          }
+        },
+        "ClientSecret (bs_ClientSecret)": {
+          "defaultValue": "4cy8Q~nE_iK.-hgYDQud3rE0ep7oW7zqesiVKars",
+          "type": "String",
+          "metadata": {
+            "schemaName": "bs_ClientSecret",
+            "description": "Service Principal Secret Value"
+          }
+        },
+        "ClientState (bs_ClientState)": {
+          "defaultValue": "DEV",
+          "type": "String",
+          "metadata": {
+            "schemaName": "bs_ClientState",
+            "description": "For identifying the per-environment webhook subscription"
+          }
+        },
+        "Event Handler Endpoint (bs_EventHandlerEndpoint)": {
+          "defaultValue": "https://prod-71.westus.logic.azure.com:443/workflows/91075ddebcbe48128e335b00f782189d/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=rRAPfKMeiOpKXJys6LCKa2-AoSDYiT1mgECJrRAKY-o",
+          "type": "String",
+          "metadata": {
+            "schemaName": "bs_EventHandlerEndpoint",
+            "description": "URL to register webhooks to"
+          }
+        }
+      },
+      "triggers": {
+        "manual": {
+          "type": "Request",
+          "kind": "Button",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            }
+          }
+        }
+      },
+      "actions": {
+        "Apply_to_each": {
+          "type": "Foreach",
+          "foreach": "@body('HTTP_-_Get_all_sites')['value']",
+          "actions": {
+            "Compose_-_Site_Name": {
+              "type": "Compose",
+              "inputs": "@items('Apply_to_each')?['fields']?['Site_x0020_Number']"
+            },
+            "HTTP_GET_SiteId": {
+              "type": "Http",
+              "inputs": {
+                "uri": "@concat(\r\nvariables('GraphUrl'),\r\n'/sites/townepark.sharepoint.com:/sites/',\r\nitems('Apply_to_each')?['fields']?['Site_x0020_Number'],\r\n'?$select=id'\r\n)",
+                "method": "GET",
+                "headers": {
+                  "Accept": "application/json",
+                  "Authorization": "Bearer @{variables('BearerToken')}"
+                }
+              },
+              "runAfter": {
+                "Compose_-_Site_Name": [
+                  "Succeeded"
+                ]
+              },
+              "runtimeConfiguration": {
+                "contentTransfer": {
+                  "transferMode": "Chunked"
+                }
+              }
+            },
+            "Condition_-_Site_Not_Found": {
+              "type": "If",
+              "expression": {
+                "and": [
+                  {
+                    "equals": [
+                      "@outputs('HTTP_GET_SiteId')['statusCode']",
+                      404
+                    ]
+                  }
+                ]
+              },
+              "actions": {},
+              "else": {
+                "actions": {
+                  "Condition_-_Is_SiteId_Exists": {
+                    "type": "If",
+                    "expression": {
+                      "or": [
+                        {
+                          "equals": [
+                            "@outputs('HTTP_GET_SiteId')['statusCode']",
+                            200
+                          ]
+                        }
+                      ]
+                    },
+                    "actions": {
+                      "HTTP_GET_Revenue_List": {
+                        "type": "Http",
+                        "inputs": {
+                          "uri": "@concat(\r\n    variables('GraphUrl'),\r\n    '/sites/',\r\n    split(body('HTTP_GET_SiteId')?['id'], ',')[1],\r\n    '/lists',\r\n    '?$filter=displayName%20eq%20''Revenue'''\r\n)",
+                          "method": "GET",
+                          "headers": {
+                            "Accept": "application/json",
+                            "Authorization": "Bearer @{variables('BearerToken')}"
+                          }
+                        },
+                        "runtimeConfiguration": {
+                          "contentTransfer": {
+                            "transferMode": "Chunked"
+                          }
+                        }
+                      },
+                      "Condition_-_is_Forbidden": {
+                        "type": "If",
+                        "expression": {
+                          "and": [
+                            {
+                              "equals": [
+                                "@outputs('HTTP_GET_Revenue_List')['statusCode']",
+                                403
+                              ]
+                            }
+                          ]
+                        },
+                        "actions": {},
+                        "else": {
+                          "actions": {
+                            "Condition_-_Is_Revenue": {
+                              "type": "If",
+                              "expression": {
+                                "and": [
+                                  {
+                                    "greater": [
+                                      "@length(body('HTTP_GET_Revenue_List')?['value'])",
+                                      0
+                                    ]
+                                  }
+                                ]
+                              },
+                              "actions": {
+                                "HTTP_-_Get_Existing_subscriptions": {
+                                  "type": "Http",
+                                  "inputs": {
+                                    "uri": "@{variables('GraphUrl')}/sites/@{split(body('HTTP_GET_SiteId')?['id'], ',')[1]}/lists/@{body('HTTP_GET_Revenue_List')?['value'][0]?['id']}/subscriptions",
+                                    "method": "GET",
+                                    "headers": {
+                                      "Accept": "application/json",
+                                      "Authorization": "Bearer @{variables('BearerToken')}"
+                                    }
+                                  },
+                                  "runtimeConfiguration": {
+                                    "contentTransfer": {
+                                      "transferMode": "Chunked"
+                                    }
+                                  }
+                                },
+                                "Condition_-_Is_Existing_Subscriptions_has_bodyvalue": {
+                                  "type": "If",
+                                  "expression": {
+                                    "and": [
+                                      {
+                                        "greater": [
+                                          "@length(body('HTTP_-_Get_Existing_subscriptions')?['value'])",
+                                          0
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  "actions": {
+                                    "Filter_Subscription_for_current_environment": {
+                                      "type": "Query",
+                                      "inputs": {
+                                        "from": "@body('HTTP_-_Get_Existing_subscriptions')?['value']",
+                                        "where": "@equals(item()?['clientState'],parameters('ClientState (bs_ClientState)'))"
+                                      }
+                                    },
+                                    "Condition_-_Is_Subscription_for_current_env_exists": {
+                                      "type": "If",
+                                      "expression": {
+                                        "and": [
+                                          {
+                                            "greater": [
+                                              "@length(body('Filter_Subscription_for_current_environment'))",
+                                              0
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "actions": {
+                                        "Apply_to_each_-_delete": {
+                                          "type": "Foreach",
+                                          "foreach": "@body('Filter_Subscription_for_current_environment')",
+                                          "actions": {
+                                            "HTTP_-_Delete_Existing_subscriptions": {
+                                              "type": "Http",
+                                              "inputs": {
+                                                "uri": "@{variables('GraphUrl')}/sites/@{split(body('HTTP_GET_SiteId')?['id'], ',')[1]}/lists/@{body('HTTP_GET_Revenue_List')?['value'][0]?['id']}/subscriptions/@{body('Filter_Subscription_for_current_environment')[0]?['id']}",
+                                                "method": "DELETE",
+                                                "headers": {
+                                                  "Authorization": "Bearer @{variables('BearerToken')}"
+                                                }
+                                              },
+                                              "runtimeConfiguration": {
+                                                "contentTransfer": {
+                                                  "transferMode": "Chunked"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "else": {
+                                        "actions": {}
+                                      },
+                                      "runAfter": {
+                                        "Filter_Subscription_for_current_environment": [
+                                          "Succeeded"
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  "else": {
+                                    "actions": {}
+                                  },
+                                  "runAfter": {
+                                    "HTTP_-_Get_Existing_subscriptions": [
+                                      "Succeeded",
+                                      "Skipped"
+                                    ]
+                                  }
+                                }
+                              },
+                              "else": {
+                                "actions": {}
+                              }
+                            }
+                          }
+                        },
+                        "runAfter": {
+                          "HTTP_GET_Revenue_List": [
+                            "Succeeded",
+                            "Failed"
+                          ]
+                        }
+                      }
+                    },
+                    "else": {
+                      "actions": {}
+                    }
+                  }
+                }
+              },
+              "runAfter": {
+                "HTTP_GET_SiteId": [
+                  "Failed",
+                  "Succeeded"
+                ]
+              }
+            }
+          },
+          "runAfter": {
+            "HTTP_-_Get_all_sites": [
+              "Succeeded"
+            ]
+          },
+          "runtimeConfiguration": {
+            "concurrency": {
+              "repetitions": 3
+            }
+          }
+        },
+        "Initialize_tenant_variable": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Tenant",
+                "type": "string",
+                "value": "9454df09-bc28-486b-af85-64ca36c21d47"
+              }
+            ]
+          },
+          "runAfter": {}
+        },
+        "Initialize_TokenUrl_variable": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "tokenUrl",
+                "type": "string",
+                "value": "https://login.microsoftonline.com"
+              }
+            ]
+          },
+          "runAfter": {}
+        },
+        "HTTP_Authenticate": {
+          "type": "Http",
+          "inputs": {
+            "uri": "https://login.microsoftonline.com/9454df09-bc28-486b-af85-64ca36c21d47/oauth2/v2.0/token",
+            "method": "POST",
+            "headers": {
+              "content-type": "application/x-www-form-urlencoded"
+            },
+            "body": "@concat(\r\n'grant_type=',\r\nencodeUriComponent('client_credentials'),\r\n'&client_id=',\r\nencodeUriComponent(parameters('ClientId (bs_ClientId)')),\r\n'&client_secret=', \r\nencodeUriComponent(parameters('ClientSecret (bs_ClientSecret)')),\r\n'&scope=', \r\nencodeUriComponent('https://graph.microsoft.com/.default')\r\n)"
+          },
+          "runAfter": {
+            "Initialize_tenant_variable": [
+              "Succeeded"
+            ],
+            "Initialize_TokenUrl_variable": [
+              "Succeeded"
+            ],
+            "Initialize_GraphUrl_variable": [
+              "Succeeded"
+            ],
+            "Initialize_EventHandlerUrl_variable": [
+              "Succeeded"
+            ]
+          },
+          "runtimeConfiguration": {
+            "contentTransfer": {
+              "transferMode": "Chunked"
+            }
+          }
+        },
+        "Initialize_GraphUrl_variable": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "GraphUrl",
+                "type": "string",
+                "value": "https://graph.microsoft.com/v1.0"
+              }
+            ]
+          },
+          "runAfter": {}
+        },
+        "Initialize_EventHandlerUrl_variable": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "EventHandlerUrl",
+                "type": "string",
+                "value": "@parameters('Event Handler Endpoint (bs_EventHandlerEndpoint)')"
+              }
+            ]
+          },
+          "runAfter": {}
+        },
+        "HTTP_-_Get_all_sites": {
+          "type": "Http",
+          "inputs": {
+            "uri": "@{variables('GraphUrl')}/sites/root/lists/accounts/items?$expand=fields($select=Title,Site_x0020_Number,Site_x0020_Status,Account_x0020_Site_x0020_Link)&$select=id,fields&$top=9000&$filter=fields/Site_x0020_Status eq 'Active'",
+            "method": "GET",
+            "headers": {
+              "Accept": "application/json",
+              "Authorization": "Bearer @{variables('BearerToken')}",
+              "Prefer": "HonorNonIndexedQueriesWarningMayFailRandomly"
+            }
+          },
+          "runAfter": {
+            "Initialize_BearerToken_variable": [
+              "Succeeded"
+            ]
+          },
+          "runtimeConfiguration": {
+            "contentTransfer": {
+              "transferMode": "Chunked"
+            }
+          }
+        },
+        "Terminate": {
+          "type": "Terminate",
+          "inputs": {
+            "runStatus": "Succeeded"
+          },
+          "runAfter": {
+            "Apply_to_each": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f27f025a-050a-443a-93fe-958d57d56df6"
+          }
+        },
+        "Initialize_BearerToken_variable": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "BearerToken",
+                "type": "string",
+                "value": "@body('HTTP_Authenticate')['access_token']"
+              }
+            ]
+          },
+          "runAfter": {
+            "HTTP_Authenticate": [
+              "Succeeded"
+            ]
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

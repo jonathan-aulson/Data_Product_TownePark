@@ -1,0 +1,13 @@
+<environmentvariabledefinition schemaname="bs_InvoiceLogicAppEndpoint">
+  <description default="URL for the invoicing logic app to point the event handler flow towards">
+    <label description="URL for the invoicing logic app to point the event handler flow towards" languagecode="1033" />
+  </description>
+  <displayname default="Invoice Logic App Endpoint">
+    <label description="Invoice Logic App Endpoint" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.2</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

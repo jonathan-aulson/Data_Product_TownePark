@@ -1,0 +1,13 @@
+<environmentvariabledefinition schemaname="bs_ClientSecret">
+  <description default="Service Principal Secret Value">
+    <label description="Service Principal Secret Value" languagecode="1033" />
+  </description>
+  <displayname default="ClientSecret">
+    <label description="ClientSecret" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.0</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

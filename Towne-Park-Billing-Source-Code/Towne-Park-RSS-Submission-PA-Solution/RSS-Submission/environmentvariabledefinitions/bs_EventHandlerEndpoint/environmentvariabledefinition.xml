@@ -1,0 +1,13 @@
+<environmentvariabledefinition schemaname="bs_EventHandlerEndpoint">
+  <description default="URL to register webhooks to">
+    <label description="URL to register webhooks to" languagecode="1033" />
+  </description>
+  <displayname default="Event Handler Endpoint">
+    <label description="Event Handler Endpoint" languagecode="1033" />
+  </displayname>
+  <introducedversion>1.0.0.2</introducedversion>
+  <iscustomizable>1</iscustomizable>
+  <isrequired>0</isrequired>
+  <secretstore>0</secretstore>
+  <type>100000000</type>
+</environmentvariabledefinition>

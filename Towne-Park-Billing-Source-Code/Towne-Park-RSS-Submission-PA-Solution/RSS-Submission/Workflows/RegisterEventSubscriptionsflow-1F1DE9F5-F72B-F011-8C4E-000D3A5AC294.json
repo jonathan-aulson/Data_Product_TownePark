@@ -1,0 +1,1061 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_azuretables": {
+        "api": {
+          "name": "shared_azuretables"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "bs_sharedazuretables_f2f70"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "ClientId (bs_ClientId)": {
+          "defaultValue": "64edd46c-4d95-4e0d-b1c2-e583260f7c4b",
+          "type": "String",
+          "metadata": {
+            "schemaName": "bs_ClientId",
+            "description": "Service Principal Secret Id"
+          }
+        },
+        "ClientSecret (bs_ClientSecret)": {
+          "defaultValue": "4cy8Q~nE_iK.-hgYDQud3rE0ep7oW7zqesiVKars",
+          "type": "String",
+          "metadata": {
+            "schemaName": "bs_ClientSecret",
+            "description": "Service Principal Secret Value"
+          }
+        },
+        "ClientState (bs_ClientState)": {
+          "defaultValue": "DEV",
+          "type": "String",
+          "metadata": {
+            "schemaName": "bs_ClientState",
+            "description": "For identifying the per-environment webhook subscription"
+          }
+        },
+        "Event Handler Endpoint (bs_EventHandlerEndpoint)": {
+          "defaultValue": "https://prod-71.westus.logic.azure.com:443/workflows/91075ddebcbe48128e335b00f782189d/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=rRAPfKMeiOpKXJys6LCKa2-AoSDYiT1mgECJrRAKY-o",
+          "type": "String",
+          "metadata": {
+            "schemaName": "bs_EventHandlerEndpoint",
+            "description": "URL to register webhooks to"
+          }
+        }
+      },
+      "triggers": {
+        "Recurrence": {
+          "type": "Recurrence",
+          "recurrence": {
+            "interval": 1,
+            "frequency": "Day",
+            "startTime": "2025-04-25T16:00:00Z",
+            "timeZone": "Central Standard Time",
+            "schedule": {
+              "hours": [
+                "2"
+              ]
+            }
+          }
+        }
+      },
+      "actions": {
+        "Apply_to_each": {
+          "type": "Foreach",
+          "foreach": "@body('HTTP_-_Get_all_sites')['value']",
+          "actions": {
+            "Compose_-_Site_Name": {
+              "type": "Compose",
+              "inputs": "@items('Apply_to_each')?['fields']?['Site_x0020_Number']"
+            },
+            "HTTP_GET_SiteId": {
+              "type": "Http",
+              "inputs": {
+                "uri": "@concat(\r\nvariables('GraphUrl'),\r\n'/sites/townepark.sharepoint.com:/sites/',\r\nitems('Apply_to_each')?['fields']?['Site_x0020_Number'],\r\n'?$select=id'\r\n)",
+                "method": "GET",
+                "headers": {
+                  "Accept": "application/json",
+                  "Authorization": "Bearer @{variables('BearerToken')}"
+                }
+              },
+              "runAfter": {
+                "Compose_-_Site_Name": [
+                  "Succeeded"
+                ]
+              },
+              "runtimeConfiguration": {
+                "contentTransfer": {
+                  "transferMode": "Chunked"
+                }
+              }
+            },
+            "Condition_-_Site_Not_Found": {
+              "type": "If",
+              "expression": {
+                "and": [
+                  {
+                    "equals": [
+                      "@outputs('HTTP_GET_SiteId')['statusCode']",
+                      404
+                    ]
+                  }
+                ]
+              },
+              "actions": {
+                "Compose_-_log_body_for_SiteId_not_found": {
+                  "type": "Compose",
+                  "inputs": {
+                    "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{items('Apply_to_each')?['fields']?['Site_x0020_Number']}",
+                    "RowKey": "@{formatDateTime(utcNow(), 'HHmmss.fff')}",
+                    "SiteNumber": "@{items('Apply_to_each')?['fields']?['Site_x0020_Number']}",
+                    "FlowRunId": "@{workflow()?['run']?['name']}",
+                    "Source": "@{workflow()?['tags']?['flowDisplayName']}",
+                    "LogLevel": "Warning",
+                    "Message": "No Site Id found for Site '@{items('Apply_to_each')?['fields']?['Site_x0020_Number']}'."
+                  }
+                },
+                "Insert_or_Replace_Entity_(V2)_-_Add_error_log_for_no_siteId": {
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{items('Apply_to_each')?['fields']?['Site_x0020_Number']}",
+                      "RowKey": "@formatDateTime(utcNow(), 'HHmmss.fff')",
+                      "storageAccountName": "AccountNameFromSettings",
+                      "tableName": "EventHandlerLogs",
+                      "entity": "@outputs('Compose_-_log_body_for_SiteId_not_found')"
+                    },
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                      "operationId": "InsertReplaceEntity_V2",
+                      "connectionName": "shared_azuretables"
+                    }
+                  },
+                  "runAfter": {
+                    "Compose_-_log_body_for_SiteId_not_found": [
+                      "Succeeded"
+                    ]
+                  }
+                }
+              },
+              "else": {
+                "actions": {
+                  "Condition_-_Is_SiteId_Exists": {
+                    "type": "If",
+                    "expression": {
+                      "or": [
+                        {
+                          "equals": [
+                            "@outputs('HTTP_GET_SiteId')['statusCode']",
+                            200
+                          ]
+                        }
+                      ]
+                    },
+                    "actions": {
+                      "HTTP_GET_Revenue_List": {
+                        "type": "Http",
+                        "inputs": {
+                          "uri": "@concat(\r\n    variables('GraphUrl'),\r\n    '/sites/',\r\n    split(body('HTTP_GET_SiteId')?['id'], ',')[1],\r\n    '/lists',\r\n    '?$filter=displayName%20eq%20''Revenue'''\r\n)",
+                          "method": "GET",
+                          "headers": {
+                            "Accept": "application/json",
+                            "Authorization": "Bearer @{variables('BearerToken')}"
+                          }
+                        },
+                        "runtimeConfiguration": {
+                          "contentTransfer": {
+                            "transferMode": "Chunked"
+                          }
+                        }
+                      },
+                      "Condition_-_is_Forbidden": {
+                        "type": "If",
+                        "expression": {
+                          "and": [
+                            {
+                              "equals": [
+                                "@outputs('HTTP_GET_Revenue_List')['statusCode']",
+                                403
+                              ]
+                            }
+                          ]
+                        },
+                        "actions": {
+                          "Compose_-_log_body_for_forbidden": {
+                            "type": "Compose",
+                            "inputs": {
+                              "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{outputs('Compose_-_Site_Name')}",
+                              "RowKey": "@{formatDateTime(utcNow(), 'HHmmss.fff')}",
+                              "SiteNumber": "@{outputs('Compose_-_Site_Name')}",
+                              "FlowRunId": "@{workflow()?['run']?['name']}",
+                              "Source": "@{workflow()?['tags']?['flowDisplayName']}",
+                              "LogLevel": "Error",
+                              "Message": "Forbidden or Unauthorised exception for Site '@{outputs('Compose_-_Site_Name')}'."
+                            }
+                          },
+                          "Insert_or_Replace_Entity_(V2)_-_Add_log_for_forbidden_site": {
+                            "type": "OpenApiConnection",
+                            "inputs": {
+                              "parameters": {
+                                "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{outputs('Compose_-_Site_Name')}",
+                                "RowKey": "@formatDateTime(utcNow(), 'HHmmss.fff')",
+                                "storageAccountName": "AccountNameFromSettings",
+                                "tableName": "EventHandlerLogs",
+                                "entity": "@outputs('Compose_-_log_body_for_forbidden')"
+                              },
+                              "host": {
+                                "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                                "operationId": "InsertReplaceEntity_V2",
+                                "connectionName": "shared_azuretables"
+                              }
+                            },
+                            "runAfter": {
+                              "Compose_-_log_body_for_forbidden": [
+                                "Succeeded"
+                              ]
+                            }
+                          }
+                        },
+                        "else": {
+                          "actions": {
+                            "Condition_-_Is_Revenue": {
+                              "type": "If",
+                              "expression": {
+                                "and": [
+                                  {
+                                    "greater": [
+                                      "@length(body('HTTP_GET_Revenue_List')?['value'])",
+                                      0
+                                    ]
+                                  }
+                                ]
+                              },
+                              "actions": {
+                                "HTTP_-_Get_Existing_subscriptions": {
+                                  "type": "Http",
+                                  "inputs": {
+                                    "uri": "@{variables('GraphUrl')}/sites/@{split(body('HTTP_GET_SiteId')?['id'], ',')[1]}/lists/@{body('HTTP_GET_Revenue_List')?['value'][0]?['id']}/subscriptions",
+                                    "method": "GET",
+                                    "headers": {
+                                      "Accept": "application/json",
+                                      "Authorization": "Bearer @{variables('BearerToken')}"
+                                    }
+                                  },
+                                  "runAfter": {
+                                    "Insert_or_Replace_Entity_(V2)_-_Add_Revenue_Site_log": [
+                                      "Succeeded"
+                                    ]
+                                  },
+                                  "runtimeConfiguration": {
+                                    "contentTransfer": {
+                                      "transferMode": "Chunked"
+                                    }
+                                  }
+                                },
+                                "Condition_-_Is_Existing_Subscriptions_has_bodyvalue": {
+                                  "type": "If",
+                                  "expression": {
+                                    "and": [
+                                      {
+                                        "greater": [
+                                          "@length(body('HTTP_-_Get_Existing_subscriptions')?['value'])",
+                                          0
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  "actions": {
+                                    "Filter_Subscription_for_current_environment": {
+                                      "type": "Query",
+                                      "inputs": {
+                                        "from": "@body('HTTP_-_Get_Existing_subscriptions')?['value']",
+                                        "where": "@equals(item()?['clientState'],parameters('ClientState (bs_ClientState)'))"
+                                      }
+                                    },
+                                    "Condition_-_Is_Subscription_for_current_env_exists": {
+                                      "type": "If",
+                                      "expression": {
+                                        "and": [
+                                          {
+                                            "greater": [
+                                              "@length(body('Filter_Subscription_for_current_environment'))",
+                                              0
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "actions": {
+                                        "Condition_-_Is_Expiration_less_than_30_days": {
+                                          "type": "If",
+                                          "expression": {
+                                            "and": [
+                                              {
+                                                "less": [
+                                                  "@body('Filter_Subscription_for_current_environment')[0]?['expirationDateTime']",
+                                                  "@addDays(utcNow(), 30)"
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          "actions": {
+                                            "Compose_-_Body_for_Updating_Subscriptions": {
+                                              "type": "Compose",
+                                              "inputs": {
+                                                "clientState": "@{parameters('ClientState (bs_ClientState)')}",
+                                                "changeType": "updated",
+                                                "notificationUrl": "@{variables('EventHandlerUrl')}",
+                                                "expirationDateTime": "@{formatDateTime(addToTime(utcNow(), 5, 'Month'), 'yyyy-MM-ddTHH:mm:ss+00:00')}"
+                                              }
+                                            },
+                                            "HTTP_-_Update_Existing_subscriptions": {
+                                              "type": "Http",
+                                              "inputs": {
+                                                "uri": "@{variables('GraphUrl')}/sites/@{split(body('HTTP_GET_SiteId')?['id'], ',')[1]\r\n}/lists/@{body('HTTP_GET_Revenue_List')?['value'][0]?['id']\r\n\r\n}/subscriptions/@{body('Filter_Subscription_for_current_environment')[0]?['id']}",
+                                                "method": "PATCH",
+                                                "headers": {
+                                                  "Accept": "application/json",
+                                                  "Authorization": "Bearer @{variables('BearerToken')}"
+                                                },
+                                                "body": "@outputs('Compose_-_Body_for_Updating_Subscriptions')"
+                                              },
+                                              "runAfter": {
+                                                "Compose_-_Body_for_Updating_Subscriptions": [
+                                                  "Succeeded"
+                                                ]
+                                              },
+                                              "runtimeConfiguration": {
+                                                "contentTransfer": {
+                                                  "transferMode": "Chunked"
+                                                }
+                                              }
+                                            },
+                                            "Compose_-_Log_body_for_Updated_subscription": {
+                                              "type": "Compose",
+                                              "inputs": {
+                                                "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{items('Apply_to_each')?['fields']?['Site_x0020_Number']}",
+                                                "RowKey": "@{formatDateTime(utcNow(), 'HHmmss.fff')}",
+                                                "SiteNumber": "@{outputs('Compose_-_Site_Name')}",
+                                                "FlowRunId": "@{workflow()?['run']?['name']}",
+                                                "Source": "@{workflow()?['tags']?['flowDisplayName']}",
+                                                "LogLevel": "Info",
+                                                "Message": "Subscription updated for Site '@{split(body('HTTP_GET_SiteId')?['id'], ',')[1]\r\n}'."
+                                              },
+                                              "runAfter": {
+                                                "HTTP_-_Update_Existing_subscriptions": [
+                                                  "Succeeded",
+                                                  "Skipped"
+                                                ]
+                                              }
+                                            },
+                                            "Insert_or_Replace_Entity_(V2)_-_Add_log_updated_subscription": {
+                                              "type": "OpenApiConnection",
+                                              "inputs": {
+                                                "parameters": {
+                                                  "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{items('Apply_to_each')?['fields']?['Site_x0020_Number']}",
+                                                  "RowKey": "@formatDateTime(utcNow(), 'HHmmss.fff')",
+                                                  "storageAccountName": "AccountNameFromSettings",
+                                                  "tableName": "EventHandlerLogs",
+                                                  "entity": "@outputs('Compose_-_Log_body_for_Updated_subscription')"
+                                                },
+                                                "host": {
+                                                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                                                  "operationId": "InsertReplaceEntity_V2",
+                                                  "connectionName": "shared_azuretables"
+                                                }
+                                              },
+                                              "runAfter": {
+                                                "Compose_-_Log_body_for_Updated_subscription": [
+                                                  "Succeeded"
+                                                ]
+                                              }
+                                            }
+                                          },
+                                          "else": {
+                                            "actions": {}
+                                          }
+                                        }
+                                      },
+                                      "else": {
+                                        "actions": {
+                                          "Compose_-_body_of_creating_subscription_if_not_exists": {
+                                            "type": "Compose",
+                                            "inputs": {
+                                              "clientState": "@{parameters('ClientState (bs_ClientState)')}",
+                                              "changeType": "updated",
+                                              "notificationUrl": "@{variables('EventHandlerUrl')}",
+                                              "expirationDateTime": "@{formatDateTime(addToTime(utcNow(), 5, 'Month'), 'yyyy-MM-ddTHH:mm:ss+00:00')}"
+                                            }
+                                          },
+                                          "HTTP_-_Create_Subscriptions_for_env": {
+                                            "type": "Http",
+                                            "inputs": {
+                                              "uri": "@{variables('GraphUrl')}/sites/@{split(body('HTTP_GET_SiteId')?['id'], ',')[1]\r\n}/lists/@{body('HTTP_GET_Revenue_List')?['value'][0]?['id']\r\n}/subscriptions",
+                                              "method": "POST",
+                                              "headers": {
+                                                "Accept": "application/json",
+                                                "Authorization": "Bearer @{variables('BearerToken')}",
+                                                "Content-Type": "application/json"
+                                              },
+                                              "body": "@outputs('Compose_-_body_of_creating_subscription_if_not_exists')"
+                                            },
+                                            "runAfter": {
+                                              "Compose_-_body_of_creating_subscription_if_not_exists": [
+                                                "Succeeded"
+                                              ]
+                                            },
+                                            "runtimeConfiguration": {
+                                              "contentTransfer": {
+                                                "transferMode": "Chunked"
+                                              }
+                                            }
+                                          },
+                                          "Compose_-_log_body_for_create_subscription": {
+                                            "type": "Compose",
+                                            "inputs": {
+                                              "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{items('Apply_to_each')?['fields']?['Site_x0020_Number']}",
+                                              "RowKey": "@{formatDateTime(utcNow(), 'HHmmss.fff')}",
+                                              "SiteNumber": "@{outputs('Compose_-_Site_Name')}",
+                                              "FlowRunId": "@{workflow()?['run']?['name']}",
+                                              "Source": "@{workflow()?['tags']?['flowDisplayName']}",
+                                              "LogLevel": "Info",
+                                              "Message": "Subscription created for Site '@{split(body('HTTP_GET_SiteId')?['id'], ',')[1]\r\n}'."
+                                            },
+                                            "runAfter": {
+                                              "HTTP_-_Create_Subscriptions_for_env": [
+                                                "Succeeded",
+                                                "Skipped"
+                                              ]
+                                            }
+                                          },
+                                          "Insert_or_Replace_Entity_(V2)_-_Add_log_for_subscription_created": {
+                                            "type": "OpenApiConnection",
+                                            "inputs": {
+                                              "parameters": {
+                                                "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{items('Apply_to_each')?['fields']?['Site_x0020_Number']}",
+                                                "RowKey": "@formatDateTime(utcNow(), 'HHmmss.fff')",
+                                                "storageAccountName": "AccountNameFromSettings",
+                                                "tableName": "EventHandlerLogs",
+                                                "entity": "@outputs('Compose_-_log_body_for_create_subscription')"
+                                              },
+                                              "host": {
+                                                "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                                                "operationId": "InsertReplaceEntity_V2",
+                                                "connectionName": "shared_azuretables"
+                                              }
+                                            },
+                                            "runAfter": {
+                                              "Compose_-_log_body_for_create_subscription": [
+                                                "Succeeded"
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "runAfter": {
+                                        "Filter_Subscription_for_current_environment": [
+                                          "Succeeded"
+                                        ]
+                                      }
+                                    }
+                                  },
+                                  "else": {
+                                    "actions": {
+                                      "Compose_-_Body_for_Creating_Subscriptions": {
+                                        "type": "Compose",
+                                        "inputs": {
+                                          "clientState": "@{parameters('ClientState (bs_ClientState)')}",
+                                          "changeType": "updated",
+                                          "notificationUrl": "@{variables('EventHandlerUrl')}",
+                                          "expirationDateTime": "@{formatDateTime(addToTime(utcNow(), 5, 'Month'), 'yyyy-MM-ddTHH:mm:ss+00:00')}"
+                                        }
+                                      },
+                                      "HTTP_-_Create_Subscriptions": {
+                                        "type": "Http",
+                                        "inputs": {
+                                          "uri": "@{variables('GraphUrl')}/sites/@{split(body('HTTP_GET_SiteId')?['id'], ',')[1]\r\n}/lists/@{body('HTTP_GET_Revenue_List')?['value'][0]?['id']\r\n}/subscriptions",
+                                          "method": "POST",
+                                          "headers": {
+                                            "Accept": "application/json",
+                                            "Authorization": "Bearer @{variables('BearerToken')}",
+                                            "Content-Type": "application/json"
+                                          },
+                                          "body": "@outputs('Compose_-_Body_for_Creating_Subscriptions')"
+                                        },
+                                        "runAfter": {
+                                          "Compose_-_Body_for_Creating_Subscriptions": [
+                                            "Succeeded"
+                                          ]
+                                        },
+                                        "runtimeConfiguration": {
+                                          "contentTransfer": {
+                                            "transferMode": "Chunked"
+                                          }
+                                        }
+                                      },
+                                      "Compose_-_log_body_for_creating_subscription": {
+                                        "type": "Compose",
+                                        "inputs": {
+                                          "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{items('Apply_to_each')?['fields']?['Site_x0020_Number']}",
+                                          "RowKey": "@{formatDateTime(utcNow(), 'HHmmss.fff')}",
+                                          "SiteNumber": "@{outputs('Compose_-_Site_Name')}",
+                                          "FlowRunId": "@{workflow()?['run']?['name']}",
+                                          "Source": "@{workflow()?['tags']?['flowDisplayName']}",
+                                          "LogLevel": "Info",
+                                          "Message": "Subscription created for Site '@{split(body('HTTP_GET_SiteId')?['id'], ',')[1]\r\n}'."
+                                        },
+                                        "runAfter": {
+                                          "HTTP_-_Create_Subscriptions": [
+                                            "Succeeded",
+                                            "Skipped"
+                                          ]
+                                        }
+                                      },
+                                      "Insert_or_Replace_Entity_(V2)_-_Add_log_created_subscription": {
+                                        "type": "OpenApiConnection",
+                                        "inputs": {
+                                          "parameters": {
+                                            "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{items('Apply_to_each')?['fields']?['Site_x0020_Number']}",
+                                            "RowKey": "@formatDateTime(utcNow(), 'HHmmss.fff')",
+                                            "storageAccountName": "AccountNameFromSettings",
+                                            "tableName": "EventHandlerLogs",
+                                            "entity": "@outputs('Compose_-_log_body_for_creating_subscription')"
+                                          },
+                                          "host": {
+                                            "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                                            "operationId": "InsertReplaceEntity_V2",
+                                            "connectionName": "shared_azuretables"
+                                          }
+                                        },
+                                        "runAfter": {
+                                          "Compose_-_log_body_for_creating_subscription": [
+                                            "Succeeded"
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "runAfter": {
+                                    "HTTP_-_Get_Existing_subscriptions": [
+                                      "Succeeded",
+                                      "Skipped"
+                                    ]
+                                  }
+                                },
+                                "HTTP_-_Get_delta_token": {
+                                  "type": "Http",
+                                  "inputs": {
+                                    "uri": "@{variables('GraphUrl')}/sites/@{split(body('HTTP_GET_SiteId')?['id'], ',')[1]\r\n}/lists/@{body('HTTP_GET_Revenue_List')?['value'][0]?['id']\r\n}/items/delta?token=latest",
+                                    "method": "GET",
+                                    "headers": {
+                                      "Accept": "application/json",
+                                      "Authorization": "Bearer @{variables('BearerToken')}"
+                                    }
+                                  },
+                                  "runAfter": {
+                                    "Condition_-_Is_Existing_Subscriptions_has_bodyvalue": [
+                                      "Succeeded"
+                                    ]
+                                  },
+                                  "runtimeConfiguration": {
+                                    "contentTransfer": {
+                                      "transferMode": "Chunked"
+                                    }
+                                  }
+                                },
+                                "Compose_-_log_body_for_Revenue_Site": {
+                                  "type": "Compose",
+                                  "inputs": {
+                                    "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{items('Apply_to_each')?['fields']?['Site_x0020_Number']}",
+                                    "RowKey": "@{formatDateTime(utcNow(), 'HHmmss.fff')}",
+                                    "SiteNumber": "@{items('Apply_to_each')?['fields']?['Site_x0020_Number']}",
+                                    "FlowRunId": "@{workflow()?['run']?['name']}",
+                                    "Source": "@{workflow()?['tags']?['flowDisplayName']}",
+                                    "LogLevel": "Info",
+                                    "Message": "Processing Revenue Site '@{items('Apply_to_each')?['fields']?['Site_x0020_Number']}' having list '@{body('HTTP_GET_Revenue_List')?['value'][0]?['id']}'."
+                                  }
+                                },
+                                "Condition_-_body_has_value": {
+                                  "type": "If",
+                                  "expression": {
+                                    "and": [
+                                      {
+                                        "greater": [
+                                          "@length(body('Get_entities_(V2)')?['value'])",
+                                          0
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  "actions": {
+                                    "Condition_-_Is_delta_token_less_than_5_days": {
+                                      "type": "If",
+                                      "expression": {
+                                        "and": [
+                                          {
+                                            "less": [
+                                              "@body('Get_entities_(V2)')?['value']?[0]?['Timestamp']",
+                                              "@addDays(utcNow(), -5)"
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      "actions": {
+                                        "Compose_-_log_body_updating_delta_token": {
+                                          "type": "Compose",
+                                          "inputs": {
+                                            "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{items('Apply_to_each')?['fields']?['Site_x0020_Number']}",
+                                            "RowKey": "@{formatDateTime(utcNow(), 'HHmmss.fff')}",
+                                            "SiteNumber": "@{outputs('Compose_-_Site_Name')}",
+                                            "FlowRunId": "@{workflow()?['run']?['name']}",
+                                            "Source": "@{workflow()?['tags']?['flowDisplayName']}",
+                                            "LogLevel": "Info",
+                                            "Message": "Delta token updated for Site '@{split(body('HTTP_GET_SiteId')?['id'], ',')[1]}'."
+                                          },
+                                          "runAfter": {
+                                            "Replace_Entity_(V2)": [
+                                              "Succeeded"
+                                            ]
+                                          }
+                                        },
+                                        "Replace_Entity_(V2)": {
+                                          "type": "OpenApiConnection",
+                                          "inputs": {
+                                            "parameters": {
+                                              "PartitionKey": "@body('Get_entities_(V2)')?['value']?[0]?['PartitionKey']",
+                                              "RowKey": "@body('Get_entities_(V2)')?['value']?[0]?['RowKey']",
+                                              "storageAccountName": "AccountNameFromSettings",
+                                              "tableName": "DeltaTokens",
+                                              "If-Match": "*",
+                                              "entity": "@outputs('Compose_-_update_body_for_delta_token')"
+                                            },
+                                            "host": {
+                                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                                              "operationId": "ReplaceEntity_V2",
+                                              "connectionName": "shared_azuretables"
+                                            }
+                                          },
+                                          "runAfter": {
+                                            "Compose_-_update_body_for_delta_token": [
+                                              "Succeeded"
+                                            ]
+                                          }
+                                        },
+                                        "Compose_-_update_body_for_delta_token": {
+                                          "type": "Compose",
+                                          "inputs": {
+                                            "PartitionKey": "@{body('Get_entities_(V2)')?['value']?[0]?['PartitionKey']}",
+                                            "RowKey": "@{body('Get_entities_(V2)')?['value']?[0]?['RowKey']}",
+                                            "Token": "@{split(body('HTTP_-_Get_delta_token')?['@odata.deltaLink'], 'token=')[1]}"
+                                          }
+                                        },
+                                        "Insert_or_Replace_Entity_(V2)_-_Add_log_for_delta_token": {
+                                          "type": "OpenApiConnection",
+                                          "inputs": {
+                                            "parameters": {
+                                              "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{items('Apply_to_each')?['fields']?['Site_x0020_Number']}",
+                                              "RowKey": "@formatDateTime(utcNow(), 'HHmmss.fff')",
+                                              "storageAccountName": "AccountNameFromSettings",
+                                              "tableName": "EventHandlerLogs",
+                                              "entity": "@outputs('Compose_-_log_body_updating_delta_token')"
+                                            },
+                                            "host": {
+                                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                                              "operationId": "InsertReplaceEntity_V2",
+                                              "connectionName": "shared_azuretables"
+                                            }
+                                          },
+                                          "runAfter": {
+                                            "Compose_-_log_body_updating_delta_token": [
+                                              "Succeeded"
+                                            ]
+                                          }
+                                        }
+                                      },
+                                      "else": {
+                                        "actions": {}
+                                      }
+                                    }
+                                  },
+                                  "else": {
+                                    "actions": {
+                                      "Compose_-_log_body_for_insert_delta_token": {
+                                        "type": "Compose",
+                                        "inputs": {
+                                          "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{outputs('Compose_-_Site_Name')}",
+                                          "RowKey": "@{formatDateTime(utcNow(), 'HHmmss.fff')}",
+                                          "SiteNumber": "@{outputs('Compose_-_Site_Name')}",
+                                          "FlowRunId": "@{workflow()?['run']?['name']}",
+                                          "Source": "@{workflow()?['tags']?['flowDisplayName']}",
+                                          "LogLevel": "Info",
+                                          "Message": "Delta token created for Site '@{split(body('HTTP_GET_SiteId')?['id'], ',')[1]}'."
+                                        },
+                                        "runAfter": {
+                                          "Insert_Entity_(V2)": [
+                                            "Succeeded"
+                                          ]
+                                        }
+                                      },
+                                      "Insert_Entity_(V2)": {
+                                        "type": "OpenApiConnection",
+                                        "inputs": {
+                                          "parameters": {
+                                            "storageAccountName": "AccountNameFromSettings",
+                                            "tableName": "DeltaTokens",
+                                            "entity": "@outputs('Compose_-_body_for_delta_token')"
+                                          },
+                                          "host": {
+                                            "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                                            "operationId": "CreateEntity_V2",
+                                            "connectionName": "shared_azuretables"
+                                          }
+                                        },
+                                        "runAfter": {
+                                          "Compose_-_body_for_delta_token": [
+                                            "Succeeded"
+                                          ]
+                                        }
+                                      },
+                                      "Compose_-_body_for_delta_token": {
+                                        "type": "Compose",
+                                        "inputs": {
+                                          "PartitionKey": "@{outputs('Compose_-_Site_Name')}",
+                                          "RowKey": "@{body('HTTP_GET_Revenue_List')?['value'][0]?['id']}",
+                                          "Token": "@{split(body('HTTP_-_Get_delta_token')?['@odata.deltaLink'], 'token=')[1]}"
+                                        }
+                                      },
+                                      "Insert_or_Replace_Entity_(V2)_-_Add_log_for_new_delta_token_added_for_site": {
+                                        "type": "OpenApiConnection",
+                                        "inputs": {
+                                          "parameters": {
+                                            "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{outputs('Compose_-_Site_Name')}",
+                                            "RowKey": "@formatDateTime(utcNow(), 'HHmmss.fff')",
+                                            "storageAccountName": "AccountNameFromSettings",
+                                            "tableName": "EventHandlerLogs",
+                                            "entity": "@outputs('Compose_-_log_body_for_insert_delta_token')"
+                                          },
+                                          "host": {
+                                            "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                                            "operationId": "InsertReplaceEntity_V2",
+                                            "connectionName": "shared_azuretables"
+                                          }
+                                        },
+                                        "runAfter": {
+                                          "Compose_-_log_body_for_insert_delta_token": [
+                                            "Succeeded"
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "runAfter": {
+                                    "Get_entities_(V2)": [
+                                      "Succeeded"
+                                    ]
+                                  }
+                                },
+                                "Get_entities_(V2)": {
+                                  "type": "OpenApiConnection",
+                                  "inputs": {
+                                    "parameters": {
+                                      "storageAccountName": "AccountNameFromSettings",
+                                      "tableName": "DeltaTokens",
+                                      "$filter": "RowKey eq '@{body('HTTP_GET_Revenue_List')?['value'][0]?['id']}'"
+                                    },
+                                    "host": {
+                                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                                      "operationId": "GetEntities_V2",
+                                      "connectionName": "shared_azuretables"
+                                    }
+                                  },
+                                  "runAfter": {
+                                    "HTTP_-_Get_delta_token": [
+                                      "Succeeded"
+                                    ]
+                                  }
+                                },
+                                "Insert_or_Replace_Entity_(V2)_-_Add_Revenue_Site_log": {
+                                  "type": "OpenApiConnection",
+                                  "inputs": {
+                                    "parameters": {
+                                      "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{items('Apply_to_each')?['fields']?['Site_x0020_Number']}",
+                                      "RowKey": "@formatDateTime(utcNow(), 'HHmmss.fff')",
+                                      "storageAccountName": "AccountNameFromSettings",
+                                      "tableName": "EventHandlerLogs",
+                                      "entity": "@outputs('Compose_-_log_body_for_Revenue_Site')"
+                                    },
+                                    "host": {
+                                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                                      "operationId": "InsertReplaceEntity_V2",
+                                      "connectionName": "shared_azuretables"
+                                    }
+                                  },
+                                  "runAfter": {
+                                    "Compose_-_log_body_for_Revenue_Site": [
+                                      "Succeeded"
+                                    ]
+                                  }
+                                }
+                              },
+                              "else": {
+                                "actions": {
+                                  "Compose_-_log_body_for_No_Revenue_Site": {
+                                    "type": "Compose",
+                                    "inputs": {
+                                      "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{items('Apply_to_each')?['fields']?['Site_x0020_Number']}",
+                                      "RowKey": "@{formatDateTime(utcNow(), 'HHmmss.fff')}",
+                                      "SiteNumber": "@{items('Apply_to_each')?['fields']?['Site_x0020_Number']}",
+                                      "FlowRunId": "@{workflow()?['run']?['name']}",
+                                      "Source": "@{workflow()?['tags']?['flowDisplayName']}",
+                                      "LogLevel": "Warning",
+                                      "Message": "No Revenue list found for Site '@{items('Apply_to_each')?['fields']?['Site_x0020_Number']}'."
+                                    }
+                                  },
+                                  "Insert_or_Replace_Entity_(V2)_-_Add_error_log_for_No_Revenue_site": {
+                                    "type": "OpenApiConnection",
+                                    "inputs": {
+                                      "parameters": {
+                                        "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{items('Apply_to_each')?['fields']?['Site_x0020_Number']}",
+                                        "RowKey": "@formatDateTime(utcNow(), 'HHmmss.fff')",
+                                        "storageAccountName": "AccountNameFromSettings",
+                                        "tableName": "EventHandlerLogs",
+                                        "entity": "@outputs('Compose_-_log_body_for_No_Revenue_Site')"
+                                      },
+                                      "host": {
+                                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                                        "operationId": "InsertReplaceEntity_V2",
+                                        "connectionName": "shared_azuretables"
+                                      }
+                                    },
+                                    "runAfter": {
+                                      "Compose_-_log_body_for_No_Revenue_Site": [
+                                        "Succeeded"
+                                      ]
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "runAfter": {
+                          "HTTP_GET_Revenue_List": [
+                            "Succeeded",
+                            "Failed"
+                          ]
+                        }
+                      }
+                    },
+                    "else": {
+                      "actions": {
+                        "Compose_-_log_body_for_No_SiteId_found": {
+                          "type": "Compose",
+                          "inputs": {
+                            "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{items('Apply_to_each')?['fields']?['Site_x0020_Number']}",
+                            "RowKey": "@{formatDateTime(utcNow(), 'HHmmss.fff')}",
+                            "SiteNumber": "@{outputs('Compose_-_Site_Name')}",
+                            "FlowRunId": "@{workflow()?['run']?['name']}",
+                            "Source": "@{workflow()?['tags']?['flowDisplayName']}",
+                            "LogLevel": "Error",
+                            "Message": "No Site Id found for Site '@{outputs('Compose_-_Site_Name')}'."
+                          }
+                        },
+                        "Insert_or_Replace_Entity_(V2)_-_log_body_for_No_SiteId_found": {
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "parameters": {
+                              "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{items('Apply_to_each')?['fields']?['Site_x0020_Number']}",
+                              "RowKey": "@formatDateTime(utcNow(), 'HHmmss.fff')",
+                              "storageAccountName": "AccountNameFromSettings",
+                              "tableName": "EventHandlerLogs",
+                              "entity": "@outputs('Compose_-_log_body_for_No_SiteId_found')"
+                            },
+                            "host": {
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                              "operationId": "InsertReplaceEntity_V2",
+                              "connectionName": "shared_azuretables"
+                            }
+                          },
+                          "runAfter": {
+                            "Compose_-_log_body_for_No_SiteId_found": [
+                              "Succeeded"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "runAfter": {
+                "HTTP_GET_SiteId": [
+                  "Failed",
+                  "Succeeded"
+                ]
+              }
+            }
+          },
+          "runAfter": {
+            "HTTP_-_Get_all_sites": [
+              "Succeeded"
+            ]
+          },
+          "runtimeConfiguration": {
+            "concurrency": {
+              "repetitions": 3
+            }
+          }
+        },
+        "Initialize_tenant_variable": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Tenant",
+                "type": "string",
+                "value": "9454df09-bc28-486b-af85-64ca36c21d47"
+              }
+            ]
+          },
+          "runAfter": {}
+        },
+        "Initialize_TokenUrl_variable": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "tokenUrl",
+                "type": "string",
+                "value": "https://login.microsoftonline.com"
+              }
+            ]
+          },
+          "runAfter": {}
+        },
+        "HTTP_Authenticate": {
+          "type": "Http",
+          "inputs": {
+            "uri": "https://login.microsoftonline.com/9454df09-bc28-486b-af85-64ca36c21d47/oauth2/v2.0/token",
+            "method": "POST",
+            "headers": {
+              "content-type": "application/x-www-form-urlencoded"
+            },
+            "body": "@concat(\r\n'grant_type=',\r\nencodeUriComponent('client_credentials'),\r\n'&client_id=',\r\nencodeUriComponent(parameters('ClientId (bs_ClientId)')),\r\n'&client_secret=', \r\nencodeUriComponent(parameters('ClientSecret (bs_ClientSecret)')),\r\n'&scope=', \r\nencodeUriComponent('https://graph.microsoft.com/.default')\r\n)"
+          },
+          "runAfter": {
+            "Initialize_tenant_variable": [
+              "Succeeded"
+            ],
+            "Initialize_TokenUrl_variable": [
+              "Succeeded"
+            ],
+            "Initialize_GraphUrl_variable": [
+              "Succeeded"
+            ],
+            "Initialize_EventHandlerUrl_variable": [
+              "Succeeded"
+            ]
+          },
+          "runtimeConfiguration": {
+            "contentTransfer": {
+              "transferMode": "Chunked"
+            }
+          }
+        },
+        "Initialize_GraphUrl_variable": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "GraphUrl",
+                "type": "string",
+                "value": "https://graph.microsoft.com/v1.0"
+              }
+            ]
+          },
+          "runAfter": {}
+        },
+        "Initialize_EventHandlerUrl_variable": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "EventHandlerUrl",
+                "type": "string",
+                "value": "@parameters('Event Handler Endpoint (bs_EventHandlerEndpoint)')"
+              }
+            ]
+          },
+          "runAfter": {}
+        },
+        "HTTP_-_Get_all_sites": {
+          "type": "Http",
+          "inputs": {
+            "uri": "@{variables('GraphUrl')}/sites/root/lists/accounts/items?$expand=fields($select=Title,Site_x0020_Number,Site_x0020_Status,Account_x0020_Site_x0020_Link)&$select=id,fields&$top=9000&$filter=fields/Site_x0020_Status eq 'Active'",
+            "method": "GET",
+            "headers": {
+              "Accept": "application/json",
+              "Authorization": "Bearer @{variables('BearerToken')}",
+              "Prefer": "HonorNonIndexedQueriesWarningMayFailRandomly"
+            }
+          },
+          "runAfter": {
+            "Initialize_BearerToken_variable": [
+              "Succeeded"
+            ]
+          },
+          "runtimeConfiguration": {
+            "contentTransfer": {
+              "transferMode": "Chunked"
+            }
+          }
+        },
+        "Terminate": {
+          "type": "Terminate",
+          "inputs": {
+            "runStatus": "Succeeded"
+          },
+          "runAfter": {
+            "Apply_to_each": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "f27f025a-050a-443a-93fe-958d57d56df6"
+          }
+        },
+        "Initialize_BearerToken_variable": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "BearerToken",
+                "type": "string",
+                "value": "@body('HTTP_Authenticate')['access_token']"
+              }
+            ]
+          },
+          "runAfter": {
+            "HTTP_Authenticate": [
+              "Succeeded"
+            ]
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

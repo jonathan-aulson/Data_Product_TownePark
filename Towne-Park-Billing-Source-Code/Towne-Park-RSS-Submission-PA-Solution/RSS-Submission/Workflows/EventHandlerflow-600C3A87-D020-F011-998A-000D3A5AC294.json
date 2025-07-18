@@ -1,0 +1,1337 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_sharepointonline-1": {
+        "api": {
+          "name": "shared_sharepointonline"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "bs_sharedsharepointonline_562ec"
+        },
+        "runtimeSource": "embedded"
+      },
+      "shared_office365": {
+        "api": {
+          "name": "shared_office365"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "bs_sharedoffice365_64348"
+        },
+        "runtimeSource": "embedded"
+      },
+      "shared_azuretables": {
+        "api": {
+          "name": "shared_azuretables"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "bs_sharedazuretables_f2f70"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "Invoice Logic App Endpoint (bs_InvoiceLogicAppEndpoint)": {
+          "defaultValue": "https://prod-62.eastus2.logic.azure.com:443/workflows/1d89461f05634870a9bf2c2230cea80e/triggers/When_a_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_a_HTTP_request_is_received%2Frun&sv=1.0&sig=kc5vwy-Aj6cqRtq75OlqMlkTIO1xZGuAGXaQQhHm0AE",
+          "type": "String",
+          "metadata": {
+            "schemaName": "bs_InvoiceLogicAppEndpoint",
+            "description": "URL for the invoicing logic app to point the event handler flow towards"
+          }
+        },
+        "EnvironmentName (bs_environmentName)": {
+          "defaultValue": "DEV",
+          "type": "String",
+          "metadata": {
+            "schemaName": "bs_environmentName"
+          }
+        },
+        "Minus Day (bs_MinusDay)": {
+          "defaultValue": 1,
+          "type": "Int",
+          "metadata": {
+            "schemaName": "bs_MinusDay"
+          }
+        }
+      },
+      "triggers": {
+        "manual": {
+          "type": "Request",
+          "kind": "Http",
+          "inputs": {
+            "triggerAuthenticationType": "All",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "subscriptionId": {
+                        "type": "string"
+                      },
+                      "clientState": {},
+                      "expirationDateTime": {
+                        "type": "string"
+                      },
+                      "resource": {
+                        "type": "string"
+                      },
+                      "tenantId": {
+                        "type": "string"
+                      },
+                      "siteUrl": {
+                        "type": "string"
+                      },
+                      "webId": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "subscriptionId",
+                      "expirationDateTime",
+                      "resource",
+                      "tenantId",
+                      "siteUrl",
+                      "webId"
+                    ]
+                  }
+                }
+              }
+            },
+            "method": "POST"
+          },
+          "metadata": {}
+        }
+      },
+      "actions": {
+        "TriggerBodyHasValue": {
+          "type": "If",
+          "expression": {
+            "and": [
+              {
+                "not": {
+                  "equals": [
+                    "@coalesce(triggerBody()?['value'], '')",
+                    "@''"
+                  ]
+                }
+              }
+            ]
+          },
+          "actions": {},
+          "else": {
+            "actions": {
+              "Terminate": {
+                "type": "Terminate",
+                "inputs": {
+                  "runStatus": "Succeeded"
+                }
+              }
+            }
+          },
+          "runAfter": {
+            "Return_Response": [
+              "Succeeded",
+              "Failed"
+            ]
+          }
+        },
+        "Initialize_Resource": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Resource",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {
+            "TriggerBodyHasValue": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Apply_to_each_[foreach_trigger_body_value]": {
+          "type": "Foreach",
+          "foreach": "@triggerBody()?['value']",
+          "actions": {
+            "Set_Resource": {
+              "type": "SetVariable",
+              "inputs": {
+                "name": "Resource",
+                "value": "@items('Apply_to_each_[foreach_trigger_body_value]')?['resource']"
+              }
+            },
+            "HTTP_GET_SiteId": {
+              "type": "Http",
+              "inputs": {
+                "uri": "@concat(\r\n'https://graph.microsoft.com/v1.0/sites/townepark.sharepoint.com:',\r\nitem()?['siteUrl']\r\n)",
+                "method": "GET",
+                "headers": {
+                  "Accept": "application/json",
+                  "Authorization": "Bearer @{variables('BearerToken')}"
+                }
+              },
+              "runAfter": {
+                "For_each": [
+                  "Succeeded"
+                ]
+              },
+              "runtimeConfiguration": {
+                "contentTransfer": {
+                  "transferMode": "Chunked"
+                }
+              }
+            },
+            "Set_SiteId": {
+              "type": "SetVariable",
+              "inputs": {
+                "name": "SiteId",
+                "value": "@split(body('HTTP_GET_SiteId')?['id'], ',')[1]"
+              },
+              "runAfter": {
+                "HTTP_GET_SiteId": [
+                  "Succeeded"
+                ]
+              }
+            },
+            "HTTP_GET_Items_Delta": {
+              "type": "Http",
+              "inputs": {
+                "uri": "https://graph.microsoft.com/v1.0/sites/@{variables('SiteId')}/lists/@{variables('Resource')}/items/delta",
+                "method": "GET",
+                "headers": {
+                  "Accept": "application/json",
+                  "Authorization": "Bearer @{variables('BearerToken')}"
+                },
+                "queries": {
+                  "token": "@{variables('deltaToken')}"
+                }
+              },
+              "runAfter": {
+                "Set_SiteId": [
+                  "Succeeded"
+                ]
+              },
+              "runtimeConfiguration": {
+                "contentTransfer": {
+                  "transferMode": "Chunked"
+                }
+              }
+            },
+            "Update_deltaToken": {
+              "type": "SetVariable",
+              "inputs": {
+                "name": "deltaToken",
+                "value": "@split(body('HTTP_GET_Items_Delta')?['@odata.deltaLink'], '?token=')[1]"
+              },
+              "runAfter": {
+                "Insert_or_Replace_Entity_(V2)_-_Add_log_for_processing_list": [
+                  "Succeeded"
+                ]
+              }
+            },
+            "foreach_delta_item": {
+              "type": "Foreach",
+              "foreach": "@body('Filter_-_Delta_items_on_last_modified_date')",
+              "actions": {
+                "Set_DocStatus": {
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "DocStatus",
+                    "value": "@items('foreach_delta_item')?['fields']?['Revenue_x0020_Doc_x0020_Status']"
+                  },
+                  "runAfter": {
+                    "Insert_or_Replace_Entity_(V2)_-_Add_processing_log": [
+                      "Succeeded"
+                    ]
+                  }
+                },
+                "Set_ItemTitle": {
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "ItemTitle",
+                    "value": "@items('foreach_delta_item')?['fields']?['Title']"
+                  },
+                  "runAfter": {
+                    "Set_DocStatus": [
+                      "Succeeded"
+                    ]
+                  }
+                },
+                "IsValidTitle": {
+                  "type": "If",
+                  "expression": {
+                    "and": [
+                      {
+                        "equals": [
+                          "@variables('ItemTitle')",
+                          "@variables('ExpectedItemTitle')"
+                        ]
+                      }
+                    ]
+                  },
+                  "actions": {
+                    "HasValidDocStatus": {
+                      "type": "If",
+                      "expression": {
+                        "or": [
+                          {
+                            "equals": [
+                              "@variables('DocStatus')",
+                              "Submit for Invoicing"
+                            ]
+                          },
+                          {
+                            "equals": [
+                              "@variables('DocStatus')",
+                              "Rejected"
+                            ]
+                          }
+                        ]
+                      },
+                      "actions": {
+                        "Get_item": {
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "parameters": {
+                              "dataset": "@variables('SiteUrl')",
+                              "table": "Revenue",
+                              "id": "@items('foreach_delta_item')?['id']"
+                            },
+                            "host": {
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+                              "operationId": "GetItem",
+                              "connectionName": "shared_sharepointonline-1"
+                            }
+                          },
+                          "runAfter": {
+                            "Insert_or_Replace_Entity_(V2)_-_Add_log_for_valid_doc_status": [
+                              "Succeeded"
+                            ]
+                          }
+                        },
+                        "Set_DocVersionNo": {
+                          "type": "SetVariable",
+                          "inputs": {
+                            "name": "DocVersionNo",
+                            "value": "@string(\r\nsub(\r\ndecimal(body('Get_item')?['{VersionNumber}']), 1\r\n)\r\n)"
+                          },
+                          "runAfter": {
+                            "Get_item": [
+                              "Succeeded"
+                            ]
+                          }
+                        },
+                        "IsFirstVersion": {
+                          "type": "If",
+                          "expression": {
+                            "and": [
+                              {
+                                "lessOrEquals": [
+                                  "@decimal(variables('DocVersionNo'))",
+                                  0
+                                ]
+                              }
+                            ]
+                          },
+                          "actions": {},
+                          "else": {
+                            "actions": {
+                              "HTTP_GET_Item_History": {
+                                "type": "Http",
+                                "inputs": {
+                                  "uri": "https://graph.microsoft.com/v1.0/sites/@{variables('SiteId')}/lists/@{variables('Resource')}/items/@{items('foreach_delta_item')?['id']}/versions/@{variables('DocVersionNo')}",
+                                  "method": "GET",
+                                  "headers": {
+                                    "Accept": "application/json",
+                                    "Authorization": "Bearer @{variables('BearerToken')}"
+                                  }
+                                },
+                                "runtimeConfiguration": {
+                                  "contentTransfer": {
+                                    "transferMode": "Chunked"
+                                  }
+                                }
+                              },
+                              "Set_LastDocStatus": {
+                                "type": "SetVariable",
+                                "inputs": {
+                                  "name": "LastDocStatus",
+                                  "value": "@body('HTTP_GET_Item_History')?['fields']?['Revenue_x0020_Doc_x0020_Status']"
+                                },
+                                "runAfter": {
+                                  "HTTP_GET_Item_History": [
+                                    "Succeeded"
+                                  ]
+                                }
+                              },
+                              "IsNewDocStatus": {
+                                "type": "If",
+                                "expression": {
+                                  "and": [
+                                    {
+                                      "not": {
+                                        "equals": [
+                                          "@variables('DocStatus')",
+                                          "@variables('LastDocStatus')"
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                "actions": {
+                                  "Compose_Invoice_logic_app_body": {
+                                    "type": "Compose",
+                                    "inputs": {
+                                      "Field_x0020_Comments": "@body('Get_item')?['Field_x0020_Comment']",
+                                      "Title": "@body('Get_item')?['Title']",
+                                      "Month": "@body('Get_item')?['Month']?['Value']",
+                                      "Year": "@body('Get_item')?['Year']?['Value']",
+                                      "Site": "@replace(variables('SiteUrl'),'https://townepark.sharepoint.com/sites/','')",
+                                      "Submitter": "@body('Get_item')?['Editor']?['DisplayName']"
+                                    },
+                                    "runAfter": {
+                                      "Insert_or_Replace_Entity_(V2)_-_Add_log_doc_status_change": [
+                                        "Succeeded"
+                                      ]
+                                    }
+                                  },
+                                  "HTTP_Trigger_Invoice_Logic_App": {
+                                    "type": "Http",
+                                    "inputs": {
+                                      "uri": "@parameters('Invoice Logic App Endpoint (bs_InvoiceLogicAppEndpoint)')",
+                                      "method": "POST",
+                                      "headers": {
+                                        "Accept": "application/json"
+                                      },
+                                      "body": "@outputs('Compose_Invoice_logic_app_body')",
+                                      "retryPolicy": {
+                                        "type": "exponential",
+                                        "count": 4,
+                                        "interval": "PT240S",
+                                        "minimumInterval": "PT240S",
+                                        "maximumInterval": "PT1920S"
+                                      }
+                                    },
+                                    "runAfter": {
+                                      "Compose_Invoice_logic_app_body": [
+                                        "Succeeded"
+                                      ]
+                                    },
+                                    "limit": {
+                                      "timeout": "PT60M"
+                                    },
+                                    "operationOptions": "DisableAsyncPattern",
+                                    "runtimeConfiguration": {
+                                      "contentTransfer": {
+                                        "transferMode": "Chunked"
+                                      }
+                                    }
+                                  },
+                                  "Compose_-_log_for_logic_app": {
+                                    "type": "Compose",
+                                    "inputs": {
+                                      "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{variables('SiteNumber')}",
+                                      "RowKey": "@{formatDateTime(utcNow(), 'HHmmss.fff')}",
+                                      "SiteNumber": "@{variables('SiteNumber')}",
+                                      "FlowRunId": "@{workflow()?['run']?['name']}",
+                                      "Source": "@{workflow()?['tags']?['flowDisplayName']}",
+                                      "LogLevel": "Info",
+                                      "Message": "Completed Invoicing Logic App run '@{outputs('HTTP_Trigger_Invoice_Logic_App')?['headers']?['x-ms-workflow-run-id']}' for '@{variables('ItemTitle')}' with code '@{\r\noutputs('HTTP_Trigger_Invoice_Logic_App')?['statusCode']}'."
+                                    },
+                                    "runAfter": {
+                                      "HTTP_Trigger_Invoice_Logic_App": [
+                                        "Succeeded",
+                                        "Failed"
+                                      ]
+                                    }
+                                  },
+                                  "Compose_-_log_body_for_doc_status_change": {
+                                    "type": "Compose",
+                                    "inputs": {
+                                      "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{variables('SiteNumber')}",
+                                      "RowKey": "@{formatDateTime(utcNow(), 'HHmmss.fff')}",
+                                      "SiteNumber": "@{variables('SiteNumber')}",
+                                      "FlowRunId": "@{workflow()?['run']?['name']}",
+                                      "Source": "@{workflow()?['tags']?['flowDisplayName']}",
+                                      "LogLevel": "Info",
+                                      "Message": "Found Doc Status change, processing invoice for '@{variables('ItemTitle')}'."
+                                    }
+                                  },
+                                  "Condition_-_Is_Http_Fails_": {
+                                    "type": "If",
+                                    "expression": {
+                                      "and": [
+                                        {
+                                          "not": {
+                                            "equals": [
+                                              "@outputs('HTTP_Trigger_Invoice_Logic_App')?['statusCode']",
+                                              200
+                                            ]
+                                          }
+                                        },
+                                        {
+                                          "not": {
+                                            "equals": [
+                                              "@outputs('HTTP_Trigger_Invoice_Logic_App')?['statusCode']",
+                                              201
+                                            ]
+                                          }
+                                        },
+                                        {
+                                          "not": {
+                                            "equals": [
+                                              "@outputs('HTTP_Trigger_Invoice_Logic_App')?['statusCode']",
+                                              202
+                                            ]
+                                          }
+                                        },
+                                        {
+                                          "not": {
+                                            "equals": [
+                                              "@outputs('HTTP_Trigger_Invoice_Logic_App')?['statusCode']",
+                                              203
+                                            ]
+                                          }
+                                        },
+                                        {
+                                          "not": {
+                                            "equals": [
+                                              "@outputs('HTTP_Trigger_Invoice_Logic_App')?['statusCode']",
+                                              204
+                                            ]
+                                          }
+                                        },
+                                        {
+                                          "not": {
+                                            "equals": [
+                                              "@outputs('HTTP_Trigger_Invoice_Logic_App')?['statusCode']",
+                                              205
+                                            ]
+                                          }
+                                        },
+                                        {
+                                          "not": {
+                                            "equals": [
+                                              "@outputs('HTTP_Trigger_Invoice_Logic_App')?['statusCode']",
+                                              206
+                                            ]
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    "actions": {
+                                      "Send_an_email_(V2)": {
+                                        "type": "OpenApiConnection",
+                                        "inputs": {
+                                          "parameters": {
+                                            "emailMessage/To": "pratik.bedekar@townepark.com;shravan.modi@townepark.com;kajal.singh@townepark.com",
+                                            "emailMessage/Subject": "[@{parameters('EnvironmentName (bs_environmentName)')}] - Invoice Logic App Run Failed for Site: @{variables('SiteNumber')}",
+                                            "emailMessage/Body": "<p class=\"editor-paragraph\">The Invoicing Logic App process has been failed with status code - @{outputs('HTTP_Trigger_Invoice_Logic_App')?['statusCode']}<br><br><b><strong class=\"editor-text-bold\">Run ID:</strong></b> @{outputs('HTTP_Trigger_Invoice_Logic_App')?['headers']?['x-ms-workflow-run-id']}<br><b><strong class=\"editor-text-bold\">Site:</strong></b> @{variables('SiteNumber')}<br><b><strong class=\"editor-text-bold\">Item: </strong></b>@{variables('ItemTitle')}</p><p class=\"editor-paragraph\"><b><strong class=\"editor-text-bold\">Message</strong></b>: @{body('HTTP_Trigger_Invoice_Logic_App')?['body']?['message']}</p>",
+                                            "emailMessage/Importance": "Normal"
+                                          },
+                                          "host": {
+                                            "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365",
+                                            "operationId": "SendEmailV2",
+                                            "connectionName": "shared_office365"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "else": {
+                                      "actions": {}
+                                    },
+                                    "runAfter": {
+                                      "HTTP_Trigger_Invoice_Logic_App": [
+                                        "Failed"
+                                      ]
+                                    }
+                                  },
+                                  "Insert_or_Replace_Entity_(V2)_-_Add_log_doc_status_change": {
+                                    "type": "OpenApiConnection",
+                                    "inputs": {
+                                      "parameters": {
+                                        "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{variables('SiteNumber')}",
+                                        "RowKey": "@formatDateTime(utcNow(), 'HHmmss.fff')",
+                                        "storageAccountName": "AccountNameFromSettings",
+                                        "tableName": "EventHandlerLogs",
+                                        "entity": "@outputs('Compose_-_log_body_for_doc_status_change')"
+                                      },
+                                      "host": {
+                                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                                        "operationId": "InsertReplaceEntity_V2",
+                                        "connectionName": "shared_azuretables"
+                                      }
+                                    },
+                                    "runAfter": {
+                                      "Compose_-_log_body_for_doc_status_change": [
+                                        "Succeeded"
+                                      ]
+                                    }
+                                  },
+                                  "Insert_or_Replace_Entity_(V2)_-_Add_log_for_logic_app": {
+                                    "type": "OpenApiConnection",
+                                    "inputs": {
+                                      "parameters": {
+                                        "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{variables('SiteNumber')}",
+                                        "RowKey": "@formatDateTime(utcNow(), 'HHmmss.fff')",
+                                        "storageAccountName": "AccountNameFromSettings",
+                                        "tableName": "EventHandlerLogs",
+                                        "entity": "@outputs('Compose_-_log_for_logic_app')"
+                                      },
+                                      "host": {
+                                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                                        "operationId": "InsertReplaceEntity_V2",
+                                        "connectionName": "shared_azuretables"
+                                      }
+                                    },
+                                    "runAfter": {
+                                      "Compose_-_log_for_logic_app": [
+                                        "Succeeded"
+                                      ]
+                                    }
+                                  }
+                                },
+                                "else": {
+                                  "actions": {
+                                    "Compose_-_log_for_same_doc_status": {
+                                      "type": "Compose",
+                                      "inputs": {
+                                        "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{variables('SiteNumber')}",
+                                        "RowKey": "@{formatDateTime(utcNow(), 'HHmmss.fff')}",
+                                        "SiteNumber": "@{variables('SiteNumber')}",
+                                        "FlowRunId": "@{workflow()?['run']?['name']}",
+                                        "Source": "@{workflow()?['tags']?['flowDisplayName']}",
+                                        "LogLevel": "Info",
+                                        "Message": "No Doc Status Change for '@{variables('ItemTitle')}', will not process for invoicing."
+                                      }
+                                    },
+                                    "Insert_or_Replace_Entity_(V2)_-_same_doc_status": {
+                                      "type": "OpenApiConnection",
+                                      "inputs": {
+                                        "parameters": {
+                                          "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{variables('SiteNumber')}",
+                                          "RowKey": "@formatDateTime(utcNow(), 'HHmmss.fff')",
+                                          "storageAccountName": "AccountNameFromSettings",
+                                          "tableName": "EventHandlerLogs",
+                                          "entity": "@outputs('Compose_-_log_for_same_doc_status')"
+                                        },
+                                        "host": {
+                                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                                          "operationId": "InsertReplaceEntity_V2",
+                                          "connectionName": "shared_azuretables"
+                                        }
+                                      },
+                                      "runAfter": {
+                                        "Compose_-_log_for_same_doc_status": [
+                                          "Succeeded"
+                                        ]
+                                      }
+                                    }
+                                  }
+                                },
+                                "runAfter": {
+                                  "Insert_or_Replace_Entity_(V2)_-_Add_log_for_previous_doc_version": [
+                                    "Succeeded"
+                                  ]
+                                }
+                              },
+                              "Compose_-_log_body_for_previous_doc_version_no": {
+                                "type": "Compose",
+                                "inputs": {
+                                  "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{variables('SiteNumber')}",
+                                  "RowKey": "@{formatDateTime(utcNow(), 'HHmmss.fff')}",
+                                  "SiteNumber": "@{variables('SiteNumber')}",
+                                  "FlowRunId": "@{workflow()?['run']?['name']}",
+                                  "Source": "@{workflow()?['tags']?['flowDisplayName']}",
+                                  "LogLevel": "Info",
+                                  "Message": "Found previous Doc Status '@{variables('LastDocStatus')}' for version '@{body('HTTP_GET_Item_History')?['fields']?['_UIVersionString']}' of '@{variables('ItemTitle')}'."
+                                },
+                                "runAfter": {
+                                  "Set_LastDocStatus": [
+                                    "Succeeded"
+                                  ]
+                                }
+                              },
+                              "Insert_or_Replace_Entity_(V2)_-_Add_log_for_previous_doc_version": {
+                                "type": "OpenApiConnection",
+                                "inputs": {
+                                  "parameters": {
+                                    "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{variables('SiteNumber')}",
+                                    "RowKey": "@formatDateTime(utcNow(), 'HHmmss.fff')",
+                                    "storageAccountName": "AccountNameFromSettings",
+                                    "tableName": "EventHandlerLogs",
+                                    "entity": "@outputs('Compose_-_log_body_for_previous_doc_version_no')"
+                                  },
+                                  "host": {
+                                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                                    "operationId": "InsertReplaceEntity_V2",
+                                    "connectionName": "shared_azuretables"
+                                  }
+                                },
+                                "runAfter": {
+                                  "Compose_-_log_body_for_previous_doc_version_no": [
+                                    "Succeeded"
+                                  ]
+                                }
+                              }
+                            }
+                          },
+                          "runAfter": {
+                            "Set_DocVersionNo": [
+                              "Succeeded"
+                            ]
+                          }
+                        },
+                        "Compose_-_log_for_Valid_doc_status": {
+                          "type": "Compose",
+                          "inputs": {
+                            "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{variables('SiteNumber')}",
+                            "RowKey": "@{formatDateTime(utcNow(), 'HHmmss.fff')}",
+                            "SiteNumber": "@{variables('SiteNumber')}",
+                            "FlowRunId": "@{workflow()?['run']?['name']}",
+                            "Source": "@{workflow()?['tags']?['flowDisplayName']}",
+                            "LogLevel": "Info",
+                            "Message": "Found current Doc Status '@{variables('DocStatus')}' for version '@{items('foreach_delta_item')?['fields']?['_UIVersionString']}' of '@{variables('ItemTitle')}'."
+                          }
+                        },
+                        "Insert_or_Replace_Entity_(V2)_-_Add_log_for_valid_doc_status": {
+                          "type": "OpenApiConnection",
+                          "inputs": {
+                            "parameters": {
+                              "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{variables('SiteNumber')}",
+                              "RowKey": "@formatDateTime(utcNow(), 'HHmmss.fff')",
+                              "storageAccountName": "AccountNameFromSettings",
+                              "tableName": "EventHandlerLogs",
+                              "entity": "@outputs('Compose_-_log_for_Valid_doc_status')"
+                            },
+                            "host": {
+                              "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                              "operationId": "InsertReplaceEntity_V2",
+                              "connectionName": "shared_azuretables"
+                            }
+                          },
+                          "runAfter": {
+                            "Compose_-_log_for_Valid_doc_status": [
+                              "Succeeded"
+                            ]
+                          }
+                        }
+                      },
+                      "else": {
+                        "actions": {
+                          "Compose_log_body_for_invalid_doc_status": {
+                            "type": "Compose",
+                            "inputs": {
+                              "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{variables('SiteNumber')}",
+                              "RowKey": "@{formatDateTime(utcNow(), 'HHmmss.fff')}",
+                              "SiteNumber": "@{variables('SiteNumber')}",
+                              "FlowRunId": "@{workflow()?['run']?['name']}",
+                              "Source": "@{workflow()?['tags']?['flowDisplayName']}",
+                              "LogLevel": "Info",
+                              "Message": "Current Doc Status '@{variables('DocStatus')}' for '@{variables('ItemTitle')}' not valid for invoicing, will not process."
+                            }
+                          },
+                          "Insert_or_Replace_Entity_(V2)_-_Add_log_for_invalid_doc_status": {
+                            "type": "OpenApiConnection",
+                            "inputs": {
+                              "parameters": {
+                                "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{variables('SiteNumber')}",
+                                "RowKey": "@formatDateTime(utcNow(), 'HHmmss.fff')",
+                                "storageAccountName": "AccountNameFromSettings",
+                                "tableName": "EventHandlerLogs",
+                                "entity": "@outputs('Compose_log_body_for_invalid_doc_status')"
+                              },
+                              "host": {
+                                "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                                "operationId": "InsertReplaceEntity_V2",
+                                "connectionName": "shared_azuretables"
+                              }
+                            },
+                            "runAfter": {
+                              "Compose_log_body_for_invalid_doc_status": [
+                                "Succeeded"
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      "runAfter": {
+                        "Insert_or_Replace_Entity_(V2)_-_Add_log_for_valid_title": [
+                          "Succeeded"
+                        ]
+                      }
+                    },
+                    "Compose_-_log_body_for_Valid_title": {
+                      "type": "Compose",
+                      "inputs": {
+                        "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{variables('SiteNumber')}",
+                        "RowKey": "@{formatDateTime(utcNow(), 'HHmmss.fff')}",
+                        "SiteNumber": "@{variables('SiteNumber')}",
+                        "FlowRunId": "@{workflow()?['run']?['name']}",
+                        "Source": "@{workflow()?['tags']?['flowDisplayName']}",
+                        "LogLevel": "Info",
+                        "Message": "Found valid title '@{variables('ItemTitle')}' for list item '@{items('foreach_delta_item')?['fields']?['id']}'."
+                      }
+                    },
+                    "Insert_or_Replace_Entity_(V2)_-_Add_log_for_valid_title": {
+                      "type": "OpenApiConnection",
+                      "inputs": {
+                        "parameters": {
+                          "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{variables('SiteNumber')}",
+                          "RowKey": "@formatDateTime(utcNow(), 'HHmmss.fff')",
+                          "storageAccountName": "AccountNameFromSettings",
+                          "tableName": "EventHandlerLogs",
+                          "entity": "@outputs('Compose_-_log_body_for_Valid_title')"
+                        },
+                        "host": {
+                          "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                          "operationId": "InsertReplaceEntity_V2",
+                          "connectionName": "shared_azuretables"
+                        }
+                      },
+                      "runAfter": {
+                        "Compose_-_log_body_for_Valid_title": [
+                          "Succeeded"
+                        ]
+                      }
+                    }
+                  },
+                  "else": {
+                    "actions": {
+                      "Compose_Info_title_logs": {
+                        "type": "Compose",
+                        "inputs": {
+                          "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{variables('SiteNumber')}",
+                          "RowKey": "@{formatDateTime(utcNow(), 'HHmmss.fff')}",
+                          "SiteNumber": "@{variables('SiteNumber')}",
+                          "FlowRunId": "@{workflow()?['run']?['name']}",
+                          "Source": "@{workflow()?['tags']?['flowDisplayName']}",
+                          "LogLevel": "Info",
+                          "Message": "Found invalid title '@{variables('ItemTitle')}' for list item '@{items('foreach_delta_item')?['fields']?['id']}', will not process for invoicing."
+                        }
+                      },
+                      "Insert_or_Replace_Entity_(V2)_-_Add_log_for_invalid_title": {
+                        "type": "OpenApiConnection",
+                        "inputs": {
+                          "parameters": {
+                            "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{variables('SiteNumber')}",
+                            "RowKey": "@formatDateTime(utcNow(), 'HHmmss.fff')",
+                            "storageAccountName": "AccountNameFromSettings",
+                            "tableName": "EventHandlerLogs",
+                            "entity": "@outputs('Compose_Info_title_logs')"
+                          },
+                          "host": {
+                            "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                            "operationId": "InsertReplaceEntity_V2",
+                            "connectionName": "shared_azuretables"
+                          }
+                        },
+                        "runAfter": {
+                          "Compose_Info_title_logs": [
+                            "Succeeded"
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "runAfter": {
+                    "Set_ExpectedItemTitle": [
+                      "Succeeded"
+                    ]
+                  }
+                },
+                "Set_ExpectedItemTitle": {
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "ExpectedItemTitle",
+                    "value": "@concat(\r\nbody('HTTP_GET_SiteId')?['name'],\r\n'REV',\r\nitems('foreach_delta_item')?['fields']?['Year'],\r\n' C',\r\nitems('foreach_delta_item')?['fields']?['Month'],\r\n'.xlsm'\r\n)"
+                  },
+                  "runAfter": {
+                    "Set_ItemTitle": [
+                      "Succeeded"
+                    ]
+                  }
+                },
+                "Compose_-_Processing_log_body": {
+                  "type": "Compose",
+                  "inputs": {
+                    "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{variables('SiteNumber')}",
+                    "RowKey": "@{formatDateTime(utcNow(), 'HHmmss.fff')}",
+                    "SiteNumber": "@{variables('SiteNumber')}",
+                    "FlowRunId": "@{workflow()?['run']?['name']}",
+                    "Source": "@{workflow()?['tags']?['flowDisplayName']}",
+                    "LogLevel": "Info",
+                    "Message": "Processing item '@{items('foreach_delta_item')?['fields']?['id']}' for list '@{variables('Resource')}'."
+                  }
+                },
+                "Insert_or_Replace_Entity_(V2)_-_Add_processing_log": {
+                  "type": "OpenApiConnection",
+                  "inputs": {
+                    "parameters": {
+                      "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{variables('SiteNumber')}",
+                      "RowKey": "@formatDateTime(utcNow(), 'HHmmss.fff')",
+                      "storageAccountName": "AccountNameFromSettings",
+                      "tableName": "EventHandlerLogs",
+                      "entity": "@outputs('Compose_-_Processing_log_body')"
+                    },
+                    "host": {
+                      "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                      "operationId": "InsertReplaceEntity_V2",
+                      "connectionName": "shared_azuretables"
+                    }
+                  },
+                  "runAfter": {
+                    "Compose_-_Processing_log_body": [
+                      "Succeeded"
+                    ]
+                  }
+                }
+              },
+              "runAfter": {
+                "Set_SiteUrl": [
+                  "Succeeded"
+                ],
+                "Set_SiteNumber_variable": [
+                  "Succeeded"
+                ]
+              }
+            },
+            "Set_SiteUrl": {
+              "type": "SetVariable",
+              "inputs": {
+                "name": "SiteUrl",
+                "value": "https://townepark.sharepoint.com@{items('Apply_to_each_[foreach_trigger_body_value]')?['siteUrl']}"
+              },
+              "runAfter": {
+                "Replace_Entity_(V2)_-_Update_delta_token_in_table": [
+                  "Succeeded"
+                ]
+              }
+            },
+            "For_each": {
+              "type": "Foreach",
+              "foreach": "@body('Get_entities_(V2)')?['value']",
+              "actions": {
+                "Set_deltaToken": {
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "deltaToken",
+                    "value": "@items('For_each')?['Token']"
+                  }
+                },
+                "Set_DeltaTokenPartitionKey": {
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "DeltaTokenPartitionKey",
+                    "value": "@items('For_each')?['PartitionKey']"
+                  }
+                }
+              },
+              "runAfter": {
+                "Get_entities_(V2)": [
+                  "Succeeded"
+                ]
+              }
+            },
+            "Set_SiteNumber_variable": {
+              "type": "SetVariable",
+              "inputs": {
+                "name": "SiteNumber",
+                "value": "@replace(items('Apply_to_each_[foreach_trigger_body_value]')?['siteUrl'], '/sites/', '')"
+              },
+              "runAfter": {
+                "Replace_Entity_(V2)_-_Update_delta_token_in_table": [
+                  "Succeeded"
+                ]
+              }
+            },
+            "Get_entities_(V2)": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "storageAccountName": "AccountNameFromSettings",
+                  "tableName": "DeltaTokens",
+                  "$filter": "RowKey eq '@{variables('Resource')}'"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                  "operationId": "GetEntities_V2",
+                  "connectionName": "shared_azuretables"
+                }
+              },
+              "runAfter": {
+                "Set_Resource": [
+                  "Succeeded"
+                ]
+              }
+            },
+            "Replace_Entity_(V2)_-_Update_delta_token_in_table": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "PartitionKey": "@variables('DeltaTokenPartitionKey')",
+                  "RowKey": "@body('Get_entities_(V2)')?['value']?[0]?['RowKey']",
+                  "storageAccountName": "AccountNameFromSettings",
+                  "tableName": "DeltaTokens",
+                  "If-Match": "*",
+                  "entity": "@outputs('Compose_-_Updated_body_for_delta_token')"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                  "operationId": "ReplaceEntity_V2",
+                  "connectionName": "shared_azuretables"
+                }
+              },
+              "runAfter": {
+                "Compose_-_Updated_body_for_delta_token": [
+                  "Succeeded"
+                ]
+              }
+            },
+            "Compose_-_Updated_body_for_delta_token": {
+              "type": "Compose",
+              "inputs": {
+                "PartitionKey": "@{body('Get_entities_(V2)')?['value']?[0]?['PartitionKey']}",
+                "RowKey": "@{body('Get_entities_(V2)')?['value']?[0]?['RowKey']}",
+                "Token": "@{variables('deltaToken')}"
+              },
+              "runAfter": {
+                "Update_deltaToken": [
+                  "Succeeded"
+                ]
+              }
+            },
+            "Compose_-_log_body_for_processing_changes_for_list": {
+              "type": "Compose",
+              "inputs": {
+                "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{replace(items('Apply_to_each_[foreach_trigger_body_value]')?['siteUrl'], '/sites/', '')}",
+                "RowKey": "@{formatDateTime(utcNow(), 'HHmmss.fff')}",
+                "SiteNumber": "@{replace(items('Apply_to_each_[foreach_trigger_body_value]')?['siteUrl'], '/sites/', '')}",
+                "FlowRunId": "@{workflow()?['run']?['name']}",
+                "Source": "@{workflow()?['tags']?['flowDisplayName']}",
+                "LogLevel": "Info",
+                "Message": "Processing '@{length(body('Filter_-_Delta_items_on_last_modified_date'))}' changes for list '@{variables('Resource')}'."
+              },
+              "runAfter": {
+                "Filter_-_Delta_items_on_last_modified_date": [
+                  "Succeeded"
+                ]
+              }
+            },
+            "Filter_-_Delta_items_on_last_modified_date": {
+              "type": "Query",
+              "inputs": {
+                "from": "@body('HTTP_GET_Items_Delta')?['value']",
+                "where": "@and(\r\n  not(empty(item()?['lastModifiedDateTime'])),\r\n  greaterOrEquals(\r\n    item()?['lastModifiedDateTime'], \r\n    addDays(utcNow(), mul(int(parameters('Minus Day (bs_MinusDay)')), -1))\r\n  )\r\n)"
+              },
+              "runAfter": {
+                "HTTP_GET_Items_Delta": [
+                  "Succeeded"
+                ]
+              }
+            },
+            "Insert_or_Replace_Entity_(V2)_-_Add_log_for_processing_list": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "parameters": {
+                  "PartitionKey": "@{formatDateTime(utcNow(), 'yyyyMMdd')}-@{formatDateTime(utcNow(), 'HHmmss')}-@{replace(items('Apply_to_each_[foreach_trigger_body_value]')?['siteUrl'], '/sites/', '')}",
+                  "RowKey": "@formatDateTime(utcNow(), 'HHmmss.fff')",
+                  "storageAccountName": "AccountNameFromSettings",
+                  "tableName": "EventHandlerLogs",
+                  "entity": "@outputs('Compose_-_log_body_for_processing_changes_for_list')"
+                },
+                "host": {
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_azuretables",
+                  "operationId": "InsertReplaceEntity_V2",
+                  "connectionName": "shared_azuretables"
+                }
+              },
+              "runAfter": {
+                "Compose_-_log_body_for_processing_changes_for_list": [
+                  "Succeeded"
+                ]
+              }
+            }
+          },
+          "runAfter": {
+            "Set_BearerToken": [
+              "Succeeded"
+            ]
+          }
+        },
+        "HTTP_Authenticate": {
+          "type": "Http",
+          "inputs": {
+            "uri": "https://login.microsoftonline.com/9454df09-bc28-486b-af85-64ca36c21d47/oauth2/v2.0/token",
+            "method": "POST",
+            "headers": {
+              "content-type": "application/x-www-form-urlencoded"
+            },
+            "body": "@concat(\r\n'grant_type=',\r\nencodeUriComponent('client_credentials'),\r\n'&client_id=',\r\nencodeUriComponent('64edd46c-4d95-4e0d-b1c2-e583260f7c4b'),\r\n'&client_secret=', \r\nencodeUriComponent('4cy8Q~nE_iK.-hgYDQud3rE0ep7oW7zqesiVKars'),\r\n'&scope=', \r\nencodeUriComponent('https://graph.microsoft.com/.default')\r\n)"
+          },
+          "runAfter": {
+            "Initialize_Resource": [
+              "Succeeded"
+            ],
+            "Initialize_deltaToken": [
+              "Succeeded"
+            ],
+            "Initialize_SiteId": [
+              "Succeeded"
+            ],
+            "Initialize_SiteUrl": [
+              "Succeeded"
+            ],
+            "Initialize_BearerToken": [
+              "Succeeded"
+            ],
+            "Initialize_DocVersionNo": [
+              "Succeeded"
+            ],
+            "Initialize_DocStatus": [
+              "Succeeded"
+            ],
+            "Initialize_LastDocStatus": [
+              "Succeeded"
+            ],
+            "Initialize_ItemTitle": [
+              "Succeeded"
+            ],
+            "Initialize_ExpectedItemTitle": [
+              "Succeeded"
+            ],
+            "Initialize_DeltaTokenPartitionKey": [
+              "Succeeded"
+            ],
+            "Initialize_SiteNumber_variable": [
+              "Succeeded"
+            ]
+          },
+          "runtimeConfiguration": {
+            "contentTransfer": {
+              "transferMode": "Chunked"
+            }
+          }
+        },
+        "Initialize_deltaToken": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "deltaToken",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {
+            "TriggerBodyHasValue": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Initialize_SiteId": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "SiteId",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {
+            "TriggerBodyHasValue": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Initialize_SiteUrl": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "SiteUrl",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {
+            "TriggerBodyHasValue": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Initialize_BearerToken": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "BearerToken",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {
+            "TriggerBodyHasValue": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Set_BearerToken": {
+          "type": "SetVariable",
+          "inputs": {
+            "name": "BearerToken",
+            "value": "@body('HTTP_Authenticate')['access_token']"
+          },
+          "runAfter": {
+            "HTTP_Authenticate": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Initialize_DocVersionNo": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "DocVersionNo",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {
+            "TriggerBodyHasValue": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Initialize_DocStatus": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "DocStatus",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {
+            "TriggerBodyHasValue": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Initialize_LastDocStatus": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "LastDocStatus",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {
+            "TriggerBodyHasValue": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Initialize_ItemTitle": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "ItemTitle",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {
+            "TriggerBodyHasValue": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Initialize_ExpectedItemTitle": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "ExpectedItemTitle",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {
+            "TriggerBodyHasValue": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Initialize_DeltaTokenPartitionKey": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "DeltaTokenPartitionKey",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {
+            "TriggerBodyHasValue": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Initialize_SiteNumber_variable": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "SiteNumber",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {
+            "TriggerBodyHasValue": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Return_Response": {
+          "type": "Response",
+          "kind": "Http",
+          "inputs": {
+            "statusCode": 200,
+            "headers": {
+              "content-type": "text/plain"
+            },
+            "body": "@triggerOutputs()?['queries']?['validationtoken']"
+          },
+          "runAfter": {}
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}
