@@ -2,9 +2,6 @@
 # Generated link cleanup script
 
 echo 'Broken links found in the following files:'
-echo '  docs\index.md:'
-echo '    Line 0: [Cyclical Documentation Transformation Protocol](Future_State_Data_Product/ai-prompts/Cyclical%20Documentation%20Transformation%20Protocol.md)'
-
 echo '  docs\Future_State_Data_Product\ai-prompts\Towne Park Documentation Transformation - Enhanced AI Prompt.md:'
 echo '    Line 0: [New System Document](Future_State_Data_Product/systems/billing/new-document.md)'
 echo '    Line 0: [New System Document](Future_State_Data_Product/systems/billing/new-document.md)'
@@ -27,6 +24,9 @@ echo '    Line 0: [PowerBill Overview](Future_State_Data_Product/systems/billing
 echo '  docs\Future_State_Data_Product\configuration\overview.md:'
 echo '    Line 0: [Customer Site Configuration](customer-sites/index.md)'
 echo '    Line 0: [Role-Based Permissions](../business-rules/user-access/role-based-permissions.md)'
+
+echo '  docs\Future_State_Data_Product\standards\broken-link-cleanup-strategy.md:'
+echo '    Line 0: [Document Name](relative/path/to/document.md)'
 
 echo '  docs\Future_State_Data_Product\standards\documentation-link-validation-process.md:'
 echo '    Line 0: [Document Name](relative/path/to/document.md)'
@@ -106,11 +106,6 @@ echo '    Line 0: [Onboarding Troubleshooting Guide](../../support/onboarding-tr
 echo '  docs\Future_State_Data_Product\technical\backend\20250718_Architecture_ALMStrategy_PowerPlatform.md:'
 echo '    Line 0: [Power Platform Licensing Analysis](../configuration/20250718_Architecture_LicensingAnalysis_PowerPlatform.md)'
 echo '    Line 0: [Architecture Team Meeting Notes](../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync.md)'
-
-echo '  docs\Future_State_Data_Product\technical\backend\20250718_Development_AIIntegration_TechnicalSpec.md:'
-echo '    Line 0: [Code Validation Patterns](../../ai-prompts/Code%20Validation%20Patterns%20and%20Examples.md)'
-echo '    Line 0: [Cyclical Documentation Transformation Protocol](../../ai-prompts/Cyclical%20Documentation%20Transformation%20Protocol.md)'
-echo '    Line 0: [Enhanced AI Prompt](../../ai-prompts/Towne%20Park%20Documentation%20Transformation%20-%20Enhanced%20AI%20Prompt.md)'
 
 echo '  docs\Future_State_Data_Product\technical\database\20250716_Forecasting_BillableAccounts_TechnicalSpec.md:'
 echo '    Line 0: [PowerBill Integration Specifications](../integrations/powerbill-integration.md)'

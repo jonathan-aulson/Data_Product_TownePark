@@ -1,19 +1,14 @@
 # Documentation Link Validation Report
 
 ## Summary
-- **Total Links**: 1273
-- **Broken Links**: 202
-- **Valid Links**: 923
+- **Total Links**: 1481
+- **Broken Links**: 199
+- **Valid Links**: 1134
 - **External Links**: 90
 - **Planned Links**: 0
 - **Other Links**: 45
 
 ## Broken Links (High Priority)
-
-- **File**: `docs\index.md`
-  - **Line**: 0
-  - **Text**: Cyclical Documentation Transformation Protocol
-  - **URL**: `Future_State_Data_Product/ai-prompts/Cyclical%20Documentation%20Transformation%20Protocol.md`
 
 - **File**: `docs\Future_State_Data_Product\ai-prompts\Towne Park Documentation Transformation - Enhanced AI Prompt.md`
   - **Line**: 0
@@ -99,6 +94,11 @@
   - **Line**: 0
   - **Text**: Role-Based Permissions
   - **URL**: `../business-rules/user-access/role-based-permissions.md`
+
+- **File**: `docs\Future_State_Data_Product\standards\broken-link-cleanup-strategy.md`
+  - **Line**: 0
+  - **Text**: Document Name
+  - **URL**: `relative/path/to/document.md`
 
 - **File**: `docs\Future_State_Data_Product\standards\documentation-link-validation-process.md`
   - **Line**: 0
@@ -334,21 +334,6 @@
   - **Line**: 0
   - **Text**: Architecture Team Meeting Notes
   - **URL**: `../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync.md`
-
-- **File**: `docs\Future_State_Data_Product\technical\backend\20250718_Development_AIIntegration_TechnicalSpec.md`
-  - **Line**: 0
-  - **Text**: Code Validation Patterns
-  - **URL**: `../../ai-prompts/Code%20Validation%20Patterns%20and%20Examples.md`
-
-- **File**: `docs\Future_State_Data_Product\technical\backend\20250718_Development_AIIntegration_TechnicalSpec.md`
-  - **Line**: 0
-  - **Text**: Cyclical Documentation Transformation Protocol
-  - **URL**: `../../ai-prompts/Cyclical%20Documentation%20Transformation%20Protocol.md`
-
-- **File**: `docs\Future_State_Data_Product\technical\backend\20250718_Development_AIIntegration_TechnicalSpec.md`
-  - **Line**: 0
-  - **Text**: Enhanced AI Prompt
-  - **URL**: `../../ai-prompts/Towne%20Park%20Documentation%20Transformation%20-%20Enhanced%20AI%20Prompt.md`
 
 - **File**: `docs\Future_State_Data_Product\technical\database\20250716_Forecasting_BillableAccounts_TechnicalSpec.md`
   - **Line**: 0
@@ -1032,7 +1017,7 @@
 - `docs\index.md` → `Future_State_Data_Product/business-rules/contract-types/fixed-fee.md`
 - `docs\index.md` → `Future_State_Data_Product/technical/frontend/index.md`
 - `docs\index.md` → `Future_State_Data_Product/user-processes/account-manager/index.md`
-- ... and 913 more
+- ... and 1124 more
 
 ## External Links
 
