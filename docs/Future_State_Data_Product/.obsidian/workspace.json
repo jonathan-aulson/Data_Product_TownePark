@@ -198,6 +198,7 @@
   },
   "active": "8932d88eaf17e1f7",
   "lastOpenFiles": [
+    "business-rules/billing/overview.md",
     "systems/billing/powerbill-system-overview.md",
     "standards/index.md",
     "standards/data-quality-standards.md",
@@ -224,7 +225,6 @@
     "user-processes/contract-admin/20250718_Contracts_QueryExamples_UserReference.md",
     "technical/database/20250718_Contracts_DataDictionary_TechnicalSpec.md",
     "user-processes/account-manager/20250718_AccountManager_ForecastingMethodology_InterviewInsights.md",
-    "ai-prompts/Cyclical Documentation Transformation Protocol.md",
     "team-notes/AulsonJonathan-Notes/templates/daily_note_template",
     "team-notes/AulsonJonathan-Notes/templates",
     "technical/forecasting",
