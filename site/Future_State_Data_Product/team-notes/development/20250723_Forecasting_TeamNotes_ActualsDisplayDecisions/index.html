@@ -1,0 +1,8213 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Team notes documenting key decisions, discussions, and coordination activities from backlog grooming session focused on actuals display methodology across forecasting tabs">
+      
+      
+      
+        <link rel="canonical" href="http://example.org/Future_State_Data_Product/team-notes/development/20250723_Forecasting_TeamNotes_ActualsDisplayDecisions/">
+      
+      
+        <link rel="prev" href="../20250723_Development_TeamNotes_DailyScrumInsights/">
+      
+      
+        <link rel="next" href="../20250724_Forecasting_BacklogGrooming_ConsolidatedDecisions/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Towne Park Forecasting - Actuals Display Development Team Notes - Towne Park Data Product</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#towne-park-forecasting-actuals-display-development-team-notes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Towne Park Data Product" class="md-header__button md-logo" aria-label="Towne Park Data Product" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Towne Park Data Product
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Towne Park Forecasting - Actuals Display Development Team Notes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Documentation Overview
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../TP%20Product%20Roadmap/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  TP Product Roadmap
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../ai-prompts/Towne_Park_Comprehensive_AI_Documentation_Protocol.md" class="md-tabs__link">
+          
+  
+  
+  AI Prompts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../systems/billing/overview/" class="md-tabs__link">
+          
+  
+  
+  Systems
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../business-rules/contract-types/overview/" class="md-tabs__link">
+          
+  
+  
+  Business Rules
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../technical/overview/" class="md-tabs__link">
+          
+  
+  
+  Technical
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../user-processes/account-manager/" class="md-tabs__link">
+          
+  
+  
+  User Processes
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../configuration/contracts/contract-configuration-guide/" class="md-tabs__link">
+          
+  
+  
+  Configuration
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../AulsonJonathan-Notes/20250718_Architecture_TeamMeetingNotes_WeeklySync/" class="md-tabs__link">
+          
+  
+  
+  Team Notes
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Towne Park Data Product" class="md-nav__button md-logo" aria-label="Towne Park Data Product" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Towne Park Data Product
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Documentation Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../TP%20Product%20Roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TP Product Roadmap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AI Prompts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            AI Prompts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../ai-prompts/Towne_Park_Comprehensive_AI_Documentation_Protocol.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprehensive AI Documentation Protocol
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Systems
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Billing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Billing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/billing/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/billing/20250716_Billing_SystemOverview_PowerBill/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PowerBill System Overview
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/billing/powerbill-system-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PowerBill System Overview (Detailed)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/billing/architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/billing/integrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integrations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/billing/generate-invoices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Generate Invoices
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Forecasting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Forecasting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/forecasting/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/forecasting/20250718_Forecasting_SystemOverview_ComprehensiveMaster/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprehensive Master Overview
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/forecasting/20250716_Forecasting_SystemOverview_Discovery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Project Discovery
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/forecasting/20250716_Forecasting_SystemOverview_MasterArchitecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Master Architecture
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/forecasting/20250716_Forecasting_SystemOverview_Integrated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integrated System Overview
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/forecasting/20250716_Forecasting_PayrollForecasting_SystemOverview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Payroll Forecasting System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/forecasting/architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/forecasting/integrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integrations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Customer Sites
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Customer Sites
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/customer-sites/customer-site-directory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Customer Site Directory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/customer-sites/20250716_CustomerSites_SystemOverview_Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Customer Site Management System Overview
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Contracts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Contracts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../systems/contracts/20250716_Contracts_SystemOverview_PowerBill/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contract Management System Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Business Rules
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Business Rules
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Contract Types
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Contract Types
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/contract-types/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/contract-types/revenue-share/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Revenue Share
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/contract-types/fixed-fee/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fixed Fee
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/contract-types/per-labor-hour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Per Labor Hour
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/contract-types/management-agreement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Management Agreement
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Billing
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Billing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/billing/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/billing/invoice-calculation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Invoice Calculation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/billing/validation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Validation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/billing/bell-service-fee/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bell Service Fee
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/billing/20250724_Billing_RevenueShareContracts_BusinessRules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Revenue Share Contract Business Rules
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/billing/20250724_Billing_PerLaborHourContracts_BusinessRules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Per Labor Hour Contract Business Rules
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/billing/20250716_Billing_ROIAnalysis_SuccessMetrics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ROI Analysis & Success Metrics
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/billing/20250717_Billing_ROIAnalysis_PowerBillSuccessMetrics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PowerBill ROI Analysis & Success Metrics
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/billing/20250717_TownePark_CaseStudy_BillingSystemModernization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Billing System Modernization Case Study
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/billing/negative-invoice-gl-entity-mapping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Negative Invoice GL Entity Mapping
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/billing/management-fee-escalation-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Management Fee Escalation Rules
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/billing/pteb-escalation-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PTEB Escalation Rules
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/billing/20250723_RSS_FileValidation_BusinessRules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RSS File Validation Business Rules
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/billing/20250702_Billing_AccountValidation_BusinessRules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Account Validation Business Rules
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/billing/20250723_Billing_RevenueManagement_BusinessRules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Revenue Management Business Rules
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Forecasting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Forecasting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/forecasting/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/forecasting/20250718_Forecasting_BusinessRules_CalculationsAndValidations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Calculations and Validations
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/forecasting/20250718_Forecasting_BusinessRules_DevelopmentDecisions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Development Decisions
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/forecasting/20250716_Forecasting_BusinessRules_ProcessWorkflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Process Workflow
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/forecasting/20250716_Forecasting_BillableAccounts_BusinessRules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Billable Accounts Business Rules
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/forecasting/20250717_Forecasting_BusinessRules_Sprint26Features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sprint 26 Features Business Rules
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/forecasting/group-transient-logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Group Transient Logic
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/forecasting/payroll/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Payroll
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/forecasting/revenue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Revenue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/forecasting/statistics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Statistics
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/forecasting/20250723_Forecasting_ActualsDisplay_BusinessRules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Actuals Display Business Rules
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Approved"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/forecasting/20250723_Forecasting_StatisticsDisplay_BusinessRules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Statistics Display Business Rules
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/forecasting/20250702_Forecasting_JobCodeManagement_BusinessRules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Job Code Management Business Rules
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/forecasting/20250724_Forecasting_DataValidation_BusinessRules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Validation Business Rules
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/forecasting/20250724_ForecastingInputGranularity_BusinessRules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input Granularity Business Rules
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/forecasting/20250724_Claims_Forecasting_BusinessRules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Claims Forecasting Business Rules
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Contracts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Contracts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/contracts/20250716_Contracts_BusinessRules_Comprehensive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprehensive Business Rules
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/contracts/20250724_RevenueShare_ContractConfiguration_BusinessRules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Revenue Share Contract Configuration
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/contracts/20250724_FixedFee_ContractConfiguration_BusinessRules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fixed Fee Contract Configuration
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/contracts/20250724_ManagementAgreement_ContractConfiguration_BusinessRules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Management Agreement Contract Configuration
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/contracts/20250724_PerLaborHour_ContractConfiguration_BusinessRules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Per Labor Hour Contract Configuration
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/contracts/20250724_HybridContract_ContractConfiguration_BusinessRules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hybrid Contract Configuration
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/contracts/contract-escalation-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contract Escalation Rules
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/contracts/plh-rate-escalation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PLH Rate Escalation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/contracts/service-fee-escalation-eci/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Service Fee Escalation ECI
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Customer Sites
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            Customer Sites
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../business-rules/customer-sites/site-classification-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Site Classification Rules
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Technical
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Technical
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Technical Documentation Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Frontend
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Backend
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            Backend
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/backend/20250718_Architecture_ALMStrategy_PowerPlatform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ALM Strategy for Power Platform
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/backend/20250718_Development_AIIntegration_TechnicalSpec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI Integration Technical Spec
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/backend/20250723_AI_TechnicalSpec_SDLCIntegration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI SDLC Integration Technical Spec
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/backend/20250723_AI_ValidationReport_SDLCIntegration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI SDLC Integration Validation Report
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/backend/20250724_AI_Productivity_Tools_TechnicalSpec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI Productivity Tools Technical Specification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/backend/20250718_Forecasting_TechnicalArchitecture_APIDesign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Forecasting Technical Architecture & API Design
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/backend/20250716_Billing_TechnicalArchitecture_Development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Billing Architecture
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Database
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            Database
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/database/20250723_Database_TechnicalSpec_MigrationDataFlows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Migration and Data Flow Technical Specs
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/database/20250724_PayrollData_DatabaseQueries_TechnicalSpec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Payroll Data Database Queries Technical Specification
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/database/20250718_Forecasting_DatabaseIntegration_TechnicalSpec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Forecasting Database Integration
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/database/20250716_Forecasting_DataSources_TechnicalSpec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Forecasting Data Sources
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/database/20250716_Forecasting_BillableAccounts_TechnicalSpec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Billable Accounts Technical Spec
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/database/20250718_Contracts_DataDictionary_TechnicalSpec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contracts Data Dictionary Technical Spec
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/database/schema-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schema Design
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/database/contracts-data-schema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contracts Data Schema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/database/customer-sites-data-schema/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Customer Sites Data Schema
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_6" id="__nav_7_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Forecasting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            Forecasting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/forecasting/20250717_Forecasting_TechnicalSpec_Sprint26Features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sprint 26 Features Technical Spec
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/forecasting/20250718_Forecasting_BillableAccounts_TechnicalSpec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Billable Accounts Technical Spec
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/forecasting/20250723_Forecasting_JobGroups_TechnicalSpec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Job Groups Technical Specification
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/forecasting/20250702_Forecasting_DataIntegration_TechnicalSpec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Integration Technical Spec
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_7" id="__nav_7_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Operations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_7">
+            <span class="md-nav__icon md-icon"></span>
+            Operations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/operations/20250723_SystemAdministration_Operations_Procedures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Administration Operations Procedures
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_8" id="__nav_7_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Specifications
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_8">
+            <span class="md-nav__icon md-icon"></span>
+            Specifications
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/specifications/20250723_RSS_TechnicalSpec_TroubleshootingProcedures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RSS Troubleshooting Technical Spec
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/specifications/forecasting-pl-view-technical-spec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Forecasting P&L View Technical Spec
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/specifications/power-automate-retry-mechanisms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Power Automate Retry Mechanisms
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/specifications/sharepoint-delta-token-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SharePoint Delta Token Management
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_9" id="__nav_7_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Integrations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_9">
+            <span class="md-nav__icon md-icon"></span>
+            Integrations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/integrations/20250718_Architecture_IntegrationStrategy_HybridConnections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integration Strategy for Hybrid Connections
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/integrations/20250724_EDW_Integration_TechnicalSpec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    EDW Integration Technical Specification
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/integrations/great-plains-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Great Plains Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/integrations/billing-integrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Billing Integrations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/integrations/budget-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Budget Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/integrations/leads-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Leads Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical/integrations/legion-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Legion Integration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    User Processes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            User Processes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Account Manager
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            Account Manager
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/account-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/account-manager/20250718_Forecasting_UserProcesses_AccountManagerWorkflows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Forecasting User Processes
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/account-manager/20250718_AccountManager_ForecastingMethodology_InterviewInsights/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Forecasting Methodology Interview Insights
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/account-manager/20250716_Forecasting_DataTableEditing_UserProcess/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Table Editing Process
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/account-manager/20250716_Forecasting_StatisticsPagination_UserProcess/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Statistics Pagination Process
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/account-manager/20250723_Forecasting_ActualsDisplay_UserProcess/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Actuals Display User Process
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Approved"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Billing Admin
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            Billing Admin
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/billing-admin/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/billing-admin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Billing Admin Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/billing-admin/generate-invoices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Generate Invoices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/billing-admin/20250724_StatementManagement_UserProcess/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Statement Management User Process
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/billing-admin/20250723_RSS_TroubleshootingProcess_UserGuide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RSS Troubleshooting User Guide
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/billing-admin/customer-migration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Customer Migration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/billing-admin/20250702_Billing_AccountValidation_UserProcess/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Account Validation User Process
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/billing-admin/20250718_Billing_UATUserStories_ComprehensiveFeedback/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UAT User Stories Comprehensive Feedback
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Contract Admin
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_3">
+            <span class="md-nav__icon md-icon"></span>
+            Contract Admin
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/contract-admin/contract-setup-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contract Setup Workflow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/contract-admin/20250718_Contracts_QueryExamples_UserReference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contract Query Examples User Reference
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_4" id="__nav_8_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Development
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_4">
+            <span class="md-nav__icon md-icon"></span>
+            Development
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/development/20250723_Development_UserProcess_WorkflowStandards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Development Workflow Standards
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/development/20250723_AI_UserProcess_DevelopmentWorkflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI-Enhanced Development Workflow
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/development/20250723_SprintPlanning_ProcessGuide_AIAssisted/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI-Assisted Sprint Planning Process Guide
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/development/20250724_UAT_Methodology_UserProcess/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UAT Methodology User Process Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/development/20250724_Project_Management_Methodology_UserProcess/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Project Management Methodology User Process
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    District Manager
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_5">
+            <span class="md-nav__icon md-icon"></span>
+            District Manager
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/district-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/district-manager/20250723_DistrictManager_ForecastingWorkflow_UserGuide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Forecasting Workflow User Guide
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/district-manager/20250716_Forecasting_PilotRollout_ProcessWorkflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pilot & Rollout Process
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Forecasting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_6">
+            <span class="md-nav__icon md-icon"></span>
+            Forecasting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/forecasting/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/forecasting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Forecasting User Processes Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/forecasting/20250717_Forecasting_UserProcesses_Sprint26Features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sprint 26 Features User Processes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/forecasting/20250718_Forecasting_UserExperience_DesignDecisions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    User Experience Design Decisions
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/forecasting/20250723_Forecasting_UIDesign_UserExperienceStandards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UI Design User Experience Standards
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/forecasting/20250723_Forecasting_SystemDemo_ComprehensiveGuide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Demo Comprehensive Guide
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/forecasting/20250702_Forecasting_JobGroupManagement_UserProcess/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Job Group Management User Process
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_7" id="__nav_8_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Site Admin
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_7">
+            <span class="md-nav__icon md-icon"></span>
+            Site Admin
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-processes/site-admin/site-onboarding-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Site Onboarding Workflow
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Configuration
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Configuration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_1" id="__nav_9_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Contracts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_1">
+            <span class="md-nav__icon md-icon"></span>
+            Contracts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../configuration/contracts/contract-configuration-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contract Configuration Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../configuration/contracts/20250724_Billing_ContractConfiguration_SetupGuide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Revenue Share Contract Setup Guide
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../configuration/contracts/20250724_Billing_PerLaborHourConfiguration_SetupGuide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Per Labor Hour Contract Setup Guide
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Customer Sites
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            Customer Sites
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../configuration/customer-sites/site-setup-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Site Setup Configuration
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../configuration/contract-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contract Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_4" id="__nav_9_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    User Access
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_4">
+            <span class="md-nav__icon md-icon"></span>
+            User Access
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../configuration/user-access/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../configuration/user-access/role-based-permissions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Role-Based Permissions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_9_5" id="__nav_9_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    System Settings
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9_5">
+            <span class="md-nav__icon md-icon"></span>
+            System Settings
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../configuration/system-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../configuration/system-settings/system-configuration-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Configuration Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../configuration/system-settings/20250718_Architecture_LicensingAnalysis_PowerPlatform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Power Platform Licensing Analysis
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../configuration/system-settings/20250716_Development_ConfigurationGuide_Standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Development Standards
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../configuration/system-settings/20250718_Development_Standards_ComprehensiveGuide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comprehensive Development Standards
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../configuration/system-settings/20250718_Development_DefinitionOfDone_ComprehensiveGuide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Definition of Done Comprehensive Guide
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../configuration/system-settings/20250718_Development_PRReview_ComprehensiveGuide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pull Request Review Guide
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../configuration/system-settings/20250723_AI_ConfigurationGuide_SDLCIntegration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI SDLC Integration Configuration Guide
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../configuration/system-settings/20250723_AI_ConfigurationGuide_DevelopmentTools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI Development Tools Configuration Guide
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Team Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Team Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Jonathan Aulson Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            Jonathan Aulson Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AulsonJonathan-Notes/20250718_Architecture_TeamMeetingNotes_WeeklySync/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture Team Meeting Notes
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Development Team Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            Development Team Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20250723_Development_TeamNotes_DailyScrumInsights/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Daily Scrum Insights and Progress Tracking
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Forecasting Actuals Display Decisions
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Approved"></span>
+  
+
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Forecasting Actuals Display Decisions
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Approved"></span>
+  
+
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#meeting-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meeting Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Meeting Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attendees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attendees
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environmental-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environmental Context
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-decisions-made" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Decisions Made
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Decisions Made">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decision-d021-rates-tab-actuals-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision D021: Rates Tab Actuals Display
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decision-d022-other-expenses-current-month-split" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision D022: Other Expenses Current Month Split
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decision-d023-statistics-replacement-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision D023: Statistics Replacement Method
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-discussion-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Discussion Points
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical Discussion Points">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display-methodology-clarification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Display Methodology Clarification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-coding-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color Coding Standards
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issues-identified" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issues Identified
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Issues Identified">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-i013-hris-data-quality-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue I013: HRIS Data Quality Challenges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-inconsistency-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Inconsistency Concerns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-risk-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Risk Assessment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Project Risk Assessment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risk-r006-meeting-frequency-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk R006: Meeting Frequency Concerns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steering-committee-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steering Committee Preparation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steering Committee Preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#demo-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Demo Planning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hrisworkday-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      HRIS/Workday Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edw-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      EDW Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legion-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Legion Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-coordination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development Coordination
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Development Coordination">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ui-implementation-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      UI Implementation Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#action-items-and-follow-ups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Action Items and Follow-ups
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Action Items and Follow-ups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#immediate-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Immediate Actions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medium-term-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Medium-term Actions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lessons-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lessons Learned
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lessons Learned">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decision-making-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision-Making Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-coordination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Coordination
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-meetings-and-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Meetings and Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Related Meetings and Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#previous-meetings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Previous Meetings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-meetings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Meetings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation References
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communication-and-stakeholder-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication and Stakeholder Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Communication and Stakeholder Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#internal-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internal Communication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Communication
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-assurance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Assurance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality Assurance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decision-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Validation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Document History
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-meeting-transcript-key-quotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appendix: Meeting Transcript Key Quotes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Appendix: Meeting Transcript Key Quotes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decision-clarification-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Clarification Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hris-data-quality-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      HRIS Data Quality Concerns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-risk-assessment_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Risk Assessment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20250724_Forecasting_BacklogGrooming_ConsolidatedDecisions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Forecasting Backlog Grooming Consolidated Decisions
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20250724_ForecastingSprintDemo_ConsolidatedTeamNotes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Forecasting Sprint Demo Consolidated Team Notes
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20250724_UAT_Planning_TeamNotes_BacklogGrooming/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UAT Planning Team Notes - Backlog Grooming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20250724_Sprint_Planning_TeamNotes_FinalStretch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sprint Planning Team Notes - Final Stretch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20250724_DailyScrum_TechnicalClarifications_TeamNotes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Daily Scrum Technical Clarifications Team Notes
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20250724_Forecasting_BacklogGrooming_TeamNotes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Forecasting Backlog Grooming Team Notes
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20250724_DailyScrum_DevelopmentProgress_TeamNotes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Daily Scrum Development Progress Team Notes
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20250723_DailyScrum_TechnicalIssues_ResolutionGuide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Daily Scrum Technical Issues Resolution Guide
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../20250718_Development_DailyScrum_TeamNotes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Daily Scrum Team Notes
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../20250718_Development_SprintPlanning_ProjectManagement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sprint Planning Project Management
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#meeting-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meeting Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Meeting Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attendees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attendees
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environmental-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environmental Context
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-decisions-made" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Decisions Made
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Decisions Made">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decision-d021-rates-tab-actuals-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision D021: Rates Tab Actuals Display
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decision-d022-other-expenses-current-month-split" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision D022: Other Expenses Current Month Split
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decision-d023-statistics-replacement-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision D023: Statistics Replacement Method
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#technical-discussion-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Discussion Points
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical Discussion Points">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display-methodology-clarification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Display Methodology Clarification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-coding-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color Coding Standards
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issues-identified" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issues Identified
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Issues Identified">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#issue-i013-hris-data-quality-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue I013: HRIS Data Quality Challenges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-inconsistency-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Inconsistency Concerns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-risk-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Risk Assessment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Project Risk Assessment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risk-r006-meeting-frequency-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk R006: Meeting Frequency Concerns
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steering-committee-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steering Committee Preparation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steering Committee Preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#demo-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Demo Planning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integration Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hrisworkday-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      HRIS/Workday Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edw-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      EDW Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#legion-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Legion Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-coordination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development Coordination
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Development Coordination">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ui-implementation-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      UI Implementation Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#action-items-and-follow-ups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Action Items and Follow-ups
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Action Items and Follow-ups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#immediate-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Immediate Actions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medium-term-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Medium-term Actions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lessons-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lessons Learned
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lessons Learned">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decision-making-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision-Making Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-coordination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team Coordination
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-meetings-and-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Meetings and Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Related Meetings and Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#previous-meetings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Previous Meetings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-meetings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Meetings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation References
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#communication-and-stakeholder-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication and Stakeholder Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Communication and Stakeholder Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#internal-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internal Communication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Communication
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-assurance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Assurance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality Assurance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decision-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Validation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#document-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Document History
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-meeting-transcript-key-quotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Appendix: Meeting Transcript Key Quotes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Appendix: Meeting Transcript Key Quotes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decision-clarification-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Clarification Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hris-data-quality-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      HRIS Data Quality Concerns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-risk-assessment_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Risk Assessment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="towne-park-forecasting-actuals-display-development-team-notes">Towne Park Forecasting - Actuals Display Development Team Notes</h1>
+<h2 id="meeting-overview">Meeting Overview</h2>
+<p><strong>Meeting Type</strong>: Backlog Grooming Session
+<strong>Date</strong>: 2025-06-23
+<strong>Duration</strong>: 42 minutes 25 seconds
+<strong>Primary Focus</strong>: Actuals display methodology across forecasting tabs</p>
+<h3 id="attendees">Attendees</h3>
+<ul>
+<li><strong>Adam Suarez</strong> - Product Owner (Present)</li>
+<li><strong>Jonathan Aulson</strong> - Business Analyst (Present)</li>
+<li><strong>Amy Sowells</strong> - (Absent - extreme heat conditions)</li>
+<li><strong>Mike Foy</strong> - (Absent - extreme heat conditions)</li>
+</ul>
+<h3 id="environmental-context">Environmental Context</h3>
+<p>Meeting conducted during extreme heat wave (over 100°F), which impacted attendance and potentially team productivity. Adam noted significant heat conditions and planned indoor activities for the week.</p>
+<h2 id="key-decisions-made">Key Decisions Made</h2>
+<h3 id="decision-d021-rates-tab-actuals-display">Decision D021: Rates Tab Actuals Display</h3>
+<p><strong>Decision</strong>: Rates tab will show actuals in a second row below forecast/budget values
+<strong>Rationale</strong>: Enables easy comparison while preserving visibility of original forecast values
+<strong>Implementation</strong>: Addition method with blue for forecast, black for actuals
+<strong>Decision Authority</strong>: Adam Suarez (Product Owner)
+<strong>Status</strong>: Approved
+<strong>Impact</strong>: Affects UI design and data presentation logic for rates functionality</p>
+<h3 id="decision-d022-other-expenses-current-month-split">Decision D022: Other Expenses Current Month Split</h3>
+<p><strong>Decision</strong>: Other expenses will show split display for current month only
+<strong>Rationale</strong>: Focuses attention on current performance while reducing visual complexity for historical data
+<strong>Implementation</strong>: Second row display for current month, forecast-only for historical months
+<strong>Decision Authority</strong>: Adam Suarez (Product Owner)
+<strong>Status</strong>: Approved
+<strong>Impact</strong>: Requires conditional display logic based on data period</p>
+<h3 id="decision-d023-statistics-replacement-method">Decision D023: Statistics Replacement Method</h3>
+<p><strong>Decision</strong>: Statistics tab will replace forecast values with actuals when available
+<strong>Rationale</strong>: Volume metrics are more meaningful as actual values, provides cleaner display
+<strong>Implementation</strong>: Replacement method with black for actuals, blue for forecast fallback
+<strong>Decision Authority</strong>: Adam Suarez (Product Owner)
+<strong>Status</strong>: Approved
+<strong>Impact</strong>: Simplifies statistics display while maintaining data integrity</p>
+<h2 id="technical-discussion-points">Technical Discussion Points</h2>
+<h3 id="display-methodology-clarification">Display Methodology Clarification</h3>
+<p>Initial confusion was quickly resolved regarding display approaches:
+- <strong>Jonathan</strong>: "We want to show actuals, kind of replacing the values... Oh no. Actually, I take that back. I think on one of the tabs. Actually I think we said we did want it in addition."
+- <strong>Adam</strong>: "I think other expense was in addition, statistics was over, right?"
+- <strong>Jonathan</strong>: "Yeah. OK. Let me make sure I've got that."
+- <strong>Adam</strong>: "And I think rates rates was in addition as well."</p>
+<p>This exchange demonstrates the iterative nature of design decisions and the importance of clear documentation.</p>
+<h3 id="color-coding-standards">Color Coding Standards</h3>
+<p>Team established consistent color coding approach:
+- <strong>Blue</strong>: Forecast/budget data across all tabs
+- <strong>Black</strong>: Actuals data across all tabs
+- <strong>Consistency</strong>: Applied uniformly to reduce user confusion</p>
+<h2 id="issues-identified">Issues Identified</h2>
+<h3 id="issue-i013-hris-data-quality-challenges">Issue I013: HRIS Data Quality Challenges</h3>
+<p><strong>Description</strong>: Employee role transition tracking problems in HRIS/Workday integration
+<strong>Details</strong>: 
+- Difficulty determining when employees exit roles
+- Data shows entry but not exit from positions
+- Multiple cost center assignments with blank fields
+- Terminated employees appearing in security tables but not in reports</p>
+<p><strong>Jonathan's Analysis</strong>: "We just didn't have a way to, like, reliably understand when. When an employee was was not in a role like we can see when they kind of entered a role, but then it it they never left is kind of what the data made it appear."</p>
+<p><strong>Impact</strong>: Affects payroll forecasting accuracy and employee cost allocation
+<strong>Owner</strong>: HRIS Team
+<strong>Status</strong>: Open - requires investigation</p>
+<h3 id="data-inconsistency-concerns">Data Inconsistency Concerns</h3>
+<p><strong>Specific Issue</strong>: Employees with multiple cost centers showing blank fields
+<strong>Jonathan</strong>: "Right where an employee has more than one cost center, he's we've got these blanks so. I get. You know, I'm assuming we just are meant to take this data. For this row."
+<strong>Adam</strong>: "Yeah, I think that's the case."</p>
+<p><strong>Resolution Approach</strong>: Use available data row while documenting data quality concerns</p>
+<h2 id="project-risk-assessment">Project Risk Assessment</h2>
+<h3 id="risk-r006-meeting-frequency-concerns">Risk R006: Meeting Frequency Concerns</h3>
+<p><strong>Description</strong>: Current meeting frequency may be insufficient for project completion
+<strong>Adam's Concern</strong>: "So MM boy and I have like a one-on-one and I guess we were just talking about the project in general. I guess any, is there anything you guys are like? Concerned about? Maybe not as like a risk, but something that we think like there's a potential that we would need to meet on more frequently to finish."</p>
+<p><strong>Risk Factors</strong>:
+- Timeline pressure for completion
+- Stakeholder availability challenges
+- Need for increased collaboration frequency
+- Guy (stakeholder) scheduling difficulties due to travel and acquisition activities</p>
+<p><strong>Mitigation</strong>: Monitor progress closely and adjust meeting frequency as needed</p>
+<h2 id="steering-committee-preparation">Steering Committee Preparation</h2>
+<h3 id="demo-planning">Demo Planning</h3>
+<p><strong>Jonathan's Plan</strong>: "I guess just to touch on it, we've got that steering committee meeting tomorrow. And I plan to give a demo. I'm gonna demo from the UAT site and just kind of go through these tabs and the P&amp;L and just kinda speak to where everything is at in terms of development."</p>
+<p><strong>Demo Scope</strong>:
+- UAT site demonstration
+- Review of all forecasting tabs
+- P&amp;L functionality overview
+- Development status update</p>
+<p><strong>Preparation Status</strong>: Jonathan prepared to lead demonstration with current development state</p>
+<h2 id="integration-considerations">Integration Considerations</h2>
+<h3 id="hrisworkday-integration">HRIS/Workday Integration</h3>
+<p><strong>Purpose</strong>: Employee data validation and role tracking
+<strong>Challenges</strong>: 
+- Role transition tracking gaps
+- Terminated employee data inconsistencies
+- Cost center assignment clarity</p>
+<p><strong>Action Items</strong>:
+- Investigate data quality issues with HRIS team
+- Establish clear data validation procedures
+- Document workarounds for known data limitations</p>
+<h3 id="edw-integration">EDW Integration</h3>
+<p><strong>Purpose</strong>: Actuals data source for all forecasting tabs
+<strong>Requirements</strong>:
+- Timely data refresh for current month actuals
+- Data quality validation procedures
+- Clear indication when actuals data is unavailable</p>
+<h3 id="legion-integration">Legion Integration</h3>
+<p><strong>Purpose</strong>: Scheduled hours data for payroll tab
+<strong>Considerations</strong>:
+- Integration with payroll cost calculations
+- Validation of scheduled vs. actual hours
+- Alignment with HRIS employee data</p>
+<h2 id="development-coordination">Development Coordination</h2>
+<h3 id="ui-implementation-requirements">UI Implementation Requirements</h3>
+<p>Based on decisions made, development team needs to implement:
+1. <strong>Conditional Display Logic</strong>: Different display methods per tab
+2. <strong>Color Coding Standards</strong>: Consistent visual indicators across tabs
+3. <strong>Data Source Integration</strong>: Multiple data sources with fallback logic
+4. <strong>Performance Optimization</strong>: Efficient rendering of dual-row displays</p>
+<h3 id="testing-considerations">Testing Considerations</h3>
+<ul>
+<li><strong>User Acceptance Testing</strong>: Validate display decisions with end users</li>
+<li><strong>Data Quality Testing</strong>: Ensure graceful handling of missing or inconsistent data</li>
+<li><strong>Performance Testing</strong>: Verify system performance with additional display complexity</li>
+<li><strong>Cross-Browser Testing</strong>: Ensure consistent display across different browsers</li>
+</ul>
+<h2 id="action-items-and-follow-ups">Action Items and Follow-ups</h2>
+<h3 id="immediate-actions">Immediate Actions</h3>
+<ol>
+<li><strong>Document Display Decisions</strong>: Formalize UI specifications based on meeting decisions</li>
+<li><strong>HRIS Data Investigation</strong>: Escalate data quality issues to appropriate teams</li>
+<li><strong>Steering Committee Demo</strong>: Prepare comprehensive demonstration for stakeholders</li>
+<li><strong>Development Planning</strong>: Update sprint planning to reflect display methodology decisions</li>
+</ol>
+<h3 id="medium-term-actions">Medium-term Actions</h3>
+<ol>
+<li><strong>User Training Preparation</strong>: Develop training materials for new display conventions</li>
+<li><strong>Data Quality Monitoring</strong>: Establish ongoing monitoring for HRIS data issues</li>
+<li><strong>Performance Monitoring</strong>: Track system performance impact of display changes</li>
+<li><strong>Stakeholder Feedback Collection</strong>: Gather feedback on display decisions post-implementation</li>
+</ol>
+<h2 id="lessons-learned">Lessons Learned</h2>
+<h3 id="decision-making-process">Decision-Making Process</h3>
+<ul>
+<li>Iterative discussion helps clarify complex UI decisions</li>
+<li>Visual examples and mockups would enhance decision-making efficiency</li>
+<li>Clear documentation prevents confusion about previous decisions</li>
+</ul>
+<h3 id="team-coordination">Team Coordination</h3>
+<ul>
+<li>Weather and environmental factors can impact team availability</li>
+<li>Remote meeting capabilities essential for business continuity</li>
+<li>Regular check-ins help identify project risks early</li>
+</ul>
+<h3 id="technical-considerations">Technical Considerations</h3>
+<ul>
+<li>Data quality issues can significantly impact feature development</li>
+<li>Integration complexity requires careful planning and testing</li>
+<li>User experience consistency across tabs is critical for adoption</li>
+</ul>
+<h2 id="related-meetings-and-documentation">Related Meetings and Documentation</h2>
+<h3 id="previous-meetings">Previous Meetings</h3>
+<ul>
+<li>Referenced previous week's discussion on actuals display methodology</li>
+<li>Built upon earlier decisions about variance display approaches</li>
+</ul>
+<h3 id="future-meetings">Future Meetings</h3>
+<ul>
+<li>Steering committee demonstration scheduled for following day</li>
+<li>Ongoing backlog grooming sessions planned</li>
+<li>Potential increase in meeting frequency based on project needs</li>
+</ul>
+<h3 id="documentation-references">Documentation References</h3>
+<ul>
+<li><a href="../../../business-rules/forecasting/20250723_Forecasting_ActualsDisplay_BusinessRules/">Forecasting Actuals Display Business Rules</a></li>
+<li><a href="../../../user-processes/account-manager/20250723_Forecasting_ActualsDisplay_UserProcess/">Forecasting Actuals Display User Process</a></li>
+<li><a href="../../../systems/forecasting/overview/">Forecasting System Overview</a></li>
+</ul>
+<h2 id="communication-and-stakeholder-management">Communication and Stakeholder Management</h2>
+<h3 id="internal-communication">Internal Communication</h3>
+<ul>
+<li>Clear documentation of decisions for development team</li>
+<li>Regular updates to stakeholders on progress and challenges</li>
+<li>Proactive identification and escalation of risks</li>
+</ul>
+<h3 id="external-communication">External Communication</h3>
+<ul>
+<li>Steering committee demonstration preparation</li>
+<li>User community preparation for display changes</li>
+<li>Training and change management planning</li>
+</ul>
+<h2 id="quality-assurance">Quality Assurance</h2>
+<h3 id="decision-validation">Decision Validation</h3>
+<ul>
+<li>Decisions documented with clear rationale</li>
+<li>Implementation approach specified for development team</li>
+<li>User impact considered and addressed</li>
+</ul>
+<h3 id="risk-management">Risk Management</h3>
+<ul>
+<li>Project risks identified and documented</li>
+<li>Mitigation strategies discussed</li>
+<li>Escalation paths established for unresolved issues</li>
+</ul>
+<h2 id="document-history">Document History</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>2025-07-23</td>
+<td>Documentation Team</td>
+<td>Initial transformation from meeting transcript 20250623_Forecasting_BacklogGrooming_Processed.md</td>
+</tr>
+</tbody>
+</table>
+<h2 id="appendix-meeting-transcript-key-quotes">Appendix: Meeting Transcript Key Quotes</h2>
+<h3 id="decision-clarification-process">Decision Clarification Process</h3>
+<blockquote>
+<p>"So I thought I wanted to. Kind of go back through some of these stuff we we talked about last week related to. Showing actuals and how we're gonna show variance. I just wanted to kind of recap everything." - Jonathan Aulson</p>
+</blockquote>
+<h3 id="hris-data-quality-concerns">HRIS Data Quality Concerns</h3>
+<blockquote>
+<p>"Yeah, that's that's like the. That was the piece that led us here from the last review. We were trying to work with was we just didn't have a way to, like, reliably understand when. When an employee was was not in a role like we can see when they kind of entered a role, but then it it they never left is kind of what the data made it appear." - Jonathan Aulson</p>
+</blockquote>
+<h3 id="project-risk-assessment_1">Project Risk Assessment</h3>
+<blockquote>
+<p>"So MM boy and I have like a one-on-one and I guess we were just talking about the project in general. I guess any, is there anything you guys are like? Concerned about? Maybe not as like a risk, but something that we think like there's a potential that we would need to meet on more frequently to finish." - Adam Suarez</p>
+</blockquote>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 24, 2025 21:50:14 UTC">July 24, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+        <script src="../../../../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

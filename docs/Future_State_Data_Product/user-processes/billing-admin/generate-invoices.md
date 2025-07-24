@@ -24,9 +24,8 @@ This document describes the process for generating invoices in the Towne Park bi
 
 ## Related Documents
 
-- [Billing System Overview](../../systems/billing/overview.md)
-- [Invoice Calculation](../../business-rules/billing/invoice-calculation.md)
+- [Billing System Overview](../../systems/billing/20250716_Billing_SystemOverview_PowerBill.md)
+
 ## Quick Links
 
-- [Billing System Overview](../../systems/billing/overview.md)
-- [Invoice Calculation](../../business-rules/billing/invoice-calculation.md)
+- [Billing System Overview](../../systems/billing/20250716_Billing_SystemOverview_PowerBill.md)

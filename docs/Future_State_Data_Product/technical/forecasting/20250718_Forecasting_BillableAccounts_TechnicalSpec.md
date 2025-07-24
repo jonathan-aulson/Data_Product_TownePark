@@ -816,15 +816,10 @@ describe('Performance Testing', () => {
 
 ## Related Documentation
 
-- [Forecasting Database Integration](../../database/20250718_Forecasting_DatabaseIntegration_TechnicalSpec.md) 🔄 PLANNED
-- [Forecasting Data Sources](../../database/20250716_Forecasting_DataSources_TechnicalSpec.md) 🔄 PLANNED
-- [Forecasting Data Integration](20250702_Forecasting_DataIntegration_TechnicalSpec.md) ✓ VERIFIED
-- [Billable Accounts Business Rules](../../business-rules/forecasting/20250716_Forecasting_BillableAccounts_BusinessRules.md) ✓ VERIFIED
-- [Billable Accounts Technical Spec](../../database/20250716_Forecasting_BillableAccounts_TechnicalSpec.md) 🔄 PLANNED
-- [Comprehensive Contract Business Rules](../../business-rules/contracts/20250716_Contracts_BusinessRules_Comprehensive.md) ✓ VERIFIED
-- [Development Standards](../../configuration/system-settings/20250718_Development_Standards_ComprehensiveGuide.md) ✓ VERIFIED
-- [AI Integration Technical Spec](../../backend/20250718_Development_AIIntegration_TechnicalSpec.md) 🔄 PLANNED
-- [Power Platform ALM Strategy](../../backend/20250718_Architecture_ALMStrategy_PowerPlatform.md) 🔄 PLANNED
+- [Forecasting Data Sources](../database/20250716_Forecasting_DataSources_TechnicalSpec.md)
+- [Billable Accounts Business Rules](../../business-rules/forecasting/20250716_Forecasting_BillableAccounts_BusinessRules.md)
+- [Comprehensive Contract Business Rules](../../business-rules/contracts/20250716_Contracts_BusinessRules_Comprehensive.md)
+- [Development Standards](../../configuration/system-settings/20250718_Development_Standards_ComprehensiveGuide.md)
 
 ## Code Validation Report
 
@@ -866,7 +861,6 @@ The billable accounts technical specification provides a comprehensive and techn
 This comprehensive technical specification provides the foundation for implementing sophisticated billable accounts functionality while maintaining system performance, reliability, and maintainability.
 ## Quick Links
 
-- [Forecasting Data Integration](20250702_Forecasting_DataIntegration_TechnicalSpec.md)
 - [Billable Accounts Business Rules](../../business-rules/forecasting/20250716_Forecasting_BillableAccounts_BusinessRules.md)
 - [Comprehensive Contract Business Rules](../../business-rules/contracts/20250716_Contracts_BusinessRules_Comprehensive.md)
 - [Development Standards](../../configuration/system-settings/20250718_Development_Standards_ComprehensiveGuide.md)

@@ -19,7 +19,6 @@ Primary users responsible for site-level forecasting and operational management.
 - [Forecasting Methodology Interview Insights](account-manager/20250718_AccountManager_ForecastingMethodology_InterviewInsights.md)
 - [Data Table Editing Process](account-manager/20250716_Forecasting_DataTableEditing_UserProcess.md)
 - [Statistics Pagination Process](account-manager/20250716_Forecasting_StatisticsPagination_UserProcess.md)
-- [Forecasting Workflow](account-manager/forecasting-workflow.md)
 
 **Responsibilities:**
 - Site-level forecasting and analysis
@@ -35,9 +34,6 @@ Users responsible for billing operations, invoice management, and account admini
 - [UAT User Stories Comprehensive Feedback](billing-admin/20250718_Billing_UATUserStories_ComprehensiveFeedback.md)
 - [Account Validation User Process](billing-admin/20250702_Billing_AccountValidation_UserProcess.md)
 - [Generate Invoices](billing-admin/generate-invoices.md)
-- [Acquisition Integration](billing-admin/acquisition-integration.md)
-- [PowerBill User Guide](billing-admin/powerbill-user-guide.md)
-- [Billing Workflows](billing-admin/billing-workflows.md)
 
 **Responsibilities:**
 - Invoice generation and processing
@@ -51,7 +47,6 @@ Regional managers overseeing multiple sites and Account Managers.
 
 **Key Processes:**
 - [Forecasting Pilot & Rollout Process](district-manager/20250716_Forecasting_PilotRollout_ProcessWorkflow.md)
-- [Forecasting Review](district-manager/forecasting-review.md)
 
 **Responsibilities:**
 - Regional forecasting oversight
@@ -64,7 +59,6 @@ Regional managers overseeing multiple sites and Account Managers.
 Users responsible for contract management and configuration.
 
 **Key Processes:**
-- [Contract Setup Workflow](contract-admin/contract-setup-workflow.md)
 - [Contract Query Examples User Reference](contract-admin/20250718_Contracts_QueryExamples_UserReference.md)
 
 **Responsibilities:**
@@ -79,7 +73,6 @@ Users responsible for site-level administration and configuration.
 
 **Key Processes:**
 - [Site Onboarding Workflow](site-admin/site-onboarding-workflow.md)
-- [Contact Management Procedures](site-admin/contact-management-procedures.md)
 
 **Responsibilities:**
 - Site setup and configuration
@@ -94,7 +87,6 @@ Cross-functional forecasting processes and user experience design.
 **Key Processes:**
 - [User Experience Design Decisions](forecasting/20250718_Forecasting_UserExperience_DesignDecisions.md)
 - [Sprint 26 Features User Processes](forecasting/20250717_Forecasting_UserProcesses_Sprint26Features.md)
-- [Job Group Management User Process](forecasting/20250702_Forecasting_JobGroupManagement_UserProcess.md)
 
 ## Process Categories
 

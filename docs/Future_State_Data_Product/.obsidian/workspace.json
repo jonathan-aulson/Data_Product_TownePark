@@ -45,14 +45,44 @@
             "id": "8932d88eaf17e1f7",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "2025-07-21.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2025-07-21"
+            }
+          },
+          {
+            "id": "2d92f8c032b4558d",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Untitled 1.canvas",
+                "viewState": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 0
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Untitled 1"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -109,7 +139,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "eb64b48c5704e542",
@@ -183,8 +214,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -196,39 +226,45 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8932d88eaf17e1f7",
+  "active": "29a6b31cd98d66c5",
   "lastOpenFiles": [
-    "standards/broken_link_fix_report.md",
-    "standards/20250716_Transformation_Session_Log.md",
-    "standards/20250716_Contracts_CodeValidation_Analysis.md",
-    "business-rules/user-access/index.md",
-    "configuration/customer-sites/index.md",
-    "business-rules/user-access/role-based-permissions.md",
-    "business-rules/user-access",
-    "standards/broken-link-cleanup-strategy.md",
-    "standards/documentation-link-validation-process.md",
-    "user-processes/contract-admin/overview.md",
-    "user-processes/district-manager/overview.md",
-    "user-processes/account-manager/overview.md",
-    "business-rules/contracts/overview.md",
-    "systems/customer-sites/overview.md",
-    "systems/contracts/overview.md",
-    "configuration/overview.md",
-    "user-processes/billing-admin/overview.md",
-    "technical/overview.md",
-    "user-processes/forecasting/overview.md",
-    "business-rules/billing/overview.md",
-    "systems/billing/powerbill-system-overview.md",
-    "standards/index.md",
-    "standards/data-quality-standards.md",
+    "configuration/system-settings/20250724_Forecasting_SystemConfiguration.md",
+    "business-rules/security/ai-development-security.md",
+    "business-rules/security/development-security-standards.md",
+    "business-rules/security",
+    "business-rules/development/code-quality-standards.md",
+    "business-rules/development/ai-tool-usage-policies.md",
+    "business-rules/development",
+    "configuration/customer-sites/integration-configuration-guide.md",
+    "user-processes/site-admin/site-data-maintenance-procedures.md",
+    "technical/integration/customer-sites-forecasting-integration.md",
+    "technical/integration/customer-sites-billing-integration.md",
+    "technical/integration",
+    "configuration/customer-sites/territory-configuration-guide.md",
+    "user-processes/site-admin/contact-management-procedures.md",
+    "business-rules/customer-sites/contact-management-rules.md",
+    "business-rules/customer-sites/territory-assignment-rules.md",
+    "technical/integrations/sharepoint-dataverse-integration.md",
+    "technical/api/customer-sites-api-spec.md",
+    "technical/api",
+    "technical/integrations/great-plains-integration-spec.md",
+    "technical/backend/20250724_Billing_RevenueCalculation_TechnicalSpec.md",
+    "technical/architecture/sharepoint-integration-architecture.md",
+    "technical/architecture/power-platform-architecture.md",
+    "technical/architecture",
+    "systems/rss/rss-system-overview.md",
+    "systems/rss",
+    "standards/error-handling-guidelines.md",
+    "standards/data-synchronization-standards.md",
+    "technical/specifications/index.md",
+    "operations/monitoring-alerting-guide.md",
+    "operations",
+    "systems/forecasting/forecasting-system-overview.md",
+    "standards/system-resilience-guidelines.md",
     "standards",
-    "technical/integrations/great-plains-integration.md",
-    "business-rules/forecasting/index.md",
-    "business-rules/billing/index.md",
-    "business-rules/contracts/index.md",
-    "team-notes/AulsonJonathan-Notes/templates/daily_note_template",
-    "team-notes/AulsonJonathan-Notes/templates",
-    "technical/forecasting",
-    "user-processes/forecasting"
+    "technical/operations",
+    "team-notes/development",
+    "Untitled 1.canvas",
+    "Untitled.canvas"
   ]
 }

@@ -1068,12 +1068,12 @@ bs_totalduetoowner: =bs_profitamount - bs_totalduetotownepark
 
 ## Related Documentation
 
-- [Contract Management System Overview](../systems/contracts/20250716_Contracts_SystemOverview_PowerBill.md) 🔄 PLANNED
+- [Contract Management System Overview](../../systems/contracts/20250716_Contracts_SystemOverview_PowerBill.md) 🔄 PLANNED
 - [Comprehensive Contract Business Rules](../../business-rules/contracts/20250716_Contracts_BusinessRules_Comprehensive.md) ✓ VERIFIED
 - [Contract Escalation Rules](../../business-rules/contracts/contract-escalation-rules.md) ✓ VERIFIED
 - [Contracts Data Schema](contracts-data-schema.md) ✓ VERIFIED
 - [Billing Technical Architecture](../backend/20250716_Billing_TechnicalArchitecture_Development.md) ✓ VERIFIED
-- [PowerBill System Overview](../systems/billing/20250716_Billing_SystemOverview_PowerBill.md) 🔄 PLANNED
+- [PowerBill System Overview](../../systems/billing/20250716_Billing_SystemOverview_PowerBill.md)
 - [Contract Setup Workflow](../../user-processes/contract-admin/contract-setup-workflow.md) ✓ VERIFIED
 - [Contract Configuration Guide](../../configuration/contracts/contract-configuration-guide.md) ✓ VERIFIED
 

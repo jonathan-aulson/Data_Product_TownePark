@@ -1,0 +1,8 @@
+'title: "/*"'
+'description: "/*"'
+'created_date: yyyy'
+'last_updated_date: yyyy-mm-dd'
+'version: *.*'
+'author: "*"'
+'globs: ["/*", "/*"]'
+'tags: ["/*", "/*"]'
