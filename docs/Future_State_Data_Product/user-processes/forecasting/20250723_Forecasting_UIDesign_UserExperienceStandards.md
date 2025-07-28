@@ -324,7 +324,7 @@ Size Scale:
 ## Cross-References
 
 ### Related Documentation
-- [Statistics Display Business Rules](20250723_Forecasting_StatisticsDisplay_BusinessRules.md)
+- [Statistics Display Business Rules](../../business-rules/forecasting/20250723_Forecasting_StatisticsDisplay_BusinessRules.md)
 - [Forecasting User Experience Design Decisions](20250718_Forecasting_UserExperience_DesignDecisions.md)
 
 ### Integration Points

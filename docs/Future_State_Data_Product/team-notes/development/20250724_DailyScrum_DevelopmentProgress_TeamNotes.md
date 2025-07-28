@@ -375,17 +375,17 @@ Cesar requested enhanced documentation describing how system objects and compone
 
 ### Development Process Documentation
 - [Daily Scrum Technical Issues Resolution Guide](20250723_DailyScrum_TechnicalIssues_ResolutionGuide.md)
-- [Development Workflow Standards](../user-processes/development/20250723_Development_UserProcess_WorkflowStandards.md)
-- [Sprint Planning Process Guide](../user-processes/development/20250723_SprintPlanning_ProcessGuide_AIAssisted.md)
+- [Development Workflow Standards](../../user-processes/development/20250723_Development_UserProcess_WorkflowStandards.md)
+- [Sprint Planning Process Guide](20250723_SprintPlanning_ProcessGuide_AIAssisted.md)
 
 ### System Documentation
-- [Billing System Overview](../systems/billing/20250716_Billing_SystemOverview_PowerBill.md)
-- [Forecasting System Overview](../systems/forecasting/20250716_Forecasting_SystemOverview_Integrated.md)
-- [System Administration Operations Procedures](../technical/operations/20250723_SystemAdministration_Operations_Procedures.md)
+- [Billing System Overview](../../systems/billing/20250716_Billing_SystemOverview_PowerBill.md)
+- [Forecasting System Overview](../../systems/forecasting/20250716_Forecasting_SystemOverview_Integrated.md)
+- [System Administration Operations Procedures](../../technical/operations/20250723_SystemAdministration_Operations_Procedures.md)
 
 ### Technical Specifications
-- [Database Migration & Data Flows](../technical/database/20250723_Database_TechnicalSpec_MigrationDataFlows.md)
-- [Billing Technical Architecture](../technical/backend/20250716_Billing_TechnicalArchitecture_Development.md)
+- [Database Migration & Data Flows](../../technical/database/20250723_Database_TechnicalSpec_MigrationDataFlows.md)
+- [Billing Technical Architecture](../../technical/backend/20250716_Billing_TechnicalArchitecture_Development.md)
 
 ## Action Items and Next Steps
 

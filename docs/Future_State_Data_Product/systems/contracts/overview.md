@@ -210,7 +210,7 @@ The Contract Management System provides comprehensive contract lifecycle managem
 
 ## Related Documentation
 
-- [Contract Management Index](index.md) 🔄 PLANNED
+- [Contract Management Index](./index.md) 🔄 PLANNED
 - [Contract Types Overview](../../business-rules/contract-types/overview.md) ✓ VERIFIED
 - [Contract Business Rules](../../business-rules/contracts/index.md) ✓ VERIFIED
 - [Contract Configuration](../../configuration/contracts/index.md) 🔄 PLANNED

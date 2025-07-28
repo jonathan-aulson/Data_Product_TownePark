@@ -36,23 +36,23 @@ This section contains comprehensive configuration guides for user access managem
 ## Configuration Categories
 
 ### Role-Based Permissions
-- [Role-Based Permissions](role-based-permissions/)
+- [Role-Based Permissions](role-based-permissions.md)
 
 ## Related Documentation
 
 ### Business Rules
-- [User Access Business Rules](../../business-rules/user-access/)
+- [User Access Business Rules](../../business-rules/user-access/index.md)
 - [Security Business Rules](../../business-rules/security/)
 
 ### User Processes
-- [Account Manager User Processes](../../user-processes/account-manager/)
-- [Billing Admin User Processes](../../user-processes/billing-admin/)
-- [Contract Admin User Processes](../../user-processes/contract-admin/)
-- [District Manager User Processes](../../user-processes/district-manager/)
-- [Site Admin User Processes](../../user-processes/site-admin/)
+- [Account Manager User Processes](../../user-processes/account-manager/index.md)
+- [Billing Admin User Processes](../../user-processes/billing-admin/index.md)
+- [Contract Admin User Processes](../../user-processes/contract-admin/index.md)
+- [District Manager User Processes](../../user-processes/district-manager/index.md)
+- [Site Admin User Processes](../../user-processes/site-admin/index.md)
 
 ### System Configuration
-- [System Settings](../system-settings/)
+- [System Settings](../system-settings/index.md)
 
 ### Standards
 - [Security Standards](../../standards/)

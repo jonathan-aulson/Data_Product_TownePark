@@ -469,7 +469,7 @@ Design accommodates varying user expertise levels:
 
 ## Related Documentation
 
-- [Account Manager Forecasting Workflows](20250718_Forecasting_UserProcesses_AccountManagerWorkflows.md) 🔄 PLANNED
+- [Account Manager Forecasting Workflows](../account-manager/20250718_Forecasting_UserProcesses_AccountManagerWorkflows.md) ✓ VERIFIED
 - [Account Manager Forecasting Methodology](../account-manager/20250718_AccountManager_ForecastingMethodology_InterviewInsights.md) ✓ VERIFIED
 - [Forecasting System Overview](../../systems/forecasting/20250716_Forecasting_SystemOverview_Integrated.md) ✓ VERIFIED
 - [Forecasting Business Rules](../../business-rules/forecasting/20250718_Forecasting_BusinessRules_CalculationsAndValidations.md) ✓ VERIFIED

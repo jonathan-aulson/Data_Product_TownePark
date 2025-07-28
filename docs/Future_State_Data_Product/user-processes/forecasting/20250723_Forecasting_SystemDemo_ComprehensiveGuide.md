@@ -342,8 +342,8 @@ Address positive value convention and billable expense concept without creating 
 ## Cross-References
 
 ### Related Documentation
-- [Forecasting Job Groups Technical Specification](20250723_Forecasting_JobGroups_TechnicalSpec.md)
-- [District Manager Forecasting Workflow User Guide](20250723_DistrictManager_ForecastingWorkflow_UserGuide.md)
+- [Forecasting Job Groups Technical Specification](../../technical/forecasting/20250723_Forecasting_JobGroups_TechnicalSpec.md)
+- [District Manager Forecasting Workflow User Guide](../district-manager/20250723_DistrictManager_ForecastingWorkflow_UserGuide.md)
 
 ### Integration Points
 - **Legion System:** Payroll data integration and display

@@ -170,7 +170,7 @@ Customer Site Entity:
 ## Related Documentation
 
 - [Customer Site Directory](customer-site-directory.md) ✓ VERIFIED
-- [Territory Management Workflows](../user-processes/territory-admin/territory-management.md) 🔄 PLANNED
+- [Territory Management Workflows](../../user-processes/territory-admin/territory-management.md) 🔄 PLANNED
 - [Site Classification Rules](../../business-rules/customer-sites/site-classification-rules.md) ✓ VERIFIED
 - [Territory Assignment Rules](../../business-rules/customer-sites/territory-assignment-rules.md) 🔄 PLANNED
 - [Capacity Management Rules](../../business-rules/customer-sites/capacity-management-rules.md) 🔄 PLANNED

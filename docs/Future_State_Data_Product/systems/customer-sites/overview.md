@@ -210,7 +210,7 @@ The Customer Sites System provides comprehensive management capabilities for all
 
 ## Related Documentation
 
-- [Customer Sites Index](index.md) 🔄 PLANNED
+- [Customer Sites Index](./index.md) 🔄 PLANNED
 - [Customer Site Directory](customer-site-directory.md) ✓ VERIFIED
 - [Site Classification Rules](../../business-rules/customer-sites/site-classification-rules.md) ✓ VERIFIED
 - [Site Onboarding Workflow](../../user-processes/site-admin/site-onboarding-workflow.md) ✓ VERIFIED

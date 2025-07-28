@@ -46,8 +46,8 @@ The Contract Management System within Towne Park's PowerBill platform serves as 
 
 #### Rate Management Engine
 - **Billing Type Processing**: 
-  - [`126840000`](docs/Future_State_Data_Product/business-rules/contracts/billing-types.md:1) - Advanced billing
-  - [`126840001`](docs/Future_State_Data_Product/business-rules/contracts/billing-types.md:2) - Arrears billing
+  - [`126840000`](../../business-rules/contracts/billing-types.md:1) - Advanced billing
+  - [`126840001`](../../business-rules/contracts/billing-types.md:2) - Arrears billing
 - **Contract Type Support**:
   - Fixed Fee arrangements
   - Per Labor Hour (PLH) billing
@@ -174,8 +174,8 @@ The Contract Management System within Towne Park's PowerBill platform serves as 
 
 ## Related Documentation
 
-- [Contract Escalation Business Rules](../business-rules/contracts/contract-escalation-rules.md) 🔄 PLANNED
-- [Contract Data Schema Technical Specification](../technical/database/contracts-data-schema.md) 🔄 PLANNED
-- [Contract Setup User Process](../user-processes/contract-admin/contract-setup-workflow.md) 🔄 PLANNED
-- [Contract Configuration Guide](../configuration/contracts/contract-configuration-guide.md) 🔄 PLANNED
-- [Billing System Integration](../systems/billing/billing-system-integration.md) 🔄 PLANNED
+- [Contract Escalation Business Rules](../../business-rules/contracts/contract-escalation-rules.md) 🔄 PLANNED
+- [Contract Data Schema Technical Specification](../../technical/database/contracts-data-schema.md) 🔄 PLANNED
+- [Contract Setup User Process](../../user-processes/contract-admin/contract-setup-workflow.md) 🔄 PLANNED
+- [Contract Configuration Guide](../../configuration/contracts/contract-configuration-guide.md) 🔄 PLANNED
+- [Billing System Integration](../../systems/billing/billing-system-integration.md) 🔄 PLANNED

@@ -295,7 +295,7 @@ Context: [Insert meeting transcript excerpt]"
 ## Cross-References
 
 ### Related Documentation
-- [AI Development Tools Configuration Guide](20250723_AI_ConfigurationGuide_DevelopmentTools.md)
+- [AI Development Tools Configuration Guide](../../configuration/system-settings/20250723_AI_ConfigurationGuide_DevelopmentTools.md)
 - [Development Workflow Standards](20250723_Development_UserProcess_WorkflowStandards.md)
 
 ### Integration Points

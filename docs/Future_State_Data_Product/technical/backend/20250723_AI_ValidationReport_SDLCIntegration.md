@@ -296,8 +296,8 @@ The minor discrepancies identified (AI tool naming and context file structure) a
 - [AI Configuration Guide](../../configuration/system-settings/20250723_AI_ConfigurationGuide_SDLCIntegration.md) - ✅ 95% Validated
 
 ### Source Code References
-- [Towne Park Billing .clinerules](../../../Towne-Park-Billing-Source-Code/Towne%20Park%20Billing/.clinerules/) - Primary validation source
-- [Pull Request Review Guidelines](../../../Towne-Park-Billing-Source-Code/Towne%20Park%20Billing/.clinerules/pull-request-review-guidelines.md) - MCP integration validation
+- Towne Park Billing .clinerules - Primary validation source (see [External Code Repository Links](external-code-repository-links.md) for validation references)
+- Pull Request Review Guidelines - MCP integration validation (see [External Code Repository Links](external-code-repository-links.md) for validation references)
 
 ## Document History
 

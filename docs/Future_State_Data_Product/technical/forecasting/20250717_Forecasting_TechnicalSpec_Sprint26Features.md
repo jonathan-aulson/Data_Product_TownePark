@@ -26,9 +26,9 @@ This document provides comprehensive technical specifications for the forecastin
 **Validation Status**: ✅ **VALIDATED** against Power Platform implementation
 
 ### Validated Components
-- **Revenue Share Formula**: [`bs_revenuesharebypercent-FormulaDefinitions.yaml`](../../../Towne-Park-Billing-PA-Solution/BillingSystem/Formulas/bs_revenuesharebypercent-FormulaDefinitions.yaml:1)
-- **Per Occupied Room Workflow**: [`PerOccupiedRoomGenerationChildFlow`](../../../Towne-Park-Billing-PA-Solution/BillingSystem/Workflows/PerOccupiedRoomGenerationChildFlow20250224-E88DE41D-BAF2-EF11-BE21-6045BD096814.json:1)
-- **Revenue Sharing Workflow**: [`RevenueSharing20250325`](../../../Towne-Park-Billing-PA-Solution/BillingSystem/Workflows/RevenueSharing20250325-1B21C7C0-E609-F011-BAE3-000D3A5AC294.json:1)
+- **Revenue Share Formula**: `bs_revenuesharebypercent-FormulaDefinitions.yaml` (see [External Code Repository Links](../backend/external-code-repository-links.md) for validation references)
+- **Per Occupied Room Workflow**: `PerOccupiedRoomGenerationChildFlow` (see [External Code Repository Links](../backend/external-code-repository-links.md) for validation references)
+- **Revenue Sharing Workflow**: `RevenueSharing20250325` (see [External Code Repository Links](../backend/external-code-repository-links.md) for validation references)
 
 ## System Architecture
 
@@ -567,7 +567,7 @@ return {
 
 ### Revenue Share Formulas
 
-**Validated Implementation**: ✅ Matches [`bs_revenuesharebypercent-FormulaDefinitions.yaml`](../../../Towne-Park-Billing-PA-Solution/BillingSystem/Formulas/bs_revenuesharebypercent-FormulaDefinitions.yaml:1)
+**Validated Implementation**: ✅ Matches `bs_revenuesharebypercent-FormulaDefinitions.yaml` (see [External Code Repository Links](../backend/external-code-repository-links.md) for validation references)
 
 #### Owner Percentage Calculation
 ```yaml

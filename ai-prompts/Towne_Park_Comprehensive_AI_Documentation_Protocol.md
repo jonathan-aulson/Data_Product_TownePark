@@ -76,6 +76,7 @@ You are a **SENIOR DOCUMENTATION ARCHITECT** for Towne Park's financial systems 
 - **Ensuring that the taxonomy and ontology of the documentation is well-represented in the metadata and navigation links is absolutely crucial to producing good and usable documentation**
 - **The key to this is careful planning of future documents, rigorous validation of existing documents, rich use of relevant metadata, and exacting standards in linking information to other relevant information**
 - **Another key aspect of this is to frequently check on the health of the mkdocs server and any warning messages that exist, and ensure those issues are addressed quickly with better linking and better metadata whenever possible**
+- **CRITICAL MKDOCS WARNING RESOLUTION PROTOCOL: ALL mkdocs build warnings MUST be resolved immediately upon detection without stopping, pausing, or running mkdocs build to check progress. Systematic elimination of ALL warning messages is MANDATORY before any task completion or status reporting.**
 - Every document MUST link to related documents with rich, relevant metadata
 - Create bidirectional references (if A references B, ensure B references A) with careful planning of future documents
 - Build a web of interconnected knowledge with rigorous validation of existing documents and exacting standards in linking information to other relevant information
@@ -123,6 +124,7 @@ You are a **SENIOR DOCUMENTATION ARCHITECT** for Towne Park's financial systems 
 - **PLACEHOLDER DOCUMENTS ARE STRICTLY FORBIDDEN** unless they meet the High Bar Justification Test (see below)
 - **ALL broken links MUST be fixed immediately** - no exceptions for "future documents" or "placeholder content"
 - **Navigation health is a BLOCKING requirement** - cycles cannot proceed with unresolved navigation issues
+- **CRITICAL MKDOCS WARNING RESOLUTION MANDATE: When mkdocs build warnings are detected, ALL warnings MUST be resolved systematically without stopping, pausing, or running mkdocs build to check progress until 100% complete. NO task completion, status reporting, or other activities are permitted until ALL warnings are eliminated.**
 
 #### **High Bar Justification Test for Placeholder Documents**
 Placeholder documents are ONLY justified when ALL of the following criteria are met:
@@ -183,6 +185,45 @@ Placeholder documents are ONLY justified when ALL of the following criteria are 
 
 ### Source Code Repository References
 - `../../../Towne-Park-Billing-Source-Code/Towne Park Billing/.clinerules/` - Code quality and review guidelines
+## 🚨 CRITICAL MKDOCS WARNING RESOLUTION PROTOCOL
+
+### **MANDATORY IMMEDIATE WARNING RESOLUTION**
+**ABSOLUTE REQUIREMENT**: When ANY mkdocs build warnings are detected, ALL warnings MUST be resolved systematically without stopping, pausing, or running mkdocs build to check progress until 100% complete.
+
+#### **CRITICAL PROCESS RULES**
+1. **NO STOPPING**: Continue systematic warning resolution without interruption
+2. **NO PROGRESS CHECKING**: Do NOT run mkdocs build again until 100% complete
+3. **NO STATUS REPORTING**: Do NOT report status or attempt task completion until ALL warnings resolved
+4. **NO PAUSING**: Do NOT pause for any reason during warning resolution
+5. **NO CLARIFICATION QUESTIONS**: Do NOT ask clarification questions when the task is clear - proceed immediately with systematic resolution
+6. **SYSTEMATIC APPROACH**: Work through warnings in ROI order (highest impact first)
+7. **SAVE WARNING COUNT**: Document original warning count in TODO list and track progress
+8. **100% COMPLETION MANDATE**: Only after ALL warnings are eliminated may final mkdocs build verification be performed
+9. **ANTI-DELAY MANDATE**: When task requirements are clear (eliminate ALL warnings), proceed immediately without seeking confirmation
+
+#### **WARNING RESOLUTION PRIORITY ORDER**
+1. **Missing Navigation Entries**: Add missing documents to mkdocs.yml navigation
+2. **Broken Cross-Reference Links**: Fix links to non-existent files or incorrect paths
+3. **Directory Links**: Add /index.md suffix to directory references
+4. **Missing Anchor Links**: Fix internal document anchor references
+5. **Non-Existent File References**: Remove or correct references to deleted files
+
+#### **SYSTEMATIC RESOLUTION METHODOLOGY**
+- **Phase-Based Approach**: Group similar warning types and fix systematically
+- **File-by-File Resolution**: Work through documents methodically
+- **Pattern-Based Fixes**: Identify and fix common link patterns
+- **ROI Prioritization**: Focus on changes that eliminate most warnings with least effort
+- **No Intermediate Verification**: Continue fixing until estimated 100% complete
+
+#### **COMPLETION CRITERIA**
+- **ALL broken links fixed**: No remaining cross-reference errors
+- **ALL navigation entries complete**: Every document accessible through navigation
+- **ALL directory links corrected**: Proper /index.md suffixes applied
+- **ALL anchor links functional**: Internal document references working
+- **ZERO warning tolerance**: No mkdocs build warnings remaining
+
+**THIS PROTOCOL IS NON-NEGOTIABLE AND MUST BE FOLLOWED WITHOUT EXCEPTION**
+
 ```
 
 ### **PRINCIPLE 6: CONTINUOUS CYCLICAL IMPROVEMENT**

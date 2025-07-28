@@ -213,7 +213,7 @@ Current Implementation:
 - **Quality Assurance:** Difficult to verify correct revenue code mapping
 
 **Code Validation Status:**
-✅ **VALIDATED** - Revenue code storage confirmed in [`RevenueShare.tsx`](Towne-Park-Billing-Source-Code/Towne Park Billing/src/components/RevenueShare/RevenueShare.tsx:227-233)
+✅ **VALIDATED** - Revenue code storage confirmed in RevenueShare.tsx (external source code)
 - Revenue codes stored in `structure.revenueCodes` array
 - UI displays codes only when multiple threshold structures exist
 - **CONFIRMED:** Revenue codes NOT visible on invoices as documented
@@ -267,11 +267,11 @@ Current Implementation:
 ## Cross-References
 
 ### Related Documentation
-- [Revenue Management Business Rules](20250723_Billing_RevenueManagement_BusinessRules.md)
-- [System Administration Procedures](20250723_SystemAdministration_Operations_Procedures.md)
+- [Revenue Management Business Rules](../../business-rules/billing/20250723_Billing_RevenueManagement_BusinessRules.md)
+- [System Administration Procedures](../../technical/operations/20250723_SystemAdministration_Operations_Procedures.md)
 
 ### Code References
-- [`RevenueShare.tsx`](Towne-Park-Billing-Source-Code/Towne Park Billing/src/components/RevenueShare/RevenueShare.tsx) - Revenue code management
+- RevenueShare.tsx (external source code) - Revenue code management
 - Power Automate Flows - Invoice generation and data processing
 - Logic Apps - SharePoint integration and date processing
 

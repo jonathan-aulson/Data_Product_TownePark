@@ -55,24 +55,24 @@ This section contains comprehensive technical specifications for the forecasting
 ## Related Documentation
 
 ### Business Rules
-- [Forecasting Business Rules](../../business-rules/forecasting/)
+- [Forecasting Business Rules](../../business-rules/forecasting/index.md)
 
 ### User Processes
-- [Account Manager Forecasting Processes](../../user-processes/account-manager/)
-- [District Manager Forecasting Processes](../../user-processes/district-manager/)
-- [Forecasting User Processes](../../user-processes/forecasting/)
+- [Account Manager Forecasting Processes](../../user-processes/account-manager/index.md)
+- [District Manager Forecasting Processes](../../user-processes/district-manager/index.md)
+- [Forecasting User Processes](../../user-processes/forecasting/index.md)
 
 ### System Configuration
-- [Forecasting System Settings](../../configuration/system-settings/)
+- [Forecasting System Settings](../../configuration/system-settings/index.md)
 
 ### System Overview
-- [Forecasting Systems](../../systems/forecasting/)
+- [Forecasting Systems](../../systems/forecasting/index.md)
 
 ### Database Documentation
-- [Database Technical Specifications](../database/)
+- [Database Technical Specifications](../database/index.md)
 
 ### Integration Documentation
-- [Integration Technical Specifications](../integrations/)
+- [Integration Technical Specifications](../integrations/index.md)
 
 ## Architecture Overview
 

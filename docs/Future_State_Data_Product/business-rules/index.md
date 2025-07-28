@@ -17,7 +17,6 @@ Business rules governing billing operations, calculations, and processes.
 **Key Areas:**
 - [Invoice Calculation Rules](billing/invoice-calculation.md)
 - [Account Validation Rules](billing/20250702_Billing_AccountValidation_BusinessRules.md)
-- [ROI Analysis & Success Metrics](billing/20250716_Billing_ROIAnalysis_SuccessMetrics.md)
 - [PowerBill ROI Analysis](billing/20250717_Billing_ROIAnalysis_PowerBillSuccessMetrics.md)
 - [System Modernization Case Study](billing/20250717_TownePark_CaseStudy_BillingSystemModernization.md)
 
@@ -39,8 +38,6 @@ Business rules for forecasting operations, calculations, and data validation.
 - [Job Code Management](forecasting/20250702_Forecasting_JobCodeManagement_BusinessRules.md)
 - [Sprint 26 Features](forecasting/20250717_Forecasting_BusinessRules_Sprint26Features.md)
 - [Revenue Rules](forecasting/revenue.md)
-- [Payroll Rules](forecasting/payroll.md)
-- [Statistics Rules](forecasting/statistics.md)
 
 ### [Contract Management Rules](contracts/index.md)
 Business rules governing contract types, escalations, and management procedures.

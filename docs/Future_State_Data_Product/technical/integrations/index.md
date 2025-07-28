@@ -42,25 +42,25 @@ This section contains comprehensive technical specifications for all system inte
 ## Related Documentation
 
 ### Business Rules
-- [Billing Business Rules](../../business-rules/billing/)
-- [Forecasting Business Rules](../../business-rules/forecasting/)
+- [Billing Business Rules](../../business-rules/billing/index.md)
+- [Forecasting Business Rules](../../business-rules/forecasting/index.md)
 
 ### User Processes
-- [Billing Admin User Processes](../../user-processes/billing-admin/)
-- [Account Manager User Processes](../../user-processes/account-manager/)
+- [Billing Admin User Processes](../../user-processes/billing-admin/index.md)
+- [Account Manager User Processes](../../user-processes/account-manager/index.md)
 
 ### System Configuration
-- [System Settings](../../configuration/system-settings/)
-- [Contract Configuration](../../configuration/contracts/)
+- [System Settings](../../configuration/system-settings/index.md)
+- [Contract Configuration](../../configuration/contracts/contract-configuration-guide.md)
 
 ### Technical Specifications
-- [Backend Technical Specifications](../backend/)
-- [Database Technical Specifications](../database/)
-- [API Technical Specifications](../api/)
+- [Backend Technical Specifications](../backend/index.md)
+- [Database Technical Specifications](../database/index.md)
+- [API Technical Specifications](../api/customer-sites-api-spec.md)
 
 ### System Overview
-- [Billing Systems](../../systems/billing/)
-- [Forecasting Systems](../../systems/forecasting/)
+- [Billing Systems](../../systems/billing/index.md)
+- [Forecasting Systems](../../systems/forecasting/index.md)
 
 ## Integration Architecture
 

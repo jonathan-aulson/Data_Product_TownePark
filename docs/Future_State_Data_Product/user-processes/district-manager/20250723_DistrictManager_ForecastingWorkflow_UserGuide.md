@@ -321,8 +321,8 @@ District Manager Success Indicators:
 ## Cross-References
 
 ### Related Documentation
-- [Forecasting System Demo Comprehensive Guide](20250723_Forecasting_SystemDemo_ComprehensiveGuide.md)
-- [Forecasting Job Groups Technical Specification](20250723_Forecasting_JobGroups_TechnicalSpec.md)
+- [Forecasting System Demo Comprehensive Guide](../forecasting/20250723_Forecasting_SystemDemo_ComprehensiveGuide.md)
+- [Forecasting Job Groups Technical Specification](../../technical/forecasting/20250723_Forecasting_JobGroups_TechnicalSpec.md)
 
 ### Integration Points
 - **Account Manager Workflows:** Coordination and collaboration

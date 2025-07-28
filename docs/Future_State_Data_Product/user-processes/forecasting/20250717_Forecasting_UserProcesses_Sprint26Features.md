@@ -237,9 +237,9 @@ This document outlines the user workflows and processes for the forecasting func
 
 ## Related Documentation
 
-- [Forecasting Technical Specifications](../technical/forecasting/20250717_Forecasting_TechnicalSpec_Sprint26Features.md) 🔄 PLANNED
-- [Business Rules Documentation](../business-rules/forecasting/20250717_Forecasting_BusinessRules_Sprint26Features.md) 🔄 PLANNED
-- [System Integration Guide](../systems/forecasting/integration-guide.md) 🔄 PLANNED
-- [Data Management Processes](../data-management/forecasting-data-processes.md) 🔄 PLANNED
-- [Quality Assurance Procedures](../quality-assurance/forecasting-qa-procedures.md) 🔄 PLANNED
-- [Training Materials](../training/forecasting-user-training.md) 🔄 PLANNED
+- [Forecasting Technical Specifications](../../technical/forecasting/20250717_Forecasting_TechnicalSpec_Sprint26Features.md) ✓ VERIFIED
+- [Business Rules Documentation](../../business-rules/forecasting/20250717_Forecasting_BusinessRules_Sprint26Features.md) ✓ VERIFIED
+- [System Integration Guide](../../systems/forecasting/index.md) ✓ VERIFIED
+- [Forecasting System Overview](../../systems/forecasting/overview.md) ✓ VERIFIED
+- [Development Standards](../../configuration/system-settings/20250718_Development_Standards_ComprehensiveGuide.md) ✓ VERIFIED
+- [User Process Index](../index.md) ✓ VERIFIED

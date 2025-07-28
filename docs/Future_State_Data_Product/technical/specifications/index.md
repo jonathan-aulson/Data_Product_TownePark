@@ -41,8 +41,8 @@ This index provides a comprehensive catalog of all technical specifications with
 
 #### API Specifications
 - **[Customer Sites API](../api/customer-sites-api-spec.md)**: Customer site management API endpoints and data models
-- **[Billing API Specifications](../integrations/powerbill-integration.md#api-specifications)**: Comprehensive billing system API documentation
-- **[Forecasting API Specifications](forecasting-pl-view-technical-spec.md#api-integration)**: Forecasting system API endpoints
+- **[Billing API Specifications](../integrations/powerbill-integration.md)**: Comprehensive billing system API documentation
+- **[Forecasting API Specifications](forecasting-pl-view-technical-spec.md)**: Forecasting system API endpoints
 
 ### Application Specifications
 
@@ -71,26 +71,26 @@ This index provides a comprehensive catalog of all technical specifications with
 ### Security and Compliance Specifications
 
 #### Security Architecture
-- **[Authentication and Authorization](../security/authentication-authorization-spec.md)**: Identity management and access control specifications
-- **[Data Encryption Specifications](../security/data-encryption-spec.md)**: Encryption standards and key management
-- **[Audit and Compliance](../security/audit-compliance-spec.md)**: Audit trail and regulatory compliance specifications
+- **Authentication and Authorization**: Identity management and access control specifications (🔄 PLANNED)
+- **Data Encryption Specifications**: Encryption standards and key management (🔄 PLANNED)
+- **Audit and Compliance**: Audit trail and regulatory compliance specifications (🔄 PLANNED)
 
 #### Operational Security
-- **[Network Security Specifications](../security/network-security-spec.md)**: Network architecture and security controls
-- **[Backup and Recovery](../security/backup-recovery-spec.md)**: Data protection and disaster recovery specifications
+- **Network Security Specifications**: Network architecture and security controls (🔄 PLANNED)
+- **Backup and Recovery**: Data protection and disaster recovery specifications (🔄 PLANNED)
 - **[Monitoring and Alerting](../operations/20250723_SystemAdministration_Operations_Procedures.md)**: Security monitoring and incident response
 
 ### Performance and Scalability Specifications
 
 #### Performance Requirements
-- **[System Performance Guidelines](../../standards/system-resilience-guidelines.md#performance-specifications)**: Performance targets and optimization strategies
-- **[Load Testing Specifications](../testing/load-testing-spec.md)**: Performance testing requirements and procedures
-- **[Capacity Planning](../operations/capacity-planning-spec.md)**: Resource planning and scaling specifications
+- **[System Performance Guidelines](../../standards/system-resilience-guidelines.md)**: Performance targets and optimization strategies
+- **Load Testing Specifications**: Performance testing requirements and procedures (🔄 PLANNED)
+- **Capacity Planning**: Resource planning and scaling specifications (🔄 PLANNED)
 
 #### Scalability Patterns
-- **[Auto-scaling Specifications](../infrastructure/auto-scaling-spec.md)**: Automatic scaling patterns and triggers
-- **[Load Balancing](../infrastructure/load-balancing-spec.md)**: Traffic distribution and failover specifications
-- **[Caching Strategies](../infrastructure/caching-strategies-spec.md)**: Performance optimization through caching
+- **Auto-scaling Specifications**: Automatic scaling patterns and triggers (🔄 PLANNED)
+- **Load Balancing**: Traffic distribution and failover specifications (🔄 PLANNED)
+- **Caching Strategies**: Performance optimization through caching (🔄 PLANNED)
 
 ## Specification Templates and Standards
 
@@ -100,21 +100,21 @@ This index provides a comprehensive catalog of all technical specifications with
 - **[Integration Specification Template](templates/integration-spec-template.md)**: Template for system integration specifications
 
 ### Review and Approval Process
-- **[Specification Review Process](processes/specification-review-process.md)**: Peer review and approval workflow
-- **[Change Management](processes/specification-change-management.md)**: Version control and change tracking procedures
-- **[Quality Assurance](processes/specification-quality-assurance.md)**: Quality standards and validation procedures
+- **Specification Review Process**: Peer review and approval workflow (🔄 PLANNED)
+- **Change Management**: Version control and change tracking procedures (🔄 PLANNED)
+- **Quality Assurance**: Quality standards and validation procedures (🔄 PLANNED)
 
 ## Implementation Guidance
 
 ### Development Guidelines
-- **[Implementation Best Practices](guidelines/implementation-best-practices.md)**: Best practices for implementing technical specifications
-- **[Code Standards](guidelines/code-standards.md)**: Coding standards and conventions
-- **[Testing Requirements](guidelines/testing-requirements.md)**: Testing standards for specification implementation
+- **Implementation Best Practices**: Best practices for implementing technical specifications (🔄 PLANNED)
+- **Code Standards**: Coding standards and conventions (🔄 PLANNED)
+- **Testing Requirements**: Testing standards for specification implementation (🔄 PLANNED)
 
 ### Integration Patterns
-- **[Common Integration Patterns](patterns/common-integration-patterns.md)**: Reusable integration patterns and solutions
-- **[Error Handling Patterns](patterns/error-handling-patterns.md)**: Standard error handling and recovery patterns
-- **[Data Transformation Patterns](patterns/data-transformation-patterns.md)**: Common data mapping and transformation patterns
+- **Common Integration Patterns**: Reusable integration patterns and solutions (🔄 PLANNED)
+- **Error Handling Patterns**: Standard error handling and recovery patterns (🔄 PLANNED)
+- **Data Transformation Patterns**: Common data mapping and transformation patterns (🔄 PLANNED)
 
 ## Specification Status Tracking
 

@@ -4,11 +4,11 @@ This repository contains comprehensive documentation for Towne Park's data produ
 
 ## Documentation Structure
 
-- [Systems](systems/): System-level documentation
-- [Business Rules](business-rules/): Business logic and rules
-- [Technical](technical/): Technical specifications
-- [User Processes](user-processes/): End-user workflows
-- [Configuration](configuration/): System configuration guides
+- [Systems](systems/index.md): System-level documentation
+- [Business Rules](business-rules/index.md): Business logic and rules
+- [Technical](technical/index.md): Technical specifications
+- [User Processes](user-processes/index.md): End-user workflows
+- [Configuration](configuration/index.md): System configuration guides
 - [Glossary](./glossary.md): Terminology definitions
 ## Quick Links
 

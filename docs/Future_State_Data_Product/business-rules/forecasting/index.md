@@ -1,88 +1,75 @@
 ---
-title: "Forecasting Business Rules - Overview"
-description: "Comprehensive overview of business rules governing forecasting operations, calculations, and validations"
-created_date: 2025-07-24
-last_updated_date: 2025-07-24
+title: "Forecasting Business Rules"
+description: "Comprehensive business rules governing forecasting operations, calculations, and data validation for Towne Park financial systems"
+created_date: 2025-07-25
+last_updated_date: 2025-07-25
 version: 1.0
 status: Active
-owner: "Documentation Team"
+owner: "Business Analyst"
 systems:
   - Forecasting
 business_domains:
-  - Forecasting
-  - Revenue Calculation
-  - Payroll Expense
-  - Statistics
+  - Revenue Forecasting
+  - Payroll Forecasting
+  - Statistics Management
   - Data Validation
+  - P&L Analysis
+user_roles:
+  - Account Manager
+  - District Manager
+  - Corporate Finance
 tags:
-  - business-rules
   - forecasting
-  - overview
-  - navigation
+  - business-rules
+  - calculations
+  - validation
 ---
 
-# Forecasting Business Rules - Overview
+# Forecasting Business Rules
 
-This section contains comprehensive business rules that govern all aspects of the forecasting system, including calculations, validations, data display, and user access controls.
+## Overview
+
+This section contains comprehensive business rules that govern forecasting operations, calculations, and data validation for Towne Park's financial systems. These rules ensure consistency, accuracy, and compliance across all forecasting operations.
 
 ## Business Rules Categories
 
 ### Core Forecasting Rules
-- [Forecasting Business Rules - Process Workflow](20250716_Forecasting_BusinessRules_ProcessWorkflow.md)
-- [Forecasting Business Rules - Calculations and Validations](20250718_Forecasting_BusinessRules_CalculationsAndValidations.md)
-- [Forecasting Business Rules - Development Decisions](20250718_Forecasting_BusinessRules_DevelopmentDecisions.md)
+- [Calculations and Validations](20250718_Forecasting_BusinessRules_CalculationsAndValidations.md)
+- [Development Decisions](20250718_Forecasting_BusinessRules_DevelopmentDecisions.md)
+- [Process Workflow](20250716_Forecasting_BusinessRules_ProcessWorkflow.md)
 
-### Data Display and Access Rules
-- [Forecasting Actuals Display Business Rules](20250723_Forecasting_ActualsDisplay_BusinessRules.md)
-- [Forecasting Statistics Display Business Rules](20250723_Forecasting_StatisticsDisplay_BusinessRules.md)
+### Account Management Rules
+- [Billable Accounts Business Rules](20250716_Forecasting_BillableAccounts_BusinessRules.md)
+- [Job Code Management Business Rules](20250702_Forecasting_JobCodeManagement_BusinessRules.md)
+
+### Display and UI Rules
+- [Actuals Display Business Rules](20250723_Forecasting_ActualsDisplay_BusinessRules.md)
+- [Statistics Display Business Rules](20250723_Forecasting_StatisticsDisplay_BusinessRules.md)
 - [Payroll Data Display Business Rules](20250724_PayrollDataDisplay_BusinessRules.md)
 
-### Process and Validation Rules
-- [Forecasting Data Validation Business Rules](20250724_Forecasting_DataValidation_BusinessRules.md)
-- [Forecasting UAT Process Business Rules](20250724_Forecasting_UATProcess_BusinessRules.md)
-- [Forecasting Input Granularity Business Rules](20250724_ForecastingInputGranularity_BusinessRules.md)
+### Data Management Rules
+- [Data Validation Business Rules](20250724_Forecasting_DataValidation_BusinessRules.md)
+- [Input Granularity Business Rules](20250724_ForecastingInputGranularity_BusinessRules.md)
+
+### Process Rules
+- [Sprint 26 Features Business Rules](20250717_Forecasting_BusinessRules_Sprint26Features.md)
+- [UAT Process Business Rules](20250724_Forecasting_UATProcess_BusinessRules.md)
 - [Claims Forecasting Business Rules](20250724_Claims_Forecasting_BusinessRules.md)
 
-### Account and Job Management Rules
-- [Job Code Management Business Rules](20250702_Forecasting_JobCodeManagement_BusinessRules.md)
-- [Billable Accounts Business Rules](20250716_Forecasting_BillableAccounts_BusinessRules.md)
-- [Sprint 26 Features Business Rules](20250717_Forecasting_BusinessRules_Sprint26Features.md)
-
-### Legacy Categories
-- [Group Transient Logic](group-transient-logic/)
-- [Payroll Rules](payroll/)
-- [Revenue Rules](revenue/)
-- [Statistics Rules](statistics/)
+### Core Data Rules
+- [Revenue Rules](revenue.md)
 
 ## Related Documentation
 
-### Technical Specifications
-- [Forecasting Technical Specifications](../../technical/forecasting/)
+- [Forecasting System Overview](../../systems/forecasting/index.md)
+- [Technical Forecasting](../../technical/forecasting/index.md)
+- [Database Technical Specifications](../../technical/database/index.md)
+- [System Configuration](../../configuration/system-settings/index.md)
+- [User Processes](../../user-processes/forecasting/index.md)
 
-### User Processes
-- [Account Manager Forecasting Processes](../../user-processes/account-manager/)
-- [District Manager Forecasting Processes](../../user-processes/district-manager/)
-- [Forecasting User Processes](../../user-processes/forecasting/)
+## Quick Links
 
-### System Configuration
-- [Forecasting System Settings](../../configuration/system-settings/)
-
-### System Overview
-- [Forecasting Systems](../../systems/forecasting/)
-
-## Business Rule Compliance
-
-All forecasting business rules must comply with:
-- Data quality standards
-- Security requirements
-- Integration specifications
-- Performance guidelines
-- User access controls
-
-## Maintenance and Updates
-
-Business rules are reviewed and updated regularly to ensure:
-- Accuracy with system implementation
-- Compliance with business requirements
-- Integration with related systems
-- User experience optimization
+- [Forecasting System Architecture](../../systems/forecasting/overview.md)
+- [Account Manager Workflows](../../user-processes/account-manager/index.md)
+- [District Manager Processes](../../user-processes/district-manager/index.md)
+- [Technical Specifications](../../technical/forecasting/index.md)
