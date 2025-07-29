@@ -49,23 +49,23 @@ This section contains comprehensive configuration guides, system settings, and a
 - [Architecture Licensing Analysis - Power Platform](20250718_Architecture_LicensingAnalysis_PowerPlatform.md)
 
 ### System Configuration Overview
-- [System Configuration Overview](system-configuration-overview/)
+- [System Configuration Overview](system-configuration-overview/index.md)
 
 ## Related Documentation
 
 ### Business Rules
-- [Development Business Rules](../../business-rules/development/)
-- [Security Business Rules](../../business-rules/security/)
+- [Development Business Rules](../../business-rules/development/index.md)
+- [Security Business Rules](../../business-rules/security/index.md)
 
 ### User Processes
-- [Development User Processes](../../user-processes/development/)
+- [Development User Processes](../../user-processes/development/index.md)
 
 ### Technical Specifications
-- [Backend Technical Specifications](../../technical/backend/)
-- [Integration Technical Specifications](../../technical/integrations/)
+- [Backend Technical Specifications](../../technical/backend/index.md)
+- [Integration Technical Specifications](../../technical/integrations/index.md)
 
 ### Standards
-- [System Standards](../../standards/)
+- [System Standards](../../standards/index.md)
 
 ## Configuration Management
 

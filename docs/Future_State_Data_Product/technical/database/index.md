@@ -1,220 +1,245 @@
 ---
-title: "Database Technical Documentation"
-description: "Database architecture, schema design, integration patterns, and data management documentation for Towne Park financial systems"
+title: "Towne Park Database Technical Architecture - Overview"
+description: "Comprehensive overview of database architecture, data integration, forecasting database specifications, and contract data dictionary within the Towne Park ecosystem"
+created_date: 2025-07-28
+last_updated_date: 2025-07-28
+version: 1.0
+status: Active
+owner: "Documentation Team"
+systems:
+  - Database Architecture
+  - Data Integration
+  - Forecasting Database
+  - Contract Management
+components:
+  - Database Design
+  - Data Model
+  - Integration Layer
+business_domains:
+  - Database Management
+  - Data Integration
+  - Forecasting Data
+  - Contract Data
+user_roles:
+  - Database Administrator
+  - Data Architect
+  - Integration Specialist
+  - System Administrator
+tags:
+  - technical
+  - database
+  - data-integration
+  - forecasting
+  - contracts
 ---
 
-# Database Technical Documentation
+# Database Technical Architecture Overview
 
-## Overview
+## Purpose
 
-This section contains comprehensive database technical documentation covering architecture, schema design, integration patterns, and data management for all Towne Park financial systems.
+This section provides comprehensive technical documentation for database architecture, data integration, forecasting database specifications, and contract data management within the Towne Park ecosystem.
 
 ## Database Architecture
 
-### Core Database Systems
-- **Microsoft Dataverse**: Primary data platform for Power Platform applications
-- **Enterprise Data Warehouse (EDW)**: SQL Server-based central data repository
-- **Operational Databases**: System-specific databases for specialized functions
+### Core Database Components
+- **Primary Database Server** - SQL Server with Azure integration
+- **Data Warehouse** - Enterprise data warehouse for analytics and reporting
+- **Integration Database** - Staging and transformation database for data integration
+- **Backup and Recovery System** - Automated backup and disaster recovery
+- **Performance Monitoring** - Database performance and health monitoring
 
-### Data Architecture Overview
-```mermaid
-graph TB
-    A[Workday] --> B[EDW - Enterprise Data Warehouse]
-    C[Legion] --> B
-    D[Great Plains] --> B
-    E[Revenue Data] --> B
-    
-    B --> F[Dataverse - Forecasting]
-    B --> G[Dataverse - Billing]
-    
-    F --> H[Power BI]
-    G --> H
-    
-    I[Backup Systems] --> B
-    J[Archive Storage] --> B
-```
+### Database Technologies
+- **Primary Platform**: Microsoft SQL Server 2019+
+- **Cloud Integration**: Azure SQL Database and Azure SQL Managed Instance
+- **Data Warehouse**: Azure Synapse Analytics
+- **Integration Tools**: SQL Server Integration Services (SSIS)
+- **Monitoring**: SQL Server Management Studio, Azure Monitor
 
-## Technical Specifications
+## Data Model and Schema
 
-### [Forecasting Database Integration](20250718_Forecasting_DatabaseIntegration_TechnicalSpec.md)
-Comprehensive technical specification for forecasting system database integration.
+### Forecasting Database Integration
+- **[Forecasting Database Integration](20250718_Forecasting_DatabaseIntegration_TechnicalSpec.md)** - Comprehensive forecasting database specifications
+- **[Forecasting Data Integration](20250702_Forecasting_DataIntegration_TechnicalSpec.md)** - Data integration technical specifications
+- **[Billable Accounts Technical Spec](20250718_Forecasting_BillableAccounts_TechnicalSpec.md)** - Billable accounts database design
+- **[Payroll Data Database Queries](20250724_PayrollData_DatabaseQueries_TechnicalSpec.md)** - Payroll data query specifications
 
-**Key Areas:**
-- Database connectivity and optimization
-- Integration patterns and protocols
-- Performance tuning and optimization
-- Data synchronization mechanisms
-- Security and access control
+### Contract Data Management
+- **[Contracts Data Dictionary](20250718_Contracts_DataDictionary_TechnicalSpec.md)** - Comprehensive contract data dictionary
+- Contract entity relationships and data model
+- Contract type-specific data structures
+- Billing integration data mappings
+- Historical data preservation and archival
 
-### [Forecasting Data Sources](20250716_Forecasting_DataSources_TechnicalSpec.md)
-Technical specifications for forecasting system data sources and integration.
+### Core Data Entities
+- **Customer Sites** - Site information, location data, and operational details
+- **Contracts** - Contract details, terms, and billing configurations
+- **Billing Data** - Invoice information, payment records, and financial transactions
+- **Forecasting Data** - Revenue projections, statistical data, and performance metrics
+- **User Management** - User accounts, roles, and access permissions
 
-**Key Areas:**
-- Data source connectivity
-- ETL processes and data flows
-- Data transformation and validation
-- Real-time and batch processing
-- Error handling and recovery
+## Data Integration Architecture
 
-### [Contracts Data Dictionary](20250718_Contracts_DataDictionary_TechnicalSpec.md)
-Comprehensive data dictionary for contract management system.
+### Integration Patterns
+- **Real-time Integration** - Live data synchronization and updates
+- **Batch Processing** - Scheduled data extraction, transformation, and loading
+- **Event-Driven Integration** - Trigger-based data processing and updates
+- **API-Based Integration** - RESTful API data exchange and synchronization
+- **File-Based Integration** - Structured file import and export processes
 
-**Key Areas:**
-- Entity definitions and relationships
-- Data types and constraints
-- Business rules and validation
-- Index and performance optimization
-- Security and access patterns
+### Data Transformation
+- **ETL Processes** - Extract, Transform, Load operations
+- **Data Cleansing** - Data quality validation and correction
+- **Data Mapping** - Source-to-target data field mapping
+- **Business Rule Application** - Data transformation based on business logic
+- **Error Handling** - Data validation and error recovery procedures
 
-### [Billable Accounts Technical Specification](20250716_Forecasting_BillableAccounts_TechnicalSpec.md)
-Technical specification for billable accounts data management.
+### Integration Points
+- **[EDW Integration](../integrations/20250724_EDW_Integration_TechnicalSpec.md)** - Enterprise Data Warehouse connectivity
+- **PowerBill System Integration** - Billing system data synchronization
+- **Forecasting System Integration** - Forecasting data management and analytics
+- **External System Integration** - Third-party system data exchange
 
-**Key Areas:**
-- Data model and schema design
-- Integration with billing systems
-- Calculation and processing logic
-- Audit trail and compliance
-- Performance optimization
+## Database Performance and Optimization
 
-## Database Schema Design
+### Performance Monitoring
+- Query performance analysis and optimization
+- Index usage and optimization strategies
+- Resource utilization monitoring and alerting
+- Capacity planning and growth management
+- Performance baseline establishment and tracking
 
-### [Schema Design Principles](schema-design.md)
-Core principles and standards for database schema design.
+### Optimization Strategies
+- **Indexing Strategy** - Optimal index design and maintenance
+- **Query Optimization** - SQL query performance tuning
+- **Partitioning** - Table and index partitioning for large datasets
+- **Archival Strategy** - Historical data management and archival
+- **Caching** - Database and application-level caching strategies
 
-**Design Principles:**
-- Normalization and denormalization strategies
-- Performance optimization techniques
-- Security and access control patterns
-- Scalability and maintainability considerations
-
-### [Contracts Data Schema](contracts-data-schema.md)
-Detailed schema design for contract management data.
-
-**Schema Components:**
-- Contract entity definitions
-- Relationship mappings
-- Index optimization
-- Constraint definitions
-- Security models
-
-### [Customer Sites Data Schema](customer-sites-data-schema.md)
-Schema design for customer site management data.
-
-**Schema Components:**
-- Site entity definitions
-- Customer relationship mappings
-- Territory and location data
-- Operational configuration data
-- Integration touchpoints
-
-## Data Integration Patterns
-
-### Real-Time Integration
-- **Change Data Capture (CDC)**: Real-time data synchronization
-- **Event-Driven Architecture**: Asynchronous data processing
-- **API-Based Integration**: RESTful APIs for data exchange
-- **Message Queues**: Reliable message processing
-
-### Batch Integration
-- **ETL Processes**: Extract, transform, and load operations
-- **Scheduled Jobs**: Regular data synchronization
-- **Data Validation**: Comprehensive data quality checks
-- **Error Recovery**: Robust error handling and retry mechanisms
-
-## Performance Optimization
-
-### Query Optimization
-- **Index Strategy**: Optimal index design for performance
-- **Query Tuning**: SQL query optimization techniques
-- **Execution Plans**: Analysis and optimization of execution plans
-- **Statistics Management**: Database statistics maintenance
-
-### Storage Optimization
-- **Partitioning**: Table and index partitioning strategies
-- **Compression**: Data compression techniques
-- **Archiving**: Historical data archiving strategies
-- **Capacity Planning**: Storage capacity planning and management
+### Capacity Management
+- Storage capacity planning and monitoring
+- Performance scaling and resource allocation
+- Backup storage management and optimization
+- Archive storage strategy and implementation
+- Disaster recovery capacity planning
 
 ## Data Security and Compliance
 
 ### Security Framework
-- **Access Control**: Role-based access control (RBAC)
-- **Data Encryption**: Encryption at rest and in transit
-- **Audit Logging**: Comprehensive audit trail
-- **Row-Level Security**: Fine-grained access control
+- **Access Control** - Role-based database access and permissions
+- **Data Encryption** - Encryption at rest and in transit
+- **Audit Logging** - Comprehensive database activity logging
+- **Vulnerability Management** - Security assessment and remediation
+- **Compliance Monitoring** - Regulatory compliance and reporting
 
-### Compliance Standards
-- **Data Privacy**: GDPR and CCPA compliance
-- **Financial Regulations**: SOX compliance for financial data
-- **Audit Requirements**: Comprehensive audit logging
-- **Data Retention**: Data retention and purging policies
-
-## Data Quality Management
-
-### Data Validation
-- **Schema Validation**: Structural data validation
-- **Business Rules**: Business logic validation
-- **Referential Integrity**: Constraint enforcement
-- **Data Profiling**: Data quality assessment
-
-### Data Monitoring
-- **Quality Metrics**: Data quality measurement
-- **Anomaly Detection**: Automated anomaly detection
-- **Alerting**: Data quality alerts and notifications
-- **Reporting**: Data quality reporting and dashboards
+### Data Protection
+- **Sensitive Data Identification** - Classification and protection of sensitive information
+- **Data Masking** - Production data protection in non-production environments
+- **Backup Security** - Secure backup storage and access controls
+- **Recovery Procedures** - Secure data recovery and restoration processes
+- **Incident Response** - Data breach detection and response procedures
 
 ## Backup and Recovery
 
 ### Backup Strategy
-- **Full Backups**: Complete database backups
-- **Incremental Backups**: Incremental backup strategy
-- **Transaction Log Backups**: Transaction log management
-- **Cross-Region Backups**: Geographic backup distribution
+- **Full Backups** - Complete database backup procedures
+- **Incremental Backups** - Change-based backup optimization
+- **Transaction Log Backups** - Point-in-time recovery capability
+- **Cross-Region Backups** - Geographic backup distribution
+- **Backup Validation** - Automated backup integrity verification
 
-### Recovery Procedures
-- **Point-in-Time Recovery**: Granular recovery capabilities
-- **Disaster Recovery**: Comprehensive disaster recovery plan
-- **High Availability**: High availability architecture
-- **Failover Procedures**: Automated failover mechanisms
+### Disaster Recovery
+- **Recovery Time Objectives (RTO)** - Target recovery time specifications
+- **Recovery Point Objectives (RPO)** - Data loss tolerance specifications
+- **Failover Procedures** - Automated and manual failover processes
+- **Failback Procedures** - Primary system restoration processes
+- **Testing and Validation** - Regular disaster recovery testing
 
 ## Database Administration
 
-### Administrative Tasks
-- **User Management**: Database user and role management
-- **Performance Monitoring**: Database performance monitoring
-- **Maintenance Tasks**: Regular maintenance procedures
-- **Capacity Planning**: Database capacity planning
-
-### Monitoring and Alerting
-- **Performance Metrics**: Database performance monitoring
-- **Health Checks**: Automated health monitoring
-- **Alert Configuration**: Proactive alerting setup
-- **Reporting**: Administrative reporting and dashboards
-
-## Development Standards
-
-### Database Development
-- **Coding Standards**: SQL coding standards and best practices
-- **Version Control**: Database version control procedures
-- **Testing**: Database testing methodologies
-- **Deployment**: Database deployment procedures
+### Administrative Procedures
+- **Database Maintenance** - Regular maintenance tasks and schedules
+- **User Management** - Database user account and permission management
+- **Schema Management** - Database schema changes and version control
+- **Performance Tuning** - Ongoing performance optimization activities
+- **Monitoring and Alerting** - Proactive monitoring and issue detection
 
 ### Change Management
-- **Schema Changes**: Database schema change management
-- **Migration Scripts**: Data migration procedures
-- **Rollback Procedures**: Change rollback capabilities
-- **Documentation**: Change documentation requirements
+- **Schema Change Control** - Controlled database schema modifications
+- **Data Migration** - Safe data migration and transformation procedures
+- **Version Control** - Database schema and script version management
+- **Testing Procedures** - Database change testing and validation
+- **Rollback Procedures** - Change rollback and recovery processes
 
 ## Related Documentation
 
-- [Technical Architecture](../backend/20250718_Forecasting_TechnicalArchitecture_APIDesign.md) ✓ VERIFIED
-- [Integration Strategy](../integrations/20250718_Architecture_IntegrationStrategy_HybridConnections.md) ✓ VERIFIED
-- [Business Rules](../../business-rules/index.md) ✓ VERIFIED
-- [System Configuration](../../configuration/index.md) ✓ VERIFIED
+### Technical Architecture
+- **[Backend Technical Architecture](../backend/index.md)** - Backend system integration
+- **[Integration Architecture](../integrations/index.md)** - System integration specifications
+- **[API Documentation](../api/index.md)** - Database API specifications
 
-## Quick Links
+### Business Rules
+- **[Data Quality Standards](../../standards/data-quality-standards/index.md)** - Data quality requirements
+- **[Data Synchronization Standards](../../standards/data-synchronization-standards/index.md)** - Data synchronization procedures
 
-- [Development Standards](../../configuration/system-settings/20250718_Development_Standards_ComprehensiveGuide.md)
-- [ALM Strategy](../backend/20250718_Architecture_ALMStrategy_PowerPlatform.md)
-- [Power Platform Licensing](../../configuration/system-settings/20250718_Architecture_LicensingAnalysis_PowerPlatform.md)
-- [Definition of Done](../../configuration/system-settings/20250718_Development_DefinitionOfDone_ComprehensiveGuide.md)
+### Configuration Guides
+- **[System Settings](../../configuration/system-settings/index.md)** - Database configuration procedures
+- **[EDW Integration Configuration](../../configuration/system-settings/20250724_EDW_Integration_Configuration.md)** - EDW setup procedures
+
+## Database Catalog
+
+### Core Databases
+| Database | Purpose | Technology | Status |
+|----------|---------|------------|--------|
+| TownePark_Primary | Main operational database | SQL Server 2019 | Production |
+| TownePark_Forecasting | Forecasting and analytics | SQL Server 2019 | Production |
+| TownePark_Integration | Data integration staging | SQL Server 2019 | Production |
+| TownePark_Archive | Historical data archive | Azure SQL Database | Production |
+
+### Integration Databases
+| Database | Purpose | Technology | Status |
+|----------|---------|------------|--------|
+| EDW_Staging | Enterprise data warehouse staging | Azure Synapse | Production |
+| PowerBill_Integration | PowerBill system integration | SQL Server 2019 | Production |
+| External_Data_Hub | External system data exchange | Azure SQL Database | Production |
+
+## Performance Metrics
+
+### Database Performance
+- Query response time and throughput
+- Resource utilization (CPU, memory, storage)
+- Index usage and effectiveness
+- Backup and recovery performance
+- Data synchronization efficiency
+
+### Data Quality Metrics
+- Data accuracy and completeness
+- Data freshness and timeliness
+- Integration success rates
+- Error rates and resolution time
+- Compliance and audit success
+
+## Support and Maintenance
+
+### Database Support
+- 24/7 database monitoring and support
+- Performance tuning and optimization services
+- Backup and recovery support
+- Security monitoring and incident response
+- Capacity planning and scaling support
+
+### Maintenance Procedures
+- Regular database maintenance schedules
+- Performance monitoring and optimization
+- Security updates and patch management
+- Backup validation and testing
+- Disaster recovery testing and validation
+
+## Latest Updates
+
+| Document | Date | Description |
+|----------|------|-------------|
+| [Forecasting Database Integration](20250718_Forecasting_DatabaseIntegration_TechnicalSpec.md) | 2025-07-18 | Forecasting database specifications |
+| [Contracts Data Dictionary](20250718_Contracts_DataDictionary_TechnicalSpec.md) | 2025-07-18 | Contract data dictionary |
+| [Forecasting Data Integration](20250702_Forecasting_DataIntegration_TechnicalSpec.md) | 2025-07-02 | Data integration specifications |
+| [Billable Accounts Spec](20250718_Forecasting_BillableAccounts_TechnicalSpec.md) | 2025-07-18 | Billable accounts database design |
+| [Payroll Data Queries](20250724_PayrollData_DatabaseQueries_TechnicalSpec.md) | 2025-07-24 | Payroll data query specifications |

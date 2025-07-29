@@ -369,8 +369,8 @@ bs_totalduetoowner: =bs_revenueamount - bs_totalduetotownepark
 
 ## Related Documentation
 
-- [PowerBill System Overview](../systems/billing/20250716_Billing_SystemOverview_PowerBill.md) 🔄 PLANNED
-- [Billing System Generate Invoices](../systems/billing/generate-invoices.md) 🔄 PLANNED
+- [PowerBill System Overview](../../systems/billing/20250716_Billing_SystemOverview_PowerBill.md) 🔄 PLANNED
+- [Billing System Generate Invoices](../../systems/billing/generate-invoices.md) 🔄 PLANNED
 - [PLH Rate Escalation](../business-rules/contracts/plh-rate-escalation.md) 🔄 PLANNED
 - [Service Fee Escalation ECI](../business-rules/contracts/service-fee-escalation-eci.md) 🔄 PLANNED
 - [Billing Admin Generate Invoices](../user-processes/billing-admin/generate-invoices.md) 🔄 PLANNED

@@ -46,8 +46,8 @@ The Contract Management System within Towne Park's PowerBill platform serves as 
 
 #### Rate Management Engine
 - **Billing Type Processing**: 
-  - [`126840000`](../../business-rules/contracts/billing-types.md:1) - Advanced billing
-  - [`126840001`](../../business-rules/contracts/billing-types.md:2) - Arrears billing
+  - [`126840000`](../../business-rules/contracts/index.md) - Advanced billing
+  - [`126840001`](../../business-rules/contracts/index.md) - Arrears billing
 - **Contract Type Support**:
   - Fixed Fee arrangements
   - Per Labor Hour (PLH) billing

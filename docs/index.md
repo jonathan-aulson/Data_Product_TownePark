@@ -181,7 +181,6 @@ The Towne Park documentation is organized into the following key sections:
   - [AI SDLC Integration Configuration Guide](Future_State_Data_Product/configuration/system-settings/20250723_AI_ConfigurationGuide_SDLCIntegration.md)
 
 - **Team Notes** - Meeting notes and team coordination
-  - [Architecture Team Meeting Notes](Future_State_Data_Product/team-notes/AulsonJonathan-Notes/20250718_Architecture_TeamMeetingNotes_WeeklySync.md)
   - [Daily Scrum Insights and Progress Tracking](Future_State_Data_Product/team-notes/development/20250723_Development_TeamNotes_DailyScrumInsights.md)
   - [Daily Scrum Team Notes](Future_State_Data_Product/team-notes/20250718_Development_DailyScrum_TeamNotes.md)
   - [Sprint Planning Project Management](Future_State_Data_Product/team-notes/20250718_Development_SprintPlanning_ProjectManagement.md)
@@ -293,7 +292,6 @@ See the [Contract Escalation Rules](Future_State_Data_Product/business-rules/con
 | [Account Manager Forecasting Methodology Interview Insights](Future_State_Data_Product/user-processes/account-manager/20250718_AccountManager_ForecastingMethodology_InterviewInsights.md) | 2025-07-18 | Comprehensive documentation of Account Manager forecasting methodologies, processes, and best practices based on field interview with Jarrett Lagrone |
 | [Pull Request Review Comprehensive Guide](Future_State_Data_Product/configuration/system-settings/20250718_Development_PRReview_ComprehensiveGuide.md) | 2025-07-18 | Complete configuration guide for pull request review processes, Azure DevOps MCP tools, and quality assurance standards for Towne Park's financial systems development |
 | [Definition of Done Comprehensive Guide](Future_State_Data_Product/configuration/system-settings/20250718_Development_DefinitionOfDone_ComprehensiveGuide.md) | 2025-07-18 | Complete Definition of Done checklist and workflow enforcement procedures for Towne Park's financial software development team |
-| [Architecture Team Meeting Notes](Future_State_Data_Product/team-notes/AulsonJonathan-Notes/20250718_Architecture_TeamMeetingNotes_WeeklySync.md) | 2025-07-18 | Comprehensive meeting notes from Architecture Weekly Sync sessions covering key decisions, discussions, and action items |
 | [Integration Strategy for Hybrid Connections](Future_State_Data_Product/technical/integrations/20250718_Architecture_IntegrationStrategy_HybridConnections.md) | 2025-07-18 | Comprehensive integration architecture strategy for connecting Azure-hosted applications to on-premise SQL databases and external systems |
 | [Power Platform Licensing Analysis](Future_State_Data_Product/configuration/system-settings/20250718_Architecture_LicensingAnalysis_PowerPlatform.md) | 2025-07-18 | Comprehensive analysis of Power Platform licensing options, cost implications, and recommendations for 600+ user deployment |
 | [ALM Strategy for Power Platform](Future_State_Data_Product/technical/backend/20250718_Architecture_ALMStrategy_PowerPlatform.md) | 2025-07-18 | Comprehensive Application Lifecycle Management strategy and CI/CD implementation approach for Power Platform and Azure Static Web Apps |

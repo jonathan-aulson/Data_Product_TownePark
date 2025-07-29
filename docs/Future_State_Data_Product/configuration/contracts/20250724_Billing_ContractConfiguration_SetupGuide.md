@@ -464,11 +464,11 @@ The system automatically generates a flattened structure for:
 
 ## Related Documentation
 
-- [Revenue Share Business Rules](../business-rules/billing/20250724_Billing_RevenueShareContracts_BusinessRules.md)
-- [Billing System Overview](../systems/billing/20250716_Billing_SystemOverview_PowerBill.md)
-- [Contract Management User Processes](../user-processes/contract-admin/20250724_ContractManagement_UserProcesses.md)
-- [Power Platform Technical Specifications](../technical/backend/20250724_PowerPlatform_TechnicalSpec.md)
-- [Invoice Generation Process](../user-processes/billing-admin/generate-invoices.md)
+- [Revenue Share Business Rules](../../business-rules/billing/20250724_Billing_RevenueShareContracts_BusinessRules.md)
+- [Billing System Overview](../../systems/billing/20250716_Billing_SystemOverview_PowerBill.md)
+- [Contract Management User Processes](../../user-processes/contract-admin/20250724_ContractManagement_UserProcesses.md)
+- [Power Platform Technical Specifications](../../technical/backend/20250724_PowerPlatform_TechnicalSpec.md)
+- [Invoice Generation Process](../../user-processes/billing-admin/generate-invoices.md)
 
 ## Code Validation Report
 

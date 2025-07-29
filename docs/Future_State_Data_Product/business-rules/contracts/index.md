@@ -1,162 +1,113 @@
 ---
-title: "Contract Business Rules - Overview"
-description: "Comprehensive overview of business rules governing contract management, configuration, and processing across all contract types"
-created_date: 2025-07-24
-last_updated_date: 2025-07-24
+title: "Towne Park Contract Business Rules - Overview"
+description: "Comprehensive overview of business rules governing contract management, billing types, and contract configurations across all contract types in the Towne Park system"
+created_date: 2025-07-28
+last_updated_date: 2025-07-28
 version: 1.0
 status: Active
 owner: "Documentation Team"
 systems:
-  - Contracts
   - Billing
+  - Contracts
+components:
+  - Business Rules
+  - Contract Management
 business_domains:
   - Contract Management
-  - Fixed Fee
-  - Revenue Share
-  - Per Labor Hour
-  - Management Agreement
-  - Hybrid Contracts
+  - Revenue Calculation
+  - Billing Types
+  - Contract Configuration
+user_roles:
+  - Contract Admin
+  - Billing Admin
+  - Account Manager
 tags:
-  - business-rules
   - contracts
-  - overview
-  - navigation
+  - business-rules
+  - billing-types
+  - contract-management
 ---
 
-# Contract Business Rules - Overview
+# Contract Business Rules Overview
 
-This section contains comprehensive business rules that govern all aspects of contract management, including configuration, processing, escalation, and validation across all contract types.
+## Purpose
 
-## Business Rules Categories
+This section contains comprehensive business rules governing contract management, billing calculations, and contract configurations across all contract types supported by the Towne Park system.
 
-### Comprehensive Contract Rules
-- [Contracts Business Rules - Comprehensive](20250716_Contracts_BusinessRules_Comprehensive.md)
+## Contract Types Covered
 
-### Contract Type Configuration Rules
-- [Fixed Fee Contract Configuration Business Rules](20250724_FixedFee_ContractConfiguration_BusinessRules.md)
-- [Management Agreement Contract Configuration Business Rules](20250724_ManagementAgreement_ContractConfiguration_BusinessRules.md)
-- [Hybrid Contract Configuration Business Rules](20250724_HybridContract_ContractConfiguration_BusinessRules.md)
-- [Revenue Share Contract Configuration Business Rules](20250724_RevenueShare_ContractConfiguration_BusinessRules.md)
-- [Per Labor Hour Contract Configuration Business Rules](20250724_PerLaborHour_ContractConfiguration_BusinessRules.md)
+### Primary Contract Types
+- **[Fixed Fee Contracts](20250724_FixedFee_ContractConfiguration_BusinessRules.md)** - Fixed monthly fee arrangements
+- **[Per Labor Hour Contracts](20250724_PerLaborHour_ContractConfiguration_BusinessRules.md)** - Hourly billing arrangements
+- **[Revenue Share Contracts](20250724_RevenueShare_ContractConfiguration_BusinessRules.md)** - Percentage-based revenue sharing
+- **[Management Agreement Contracts](20250724_ManagementAgreement_ContractConfiguration_BusinessRules.md)** - Full management service agreements
+- **[Hybrid Contracts](20250724_HybridContract_ContractConfiguration_BusinessRules.md)** - Combined billing methodologies
 
-### Legacy Categories
-- [Contract Escalation Rules](contract-escalation-rules/)
-- [Overview](overview/)
-- [PLH Rate Escalation](plh-rate-escalation/)
-- [Service Fee Escalation ECI](service-fee-escalation-eci/)
+### Supporting Business Rules
+- **[Contract Escalation Rules](contract-escalation-rules/index.md)** - Annual rate increases and adjustments
+- **[PLH Rate Escalation](plh-rate-escalation/index.md)** - Per labor hour rate escalation policies
+- **[Service Fee Escalation ECI](service-fee-escalation-eci/index.md)** - Employment Cost Index adjustments
+
+## Key Business Rule Categories
+
+### Contract Configuration
+- Contract setup and initialization procedures
+- Required fields and validation rules
+- Contract type-specific configuration requirements
+- Integration with billing systems
+
+### Billing Calculations
+- Revenue calculation methodologies by contract type
+- Fee structure definitions and applications
+- Escalation and adjustment calculations
+- Validation and verification procedures
+
+### Contract Management
+- Contract lifecycle management rules
+- Amendment and modification procedures
+- Renewal and termination processes
+- Compliance and audit requirements
 
 ## Related Documentation
 
-### Contract Types Business Rules
-- [Contract Types Business Rules](../contract-types/)
+### System Integration
+- **[Billing System Integration](../../systems/billing/index.md)** - How contracts integrate with billing
+- **[Contract System Overview](../../systems/contracts/index.md)** - Technical contract management system
 
-### Billing Business Rules
-- [Billing Business Rules](../billing/)
-
-### Technical Specifications
-- [Contract Technical Specifications](../../technical/backend/)
-- [Database Technical Specifications](../../technical/database/)
+### Configuration Guides
+- **[Contract Configuration](../../configuration/contracts/index.md)** - Setup and configuration procedures
+- **[System Settings](../../configuration/system-settings/index.md)** - Related system configuration
 
 ### User Processes
-- [Contract Admin User Processes](../../user-processes/contract-admin/)
+- **[Contract Admin Processes](../../user-processes/contract-admin/index.md)** - Administrative procedures
+- **[Billing Admin Processes](../../user-processes/billing-admin/index.md)** - Billing-related processes
 
-### System Configuration
-- [Contract Configuration](../../configuration/contracts/)
-- [Contract Setup](../../configuration/contract-setup/)
+### Technical Specifications
+- **[Backend Technical Specs](../../technical/backend/index.md)** - Technical implementation details
+- **[Database Integration](../../technical/database/index.md)** - Data model and integration
 
-### System Overview
-- [Contract Systems](../../systems/contracts/)
+## Navigation
 
-## Contract Type Categories
+### Quick Access
+| Document | Description |
+|----------|-------------|
+| [Comprehensive Contract Rules](20250716_Contracts_BusinessRules_Comprehensive.md) | Complete contract business rules overview |
+| [Fixed Fee Configuration](20250724_FixedFee_ContractConfiguration_BusinessRules.md) | Fixed fee contract rules |
+| [Revenue Share Configuration](20250724_RevenueShare_ContractConfiguration_BusinessRules.md) | Revenue sharing rules |
+| [Management Agreement Rules](20250724_ManagementAgreement_ContractConfiguration_BusinessRules.md) | Management agreement policies |
 
-### Fixed Fee Contracts
-Business rules governing fixed fee contract management:
-- Fee calculation methods
-- Escalation procedures
-- Payment schedules
-- Performance metrics
-- Modification procedures
+### Contract Type Navigation
+- **Fixed Fee**: [Business Rules](20250724_FixedFee_ContractConfiguration_BusinessRules.md)
+- **Per Labor Hour**: [Business Rules](20250724_PerLaborHour_ContractConfiguration_BusinessRules.md)
+- **Revenue Share**: [Business Rules](20250724_RevenueShare_ContractConfiguration_BusinessRules.md)
+- **Management Agreement**: [Business Rules](20250724_ManagementAgreement_ContractConfiguration_BusinessRules.md)
+- **Hybrid Contracts**: [Business Rules](20250724_HybridContract_ContractConfiguration_BusinessRules.md)
 
-### Revenue Share Contracts
-Business rules for revenue sharing arrangements:
-- Revenue calculation formulas
-- Percentage allocations
-- Reporting requirements
-- Audit procedures
-- Dispute resolution
+## Latest Updates
 
-### Per Labor Hour Contracts
-Business rules for hourly-based contracts:
-- Rate structures
-- Time tracking requirements
-- Billing procedures
-- Rate escalations
-- Performance standards
-
-### Management Agreement Contracts
-Business rules for management agreements:
-- Management fee calculations
-- Service level agreements
-- Performance metrics
-- Reporting requirements
-- Renewal procedures
-
-### Hybrid Contracts
-Business rules for combination contract types:
-- Component allocation rules
-- Calculation priorities
-- Reporting requirements
-- Modification procedures
-- Validation rules
-
-## Contract Processing Rules
-
-### Configuration Requirements
-Rules governing contract setup and configuration:
-- Required data elements
-- Validation procedures
-- Approval workflows
-- Documentation requirements
-- System integration points
-
-### Escalation Procedures
-Rules governing contract escalations:
-- Rate escalation formulas
-- Timing requirements
-- Approval processes
-- Notification procedures
-- Documentation standards
-
-### Validation and Compliance
-Rules ensuring contract accuracy and compliance:
-- Data validation procedures
-- Compliance checks
-- Audit requirements
-- Error handling
-- Quality assurance
-
-### Integration Rules
-Rules governing contract system integrations:
-- Data synchronization
-- System interfaces
-- Error handling
-- Performance standards
-- Monitoring requirements
-
-## Compliance Requirements
-
-All contract business rules must comply with:
-- Legal and regulatory requirements
-- Financial reporting standards
-- Audit requirements
-- Data privacy regulations
-- Security standards
-
-## Maintenance and Updates
-
-Contract business rules are reviewed and updated regularly to ensure:
-- Accuracy with system implementation
-- Compliance with legal requirements
-- Integration with related systems
-- Performance optimization
-- User experience enhancement
+| Document | Date | Description |
+|----------|------|-------------|
+| [Fixed Fee Rules](20250724_FixedFee_ContractConfiguration_BusinessRules.md) | 2025-07-24 | Fixed fee contract configuration rules |
+| [Revenue Share Rules](20250724_RevenueShare_ContractConfiguration_BusinessRules.md) | 2025-07-24 | Revenue sharing calculation rules |
+| [Management Agreement Rules](20250724_ManagementAgreement_ContractConfiguration_BusinessRules.md) | 2025-07-24 | Management agreement policies |
+| [Hybrid Contract Rules](20250724_HybridContract_ContractConfiguration_BusinessRules.md) | 2025-07-24 | Hybrid contract configuration |

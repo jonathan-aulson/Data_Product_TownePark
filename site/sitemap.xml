@@ -2,1010 +2,1186 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>http://example.org/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/2025-07-21/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/TP%20Product%20Roadmap/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/glossary/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/billing/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/billing/20250702_Billing_AccountValidation_BusinessRules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/billing/20250716_Billing_ROIAnalysis_SuccessMetrics/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/billing/20250717_Billing_ROIAnalysis_PowerBillSuccessMetrics/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/billing/20250717_TownePark_CaseStudy_BillingSystemModernization/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/billing/20250723_Billing_RevenueManagement_BusinessRules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/billing/20250723_RSS_FileValidation_BusinessRules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/billing/20250724_Billing_PerLaborHourContracts_BusinessRules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/billing/20250724_Billing_RevenueShareContracts_BusinessRules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/billing/20250724_StatementAccess_BusinessRules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/billing/bell-service-fee/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/billing/calculation-rules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/billing/cashflow-analysis/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/billing/error-reduction/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/billing/integration-error-handling-rules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/billing/invoice-calculation/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/billing/management-fee-escalation-rules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/billing/negative-invoice-gl-entity-mapping/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/billing/overview/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/billing/process-efficiency/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/billing/pteb-escalation-rules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/billing/staffing-analysis/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/billing/validation/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/business-rules/contract-types/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/contract-types/fixed-fee/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/contract-types/management-agreement/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/contract-types/overview/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/contract-types/per-labor-hour/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/contract-types/revenue-share/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/business-rules/contract-types/fixed-fee/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/business-rules/contract-types/management-agreement/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/business-rules/contract-types/per-labor-hour/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/business-rules/contract-types/revenue-share/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/contracts/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/contracts/20250716_Contracts_BusinessRules_Comprehensive/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/contracts/20250724_FixedFee_ContractConfiguration_BusinessRules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/contracts/20250724_HybridContract_ContractConfiguration_BusinessRules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/contracts/20250724_ManagementAgreement_ContractConfiguration_BusinessRules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/contracts/20250724_PerLaborHour_ContractConfiguration_BusinessRules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/contracts/20250724_RevenueShare_ContractConfiguration_BusinessRules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/contracts/contract-escalation-rules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/contracts/overview/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/contracts/plh-rate-escalation/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/contracts/service-fee-escalation-eci/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/business-rules/customer-sites/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/customer-sites/contact-management-rules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/customer-sites/site-classification-rules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/customer-sites/territory-assignment-rules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/business-rules/development/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/development/ai-tool-usage-policies/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/development/code-quality-standards/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/business-rules/development/development-security-standards/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/business-rules/development/ai-tool-usage-policies/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/business-rules/development/code-quality-standards/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/forecasting/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/forecasting/20250702_Forecasting_JobCodeManagement_BusinessRules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/forecasting/20250716_Forecasting_BillableAccounts_BusinessRules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/forecasting/20250716_Forecasting_BusinessRules_ProcessWorkflow/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/forecasting/20250717_Forecasting_BusinessRules_Sprint26Features/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/forecasting/20250718_Forecasting_BusinessRules_CalculationsAndValidations/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/forecasting/20250718_Forecasting_BusinessRules_DevelopmentDecisions/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/forecasting/20250723_Forecasting_ActualsDisplay_BusinessRules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/forecasting/20250723_Forecasting_StatisticsDisplay_BusinessRules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/forecasting/20250724_Claims_Forecasting_BusinessRules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/forecasting/20250724_ForecastingInputGranularity_BusinessRules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/forecasting/20250724_Forecasting_DataValidation_BusinessRules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/forecasting/20250724_Forecasting_UATProcess_BusinessRules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/forecasting/20250724_PayrollDataDisplay_BusinessRules/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/business-rules/forecasting/budget-integration-business-rules/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/forecasting/group-transient-logic/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/forecasting/overview/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/business-rules/forecasting/payroll-forecasting-business-rules/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/forecasting/payroll/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/forecasting/revenue/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/forecasting/statistics/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/business-rules/security/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/security/ai-development-security/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/business-rules/security/data-access-security-rules/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/security/development-security-standards/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/business-rules/security/development-security-standards/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/user-access/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/business-rules/user-access/authentication-requirements/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/business-rules/user-access/authorization-policies/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/business-rules/user-access/role-based-permissions/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/overview/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/configuration/billing/batch-processing-configuration/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/contract-setup/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/configuration/contracts/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/contracts/20250724_Billing_ContractConfiguration_SetupGuide/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/contracts/20250724_Billing_PerLaborHourConfiguration_SetupGuide/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/contracts/contract-configuration-guide/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/configuration/contracts/contract-configuration-guide/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/customer-sites/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/customer-sites/integration-configuration-guide/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/customer-sites/site-setup-configuration/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/customer-sites/territory-configuration-guide/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/system-settings/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/system-settings/20250716_Development_ConfigurationGuide_Standards/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/system-settings/20250718_Architecture_LicensingAnalysis_PowerPlatform/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/system-settings/20250718_Development_DefinitionOfDone_ComprehensiveGuide/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/system-settings/20250718_Development_PRReview_ComprehensiveGuide/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/system-settings/20250718_Development_Standards_ComprehensiveGuide/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/system-settings/20250723_AI_ConfigurationGuide_DevelopmentTools/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/system-settings/20250723_AI_ConfigurationGuide_SDLCIntegration/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/system-settings/20250724_EDW_Integration_Configuration/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/system-settings/20250724_Forecasting_SystemConfiguration/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/system-settings/rss-system-configuration/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/system-settings/system-configuration-overview/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/system-settings/webhook-management-configuration/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/user-access/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/configuration/user-access/role-based-permissions/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/operations/monitoring-alerting-guide/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/standards/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/standards/ai-content-safety-checklist/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/standards/data-quality-standards/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/standards/data-synchronization-standards/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/standards/documentation-integrity-standards/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/standards/error-handling-guidelines/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/standards/error-handling-standards/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/standards/financial-reporting-guidelines/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/standards/system-resilience-guidelines/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/standards/data-quality-standards/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/standards/data-synchronization-standards/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/support/onboarding-troubleshooting/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/systems/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/systems/billing/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/systems/billing/20250716_Billing_SystemOverview_PowerBill/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/systems/billing/architecture/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/systems/billing/generate-invoices/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/systems/billing/integrations/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/systems/billing/overview/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/systems/billing/powerbill-system-overview/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/systems/contracts/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/systems/contracts/20250716_Contracts_SystemOverview_PowerBill/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/systems/contracts/overview/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/systems/customer-sites/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/systems/customer-sites/20250716_CustomerSites_SystemOverview_Management/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/systems/customer-sites/customer-site-directory/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/systems/customer-sites/overview/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/systems/forecasting/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/systems/forecasting/20250716_Forecasting_PayrollForecasting_SystemOverview/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/systems/forecasting/20250716_Forecasting_SystemOverview_Discovery/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/systems/forecasting/20250716_Forecasting_SystemOverview_Integrated/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/systems/forecasting/20250716_Forecasting_SystemOverview_MasterArchitecture/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/systems/forecasting/20250718_Forecasting_SystemOverview_ComprehensiveMaster/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/systems/forecasting/architecture/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/systems/forecasting/forecasting-system-overview/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/systems/forecasting/integration-guide/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/systems/forecasting/integrations/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/systems/forecasting/overview/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/systems/rss/rss-system-overview/</loc>
-         <lastmod>2025-07-25</lastmod>
-    </url>
-    <url>
-         <loc>http://example.org/Future_State_Data_Product/team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/team-notes/20250718_Development_DailyScrum_TeamNotes/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/team-notes/20250718_Development_SprintPlanning_ProjectManagement/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/team-notes/AulsonJonathan-Notes/20250718_Architecture_TeamMeetingNotes_WeeklySync/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/team-notes/AulsonJonathan-Notes/Definition%20of%20Done%20%28DoD%29/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/team-notes/AulsonJonathan-Notes/Sprint%2029/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/team-notes/AulsonJonathan-Notes/Welcome/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/team-notes/development/20250718_Development_DailyScrum_TeamNotes/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/team-notes/development/20250723_DailyScrum_TechnicalIssues_ResolutionGuide/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/team-notes/development/20250723_Development_TeamNotes_DailyScrumInsights/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/team-notes/development/20250723_Forecasting_TeamNotes_ActualsDisplayDecisions/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/team-notes/development/20250723_SprintPlanning_ProcessGuide_AIAssisted/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/team-notes/development/20250724_DailyScrum_DevelopmentProgress_TeamNotes/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/team-notes/development/20250724_DailyScrum_TechnicalClarifications_TeamNotes/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/team-notes/development/20250724_ForecastingSprintDemo_ConsolidatedTeamNotes/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/team-notes/development/20250724_Forecasting_BacklogGrooming_ConsolidatedDecisions/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/team-notes/development/20250724_Forecasting_BacklogGrooming_TeamNotes/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/team-notes/development/20250724_Forecasting_UATPlanningDecisions_TeamNotes/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/team-notes/development/20250724_Sprint_Planning_TeamNotes_FinalStretch/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/team-notes/development/20250724_UAT_Planning_TeamNotes_BacklogGrooming/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/overview/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/technical/api/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/api/customer-sites-api-spec/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/architecture/power-platform-architecture/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/architecture/sharepoint-integration-architecture/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/backend/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/backend/20250716_Billing_TechnicalArchitecture_Development/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/backend/20250718_Architecture_ALMStrategy_PowerPlatform/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/backend/20250718_Development_AIIntegration_TechnicalSpec/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/backend/20250718_Forecasting_TechnicalArchitecture_APIDesign/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/backend/20250723_AI_TechnicalSpec_SDLCIntegration/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/backend/20250723_AI_ValidationReport_SDLCIntegration/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/backend/20250724_AI_Productivity_Tools_TechnicalSpec/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/backend/20250724_Billing_RevenueCalculation_TechnicalSpec/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/technical/backend/20250724_PowerPlatform_TechnicalSpec/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/backend/20250724_StatementGeneration_TechnicalSpec/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/backend/billing-architecture/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/backend/external-code-repository-links/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/backend/project-mercury/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/database/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/database/20250716_Forecasting_BillableAccounts_TechnicalSpec/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/database/20250716_Forecasting_DataSources_TechnicalSpec/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/database/20250718_Contracts_DataDictionary_TechnicalSpec/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/database/20250718_Forecasting_DatabaseIntegration_TechnicalSpec/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/database/20250723_Database_TechnicalSpec_MigrationDataFlows/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/database/20250724_PayrollData_DatabaseQueries_TechnicalSpec/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/database/contracts-data-schema/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/database/customer-sites-data-schema/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/database/database-schema/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/database/forecasting-data-sources/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/database/schema-design/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/forecasting/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/forecasting/20250702_Forecasting_DataIntegration_TechnicalSpec/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/forecasting/20250717_Forecasting_TechnicalSpec_Sprint26Features/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/forecasting/20250718_Forecasting_BillableAccounts_TechnicalSpec/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/technical/forecasting/20250723_DistrictManager_ForecastingWorkflow_UserGuide/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/forecasting/20250723_Forecasting_JobGroups_TechnicalSpec/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/technical/forecasting/20250723_Forecasting_SystemDemo_ComprehensiveGuide/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/frontend/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/technical/frontend/ui-design-standards/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/integration/customer-sites-billing-integration/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/integration/customer-sites-forecasting-integration/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/integrations/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/integrations/20250718_Architecture_IntegrationStrategy_HybridConnections/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/integrations/20250724_EDW_Integration_TechnicalSpec/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/integrations/billing-integrations/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/integrations/budget-integration/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/integrations/dataverse-integration/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/integrations/great-plains-integration-spec/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/integrations/great-plains-integration/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/integrations/leads-integration/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/integrations/legion-integration/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/integrations/powerbill-integration/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/integrations/sharepoint-dataverse-integration/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/technical/operations/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/operations/20250723_SystemAdministration_Operations_Procedures/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/technical/performance/system-performance-guidelines/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/technical/security/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/specifications/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/specifications/20250723_RSS_TechnicalSpec_TroubleshootingProcedures/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/specifications/forecasting-pl-view-technical-spec/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/specifications/power-automate-retry-mechanisms/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/specifications/sharepoint-delta-token-management/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/specifications/templates/api-documentation-standards/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/specifications/templates/integration-spec-template/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/technical/specifications/templates/technical-spec-template/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/training/site-admin/site-administrator-training/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/account-manager/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/account-manager/20250716_Forecasting_DataTableEditing_UserProcess/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/account-manager/20250716_Forecasting_StatisticsPagination_UserProcess/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/account-manager/20250718_AccountManager_ForecastingMethodology_InterviewInsights/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/account-manager/20250718_Forecasting_UserProcesses_AccountManagerWorkflows/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/account-manager/20250723_Forecasting_ActualsDisplay_UserProcess/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/account-manager/20250724_PayrollDataAnalysis_UserProcess/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/account-manager/forecasting-workflow/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/account-manager/overview/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/billing-admin/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/billing-admin/20250702_Billing_AccountValidation_UserProcess/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/billing-admin/20250718_Billing_UATUserStories_ComprehensiveFeedback/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/billing-admin/20250723_RSS_TroubleshootingProcess_UserGuide/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/billing-admin/20250724_StatementManagement_UserProcess/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/billing-admin/acquisition-integration/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/billing-admin/customer-migration/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/billing-admin/generate-invoices/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/billing-admin/overview/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/billing-admin/powerbill-user-guide/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/contract-admin/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/contract-admin/20250718_Contracts_QueryExamples_UserReference/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/contract-admin/contract-setup-workflow/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/user-processes/deployment/release-management/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/user-processes/development/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/development/20250723_AI_UserProcess_DevelopmentWorkflow/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/development/20250723_Development_UserProcess_WorkflowStandards/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/development/20250723_SprintPlanning_ProcessGuide_AIAssisted/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/development/20250724_Project_Management_Methodology_UserProcess/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/development/20250724_UAT_Methodology_UserProcess/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/user-processes/development/code-review-guidelines/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/district-manager/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/district-manager/20250716_Forecasting_PilotRollout_ProcessWorkflow/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/district-manager/20250723_DistrictManager_ForecastingWorkflow_UserGuide/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/district-manager/20250724_Forecasting_Workflows_UserProcess/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/district-manager/forecasting-review/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/district-manager/overview/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/forecasting/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/forecasting/20250702_Forecasting_JobGroupManagement_UserProcess/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/forecasting/20250717_Forecasting_UserProcesses_Sprint26Features/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/forecasting/20250718_Forecasting_UserExperience_DesignDecisions/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/forecasting/20250723_Forecasting_SystemDemo_ComprehensiveGuide/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/forecasting/20250723_Forecasting_UIDesign_UserExperienceStandards/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/forecasting/overview/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/user-processes/infrastructure/configuration-management/</loc>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/user-processes/quality-assurance/testing-standards/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/site-admin/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/site-admin/contact-management-procedures/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/site-admin/site-data-maintenance-procedures/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
     </url>
     <url>
          <loc>http://example.org/Future_State_Data_Product/user-processes/site-admin/site-onboarding-workflow/</loc>
-         <lastmod>2025-07-25</lastmod>
+         <lastmod>2025-07-28</lastmod>
+    </url>
+    <url>
+         <loc>http://example.org/Future_State_Data_Product/user-processes/territory-admin/territory-management-procedures/</loc>
+         <lastmod>2025-07-28</lastmod>
     </url>
 </urlset>

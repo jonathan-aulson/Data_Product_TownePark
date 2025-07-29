@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Database architecture, schema design, integration patterns, and data management documentation for Towne Park financial systems">
+        <meta name="description" content="Comprehensive overview of database architecture, data integration, forecasting database specifications, and contract data dictionary within the Towne Park ecosystem">
       
       
       
@@ -24,7 +24,7 @@
     
     
       
-        <title>Database Technical Documentation - Towne Park Data Product</title>
+        <title>Towne Park Database Technical Architecture - Overview - Towne Park Data Product</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#database-technical-documentation" class="md-skip">
+        <a href="#database-technical-architecture-overview" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Database Technical Documentation
+              Towne Park Database Technical Architecture - Overview
             
           </span>
         </div>
@@ -348,7 +348,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync/" class="md-tabs__link">
+        <a href="../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync.md" class="md-tabs__link">
           
   
   
@@ -4168,6 +4168,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
 
       </a>
     </li>
@@ -4595,6 +4602,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
 
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -4607,6 +4621,13 @@
     Overview
     
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
   
 
       </a>
@@ -4627,9 +4648,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#purpose" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Purpose
     </span>
   </a>
   
@@ -4646,18 +4667,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#core-database-systems" class="md-nav__link">
+  <a href="#core-database-components" class="md-nav__link">
     <span class="md-ellipsis">
-      Core Database Systems
+      Core Database Components
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-architecture-overview" class="md-nav__link">
+  <a href="#database-technologies" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Architecture Overview
+      Database Technologies
     </span>
   </a>
   
@@ -4669,13 +4690,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#technical-specifications" class="md-nav__link">
+  <a href="#data-model-and-schema" class="md-nav__link">
     <span class="md-ellipsis">
-      Technical Specifications
+      Data Model and Schema
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Technical Specifications">
+    <nav class="md-nav" aria-label="Data Model and Schema">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4688,27 +4709,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#forecasting-data-sources" class="md-nav__link">
+  <a href="#contract-data-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Forecasting Data Sources
+      Contract Data Management
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#contracts-data-dictionary" class="md-nav__link">
+  <a href="#core-data-entities" class="md-nav__link">
     <span class="md-ellipsis">
-      Contracts Data Dictionary
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#billable-accounts-technical-specification" class="md-nav__link">
-    <span class="md-ellipsis">
-      Billable Accounts Technical Specification
+      Core Data Entities
     </span>
   </a>
   
@@ -4720,37 +4732,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#database-schema-design" class="md-nav__link">
+  <a href="#data-integration-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      Database Schema Design
+      Data Integration Architecture
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Database Schema Design">
+    <nav class="md-nav" aria-label="Data Integration Architecture">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#schema-design-principles" class="md-nav__link">
+  <a href="#integration-patterns" class="md-nav__link">
     <span class="md-ellipsis">
-      Schema Design Principles
+      Integration Patterns
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#contracts-data-schema" class="md-nav__link">
+  <a href="#data-transformation" class="md-nav__link">
     <span class="md-ellipsis">
-      Contracts Data Schema
+      Data Transformation
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#customer-sites-data-schema" class="md-nav__link">
+  <a href="#integration-points" class="md-nav__link">
     <span class="md-ellipsis">
-      Customer Sites Data Schema
+      Integration Points
     </span>
   </a>
   
@@ -4762,61 +4774,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#data-integration-patterns" class="md-nav__link">
+  <a href="#database-performance-and-optimization" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Integration Patterns
+      Database Performance and Optimization
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Data Integration Patterns">
+    <nav class="md-nav" aria-label="Database Performance and Optimization">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#real-time-integration" class="md-nav__link">
+  <a href="#performance-monitoring" class="md-nav__link">
     <span class="md-ellipsis">
-      Real-Time Integration
+      Performance Monitoring
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#batch-integration" class="md-nav__link">
+  <a href="#optimization-strategies" class="md-nav__link">
     <span class="md-ellipsis">
-      Batch Integration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#performance-optimization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Performance Optimization
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Performance Optimization">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#query-optimization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Query Optimization
+      Optimization Strategies
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#storage-optimization" class="md-nav__link">
+  <a href="#capacity-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Storage Optimization
+      Capacity Management
     </span>
   </a>
   
@@ -4847,42 +4835,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#compliance-standards" class="md-nav__link">
+  <a href="#data-protection" class="md-nav__link">
     <span class="md-ellipsis">
-      Compliance Standards
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-quality-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Quality Management
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Data Quality Management">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#data-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Validation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-monitoring" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Monitoring
+      Data Protection
     </span>
   </a>
   
@@ -4913,9 +4868,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#recovery-procedures" class="md-nav__link">
+  <a href="#disaster-recovery" class="md-nav__link">
     <span class="md-ellipsis">
-      Recovery Procedures
+      Disaster Recovery
     </span>
   </a>
   
@@ -4937,42 +4892,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#administrative-tasks" class="md-nav__link">
+  <a href="#administrative-procedures" class="md-nav__link">
     <span class="md-ellipsis">
-      Administrative Tasks
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monitoring-and-alerting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Monitoring and Alerting
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#development-standards" class="md-nav__link">
-    <span class="md-ellipsis">
-      Development Standards
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Development Standards">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#database-development" class="md-nav__link">
-    <span class="md-ellipsis">
-      Database Development
+      Administrative Procedures
     </span>
   </a>
   
@@ -4999,12 +4921,144 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Related Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technical-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-guides" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Guides
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#quick-links" class="md-nav__link">
+  <a href="#database-catalog" class="md-nav__link">
     <span class="md-ellipsis">
-      Quick Links
+      Database Catalog
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database Catalog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Databases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Databases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Metrics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#database-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Performance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-quality-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Quality Metrics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support-and-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support and Maintenance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Support and Maintenance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#database-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Support
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintenance Procedures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#latest-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Latest Updates
     </span>
   </a>
   
@@ -5415,6 +5469,13 @@
     Sprint 26 Features Technical Spec
     
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
   
 
       </a>
@@ -6900,6 +6961,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
 
       </a>
     </li>
@@ -7763,6 +7831,13 @@
     Sprint 26 Features User Processes
     
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
   
 
       </a>
@@ -9089,7 +9164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync/" class="md-nav__link">
+      <a href="../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync.md" class="md-nav__link">
         
   
   
@@ -9097,13 +9172,6 @@
     Architecture Team Meeting Notes
     
   </span>
-  
-    
-  
-  
-    <span class="md-status md-status--Active"></span>
-  
-
   
 
       </a>
@@ -10137,9 +10205,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#purpose" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Purpose
     </span>
   </a>
   
@@ -10156,18 +10224,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#core-database-systems" class="md-nav__link">
+  <a href="#core-database-components" class="md-nav__link">
     <span class="md-ellipsis">
-      Core Database Systems
+      Core Database Components
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-architecture-overview" class="md-nav__link">
+  <a href="#database-technologies" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Architecture Overview
+      Database Technologies
     </span>
   </a>
   
@@ -10179,13 +10247,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#technical-specifications" class="md-nav__link">
+  <a href="#data-model-and-schema" class="md-nav__link">
     <span class="md-ellipsis">
-      Technical Specifications
+      Data Model and Schema
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Technical Specifications">
+    <nav class="md-nav" aria-label="Data Model and Schema">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -10198,27 +10266,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#forecasting-data-sources" class="md-nav__link">
+  <a href="#contract-data-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Forecasting Data Sources
+      Contract Data Management
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#contracts-data-dictionary" class="md-nav__link">
+  <a href="#core-data-entities" class="md-nav__link">
     <span class="md-ellipsis">
-      Contracts Data Dictionary
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#billable-accounts-technical-specification" class="md-nav__link">
-    <span class="md-ellipsis">
-      Billable Accounts Technical Specification
+      Core Data Entities
     </span>
   </a>
   
@@ -10230,37 +10289,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#database-schema-design" class="md-nav__link">
+  <a href="#data-integration-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      Database Schema Design
+      Data Integration Architecture
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Database Schema Design">
+    <nav class="md-nav" aria-label="Data Integration Architecture">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#schema-design-principles" class="md-nav__link">
+  <a href="#integration-patterns" class="md-nav__link">
     <span class="md-ellipsis">
-      Schema Design Principles
+      Integration Patterns
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#contracts-data-schema" class="md-nav__link">
+  <a href="#data-transformation" class="md-nav__link">
     <span class="md-ellipsis">
-      Contracts Data Schema
+      Data Transformation
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#customer-sites-data-schema" class="md-nav__link">
+  <a href="#integration-points" class="md-nav__link">
     <span class="md-ellipsis">
-      Customer Sites Data Schema
+      Integration Points
     </span>
   </a>
   
@@ -10272,61 +10331,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#data-integration-patterns" class="md-nav__link">
+  <a href="#database-performance-and-optimization" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Integration Patterns
+      Database Performance and Optimization
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Data Integration Patterns">
+    <nav class="md-nav" aria-label="Database Performance and Optimization">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#real-time-integration" class="md-nav__link">
+  <a href="#performance-monitoring" class="md-nav__link">
     <span class="md-ellipsis">
-      Real-Time Integration
+      Performance Monitoring
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#batch-integration" class="md-nav__link">
+  <a href="#optimization-strategies" class="md-nav__link">
     <span class="md-ellipsis">
-      Batch Integration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#performance-optimization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Performance Optimization
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Performance Optimization">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#query-optimization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Query Optimization
+      Optimization Strategies
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#storage-optimization" class="md-nav__link">
+  <a href="#capacity-management" class="md-nav__link">
     <span class="md-ellipsis">
-      Storage Optimization
+      Capacity Management
     </span>
   </a>
   
@@ -10357,42 +10392,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#compliance-standards" class="md-nav__link">
+  <a href="#data-protection" class="md-nav__link">
     <span class="md-ellipsis">
-      Compliance Standards
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-quality-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Quality Management
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Data Quality Management">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#data-validation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Validation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-monitoring" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Monitoring
+      Data Protection
     </span>
   </a>
   
@@ -10423,9 +10425,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#recovery-procedures" class="md-nav__link">
+  <a href="#disaster-recovery" class="md-nav__link">
     <span class="md-ellipsis">
-      Recovery Procedures
+      Disaster Recovery
     </span>
   </a>
   
@@ -10447,42 +10449,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#administrative-tasks" class="md-nav__link">
+  <a href="#administrative-procedures" class="md-nav__link">
     <span class="md-ellipsis">
-      Administrative Tasks
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#monitoring-and-alerting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Monitoring and Alerting
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#development-standards" class="md-nav__link">
-    <span class="md-ellipsis">
-      Development Standards
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Development Standards">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#database-development" class="md-nav__link">
-    <span class="md-ellipsis">
-      Database Development
+      Administrative Procedures
     </span>
   </a>
   
@@ -10509,12 +10478,144 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Related Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technical-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#business-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-guides" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration Guides
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#quick-links" class="md-nav__link">
+  <a href="#database-catalog" class="md-nav__link">
     <span class="md-ellipsis">
-      Quick Links
+      Database Catalog
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Database Catalog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Databases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Databases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Metrics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#database-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Performance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-quality-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Quality Metrics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support-and-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support and Maintenance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Support and Maintenance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#database-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Support
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintenance Procedures
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#latest-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Latest Updates
     </span>
   </a>
   
@@ -10536,207 +10637,307 @@
 
 
 
-<h1 id="database-technical-documentation">Database Technical Documentation</h1>
-<h2 id="overview">Overview</h2>
-<p>This section contains comprehensive database technical documentation covering architecture, schema design, integration patterns, and data management for all Towne Park financial systems.</p>
+<h1 id="database-technical-architecture-overview">Database Technical Architecture Overview</h1>
+<h2 id="purpose">Purpose</h2>
+<p>This section provides comprehensive technical documentation for database architecture, data integration, forecasting database specifications, and contract data management within the Towne Park ecosystem.</p>
 <h2 id="database-architecture">Database Architecture</h2>
-<h3 id="core-database-systems">Core Database Systems</h3>
+<h3 id="core-database-components">Core Database Components</h3>
 <ul>
-<li><strong>Microsoft Dataverse</strong>: Primary data platform for Power Platform applications</li>
-<li><strong>Enterprise Data Warehouse (EDW)</strong>: SQL Server-based central data repository</li>
-<li><strong>Operational Databases</strong>: System-specific databases for specialized functions</li>
+<li><strong>Primary Database Server</strong> - SQL Server with Azure integration</li>
+<li><strong>Data Warehouse</strong> - Enterprise data warehouse for analytics and reporting</li>
+<li><strong>Integration Database</strong> - Staging and transformation database for data integration</li>
+<li><strong>Backup and Recovery System</strong> - Automated backup and disaster recovery</li>
+<li><strong>Performance Monitoring</strong> - Database performance and health monitoring</li>
 </ul>
-<h3 id="data-architecture-overview">Data Architecture Overview</h3>
-<pre class="mermaid"><code>graph TB
-    A[Workday] --&gt; B[EDW - Enterprise Data Warehouse]
-    C[Legion] --&gt; B
-    D[Great Plains] --&gt; B
-    E[Revenue Data] --&gt; B
-
-    B --&gt; F[Dataverse - Forecasting]
-    B --&gt; G[Dataverse - Billing]
-
-    F --&gt; H[Power BI]
-    G --&gt; H
-
-    I[Backup Systems] --&gt; B
-    J[Archive Storage] --&gt; B</code></pre>
-<h2 id="technical-specifications">Technical Specifications</h2>
-<h3 id="forecasting-database-integration"><a href="20250718_Forecasting_DatabaseIntegration_TechnicalSpec/">Forecasting Database Integration</a></h3>
-<p>Comprehensive technical specification for forecasting system database integration.</p>
-<p><strong>Key Areas:</strong>
-- Database connectivity and optimization
-- Integration patterns and protocols
-- Performance tuning and optimization
-- Data synchronization mechanisms
-- Security and access control</p>
-<h3 id="forecasting-data-sources"><a href="20250716_Forecasting_DataSources_TechnicalSpec/">Forecasting Data Sources</a></h3>
-<p>Technical specifications for forecasting system data sources and integration.</p>
-<p><strong>Key Areas:</strong>
-- Data source connectivity
-- ETL processes and data flows
-- Data transformation and validation
-- Real-time and batch processing
-- Error handling and recovery</p>
-<h3 id="contracts-data-dictionary"><a href="20250718_Contracts_DataDictionary_TechnicalSpec/">Contracts Data Dictionary</a></h3>
-<p>Comprehensive data dictionary for contract management system.</p>
-<p><strong>Key Areas:</strong>
-- Entity definitions and relationships
-- Data types and constraints
-- Business rules and validation
-- Index and performance optimization
-- Security and access patterns</p>
-<h3 id="billable-accounts-technical-specification"><a href="20250716_Forecasting_BillableAccounts_TechnicalSpec/">Billable Accounts Technical Specification</a></h3>
-<p>Technical specification for billable accounts data management.</p>
-<p><strong>Key Areas:</strong>
-- Data model and schema design
-- Integration with billing systems
-- Calculation and processing logic
-- Audit trail and compliance
-- Performance optimization</p>
-<h2 id="database-schema-design">Database Schema Design</h2>
-<h3 id="schema-design-principles"><a href="schema-design/">Schema Design Principles</a></h3>
-<p>Core principles and standards for database schema design.</p>
-<p><strong>Design Principles:</strong>
-- Normalization and denormalization strategies
-- Performance optimization techniques
-- Security and access control patterns
-- Scalability and maintainability considerations</p>
-<h3 id="contracts-data-schema"><a href="contracts-data-schema/">Contracts Data Schema</a></h3>
-<p>Detailed schema design for contract management data.</p>
-<p><strong>Schema Components:</strong>
-- Contract entity definitions
-- Relationship mappings
-- Index optimization
-- Constraint definitions
-- Security models</p>
-<h3 id="customer-sites-data-schema"><a href="customer-sites-data-schema/">Customer Sites Data Schema</a></h3>
-<p>Schema design for customer site management data.</p>
-<p><strong>Schema Components:</strong>
-- Site entity definitions
-- Customer relationship mappings
-- Territory and location data
-- Operational configuration data
-- Integration touchpoints</p>
-<h2 id="data-integration-patterns">Data Integration Patterns</h2>
-<h3 id="real-time-integration">Real-Time Integration</h3>
+<h3 id="database-technologies">Database Technologies</h3>
 <ul>
-<li><strong>Change Data Capture (CDC)</strong>: Real-time data synchronization</li>
-<li><strong>Event-Driven Architecture</strong>: Asynchronous data processing</li>
-<li><strong>API-Based Integration</strong>: RESTful APIs for data exchange</li>
-<li><strong>Message Queues</strong>: Reliable message processing</li>
+<li><strong>Primary Platform</strong>: Microsoft SQL Server 2019+</li>
+<li><strong>Cloud Integration</strong>: Azure SQL Database and Azure SQL Managed Instance</li>
+<li><strong>Data Warehouse</strong>: Azure Synapse Analytics</li>
+<li><strong>Integration Tools</strong>: SQL Server Integration Services (SSIS)</li>
+<li><strong>Monitoring</strong>: SQL Server Management Studio, Azure Monitor</li>
 </ul>
-<h3 id="batch-integration">Batch Integration</h3>
+<h2 id="data-model-and-schema">Data Model and Schema</h2>
+<h3 id="forecasting-database-integration">Forecasting Database Integration</h3>
 <ul>
-<li><strong>ETL Processes</strong>: Extract, transform, and load operations</li>
-<li><strong>Scheduled Jobs</strong>: Regular data synchronization</li>
-<li><strong>Data Validation</strong>: Comprehensive data quality checks</li>
-<li><strong>Error Recovery</strong>: Robust error handling and retry mechanisms</li>
+<li><strong><a href="20250718_Forecasting_DatabaseIntegration_TechnicalSpec/">Forecasting Database Integration</a></strong> - Comprehensive forecasting database specifications</li>
+<li><strong><a href="20250702_Forecasting_DataIntegration_TechnicalSpec.md">Forecasting Data Integration</a></strong> - Data integration technical specifications</li>
+<li><strong><a href="20250718_Forecasting_BillableAccounts_TechnicalSpec.md">Billable Accounts Technical Spec</a></strong> - Billable accounts database design</li>
+<li><strong><a href="20250724_PayrollData_DatabaseQueries_TechnicalSpec/">Payroll Data Database Queries</a></strong> - Payroll data query specifications</li>
 </ul>
-<h2 id="performance-optimization">Performance Optimization</h2>
-<h3 id="query-optimization">Query Optimization</h3>
+<h3 id="contract-data-management">Contract Data Management</h3>
 <ul>
-<li><strong>Index Strategy</strong>: Optimal index design for performance</li>
-<li><strong>Query Tuning</strong>: SQL query optimization techniques</li>
-<li><strong>Execution Plans</strong>: Analysis and optimization of execution plans</li>
-<li><strong>Statistics Management</strong>: Database statistics maintenance</li>
+<li><strong><a href="20250718_Contracts_DataDictionary_TechnicalSpec/">Contracts Data Dictionary</a></strong> - Comprehensive contract data dictionary</li>
+<li>Contract entity relationships and data model</li>
+<li>Contract type-specific data structures</li>
+<li>Billing integration data mappings</li>
+<li>Historical data preservation and archival</li>
 </ul>
-<h3 id="storage-optimization">Storage Optimization</h3>
+<h3 id="core-data-entities">Core Data Entities</h3>
 <ul>
-<li><strong>Partitioning</strong>: Table and index partitioning strategies</li>
-<li><strong>Compression</strong>: Data compression techniques</li>
-<li><strong>Archiving</strong>: Historical data archiving strategies</li>
-<li><strong>Capacity Planning</strong>: Storage capacity planning and management</li>
+<li><strong>Customer Sites</strong> - Site information, location data, and operational details</li>
+<li><strong>Contracts</strong> - Contract details, terms, and billing configurations</li>
+<li><strong>Billing Data</strong> - Invoice information, payment records, and financial transactions</li>
+<li><strong>Forecasting Data</strong> - Revenue projections, statistical data, and performance metrics</li>
+<li><strong>User Management</strong> - User accounts, roles, and access permissions</li>
+</ul>
+<h2 id="data-integration-architecture">Data Integration Architecture</h2>
+<h3 id="integration-patterns">Integration Patterns</h3>
+<ul>
+<li><strong>Real-time Integration</strong> - Live data synchronization and updates</li>
+<li><strong>Batch Processing</strong> - Scheduled data extraction, transformation, and loading</li>
+<li><strong>Event-Driven Integration</strong> - Trigger-based data processing and updates</li>
+<li><strong>API-Based Integration</strong> - RESTful API data exchange and synchronization</li>
+<li><strong>File-Based Integration</strong> - Structured file import and export processes</li>
+</ul>
+<h3 id="data-transformation">Data Transformation</h3>
+<ul>
+<li><strong>ETL Processes</strong> - Extract, Transform, Load operations</li>
+<li><strong>Data Cleansing</strong> - Data quality validation and correction</li>
+<li><strong>Data Mapping</strong> - Source-to-target data field mapping</li>
+<li><strong>Business Rule Application</strong> - Data transformation based on business logic</li>
+<li><strong>Error Handling</strong> - Data validation and error recovery procedures</li>
+</ul>
+<h3 id="integration-points">Integration Points</h3>
+<ul>
+<li><strong><a href="../integrations/20250724_EDW_Integration_TechnicalSpec/">EDW Integration</a></strong> - Enterprise Data Warehouse connectivity</li>
+<li><strong>PowerBill System Integration</strong> - Billing system data synchronization</li>
+<li><strong>Forecasting System Integration</strong> - Forecasting data management and analytics</li>
+<li><strong>External System Integration</strong> - Third-party system data exchange</li>
+</ul>
+<h2 id="database-performance-and-optimization">Database Performance and Optimization</h2>
+<h3 id="performance-monitoring">Performance Monitoring</h3>
+<ul>
+<li>Query performance analysis and optimization</li>
+<li>Index usage and optimization strategies</li>
+<li>Resource utilization monitoring and alerting</li>
+<li>Capacity planning and growth management</li>
+<li>Performance baseline establishment and tracking</li>
+</ul>
+<h3 id="optimization-strategies">Optimization Strategies</h3>
+<ul>
+<li><strong>Indexing Strategy</strong> - Optimal index design and maintenance</li>
+<li><strong>Query Optimization</strong> - SQL query performance tuning</li>
+<li><strong>Partitioning</strong> - Table and index partitioning for large datasets</li>
+<li><strong>Archival Strategy</strong> - Historical data management and archival</li>
+<li><strong>Caching</strong> - Database and application-level caching strategies</li>
+</ul>
+<h3 id="capacity-management">Capacity Management</h3>
+<ul>
+<li>Storage capacity planning and monitoring</li>
+<li>Performance scaling and resource allocation</li>
+<li>Backup storage management and optimization</li>
+<li>Archive storage strategy and implementation</li>
+<li>Disaster recovery capacity planning</li>
 </ul>
 <h2 id="data-security-and-compliance">Data Security and Compliance</h2>
 <h3 id="security-framework">Security Framework</h3>
 <ul>
-<li><strong>Access Control</strong>: Role-based access control (RBAC)</li>
-<li><strong>Data Encryption</strong>: Encryption at rest and in transit</li>
-<li><strong>Audit Logging</strong>: Comprehensive audit trail</li>
-<li><strong>Row-Level Security</strong>: Fine-grained access control</li>
+<li><strong>Access Control</strong> - Role-based database access and permissions</li>
+<li><strong>Data Encryption</strong> - Encryption at rest and in transit</li>
+<li><strong>Audit Logging</strong> - Comprehensive database activity logging</li>
+<li><strong>Vulnerability Management</strong> - Security assessment and remediation</li>
+<li><strong>Compliance Monitoring</strong> - Regulatory compliance and reporting</li>
 </ul>
-<h3 id="compliance-standards">Compliance Standards</h3>
+<h3 id="data-protection">Data Protection</h3>
 <ul>
-<li><strong>Data Privacy</strong>: GDPR and CCPA compliance</li>
-<li><strong>Financial Regulations</strong>: SOX compliance for financial data</li>
-<li><strong>Audit Requirements</strong>: Comprehensive audit logging</li>
-<li><strong>Data Retention</strong>: Data retention and purging policies</li>
-</ul>
-<h2 id="data-quality-management">Data Quality Management</h2>
-<h3 id="data-validation">Data Validation</h3>
-<ul>
-<li><strong>Schema Validation</strong>: Structural data validation</li>
-<li><strong>Business Rules</strong>: Business logic validation</li>
-<li><strong>Referential Integrity</strong>: Constraint enforcement</li>
-<li><strong>Data Profiling</strong>: Data quality assessment</li>
-</ul>
-<h3 id="data-monitoring">Data Monitoring</h3>
-<ul>
-<li><strong>Quality Metrics</strong>: Data quality measurement</li>
-<li><strong>Anomaly Detection</strong>: Automated anomaly detection</li>
-<li><strong>Alerting</strong>: Data quality alerts and notifications</li>
-<li><strong>Reporting</strong>: Data quality reporting and dashboards</li>
+<li><strong>Sensitive Data Identification</strong> - Classification and protection of sensitive information</li>
+<li><strong>Data Masking</strong> - Production data protection in non-production environments</li>
+<li><strong>Backup Security</strong> - Secure backup storage and access controls</li>
+<li><strong>Recovery Procedures</strong> - Secure data recovery and restoration processes</li>
+<li><strong>Incident Response</strong> - Data breach detection and response procedures</li>
 </ul>
 <h2 id="backup-and-recovery">Backup and Recovery</h2>
 <h3 id="backup-strategy">Backup Strategy</h3>
 <ul>
-<li><strong>Full Backups</strong>: Complete database backups</li>
-<li><strong>Incremental Backups</strong>: Incremental backup strategy</li>
-<li><strong>Transaction Log Backups</strong>: Transaction log management</li>
-<li><strong>Cross-Region Backups</strong>: Geographic backup distribution</li>
+<li><strong>Full Backups</strong> - Complete database backup procedures</li>
+<li><strong>Incremental Backups</strong> - Change-based backup optimization</li>
+<li><strong>Transaction Log Backups</strong> - Point-in-time recovery capability</li>
+<li><strong>Cross-Region Backups</strong> - Geographic backup distribution</li>
+<li><strong>Backup Validation</strong> - Automated backup integrity verification</li>
 </ul>
-<h3 id="recovery-procedures">Recovery Procedures</h3>
+<h3 id="disaster-recovery">Disaster Recovery</h3>
 <ul>
-<li><strong>Point-in-Time Recovery</strong>: Granular recovery capabilities</li>
-<li><strong>Disaster Recovery</strong>: Comprehensive disaster recovery plan</li>
-<li><strong>High Availability</strong>: High availability architecture</li>
-<li><strong>Failover Procedures</strong>: Automated failover mechanisms</li>
+<li><strong>Recovery Time Objectives (RTO)</strong> - Target recovery time specifications</li>
+<li><strong>Recovery Point Objectives (RPO)</strong> - Data loss tolerance specifications</li>
+<li><strong>Failover Procedures</strong> - Automated and manual failover processes</li>
+<li><strong>Failback Procedures</strong> - Primary system restoration processes</li>
+<li><strong>Testing and Validation</strong> - Regular disaster recovery testing</li>
 </ul>
 <h2 id="database-administration">Database Administration</h2>
-<h3 id="administrative-tasks">Administrative Tasks</h3>
+<h3 id="administrative-procedures">Administrative Procedures</h3>
 <ul>
-<li><strong>User Management</strong>: Database user and role management</li>
-<li><strong>Performance Monitoring</strong>: Database performance monitoring</li>
-<li><strong>Maintenance Tasks</strong>: Regular maintenance procedures</li>
-<li><strong>Capacity Planning</strong>: Database capacity planning</li>
-</ul>
-<h3 id="monitoring-and-alerting">Monitoring and Alerting</h3>
-<ul>
-<li><strong>Performance Metrics</strong>: Database performance monitoring</li>
-<li><strong>Health Checks</strong>: Automated health monitoring</li>
-<li><strong>Alert Configuration</strong>: Proactive alerting setup</li>
-<li><strong>Reporting</strong>: Administrative reporting and dashboards</li>
-</ul>
-<h2 id="development-standards">Development Standards</h2>
-<h3 id="database-development">Database Development</h3>
-<ul>
-<li><strong>Coding Standards</strong>: SQL coding standards and best practices</li>
-<li><strong>Version Control</strong>: Database version control procedures</li>
-<li><strong>Testing</strong>: Database testing methodologies</li>
-<li><strong>Deployment</strong>: Database deployment procedures</li>
+<li><strong>Database Maintenance</strong> - Regular maintenance tasks and schedules</li>
+<li><strong>User Management</strong> - Database user account and permission management</li>
+<li><strong>Schema Management</strong> - Database schema changes and version control</li>
+<li><strong>Performance Tuning</strong> - Ongoing performance optimization activities</li>
+<li><strong>Monitoring and Alerting</strong> - Proactive monitoring and issue detection</li>
 </ul>
 <h3 id="change-management">Change Management</h3>
 <ul>
-<li><strong>Schema Changes</strong>: Database schema change management</li>
-<li><strong>Migration Scripts</strong>: Data migration procedures</li>
-<li><strong>Rollback Procedures</strong>: Change rollback capabilities</li>
-<li><strong>Documentation</strong>: Change documentation requirements</li>
+<li><strong>Schema Change Control</strong> - Controlled database schema modifications</li>
+<li><strong>Data Migration</strong> - Safe data migration and transformation procedures</li>
+<li><strong>Version Control</strong> - Database schema and script version management</li>
+<li><strong>Testing Procedures</strong> - Database change testing and validation</li>
+<li><strong>Rollback Procedures</strong> - Change rollback and recovery processes</li>
 </ul>
 <h2 id="related-documentation">Related Documentation</h2>
+<h3 id="technical-architecture">Technical Architecture</h3>
 <ul>
-<li><a href="../backend/20250718_Forecasting_TechnicalArchitecture_APIDesign/">Technical Architecture</a> ✓ VERIFIED</li>
-<li><a href="../integrations/20250718_Architecture_IntegrationStrategy_HybridConnections/">Integration Strategy</a> ✓ VERIFIED</li>
-<li><a href="../../business-rules/">Business Rules</a> ✓ VERIFIED</li>
-<li><a href="../../configuration/">System Configuration</a> ✓ VERIFIED</li>
+<li><strong><a href="../backend/">Backend Technical Architecture</a></strong> - Backend system integration</li>
+<li><strong><a href="../integrations/">Integration Architecture</a></strong> - System integration specifications</li>
+<li><strong><a href="../api/">API Documentation</a></strong> - Database API specifications</li>
 </ul>
-<h2 id="quick-links">Quick Links</h2>
+<h3 id="business-rules">Business Rules</h3>
 <ul>
-<li><a href="../../configuration/system-settings/20250718_Development_Standards_ComprehensiveGuide/">Development Standards</a></li>
-<li><a href="../backend/20250718_Architecture_ALMStrategy_PowerPlatform/">ALM Strategy</a></li>
-<li><a href="../../configuration/system-settings/20250718_Architecture_LicensingAnalysis_PowerPlatform/">Power Platform Licensing</a></li>
-<li><a href="../../configuration/system-settings/20250718_Development_DefinitionOfDone_ComprehensiveGuide/">Definition of Done</a></li>
+<li><strong><a href="../../standards/data-quality-standards/">Data Quality Standards</a></strong> - Data quality requirements</li>
+<li><strong><a href="../../standards/data-synchronization-standards/">Data Synchronization Standards</a></strong> - Data synchronization procedures</li>
 </ul>
+<h3 id="configuration-guides">Configuration Guides</h3>
+<ul>
+<li><strong><a href="../../configuration/system-settings/">System Settings</a></strong> - Database configuration procedures</li>
+<li><strong><a href="../../configuration/system-settings/20250724_EDW_Integration_Configuration/">EDW Integration Configuration</a></strong> - EDW setup procedures</li>
+</ul>
+<h2 id="database-catalog">Database Catalog</h2>
+<h3 id="core-databases">Core Databases</h3>
+<table>
+<thead>
+<tr>
+<th>Database</th>
+<th>Purpose</th>
+<th>Technology</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TownePark_Primary</td>
+<td>Main operational database</td>
+<td>SQL Server 2019</td>
+<td>Production</td>
+</tr>
+<tr>
+<td>TownePark_Forecasting</td>
+<td>Forecasting and analytics</td>
+<td>SQL Server 2019</td>
+<td>Production</td>
+</tr>
+<tr>
+<td>TownePark_Integration</td>
+<td>Data integration staging</td>
+<td>SQL Server 2019</td>
+<td>Production</td>
+</tr>
+<tr>
+<td>TownePark_Archive</td>
+<td>Historical data archive</td>
+<td>Azure SQL Database</td>
+<td>Production</td>
+</tr>
+</tbody>
+</table>
+<h3 id="integration-databases">Integration Databases</h3>
+<table>
+<thead>
+<tr>
+<th>Database</th>
+<th>Purpose</th>
+<th>Technology</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EDW_Staging</td>
+<td>Enterprise data warehouse staging</td>
+<td>Azure Synapse</td>
+<td>Production</td>
+</tr>
+<tr>
+<td>PowerBill_Integration</td>
+<td>PowerBill system integration</td>
+<td>SQL Server 2019</td>
+<td>Production</td>
+</tr>
+<tr>
+<td>External_Data_Hub</td>
+<td>External system data exchange</td>
+<td>Azure SQL Database</td>
+<td>Production</td>
+</tr>
+</tbody>
+</table>
+<h2 id="performance-metrics">Performance Metrics</h2>
+<h3 id="database-performance">Database Performance</h3>
+<ul>
+<li>Query response time and throughput</li>
+<li>Resource utilization (CPU, memory, storage)</li>
+<li>Index usage and effectiveness</li>
+<li>Backup and recovery performance</li>
+<li>Data synchronization efficiency</li>
+</ul>
+<h3 id="data-quality-metrics">Data Quality Metrics</h3>
+<ul>
+<li>Data accuracy and completeness</li>
+<li>Data freshness and timeliness</li>
+<li>Integration success rates</li>
+<li>Error rates and resolution time</li>
+<li>Compliance and audit success</li>
+</ul>
+<h2 id="support-and-maintenance">Support and Maintenance</h2>
+<h3 id="database-support">Database Support</h3>
+<ul>
+<li>24/7 database monitoring and support</li>
+<li>Performance tuning and optimization services</li>
+<li>Backup and recovery support</li>
+<li>Security monitoring and incident response</li>
+<li>Capacity planning and scaling support</li>
+</ul>
+<h3 id="maintenance-procedures">Maintenance Procedures</h3>
+<ul>
+<li>Regular database maintenance schedules</li>
+<li>Performance monitoring and optimization</li>
+<li>Security updates and patch management</li>
+<li>Backup validation and testing</li>
+<li>Disaster recovery testing and validation</li>
+</ul>
+<h2 id="latest-updates">Latest Updates</h2>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Date</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="20250718_Forecasting_DatabaseIntegration_TechnicalSpec/">Forecasting Database Integration</a></td>
+<td>2025-07-18</td>
+<td>Forecasting database specifications</td>
+</tr>
+<tr>
+<td><a href="20250718_Contracts_DataDictionary_TechnicalSpec/">Contracts Data Dictionary</a></td>
+<td>2025-07-18</td>
+<td>Contract data dictionary</td>
+</tr>
+<tr>
+<td><a href="20250702_Forecasting_DataIntegration_TechnicalSpec.md">Forecasting Data Integration</a></td>
+<td>2025-07-02</td>
+<td>Data integration specifications</td>
+</tr>
+<tr>
+<td><a href="20250718_Forecasting_BillableAccounts_TechnicalSpec.md">Billable Accounts Spec</a></td>
+<td>2025-07-18</td>
+<td>Billable accounts database design</td>
+</tr>
+<tr>
+<td><a href="20250724_PayrollData_DatabaseQueries_TechnicalSpec/">Payroll Data Queries</a></td>
+<td>2025-07-24</td>
+<td>Payroll data query specifications</td>
+</tr>
+</tbody>
+</table>
 
 
 

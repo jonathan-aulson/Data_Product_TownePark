@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Comprehensive overview of business rules governing contract management, configuration, and processing across all contract types">
+        <meta name="description" content="Comprehensive overview of business rules governing contract management, billing types, and contract configurations across all contract types in the Towne Park system">
       
       
       
@@ -24,7 +24,7 @@
     
     
       
-        <title>Contract Business Rules - Overview - Towne Park Data Product</title>
+        <title>Towne Park Contract Business Rules - Overview - Towne Park Data Product</title>
       
     
     
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Contract Business Rules - Overview
+              Towne Park Contract Business Rules - Overview
             
           </span>
         </div>
@@ -350,7 +350,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync/" class="md-tabs__link">
+        <a href="../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync.md" class="md-tabs__link">
           
   
   
@@ -3081,37 +3081,79 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#business-rules-categories" class="md-nav__link">
+  <a href="#purpose" class="md-nav__link">
     <span class="md-ellipsis">
-      Business Rules Categories
+      Purpose
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Business Rules Categories">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contract-types-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contract Types Covered
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contract Types Covered">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#comprehensive-contract-rules" class="md-nav__link">
+  <a href="#primary-contract-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Comprehensive Contract Rules
+      Primary Contract Types
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#contract-type-configuration-rules" class="md-nav__link">
+  <a href="#supporting-business-rules" class="md-nav__link">
     <span class="md-ellipsis">
-      Contract Type Configuration Rules
+      Supporting Business Rules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-business-rule-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Business Rule Categories
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Business Rule Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contract-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contract Configuration
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#legacy-categories" class="md-nav__link">
+  <a href="#billing-calculations" class="md-nav__link">
     <span class="md-ellipsis">
-      Legacy Categories
+      Billing Calculations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contract-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contract Management
     </span>
   </a>
   
@@ -3133,27 +3175,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#contract-types-business-rules" class="md-nav__link">
+  <a href="#system-integration" class="md-nav__link">
     <span class="md-ellipsis">
-      Contract Types Business Rules
+      System Integration
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#billing-business-rules" class="md-nav__link">
+  <a href="#configuration-guides" class="md-nav__link">
     <span class="md-ellipsis">
-      Billing Business Rules
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#technical-specifications" class="md-nav__link">
-    <span class="md-ellipsis">
-      Technical Specifications
+      Configuration Guides
     </span>
   </a>
   
@@ -3169,18 +3202,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#system-configuration" class="md-nav__link">
+  <a href="#technical-specifications" class="md-nav__link">
     <span class="md-ellipsis">
-      System Configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#system-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      System Overview
+      Technical Specifications
     </span>
   </a>
   
@@ -3192,55 +3216,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#contract-type-categories" class="md-nav__link">
+  <a href="#navigation" class="md-nav__link">
     <span class="md-ellipsis">
-      Contract Type Categories
+      Navigation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Contract Type Categories">
+    <nav class="md-nav" aria-label="Navigation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#fixed-fee-contracts" class="md-nav__link">
+  <a href="#quick-access" class="md-nav__link">
     <span class="md-ellipsis">
-      Fixed Fee Contracts
+      Quick Access
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#revenue-share-contracts" class="md-nav__link">
+  <a href="#contract-type-navigation" class="md-nav__link">
     <span class="md-ellipsis">
-      Revenue Share Contracts
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#per-labor-hour-contracts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Per Labor Hour Contracts
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#management-agreement-contracts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Management Agreement Contracts
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hybrid-contracts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hybrid Contracts
+      Contract Type Navigation
     </span>
   </a>
   
@@ -3252,69 +3249,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#contract-processing-rules" class="md-nav__link">
+  <a href="#latest-updates" class="md-nav__link">
     <span class="md-ellipsis">
-      Contract Processing Rules
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Contract Processing Rules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuration-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration Requirements
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#escalation-procedures" class="md-nav__link">
-    <span class="md-ellipsis">
-      Escalation Procedures
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#validation-and-compliance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Validation and Compliance
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#integration-rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      Integration Rules
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compliance-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compliance Requirements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#maintenance-and-updates" class="md-nav__link">
-    <span class="md-ellipsis">
-      Maintenance and Updates
+      Latest Updates
     </span>
   </a>
   
@@ -4474,6 +4411,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
 
       </a>
     </li>
@@ -4889,6 +4833,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
 
       </a>
     </li>
@@ -5289,6 +5240,13 @@
     Sprint 26 Features Technical Spec
     
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
   
 
       </a>
@@ -6762,6 +6720,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
 
       </a>
     </li>
@@ -7625,6 +7590,13 @@
     Sprint 26 Features User Processes
     
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
   
 
       </a>
@@ -8951,7 +8923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync/" class="md-nav__link">
+      <a href="../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync.md" class="md-nav__link">
         
   
   
@@ -8959,13 +8931,6 @@
     Architecture Team Meeting Notes
     
   </span>
-  
-    
-  
-  
-    <span class="md-status md-status--Active"></span>
-  
-
   
 
       </a>
@@ -9999,37 +9964,79 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#business-rules-categories" class="md-nav__link">
+  <a href="#purpose" class="md-nav__link">
     <span class="md-ellipsis">
-      Business Rules Categories
+      Purpose
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Business Rules Categories">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contract-types-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contract Types Covered
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contract Types Covered">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#comprehensive-contract-rules" class="md-nav__link">
+  <a href="#primary-contract-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Comprehensive Contract Rules
+      Primary Contract Types
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#contract-type-configuration-rules" class="md-nav__link">
+  <a href="#supporting-business-rules" class="md-nav__link">
     <span class="md-ellipsis">
-      Contract Type Configuration Rules
+      Supporting Business Rules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-business-rule-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Business Rule Categories
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Business Rule Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contract-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contract Configuration
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#legacy-categories" class="md-nav__link">
+  <a href="#billing-calculations" class="md-nav__link">
     <span class="md-ellipsis">
-      Legacy Categories
+      Billing Calculations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contract-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contract Management
     </span>
   </a>
   
@@ -10051,27 +10058,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#contract-types-business-rules" class="md-nav__link">
+  <a href="#system-integration" class="md-nav__link">
     <span class="md-ellipsis">
-      Contract Types Business Rules
+      System Integration
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#billing-business-rules" class="md-nav__link">
+  <a href="#configuration-guides" class="md-nav__link">
     <span class="md-ellipsis">
-      Billing Business Rules
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#technical-specifications" class="md-nav__link">
-    <span class="md-ellipsis">
-      Technical Specifications
+      Configuration Guides
     </span>
   </a>
   
@@ -10087,18 +10085,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#system-configuration" class="md-nav__link">
+  <a href="#technical-specifications" class="md-nav__link">
     <span class="md-ellipsis">
-      System Configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#system-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      System Overview
+      Technical Specifications
     </span>
   </a>
   
@@ -10110,55 +10099,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#contract-type-categories" class="md-nav__link">
+  <a href="#navigation" class="md-nav__link">
     <span class="md-ellipsis">
-      Contract Type Categories
+      Navigation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Contract Type Categories">
+    <nav class="md-nav" aria-label="Navigation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#fixed-fee-contracts" class="md-nav__link">
+  <a href="#quick-access" class="md-nav__link">
     <span class="md-ellipsis">
-      Fixed Fee Contracts
+      Quick Access
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#revenue-share-contracts" class="md-nav__link">
+  <a href="#contract-type-navigation" class="md-nav__link">
     <span class="md-ellipsis">
-      Revenue Share Contracts
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#per-labor-hour-contracts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Per Labor Hour Contracts
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#management-agreement-contracts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Management Agreement Contracts
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hybrid-contracts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hybrid Contracts
+      Contract Type Navigation
     </span>
   </a>
   
@@ -10170,69 +10132,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#contract-processing-rules" class="md-nav__link">
+  <a href="#latest-updates" class="md-nav__link">
     <span class="md-ellipsis">
-      Contract Processing Rules
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Contract Processing Rules">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuration-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration Requirements
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#escalation-procedures" class="md-nav__link">
-    <span class="md-ellipsis">
-      Escalation Procedures
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#validation-and-compliance" class="md-nav__link">
-    <span class="md-ellipsis">
-      Validation and Compliance
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#integration-rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      Integration Rules
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#compliance-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compliance Requirements
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#maintenance-and-updates" class="md-nav__link">
-    <span class="md-ellipsis">
-      Maintenance and Updates
+      Latest Updates
     </span>
   </a>
   
@@ -10254,134 +10156,135 @@
 
 
 
-<h1 id="contract-business-rules-overview">Contract Business Rules - Overview</h1>
-<p>This section contains comprehensive business rules that govern all aspects of contract management, including configuration, processing, escalation, and validation across all contract types.</p>
-<h2 id="business-rules-categories">Business Rules Categories</h2>
-<h3 id="comprehensive-contract-rules">Comprehensive Contract Rules</h3>
+<h1 id="contract-business-rules-overview">Contract Business Rules Overview</h1>
+<h2 id="purpose">Purpose</h2>
+<p>This section contains comprehensive business rules governing contract management, billing calculations, and contract configurations across all contract types supported by the Towne Park system.</p>
+<h2 id="contract-types-covered">Contract Types Covered</h2>
+<h3 id="primary-contract-types">Primary Contract Types</h3>
 <ul>
-<li><a href="20250716_Contracts_BusinessRules_Comprehensive/">Contracts Business Rules - Comprehensive</a></li>
+<li><strong><a href="20250724_FixedFee_ContractConfiguration_BusinessRules/">Fixed Fee Contracts</a></strong> - Fixed monthly fee arrangements</li>
+<li><strong><a href="20250724_PerLaborHour_ContractConfiguration_BusinessRules/">Per Labor Hour Contracts</a></strong> - Hourly billing arrangements</li>
+<li><strong><a href="20250724_RevenueShare_ContractConfiguration_BusinessRules/">Revenue Share Contracts</a></strong> - Percentage-based revenue sharing</li>
+<li><strong><a href="20250724_ManagementAgreement_ContractConfiguration_BusinessRules/">Management Agreement Contracts</a></strong> - Full management service agreements</li>
+<li><strong><a href="20250724_HybridContract_ContractConfiguration_BusinessRules/">Hybrid Contracts</a></strong> - Combined billing methodologies</li>
 </ul>
-<h3 id="contract-type-configuration-rules">Contract Type Configuration Rules</h3>
+<h3 id="supporting-business-rules">Supporting Business Rules</h3>
 <ul>
-<li><a href="20250724_FixedFee_ContractConfiguration_BusinessRules/">Fixed Fee Contract Configuration Business Rules</a></li>
-<li><a href="20250724_ManagementAgreement_ContractConfiguration_BusinessRules/">Management Agreement Contract Configuration Business Rules</a></li>
-<li><a href="20250724_HybridContract_ContractConfiguration_BusinessRules/">Hybrid Contract Configuration Business Rules</a></li>
-<li><a href="20250724_RevenueShare_ContractConfiguration_BusinessRules/">Revenue Share Contract Configuration Business Rules</a></li>
-<li><a href="20250724_PerLaborHour_ContractConfiguration_BusinessRules/">Per Labor Hour Contract Configuration Business Rules</a></li>
+<li><strong><a href="contract-escalation-rules/index.md">Contract Escalation Rules</a></strong> - Annual rate increases and adjustments</li>
+<li><strong><a href="plh-rate-escalation/index.md">PLH Rate Escalation</a></strong> - Per labor hour rate escalation policies</li>
+<li><strong><a href="service-fee-escalation-eci/index.md">Service Fee Escalation ECI</a></strong> - Employment Cost Index adjustments</li>
 </ul>
-<h3 id="legacy-categories">Legacy Categories</h3>
+<h2 id="key-business-rule-categories">Key Business Rule Categories</h2>
+<h3 id="contract-configuration">Contract Configuration</h3>
 <ul>
-<li><a href="contract-escalation-rules/">Contract Escalation Rules</a></li>
-<li><a href="overview/">Overview</a></li>
-<li><a href="plh-rate-escalation/">PLH Rate Escalation</a></li>
-<li><a href="service-fee-escalation-eci/">Service Fee Escalation ECI</a></li>
+<li>Contract setup and initialization procedures</li>
+<li>Required fields and validation rules</li>
+<li>Contract type-specific configuration requirements</li>
+<li>Integration with billing systems</li>
+</ul>
+<h3 id="billing-calculations">Billing Calculations</h3>
+<ul>
+<li>Revenue calculation methodologies by contract type</li>
+<li>Fee structure definitions and applications</li>
+<li>Escalation and adjustment calculations</li>
+<li>Validation and verification procedures</li>
+</ul>
+<h3 id="contract-management">Contract Management</h3>
+<ul>
+<li>Contract lifecycle management rules</li>
+<li>Amendment and modification procedures</li>
+<li>Renewal and termination processes</li>
+<li>Compliance and audit requirements</li>
 </ul>
 <h2 id="related-documentation">Related Documentation</h2>
-<h3 id="contract-types-business-rules">Contract Types Business Rules</h3>
+<h3 id="system-integration">System Integration</h3>
 <ul>
-<li><a href="../contract-types/">Contract Types Business Rules</a></li>
+<li><strong><a href="../../systems/billing/">Billing System Integration</a></strong> - How contracts integrate with billing</li>
+<li><strong><a href="../../systems/contracts/">Contract System Overview</a></strong> - Technical contract management system</li>
 </ul>
-<h3 id="billing-business-rules">Billing Business Rules</h3>
+<h3 id="configuration-guides">Configuration Guides</h3>
 <ul>
-<li><a href="../billing/">Billing Business Rules</a></li>
-</ul>
-<h3 id="technical-specifications">Technical Specifications</h3>
-<ul>
-<li><a href="../../technical/backend/">Contract Technical Specifications</a></li>
-<li><a href="../../technical/database/">Database Technical Specifications</a></li>
+<li><strong><a href="../../configuration/contracts/">Contract Configuration</a></strong> - Setup and configuration procedures</li>
+<li><strong><a href="../../configuration/system-settings/">System Settings</a></strong> - Related system configuration</li>
 </ul>
 <h3 id="user-processes">User Processes</h3>
 <ul>
-<li><a href="../../user-processes/contract-admin/">Contract Admin User Processes</a></li>
+<li><strong><a href="../../user-processes/contract-admin/">Contract Admin Processes</a></strong> - Administrative procedures</li>
+<li><strong><a href="../../user-processes/billing-admin/">Billing Admin Processes</a></strong> - Billing-related processes</li>
 </ul>
-<h3 id="system-configuration">System Configuration</h3>
+<h3 id="technical-specifications">Technical Specifications</h3>
 <ul>
-<li><a href="../../configuration/contracts/">Contract Configuration</a></li>
-<li><a href="../../configuration/contract-setup/">Contract Setup</a></li>
+<li><strong><a href="../../technical/backend/">Backend Technical Specs</a></strong> - Technical implementation details</li>
+<li><strong><a href="../../technical/database/">Database Integration</a></strong> - Data model and integration</li>
 </ul>
-<h3 id="system-overview">System Overview</h3>
+<h2 id="navigation">Navigation</h2>
+<h3 id="quick-access">Quick Access</h3>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="20250716_Contracts_BusinessRules_Comprehensive/">Comprehensive Contract Rules</a></td>
+<td>Complete contract business rules overview</td>
+</tr>
+<tr>
+<td><a href="20250724_FixedFee_ContractConfiguration_BusinessRules/">Fixed Fee Configuration</a></td>
+<td>Fixed fee contract rules</td>
+</tr>
+<tr>
+<td><a href="20250724_RevenueShare_ContractConfiguration_BusinessRules/">Revenue Share Configuration</a></td>
+<td>Revenue sharing rules</td>
+</tr>
+<tr>
+<td><a href="20250724_ManagementAgreement_ContractConfiguration_BusinessRules/">Management Agreement Rules</a></td>
+<td>Management agreement policies</td>
+</tr>
+</tbody>
+</table>
+<h3 id="contract-type-navigation">Contract Type Navigation</h3>
 <ul>
-<li><a href="../../systems/contracts/">Contract Systems</a></li>
+<li><strong>Fixed Fee</strong>: <a href="20250724_FixedFee_ContractConfiguration_BusinessRules/">Business Rules</a></li>
+<li><strong>Per Labor Hour</strong>: <a href="20250724_PerLaborHour_ContractConfiguration_BusinessRules/">Business Rules</a></li>
+<li><strong>Revenue Share</strong>: <a href="20250724_RevenueShare_ContractConfiguration_BusinessRules/">Business Rules</a></li>
+<li><strong>Management Agreement</strong>: <a href="20250724_ManagementAgreement_ContractConfiguration_BusinessRules/">Business Rules</a></li>
+<li><strong>Hybrid Contracts</strong>: <a href="20250724_HybridContract_ContractConfiguration_BusinessRules/">Business Rules</a></li>
 </ul>
-<h2 id="contract-type-categories">Contract Type Categories</h2>
-<h3 id="fixed-fee-contracts">Fixed Fee Contracts</h3>
-<p>Business rules governing fixed fee contract management:
-- Fee calculation methods
-- Escalation procedures
-- Payment schedules
-- Performance metrics
-- Modification procedures</p>
-<h3 id="revenue-share-contracts">Revenue Share Contracts</h3>
-<p>Business rules for revenue sharing arrangements:
-- Revenue calculation formulas
-- Percentage allocations
-- Reporting requirements
-- Audit procedures
-- Dispute resolution</p>
-<h3 id="per-labor-hour-contracts">Per Labor Hour Contracts</h3>
-<p>Business rules for hourly-based contracts:
-- Rate structures
-- Time tracking requirements
-- Billing procedures
-- Rate escalations
-- Performance standards</p>
-<h3 id="management-agreement-contracts">Management Agreement Contracts</h3>
-<p>Business rules for management agreements:
-- Management fee calculations
-- Service level agreements
-- Performance metrics
-- Reporting requirements
-- Renewal procedures</p>
-<h3 id="hybrid-contracts">Hybrid Contracts</h3>
-<p>Business rules for combination contract types:
-- Component allocation rules
-- Calculation priorities
-- Reporting requirements
-- Modification procedures
-- Validation rules</p>
-<h2 id="contract-processing-rules">Contract Processing Rules</h2>
-<h3 id="configuration-requirements">Configuration Requirements</h3>
-<p>Rules governing contract setup and configuration:
-- Required data elements
-- Validation procedures
-- Approval workflows
-- Documentation requirements
-- System integration points</p>
-<h3 id="escalation-procedures">Escalation Procedures</h3>
-<p>Rules governing contract escalations:
-- Rate escalation formulas
-- Timing requirements
-- Approval processes
-- Notification procedures
-- Documentation standards</p>
-<h3 id="validation-and-compliance">Validation and Compliance</h3>
-<p>Rules ensuring contract accuracy and compliance:
-- Data validation procedures
-- Compliance checks
-- Audit requirements
-- Error handling
-- Quality assurance</p>
-<h3 id="integration-rules">Integration Rules</h3>
-<p>Rules governing contract system integrations:
-- Data synchronization
-- System interfaces
-- Error handling
-- Performance standards
-- Monitoring requirements</p>
-<h2 id="compliance-requirements">Compliance Requirements</h2>
-<p>All contract business rules must comply with:
-- Legal and regulatory requirements
-- Financial reporting standards
-- Audit requirements
-- Data privacy regulations
-- Security standards</p>
-<h2 id="maintenance-and-updates">Maintenance and Updates</h2>
-<p>Contract business rules are reviewed and updated regularly to ensure:
-- Accuracy with system implementation
-- Compliance with legal requirements
-- Integration with related systems
-- Performance optimization
-- User experience enhancement</p>
+<h2 id="latest-updates">Latest Updates</h2>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Date</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="20250724_FixedFee_ContractConfiguration_BusinessRules/">Fixed Fee Rules</a></td>
+<td>2025-07-24</td>
+<td>Fixed fee contract configuration rules</td>
+</tr>
+<tr>
+<td><a href="20250724_RevenueShare_ContractConfiguration_BusinessRules/">Revenue Share Rules</a></td>
+<td>2025-07-24</td>
+<td>Revenue sharing calculation rules</td>
+</tr>
+<tr>
+<td><a href="20250724_ManagementAgreement_ContractConfiguration_BusinessRules/">Management Agreement Rules</a></td>
+<td>2025-07-24</td>
+<td>Management agreement policies</td>
+</tr>
+<tr>
+<td><a href="20250724_HybridContract_ContractConfiguration_BusinessRules/">Hybrid Contract Rules</a></td>
+<td>2025-07-24</td>
+<td>Hybrid contract configuration</td>
+</tr>
+</tbody>
+</table>
 
 
 

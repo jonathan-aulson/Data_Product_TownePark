@@ -417,8 +417,8 @@ This technical specification defines [specific technical implementation] for [bu
 ### Complementary Templates
 - [API Documentation Standards](api-documentation-standards.md)
 - [Integration Specification Template](integration-spec-template.md)
-- [Business Rules Template](../../business-rules/templates/business-rules-template.md)
-- [User Process Template](../../user-processes/templates/user-process-template.md)
+- [Business Rules Template](../../../business-rules/templates/business-rules-template.md)
+- [User Process Template](../../../user-processes/templates/user-process-template.md)
 
 ### Template Maintenance
 - Templates reviewed quarterly for improvements

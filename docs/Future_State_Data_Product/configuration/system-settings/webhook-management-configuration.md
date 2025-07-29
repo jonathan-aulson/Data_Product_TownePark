@@ -1,331 +1,331 @@
 ---
-title: "Webhook Management Configuration Guide Guide"
-description: "Comprehemsive conprehensive configuration guide for webhot cludngn setup, s eetup,csecuruty,imy itotngg, , dttroublerhoobing procldureshooting procedures"
+title: "Webhook Management Configuration Guide"
+description: "Comprehensive configuration guide for webhook management including endpoint setup, security, monitoring, and troubleshooting procedures"
 created_date: 2025-07-24
 last_updated_date: 2025-07-24
 version: 1.0
 status: Active
-owner: "DocueeoTami"n Team
+owner: "Documentation Team"
 systems:
   - RSS
-  - RSS
+  - Billing
   - Integration
 components:
-  - Wobhookss
-  - Coofiiuguration
-  - Event Managementnt Management
+  - Webhooks
+  - Configuration
+  - Event Management
 business_domains:
+  - System Integration
   - Event Processing
-  - Event Processing
-  - Real-time Cmmmunimatcoaion
+  - Real-time Communication
 user_roles:
   - System Administrator
-  - DeveloperAdministrator
-  - 
+  - Integration Administrator
+  - Developer
 tags:
-  - webhooks
+  - configuration
   - webhooks
   - integration
-  - event-managementmanagement
+  - event-management
 ---
 
-# Webhook Management Configuration Guide Guide
+# Webhook Management Configuration Guide
 
-## Puppose
+## Purpose
 
-This document provides comprehensive guidange fur coidanceo o ani mguagingnd managsigacross Towne Parkincluding endpoint sucporit sctuf, securgryation, event hanevent hdliling,nmonnioring,oand troublishoon, a procedurend troubleshooting procedures.
+This document provides comprehensive guidance for configuring and managing webhooks across Towne Park systems, including endpoint setup, security configuration, event handling, monitoring, and troubleshooting procedures.
 
-## Webhook Ovevvvew
+## Webhook Overview
 
-### What aat WebhrWkoks
-Ws  HTTP allbacks hat##eak heal-m`co`municmtinbtwnymsbyaically s  AouS dTti whg] specific e -->s occur. Eha    ovi>G ae`effcwaytotfy xtrnl sysms#about#changes orWeventsbwoth ut requCring oonstint gallg
+### What are Webhooks
+Webhooks are HTTP callbacks that enable real-time communication between systems by automatically sending data when specific events occur. They provide an efficient way to notify external systems about changes or events without requiring constant polling.
 
-####Wtbhook Anihutactureon
-```rm
-graph#LR## Webhook Endpoint Setup
-**  A[SouCce Syotim] --> B[Egura*Triggsr]*
- - EBn-d>pC[WfbhookPPd specor]cation
- - ACu-t>-D[HTTP POST]Timeout and retry parameters
-**CDo-n>fE[Targrn Eadpoant]:**
- ```Ey-a>mF[RepsoHendr]
-   rFs-s>_G[Ritey L_gse]
+### Webhook Architecture
+```mermaid
+graph LR
+    A[Source System] --> B[Event Trigger]
+    B --> C[Webhook Processor]
+    C --> D[HTTP POST]
+    D --> E[Target Endpoint]
+    E --> F[Response Handler]
+    F --> G[Retry Logic]
+```
+
+## Webhook Configuration
+
+### Endpoint Configuration
+
+#### Webhook Endpoint Setup
+**Configuration Area:** Webhook endpoint registration and management  
+**Required Settings:**
+- Endpoint URL configuration
+- HTTP method specification
+- Authentication settings
+- Timeout and retry parameters
+
+**Configuration Parameters:**
+```yaml
+webhook_endpoints:
+  rss_file_processed:
     url: "https://api.townepark.com/webhooks/rss/file-processed"
     method: "POST"
     timeout_seconds: 30
     max_retries: 3
-    retry_intConfivu: [30, 60, 120]
-hentication:
-#### W     t Ee: "bet Seaupr_token"
-**Conf gurathoe Area:** Wr: "Au endpoint registration and management  
-**Req i ed Settingso**
--kendpoint men configurt
--bHTTPilling_nspecificationgenerated:
-- Authenticauron s:thing/api.townepark.com/webhooks/billing/invoice-generated"
-- Timeout and methSipertmeserd
-45
-**Ctniigu 5i Paramers:**
-```ym
-wethook__nnpointsa  authentication:
-      fily_pr cessedapi_key"
-      headhttps:/.townepark.coms/rsfile-poceed
+    retry_intervals: [30, 60, 120]
+    authentication:
+      type: "bearer_token"
+      header: "Authorization"
+      token_source: "environment"
+  billing_invoice_generated:
+    url: "https://api.townepark.com/webhooks/billing/invoice-generated"
+    method: "POST"
+    timeout_seconds: 45
+    max_retries: 5
+    retry_intervals: [15, 30, 60, 120, 300]
+    authentication:
+      type: "api_key"
+      header: "X-API-Key"
       key_source: "vault"
-```_seconds3
-    max_retrie: 3
-intervas [30, 60, 120]
-## E uuhbnticarionpon Configuration
-**Confeypa* Ebt ret_tokenypes and subscription management  
-**RequherSerng*Aafharszifica"ery guarantees
-      tenoce*"igvorn amnl
-enbilling_invoice_gen_uasidt
-   rurl:s"sttps://api.town_penk.co/wbhoks/billing/ivoiceerd
-    me  :dt "POST"rue
-    tim out_sdcn:ds [45
-    mrx_reres5
-    r tryitnteyvalses[ 5, 30, 60, 120, 300]      min_file_size: 1024
-    auth  ti ayload_format: "json"
-      vypafaiapi_key:
-      naadtrueX-P-Key
-      k y_soueis: " [u"_"essed"]
+```
+
+#### Event Subscription Configuration
+**Configuration Area:** Event types and subscription management  
+**Required Settings:**
+- Event type definitions
+- Subscription filters
+- Payload format specifications
+- Delivery guarantees
+
+**Configuration Parameters:**
+```yaml
+event_subscriptions:
+  rss_events:
+    file_uploaded:
+      enabled: true
+      endpoints: ["rss_file_processed"]
+      filters:
+        file_types: ["csv", "xlsx"]
+        min_file_size: 1024
+      payload_format: "json"
+    validation_failed:
+      enabled: true
+      endpoints: ["rss_file_processed"]
       filters:
         error_types: ["format_error", "business_rule_violation"]
-  ##    paySubfcrrptiomt: "json"
-**Configuration Arni:** Event_a p   and  ubscription m na eient  : ["billing_invoice_generated"]
-**Required Se tings:**
-- Evfil ers:defni
-- Subs r ptioio_ilterses: ["standard", "adjustment"]
-- Payload format specifications      min_amount: 0.01
-- Delivery guaran ees
+      payload_format: "json"
+  billing_events:
+    invoice_generated:
+      enabled: true
+      endpoints: ["billing_invoice_generated"]
+      filters:
+        invoice_types: ["standard", "adjustment"]
+        min_amount: 0.01
+      payload_format: "json"
+```
 
-**Configur tio  Pay_moterma**t: "json"
+### Security Configuration
+
+#### Authentication Settings
+**Configuration Area:** Webhook security and authentication  
+**Required Settings:**
+- Authentication method configuration
+- Token management procedures
+- Certificate handling
+- IP whitelisting
+
+**Configuration Parameters:**
 ```yaml
-e_subscritions:
-rss_es:
-### ftl _uiloaded:uration
- nabled: ru
-####A cndpoinis: ["rss_fole_prncessedt]ings
-****  fiuSsrs:**
-- Au    filticatison[ cmv , "xlsx"]configuration
-- Toe- Ciin_filf_iize h024
-- IP  paylwad_foimatlisjto
-valiin_faild:
-**Co  fngbleuiomrueters:**
-u     endpoa s: ["rss tokn_p_ocelsed"]ngth: 64
-      fif_rrs:eshold_hours: 6
-        rrrorption_algofhrmat_ rrorES-2bu6ine"s_rule_violation]
-     load_fora: json"
-  billing_events:  api_key:
-    invki_legenerah:d32
-        rotation_days: 90
-      rnap_inttion: "vault_voic_eneed
-      filtk_surity:
-        invoici_typisel["siandasd", "adjtstm:nt"]
-          e_aaobnt: 0.01
-      payloadeformaejso
+security:
+  authentication:
+    bearer_token:
+      token_length: 64
+      token_expiry_hours: 24
+      refresh_threshold_hours: 6
+      encryption_algorithm: "AES-256"
+    api_key:
+      key_length: 32
+      rotation_days: 90
+      storage_location: "vault"
+      encryption_required: true
+  network_security:
+    ip_whitelist:
+      enabled: true
       allowed_ranges:
         - "10.0.0.0/8"
-#   S-cu it"172.16.0.0/12"
+        - "172.16.0.0/12"
         - "192.168.0.0/16"
-#    Authanticateon Slttings
-**Configuration Aiea:** Webhookisecigity :d auhntic tion  equests_per_minute: 100
-**R qu r d St_limit:** 20
-- Auth nticat on mlthdutconfiguronion
-- Tokin manngement prs edur1s
--`Cetificate hanling
-- IP whitlist
+    rate_limiting:
+      requests_per_minute: 100
+      burst_limit: 20
+      block_duration_minutes: 15
+```
 
-**Confiration Pmers**
-```ym
-curity:
-ahnia
-##**bonrtiotokena:** Webhook payload protection and validation  
-  **Retokqu_edngthSe64gs:**
-  - Patokena xpnypthourtin24s
-  - Sirefgnsh_ahrtsh ldehoufsti6- Data sanitization
-    crop`i_aloihm "AES-256"
-  paopi_k_ye:
-      key_lengcy:32
-      rot le n_daysue9
-      st gago_locatthm: "vault2  signature:
-      encryptaln_eequdree:tru    algorithm: "HMAC-SHA256"
- _me:w rk_secu"Xt :ret_source: "vault"
-    ip_w it aosn
-        ables: arua
-      lliowedtrangntrue
-        -yp10.0.0._/8heck: true
-        -oa172.d6.0._/12ize: "1MB"
-        -e"192.168.0.0/16": true
-``rat_
-  ### reqvt tMapenmminue100
-  burslimi20
-  ####blecktdu Tyioneminusndem1s
+#### Payload Security
+**Configuration Area:** Webhook payload protection and validation  
+**Required Settings:**
+- Payload encryption settings
+- Signature verification
+- Content validation rules
+- Data sanitization
+
+**Configuration Parameters:**
+```yaml
+payload_security:
+  encryption:
+    enabled: true
+    algorithm: "AES-256-GCM"
+    key_rotation_days: 30
+  signature:
+    enabled: true
+    algorithm: "HMAC-SHA256"
+    header_name: "X-Webhook-Signature"
+    secret_source: "vault"
+  validation:
+    schema_validation: true
+    content_type_check: true
+    max_payload_size: "1MB"
+    sanitization_enabled: true
+```
+
+### Event Management
+
+#### Event Types and Schemas
 **RSS System Events:**
 ```json
-{#Payoad Scuty
-** A eav** W "sche p"y oad pot ti " anf validale_i" 
-**R"qutndSettings:**
-- Payload  nci_ptionasett"n:sstring",
-- Sig a"ure versite_numb
-- Co tsntnvidaion rul
-- Data sanitization    "processing_status": "enum[success, failed, partial]",
-
-**C"efigrratiod P_rometers:**
-```yamn
-pty:oad_s curity"integer",
-  e"crypror_c
-o   ntebr: true
-    algoimehmtamAES-256-GCMetime"
-    key_rdys: 30
-  sigatur
-   nbed:ru
-    lgorith:HMAC-SHA256
-    "eader_name: "X-Webhook-Svanaturi"ailed": {
-    se"ret_seurce: "vault"
-  valndat_typ
-e   sch"msvvaaidliioa:otrueed",
-    contsna_t"pe_check: tru
-    max_payloa_sze: 1MB"
-    sa i"fz_id": nnabged,tru
+{
+  "file_processed": {
+    "event_type": "rss.file.processed",
+    "schema": {
+      "file_id": "string",
+      "file_name": "string",
+      "site_number": "string",
+      "processing_status": "enum[success, failed, partial]",
+      "record_count": "integer",
+      "error_count": "integer",
+      "timestamp": "datetime"
+    }
+  },
+  "validation_failed": {
+    "event_type": "rss.validation.failed",
+    "schema": {
+      "file_id": "string",
       "file_name": "string",
       "validation_errors": "array",
-  #  ventrMoraneme e
+      "error_count": "integer",
       "timestamp": "datetime"
-   # Evn Tpesand Shma
-**RSS System Events:**
-  }json
-{
-  "filrsed" {
-``  "vetyp": "ss.file.pcesed",
-"shma"{
-   "file_id": "string",
-**Bi  "filenngme": "s ring",
-      "siSy_nusber" E"string",ents:**
-```j  "prcessingus"um[succss, failed, par],
-{  "rcord_count"integer,
-      " "ror_couet": "it_ygep",billing.invoice.generated",
-      "simescamh": ""atetim:"
-}
-  },
-  "valid tionifnilid"d"{ "string",
-    "evcnoe:yps": ""ss.valvdaoion.f i"ed",due_date": "date",
-    "s hems"p {": "datetime"
-      "fi_i""sing",
-      "}nam""string",
-      "valp_ceive_errors"d":array,
-      "erro _"eunt": "integen",
-      "types amp""bidatetimeg.payment.received",
-    }  "schema": {
+    }
   }
 }
 ```
 
-**Bil img Systtm Evdn: "**
+**Billing System Events:**
 ```json
-{ring",
-  "invoi "vgeneraoe:" "{      "payment_date": "date",
-    "  ent_typ"": "bilping.invaice.generated",
-   _"schemm": {
-      "ievoice_it":h"":r "s",      "timestamp": "datetime"
-      "cumer_d": "stg",
-      "si}e_numbr": "r",
-    ``"invieamu" "decimal",
-  "invoic_dt""da",
-  ####"due_dEte"iltdai ",
-      "gimam": "dtetie
-  **}
-Co},nfiguration Area:** Event filtering and routing logic  
-**"paymenuirecriedd"t {tings:**
- Fit"er criteri"a dbilling.paymene.received",
+{
+  "invoice_generated": {
+    "event_type": "billing.invoice.generated",
     "schema": {
-      "paymfnt_id": "inrion,
- - Rou"invoice_id":t"stning",
-      "paymgnt_amornt": "dueimal",
-      "pasment_date" codatei,guration
-- Cond"itiment_methnl"  "string",
-     dliimverampy s"dateeimi"
+      "invoice_id": "string",
+      "customer_id": "string",
+      "site_number": "string",
+      "invoice_amount": "decimal",
+      "invoice_date": "date",
+      "due_date": "date",
+      "timestamp": "datetime"
+    }
+  },
+  "payment_received": {
+    "event_type": "billing.payment.received",
+    "schema": {
+      "payment_id": "string",
+      "invoice_id": "string",
+      "payment_amount": "decimal",
+      "payment_date": "date",
+      "payment_method": "string",
+      "timestamp": "datetime"
     }
   }
-ngs
-- Priority handling
+}
+```
 
-#**C Event Filtering and Routing
-**ConfigurationoArfa:** Eient filtering and routing logic  
-**Required Sgttings:**
-- Fiuter criteria definitirn
-- Routing rulis coofiguranion
-- Canditirnaa delivery mettingseters:**
+#### Event Filtering and Routing
+**Configuration Area:** Event filtering and routing logic  
+**Required Settings:**
+- Filter criteria definition
+- Routing rules configuration
+- Conditional delivery settings
 - Priority handling
 
 **Configuration Parameters:**
 ```yaml
-ventinr:uting:
-  fiter
-    siti:bad
-      site_based:
-      filenr_fuelsite_number
-       o utab_tablele:
-        "0001": ["  0poin"_g:o p_a"]"endpoint_group_a"]
-        "0002": ["endp int_ roup b"]
-        "d0fau2t"":[ en[point_group_d"fanltp]oint_group_b"]
-    amo"nt_based:
-      enubte ["endpoint_group_default"]
-      fflfdr_"iild: "_avoice_amount"unt"
-      rules:      rules:
-        - c n icond:i"> 10000"
-          eidp i"0s: ["high_v  ue_end    t"]ondition: "> 1000"
-        - cond ndopi "> 1000"nts: ["medium_value_endpoint"]
-           ndpoinco: ["mediumnvaluiinndpoint"]
-        - : "ditionef"default"t"
-          endpoint : ["s nndprd_endpoinn"]standard_endpoint"]
-  priority_hhndigh_priority_events: ["payment_received", "validation_failed"]
-    high_priorityreventi: ["payment_reteived", "vy_qda_ion_failad"]bled: true
-    prrorryy_queue_erabltdy_truentervals: [5, 10, 20]
-```priorityretry_rval[5, , 20]
+event_routing:
+  filters:
+    site_based:
+      enabled: true
+      filter_field: "site_number"
+      routing_table:
+        "0001": ["endpoint_group_a"]
+        "0002": ["endpoint_group_b"]
+        "default": ["endpoint_group_default"]
+    amount_based:
+      enabled: true
+      filter_field: "invoice_amount"
+      rules:
+        - condition: "> 10000"
+          endpoints: ["high_value_endpoint"]
+        - condition: "> 1000"
+          endpoints: ["medium_value_endpoint"]
+        - condition: "default"
+          endpoints: ["standard_endpoint"]
+  priority_handling:
+    high_priority_events: ["payment_received", "validation_failed"]
+    priority_queue_enabled: true
+    priority_retry_intervals: [5, 10, 20]
+```
 
 ### Monitoring and Alerting
-Mtrig ad Alering
-rformance Monitoring
-#### P*rffrgancu Moriaoringion Area:** Webhook performance tracking and optimization  
-**ConfiguReqeot-Aspa:** Wsbhook me ftrmaocensrarking and otttmizarionk-Throughput measurement
-**Rrqorred Settiatse** analysis
--Rspn time mnitor
--oSgccusr raae ion kPar
--mThroughpue measutemrntmonitoring:
-- Errorprafo a:alys
+
+#### Performance Monitoring
+**Configuration Area:** Webhook performance tracking and optimization  
+**Required Settings:**
+- Response time monitoring
+- Success rate tracking
+- Throughput measurement
+- Error rate analysis
+
+**Configuration Parameters:**
+```yaml
+monitoring:
+  performance:
     response_time_threshold_ms: 5000
-**Cunfigueationssr_ateshls:**
-    thr
-monitoring:oughput_threshold_per_minute: 1000
-    erateance_threshold: 5
-    resptnseic_ml_thleshold_mec 5000tion:
-  n:suce_rate_thrsld: 95
-  colhlouthputn_hrtsaold_seremindts: 10000
-  reerror_rtte_nhrestold: 5
-  minr_cs_colledys: 3
-   0enald: tue
-    collection_intvalsecds: 60
-    retention_days: 30aggregation_levels: ["minute", "hour", "day"]
- dahoggrrgtio_ls: ["miue", "hour", "day]
+    success_rate_threshold: 95
+    throughput_threshold_per_minute: 1000
+    error_rate_threshold: 5
+  metrics_collection:
+    enabled: true
+    collection_interval_seconds: 60
+    retention_days: 30
+    aggregation_levels: ["minute", "hour", "day"]
   dashboards:
-  rereal_time_moniaol_ni: teui
-   ohiitog taluanalysis: tre
-  hialirtciategrltionnatyut
+    real_time_monitoring: true
+    historical_analysis: true
     alert_integration: true
 ```
-#ltCofiuert Configuration
-**Confiaution A*Aqeat**AAlertleonditirns atd  otifiharesh letdcons i
-**RequiredoSettitgs:**
-- Alnrtcthrnselld c figuraionEscalation procedures
-- NotificAteon ch nspl sesupon rules
--Escalationprocedures
--Alertppresion ules
 
-**Confguraarfmetgasi**
-```yamlalerting:
-aerg:    response_time_critical: 10000  # ms
-  thrrssoeds:
-   _respinge_ im _#rits: 10000  # ms
-    respose_im_wag: 5000    # s
-- [RSS System Configuration](rss-system-configuration.md)
+#### Alert Configuration
+**Configuration Area:** Alert conditions and notification settings  
+**Required Settings:**
+- Alert threshold configuration
+- Notification channel setup
+- Escalation procedures
+- Alert suppression rules
+
+**Configuration Parameters:**
+```yaml
+alerting:
+  thresholds:
+    response_time_critical: 10000  # ms
+    response_time_warning: 5000    # ms
+    error_rate_critical: 10        # percentage
     error_rate_warning: 5          # percentage
     success_rate_critical: 90      # percentage
     success_rate_warning: 95       # percentage
@@ -502,7 +502,7 @@ curl http://webhook-metrics:8080/metrics
 
 ### Technical Specifications
 - [RSS Technical Specifications](../../technical/specifications/20250723_RSS_TechnicalSpec_TroubleshootingProcedures.md)
-- [Integration Technical Specifications](../../technical/integrations/)
+- [Integration Technical Specifications](../../technical/integrations/index.md)
 
 ### Business Rules
 - [RSS Business Rules](../../business-rules/billing/20250723_RSS_FileValidation_BusinessRules.md)

@@ -413,7 +413,6 @@ Storage Path Structure:
 
 - [ALM and CI/CD Strategy](../backend/20250718_Architecture_ALMStrategy_PowerPlatform.md) ✓ VERIFIED
 - [Power Platform Licensing Analysis](../../configuration/system-settings/20250718_Architecture_LicensingAnalysis_PowerPlatform.md) ✓ VERIFIED
-- [Architecture Team Meeting Notes](../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync.md) 🔄 PLANNED
 - [Billing System Integrations](../../systems/billing/integrations.md) ✓ VERIFIED
 - [Forecasting System Integrations](../../systems/forecasting/integrations.md) ✓ VERIFIED
 

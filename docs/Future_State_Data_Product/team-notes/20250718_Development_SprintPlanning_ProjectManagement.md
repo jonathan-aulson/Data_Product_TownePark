@@ -382,7 +382,6 @@ The development team uses a collaborative estimation approach that considers:
 ## Related Documentation
 
 - [Daily Scrum Team Notes](20250718_Development_DailyScrum_TeamNotes.md) ✓ VERIFIED
-- [Architecture Team Meeting Notes](AulsonJonathan-Notes/20250718_Architecture_TeamMeetingNotes_WeeklySync.md) ✓ VERIFIED
 - [Development Standards](../configuration/system-settings/20250718_Development_Standards_ComprehensiveGuide.md) ✓ VERIFIED
 - [Forecasting System Overview](../systems/forecasting/20250716_Forecasting_SystemOverview_Integrated.md) ✓ VERIFIED
 - [Forecasting Data Sources](../technical/database/20250716_Forecasting_DataSources_TechnicalSpec.md) ✓ VERIFIED
@@ -420,7 +419,6 @@ This comprehensive sprint planning project management documentation provides ess
 ## Quick Links
 
 - [Daily Scrum Team Notes](20250718_Development_DailyScrum_TeamNotes.md)
-- [Architecture Team Meeting Notes](AulsonJonathan-Notes/20250718_Architecture_TeamMeetingNotes_WeeklySync.md)
 - [Development Standards](../configuration/system-settings/20250718_Development_Standards_ComprehensiveGuide.md)
 - [Forecasting System Overview](../systems/forecasting/20250716_Forecasting_SystemOverview_Integrated.md)
 - [Forecasting Data Sources](../technical/database/20250716_Forecasting_DataSources_TechnicalSpec.md)

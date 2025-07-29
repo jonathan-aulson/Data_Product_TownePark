@@ -6,29 +6,25 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-      
-        <meta name="author" content="Towne Park Architecture Team">
-      
-      
-        <link rel="canonical" href="http://example.org/Future_State_Data_Product/team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync/">
+        <meta name="description" content="Comprehensive authorization policies, procedures, and access control frameworks for managing user permissions and system access across all Towne Park systems">
       
       
-        <link rel="prev" href="../../configuration/system-settings/webhook-management-configuration/">
+      
+        <link rel="canonical" href="http://example.org/Future_State_Data_Product/business-rules/user-access/authorization-policies/">
       
       
-        <link rel="next" href="../20250718_Development_DailyScrum_TeamNotes/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
     
     
       
-        <title>Architecture Team Meeting Notes - Weekly Sync - Towne Park Data Product</title>
+        <title>Authorization Policies - Towne Park Data Product</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.342714a4.min.css">
       
       
 
@@ -47,9 +43,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -68,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#architecture-team-meeting-notes-weekly-sync" class="md-skip">
+        <a href="#authorization-policies" class="md-skip">
           Skip to content
         </a>
       
@@ -82,7 +78,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Towne Park Data Product" class="md-header__button md-logo" aria-label="Towne Park Data Product" data-md-component="logo">
+    <a href="../../../.." title="Towne Park Data Product" class="md-header__button md-logo" aria-label="Towne Park Data Product" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -102,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Architecture Team Meeting Notes - Weekly Sync
+              Authorization Policies
             
           </span>
         </div>
@@ -177,7 +173,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../../../.." class="md-tabs__link">
         
   
   
@@ -196,7 +192,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../" class="md-tabs__link">
+      <a href="../../../" class="md-tabs__link">
         
   
   
@@ -215,7 +211,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../TP%20Product%20Roadmap/" class="md-tabs__link">
+      <a href="../../../TP%20Product%20Roadmap/" class="md-tabs__link">
         
   
   
@@ -236,7 +232,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../systems/" class="md-tabs__link">
+        <a href="../../../systems/" class="md-tabs__link">
           
   
   
@@ -263,7 +259,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../business-rules/contract-types/overview/" class="md-tabs__link">
+        <a href="../../contract-types/overview/" class="md-tabs__link">
           
   
   
@@ -286,7 +282,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../technical/overview/" class="md-tabs__link">
+        <a href="../../../technical/overview/" class="md-tabs__link">
           
   
   
@@ -306,7 +302,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../user-processes/" class="md-tabs__link">
+        <a href="../../../user-processes/" class="md-tabs__link">
           
   
   
@@ -326,7 +322,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../configuration/" class="md-tabs__link">
+        <a href="../../../configuration/" class="md-tabs__link">
           
   
   
@@ -342,13 +338,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync.md" class="md-tabs__link">
           
   
   
@@ -368,7 +362,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../standards/data-quality-standards/" class="md-tabs__link">
+        <a href="../../../standards/data-quality-standards/" class="md-tabs__link">
           
   
   
@@ -388,7 +382,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../operations/monitoring-alerting-guide/" class="md-tabs__link">
+        <a href="../../../operations/monitoring-alerting-guide/" class="md-tabs__link">
           
   
   
@@ -406,7 +400,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../business-rules/" class="md-tabs__link">
+      <a href="../../" class="md-tabs__link">
         
   
   
@@ -425,7 +419,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../2025-07-21/" class="md-tabs__link">
+      <a href="../../../2025-07-21/" class="md-tabs__link">
         
   
   
@@ -444,7 +438,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../glossary/" class="md-tabs__link">
+      <a href="../../../glossary/" class="md-tabs__link">
         
   
   
@@ -479,7 +473,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Towne Park Data Product" class="md-nav__button md-logo" aria-label="Towne Park Data Product" data-md-component="logo">
+    <a href="../../../.." title="Towne Park Data Product" class="md-nav__button md-logo" aria-label="Towne Park Data Product" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -497,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   
@@ -519,7 +513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+      <a href="../../../" class="md-nav__link">
         
   
   
@@ -541,7 +535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../TP%20Product%20Roadmap/" class="md-nav__link">
+      <a href="../../../TP%20Product%20Roadmap/" class="md-nav__link">
         
   
   
@@ -608,7 +602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/" class="md-nav__link">
+      <a href="../../../systems/" class="md-nav__link">
         
   
   
@@ -676,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/billing/" class="md-nav__link">
+      <a href="../../../systems/billing/" class="md-nav__link">
         
   
   
@@ -699,7 +693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/billing/overview/" class="md-nav__link">
+      <a href="../../../systems/billing/overview/" class="md-nav__link">
         
   
   
@@ -722,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/billing/20250716_Billing_SystemOverview_PowerBill/" class="md-nav__link">
+      <a href="../../../systems/billing/20250716_Billing_SystemOverview_PowerBill/" class="md-nav__link">
         
   
   
@@ -752,7 +746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/billing/powerbill-system-overview/" class="md-nav__link">
+      <a href="../../../systems/billing/powerbill-system-overview/" class="md-nav__link">
         
   
   
@@ -775,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/billing/architecture/" class="md-nav__link">
+      <a href="../../../systems/billing/architecture/" class="md-nav__link">
         
   
   
@@ -798,7 +792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/billing/integrations/" class="md-nav__link">
+      <a href="../../../systems/billing/integrations/" class="md-nav__link">
         
   
   
@@ -821,7 +815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/billing/generate-invoices/" class="md-nav__link">
+      <a href="../../../systems/billing/generate-invoices/" class="md-nav__link">
         
   
   
@@ -904,7 +898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/forecasting/" class="md-nav__link">
+      <a href="../../../systems/forecasting/" class="md-nav__link">
         
   
   
@@ -927,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/forecasting/overview/" class="md-nav__link">
+      <a href="../../../systems/forecasting/overview/" class="md-nav__link">
         
   
   
@@ -950,7 +944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/forecasting/forecasting-system-overview/" class="md-nav__link">
+      <a href="../../../systems/forecasting/forecasting-system-overview/" class="md-nav__link">
         
   
   
@@ -980,7 +974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/forecasting/20250718_Forecasting_SystemOverview_ComprehensiveMaster/" class="md-nav__link">
+      <a href="../../../systems/forecasting/20250718_Forecasting_SystemOverview_ComprehensiveMaster/" class="md-nav__link">
         
   
   
@@ -1010,7 +1004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/forecasting/20250716_Forecasting_SystemOverview_Discovery/" class="md-nav__link">
+      <a href="../../../systems/forecasting/20250716_Forecasting_SystemOverview_Discovery/" class="md-nav__link">
         
   
   
@@ -1040,7 +1034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/forecasting/20250716_Forecasting_SystemOverview_MasterArchitecture/" class="md-nav__link">
+      <a href="../../../systems/forecasting/20250716_Forecasting_SystemOverview_MasterArchitecture/" class="md-nav__link">
         
   
   
@@ -1070,7 +1064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/forecasting/20250716_Forecasting_SystemOverview_Integrated/" class="md-nav__link">
+      <a href="../../../systems/forecasting/20250716_Forecasting_SystemOverview_Integrated/" class="md-nav__link">
         
   
   
@@ -1100,7 +1094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/forecasting/20250716_Forecasting_PayrollForecasting_SystemOverview/" class="md-nav__link">
+      <a href="../../../systems/forecasting/20250716_Forecasting_PayrollForecasting_SystemOverview/" class="md-nav__link">
         
   
   
@@ -1123,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/forecasting/architecture/" class="md-nav__link">
+      <a href="../../../systems/forecasting/architecture/" class="md-nav__link">
         
   
   
@@ -1146,7 +1140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/forecasting/integrations/" class="md-nav__link">
+      <a href="../../../systems/forecasting/integrations/" class="md-nav__link">
         
   
   
@@ -1222,7 +1216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/customer-sites/overview/" class="md-nav__link">
+      <a href="../../../systems/customer-sites/overview/" class="md-nav__link">
         
   
   
@@ -1245,7 +1239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/customer-sites/customer-site-directory/" class="md-nav__link">
+      <a href="../../../systems/customer-sites/customer-site-directory/" class="md-nav__link">
         
   
   
@@ -1268,7 +1262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/customer-sites/20250716_CustomerSites_SystemOverview_Management/" class="md-nav__link">
+      <a href="../../../systems/customer-sites/20250716_CustomerSites_SystemOverview_Management/" class="md-nav__link">
         
   
   
@@ -1351,7 +1345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/contracts/overview/" class="md-nav__link">
+      <a href="../../../systems/contracts/overview/" class="md-nav__link">
         
   
   
@@ -1374,7 +1368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/contracts/20250716_Contracts_SystemOverview_PowerBill/" class="md-nav__link">
+      <a href="../../../systems/contracts/20250716_Contracts_SystemOverview_PowerBill/" class="md-nav__link">
         
   
   
@@ -1450,7 +1444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../systems/rss/rss-system-overview/" class="md-nav__link">
+      <a href="../../../systems/rss/rss-system-overview/" class="md-nav__link">
         
   
   
@@ -1585,7 +1579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/contract-types/overview/" class="md-nav__link">
+      <a href="../../contract-types/overview/" class="md-nav__link">
         
   
   
@@ -1608,7 +1602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/contract-types/revenue-share/" class="md-nav__link">
+      <a href="../../contract-types/revenue-share/" class="md-nav__link">
         
   
   
@@ -1631,7 +1625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/contract-types/fixed-fee/" class="md-nav__link">
+      <a href="../../contract-types/fixed-fee/" class="md-nav__link">
         
   
   
@@ -1654,7 +1648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/contract-types/per-labor-hour/" class="md-nav__link">
+      <a href="../../contract-types/per-labor-hour/" class="md-nav__link">
         
   
   
@@ -1677,7 +1671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/contract-types/management-agreement/" class="md-nav__link">
+      <a href="../../contract-types/management-agreement/" class="md-nav__link">
         
   
   
@@ -1753,7 +1747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/billing/overview/" class="md-nav__link">
+      <a href="../../billing/overview/" class="md-nav__link">
         
   
   
@@ -1776,7 +1770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/billing/" class="md-nav__link">
+      <a href="../../billing/" class="md-nav__link">
         
   
   
@@ -1806,7 +1800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/billing/invoice-calculation/" class="md-nav__link">
+      <a href="../../billing/invoice-calculation/" class="md-nav__link">
         
   
   
@@ -1829,7 +1823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/billing/validation/" class="md-nav__link">
+      <a href="../../billing/validation/" class="md-nav__link">
         
   
   
@@ -1852,7 +1846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/billing/bell-service-fee/" class="md-nav__link">
+      <a href="../../billing/bell-service-fee/" class="md-nav__link">
         
   
   
@@ -1875,7 +1869,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/billing/20250724_Billing_RevenueShareContracts_BusinessRules/" class="md-nav__link">
+      <a href="../../billing/20250724_Billing_RevenueShareContracts_BusinessRules/" class="md-nav__link">
         
   
   
@@ -1905,7 +1899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/billing/20250724_Billing_PerLaborHourContracts_BusinessRules/" class="md-nav__link">
+      <a href="../../billing/20250724_Billing_PerLaborHourContracts_BusinessRules/" class="md-nav__link">
         
   
   
@@ -1935,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/billing/20250724_StatementAccess_BusinessRules/" class="md-nav__link">
+      <a href="../../billing/20250724_StatementAccess_BusinessRules/" class="md-nav__link">
         
   
   
@@ -1965,7 +1959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/billing/20250716_Billing_ROIAnalysis_SuccessMetrics/" class="md-nav__link">
+      <a href="../../billing/20250716_Billing_ROIAnalysis_SuccessMetrics/" class="md-nav__link">
         
   
   
@@ -1995,7 +1989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/billing/20250717_Billing_ROIAnalysis_PowerBillSuccessMetrics/" class="md-nav__link">
+      <a href="../../billing/20250717_Billing_ROIAnalysis_PowerBillSuccessMetrics/" class="md-nav__link">
         
   
   
@@ -2025,7 +2019,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/billing/20250717_TownePark_CaseStudy_BillingSystemModernization/" class="md-nav__link">
+      <a href="../../billing/20250717_TownePark_CaseStudy_BillingSystemModernization/" class="md-nav__link">
         
   
   
@@ -2055,7 +2049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/billing/negative-invoice-gl-entity-mapping/" class="md-nav__link">
+      <a href="../../billing/negative-invoice-gl-entity-mapping/" class="md-nav__link">
         
   
   
@@ -2085,7 +2079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/billing/management-fee-escalation-rules/" class="md-nav__link">
+      <a href="../../billing/management-fee-escalation-rules/" class="md-nav__link">
         
   
   
@@ -2115,7 +2109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/billing/pteb-escalation-rules/" class="md-nav__link">
+      <a href="../../billing/pteb-escalation-rules/" class="md-nav__link">
         
   
   
@@ -2145,7 +2139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/billing/20250723_RSS_FileValidation_BusinessRules/" class="md-nav__link">
+      <a href="../../billing/20250723_RSS_FileValidation_BusinessRules/" class="md-nav__link">
         
   
   
@@ -2175,7 +2169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/billing/20250702_Billing_AccountValidation_BusinessRules/" class="md-nav__link">
+      <a href="../../billing/20250702_Billing_AccountValidation_BusinessRules/" class="md-nav__link">
         
   
   
@@ -2205,7 +2199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/billing/20250723_Billing_RevenueManagement_BusinessRules/" class="md-nav__link">
+      <a href="../../billing/20250723_Billing_RevenueManagement_BusinessRules/" class="md-nav__link">
         
   
   
@@ -2235,7 +2229,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/billing/calculation-rules/" class="md-nav__link">
+      <a href="../../billing/calculation-rules/" class="md-nav__link">
         
   
   
@@ -2258,7 +2252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/billing/cashflow-analysis/" class="md-nav__link">
+      <a href="../../billing/cashflow-analysis/" class="md-nav__link">
         
   
   
@@ -2281,7 +2275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/billing/error-reduction/" class="md-nav__link">
+      <a href="../../billing/error-reduction/" class="md-nav__link">
         
   
   
@@ -2304,7 +2298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/billing/integration-error-handling-rules/" class="md-nav__link">
+      <a href="../../billing/integration-error-handling-rules/" class="md-nav__link">
         
   
   
@@ -2334,7 +2328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/billing/process-efficiency/" class="md-nav__link">
+      <a href="../../billing/process-efficiency/" class="md-nav__link">
         
   
   
@@ -2357,7 +2351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/billing/staffing-analysis/" class="md-nav__link">
+      <a href="../../billing/staffing-analysis/" class="md-nav__link">
         
   
   
@@ -2433,7 +2427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/forecasting/overview/" class="md-nav__link">
+      <a href="../../forecasting/overview/" class="md-nav__link">
         
   
   
@@ -2456,7 +2450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/forecasting/" class="md-nav__link">
+      <a href="../../forecasting/" class="md-nav__link">
         
   
   
@@ -2486,7 +2480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/forecasting/20250718_Forecasting_BusinessRules_CalculationsAndValidations/" class="md-nav__link">
+      <a href="../../forecasting/20250718_Forecasting_BusinessRules_CalculationsAndValidations/" class="md-nav__link">
         
   
   
@@ -2516,7 +2510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/forecasting/20250718_Forecasting_BusinessRules_DevelopmentDecisions/" class="md-nav__link">
+      <a href="../../forecasting/20250718_Forecasting_BusinessRules_DevelopmentDecisions/" class="md-nav__link">
         
   
   
@@ -2546,7 +2540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/forecasting/20250716_Forecasting_BusinessRules_ProcessWorkflow/" class="md-nav__link">
+      <a href="../../forecasting/20250716_Forecasting_BusinessRules_ProcessWorkflow/" class="md-nav__link">
         
   
   
@@ -2576,7 +2570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/forecasting/20250716_Forecasting_BillableAccounts_BusinessRules/" class="md-nav__link">
+      <a href="../../forecasting/20250716_Forecasting_BillableAccounts_BusinessRules/" class="md-nav__link">
         
   
   
@@ -2599,7 +2593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/forecasting/20250717_Forecasting_BusinessRules_Sprint26Features/" class="md-nav__link">
+      <a href="../../forecasting/20250717_Forecasting_BusinessRules_Sprint26Features/" class="md-nav__link">
         
   
   
@@ -2622,7 +2616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/forecasting/group-transient-logic/" class="md-nav__link">
+      <a href="../../forecasting/group-transient-logic/" class="md-nav__link">
         
   
   
@@ -2645,7 +2639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/forecasting/payroll/" class="md-nav__link">
+      <a href="../../forecasting/payroll/" class="md-nav__link">
         
   
   
@@ -2668,7 +2662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/forecasting/revenue/" class="md-nav__link">
+      <a href="../../forecasting/revenue/" class="md-nav__link">
         
   
   
@@ -2691,7 +2685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/forecasting/statistics/" class="md-nav__link">
+      <a href="../../forecasting/statistics/" class="md-nav__link">
         
   
   
@@ -2714,7 +2708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/forecasting/20250723_Forecasting_ActualsDisplay_BusinessRules/" class="md-nav__link">
+      <a href="../../forecasting/20250723_Forecasting_ActualsDisplay_BusinessRules/" class="md-nav__link">
         
   
   
@@ -2744,7 +2738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/forecasting/20250723_Forecasting_StatisticsDisplay_BusinessRules/" class="md-nav__link">
+      <a href="../../forecasting/20250723_Forecasting_StatisticsDisplay_BusinessRules/" class="md-nav__link">
         
   
   
@@ -2774,7 +2768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/forecasting/20250702_Forecasting_JobCodeManagement_BusinessRules/" class="md-nav__link">
+      <a href="../../forecasting/20250702_Forecasting_JobCodeManagement_BusinessRules/" class="md-nav__link">
         
   
   
@@ -2804,7 +2798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/forecasting/20250724_Forecasting_DataValidation_BusinessRules/" class="md-nav__link">
+      <a href="../../forecasting/20250724_Forecasting_DataValidation_BusinessRules/" class="md-nav__link">
         
   
   
@@ -2834,7 +2828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/forecasting/20250724_ForecastingInputGranularity_BusinessRules/" class="md-nav__link">
+      <a href="../../forecasting/20250724_ForecastingInputGranularity_BusinessRules/" class="md-nav__link">
         
   
   
@@ -2864,7 +2858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/forecasting/20250724_Claims_Forecasting_BusinessRules/" class="md-nav__link">
+      <a href="../../forecasting/20250724_Claims_Forecasting_BusinessRules/" class="md-nav__link">
         
   
   
@@ -2887,7 +2881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/forecasting/20250724_Forecasting_UATProcess_BusinessRules/" class="md-nav__link">
+      <a href="../../forecasting/20250724_Forecasting_UATProcess_BusinessRules/" class="md-nav__link">
         
   
   
@@ -2917,7 +2911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/forecasting/20250724_PayrollDataDisplay_BusinessRules/" class="md-nav__link">
+      <a href="../../forecasting/20250724_PayrollDataDisplay_BusinessRules/" class="md-nav__link">
         
   
   
@@ -3000,7 +2994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/contracts/" class="md-nav__link">
+      <a href="../../contracts/" class="md-nav__link">
         
   
   
@@ -3030,7 +3024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/contracts/overview/" class="md-nav__link">
+      <a href="../../contracts/overview/" class="md-nav__link">
         
   
   
@@ -3053,7 +3047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/contracts/20250716_Contracts_BusinessRules_Comprehensive/" class="md-nav__link">
+      <a href="../../contracts/20250716_Contracts_BusinessRules_Comprehensive/" class="md-nav__link">
         
   
   
@@ -3083,7 +3077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/contracts/20250724_RevenueShare_ContractConfiguration_BusinessRules/" class="md-nav__link">
+      <a href="../../contracts/20250724_RevenueShare_ContractConfiguration_BusinessRules/" class="md-nav__link">
         
   
   
@@ -3113,7 +3107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/contracts/20250724_FixedFee_ContractConfiguration_BusinessRules/" class="md-nav__link">
+      <a href="../../contracts/20250724_FixedFee_ContractConfiguration_BusinessRules/" class="md-nav__link">
         
   
   
@@ -3143,7 +3137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/contracts/20250724_ManagementAgreement_ContractConfiguration_BusinessRules/" class="md-nav__link">
+      <a href="../../contracts/20250724_ManagementAgreement_ContractConfiguration_BusinessRules/" class="md-nav__link">
         
   
   
@@ -3173,7 +3167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/contracts/20250724_PerLaborHour_ContractConfiguration_BusinessRules/" class="md-nav__link">
+      <a href="../../contracts/20250724_PerLaborHour_ContractConfiguration_BusinessRules/" class="md-nav__link">
         
   
   
@@ -3203,7 +3197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/contracts/20250724_HybridContract_ContractConfiguration_BusinessRules/" class="md-nav__link">
+      <a href="../../contracts/20250724_HybridContract_ContractConfiguration_BusinessRules/" class="md-nav__link">
         
   
   
@@ -3233,7 +3227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/contracts/contract-escalation-rules/" class="md-nav__link">
+      <a href="../../contracts/contract-escalation-rules/" class="md-nav__link">
         
   
   
@@ -3256,7 +3250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/contracts/plh-rate-escalation/" class="md-nav__link">
+      <a href="../../contracts/plh-rate-escalation/" class="md-nav__link">
         
   
   
@@ -3279,7 +3273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/contracts/service-fee-escalation-eci/" class="md-nav__link">
+      <a href="../../contracts/service-fee-escalation-eci/" class="md-nav__link">
         
   
   
@@ -3362,7 +3356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/customer-sites/site-classification-rules/" class="md-nav__link">
+      <a href="../../customer-sites/site-classification-rules/" class="md-nav__link">
         
   
   
@@ -3392,7 +3386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/customer-sites/contact-management-rules/" class="md-nav__link">
+      <a href="../../customer-sites/contact-management-rules/" class="md-nav__link">
         
   
   
@@ -3422,7 +3416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/customer-sites/territory-assignment-rules/" class="md-nav__link">
+      <a href="../../customer-sites/territory-assignment-rules/" class="md-nav__link">
         
   
   
@@ -3505,7 +3499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/development/ai-tool-usage-policies/" class="md-nav__link">
+      <a href="../../development/ai-tool-usage-policies/" class="md-nav__link">
         
   
   
@@ -3535,7 +3529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/development/code-quality-standards/" class="md-nav__link">
+      <a href="../../development/code-quality-standards/" class="md-nav__link">
         
   
   
@@ -3618,7 +3612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/security/ai-development-security/" class="md-nav__link">
+      <a href="../../security/ai-development-security/" class="md-nav__link">
         
   
   
@@ -3648,7 +3642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/security/development-security-standards/" class="md-nav__link">
+      <a href="../../security/development-security-standards/" class="md-nav__link">
         
   
   
@@ -3731,7 +3725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/user-access/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -3754,7 +3748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/user-access/role-based-permissions/" class="md-nav__link">
+      <a href="../role-based-permissions/" class="md-nav__link">
         
   
   
@@ -3837,7 +3831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/overview/" class="md-nav__link">
+      <a href="../../../technical/overview/" class="md-nav__link">
         
   
   
@@ -3860,7 +3854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/" class="md-nav__link">
+      <a href="../../../technical/" class="md-nav__link">
         
   
   
@@ -3883,7 +3877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/frontend/" class="md-nav__link">
+      <a href="../../../technical/frontend/" class="md-nav__link">
         
   
   
@@ -3951,7 +3945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/api/customer-sites-api-spec/" class="md-nav__link">
+      <a href="../../../technical/api/customer-sites-api-spec/" class="md-nav__link">
         
   
   
@@ -4034,7 +4028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/architecture/power-platform-architecture/" class="md-nav__link">
+      <a href="../../../technical/architecture/power-platform-architecture/" class="md-nav__link">
         
   
   
@@ -4064,7 +4058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/architecture/sharepoint-integration-architecture/" class="md-nav__link">
+      <a href="../../../technical/architecture/sharepoint-integration-architecture/" class="md-nav__link">
         
   
   
@@ -4147,7 +4141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/backend/" class="md-nav__link">
+      <a href="../../../technical/backend/" class="md-nav__link">
         
   
   
@@ -4155,6 +4149,13 @@
     Overview
     
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
   
 
       </a>
@@ -4170,7 +4171,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/backend/20250718_Architecture_ALMStrategy_PowerPlatform/" class="md-nav__link">
+      <a href="../../../technical/backend/20250718_Architecture_ALMStrategy_PowerPlatform/" class="md-nav__link">
         
   
   
@@ -4200,7 +4201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/backend/20250718_Development_AIIntegration_TechnicalSpec/" class="md-nav__link">
+      <a href="../../../technical/backend/20250718_Development_AIIntegration_TechnicalSpec/" class="md-nav__link">
         
   
   
@@ -4230,7 +4231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/backend/20250723_AI_TechnicalSpec_SDLCIntegration/" class="md-nav__link">
+      <a href="../../../technical/backend/20250723_AI_TechnicalSpec_SDLCIntegration/" class="md-nav__link">
         
   
   
@@ -4260,7 +4261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/backend/20250723_AI_ValidationReport_SDLCIntegration/" class="md-nav__link">
+      <a href="../../../technical/backend/20250723_AI_ValidationReport_SDLCIntegration/" class="md-nav__link">
         
   
   
@@ -4290,7 +4291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/backend/20250724_AI_Productivity_Tools_TechnicalSpec/" class="md-nav__link">
+      <a href="../../../technical/backend/20250724_AI_Productivity_Tools_TechnicalSpec/" class="md-nav__link">
         
   
   
@@ -4313,7 +4314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/backend/20250718_Forecasting_TechnicalArchitecture_APIDesign/" class="md-nav__link">
+      <a href="../../../technical/backend/20250718_Forecasting_TechnicalArchitecture_APIDesign/" class="md-nav__link">
         
   
   
@@ -4343,7 +4344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/backend/20250716_Billing_TechnicalArchitecture_Development/" class="md-nav__link">
+      <a href="../../../technical/backend/20250716_Billing_TechnicalArchitecture_Development/" class="md-nav__link">
         
   
   
@@ -4373,7 +4374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/backend/20250724_StatementGeneration_TechnicalSpec/" class="md-nav__link">
+      <a href="../../../technical/backend/20250724_StatementGeneration_TechnicalSpec/" class="md-nav__link">
         
   
   
@@ -4403,7 +4404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/backend/external-code-repository-links/" class="md-nav__link">
+      <a href="../../../technical/backend/external-code-repository-links/" class="md-nav__link">
         
   
   
@@ -4433,7 +4434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/backend/20250724_Billing_RevenueCalculation_TechnicalSpec/" class="md-nav__link">
+      <a href="../../../technical/backend/20250724_Billing_RevenueCalculation_TechnicalSpec/" class="md-nav__link">
         
   
   
@@ -4463,7 +4464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/backend/billing-architecture/" class="md-nav__link">
+      <a href="../../../technical/backend/billing-architecture/" class="md-nav__link">
         
   
   
@@ -4486,7 +4487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/backend/project-mercury/" class="md-nav__link">
+      <a href="../../../technical/backend/project-mercury/" class="md-nav__link">
         
   
   
@@ -4562,7 +4563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/database/" class="md-nav__link">
+      <a href="../../../technical/database/" class="md-nav__link">
         
   
   
@@ -4570,6 +4571,13 @@
     Overview
     
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
   
 
       </a>
@@ -4585,7 +4593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/database/20250723_Database_TechnicalSpec_MigrationDataFlows/" class="md-nav__link">
+      <a href="../../../technical/database/20250723_Database_TechnicalSpec_MigrationDataFlows/" class="md-nav__link">
         
   
   
@@ -4615,7 +4623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/database/20250724_PayrollData_DatabaseQueries_TechnicalSpec/" class="md-nav__link">
+      <a href="../../../technical/database/20250724_PayrollData_DatabaseQueries_TechnicalSpec/" class="md-nav__link">
         
   
   
@@ -4645,7 +4653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/database/20250718_Forecasting_DatabaseIntegration_TechnicalSpec/" class="md-nav__link">
+      <a href="../../../technical/database/20250718_Forecasting_DatabaseIntegration_TechnicalSpec/" class="md-nav__link">
         
   
   
@@ -4675,7 +4683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/database/20250716_Forecasting_DataSources_TechnicalSpec/" class="md-nav__link">
+      <a href="../../../technical/database/20250716_Forecasting_DataSources_TechnicalSpec/" class="md-nav__link">
         
   
   
@@ -4705,7 +4713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/database/20250716_Forecasting_BillableAccounts_TechnicalSpec/" class="md-nav__link">
+      <a href="../../../technical/database/20250716_Forecasting_BillableAccounts_TechnicalSpec/" class="md-nav__link">
         
   
   
@@ -4728,7 +4736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/database/20250718_Contracts_DataDictionary_TechnicalSpec/" class="md-nav__link">
+      <a href="../../../technical/database/20250718_Contracts_DataDictionary_TechnicalSpec/" class="md-nav__link">
         
   
   
@@ -4758,7 +4766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/database/schema-design/" class="md-nav__link">
+      <a href="../../../technical/database/schema-design/" class="md-nav__link">
         
   
   
@@ -4781,7 +4789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/database/contracts-data-schema/" class="md-nav__link">
+      <a href="../../../technical/database/contracts-data-schema/" class="md-nav__link">
         
   
   
@@ -4804,7 +4812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/database/customer-sites-data-schema/" class="md-nav__link">
+      <a href="../../../technical/database/customer-sites-data-schema/" class="md-nav__link">
         
   
   
@@ -4834,7 +4842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/database/database-schema/" class="md-nav__link">
+      <a href="../../../technical/database/database-schema/" class="md-nav__link">
         
   
   
@@ -4857,7 +4865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/database/forecasting-data-sources/" class="md-nav__link">
+      <a href="../../../technical/database/forecasting-data-sources/" class="md-nav__link">
         
   
   
@@ -4933,7 +4941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/forecasting/" class="md-nav__link">
+      <a href="../../../technical/forecasting/" class="md-nav__link">
         
   
   
@@ -4963,7 +4971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/forecasting/20250717_Forecasting_TechnicalSpec_Sprint26Features/" class="md-nav__link">
+      <a href="../../../technical/forecasting/20250717_Forecasting_TechnicalSpec_Sprint26Features/" class="md-nav__link">
         
   
   
@@ -4971,6 +4979,13 @@
     Sprint 26 Features Technical Spec
     
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
   
 
       </a>
@@ -4986,7 +5001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/forecasting/20250718_Forecasting_BillableAccounts_TechnicalSpec/" class="md-nav__link">
+      <a href="../../../technical/forecasting/20250718_Forecasting_BillableAccounts_TechnicalSpec/" class="md-nav__link">
         
   
   
@@ -5016,7 +5031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/forecasting/20250723_Forecasting_JobGroups_TechnicalSpec/" class="md-nav__link">
+      <a href="../../../technical/forecasting/20250723_Forecasting_JobGroups_TechnicalSpec/" class="md-nav__link">
         
   
   
@@ -5046,7 +5061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/forecasting/20250702_Forecasting_DataIntegration_TechnicalSpec/" class="md-nav__link">
+      <a href="../../../technical/forecasting/20250702_Forecasting_DataIntegration_TechnicalSpec/" class="md-nav__link">
         
   
   
@@ -5129,7 +5144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/operations/20250723_SystemAdministration_Operations_Procedures/" class="md-nav__link">
+      <a href="../../../technical/operations/20250723_SystemAdministration_Operations_Procedures/" class="md-nav__link">
         
   
   
@@ -5212,7 +5227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/specifications/" class="md-nav__link">
+      <a href="../../../technical/specifications/" class="md-nav__link">
         
   
   
@@ -5242,7 +5257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/specifications/20250723_RSS_TechnicalSpec_TroubleshootingProcedures/" class="md-nav__link">
+      <a href="../../../technical/specifications/20250723_RSS_TechnicalSpec_TroubleshootingProcedures/" class="md-nav__link">
         
   
   
@@ -5272,7 +5287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/specifications/forecasting-pl-view-technical-spec/" class="md-nav__link">
+      <a href="../../../technical/specifications/forecasting-pl-view-technical-spec/" class="md-nav__link">
         
   
   
@@ -5302,7 +5317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/specifications/power-automate-retry-mechanisms/" class="md-nav__link">
+      <a href="../../../technical/specifications/power-automate-retry-mechanisms/" class="md-nav__link">
         
   
   
@@ -5332,7 +5347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/specifications/sharepoint-delta-token-management/" class="md-nav__link">
+      <a href="../../../technical/specifications/sharepoint-delta-token-management/" class="md-nav__link">
         
   
   
@@ -5407,7 +5422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/specifications/templates/api-documentation-standards/" class="md-nav__link">
+      <a href="../../../technical/specifications/templates/api-documentation-standards/" class="md-nav__link">
         
   
   
@@ -5437,7 +5452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/specifications/templates/integration-spec-template/" class="md-nav__link">
+      <a href="../../../technical/specifications/templates/integration-spec-template/" class="md-nav__link">
         
   
   
@@ -5467,7 +5482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/specifications/templates/technical-spec-template/" class="md-nav__link">
+      <a href="../../../technical/specifications/templates/technical-spec-template/" class="md-nav__link">
         
   
   
@@ -5558,7 +5573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/integrations/" class="md-nav__link">
+      <a href="../../../technical/integrations/" class="md-nav__link">
         
   
   
@@ -5588,7 +5603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/integrations/20250718_Architecture_IntegrationStrategy_HybridConnections/" class="md-nav__link">
+      <a href="../../../technical/integrations/20250718_Architecture_IntegrationStrategy_HybridConnections/" class="md-nav__link">
         
   
   
@@ -5618,7 +5633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/integrations/20250724_EDW_Integration_TechnicalSpec/" class="md-nav__link">
+      <a href="../../../technical/integrations/20250724_EDW_Integration_TechnicalSpec/" class="md-nav__link">
         
   
   
@@ -5648,7 +5663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/integrations/powerbill-integration/" class="md-nav__link">
+      <a href="../../../technical/integrations/powerbill-integration/" class="md-nav__link">
         
   
   
@@ -5678,7 +5693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/integrations/great-plains-integration/" class="md-nav__link">
+      <a href="../../../technical/integrations/great-plains-integration/" class="md-nav__link">
         
   
   
@@ -5701,7 +5716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/integrations/billing-integrations/" class="md-nav__link">
+      <a href="../../../technical/integrations/billing-integrations/" class="md-nav__link">
         
   
   
@@ -5724,7 +5739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/integrations/budget-integration/" class="md-nav__link">
+      <a href="../../../technical/integrations/budget-integration/" class="md-nav__link">
         
   
   
@@ -5747,7 +5762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/integrations/leads-integration/" class="md-nav__link">
+      <a href="../../../technical/integrations/leads-integration/" class="md-nav__link">
         
   
   
@@ -5770,7 +5785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/integrations/legion-integration/" class="md-nav__link">
+      <a href="../../../technical/integrations/legion-integration/" class="md-nav__link">
         
   
   
@@ -5793,7 +5808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/integrations/dataverse-integration/" class="md-nav__link">
+      <a href="../../../technical/integrations/dataverse-integration/" class="md-nav__link">
         
   
   
@@ -5823,7 +5838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/integrations/great-plains-integration-spec/" class="md-nav__link">
+      <a href="../../../technical/integrations/great-plains-integration-spec/" class="md-nav__link">
         
   
   
@@ -5853,7 +5868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/integrations/sharepoint-dataverse-integration/" class="md-nav__link">
+      <a href="../../../technical/integrations/sharepoint-dataverse-integration/" class="md-nav__link">
         
   
   
@@ -5936,7 +5951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/integration/customer-sites-billing-integration/" class="md-nav__link">
+      <a href="../../../technical/integration/customer-sites-billing-integration/" class="md-nav__link">
         
   
   
@@ -5966,7 +5981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../technical/integration/customer-sites-forecasting-integration/" class="md-nav__link">
+      <a href="../../../technical/integration/customer-sites-forecasting-integration/" class="md-nav__link">
         
   
   
@@ -6056,7 +6071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/" class="md-nav__link">
+      <a href="../../../user-processes/" class="md-nav__link">
         
   
   
@@ -6124,7 +6139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/account-manager/" class="md-nav__link">
+      <a href="../../../user-processes/account-manager/" class="md-nav__link">
         
   
   
@@ -6147,7 +6162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/account-manager/20250718_Forecasting_UserProcesses_AccountManagerWorkflows/" class="md-nav__link">
+      <a href="../../../user-processes/account-manager/20250718_Forecasting_UserProcesses_AccountManagerWorkflows/" class="md-nav__link">
         
   
   
@@ -6177,7 +6192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/account-manager/20250718_AccountManager_ForecastingMethodology_InterviewInsights/" class="md-nav__link">
+      <a href="../../../user-processes/account-manager/20250718_AccountManager_ForecastingMethodology_InterviewInsights/" class="md-nav__link">
         
   
   
@@ -6207,7 +6222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/account-manager/20250716_Forecasting_DataTableEditing_UserProcess/" class="md-nav__link">
+      <a href="../../../user-processes/account-manager/20250716_Forecasting_DataTableEditing_UserProcess/" class="md-nav__link">
         
   
   
@@ -6230,7 +6245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/account-manager/20250716_Forecasting_StatisticsPagination_UserProcess/" class="md-nav__link">
+      <a href="../../../user-processes/account-manager/20250716_Forecasting_StatisticsPagination_UserProcess/" class="md-nav__link">
         
   
   
@@ -6253,7 +6268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/account-manager/20250723_Forecasting_ActualsDisplay_UserProcess/" class="md-nav__link">
+      <a href="../../../user-processes/account-manager/20250723_Forecasting_ActualsDisplay_UserProcess/" class="md-nav__link">
         
   
   
@@ -6283,7 +6298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/account-manager/20250724_PayrollDataAnalysis_UserProcess/" class="md-nav__link">
+      <a href="../../../user-processes/account-manager/20250724_PayrollDataAnalysis_UserProcess/" class="md-nav__link">
         
   
   
@@ -6313,7 +6328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/account-manager/forecasting-workflow/" class="md-nav__link">
+      <a href="../../../user-processes/account-manager/forecasting-workflow/" class="md-nav__link">
         
   
   
@@ -6336,7 +6351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/account-manager/overview/" class="md-nav__link">
+      <a href="../../../user-processes/account-manager/overview/" class="md-nav__link">
         
   
   
@@ -6412,7 +6427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/billing-admin/overview/" class="md-nav__link">
+      <a href="../../../user-processes/billing-admin/overview/" class="md-nav__link">
         
   
   
@@ -6435,7 +6450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/billing-admin/" class="md-nav__link">
+      <a href="../../../user-processes/billing-admin/" class="md-nav__link">
         
   
   
@@ -6443,6 +6458,13 @@
     Billing Admin Index
     
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
   
 
       </a>
@@ -6458,7 +6480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/billing-admin/generate-invoices/" class="md-nav__link">
+      <a href="../../../user-processes/billing-admin/generate-invoices/" class="md-nav__link">
         
   
   
@@ -6481,7 +6503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/billing-admin/20250724_StatementManagement_UserProcess/" class="md-nav__link">
+      <a href="../../../user-processes/billing-admin/20250724_StatementManagement_UserProcess/" class="md-nav__link">
         
   
   
@@ -6511,7 +6533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/billing-admin/20250723_RSS_TroubleshootingProcess_UserGuide/" class="md-nav__link">
+      <a href="../../../user-processes/billing-admin/20250723_RSS_TroubleshootingProcess_UserGuide/" class="md-nav__link">
         
   
   
@@ -6541,7 +6563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/billing-admin/customer-migration/" class="md-nav__link">
+      <a href="../../../user-processes/billing-admin/customer-migration/" class="md-nav__link">
         
   
   
@@ -6564,7 +6586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/billing-admin/20250702_Billing_AccountValidation_UserProcess/" class="md-nav__link">
+      <a href="../../../user-processes/billing-admin/20250702_Billing_AccountValidation_UserProcess/" class="md-nav__link">
         
   
   
@@ -6594,7 +6616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/billing-admin/20250718_Billing_UATUserStories_ComprehensiveFeedback/" class="md-nav__link">
+      <a href="../../../user-processes/billing-admin/20250718_Billing_UATUserStories_ComprehensiveFeedback/" class="md-nav__link">
         
   
   
@@ -6624,7 +6646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/billing-admin/acquisition-integration/" class="md-nav__link">
+      <a href="../../../user-processes/billing-admin/acquisition-integration/" class="md-nav__link">
         
   
   
@@ -6647,7 +6669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/billing-admin/powerbill-user-guide/" class="md-nav__link">
+      <a href="../../../user-processes/billing-admin/powerbill-user-guide/" class="md-nav__link">
         
   
   
@@ -6723,7 +6745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/contract-admin/" class="md-nav__link">
+      <a href="../../../user-processes/contract-admin/" class="md-nav__link">
         
   
   
@@ -6746,7 +6768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/contract-admin/contract-setup-workflow/" class="md-nav__link">
+      <a href="../../../user-processes/contract-admin/contract-setup-workflow/" class="md-nav__link">
         
   
   
@@ -6769,7 +6791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/contract-admin/20250718_Contracts_QueryExamples_UserReference/" class="md-nav__link">
+      <a href="../../../user-processes/contract-admin/20250718_Contracts_QueryExamples_UserReference/" class="md-nav__link">
         
   
   
@@ -6852,7 +6874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/development/20250723_Development_UserProcess_WorkflowStandards/" class="md-nav__link">
+      <a href="../../../user-processes/development/20250723_Development_UserProcess_WorkflowStandards/" class="md-nav__link">
         
   
   
@@ -6882,7 +6904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/development/20250723_AI_UserProcess_DevelopmentWorkflow/" class="md-nav__link">
+      <a href="../../../user-processes/development/20250723_AI_UserProcess_DevelopmentWorkflow/" class="md-nav__link">
         
   
   
@@ -6912,7 +6934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/development/20250723_SprintPlanning_ProcessGuide_AIAssisted/" class="md-nav__link">
+      <a href="../../../user-processes/development/20250723_SprintPlanning_ProcessGuide_AIAssisted/" class="md-nav__link">
         
   
   
@@ -6942,7 +6964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/development/20250724_UAT_Methodology_UserProcess/" class="md-nav__link">
+      <a href="../../../user-processes/development/20250724_UAT_Methodology_UserProcess/" class="md-nav__link">
         
   
   
@@ -6965,7 +6987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/development/20250724_Project_Management_Methodology_UserProcess/" class="md-nav__link">
+      <a href="../../../user-processes/development/20250724_Project_Management_Methodology_UserProcess/" class="md-nav__link">
         
   
   
@@ -7041,7 +7063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/district-manager/" class="md-nav__link">
+      <a href="../../../user-processes/district-manager/" class="md-nav__link">
         
   
   
@@ -7064,7 +7086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/district-manager/20250723_DistrictManager_ForecastingWorkflow_UserGuide/" class="md-nav__link">
+      <a href="../../../user-processes/district-manager/20250723_DistrictManager_ForecastingWorkflow_UserGuide/" class="md-nav__link">
         
   
   
@@ -7094,7 +7116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/district-manager/20250716_Forecasting_PilotRollout_ProcessWorkflow/" class="md-nav__link">
+      <a href="../../../user-processes/district-manager/20250716_Forecasting_PilotRollout_ProcessWorkflow/" class="md-nav__link">
         
   
   
@@ -7124,7 +7146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/district-manager/20250724_Forecasting_Workflows_UserProcess/" class="md-nav__link">
+      <a href="../../../user-processes/district-manager/20250724_Forecasting_Workflows_UserProcess/" class="md-nav__link">
         
   
   
@@ -7154,7 +7176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/district-manager/forecasting-review/" class="md-nav__link">
+      <a href="../../../user-processes/district-manager/forecasting-review/" class="md-nav__link">
         
   
   
@@ -7177,7 +7199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/district-manager/overview/" class="md-nav__link">
+      <a href="../../../user-processes/district-manager/overview/" class="md-nav__link">
         
   
   
@@ -7253,7 +7275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/forecasting/overview/" class="md-nav__link">
+      <a href="../../../user-processes/forecasting/overview/" class="md-nav__link">
         
   
   
@@ -7276,7 +7298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/forecasting/" class="md-nav__link">
+      <a href="../../../user-processes/forecasting/" class="md-nav__link">
         
   
   
@@ -7299,7 +7321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/forecasting/20250717_Forecasting_UserProcesses_Sprint26Features/" class="md-nav__link">
+      <a href="../../../user-processes/forecasting/20250717_Forecasting_UserProcesses_Sprint26Features/" class="md-nav__link">
         
   
   
@@ -7307,6 +7329,13 @@
     Sprint 26 Features User Processes
     
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
   
 
       </a>
@@ -7322,7 +7351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/forecasting/20250718_Forecasting_UserExperience_DesignDecisions/" class="md-nav__link">
+      <a href="../../../user-processes/forecasting/20250718_Forecasting_UserExperience_DesignDecisions/" class="md-nav__link">
         
   
   
@@ -7352,7 +7381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/forecasting/20250723_Forecasting_UIDesign_UserExperienceStandards/" class="md-nav__link">
+      <a href="../../../user-processes/forecasting/20250723_Forecasting_UIDesign_UserExperienceStandards/" class="md-nav__link">
         
   
   
@@ -7382,7 +7411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/forecasting/20250723_Forecasting_SystemDemo_ComprehensiveGuide/" class="md-nav__link">
+      <a href="../../../user-processes/forecasting/20250723_Forecasting_SystemDemo_ComprehensiveGuide/" class="md-nav__link">
         
   
   
@@ -7412,7 +7441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/forecasting/20250702_Forecasting_JobGroupManagement_UserProcess/" class="md-nav__link">
+      <a href="../../../user-processes/forecasting/20250702_Forecasting_JobGroupManagement_UserProcess/" class="md-nav__link">
         
   
   
@@ -7495,7 +7524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/site-admin/" class="md-nav__link">
+      <a href="../../../user-processes/site-admin/" class="md-nav__link">
         
   
   
@@ -7518,7 +7547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/site-admin/site-onboarding-workflow/" class="md-nav__link">
+      <a href="../../../user-processes/site-admin/site-onboarding-workflow/" class="md-nav__link">
         
   
   
@@ -7548,7 +7577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/site-admin/contact-management-procedures/" class="md-nav__link">
+      <a href="../../../user-processes/site-admin/contact-management-procedures/" class="md-nav__link">
         
   
   
@@ -7578,7 +7607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-processes/site-admin/site-data-maintenance-procedures/" class="md-nav__link">
+      <a href="../../../user-processes/site-admin/site-data-maintenance-procedures/" class="md-nav__link">
         
   
   
@@ -7668,7 +7697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/" class="md-nav__link">
+      <a href="../../../configuration/" class="md-nav__link">
         
   
   
@@ -7691,7 +7720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/overview/" class="md-nav__link">
+      <a href="../../../configuration/overview/" class="md-nav__link">
         
   
   
@@ -7759,7 +7788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/contracts/contract-configuration-guide/" class="md-nav__link">
+      <a href="../../../configuration/contracts/contract-configuration-guide/" class="md-nav__link">
         
   
   
@@ -7782,7 +7811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/contracts/20250724_Billing_ContractConfiguration_SetupGuide/" class="md-nav__link">
+      <a href="../../../configuration/contracts/20250724_Billing_ContractConfiguration_SetupGuide/" class="md-nav__link">
         
   
   
@@ -7812,7 +7841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/contracts/20250724_Billing_PerLaborHourConfiguration_SetupGuide/" class="md-nav__link">
+      <a href="../../../configuration/contracts/20250724_Billing_PerLaborHourConfiguration_SetupGuide/" class="md-nav__link">
         
   
   
@@ -7895,7 +7924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/customer-sites/" class="md-nav__link">
+      <a href="../../../configuration/customer-sites/" class="md-nav__link">
         
   
   
@@ -7918,7 +7947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/customer-sites/site-setup-configuration/" class="md-nav__link">
+      <a href="../../../configuration/customer-sites/site-setup-configuration/" class="md-nav__link">
         
   
   
@@ -7948,7 +7977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/customer-sites/integration-configuration-guide/" class="md-nav__link">
+      <a href="../../../configuration/customer-sites/integration-configuration-guide/" class="md-nav__link">
         
   
   
@@ -7978,7 +8007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/customer-sites/territory-configuration-guide/" class="md-nav__link">
+      <a href="../../../configuration/customer-sites/territory-configuration-guide/" class="md-nav__link">
         
   
   
@@ -8016,7 +8045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/contract-setup/" class="md-nav__link">
+      <a href="../../../configuration/contract-setup/" class="md-nav__link">
         
   
   
@@ -8084,7 +8113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/user-access/" class="md-nav__link">
+      <a href="../../../configuration/user-access/" class="md-nav__link">
         
   
   
@@ -8114,7 +8143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/user-access/role-based-permissions/" class="md-nav__link">
+      <a href="../../../configuration/user-access/role-based-permissions/" class="md-nav__link">
         
   
   
@@ -8190,7 +8219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/system-settings/" class="md-nav__link">
+      <a href="../../../configuration/system-settings/" class="md-nav__link">
         
   
   
@@ -8220,7 +8249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/system-settings/system-configuration-overview/" class="md-nav__link">
+      <a href="../../../configuration/system-settings/system-configuration-overview/" class="md-nav__link">
         
   
   
@@ -8243,7 +8272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/system-settings/20250718_Architecture_LicensingAnalysis_PowerPlatform/" class="md-nav__link">
+      <a href="../../../configuration/system-settings/20250718_Architecture_LicensingAnalysis_PowerPlatform/" class="md-nav__link">
         
   
   
@@ -8273,7 +8302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/system-settings/20250716_Development_ConfigurationGuide_Standards/" class="md-nav__link">
+      <a href="../../../configuration/system-settings/20250716_Development_ConfigurationGuide_Standards/" class="md-nav__link">
         
   
   
@@ -8303,7 +8332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/system-settings/20250718_Development_Standards_ComprehensiveGuide/" class="md-nav__link">
+      <a href="../../../configuration/system-settings/20250718_Development_Standards_ComprehensiveGuide/" class="md-nav__link">
         
   
   
@@ -8333,7 +8362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/system-settings/20250718_Development_DefinitionOfDone_ComprehensiveGuide/" class="md-nav__link">
+      <a href="../../../configuration/system-settings/20250718_Development_DefinitionOfDone_ComprehensiveGuide/" class="md-nav__link">
         
   
   
@@ -8363,7 +8392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/system-settings/20250718_Development_PRReview_ComprehensiveGuide/" class="md-nav__link">
+      <a href="../../../configuration/system-settings/20250718_Development_PRReview_ComprehensiveGuide/" class="md-nav__link">
         
   
   
@@ -8393,7 +8422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/system-settings/20250723_AI_ConfigurationGuide_SDLCIntegration/" class="md-nav__link">
+      <a href="../../../configuration/system-settings/20250723_AI_ConfigurationGuide_SDLCIntegration/" class="md-nav__link">
         
   
   
@@ -8423,7 +8452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/system-settings/20250723_AI_ConfigurationGuide_DevelopmentTools/" class="md-nav__link">
+      <a href="../../../configuration/system-settings/20250723_AI_ConfigurationGuide_DevelopmentTools/" class="md-nav__link">
         
   
   
@@ -8453,7 +8482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/system-settings/20250724_EDW_Integration_Configuration/" class="md-nav__link">
+      <a href="../../../configuration/system-settings/20250724_EDW_Integration_Configuration/" class="md-nav__link">
         
   
   
@@ -8483,7 +8512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/system-settings/20250724_Forecasting_SystemConfiguration/" class="md-nav__link">
+      <a href="../../../configuration/system-settings/20250724_Forecasting_SystemConfiguration/" class="md-nav__link">
         
   
   
@@ -8513,7 +8542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/system-settings/rss-system-configuration/" class="md-nav__link">
+      <a href="../../../configuration/system-settings/rss-system-configuration/" class="md-nav__link">
         
   
   
@@ -8543,7 +8572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../configuration/system-settings/webhook-management-configuration/" class="md-nav__link">
+      <a href="../../../configuration/system-settings/webhook-management-configuration/" class="md-nav__link">
         
   
   
@@ -8585,31 +8614,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
   
   
@@ -8622,7 +8648,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Team Notes
@@ -8633,39 +8659,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Architecture Team Meeting Notes
-    
-  </span>
-  
-    
-  
-  
-    <span class="md-status md-status--Active"></span>
-  
-
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync.md" class="md-nav__link">
         
   
   
@@ -8673,441 +8670,9 @@
     Architecture Team Meeting Notes
     
   </span>
-  
-    
-  
-  
-    <span class="md-status md-status--Active"></span>
-  
-
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#attendees" class="md-nav__link">
-    <span class="md-ellipsis">
-      Attendees
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#meeting-agenda" class="md-nav__link">
-    <span class="md-ellipsis">
-      Meeting Agenda
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Meeting Agenda">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-power-platform-architecture-review" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Power Platform Architecture Review
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Power Platform Architecture Review">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#current-state-assessment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Current State Assessment
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#architecture-decisions-made" class="md-nav__link">
-    <span class="md-ellipsis">
-      Architecture Decisions Made
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#action-items" class="md-nav__link">
-    <span class="md-ellipsis">
-      Action Items
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-data-architecture-updates" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Data Architecture Updates
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Data Architecture Updates">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#database-integration-strategy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Database Integration Strategy
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-flow-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Flow Architecture
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#key-decisions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Decisions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#action-items_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Action Items
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-security-architecture-review" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Security Architecture Review
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Security Architecture Review">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#security-framework-updates" class="md-nav__link">
-    <span class="md-ellipsis">
-      Security Framework Updates
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#compliance-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compliance Requirements
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#security-decisions-made" class="md-nav__link">
-    <span class="md-ellipsis">
-      Security Decisions Made
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#action-items_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Action Items
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-integration-strategy-discussion" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Integration Strategy Discussion
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Integration Strategy Discussion">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#current-integration-landscape" class="md-nav__link">
-    <span class="md-ellipsis">
-      Current Integration Landscape
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#integration-patterns-adopted" class="md-nav__link">
-    <span class="md-ellipsis">
-      Integration Patterns Adopted
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#integration-challenges-and-solutions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Integration Challenges and Solutions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#action-items_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Action Items
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-performance-and-scalability-planning" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Performance and Scalability Planning
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. Performance and Scalability Planning">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#current-performance-metrics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Current Performance Metrics
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scalability-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scalability Requirements
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#performance-optimization-strategies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Performance Optimization Strategies
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#action-items_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Action Items
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-technology-roadmap-updates" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Technology Roadmap Updates
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6. Technology Roadmap Updates">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#short-term-priorities-next-3-months" class="md-nav__link">
-    <span class="md-ellipsis">
-      Short-term Priorities (Next 3 Months)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#medium-term-goals-3-12-months" class="md-nav__link">
-    <span class="md-ellipsis">
-      Medium-term Goals (3-12 Months)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#long-term-vision-12-months" class="md-nav__link">
-    <span class="md-ellipsis">
-      Long-term Vision (12+ Months)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#action-items_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      Action Items
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-decisions-summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Decisions Summary
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Key Decisions Summary">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#approved-decisions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Approved Decisions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pending-decisions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pending Decisions
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#risk-assessment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Risk Assessment
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Risk Assessment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#high-priority-risks" class="md-nav__link">
-    <span class="md-ellipsis">
-      High-Priority Risks
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#medium-priority-risks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Medium-Priority Risks
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-meeting" class="md-nav__link">
-    <span class="md-ellipsis">
-      Next Meeting
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#action-item-summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Action Item Summary
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -9120,7 +8685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../20250718_Development_DailyScrum_TeamNotes/" class="md-nav__link">
+      <a href="../../../team-notes/20250718_Development_DailyScrum_TeamNotes/" class="md-nav__link">
         
   
   
@@ -9156,13 +8721,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -9171,7 +8733,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9_3" >
         
           
-          <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_9_3" id="__nav_9_3_label" tabindex="0">
             
   
   
@@ -9198,7 +8760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../AulsonJonathan-Notes/Definition%20of%20Done%20%28DoD%29/" class="md-nav__link">
+      <a href="../../../team-notes/AulsonJonathan-Notes/Definition%20of%20Done%20%28DoD%29/" class="md-nav__link">
         
   
   
@@ -9221,7 +8783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../AulsonJonathan-Notes/Sprint%2029/" class="md-nav__link">
+      <a href="../../../team-notes/AulsonJonathan-Notes/Sprint%2029/" class="md-nav__link">
         
   
   
@@ -9244,7 +8806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../AulsonJonathan-Notes/Welcome/" class="md-nav__link">
+      <a href="../../../team-notes/AulsonJonathan-Notes/Welcome/" class="md-nav__link">
         
   
   
@@ -9267,7 +8829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../AulsonJonathan-Notes/20250718_Architecture_TeamMeetingNotes_WeeklySync/" class="md-nav__link">
+      <a href="../../../team-notes/AulsonJonathan-Notes/20250718_Architecture_TeamMeetingNotes_WeeklySync/" class="md-nav__link">
         
   
   
@@ -9311,13 +8873,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -9326,7 +8885,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9_4" >
         
           
-          <label class="md-nav__link" for="__nav_9_4" id="__nav_9_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_9_4" id="__nav_9_4_label" tabindex="0">
             
   
   
@@ -9353,7 +8912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../development/20250718_Development_DailyScrum_TeamNotes/" class="md-nav__link">
+      <a href="../../../team-notes/development/20250718_Development_DailyScrum_TeamNotes/" class="md-nav__link">
         
   
   
@@ -9383,7 +8942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../development/20250723_SprintPlanning_ProcessGuide_AIAssisted/" class="md-nav__link">
+      <a href="../../../team-notes/development/20250723_SprintPlanning_ProcessGuide_AIAssisted/" class="md-nav__link">
         
   
   
@@ -9413,7 +8972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../development/20250723_Development_TeamNotes_DailyScrumInsights/" class="md-nav__link">
+      <a href="../../../team-notes/development/20250723_Development_TeamNotes_DailyScrumInsights/" class="md-nav__link">
         
   
   
@@ -9443,7 +9002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../development/20250723_Forecasting_TeamNotes_ActualsDisplayDecisions/" class="md-nav__link">
+      <a href="../../../team-notes/development/20250723_Forecasting_TeamNotes_ActualsDisplayDecisions/" class="md-nav__link">
         
   
   
@@ -9473,7 +9032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../development/20250724_Forecasting_BacklogGrooming_ConsolidatedDecisions/" class="md-nav__link">
+      <a href="../../../team-notes/development/20250724_Forecasting_BacklogGrooming_ConsolidatedDecisions/" class="md-nav__link">
         
   
   
@@ -9503,7 +9062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../development/20250724_ForecastingSprintDemo_ConsolidatedTeamNotes/" class="md-nav__link">
+      <a href="../../../team-notes/development/20250724_ForecastingSprintDemo_ConsolidatedTeamNotes/" class="md-nav__link">
         
   
   
@@ -9533,7 +9092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../development/20250724_UAT_Planning_TeamNotes_BacklogGrooming/" class="md-nav__link">
+      <a href="../../../team-notes/development/20250724_UAT_Planning_TeamNotes_BacklogGrooming/" class="md-nav__link">
         
   
   
@@ -9556,7 +9115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../development/20250724_Sprint_Planning_TeamNotes_FinalStretch/" class="md-nav__link">
+      <a href="../../../team-notes/development/20250724_Sprint_Planning_TeamNotes_FinalStretch/" class="md-nav__link">
         
   
   
@@ -9579,7 +9138,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../development/20250724_DailyScrum_TechnicalClarifications_TeamNotes/" class="md-nav__link">
+      <a href="../../../team-notes/development/20250724_DailyScrum_TechnicalClarifications_TeamNotes/" class="md-nav__link">
         
   
   
@@ -9609,7 +9168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../development/20250724_Forecasting_BacklogGrooming_TeamNotes/" class="md-nav__link">
+      <a href="../../../team-notes/development/20250724_Forecasting_BacklogGrooming_TeamNotes/" class="md-nav__link">
         
   
   
@@ -9639,7 +9198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../development/20250724_DailyScrum_DevelopmentProgress_TeamNotes/" class="md-nav__link">
+      <a href="../../../team-notes/development/20250724_DailyScrum_DevelopmentProgress_TeamNotes/" class="md-nav__link">
         
   
   
@@ -9669,7 +9228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../development/20250723_DailyScrum_TechnicalIssues_ResolutionGuide/" class="md-nav__link">
+      <a href="../../../team-notes/development/20250723_DailyScrum_TechnicalIssues_ResolutionGuide/" class="md-nav__link">
         
   
   
@@ -9699,7 +9258,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../development/20250724_Forecasting_UATPlanningDecisions_TeamNotes/" class="md-nav__link">
+      <a href="../../../team-notes/development/20250724_Forecasting_UATPlanningDecisions_TeamNotes/" class="md-nav__link">
         
   
   
@@ -9729,7 +9288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../20250718_Development_SprintPlanning_ProjectManagement/" class="md-nav__link">
+      <a href="../../../team-notes/20250718_Development_SprintPlanning_ProjectManagement/" class="md-nav__link">
         
   
   
@@ -9819,7 +9378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../standards/data-quality-standards/" class="md-nav__link">
+      <a href="../../../standards/data-quality-standards/" class="md-nav__link">
         
   
   
@@ -9849,7 +9408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../standards/data-synchronization-standards/" class="md-nav__link">
+      <a href="../../../standards/data-synchronization-standards/" class="md-nav__link">
         
   
   
@@ -9879,7 +9438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../standards/error-handling-guidelines/" class="md-nav__link">
+      <a href="../../../standards/error-handling-guidelines/" class="md-nav__link">
         
   
   
@@ -9909,7 +9468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../standards/error-handling-standards/" class="md-nav__link">
+      <a href="../../../standards/error-handling-standards/" class="md-nav__link">
         
   
   
@@ -9939,7 +9498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../standards/system-resilience-guidelines/" class="md-nav__link">
+      <a href="../../../standards/system-resilience-guidelines/" class="md-nav__link">
         
   
   
@@ -10021,7 +9580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../operations/monitoring-alerting-guide/" class="md-nav__link">
+      <a href="../../../operations/monitoring-alerting-guide/" class="md-nav__link">
         
   
   
@@ -10058,7 +9617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../business-rules/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   
@@ -10080,7 +9639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2025-07-21/" class="md-nav__link">
+      <a href="../../../2025-07-21/" class="md-nav__link">
         
   
   
@@ -10102,7 +9661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../glossary/" class="md-nav__link">
+      <a href="../../../glossary/" class="md-nav__link">
         
   
   
@@ -10144,56 +9703,116 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#attendees" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Attendees
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#meeting-agenda" class="md-nav__link">
+  <a href="#core-authorization-principles" class="md-nav__link">
     <span class="md-ellipsis">
-      Meeting Agenda
+      Core Authorization Principles
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Meeting Agenda">
+    <nav class="md-nav" aria-label="Core Authorization Principles">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-power-platform-architecture-review" class="md-nav__link">
+  <a href="#principle-of-least-privilege" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Power Platform Architecture Review
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Power Platform Architecture Review">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#current-state-assessment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Current State Assessment
+      Principle of Least Privilege
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#architecture-decisions-made" class="md-nav__link">
+  <a href="#role-based-access-control-rbac" class="md-nav__link">
     <span class="md-ellipsis">
-      Architecture Decisions Made
+      Role-Based Access Control (RBAC)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#action-items" class="md-nav__link">
+  <a href="#attribute-based-access-control-abac" class="md-nav__link">
     <span class="md-ellipsis">
-      Action Items
+      Attribute-Based Access Control (ABAC)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zero-trust-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zero Trust Authorization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authorization-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorization Framework
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authorization Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#role-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role Hierarchy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Role Hierarchy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#executive-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Executive Level
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#management-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Management Level
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operational-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operational Level
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administrative-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      Administrative Level
     </span>
   </a>
   
@@ -10205,250 +9824,37 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-data-architecture-updates" class="md-nav__link">
+  <a href="#permission-categories" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Data Architecture Updates
+      Permission Categories
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Data Architecture Updates">
+    <nav class="md-nav" aria-label="Permission Categories">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#database-integration-strategy" class="md-nav__link">
+  <a href="#data-access-permissions" class="md-nav__link">
     <span class="md-ellipsis">
-      Database Integration Strategy
+      Data Access Permissions
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-flow-architecture" class="md-nav__link">
+  <a href="#system-access-permissions" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Flow Architecture
+      System Access Permissions
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#key-decisions" class="md-nav__link">
+  <a href="#functional-permissions" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Decisions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#action-items_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Action Items
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-security-architecture-review" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Security Architecture Review
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Security Architecture Review">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#security-framework-updates" class="md-nav__link">
-    <span class="md-ellipsis">
-      Security Framework Updates
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#compliance-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compliance Requirements
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#security-decisions-made" class="md-nav__link">
-    <span class="md-ellipsis">
-      Security Decisions Made
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#action-items_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Action Items
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-integration-strategy-discussion" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Integration Strategy Discussion
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Integration Strategy Discussion">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#current-integration-landscape" class="md-nav__link">
-    <span class="md-ellipsis">
-      Current Integration Landscape
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#integration-patterns-adopted" class="md-nav__link">
-    <span class="md-ellipsis">
-      Integration Patterns Adopted
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#integration-challenges-and-solutions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Integration Challenges and Solutions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#action-items_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Action Items
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-performance-and-scalability-planning" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Performance and Scalability Planning
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. Performance and Scalability Planning">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#current-performance-metrics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Current Performance Metrics
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scalability-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scalability Requirements
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#performance-optimization-strategies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Performance Optimization Strategies
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#action-items_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Action Items
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-technology-roadmap-updates" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Technology Roadmap Updates
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6. Technology Roadmap Updates">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#short-term-priorities-next-3-months" class="md-nav__link">
-    <span class="md-ellipsis">
-      Short-term Priorities (Next 3 Months)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#medium-term-goals-3-12-months" class="md-nav__link">
-    <span class="md-ellipsis">
-      Medium-term Goals (3-12 Months)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#long-term-vision-12-months" class="md-nav__link">
-    <span class="md-ellipsis">
-      Long-term Vision (12+ Months)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#action-items_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      Action Items
+      Functional Permissions
     </span>
   </a>
   
@@ -10465,28 +9871,46 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-decisions-summary" class="md-nav__link">
+  <a href="#authorization-rules" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Decisions Summary
+      Authorization Rules
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Key Decisions Summary">
+    <nav class="md-nav" aria-label="Authorization Rules">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#approved-decisions" class="md-nav__link">
+  <a href="#access-control-rules" class="md-nav__link">
     <span class="md-ellipsis">
-      Approved Decisions
+      Access Control Rules
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pending-decisions" class="md-nav__link">
+  <a href="#permission-management-rules" class="md-nav__link">
     <span class="md-ellipsis">
-      Pending Decisions
+      Permission Management Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segregation-of-duties-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Segregation of Duties Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approval-workflow-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Approval Workflow Rules
     </span>
   </a>
   
@@ -10498,28 +9922,466 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#risk-assessment" class="md-nav__link">
+  <a href="#role-definitions" class="md-nav__link">
     <span class="md-ellipsis">
-      Risk Assessment
+      Role Definitions
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Risk Assessment">
+    <nav class="md-nav" aria-label="Role Definitions">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#high-priority-risks" class="md-nav__link">
+  <a href="#account-manager-role" class="md-nav__link">
     <span class="md-ellipsis">
-      High-Priority Risks
+      Account Manager Role
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Account Manager Role">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permissions
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#medium-priority-risks" class="md-nav__link">
+  <a href="#restrictions" class="md-nav__link">
     <span class="md-ellipsis">
-      Medium-Priority Risks
+      Restrictions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approval-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Approval Requirements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#billing-administrator-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      Billing Administrator Role
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Billing Administrator Role">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permissions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permissions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restrictions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restrictions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approval-requirements_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Approval Requirements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-administrator-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Administrator Role
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Administrator Role">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permissions_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permissions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restrictions_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restrictions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approval-requirements_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Approval Requirements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-control-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Control Implementation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Access Control Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technical-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Implementation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technical Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#role-based-access-control-rbac_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role-Based Access Control (RBAC)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attribute-based-access-control-abac_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attribute-Based Access Control (ABAC)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Authorization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operational-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operational Implementation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operational Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-request-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Request Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-review-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Review Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-revocation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Revocation Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-and-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitoring and Compliance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoring and Compliance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access Monitoring
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Access Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#real-time-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-Time Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audit-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Audit Logging
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compliance-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compliance Monitoring
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compliance Monitoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#regulatory-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regulatory Compliance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internal-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internal Compliance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risk-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Risk Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authorization-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authorization Risks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Authorization Risks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#excessive-privileges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Excessive Privileges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#privilege-creep" class="md-nav__link">
+    <span class="md-ellipsis">
+      Privilege Creep
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unauthorized-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unauthorized Access
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-mitigation-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Mitigation Strategies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Risk Mitigation Strategies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preventive-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preventive Controls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detective-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Detective Controls
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#corrective-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Corrective Controls
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Guidelines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#planning-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planning Phase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Phase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maintenance-phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maintenance Phase
     </span>
   </a>
   
@@ -10531,18 +10393,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#next-meeting" class="md-nav__link">
+  <a href="#version-history" class="md-nav__link">
     <span class="md-ellipsis">
-      Next Meeting
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#action-item-summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Action Item Summary
+      Version History
     </span>
   </a>
   
@@ -10564,457 +10417,352 @@
 
 
 
-<h1 id="architecture-team-meeting-notes-weekly-sync">Architecture Team Meeting Notes - Weekly Sync</h1>
-<p><strong>Date</strong>: July 18, 2025<br />
-<strong>Time</strong>: 10:00 AM - 11:30 AM CST<br />
-<strong>Meeting Type</strong>: Weekly Architecture Sync<br />
-<strong>Facilitator</strong>: Sarah Chen, Lead Architect  </p>
-<h2 id="attendees">Attendees</h2>
+<h1 id="authorization-policies">Authorization Policies</h1>
+<h2 id="overview">Overview</h2>
+<p>This document establishes comprehensive authorization policies for managing user permissions and system access across all Towne Park systems. These policies define access control frameworks, permission structures, and authorization procedures to ensure appropriate access to resources and data.</p>
+<h2 id="core-authorization-principles">Core Authorization Principles</h2>
+<h3 id="principle-of-least-privilege">Principle of Least Privilege</h3>
 <ul>
-<li>Sarah Chen (Lead Architect)</li>
-<li>Michael Rodriguez (Senior Solutions Architect)</li>
-<li>Jennifer Kim (Integration Architect)</li>
-<li>David Thompson (Platform Architect)</li>
-<li>Lisa Wang (Security Architect)</li>
-<li>Robert Johnson (Data Architect)</li>
+<li>Users granted minimum permissions necessary for job functions</li>
+<li>Regular review and validation of user permissions</li>
+<li>Automatic permission revocation upon role changes</li>
+<li>Time-limited permissions for temporary access needs</li>
 </ul>
-<h2 id="meeting-agenda">Meeting Agenda</h2>
-<h3 id="1-power-platform-architecture-review">1. Power Platform Architecture Review</h3>
-<p><strong>Discussion Leader</strong>: Michael Rodriguez</p>
-<h4 id="current-state-assessment">Current State Assessment</h4>
+<h3 id="role-based-access-control-rbac">Role-Based Access Control (RBAC)</h3>
 <ul>
-<li><strong>Power Apps</strong>: 15 production applications currently deployed</li>
-<li><strong>Power Automate</strong>: 47 active workflows across billing and forecasting</li>
-<li><strong>Power BI</strong>: 12 operational dashboards with real-time data feeds</li>
-<li><strong>Dataverse</strong>: Central data hub with 150+ custom entities</li>
+<li>Permissions assigned based on organizational roles</li>
+<li>Standardized role definitions and permission sets</li>
+<li>Hierarchical role structures with inheritance</li>
+<li>Clear separation of duties and responsibilities</li>
 </ul>
-<h4 id="architecture-decisions-made">Architecture Decisions Made</h4>
-<ol>
-<li><strong>Hybrid Connection Strategy</strong></li>
-<li>Approved implementation of on-premises data gateway for legacy system integration</li>
-<li>Decision to maintain hybrid approach for next 18 months during cloud migration</li>
-<li>
-<p>Security requirements mandate encrypted connections for all data transfers</p>
-</li>
-<li>
-<p><strong>ALM (Application Lifecycle Management) Strategy</strong></p>
-</li>
-<li>Standardized on Azure DevOps for source control and deployment pipelines</li>
-<li>Implemented environment promotion strategy: Dev → Test → UAT → Production</li>
-<li>
-<p>Established code review requirements for all Power Platform solutions</p>
-</li>
-<li>
-<p><strong>Integration Architecture</strong></p>
-</li>
-<li>Approved REST API-first approach for all new integrations</li>
-<li>Legacy SOAP services to be wrapped with REST facades</li>
-<li>Event-driven architecture for real-time data synchronization</li>
-</ol>
-<h4 id="action-items">Action Items</h4>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Michael Rodriguez</strong>: Document hybrid connection security requirements by July 25</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Jennifer Kim</strong>: Create integration testing framework for new REST APIs by August 1</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>David Thompson</strong>: Establish Power Platform governance policies by July 30</li>
-</ul>
-<h3 id="2-data-architecture-updates">2. Data Architecture Updates</h3>
-<p><strong>Discussion Leader</strong>: Robert Johnson</p>
-<h4 id="database-integration-strategy">Database Integration Strategy</h4>
+<h3 id="attribute-based-access-control-abac">Attribute-Based Access Control (ABAC)</h3>
 <ul>
-<li><strong>Primary Database</strong>: SQL Server 2022 with Always On availability groups</li>
-<li><strong>Data Warehouse</strong>: Azure Synapse Analytics for historical data and reporting</li>
-<li><strong>Real-time Analytics</strong>: Azure Stream Analytics for live dashboard feeds</li>
-<li><strong>Backup Strategy</strong>: Automated daily backups with 7-year retention</li>
+<li>Dynamic access decisions based on user, resource, and environmental attributes</li>
+<li>Context-aware access control policies</li>
+<li>Fine-grained permission management</li>
+<li>Policy-driven access control decisions</li>
 </ul>
-<h4 id="data-flow-architecture">Data Flow Architecture</h4>
-<pre class="mermaid"><code>graph TD
-    A[Power Apps] --&gt; B[Dataverse]
-    B --&gt; C[Azure Data Factory]
-    C --&gt; D[SQL Server]
-    C --&gt; E[Azure Synapse]
-    D --&gt; F[Power BI]
-    E --&gt; F
-    B --&gt; G[Power Automate]
-    G --&gt; H[External APIs]</code></pre>
-<h4 id="key-decisions">Key Decisions</h4>
-<ol>
-<li><strong>Data Synchronization</strong></li>
-<li>Real-time sync for critical billing data</li>
-<li>Batch processing for historical forecasting data</li>
-<li>
-<p>Event-driven updates for customer information changes</p>
-</li>
-<li>
-<p><strong>Data Quality Framework</strong></p>
-</li>
-<li>Implemented automated data validation rules</li>
-<li>Established data lineage tracking</li>
-<li>Created data quality dashboards for monitoring</li>
-</ol>
-<h4 id="action-items_1">Action Items</h4>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Robert Johnson</strong>: Finalize data retention policies by July 22</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Lisa Wang</strong>: Review data encryption standards for new integrations by July 24</li>
-</ul>
-<h3 id="3-security-architecture-review">3. Security Architecture Review</h3>
-<p><strong>Discussion Leader</strong>: Lisa Wang</p>
-<h4 id="security-framework-updates">Security Framework Updates</h4>
+<h3 id="zero-trust-authorization">Zero Trust Authorization</h3>
 <ul>
-<li><strong>Identity Management</strong>: Azure Active Directory with conditional access policies</li>
-<li><strong>API Security</strong>: OAuth 2.0 with JWT tokens for all API communications</li>
-<li><strong>Data Encryption</strong>: AES-256 encryption for data at rest and in transit</li>
-<li><strong>Network Security</strong>: Zero-trust network architecture implementation</li>
+<li>Verify every access request regardless of user location or device</li>
+<li>Continuous authorization validation during sessions</li>
+<li>Micro-segmentation of resource access</li>
+<li>Assume breach and limit access scope</li>
 </ul>
-<h4 id="compliance-requirements">Compliance Requirements</h4>
-<ol>
-<li><strong>SOX Compliance</strong></li>
-<li>Implemented segregation of duties for financial data access</li>
-<li>Established audit trails for all financial transactions</li>
-<li>
-<p>Created automated compliance reporting</p>
-</li>
-<li>
-<p><strong>PCI DSS Requirements</strong></p>
-</li>
-<li>Tokenization of payment card data</li>
-<li>Secure payment processing workflows</li>
-<li>Regular security assessments and penetration testing</li>
-</ol>
-<h4 id="security-decisions-made">Security Decisions Made</h4>
-<ol>
-<li><strong>Multi-Factor Authentication</strong></li>
-<li>Mandatory MFA for all system access</li>
-<li>Risk-based authentication for sensitive operations</li>
-<li>
-<p>Integration with Microsoft Authenticator app</p>
-</li>
-<li>
-<p><strong>Privileged Access Management</strong></p>
-</li>
-<li>Just-in-time access for administrative functions</li>
-<li>Automated access reviews and certifications</li>
-<li>Privileged session monitoring and recording</li>
-</ol>
-<h4 id="action-items_2">Action Items</h4>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Lisa Wang</strong>: Complete security assessment of new forecasting module by July 28</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Sarah Chen</strong>: Review and approve updated security policies by July 26</li>
-</ul>
-<h3 id="4-integration-strategy-discussion">4. Integration Strategy Discussion</h3>
-<p><strong>Discussion Leader</strong>: Jennifer Kim</p>
-<h4 id="current-integration-landscape">Current Integration Landscape</h4>
+<h2 id="authorization-framework">Authorization Framework</h2>
+<h3 id="role-hierarchy">Role Hierarchy</h3>
+<h4 id="executive-level">Executive Level</h4>
 <ul>
-<li><strong>Legacy Systems</strong>: 8 on-premises systems requiring integration</li>
-<li><strong>Cloud Services</strong>: 12 SaaS applications with API connectivity</li>
-<li><strong>Real-time Integrations</strong>: 15 critical data flows requiring sub-second latency</li>
-<li><strong>Batch Integrations</strong>: 25 scheduled data synchronization processes</li>
+<li><strong>Chief Executive Officer (CEO)</strong>: Full system access with audit logging</li>
+<li><strong>Chief Financial Officer (CFO)</strong>: Financial system access and reporting</li>
+<li><strong>Chief Technology Officer (CTO)</strong>: Technical system access and administration</li>
+<li><strong>Vice Presidents</strong>: Department-specific access with cross-functional visibility</li>
 </ul>
-<h4 id="integration-patterns-adopted">Integration Patterns Adopted</h4>
-<ol>
-<li><strong>API Gateway Pattern</strong></li>
-<li>Centralized API management through Azure API Management</li>
-<li>Rate limiting and throttling for external API calls</li>
-<li>
-<p>Comprehensive API monitoring and analytics</p>
-</li>
-<li>
-<p><strong>Event-Driven Architecture</strong></p>
-</li>
-<li>Azure Service Bus for reliable message delivery</li>
-<li>Event sourcing for audit trails and data recovery</li>
-<li>
-<p>Saga pattern for distributed transaction management</p>
-</li>
-<li>
-<p><strong>Hybrid Connectivity</strong></p>
-</li>
-<li>Azure ExpressRoute for high-bandwidth, low-latency connections</li>
-<li>VPN gateways for secure remote access</li>
-<li>On-premises data gateways for Power Platform connectivity</li>
-</ol>
-<h4 id="integration-challenges-and-solutions">Integration Challenges and Solutions</h4>
-<ol>
-<li><strong>Legacy System Modernization</strong></li>
-<li><strong>Challenge</strong>: Outdated APIs with limited functionality</li>
-<li><strong>Solution</strong>: API facade pattern with modern REST interfaces</li>
-<li>
-<p><strong>Timeline</strong>: Phased approach over 12 months</p>
-</li>
-<li>
-<p><strong>Data Consistency</strong></p>
-</li>
-<li><strong>Challenge</strong>: Maintaining data consistency across multiple systems</li>
-<li><strong>Solution</strong>: Event sourcing with eventual consistency model</li>
-<li><strong>Implementation</strong>: Azure Event Grid for event distribution</li>
-</ol>
-<h4 id="action-items_3">Action Items</h4>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Jennifer Kim</strong>: Create integration testing strategy document by July 25</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>David Thompson</strong>: Establish API versioning standards by July 30</li>
-</ul>
-<h3 id="5-performance-and-scalability-planning">5. Performance and Scalability Planning</h3>
-<p><strong>Discussion Leader</strong>: David Thompson</p>
-<h4 id="current-performance-metrics">Current Performance Metrics</h4>
+<h4 id="management-level">Management Level</h4>
 <ul>
-<li><strong>Power Apps Response Time</strong>: Average 1.2 seconds for standard operations</li>
-<li><strong>Power Automate Throughput</strong>: 500 workflows per minute peak capacity</li>
-<li><strong>Database Query Performance</strong>: 95% of queries complete under 100ms</li>
-<li><strong>API Response Times</strong>: Average 250ms for external API calls</li>
+<li><strong>Regional Managers</strong>: Regional operational data and management functions</li>
+<li><strong>District Managers</strong>: District-specific data and operational control</li>
+<li><strong>Department Managers</strong>: Department-specific access and team management</li>
+<li><strong>Project Managers</strong>: Project-specific access and resource management</li>
 </ul>
-<h4 id="scalability-requirements">Scalability Requirements</h4>
-<ol>
-<li><strong>User Growth Projections</strong></li>
-<li>Current: 150 active users</li>
-<li>6-month target: 300 active users</li>
-<li>
-<p>12-month target: 500 active users</p>
-</li>
-<li>
-<p><strong>Data Volume Growth</strong></p>
-</li>
-<li>Current: 2TB of operational data</li>
-<li>Annual growth rate: 40%</li>
-<li>3-year projection: 8TB of operational data</li>
-</ol>
-<h4 id="performance-optimization-strategies">Performance Optimization Strategies</h4>
-<ol>
-<li><strong>Caching Implementation</strong></li>
-<li>Redis cache for frequently accessed data</li>
-<li>CDN for static content delivery</li>
-<li>
-<p>Application-level caching for computed results</p>
-</li>
-<li>
-<p><strong>Database Optimization</strong></p>
-</li>
-<li>Index optimization for critical queries</li>
-<li>Partitioning for large historical tables</li>
-<li>Read replicas for reporting workloads</li>
-</ol>
-<h4 id="action-items_4">Action Items</h4>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>David Thompson</strong>: Implement performance monitoring dashboard by August 5</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Robert Johnson</strong>: Optimize database indexes for forecasting queries by July 30</li>
+<h4 id="operational-level">Operational Level</h4>
+<ul>
+<li><strong>Account Managers</strong>: Customer account data and relationship management</li>
+<li><strong>Billing Administrators</strong>: Billing system access and invoice management</li>
+<li><strong>Operations Staff</strong>: Operational system access for daily tasks</li>
+<li><strong>Customer Service</strong>: Customer data access for support functions</li>
 </ul>
-<h3 id="6-technology-roadmap-updates">6. Technology Roadmap Updates</h3>
-<p><strong>Discussion Leader</strong>: Sarah Chen</p>
-<h4 id="short-term-priorities-next-3-months">Short-term Priorities (Next 3 Months)</h4>
-<ol>
-<li><strong>Power Platform Governance</strong></li>
-<li>Establish Center of Excellence (CoE)</li>
-<li>Implement solution templates and standards</li>
-<li>
-<p>Create developer training programs</p>
-</li>
-<li>
-<p><strong>Integration Modernization</strong></p>
-</li>
-<li>Complete REST API implementation for billing system</li>
-<li>Migrate legacy SOAP services to modern architecture</li>
-<li>
-<p>Implement API gateway for centralized management</p>
-</li>
-<li>
-<p><strong>Security Enhancements</strong></p>
-</li>
-<li>Deploy advanced threat protection</li>
-<li>Implement zero-trust network architecture</li>
-<li>Complete security compliance assessments</li>
-</ol>
-<h4 id="medium-term-goals-3-12-months">Medium-term Goals (3-12 Months)</h4>
-<ol>
-<li><strong>Cloud Migration</strong></li>
-<li>Migrate remaining on-premises workloads to Azure</li>
-<li>Implement cloud-native monitoring and alerting</li>
-<li>
-<p>Optimize cloud resource utilization and costs</p>
-</li>
-<li>
-<p><strong>Advanced Analytics</strong></p>
-</li>
-<li>Deploy machine learning models for forecasting</li>
-<li>Implement real-time analytics dashboards</li>
-<li>
-<p>Create predictive maintenance capabilities</p>
-</li>
-<li>
-<p><strong>Automation Expansion</strong></p>
-</li>
-<li>Automate manual business processes</li>
-<li>Implement intelligent document processing</li>
-<li>Deploy chatbots for customer service</li>
-</ol>
-<h4 id="long-term-vision-12-months">Long-term Vision (12+ Months)</h4>
-<ol>
-<li><strong>AI and Machine Learning</strong></li>
-<li>Implement AI-powered business insights</li>
-<li>Deploy natural language processing for document analysis</li>
-<li>
-<p>Create intelligent automation workflows</p>
-</li>
-<li>
-<p><strong>Edge Computing</strong></p>
-</li>
-<li>Deploy edge computing for real-time processing</li>
-<li>Implement IoT integration for facility management</li>
-<li>Create hybrid cloud-edge architecture</li>
-</ol>
-<h4 id="action-items_5">Action Items</h4>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>Sarah Chen</strong>: Finalize technology roadmap document by July 31</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong>All Team Members</strong>: Review and provide feedback on roadmap by July 28</li>
+<h4 id="administrative-level">Administrative Level</h4>
+<ul>
+<li><strong>System Administrators</strong>: Technical system administration and configuration</li>
+<li><strong>Database Administrators</strong>: Database access and management</li>
+<li><strong>Security Administrators</strong>: Security system access and monitoring</li>
+<li><strong>Compliance Officers</strong>: Audit and compliance data access</li>
 </ul>
-<h2 id="key-decisions-summary">Key Decisions Summary</h2>
-<h3 id="approved-decisions">Approved Decisions</h3>
+<h3 id="permission-categories">Permission Categories</h3>
+<h4 id="data-access-permissions">Data Access Permissions</h4>
+<ul>
+<li><strong>Read</strong>: View data and information</li>
+<li><strong>Write</strong>: Create and modify data</li>
+<li><strong>Delete</strong>: Remove data and records</li>
+<li><strong>Export</strong>: Extract data from systems</li>
+</ul>
+<h4 id="system-access-permissions">System Access Permissions</h4>
+<ul>
+<li><strong>Login</strong>: Access to system interfaces</li>
+<li><strong>Execute</strong>: Run system functions and processes</li>
+<li><strong>Configure</strong>: Modify system settings and configurations</li>
+<li><strong>Administer</strong>: Full system administration capabilities</li>
+</ul>
+<h4 id="functional-permissions">Functional Permissions</h4>
+<ul>
+<li><strong>Approve</strong>: Approve transactions and processes</li>
+<li><strong>Override</strong>: Override system controls and validations</li>
+<li><strong>Audit</strong>: Access audit trails and compliance data</li>
+<li><strong>Report</strong>: Generate and access reports</li>
+</ul>
+<h2 id="authorization-rules">Authorization Rules</h2>
+<h3 id="access-control-rules">Access Control Rules</h3>
+<ul>
+<li><strong>Rule AUTHZ-001</strong>: All system access requires explicit authorization</li>
+<li><strong>Rule AUTHZ-002</strong>: Permissions granted based on job role and business need</li>
+<li><strong>Rule AUTHZ-003</strong>: Temporary permissions require approval and expiration date</li>
+<li><strong>Rule AUTHZ-004</strong>: Emergency access requires post-access review and justification</li>
+</ul>
+<h3 id="permission-management-rules">Permission Management Rules</h3>
+<ul>
+<li><strong>Rule AUTHZ-005</strong>: Role changes trigger automatic permission review</li>
+<li><strong>Rule AUTHZ-006</strong>: Unused permissions automatically revoked after 90 days</li>
+<li><strong>Rule AUTHZ-007</strong>: Privileged permissions require additional approval</li>
+<li><strong>Rule AUTHZ-008</strong>: Cross-functional access requires manager approval</li>
+</ul>
+<h3 id="segregation-of-duties-rules">Segregation of Duties Rules</h3>
+<ul>
+<li><strong>Rule AUTHZ-009</strong>: Financial transaction initiation and approval separated</li>
+<li><strong>Rule AUTHZ-010</strong>: System administration and business operations separated</li>
+<li><strong>Rule AUTHZ-011</strong>: Data entry and data validation separated</li>
+<li><strong>Rule AUTHZ-012</strong>: Audit functions independent from operational functions</li>
+</ul>
+<h3 id="approval-workflow-rules">Approval Workflow Rules</h3>
+<ul>
+<li><strong>Rule AUTHZ-013</strong>: Manager approval required for direct report access requests</li>
+<li><strong>Rule AUTHZ-014</strong>: Security team approval required for privileged access</li>
+<li><strong>Rule AUTHZ-015</strong>: Executive approval required for cross-departmental access</li>
+<li><strong>Rule AUTHZ-016</strong>: Emergency access requires retroactive approval within 24 hours</li>
+</ul>
+<h2 id="role-definitions">Role Definitions</h2>
+<h3 id="account-manager-role">Account Manager Role</h3>
+<h4 id="permissions">Permissions</h4>
+<ul>
+<li><strong>Customer Data</strong>: Read/write access to assigned customer accounts</li>
+<li><strong>Contract Information</strong>: Read access to contract details and terms</li>
+<li><strong>Billing Data</strong>: Read access to billing information and invoice status</li>
+<li><strong>Reporting</strong>: Generate customer-specific reports and analytics</li>
+</ul>
+<h4 id="restrictions">Restrictions</h4>
+<ul>
+<li>Cannot access other account managers' customer data</li>
+<li>Cannot modify contract terms without approval</li>
+<li>Cannot access financial data beyond assigned accounts</li>
+<li>Cannot perform system administration functions</li>
+</ul>
+<h4 id="approval-requirements">Approval Requirements</h4>
+<ul>
+<li>Manager approval for new account assignments</li>
+<li>Security approval for bulk data access</li>
+<li>Executive approval for competitor account access</li>
+</ul>
+<h3 id="billing-administrator-role">Billing Administrator Role</h3>
+<h4 id="permissions_1">Permissions</h4>
+<ul>
+<li><strong>Billing System</strong>: Full read/write access to billing functions</li>
+<li><strong>Invoice Management</strong>: Create, modify, and process invoices</li>
+<li><strong>Payment Processing</strong>: Process payments and adjustments</li>
+<li><strong>Financial Reporting</strong>: Generate billing and revenue reports</li>
+</ul>
+<h4 id="restrictions_1">Restrictions</h4>
+<ul>
+<li>Cannot modify historical billing data without approval</li>
+<li>Cannot access customer personal information beyond billing needs</li>
+<li>Cannot perform system configuration changes</li>
+<li>Cannot access other departments' financial data</li>
+</ul>
+<h4 id="approval-requirements_1">Approval Requirements</h4>
+<ul>
+<li>Manager approval for billing adjustments over threshold</li>
+<li>Finance approval for payment reversals</li>
+<li>Audit approval for historical data modifications</li>
+</ul>
+<h3 id="system-administrator-role">System Administrator Role</h3>
+<h4 id="permissions_2">Permissions</h4>
+<ul>
+<li><strong>System Configuration</strong>: Full access to system settings and configuration</li>
+<li><strong>User Management</strong>: Create, modify, and deactivate user accounts</li>
+<li><strong>Technical Operations</strong>: System maintenance and troubleshooting</li>
+<li><strong>Security Configuration</strong>: Configure security settings and controls</li>
+</ul>
+<h4 id="restrictions_2">Restrictions</h4>
+<ul>
+<li>Cannot access business data without business justification</li>
+<li>Cannot modify audit logs or security events</li>
+<li>Cannot approve own access requests</li>
+<li>Cannot bypass security controls without approval</li>
+</ul>
+<h4 id="approval-requirements_2">Approval Requirements</h4>
+<ul>
+<li>Security approval for privileged system access</li>
+<li>Manager approval for business data access</li>
+<li>Change management approval for production changes</li>
+</ul>
+<h2 id="access-control-implementation">Access Control Implementation</h2>
+<h3 id="technical-implementation">Technical Implementation</h3>
+<h4 id="role-based-access-control-rbac_1">Role-Based Access Control (RBAC)</h4>
+<ul>
+<li><strong>Role Assignment</strong>: Users assigned to roles based on job functions</li>
+<li><strong>Permission Inheritance</strong>: Roles inherit permissions from parent roles</li>
+<li><strong>Role Activation</strong>: Users can activate/deactivate roles as needed</li>
+<li><strong>Role Constraints</strong>: Time and location-based role constraints</li>
+</ul>
+<h4 id="attribute-based-access-control-abac_1">Attribute-Based Access Control (ABAC)</h4>
+<ul>
+<li><strong>User Attributes</strong>: Department, location, clearance level, employment status</li>
+<li><strong>Resource Attributes</strong>: Data classification, owner, sensitivity level</li>
+<li><strong>Environmental Attributes</strong>: Time, location, device, network</li>
+<li><strong>Policy Engine</strong>: Centralized policy evaluation and decision engine</li>
+</ul>
+<h4 id="dynamic-authorization">Dynamic Authorization</h4>
+<ul>
+<li><strong>Real-Time Evaluation</strong>: Access decisions made in real-time</li>
+<li><strong>Context Awareness</strong>: Decisions based on current context and risk</li>
+<li><strong>Adaptive Controls</strong>: Access controls adapt to changing conditions</li>
+<li><strong>Continuous Monitoring</strong>: Ongoing monitoring of access patterns</li>
+</ul>
+<h3 id="operational-implementation">Operational Implementation</h3>
+<h4 id="access-request-process">Access Request Process</h4>
 <ol>
-<li><strong>Hybrid Architecture Approach</strong>: Maintain hybrid cloud-on-premises architecture for 18 months</li>
-<li><strong>API-First Strategy</strong>: All new integrations must use REST APIs with OpenAPI specifications</li>
-<li><strong>Zero-Trust Security</strong>: Implement zero-trust network architecture across all systems</li>
-<li><strong>Event-Driven Integration</strong>: Adopt event-driven architecture for real-time data synchronization</li>
-<li><strong>Power Platform Governance</strong>: Establish formal governance framework with CoE</li>
+<li><strong>Request Submission</strong>: User submits access request with business justification</li>
+<li><strong>Manager Review</strong>: Direct manager reviews and approves/denies request</li>
+<li><strong>Security Review</strong>: Security team reviews for compliance and risk</li>
+<li><strong>Provisioning</strong>: Approved access provisioned automatically</li>
+<li><strong>Notification</strong>: User notified of access grant and restrictions</li>
 </ol>
-<h3 id="pending-decisions">Pending Decisions</h3>
+<h4 id="access-review-process">Access Review Process</h4>
 <ol>
-<li><strong>Legacy System Retirement</strong>: Timeline for decommissioning legacy systems (pending business approval)</li>
-<li><strong>Multi-Cloud Strategy</strong>: Evaluation of multi-cloud approach for disaster recovery</li>
-<li><strong>Edge Computing Implementation</strong>: Business case development for edge computing initiatives</li>
+<li><strong>Quarterly Reviews</strong>: Regular review of all user access permissions</li>
+<li><strong>Role-Based Reviews</strong>: Review of role definitions and permissions</li>
+<li><strong>Exception Reviews</strong>: Review of temporary and emergency access</li>
+<li><strong>Compliance Reviews</strong>: Review for regulatory compliance requirements</li>
 </ol>
-<h2 id="risk-assessment">Risk Assessment</h2>
-<h3 id="high-priority-risks">High-Priority Risks</h3>
+<h4 id="access-revocation-process">Access Revocation Process</h4>
 <ol>
-<li><strong>Legacy System Dependencies</strong></li>
-<li><strong>Risk</strong>: Critical business processes dependent on aging systems</li>
-<li><strong>Mitigation</strong>: Accelerated modernization timeline with parallel system operation</li>
-<li>
-<p><strong>Owner</strong>: Jennifer Kim</p>
-</li>
-<li>
-<p><strong>Security Compliance</strong></p>
-</li>
-<li><strong>Risk</strong>: Evolving regulatory requirements may impact architecture decisions</li>
-<li><strong>Mitigation</strong>: Regular compliance assessments and proactive security updates</li>
-<li>
-<p><strong>Owner</strong>: Lisa Wang</p>
-</li>
-<li>
-<p><strong>Performance Scalability</strong></p>
-</li>
-<li><strong>Risk</strong>: Rapid user growth may exceed current system capacity</li>
-<li><strong>Mitigation</strong>: Proactive performance monitoring and auto-scaling implementation</li>
-<li><strong>Owner</strong>: David Thompson</li>
+<li><strong>Immediate Revocation</strong>: Automatic revocation upon termination</li>
+<li><strong>Role Change Revocation</strong>: Revocation upon role or department change</li>
+<li><strong>Periodic Revocation</strong>: Revocation of unused or unnecessary access</li>
+<li><strong>Emergency Revocation</strong>: Immediate revocation for security incidents</li>
 </ol>
-<h3 id="medium-priority-risks">Medium-Priority Risks</h3>
-<ol>
-<li><strong>Integration Complexity</strong></li>
-<li><strong>Risk</strong>: Increasing number of integrations may create maintenance challenges</li>
-<li><strong>Mitigation</strong>: Standardized integration patterns and comprehensive documentation</li>
-<li>
-<p><strong>Owner</strong>: Jennifer Kim</p>
-</li>
-<li>
-<p><strong>Technology Obsolescence</strong></p>
-</li>
-<li><strong>Risk</strong>: Rapid technology changes may require frequent architecture updates</li>
-<li><strong>Mitigation</strong>: Flexible architecture design with modular components</li>
-<li><strong>Owner</strong>: Sarah Chen</li>
-</ol>
-<h2 id="next-meeting">Next Meeting</h2>
-<p><strong>Date</strong>: July 25, 2025<br />
-<strong>Time</strong>: 10:00 AM - 11:30 AM CST<br />
-<strong>Focus</strong>: Integration testing framework review and security assessment results</p>
-<h2 id="action-item-summary">Action Item Summary</h2>
+<h2 id="monitoring-and-compliance">Monitoring and Compliance</h2>
+<h3 id="access-monitoring">Access Monitoring</h3>
+<h4 id="real-time-monitoring">Real-Time Monitoring</h4>
+<ul>
+<li><strong>Access Attempts</strong>: Monitor all access attempts and decisions</li>
+<li><strong>Permission Usage</strong>: Track usage of granted permissions</li>
+<li><strong>Anomaly Detection</strong>: Detect unusual access patterns and behaviors</li>
+<li><strong>Risk Assessment</strong>: Continuous risk assessment of access activities</li>
+</ul>
+<h4 id="audit-logging">Audit Logging</h4>
+<ul>
+<li><strong>Authorization Events</strong>: Log all authorization decisions and actions</li>
+<li><strong>Permission Changes</strong>: Log all permission grants, modifications, and revocations</li>
+<li><strong>Access Reviews</strong>: Log all access review activities and decisions</li>
+<li><strong>Policy Changes</strong>: Log all authorization policy changes</li>
+</ul>
+<h3 id="compliance-monitoring">Compliance Monitoring</h3>
+<h4 id="regulatory-compliance">Regulatory Compliance</h4>
+<ul>
+<li><strong>SOX Compliance</strong>: Segregation of duties for financial processes</li>
+<li><strong>GDPR Compliance</strong>: Data access controls for personal information</li>
+<li><strong>HIPAA Compliance</strong>: Healthcare data access controls (if applicable)</li>
+<li><strong>Industry Standards</strong>: Compliance with industry-specific requirements</li>
+</ul>
+<h4 id="internal-compliance">Internal Compliance</h4>
+<ul>
+<li><strong>Policy Compliance</strong>: Compliance with internal authorization policies</li>
+<li><strong>Procedure Compliance</strong>: Compliance with access control procedures</li>
+<li><strong>Standard Compliance</strong>: Compliance with security standards</li>
+<li><strong>Exception Management</strong>: Management of policy exceptions and deviations</li>
+</ul>
+<h2 id="risk-management">Risk Management</h2>
+<h3 id="authorization-risks">Authorization Risks</h3>
+<h4 id="excessive-privileges">Excessive Privileges</h4>
+<ul>
+<li><strong>Risk</strong>: Users with more permissions than necessary</li>
+<li><strong>Mitigation</strong>: Regular access reviews and least privilege enforcement</li>
+<li><strong>Monitoring</strong>: Automated detection of excessive privileges</li>
+<li><strong>Response</strong>: Immediate review and remediation of excessive access</li>
+</ul>
+<h4 id="privilege-creep">Privilege Creep</h4>
+<ul>
+<li><strong>Risk</strong>: Accumulation of permissions over time</li>
+<li><strong>Mitigation</strong>: Automated permission cleanup and role-based access</li>
+<li><strong>Monitoring</strong>: Tracking of permission changes and accumulation</li>
+<li><strong>Response</strong>: Regular cleanup of unnecessary permissions</li>
+</ul>
+<h4 id="unauthorized-access">Unauthorized Access</h4>
+<ul>
+<li><strong>Risk</strong>: Access to resources without proper authorization</li>
+<li><strong>Mitigation</strong>: Strong access controls and monitoring</li>
+<li><strong>Monitoring</strong>: Real-time detection of unauthorized access attempts</li>
+<li><strong>Response</strong>: Immediate investigation and remediation</li>
+</ul>
+<h3 id="risk-mitigation-strategies">Risk Mitigation Strategies</h3>
+<h4 id="preventive-controls">Preventive Controls</h4>
+<ul>
+<li><strong>Strong Authentication</strong>: Multi-factor authentication for sensitive access</li>
+<li><strong>Access Controls</strong>: Robust role-based and attribute-based access controls</li>
+<li><strong>Segregation of Duties</strong>: Clear separation of conflicting responsibilities</li>
+<li><strong>Approval Workflows</strong>: Required approvals for sensitive access requests</li>
+</ul>
+<h4 id="detective-controls">Detective Controls</h4>
+<ul>
+<li><strong>Access Monitoring</strong>: Continuous monitoring of access activities</li>
+<li><strong>Anomaly Detection</strong>: Automated detection of unusual access patterns</li>
+<li><strong>Audit Reviews</strong>: Regular audit of access controls and permissions</li>
+<li><strong>Compliance Monitoring</strong>: Ongoing compliance monitoring and reporting</li>
+</ul>
+<h4 id="corrective-controls">Corrective Controls</h4>
+<ul>
+<li><strong>Incident Response</strong>: Rapid response to access control incidents</li>
+<li><strong>Access Revocation</strong>: Immediate revocation of inappropriate access</li>
+<li><strong>Policy Updates</strong>: Updates to policies based on lessons learned</li>
+<li><strong>Training Programs</strong>: Enhanced training for users and administrators</li>
+</ul>
+<h2 id="related-documentation">Related Documentation</h2>
+<ul>
+<li><a href="../">User Access Business Rules</a></li>
+<li><a href="../authentication-requirements/">Authentication Requirements</a></li>
+<li><a href="../../security/">Security Business Rules</a></li>
+<li><a href="../../../technical/security/">Technical Security</a></li>
+<li><a href="../../security/data-access-security-rules/">Data Access Security Rules</a></li>
+</ul>
+<h2 id="implementation-guidelines">Implementation Guidelines</h2>
+<h3 id="planning-phase">Planning Phase</h3>
+<ul>
+<li><strong>Requirements Analysis</strong>: Analysis of authorization requirements</li>
+<li><strong>Role Design</strong>: Design of organizational roles and permissions</li>
+<li><strong>Policy Development</strong>: Development of authorization policies</li>
+<li><strong>Technology Selection</strong>: Selection of authorization technologies</li>
+</ul>
+<h3 id="implementation-phase">Implementation Phase</h3>
+<ul>
+<li><strong>System Configuration</strong>: Configuration of authorization systems</li>
+<li><strong>Role Implementation</strong>: Implementation of roles and permissions</li>
+<li><strong>Policy Deployment</strong>: Deployment of authorization policies</li>
+<li><strong>User Training</strong>: Training of users and administrators</li>
+</ul>
+<h3 id="maintenance-phase">Maintenance Phase</h3>
+<ul>
+<li><strong>Ongoing Monitoring</strong>: Continuous monitoring of authorization activities</li>
+<li><strong>Regular Reviews</strong>: Regular review of roles, permissions, and policies</li>
+<li><strong>Policy Updates</strong>: Updates to policies based on business changes</li>
+<li><strong>Compliance Reporting</strong>: Regular compliance reporting and assessment</li>
+</ul>
+<h2 id="version-history">Version History</h2>
 <table>
 <thead>
 <tr>
-<th>Owner</th>
-<th>Task</th>
-<th>Due Date</th>
-<th>Status</th>
+<th>Version</th>
+<th>Date</th>
+<th>Changes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Michael Rodriguez</td>
-<td>Document hybrid connection security requirements</td>
-<td>July 25</td>
-<td>Pending</td>
-</tr>
-<tr>
-<td>Jennifer Kim</td>
-<td>Create integration testing framework</td>
-<td>August 1</td>
-<td>Pending</td>
-</tr>
-<tr>
-<td>David Thompson</td>
-<td>Establish Power Platform governance policies</td>
-<td>July 30</td>
-<td>Pending</td>
-</tr>
-<tr>
-<td>Robert Johnson</td>
-<td>Finalize data retention policies</td>
-<td>July 22</td>
-<td>Pending</td>
-</tr>
-<tr>
-<td>Lisa Wang</td>
-<td>Review data encryption standards</td>
-<td>July 24</td>
-<td>Pending</td>
-</tr>
-<tr>
-<td>Lisa Wang</td>
-<td>Complete security assessment of forecasting module</td>
-<td>July 28</td>
-<td>Pending</td>
-</tr>
-<tr>
-<td>Sarah Chen</td>
-<td>Review and approve updated security policies</td>
-<td>July 26</td>
-<td>Pending</td>
-</tr>
-<tr>
-<td>Jennifer Kim</td>
-<td>Create integration testing strategy document</td>
-<td>July 25</td>
-<td>Pending</td>
-</tr>
-<tr>
-<td>David Thompson</td>
-<td>Establish API versioning standards</td>
-<td>July 30</td>
-<td>Pending</td>
-</tr>
-<tr>
-<td>David Thompson</td>
-<td>Implement performance monitoring dashboard</td>
-<td>August 5</td>
-<td>Pending</td>
-</tr>
-<tr>
-<td>Robert Johnson</td>
-<td>Optimize database indexes for forecasting queries</td>
-<td>July 30</td>
-<td>Pending</td>
-</tr>
-<tr>
-<td>Sarah Chen</td>
-<td>Finalize technology roadmap document</td>
-<td>July 31</td>
-<td>Pending</td>
-</tr>
-<tr>
-<td>All Team Members</td>
-<td>Review and provide feedback on roadmap</td>
-<td>July 28</td>
-<td>Pending</td>
+<td>1.0</td>
+<td>2025-07-28</td>
+<td>Initial creation of authorization policies</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<p><em>Meeting notes compiled by Sarah Chen, Lead Architect. Next review scheduled for July 25, 2025.</em></p>
 
 
 
@@ -11035,7 +10783,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 24, 2025 21:56:43 UTC">July 24, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 28, 2025 20:32:02 UTC">July 28, 2025</span>
   </span>
 
     
@@ -11084,14 +10832,14 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
         <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
       
-        <script src="../../../javascripts/extra.js"></script>
+        <script src="../../../../javascripts/extra.js"></script>
       
     
   </body>

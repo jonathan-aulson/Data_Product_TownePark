@@ -48,5 +48,5 @@ This document defines the role-based access control (RBAC) system for the Towne 
 
 ## Related Documentation
 
-- [User Access Configuration](../../../configuration/user-access/index.md) 🔄 PLANNED
+- [User Access Configuration](../../configuration/user-access/index.md) 🔄 PLANNED
 - [System Security](../../../technical/security/index.md) 🔄 PLANNED

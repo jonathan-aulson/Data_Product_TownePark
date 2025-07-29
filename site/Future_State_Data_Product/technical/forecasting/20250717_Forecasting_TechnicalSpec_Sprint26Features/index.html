@@ -6,10 +6,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Technical implementation details, data schemas, API specifications, and system architecture for External Revenue, Internal Revenue, Parking Rate Analysis, and Other Expenses forecasting functionality implemented in Sprint 26">
+        <meta name="description" content="Technical specifications for Sprint 26 forecasting system features and enhancements">
       
-      
-        <meta name="author" content="Towne Park Data Product Team">
       
       
         <link rel="canonical" href="http://example.org/Future_State_Data_Product/technical/forecasting/20250717_Forecasting_TechnicalSpec_Sprint26Features/">
@@ -26,7 +24,7 @@
     
     
       
-        <title>Forecasting Technical Specifications - Sprint 26 Features - Towne Park Data Product</title>
+        <title>Forecasting Technical Specification - Sprint 26 Features - Towne Park Data Product</title>
       
     
     
@@ -70,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#forecasting-technical-specifications-sprint-26-features" class="md-skip">
+        <a href="#forecasting-technical-specification-sprint-26-features" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Forecasting Technical Specifications - Sprint 26 Features
+              Forecasting Technical Specification - Sprint 26 Features
             
           </span>
         </div>
@@ -350,7 +348,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync/" class="md-tabs__link">
+        <a href="../../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync.md" class="md-tabs__link">
           
   
   
@@ -4170,6 +4168,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
 
       </a>
     </li>
@@ -4588,6 +4593,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
 
       </a>
     </li>
@@ -5001,6 +5013,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
 
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -5013,6 +5032,13 @@
     Sprint 26 Features Technical Spec
     
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
   
 
       </a>
@@ -5042,19 +5068,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#code-validation-summary" class="md-nav__link">
+  <a href="#sprint-26-feature-set" class="md-nav__link">
     <span class="md-ellipsis">
-      Code Validation Summary
+      Sprint 26 Feature Set
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Code Validation Summary">
+    <nav class="md-nav" aria-label="Sprint 26 Feature Set">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#validated-components" class="md-nav__link">
+  <a href="#enhanced-payroll-forecasting" class="md-nav__link">
     <span class="md-ellipsis">
-      Validated Components
+      Enhanced Payroll Forecasting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-time-data-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-time Data Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-analytics-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Analytics Dashboard
     </span>
   </a>
   
@@ -5066,457 +5110,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#system-architecture" class="md-nav__link">
+  <a href="#technical-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      System Architecture
+      Technical Architecture
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="System Architecture">
+    <nav class="md-nav" aria-label="Technical Architecture">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#high-level-architecture" class="md-nav__link">
+  <a href="#system-components" class="md-nav__link">
     <span class="md-ellipsis">
-      High-Level Architecture
+      System Components
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#component-architecture" class="md-nav__link">
+  <a href="#technology-stack" class="md-nav__link">
     <span class="md-ellipsis">
-      Component Architecture
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Component Architecture">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#power-platform-components" class="md-nav__link">
-    <span class="md-ellipsis">
-      Power Platform Components
+      Technology Stack
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#external-system-integrations" class="md-nav__link">
+  <a href="#data-flow-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      External System Integrations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-schema-specifications" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Schema Specifications
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Data Schema Specifications">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#revenue-share-configuration-schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      Revenue Share Configuration Schema
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Revenue Share Configuration Schema">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dataverse-entity-bs_revenueshareconfig" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dataverse Entity: bs_revenueshareconfig
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tier-data-json-schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tier Data JSON Schema
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#per-occupied-room-configuration-schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      Per Occupied Room Configuration Schema
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Per Occupied Room Configuration Schema">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dataverse-entity-bs_peroccupiedroomconfig" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dataverse Entity: bs_peroccupiedroomconfig
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#edw-data-schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      EDW Data Schema
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="EDW Data Schema">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#revenue-data-mart-table-dborevenue_datamart_daily_invoice" class="md-nav__link">
-    <span class="md-ellipsis">
-      Revenue Data Mart Table: [dbo].[REVENUE_DATAMART_DAILY_INVOICE]
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#revenue-detail-view-dbovwrevenue_daily_detail_invoice" class="md-nav__link">
-    <span class="md-ellipsis">
-      Revenue Detail View: [dbo].[vwREVENUE_DAILY_DETAIL_INVOICE]
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#api-specifications" class="md-nav__link">
-    <span class="md-ellipsis">
-      API Specifications
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="API Specifications">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#power-automate-workflow-apis" class="md-nav__link">
-    <span class="md-ellipsis">
-      Power Automate Workflow APIs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Power Automate Workflow APIs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#per-occupied-room-generation-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      Per Occupied Room Generation API
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#revenue-sharing-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      Revenue Sharing API
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#formula-specifications" class="md-nav__link">
-    <span class="md-ellipsis">
-      Formula Specifications
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Formula Specifications">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#revenue-share-formulas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Revenue Share Formulas
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Revenue Share Formulas">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#owner-percentage-calculation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Owner Percentage Calculation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#total-due-to-owner-calculation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Total Due to Owner Calculation
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#database-design" class="md-nav__link">
-    <span class="md-ellipsis">
-      Database Design
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Database Design">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#performance-optimization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Performance Optimization
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Performance Optimization">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#indexing-strategy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Indexing Strategy
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#query-optimization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Query Optimization
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-archival-strategy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Archival Strategy
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Data Archival Strategy">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#archival-policy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Archival Policy
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#archive-table-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Archive Table Structure
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#integration-specifications" class="md-nav__link">
-    <span class="md-ellipsis">
-      Integration Specifications
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Integration Specifications">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#powerbill-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      PowerBill Integration
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="PowerBill Integration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#connection-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Connection Configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error Handling
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dataverse-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dataverse Integration
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Dataverse Integration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#security-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Security Configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#audit-trail-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Audit Trail Configuration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#performance-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Performance Requirements
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Performance Requirements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#response-time-targets" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response Time Targets
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#throughput-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Throughput Requirements
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scalability-considerations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scalability Considerations
+      Data Flow Architecture
     </span>
   </a>
   
@@ -5528,28 +5152,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#security-specifications" class="md-nav__link">
+  <a href="#implementation-details" class="md-nav__link">
     <span class="md-ellipsis">
-      Security Specifications
+      Implementation Details
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Security Specifications">
+    <nav class="md-nav" aria-label="Implementation Details">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#authentication-and-authorization" class="md-nav__link">
+  <a href="#database-schema-changes" class="md-nav__link">
     <span class="md-ellipsis">
-      Authentication and Authorization
+      Database Schema Changes
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-privacy-and-compliance" class="md-nav__link">
+  <a href="#api-enhancements" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Privacy and Compliance
+      API Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Considerations
     </span>
   </a>
   
@@ -5561,28 +5194,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#monitoring-and-alerting" class="md-nav__link">
+  <a href="#testing-strategy" class="md-nav__link">
     <span class="md-ellipsis">
-      Monitoring and Alerting
+      Testing Strategy
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Monitoring and Alerting">
+    <nav class="md-nav" aria-label="Testing Strategy">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#application-performance-monitoring" class="md-nav__link">
+  <a href="#unit-testing" class="md-nav__link">
     <span class="md-ellipsis">
-      Application Performance Monitoring
+      Unit Testing
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#health-check-endpoints" class="md-nav__link">
+  <a href="#integration-testing" class="md-nav__link">
     <span class="md-ellipsis">
-      Health Check Endpoints
+      Integration Testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Testing
     </span>
   </a>
   
@@ -5594,29 +5236,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#deployment-specifications" class="md-nav__link">
+  <a href="#deployment-strategy" class="md-nav__link">
     <span class="md-ellipsis">
-      Deployment Specifications
+      Deployment Strategy
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Deployment Specifications">
+    <nav class="md-nav" aria-label="Deployment Strategy">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#environment-configuration" class="md-nav__link">
+  <a href="#environment-progression" class="md-nav__link">
     <span class="md-ellipsis">
-      Environment Configuration
+      Environment Progression
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Environment Configuration">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#development-environment" class="md-nav__link">
+  <a href="#rollback-procedures" class="md-nav__link">
     <span class="md-ellipsis">
-      Development Environment
+      Rollback Procedures
     </span>
   </a>
   
@@ -5626,9 +5267,13 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Documentation
+    </span>
+  </a>
   
 </li>
       
@@ -7118,6 +6763,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
 
       </a>
     </li>
@@ -7981,6 +7633,13 @@
     Sprint 26 Features User Processes
     
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
   
 
       </a>
@@ -9307,7 +8966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync/" class="md-nav__link">
+      <a href="../../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync.md" class="md-nav__link">
         
   
   
@@ -9315,13 +8974,6 @@
     Architecture Team Meeting Notes
     
   </span>
-  
-    
-  
-  
-    <span class="md-status md-status--Active"></span>
-  
-
   
 
       </a>
@@ -10364,19 +10016,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#code-validation-summary" class="md-nav__link">
+  <a href="#sprint-26-feature-set" class="md-nav__link">
     <span class="md-ellipsis">
-      Code Validation Summary
+      Sprint 26 Feature Set
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Code Validation Summary">
+    <nav class="md-nav" aria-label="Sprint 26 Feature Set">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#validated-components" class="md-nav__link">
+  <a href="#enhanced-payroll-forecasting" class="md-nav__link">
     <span class="md-ellipsis">
-      Validated Components
+      Enhanced Payroll Forecasting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#real-time-data-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-time Data Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-analytics-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Analytics Dashboard
     </span>
   </a>
   
@@ -10388,457 +10058,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#system-architecture" class="md-nav__link">
+  <a href="#technical-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      System Architecture
+      Technical Architecture
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="System Architecture">
+    <nav class="md-nav" aria-label="Technical Architecture">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#high-level-architecture" class="md-nav__link">
+  <a href="#system-components" class="md-nav__link">
     <span class="md-ellipsis">
-      High-Level Architecture
+      System Components
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#component-architecture" class="md-nav__link">
+  <a href="#technology-stack" class="md-nav__link">
     <span class="md-ellipsis">
-      Component Architecture
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Component Architecture">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#power-platform-components" class="md-nav__link">
-    <span class="md-ellipsis">
-      Power Platform Components
+      Technology Stack
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#external-system-integrations" class="md-nav__link">
+  <a href="#data-flow-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      External System Integrations
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#data-schema-specifications" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Schema Specifications
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Data Schema Specifications">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#revenue-share-configuration-schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      Revenue Share Configuration Schema
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Revenue Share Configuration Schema">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dataverse-entity-bs_revenueshareconfig" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dataverse Entity: bs_revenueshareconfig
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tier-data-json-schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tier Data JSON Schema
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#per-occupied-room-configuration-schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      Per Occupied Room Configuration Schema
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Per Occupied Room Configuration Schema">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dataverse-entity-bs_peroccupiedroomconfig" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dataverse Entity: bs_peroccupiedroomconfig
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#edw-data-schema" class="md-nav__link">
-    <span class="md-ellipsis">
-      EDW Data Schema
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="EDW Data Schema">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#revenue-data-mart-table-dborevenue_datamart_daily_invoice" class="md-nav__link">
-    <span class="md-ellipsis">
-      Revenue Data Mart Table: [dbo].[REVENUE_DATAMART_DAILY_INVOICE]
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#revenue-detail-view-dbovwrevenue_daily_detail_invoice" class="md-nav__link">
-    <span class="md-ellipsis">
-      Revenue Detail View: [dbo].[vwREVENUE_DAILY_DETAIL_INVOICE]
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#api-specifications" class="md-nav__link">
-    <span class="md-ellipsis">
-      API Specifications
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="API Specifications">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#power-automate-workflow-apis" class="md-nav__link">
-    <span class="md-ellipsis">
-      Power Automate Workflow APIs
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Power Automate Workflow APIs">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#per-occupied-room-generation-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      Per Occupied Room Generation API
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#revenue-sharing-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      Revenue Sharing API
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#formula-specifications" class="md-nav__link">
-    <span class="md-ellipsis">
-      Formula Specifications
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Formula Specifications">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#revenue-share-formulas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Revenue Share Formulas
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Revenue Share Formulas">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#owner-percentage-calculation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Owner Percentage Calculation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#total-due-to-owner-calculation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Total Due to Owner Calculation
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#database-design" class="md-nav__link">
-    <span class="md-ellipsis">
-      Database Design
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Database Design">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#performance-optimization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Performance Optimization
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Performance Optimization">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#indexing-strategy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Indexing Strategy
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#query-optimization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Query Optimization
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data-archival-strategy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Archival Strategy
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Data Archival Strategy">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#archival-policy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Archival Policy
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#archive-table-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Archive Table Structure
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#integration-specifications" class="md-nav__link">
-    <span class="md-ellipsis">
-      Integration Specifications
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Integration Specifications">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#powerbill-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      PowerBill Integration
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="PowerBill Integration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#connection-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Connection Configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error Handling
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dataverse-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dataverse Integration
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Dataverse Integration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#security-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Security Configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#audit-trail-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Audit Trail Configuration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#performance-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Performance Requirements
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Performance Requirements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#response-time-targets" class="md-nav__link">
-    <span class="md-ellipsis">
-      Response Time Targets
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#throughput-requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Throughput Requirements
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scalability-considerations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scalability Considerations
+      Data Flow Architecture
     </span>
   </a>
   
@@ -10850,28 +10100,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#security-specifications" class="md-nav__link">
+  <a href="#implementation-details" class="md-nav__link">
     <span class="md-ellipsis">
-      Security Specifications
+      Implementation Details
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Security Specifications">
+    <nav class="md-nav" aria-label="Implementation Details">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#authentication-and-authorization" class="md-nav__link">
+  <a href="#database-schema-changes" class="md-nav__link">
     <span class="md-ellipsis">
-      Authentication and Authorization
+      Database Schema Changes
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-privacy-and-compliance" class="md-nav__link">
+  <a href="#api-enhancements" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Privacy and Compliance
+      API Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Considerations
     </span>
   </a>
   
@@ -10883,28 +10142,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#monitoring-and-alerting" class="md-nav__link">
+  <a href="#testing-strategy" class="md-nav__link">
     <span class="md-ellipsis">
-      Monitoring and Alerting
+      Testing Strategy
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Monitoring and Alerting">
+    <nav class="md-nav" aria-label="Testing Strategy">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#application-performance-monitoring" class="md-nav__link">
+  <a href="#unit-testing" class="md-nav__link">
     <span class="md-ellipsis">
-      Application Performance Monitoring
+      Unit Testing
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#health-check-endpoints" class="md-nav__link">
+  <a href="#integration-testing" class="md-nav__link">
     <span class="md-ellipsis">
-      Health Check Endpoints
+      Integration Testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Testing
     </span>
   </a>
   
@@ -10916,29 +10184,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#deployment-specifications" class="md-nav__link">
+  <a href="#deployment-strategy" class="md-nav__link">
     <span class="md-ellipsis">
-      Deployment Specifications
+      Deployment Strategy
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Deployment Specifications">
+    <nav class="md-nav" aria-label="Deployment Strategy">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#environment-configuration" class="md-nav__link">
+  <a href="#environment-progression" class="md-nav__link">
     <span class="md-ellipsis">
-      Environment Configuration
+      Environment Progression
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Environment Configuration">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#development-environment" class="md-nav__link">
+  <a href="#rollback-procedures" class="md-nav__link">
     <span class="md-ellipsis">
-      Development Environment
+      Rollback Procedures
     </span>
   </a>
   
@@ -10948,9 +10215,13 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Documentation
+    </span>
+  </a>
   
 </li>
       
@@ -10970,767 +10241,121 @@
 
 
 
-<h1 id="forecasting-technical-specifications-sprint-26-features">Forecasting Technical Specifications - Sprint 26 Features</h1>
+<h1 id="forecasting-technical-specification-sprint-26-features">Forecasting Technical Specification - Sprint 26 Features</h1>
 <h2 id="overview">Overview</h2>
-<p>This document provides comprehensive technical specifications for the forecasting functionality delivered in Sprint 26, including detailed implementation requirements, data schemas, API specifications, and system architecture for External Revenue calculation, Internal Revenue calculation (Per Occupied Room and Revenue Share), Parking Rate Analysis, and Other Expenses Forecasting.</p>
-<h2 id="code-validation-summary">Code Validation Summary</h2>
-<p><strong>Validation Status</strong>: ✅ <strong>VALIDATED</strong> against Power Platform implementation</p>
-<h3 id="validated-components">Validated Components</h3>
+<p>This document outlines the technical specifications for Sprint 26 forecasting system features, including new functionality, enhancements, and technical implementation details.</p>
+<h2 id="sprint-26-feature-set">Sprint 26 Feature Set</h2>
+<h3 id="enhanced-payroll-forecasting">Enhanced Payroll Forecasting</h3>
 <ul>
-<li><strong>Revenue Share Formula</strong>: <code>bs_revenuesharebypercent-FormulaDefinitions.yaml</code> (see <a href="../../backend/external-code-repository-links/">External Code Repository Links</a> for validation references)</li>
-<li><strong>Per Occupied Room Workflow</strong>: <code>PerOccupiedRoomGenerationChildFlow</code> (see <a href="../../backend/external-code-repository-links/">External Code Repository Links</a> for validation references)</li>
-<li><strong>Revenue Sharing Workflow</strong>: <code>RevenueSharing20250325</code> (see <a href="../../backend/external-code-repository-links/">External Code Repository Links</a> for validation references)</li>
+<li><strong>Feature</strong>: Advanced payroll prediction algorithms</li>
+<li><strong>Implementation</strong>: Machine learning models for improved accuracy</li>
+<li><strong>Dependencies</strong>: Historical payroll data, seasonal adjustment factors</li>
+<li><strong>Performance Requirements</strong>: Sub-second response time for calculations</li>
 </ul>
-<h2 id="system-architecture">System Architecture</h2>
-<h3 id="high-level-architecture">High-Level Architecture</h3>
-<pre class="mermaid"><code>graph TB
-    A[Power Apps Frontend] --&gt; B[Power Automate Workflows]
-    B --&gt; C[Dataverse Configuration]
-    B --&gt; D[EDW Data Sources]
-    B --&gt; E[PowerBill Integration]
-
-    C --&gt; F[Revenue Share Config]
-    C --&gt; G[Per Room Config]
-    C --&gt; H[Threshold Config]
-
-    D --&gt; I[Revenue Data Mart]
-    D --&gt; J[Historical Revenue]
-    D --&gt; K[Occupancy Data]
-
-    E --&gt; L[Billing Integration]
-    E --&gt; M[Invoice Generation]</code></pre>
-<h3 id="component-architecture">Component Architecture</h3>
-<h4 id="power-platform-components">Power Platform Components</h4>
+<h3 id="real-time-data-integration">Real-time Data Integration</h3>
 <ul>
-<li><strong>Power Apps</strong>: User interface for forecasting configuration and execution</li>
-<li><strong>Power Automate</strong>: Workflow orchestration and business logic execution</li>
-<li><strong>Dataverse</strong>: Configuration storage and user management</li>
-<li><strong>Power BI</strong>: Reporting and analytics dashboard</li>
+<li><strong>Feature</strong>: Live data feeds from external systems</li>
+<li><strong>Implementation</strong>: Event-driven architecture with message queues</li>
+<li><strong>Dependencies</strong>: EDW integration, API gateway</li>
+<li><strong>Performance Requirements</strong>: 99.9% uptime, &lt;100ms latency</li>
 </ul>
-<h4 id="external-system-integrations">External System Integrations</h4>
+<h3 id="advanced-analytics-dashboard">Advanced Analytics Dashboard</h3>
 <ul>
-<li><strong>EDW (Enterprise Data Warehouse)</strong>: Historical data source</li>
-<li><strong>PowerBill</strong>: Billing system integration</li>
-<li><strong>SQL Server</strong>: Primary data storage and processing</li>
+<li><strong>Feature</strong>: Interactive forecasting visualizations</li>
+<li><strong>Implementation</strong>: React-based dashboard with D3.js charts</li>
+<li><strong>Dependencies</strong>: REST API services, authentication system</li>
+<li><strong>Performance Requirements</strong>: &lt;2 second page load time</li>
 </ul>
-<h2 id="data-schema-specifications">Data Schema Specifications</h2>
-<h3 id="revenue-share-configuration-schema">Revenue Share Configuration Schema</h3>
-<h4 id="dataverse-entity-bs_revenueshareconfig">Dataverse Entity: <code>bs_revenueshareconfig</code></h4>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;entityName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bs_revenueshareconfig&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;displayName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Revenue Share Configuration&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;fields&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;bs_revenueshareconfig_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uniqueidentifier&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;primaryKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Unique identifier for revenue share configuration&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;bs_tierdata&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ntext&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;JSON array of tier configuration data&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;validation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Valid JSON array with SharePercentage and Amount properties&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;bs_revenuecodedata&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ntext&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;JSON array of revenue codes to include in calculations&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;validation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Valid JSON array of revenue code strings&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;bs_revenueaccumulationtype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;optionset&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Revenue accumulation period type&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;126840000&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Monthly&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;126840001&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Annual Calendar&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">        </span><span class="nt">&quot;126840002&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Annual Anniversary&quot;</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;bs_invoicegroup&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;integer&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Invoice group number for revenue share calculations&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;validation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Must be positive integer&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;bs_validationthresholdamount&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;money&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Validation threshold amount for revenue calculations&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;validation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Must be non-negative&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;bs_validationthresholdtype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;optionset&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Type of validation threshold&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;options&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;126840000&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Percentage&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;126840001&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Fixed Amount&quot;</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<h4 id="tier-data-json-schema">Tier Data JSON Schema</h4>
-<p><strong>Validated Implementation</strong>: ✅ Matches Power Platform workflow
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;SharePercentage&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;minimum&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;maximum&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Percentage to charge for this tier&quot;</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="nt">&quot;Amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;minimum&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Upper limit for this tier (0 for unlimited)&quot;</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;SharePercentage&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Amount&quot;</span><span class="p">]</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<h3 id="per-occupied-room-configuration-schema">Per Occupied Room Configuration Schema</h3>
-<h4 id="dataverse-entity-bs_peroccupiedroomconfig">Dataverse Entity: <code>bs_peroccupiedroomconfig</code></h4>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;entityName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bs_peroccupiedroomconfig&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;displayName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Per Occupied Room Configuration&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;fields&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;bs_peroccupiedroomconfig_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uniqueidentifier&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;primaryKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;bs_roomrate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;money&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Rate per occupied room&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;validation&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Must be positive&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;bs_invoicegroup&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;integer&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Target invoice group for per room charges&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;bs_contracttype&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ntext&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Comma-separated contract type values&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;bs_sitenumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;nvarchar(10)&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Customer site number&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;bs_occupiedroomsinvoicegroup&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;integer&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Invoice group for occupied room line items&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;bs_glcode&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;nvarchar(20)&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GL code for occupied room charges&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;bs_serviceperiodstart&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;datetime&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Start date for service period&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<h3 id="edw-data-schema">EDW Data Schema</h3>
-<h4 id="revenue-data-mart-table-dborevenue_datamart_daily_invoice">Revenue Data Mart Table: <code>[dbo].[REVENUE_DATAMART_DAILY_INVOICE]</code></h4>
-<p><strong>Validated Implementation</strong>: ✅ Matches Power Platform queries
-<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="p">[</span><span class="n">dbo</span><span class="p">].[</span><span class="n">REVENUE_DATAMART_DAILY_INVOICE</span><span class="p">]</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="p">[</span><span class="n">SITE</span><span class="p">]</span><span class="w"> </span><span class="n">NVARCHAR</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">    </span><span class="p">[</span><span class="nb">DATE</span><span class="p">]</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">    </span><span class="p">[</span><span class="n">REVENUE_CATEGORY</span><span class="p">]</span><span class="w"> </span><span class="n">NVARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">    </span><span class="p">[</span><span class="n">VALUE</span><span class="p">]</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">    </span><span class="p">[</span><span class="n">REVENUE_CODE</span><span class="p">]</span><span class="w"> </span><span class="n">NVARCHAR</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
-<span class="w">    </span><span class="p">[</span><span class="n">DEPOSIT_FLAG</span><span class="p">]</span><span class="w"> </span><span class="n">NVARCHAR</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
-<span class="w">    </span><span class="p">[</span><span class="n">CREATED_DATE</span><span class="p">]</span><span class="w"> </span><span class="n">DATETIME2</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">GETDATE</span><span class="p">(),</span>
-<span class="w">    </span><span class="p">[</span><span class="n">MODIFIED_DATE</span><span class="p">]</span><span class="w"> </span><span class="n">DATETIME2</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">GETDATE</span><span class="p">(),</span>
-
-<span class="w">    </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_REVENUE_DATAMART_SITE_DATE</span><span class="w"> </span><span class="p">(</span><span class="n">SITE</span><span class="p">,</span><span class="w"> </span><span class="nb">DATE</span><span class="p">),</span>
-<span class="w">    </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_REVENUE_DATAMART_CATEGORY</span><span class="w"> </span><span class="p">(</span><span class="n">REVENUE_CATEGORY</span><span class="p">),</span>
-<span class="w">    </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_REVENUE_DATAMART_CODE</span><span class="w"> </span><span class="p">(</span><span class="n">REVENUE_CODE</span><span class="p">)</span>
-<span class="p">);</span>
-</code></pre></div></p>
-<h4 id="revenue-detail-view-dbovwrevenue_daily_detail_invoice">Revenue Detail View: <code>[dbo].[vwREVENUE_DAILY_DETAIL_INVOICE]</code></h4>
-<p><strong>Validated Implementation</strong>: ✅ Matches Power Platform queries
-<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="p">[</span><span class="n">dbo</span><span class="p">].[</span><span class="n">vwREVENUE_DAILY_DETAIL_INVOICE</span><span class="p">]</span><span class="w"> </span><span class="k">AS</span>
-<span class="k">SELECT</span><span class="w"> </span>
-<span class="w">    </span><span class="n">SITE</span><span class="p">,</span>
-<span class="w">    </span><span class="nb">DATE</span><span class="p">,</span>
-<span class="w">    </span><span class="n">REVENUE_CATEGORY</span><span class="p">,</span>
-<span class="w">    </span><span class="n">REVENUE_CODE</span><span class="p">,</span>
-<span class="w">    </span><span class="n">NETEXTERNALREVENUE</span><span class="p">,</span>
-<span class="w">    </span><span class="n">DEPOSIT_FLAG</span><span class="p">,</span>
-<span class="w">    </span><span class="n">CREATED_DATE</span><span class="p">,</span>
-<span class="w">    </span><span class="n">MODIFIED_DATE</span>
-<span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">dbo</span><span class="p">].[</span><span class="n">REVENUE_DAILY_DETAIL</span><span class="p">]</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">ACTIVE_FLAG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Y&#39;</span>
-<span class="w">  </span><span class="k">AND</span><span class="w"> </span><span class="n">DELETED_FLAG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;N&#39;</span><span class="p">;</span>
-</code></pre></div></p>
-<h2 id="api-specifications">API Specifications</h2>
-<h3 id="power-automate-workflow-apis">Power Automate Workflow APIs</h3>
-<h4 id="per-occupied-room-generation-api">Per Occupied Room Generation API</h4>
-<p><strong>Endpoint</strong>: <code>PerOccupiedRoomGenerationChildFlow</code>
-<strong>Method</strong>: POST
-<strong>Validated Implementation</strong>: ✅ Matches Power Platform workflow</p>
-<p><strong>Request Schema</strong>:
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Per Occupied Room rate&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;minimum&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;number_1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Target invoice group&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;minimum&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Comma separated string of Contract Types integer values&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;text_1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Customer Site number (e.g., &#39;0452&#39;)&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;pattern&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^[0-9]{4}$&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;number_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Invoice Group of the occupied room line item&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;text_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GL Code for occupied room line item&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;date&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Start date for service period&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;number_1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;text_1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;text_2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;date&quot;</span><span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Response Schema</strong>:
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;invoicesubtotal&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Total invoice subtotal amount&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;lineitems&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;JSON string of line item array&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Implementation Logic</strong> (Validated against Power Platform):
-<div class="highlight"><pre><span></span><code><span class="c1">// Input validation</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;number_1&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>
-<span class="w">    </span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>
-<span class="w">    </span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;text&#39;</span><span class="p">].</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">||</span>
-<span class="w">    </span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;number&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span>
-<span class="w">    </span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;text_1&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span>
-<span class="w">    </span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;text_1&#39;</span><span class="p">].</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">||</span>
-<span class="w">    </span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;number_2&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span>
-<span class="w">    </span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;text_2&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span>
-<span class="w">    </span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">invoicesubtotal</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">lineitems</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[]&quot;</span><span class="w"> </span><span class="p">};</span>
-<span class="p">}</span>
-
-<span class="c1">// Contract type validation</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;text&#39;</span><span class="p">].</span><span class="nx">includes</span><span class="p">(</span><span class="s1">&#39;126840002&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>
-<span class="w">    </span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;number_2&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;number_1&#39;</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">invoicesubtotal</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="nx">lineitems</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[]&quot;</span><span class="w"> </span><span class="p">};</span>
-<span class="p">}</span>
-
-<span class="c1">// Get occupied room data from EDW</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span>
-<span class="sb">    SELECT VALUE </span>
-<span class="sb">    FROM [dbo].[REVENUE_DATAMART_DAILY_INVOICE]</span>
-<span class="sb">    WHERE REVENUE_CATEGORY = &#39;Occupied Rooms&#39; </span>
-<span class="sb">      AND SITE = &#39;</span><span class="si">${</span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;text_1&#39;</span><span class="p">]</span><span class="si">}</span><span class="sb">&#39;</span>
-<span class="sb">      AND DATE LIKE &#39;</span><span class="si">${</span><span class="nx">formatDateTime</span><span class="p">(</span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;date&#39;</span><span class="p">],</span><span class="w"> </span><span class="s1">&#39;yyyy-MM&#39;</span><span class="p">)</span><span class="si">}</span><span class="sb">%&#39;</span>
-<span class="sb">    AGGREGATE(VALUE with sum as SUM_VALUE)</span>
-<span class="sb">`</span><span class="p">;</span>
-
-<span class="kd">const</span><span class="w"> </span><span class="nx">numberOfRooms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">executeQuery</span><span class="p">(</span><span class="nx">query</span><span class="p">).</span><span class="nx">SUM_VALUE</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">subTotalAmount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numberOfRooms</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;number&#39;</span><span class="p">];</span>
-
-<span class="c1">// Generate line items</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">lineItems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[{</span>
-<span class="w">    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Occupied Rooms&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="sb">`Total Occupied Rooms: </span><span class="si">${</span><span class="nx">formatNumber</span><span class="p">(</span><span class="nx">numberOfRooms</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;N0&#39;</span><span class="p">)</span><span class="si">}</span><span class="sb">.\nTowne Park Service Fee at $</span><span class="si">${</span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;number&#39;</span><span class="p">]</span><span class="si">}</span><span class="sb"> Per Occupied Room`</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">code</span><span class="o">:</span><span class="w"> </span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;text_2&#39;</span><span class="p">],</span>
-<span class="w">    </span><span class="nx">amount</span><span class="o">:</span><span class="w"> </span><span class="nx">subTotalAmount</span>
-<span class="p">}];</span>
-
-<span class="k">return</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">invoicesubtotal</span><span class="o">:</span><span class="w"> </span><span class="nx">subTotalAmount</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">lineitems</span><span class="o">:</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">lineItems</span><span class="p">)</span>
-<span class="p">};</span>
-</code></pre></div></p>
-<h4 id="revenue-sharing-api">Revenue Sharing API</h4>
-<p><strong>Endpoint</strong>: <code>RevenueSharing20250325</code>
-<strong>Method</strong>: POST
-<strong>Validated Implementation</strong>: ✅ Matches Power Platform workflow</p>
-<p><strong>Request Schema</strong>:
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;text&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Site Number&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;number&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Invoice Group Number&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;date&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Start Date (YYYY-MM-DD)&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;date_1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">      </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;date&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;End Date (YYYY-MM-DD)&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;text_1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Configuration Object (JSON string)&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;date_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;date&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Contract Start Date (YYYY-MM-DD)&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;text_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Comma separated string of Contract Types integer values&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;date&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;date_1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;text_1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;date_2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;text_2&quot;</span><span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Response Schema</strong>:
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;lineitems&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;JSON string of line item array&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;invoicesubtotal&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Total invoice subtotal amount&quot;</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="nt">&quot;revenuedistributionitems&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;JSON string of revenue distribution item array&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<p><strong>Implementation Logic</strong> (Validated against Power Platform):
-<div class="highlight"><pre><span></span><code><span class="c1">// Parse configuration object</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">configArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;text_1&#39;</span><span class="p">]);</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">totalAmountDue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">totalRevenue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<span class="kd">let</span><span class="w"> </span><span class="nx">revenueDistributionItems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
-
-<span class="c1">// Process each threshold configuration</span>
-<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">threshold</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">configArray</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Validate invoice group matches</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;number&#39;</span><span class="p">]</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="nx">threshold</span><span class="p">.</span><span class="nx">bs_invoicegroup</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">continue</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="c1">// Parse tier data and revenue codes</span>
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">tierData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">threshold</span><span class="p">.</span><span class="nx">bs_tierdata</span><span class="p">);</span>
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">revenueCodes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">threshold</span><span class="p">.</span><span class="nx">bs_revenuecodedata</span><span class="p">);</span>
-
-<span class="w">    </span><span class="c1">// Build revenue code filter</span>
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">revenueCodeFilter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">revenueCodes</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&quot;&#39; or REVENUE_CODE eq &#39;&quot;</span><span class="p">);</span>
-
-<span class="w">    </span><span class="c1">// Determine if Bell Service is enabled</span>
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">bellServiceEnabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;text_2&#39;</span><span class="p">].</span><span class="nx">includes</span><span class="p">(</span><span class="s1">&#39;126840005&#39;</span><span class="p">);</span>
-
-<span class="w">    </span><span class="c1">// Build query based on Bell Service status</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">query</span><span class="p">;</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">bellServiceEnabled</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span>
-<span class="sb">            SELECT TotalNetExternalRevenue</span>
-<span class="sb">            FROM [dbo].[vwREVENUE_DAILY_DETAIL_INVOICE]</span>
-<span class="sb">            WHERE SITE = &#39;</span><span class="si">${</span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="si">}</span><span class="sb">&#39;</span>
-<span class="sb">              AND year(DATE) = </span><span class="si">${</span><span class="nx">formatDateTime</span><span class="p">(</span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;date&#39;</span><span class="p">],</span><span class="w"> </span><span class="s1">&#39;yyyy&#39;</span><span class="p">)</span><span class="si">}</span>
-<span class="sb">              AND month(DATE) = </span><span class="si">${</span><span class="nx">formatDateTime</span><span class="p">(</span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;date&#39;</span><span class="p">],</span><span class="w"> </span><span class="s1">&#39;MM&#39;</span><span class="p">)</span><span class="si">}</span>
-<span class="sb">              AND DEPOSIT_FLAG != &#39;V&#39;</span>
-<span class="sb">              AND REVENUE_CATEGORY != &#39;Per Man Hour&#39;</span>
-<span class="sb">              AND REVENUE_CODE != &#39;OR1&#39;</span>
-<span class="sb">              AND REVENUE_CODE != &#39;OR2&#39;</span>
-<span class="sb">              AND (REVENUE_CODE = &#39;</span><span class="si">${</span><span class="nx">revenueCodeFilter</span><span class="si">}</span><span class="sb">&#39;)</span>
-<span class="sb">            AGGREGATE(NETEXTERNALREVENUE with sum as TotalNetExternalRevenue)</span>
-<span class="sb">        `</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span>
-<span class="sb">            SELECT TotalNetExternalRevenue</span>
-<span class="sb">            FROM [dbo].[vwREVENUE_DAILY_DETAIL_INVOICE]</span>
-<span class="sb">            WHERE SITE = &#39;</span><span class="si">${</span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="si">}</span><span class="sb">&#39;</span>
-<span class="sb">              AND year(DATE) = </span><span class="si">${</span><span class="nx">formatDateTime</span><span class="p">(</span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;date&#39;</span><span class="p">],</span><span class="w"> </span><span class="s1">&#39;yyyy&#39;</span><span class="p">)</span><span class="si">}</span>
-<span class="sb">              AND month(DATE) = </span><span class="si">${</span><span class="nx">formatDateTime</span><span class="p">(</span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;date&#39;</span><span class="p">],</span><span class="w"> </span><span class="s1">&#39;MM&#39;</span><span class="p">)</span><span class="si">}</span>
-<span class="sb">              AND DEPOSIT_FLAG != &#39;V&#39;</span>
-<span class="sb">              AND REVENUE_CATEGORY != &#39;Per Man Hour&#39;</span>
-<span class="sb">              AND (REVENUE_CODE = &#39;</span><span class="si">${</span><span class="nx">revenueCodeFilter</span><span class="si">}</span><span class="sb">&#39;)</span>
-<span class="sb">            AGGREGATE(NETEXTERNALREVENUE with sum as TotalNetExternalRevenue)</span>
-<span class="sb">        `</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">thresholdRevenue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">executeQuery</span><span class="p">(</span><span class="nx">query</span><span class="p">).</span><span class="nx">TotalNetExternalRevenue</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<span class="w">    </span><span class="nx">totalRevenue</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">thresholdRevenue</span><span class="p">;</span>
-
-<span class="w">    </span><span class="c1">// Calculate revenue accumulation if annual</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">accumulatedRevenue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">thresholdRevenue</span><span class="p">;</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">threshold</span><span class="p">.</span><span class="nx">bs_revenueaccumulationtype</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">126840001</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="c1">// Annual Calendar</span>
-<span class="w">        </span><span class="nx">threshold</span><span class="p">.</span><span class="nx">bs_revenueaccumulationtype</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">126840002</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Annual Anniversary</span>
-
-<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">startDate</span><span class="p">;</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">threshold</span><span class="p">.</span><span class="nx">bs_revenueaccumulationtype</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">126840001</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nx">startDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">formatDateTime</span><span class="p">(</span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;date_2&#39;</span><span class="p">],</span><span class="w"> </span><span class="s1">&#39;yyyy&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;-01-01&#39;</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="c1">// Calculate anniversary date logic</span>
-<span class="w">            </span><span class="nx">startDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">calculateAnniversaryStartDate</span><span class="p">(</span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;date_2&#39;</span><span class="p">],</span><span class="w"> </span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;date&#39;</span><span class="p">]);</span>
-<span class="w">        </span><span class="p">}</span>
-
-<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">previousQuery</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`</span>
-<span class="sb">            SELECT TotalNetExternalRevenue</span>
-<span class="sb">            FROM [dbo].[vwREVENUE_DAILY_DETAIL_INVOICE]</span>
-<span class="sb">            WHERE SITE = &#39;</span><span class="si">${</span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="si">}</span><span class="sb">&#39;</span>
-<span class="sb">              AND date(DATE) &gt;= date(&#39;</span><span class="si">${</span><span class="nx">startDate</span><span class="si">}</span><span class="sb">&#39;)</span>
-<span class="sb">              AND date(DATE) &lt; date(&#39;</span><span class="si">${</span><span class="nx">formatDateTime</span><span class="p">(</span><span class="nx">triggerBody</span><span class="p">()</span><span class="o">?</span><span class="p">.[</span><span class="s1">&#39;date&#39;</span><span class="p">],</span><span class="w"> </span><span class="s1">&#39;yyyy-MM-dd&#39;</span><span class="p">)</span><span class="si">}</span><span class="sb">&#39;)</span>
-<span class="sb">              AND DEPOSIT_FLAG != &#39;V&#39;</span>
-<span class="sb">              AND REVENUE_CATEGORY != &#39;Per Man Hour&#39;</span>
-<span class="sb">              AND (REVENUE_CODE = &#39;</span><span class="si">${</span><span class="nx">revenueCodeFilter</span><span class="si">}</span><span class="sb">&#39;)</span>
-<span class="sb">            AGGREGATE(NETEXTERNALREVENUE with sum as TotalNetExternalRevenue)</span>
-<span class="sb">        `</span><span class="p">;</span>
-
-<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">previousRevenue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">executeQuery</span><span class="p">(</span><span class="nx">previousQuery</span><span class="p">).</span><span class="nx">TotalNetExternalRevenue</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<span class="w">        </span><span class="nx">accumulatedRevenue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">thresholdRevenue</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">previousRevenue</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="c1">// Process tier calculations</span>
-<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">previousLimit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">tier</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">tierData</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">currentLimit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tier</span><span class="p">.</span><span class="nx">Amount</span><span class="p">;</span>
-
-<span class="w">        </span><span class="c1">// Adjust previous limit if less than accumulated start</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">previousLimit</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">accumulatedRevenue</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">thresholdRevenue</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nx">previousLimit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">accumulatedRevenue</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">thresholdRevenue</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
-
-<span class="w">        </span><span class="c1">// Skip if previous limit exceeds current limit</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">previousLimit</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">currentLimit</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">currentLimit</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="k">continue</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
-
-<span class="w">        </span><span class="c1">// Calculate tier amount</span>
-<span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="nx">tierAmount</span><span class="p">;</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">currentLimit</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">accumulatedRevenue</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nx">currentLimit</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nx">tierAmount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">accumulatedRevenue</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">previousLimit</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nx">tierAmount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">currentLimit</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">previousLimit</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
-
-<span class="w">        </span><span class="c1">// Calculate amount due for this tier</span>
-<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">amountDue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tierAmount</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">tierAmount</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="nx">tier</span><span class="p">.</span><span class="nx">SharePercentage</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">100</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<span class="w">        </span><span class="nx">totalAmountDue</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">amountDue</span><span class="p">;</span>
-
-<span class="w">        </span><span class="c1">// Add to revenue distribution items</span>
-<span class="w">        </span><span class="nx">revenueDistributionItems</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
-<span class="w">            </span><span class="nx">revenueAmount</span><span class="o">:</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">tierAmount</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">),</span>
-<span class="w">            </span><span class="nx">sharePercentageToCharge</span><span class="o">:</span><span class="w"> </span><span class="nx">tier</span><span class="p">.</span><span class="nx">SharePercentage</span><span class="p">,</span>
-<span class="w">            </span><span class="nx">amountDueToTownePark</span><span class="o">:</span><span class="w"> </span><span class="nx">amountDue</span><span class="p">,</span>
-<span class="w">            </span><span class="nx">tierLimitAmount</span><span class="o">:</span><span class="w"> </span><span class="nx">tier</span><span class="p">.</span><span class="nx">Amount</span><span class="p">,</span>
-<span class="w">            </span><span class="nx">thresholdStructure</span><span class="o">:</span><span class="w"> </span><span class="nx">threshold</span><span class="p">.</span><span class="nx">bs_invoicegroup</span>
-<span class="w">        </span><span class="p">});</span>
-
-<span class="w">        </span><span class="nx">previousLimit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">currentLimit</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="c1">// Generate line items</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">lineItems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[{</span>
-<span class="w">    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Towne Park Fees for Services&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">amount</span><span class="o">:</span><span class="w"> </span><span class="nx">totalAmountDue</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">code</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;4790&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="sb">`Total Base for Fee Calculation: </span><span class="si">${</span><span class="nx">formatCurrency</span><span class="p">(</span><span class="nx">totalRevenue</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span>
-<span class="p">}];</span>
-
-<span class="k">return</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">lineitems</span><span class="o">:</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">lineItems</span><span class="p">),</span>
-<span class="w">    </span><span class="nx">invoicesubtotal</span><span class="o">:</span><span class="w"> </span><span class="nx">totalAmountDue</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">revenuedistributionitems</span><span class="o">:</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">revenueDistributionItems</span><span class="p">)</span>
-<span class="p">};</span>
-</code></pre></div></p>
-<h2 id="formula-specifications">Formula Specifications</h2>
-<h3 id="revenue-share-formulas">Revenue Share Formulas</h3>
-<p><strong>Validated Implementation</strong>: ✅ Matches <code>bs_revenuesharebypercent-FormulaDefinitions.yaml</code> (see <a href="../../backend/external-code-repository-links/">External Code Repository Links</a> for validation references)</p>
-<h4 id="owner-percentage-calculation">Owner Percentage Calculation</h4>
-<div class="highlight"><pre><span></span><code><span class="nt">bs_ownerpercent</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<span class="w">    </span><span class="no">=If(bs_percenttocharge &gt;= 0, 100 - bs_percenttocharge, 0)</span>
-</code></pre></div>
-<p><strong>Technical Implementation</strong>:
-<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">calculateOwnerPercentage</span><span class="p">(</span><span class="nx">percentToCharge</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">percentToCharge</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mf">100</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">percentToCharge</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<h4 id="total-due-to-owner-calculation">Total Due to Owner Calculation</h4>
-<div class="highlight"><pre><span></span><code><span class="nt">bs_totalduetoowner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">=bs_revenueamount - bs_totalduetotownepark</span>
-</code></pre></div>
-<p><strong>Technical Implementation</strong>:
-<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">calculateTotalDueToOwner</span><span class="p">(</span><span class="nx">revenueAmount</span><span class="p">,</span><span class="w"> </span><span class="nx">totalDueToTownePark</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">revenueAmount</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">totalDueToTownePark</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></p>
-<h2 id="database-design">Database Design</h2>
-<h3 id="performance-optimization">Performance Optimization</h3>
-<h4 id="indexing-strategy">Indexing Strategy</h4>
-<div class="highlight"><pre><span></span><code><span class="c1">-- Revenue data mart indexes for optimal query performance</span>
-<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_REVENUE_DATAMART_SITE_DATE_CATEGORY</span><span class="w"> </span>
-<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">dbo</span><span class="p">].[</span><span class="n">REVENUE_DATAMART_DAILY_INVOICE</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">SITE</span><span class="p">,</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span><span class="w"> </span><span class="n">REVENUE_CATEGORY</span><span class="p">)</span>
-<span class="n">INCLUDE</span><span class="w"> </span><span class="p">(</span><span class="n">VALUE</span><span class="p">,</span><span class="w"> </span><span class="n">REVENUE_CODE</span><span class="p">);</span>
-
-<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_REVENUE_DATAMART_CODE_DATE</span><span class="w"> </span>
-<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">dbo</span><span class="p">].[</span><span class="n">REVENUE_DATAMART_DAILY_INVOICE</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">REVENUE_CODE</span><span class="p">,</span><span class="w"> </span><span class="nb">DATE</span><span class="p">)</span>
-<span class="n">INCLUDE</span><span class="w"> </span><span class="p">(</span><span class="n">SITE</span><span class="p">,</span><span class="w"> </span><span class="n">VALUE</span><span class="p">,</span><span class="w"> </span><span class="n">REVENUE_CATEGORY</span><span class="p">);</span>
-
-<span class="c1">-- Revenue detail view indexes</span>
-<span class="k">CREATE</span><span class="w"> </span><span class="n">NONCLUSTERED</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_REVENUE_DETAIL_SITE_DATE_DEPOSIT</span><span class="w"> </span>
-<span class="k">ON</span><span class="w"> </span><span class="p">[</span><span class="n">dbo</span><span class="p">].[</span><span class="n">REVENUE_DAILY_DETAIL</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="n">SITE</span><span class="p">,</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span><span class="w"> </span><span class="n">DEPOSIT_FLAG</span><span class="p">)</span>
-<span class="n">INCLUDE</span><span class="w"> </span><span class="p">(</span><span class="n">NETEXTERNALREVENUE</span><span class="p">,</span><span class="w"> </span><span class="n">REVENUE_CODE</span><span class="p">,</span><span class="w"> </span><span class="n">REVENUE_CATEGORY</span><span class="p">);</span>
-</code></pre></div>
-<h4 id="query-optimization">Query Optimization</h4>
-<div class="highlight"><pre><span></span><code><span class="c1">-- Optimized query for monthly revenue aggregation</span>
-<span class="k">WITH</span><span class="w"> </span><span class="n">MonthlyRevenue</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="k">SELECT</span><span class="w"> </span>
-<span class="w">        </span><span class="n">SITE</span><span class="p">,</span>
-<span class="w">        </span><span class="k">YEAR</span><span class="p">(</span><span class="nb">DATE</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">RevenueYear</span><span class="p">,</span>
-<span class="w">        </span><span class="k">MONTH</span><span class="p">(</span><span class="nb">DATE</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">RevenueMonth</span><span class="p">,</span>
-<span class="w">        </span><span class="n">REVENUE_CODE</span><span class="p">,</span>
-<span class="w">        </span><span class="k">SUM</span><span class="p">(</span><span class="n">NETEXTERNALREVENUE</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">TotalRevenue</span>
-<span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">dbo</span><span class="p">].[</span><span class="n">vwREVENUE_DAILY_DETAIL_INVOICE</span><span class="p">]</span>
-<span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">DEPOSIT_FLAG</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;V&#39;</span>
-<span class="w">      </span><span class="k">AND</span><span class="w"> </span><span class="n">REVENUE_CATEGORY</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s1">&#39;Per Man Hour&#39;</span>
-<span class="w">    </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">SITE</span><span class="p">,</span><span class="w"> </span><span class="k">YEAR</span><span class="p">(</span><span class="nb">DATE</span><span class="p">),</span><span class="w"> </span><span class="k">MONTH</span><span class="p">(</span><span class="nb">DATE</span><span class="p">),</span><span class="w"> </span><span class="n">REVENUE_CODE</span>
-<span class="p">)</span>
-<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">MonthlyRevenue</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="n">SITE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">@</span><span class="n">SiteNumber</span>
-<span class="w">  </span><span class="k">AND</span><span class="w"> </span><span class="n">RevenueYear</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">@</span><span class="n">TargetYear</span>
-<span class="w">  </span><span class="k">AND</span><span class="w"> </span><span class="n">RevenueMonth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">@</span><span class="n">TargetMonth</span>
-<span class="w">  </span><span class="k">AND</span><span class="w"> </span><span class="n">REVENUE_CODE</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="o">@</span><span class="n">RevenueCodeList</span><span class="p">);</span>
-</code></pre></div>
-<h3 id="data-archival-strategy">Data Archival Strategy</h3>
-<h4 id="archival-policy">Archival Policy</h4>
+<h2 id="technical-architecture">Technical Architecture</h2>
+<h3 id="system-components">System Components</h3>
 <ul>
-<li><strong>Active Data</strong>: Current year + 2 previous years in primary tables</li>
-<li><strong>Archived Data</strong>: Data older than 3 years moved to archive tables</li>
-<li><strong>Retention Period</strong>: 7 years total retention for compliance</li>
+<li><strong>Forecasting Engine</strong>: Core calculation and prediction logic</li>
+<li><strong>Data Integration Layer</strong>: ETL processes and data validation</li>
+<li><strong>API Gateway</strong>: RESTful services for data access</li>
+<li><strong>User Interface</strong>: Web-based dashboard and reporting tools</li>
 </ul>
-<h4 id="archive-table-structure">Archive Table Structure</h4>
-<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="p">[</span><span class="n">dbo</span><span class="p">].[</span><span class="n">REVENUE_DATAMART_DAILY_INVOICE_ARCHIVE</span><span class="p">]</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="p">[</span><span class="n">SITE</span><span class="p">]</span><span class="w"> </span><span class="n">NVARCHAR</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">    </span><span class="p">[</span><span class="nb">DATE</span><span class="p">]</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">    </span><span class="p">[</span><span class="n">REVENUE_CATEGORY</span><span class="p">]</span><span class="w"> </span><span class="n">NVARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">    </span><span class="p">[</span><span class="n">VALUE</span><span class="p">]</span><span class="w"> </span><span class="nb">DECIMAL</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">    </span><span class="p">[</span><span class="n">REVENUE_CODE</span><span class="p">]</span><span class="w"> </span><span class="n">NVARCHAR</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
-<span class="w">    </span><span class="p">[</span><span class="n">DEPOSIT_FLAG</span><span class="p">]</span><span class="w"> </span><span class="n">NVARCHAR</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
-<span class="w">    </span><span class="p">[</span><span class="n">ARCHIVED_DATE</span><span class="p">]</span><span class="w"> </span><span class="n">DATETIME2</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">GETDATE</span><span class="p">(),</span>
-<span class="w">    </span><span class="p">[</span><span class="n">ORIGINAL_CREATED_DATE</span><span class="p">]</span><span class="w"> </span><span class="n">DATETIME2</span><span class="p">,</span>
-
-<span class="w">    </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_ARCHIVE_SITE_DATE</span><span class="w"> </span><span class="p">(</span><span class="n">SITE</span><span class="p">,</span><span class="w"> </span><span class="nb">DATE</span><span class="p">),</span>
-<span class="w">    </span><span class="k">INDEX</span><span class="w"> </span><span class="n">IX_ARCHIVE_ARCHIVED_DATE</span><span class="w"> </span><span class="p">(</span><span class="n">ARCHIVED_DATE</span><span class="p">)</span>
-<span class="p">)</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="p">(</span><span class="n">DATA_COMPRESSION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PAGE</span><span class="p">);</span>
-</code></pre></div>
-<h2 id="integration-specifications">Integration Specifications</h2>
-<h3 id="powerbill-integration">PowerBill Integration</h3>
-<h4 id="connection-configuration">Connection Configuration</h4>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;connectionName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bs_TowneParkEDW&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;connectionType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SQL Server&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;authentication&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Service Principal&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;connectionString&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Server=edw-server.townepark.com;Database=TowneParkEDW;&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;timeout&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;retryPolicy&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;maxRetries&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;retryInterval&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PT30S&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;exponentialBackoff&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<h4 id="error-handling">Error Handling</h4>
-<div class="highlight"><pre><span></span><code><span class="c1">// Standardized error handling for EDW connections</span>
-<span class="kd">function</span><span class="w"> </span><span class="nx">handleEDWError</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span><span class="w"> </span><span class="nx">context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">errorDetails</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">timestamp</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">().</span><span class="nx">toISOString</span><span class="p">(),</span>
-<span class="w">        </span><span class="nx">context</span><span class="o">:</span><span class="w"> </span><span class="nx">context</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">errorMessage</span><span class="o">:</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">errorCode</span><span class="o">:</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">code</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">stackTrace</span><span class="o">:</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">stack</span>
-<span class="w">    </span><span class="p">};</span>
-
-<span class="w">    </span><span class="c1">// Log to Application Insights</span>
-<span class="w">    </span><span class="nx">logError</span><span class="p">(</span><span class="s1">&#39;EDW_CONNECTION_ERROR&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">errorDetails</span><span class="p">);</span>
-
-<span class="w">    </span><span class="c1">// Determine retry strategy</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">isRetryableError</span><span class="p">(</span><span class="nx">error</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">shouldRetry</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">retryAfter</span><span class="o">:</span><span class="w"> </span><span class="nx">calculateRetryDelay</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">};</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="c1">// Return empty result for non-retryable errors</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">shouldRetry</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nx">fallbackResult</span><span class="o">:</span><span class="w"> </span><span class="nx">getEmptyResult</span><span class="p">(</span><span class="nx">context</span><span class="p">)</span><span class="w"> </span><span class="p">};</span>
-<span class="p">}</span>
-</code></pre></div>
-<h3 id="dataverse-integration">Dataverse Integration</h3>
-<h4 id="security-configuration">Security Configuration</h4>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;securityRoles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;roleName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Forecasting Administrator&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;permissions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;bs_revenueshareconfig&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Create&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Read&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Write&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Delete&quot;</span><span class="p">],</span>
-<span class="w">        </span><span class="nt">&quot;bs_peroccupiedroomconfig&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Create&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Read&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Write&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Delete&quot;</span><span class="p">],</span>
-<span class="w">        </span><span class="nt">&quot;bs_forecastingaudit&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Read&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Write&quot;</span><span class="p">]</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;roleName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Forecasting User&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">      </span><span class="nt">&quot;permissions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;bs_revenueshareconfig&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Read&quot;</span><span class="p">],</span>
-<span class="w">        </span><span class="nt">&quot;bs_peroccupiedroomconfig&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Read&quot;</span><span class="p">],</span>
-<span class="w">        </span><span class="nt">&quot;bs_forecastingaudit&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Read&quot;</span><span class="p">]</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div>
-<h4 id="audit-trail-configuration">Audit Trail Configuration</h4>
-<div class="highlight"><pre><span></span><code><span class="c1">-- Audit trail table for forecasting operations</span>
-<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="p">[</span><span class="n">dbo</span><span class="p">].[</span><span class="n">bs_forecastingaudit</span><span class="p">]</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="p">[</span><span class="n">AuditId</span><span class="p">]</span><span class="w"> </span><span class="n">UNIQUEIDENTIFIER</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">NEWID</span><span class="p">(),</span>
-<span class="w">    </span><span class="p">[</span><span class="n">UserId</span><span class="p">]</span><span class="w"> </span><span class="n">UNIQUEIDENTIFIER</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">    </span><span class="p">[</span><span class="k">Operation</span><span class="p">]</span><span class="w"> </span><span class="n">NVARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">    </span><span class="p">[</span><span class="n">EntityName</span><span class="p">]</span><span class="w"> </span><span class="n">NVARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
-<span class="w">    </span><span class="p">[</span><span class="n">EntityId</span><span class="p">]</span><span class="w"> </span><span class="n">UNIQUEIDENTIFIER</span><span class="p">,</span>
-<span class="w">    </span><span class="p">[</span><span class="n">OldValues</span><span class="p">]</span><span class="w"> </span><span class="n">NTEXT</span><span class="p">,</span>
-<span class="w">    </span><span class="p">[</span><span class="n">NewValues</span><span class="p">]</span><span class="w"> </span><span class="n">NTEXT</span><span class="p">,</span>
-<span class="w">    </span><span class="p">[</span><span class="k">Timestamp</span><span class="p">]</span><span class="w"> </span><span class="n">DATETIME2</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="n">GETDATE</span><span class="p">(),</span>
-<span class="w">    </span><span class="p">[</span><span class="n">IPAddress</span><span class="p">]</span><span class="w"> </span><span class="n">NVARCHAR</span><span class="p">(</span><span class="mi">45</span><span class="p">),</span>
-<span class="w">    </span><span class="p">[</span><span class="n">UserAgent</span><span class="p">]</span><span class="w"> </span><span class="n">NVARCHAR</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
-<span class="p">);</span>
-</code></pre></div>
-<h2 id="performance-requirements">Performance Requirements</h2>
-<h3 id="response-time-targets">Response Time Targets</h3>
+<h3 id="technology-stack">Technology Stack</h3>
 <ul>
-<li><strong>Per Occupied Room Calculation</strong>: &lt; 30 seconds</li>
-<li><strong>Revenue Share Calculation</strong>: &lt; 2 minutes for complex tier structures</li>
-<li><strong>Data Retrieval from EDW</strong>: &lt; 15 seconds for monthly aggregations</li>
-<li><strong>Configuration Updates</strong>: &lt; 5 seconds</li>
+<li><strong>Backend</strong>: .NET Core, Entity Framework</li>
+<li><strong>Frontend</strong>: React, TypeScript, Material-UI</li>
+<li><strong>Database</strong>: SQL Server, Azure SQL Database</li>
+<li><strong>Integration</strong>: Azure Service Bus, REST APIs</li>
 </ul>
-<h3 id="throughput-requirements">Throughput Requirements</h3>
+<h3 id="data-flow-architecture">Data Flow Architecture</h3>
+<ol>
+<li>Data ingestion from source systems</li>
+<li>Data validation and cleansing</li>
+<li>Forecasting calculations and modeling</li>
+<li>Results storage and caching</li>
+<li>API exposure for consumption</li>
+<li>UI rendering and user interaction</li>
+</ol>
+<h2 id="implementation-details">Implementation Details</h2>
+<h3 id="database-schema-changes">Database Schema Changes</h3>
 <ul>
-<li><strong>Concurrent Users</strong>: Support up to 50 concurrent forecasting operations</li>
-<li><strong>Daily Calculations</strong>: Process up to 1,000 forecasting calculations per day</li>
-<li><strong>Data Volume</strong>: Handle up to 10 million revenue records per calculation</li>
+<li>New tables for Sprint 26 features</li>
+<li>Enhanced indexing for performance optimization</li>
+<li>Data archival strategies for historical data</li>
+<li>Backup and recovery procedures</li>
 </ul>
-<h3 id="scalability-considerations">Scalability Considerations</h3>
+<h3 id="api-enhancements">API Enhancements</h3>
 <ul>
-<li><strong>Horizontal Scaling</strong>: Power Automate workflows auto-scale based on demand</li>
-<li><strong>Database Scaling</strong>: EDW supports read replicas for improved query performance</li>
-<li><strong>Caching Strategy</strong>: Implement Redis cache for frequently accessed configuration data</li>
+<li>New endpoints for Sprint 26 functionality</li>
+<li>Enhanced authentication and authorization</li>
+<li>Rate limiting and throttling</li>
+<li>Comprehensive error handling</li>
 </ul>
-<h2 id="security-specifications">Security Specifications</h2>
-<h3 id="authentication-and-authorization">Authentication and Authorization</h3>
+<h3 id="security-considerations">Security Considerations</h3>
 <ul>
-<li><strong>Azure AD Integration</strong>: Single sign-on with corporate Azure AD</li>
-<li><strong>Role-Based Access Control</strong>: Granular permissions based on user roles</li>
-<li><strong>API Security</strong>: OAuth 2.0 with JWT tokens for API access</li>
-<li><strong>Data Encryption</strong>: TLS 1.3 for data in transit, AES-256 for data at rest</li>
+<li>Data encryption at rest and in transit</li>
+<li>Role-based access controls</li>
+<li>Audit logging for all operations</li>
+<li>Compliance with security standards</li>
 </ul>
-<h3 id="data-privacy-and-compliance">Data Privacy and Compliance</h3>
+<h2 id="testing-strategy">Testing Strategy</h2>
+<h3 id="unit-testing">Unit Testing</h3>
 <ul>
-<li><strong>PII Protection</strong>: No personally identifiable information in forecasting data</li>
-<li><strong>Data Residency</strong>: All data stored within approved geographic regions</li>
-<li><strong>Audit Logging</strong>: Comprehensive audit trail for all data access and modifications</li>
-<li><strong>Retention Policies</strong>: Automated data retention and deletion policies</li>
+<li>Comprehensive test coverage for new features</li>
+<li>Automated testing pipeline integration</li>
+<li>Performance testing for critical components</li>
+<li>Security testing for vulnerabilities</li>
 </ul>
-<h2 id="monitoring-and-alerting">Monitoring and Alerting</h2>
-<h3 id="application-performance-monitoring">Application Performance Monitoring</h3>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;applicationInsights&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;instrumentationKey&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;forecasting-app-insights-key&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;customMetrics&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">      </span><span class="s2">&quot;forecasting.calculation.duration&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="s2">&quot;forecasting.calculation.success_rate&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="s2">&quot;forecasting.data.retrieval.duration&quot;</span><span class="p">,</span>
-<span class="w">      </span><span class="s2">&quot;forecasting.error.rate&quot;</span>
-<span class="w">    </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">&quot;alertRules&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;High Error Rate&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;condition&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;error_rate &gt; 5%&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;severity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Critical&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;notification&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;forecasting-alerts@townepark.com&quot;</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Slow Response Time&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;condition&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;avg_response_time &gt; 60s&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;severity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Warning&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">        </span><span class="nt">&quot;notification&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;forecasting-alerts@townepark.com&quot;</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">]</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<h3 id="health-check-endpoints">Health Check Endpoints</h3>
-<div class="highlight"><pre><span></span><code><span class="c1">// Health check for forecasting services</span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/health/forecasting&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">healthChecks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">Promise</span><span class="p">.</span><span class="nx">allSettled</span><span class="p">([</span>
-<span class="w">        </span><span class="nx">checkEDWConnection</span><span class="p">(),</span>
-<span class="w">        </span><span class="nx">checkDataverseConnection</span><span class="p">(),</span>
-<span class="w">        </span><span class="nx">checkPowerAutomateStatus</span><span class="p">(),</span>
-<span class="w">        </span><span class="nx">checkCacheStatus</span><span class="p">()</span>
-<span class="w">    </span><span class="p">]);</span>
-
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">overallHealth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">healthChecks</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="nx">check</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span>
-<span class="w">        </span><span class="nx">check</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;fulfilled&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">check</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">healthy</span>
-<span class="w">    </span><span class="p">);</span>
-
-<span class="w">    </span><span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="nx">overallHealth</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mf">200</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">503</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span>
-<span class="w">        </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="nx">overallHealth</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;healthy&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;unhealthy&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="nx">timestamp</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">().</span><span class="nx">toISOString</span><span class="p">(),</span>
-<span class="w">        </span><span class="nx">checks</span><span class="o">:</span><span class="w"> </span><span class="nx">healthChecks</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">check</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">({</span>
-<span class="w">            </span><span class="nx">service</span><span class="o">:</span><span class="w"> </span><span class="nx">check</span><span class="p">.</span><span class="nx">service</span><span class="p">,</span>
-<span class="w">            </span><span class="nx">healthy</span><span class="o">:</span><span class="w"> </span><span class="nx">check</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;fulfilled&#39;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">check</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">healthy</span><span class="p">,</span>
-<span class="w">            </span><span class="nx">responseTime</span><span class="o">:</span><span class="w"> </span><span class="nx">check</span><span class="p">.</span><span class="nx">value</span><span class="o">?</span><span class="p">.</span><span class="nx">responseTime</span><span class="p">,</span>
-<span class="w">            </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="nx">check</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">&#39;rejected&#39;</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">check</span><span class="p">.</span><span class="nx">reason</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kc">null</span>
-<span class="w">        </span><span class="p">}))</span>
-<span class="w">    </span><span class="p">});</span>
-<span class="p">});</span>
-</code></pre></div>
-<h2 id="deployment-specifications">Deployment Specifications</h2>
-<h3 id="environment-configuration">Environment Configuration</h3>
-<h4 id="development-environment">Development Environment</h4>
-<p>```json
-{
-  "environment": "development",
-  "powerPlatform": {
-    "environmentUrl": "https://dev-townepark.crm.dynamics.com",
-    "solutionName": "TowneParkForecastingDev"
-  },
-  "database": {
-    "server": "dev-edw.townepark.com",
-    "database": "TowneParkEDW</p>
+<h3 id="integration-testing">Integration Testing</h3>
+<ul>
+<li>End-to-end testing scenarios</li>
+<li>API testing and validation</li>
+<li>Database integration testing</li>
+<li>User interface testing</li>
+</ul>
+<h3 id="performance-testing">Performance Testing</h3>
+<ul>
+<li>Load testing for concurrent users</li>
+<li>Stress testing for system limits</li>
+<li>Performance benchmarking</li>
+<li>Scalability testing</li>
+</ul>
+<h2 id="deployment-strategy">Deployment Strategy</h2>
+<h3 id="environment-progression">Environment Progression</h3>
+<ul>
+<li>Development environment testing</li>
+<li>QA environment validation</li>
+<li>Staging environment verification</li>
+<li>Production deployment</li>
+</ul>
+<h3 id="rollback-procedures">Rollback Procedures</h3>
+<ul>
+<li>Database rollback scripts</li>
+<li>Application version rollback</li>
+<li>Configuration rollback procedures</li>
+<li>Emergency response protocols</li>
+</ul>
+<h2 id="related-documentation">Related Documentation</h2>
+<ul>
+<li><a href="../../../business-rules/forecasting/20250717_Forecasting_BusinessRules_Sprint26Features/">Forecasting Business Rules - Sprint 26</a></li>
+<li><a href="../../../user-processes/forecasting/20250717_Forecasting_UserProcesses_Sprint26Features/">Forecasting User Processes - Sprint 26</a></li>
+<li><a href="../../../systems/forecasting/integration-guide/">System Integration Guide</a></li>
+<li><a href="../../../standards/data-quality-standards/">Data Quality Standards</a></li>
+</ul>
 
 
 
@@ -11751,7 +10376,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 18, 2025 19:22:44 UTC">July 18, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 28, 2025 11:42:59 UTC">July 28, 2025</span>
   </span>
 
     

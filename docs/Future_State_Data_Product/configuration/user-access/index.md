@@ -42,7 +42,7 @@ This section contains comprehensive configuration guides for user access managem
 
 ### Business Rules
 - [User Access Business Rules](../../business-rules/user-access/index.md)
-- [Security Business Rules](../../business-rules/security/)
+- [Security Business Rules](../../business-rules/security/index.md)
 
 ### User Processes
 - [Account Manager User Processes](../../user-processes/account-manager/index.md)
@@ -55,7 +55,7 @@ This section contains comprehensive configuration guides for user access managem
 - [System Settings](../system-settings/index.md)
 
 ### Standards
-- [Security Standards](../../standards/)
+- [Security Standards](../../standards/index.md)
 
 ## User Role Categories
 

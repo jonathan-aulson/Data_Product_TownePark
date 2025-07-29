@@ -6,19 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Description of this document">
+        <meta name="description" content="Business rules and specifications for fixed fee contract types, including calculation methods, validation rules, and implementation guidelines">
       
-      
-        <meta name="author" content="Jonathan Aulson">
       
       
         <link rel="canonical" href="http://example.org/Future_State_Data_Product/business-rules/contract-types/fixed-fee/">
       
       
-        <link rel="prev" href="../revenue-share/">
-      
-      
-        <link rel="next" href="../per-labor-hour/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -26,7 +20,7 @@
     
     
       
-        <title>Fixed Fee - Towne Park Data Product</title>
+        <title>Fixed Fee Contract Business Rules - Towne Park Data Product</title>
       
     
     
@@ -70,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#fixed-fee" class="md-skip">
+        <a href="#fixed-fee-contract-business-rules" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Fixed Fee
+              Fixed Fee Contract Business Rules
             
           </span>
         </div>
@@ -254,8 +248,6 @@
   
   
   
-    
-  
   
     
     
@@ -263,12 +255,10 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../overview/" class="md-tabs__link">
           
   
@@ -352,7 +342,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync/" class="md-tabs__link">
+        <a href="../../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync.md" class="md-tabs__link">
           
   
   
@@ -1496,31 +1486,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -1533,7 +1520,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Business Rules
@@ -1544,31 +1531,28 @@
                 
   
   
-    
   
   
-  
     
     
     
     
       
       
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
         
           
-          
         
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1" >
         
           
-          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
             
   
   
@@ -1581,7 +1565,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             Contract Types
@@ -1638,32 +1622,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Fixed Fee
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="./" class="md-nav__link">
         
   
   
@@ -1674,53 +1636,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#details" class="md-nav__link">
-    <span class="md-ellipsis">
-      Details
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#related-documents" class="md-nav__link">
-    <span class="md-ellipsis">
-      Related Documents
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1793,13 +1708,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -1808,7 +1720,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
         
           
-          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
             
   
   
@@ -2476,13 +2388,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -2491,7 +2400,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3" >
         
           
-          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
             
   
   
@@ -3046,13 +2955,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3061,7 +2967,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_4" >
         
           
-          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
             
   
   
@@ -3411,13 +3317,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3426,7 +3329,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_5" >
         
           
-          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
             
   
   
@@ -3557,13 +3460,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3572,7 +3472,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_6" >
         
           
-          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
             
   
   
@@ -3673,13 +3573,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3688,7 +3585,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_7" >
         
           
-          <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
             
   
   
@@ -3789,13 +3686,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3804,7 +3698,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_8" >
         
           
-          <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
             
   
   
@@ -4256,6 +4150,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
 
       </a>
     </li>
@@ -4671,6 +4572,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
 
       </a>
     </li>
@@ -5071,6 +4979,13 @@
     Sprint 26 Features Technical Spec
     
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
   
 
       </a>
@@ -6544,6 +6459,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
 
       </a>
     </li>
@@ -7407,6 +7329,13 @@
     Sprint 26 Features User Processes
     
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
   
 
       </a>
@@ -8733,7 +8662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync/" class="md-nav__link">
+      <a href="../../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync.md" class="md-nav__link">
         
   
   
@@ -8741,13 +8670,6 @@
     Architecture Team Meeting Notes
     
   </span>
-  
-    
-  
-  
-    <span class="md-status md-status--Active"></span>
-  
-
   
 
       </a>
@@ -9790,18 +9712,177 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#details" class="md-nav__link">
+  <a href="#contract-definition" class="md-nav__link">
     <span class="md-ellipsis">
-      Details
+      Contract Definition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contract Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fixed-fee-contract-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed Fee Contract Characteristics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contract-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contract Components
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Rules
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Business Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fee-calculation-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fee Calculation Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#billing-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Billing Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-level-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Level Rules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Guidelines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contract-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contract Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#billing-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Billing Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Documentation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#related-documents" class="md-nav__link">
+  <a href="#validation-and-compliance" class="md-nav__link">
     <span class="md-ellipsis">
-      Related Documents
+      Validation and Compliance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validation and Compliance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contract-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contract Validation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#billing-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Billing Validation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Validation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version History
     </span>
   </a>
   
@@ -9823,11 +9904,114 @@
 
 
 
-<h1 id="fixed-fee">Fixed Fee</h1>
-<p><em>This is a placeholder document. Replace this content with actual documentation.</em></p>
+<h1 id="fixed-fee-contract-business-rules">Fixed Fee Contract Business Rules</h1>
 <h2 id="overview">Overview</h2>
-<h2 id="details">Details</h2>
-<h2 id="related-documents">Related Documents</h2>
+<p>This section contains comprehensive business rules and specifications for fixed fee contract types within the Towne Park system. Fixed fee contracts represent agreements where Towne Park provides services for a predetermined fixed amount, regardless of actual usage or performance metrics.</p>
+<h2 id="contract-definition">Contract Definition</h2>
+<h3 id="fixed-fee-contract-characteristics">Fixed Fee Contract Characteristics</h3>
+<ul>
+<li><strong>Predetermined Amount</strong>: Fixed monthly or annual fee regardless of performance</li>
+<li><strong>Service Scope</strong>: Defined scope of services included in the fixed fee</li>
+<li><strong>Performance Standards</strong>: Service level requirements and standards</li>
+<li><strong>Payment Terms</strong>: Regular payment schedule (monthly, quarterly, annual)</li>
+</ul>
+<h3 id="contract-components">Contract Components</h3>
+<ul>
+<li><strong>Base Fee</strong>: Core fixed fee amount</li>
+<li><strong>Service Inclusions</strong>: Services covered under the fixed fee</li>
+<li><strong>Service Exclusions</strong>: Services not covered (billed separately)</li>
+<li><strong>Performance Metrics</strong>: Key performance indicators and standards</li>
+</ul>
+<h2 id="business-rules">Business Rules</h2>
+<h3 id="fee-calculation-rules">Fee Calculation Rules</h3>
+<ul>
+<li><strong>Rule FF-001</strong>: Fixed fee amount remains constant throughout the contract period</li>
+<li><strong>Rule FF-002</strong>: Additional services outside scope are billed separately</li>
+<li><strong>Rule FF-003</strong>: Fee adjustments only allowed during contract renewal periods</li>
+<li><strong>Rule FF-004</strong>: Pro-rated fees apply for partial month services</li>
+</ul>
+<h3 id="billing-rules">Billing Rules</h3>
+<ul>
+<li><strong>Rule FF-005</strong>: Fixed fee billed in advance (monthly/quarterly/annually)</li>
+<li><strong>Rule FF-006</strong>: Additional services billed monthly in arrears</li>
+<li><strong>Rule FF-007</strong>: No usage-based adjustments to fixed fee amount</li>
+<li><strong>Rule FF-008</strong>: Late payment penalties apply per contract terms</li>
+</ul>
+<h3 id="service-level-rules">Service Level Rules</h3>
+<ul>
+<li><strong>Rule FF-009</strong>: Service levels must meet or exceed contracted standards</li>
+<li><strong>Rule FF-010</strong>: Service level failures may trigger fee adjustments</li>
+<li><strong>Rule FF-011</strong>: Performance reporting required monthly</li>
+<li><strong>Rule FF-012</strong>: Service credits apply for significant performance failures</li>
+</ul>
+<h2 id="implementation-guidelines">Implementation Guidelines</h2>
+<h3 id="contract-setup">Contract Setup</h3>
+<ul>
+<li>Define fixed fee amount and payment schedule</li>
+<li>Specify included and excluded services</li>
+<li>Establish performance standards and metrics</li>
+<li>Configure billing cycles and payment terms</li>
+</ul>
+<h3 id="billing-configuration">Billing Configuration</h3>
+<ul>
+<li>Set up recurring billing for fixed fee amount</li>
+<li>Configure separate billing for additional services</li>
+<li>Implement performance monitoring and reporting</li>
+<li>Establish service credit calculation procedures</li>
+</ul>
+<h3 id="performance-monitoring">Performance Monitoring</h3>
+<ul>
+<li>Track service level performance against standards</li>
+<li>Generate monthly performance reports</li>
+<li>Monitor customer satisfaction metrics</li>
+<li>Implement corrective action procedures for performance issues</li>
+</ul>
+<h2 id="related-documentation">Related Documentation</h2>
+<ul>
+<li><a href="../">Contract Types Overview</a></li>
+<li><a href="../../contracts/">Contract Configuration Business Rules</a></li>
+<li><a href="../../billing/">Billing Business Rules</a></li>
+<li><a href="../../../configuration/contracts/">Contract Configuration Setup</a></li>
+</ul>
+<h2 id="validation-and-compliance">Validation and Compliance</h2>
+<h3 id="contract-validation">Contract Validation</h3>
+<ul>
+<li>Verify fixed fee amount and payment terms</li>
+<li>Validate service scope and exclusions</li>
+<li>Confirm performance standards and metrics</li>
+<li>Review contract terms and conditions</li>
+</ul>
+<h3 id="billing-validation">Billing Validation</h3>
+<ul>
+<li>Validate recurring billing setup</li>
+<li>Verify additional service billing configuration</li>
+<li>Confirm payment terms and schedules</li>
+<li>Review service credit procedures</li>
+</ul>
+<h3 id="performance-validation">Performance Validation</h3>
+<ul>
+<li>Monitor service level compliance</li>
+<li>Track performance metrics and trends</li>
+<li>Validate reporting accuracy and completeness</li>
+<li>Review customer satisfaction and feedback</li>
+</ul>
+<h2 id="version-history">Version History</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>2025-07-28</td>
+<td>Initial creation of fixed fee contract business rules</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -9848,7 +10032,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 16, 2025 17:38:41 UTC">July 16, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 28, 2025 20:32:01 UTC">July 28, 2025</span>
   </span>
 
     

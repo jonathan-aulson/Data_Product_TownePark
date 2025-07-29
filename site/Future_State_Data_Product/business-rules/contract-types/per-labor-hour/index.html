@@ -6,19 +6,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Description of this document">
+        <meta name="description" content="Business rules and specifications for per labor hour contract types, including calculation methods, validation rules, and implementation guidelines">
       
-      
-        <meta name="author" content="Jonathan Aulson">
       
       
         <link rel="canonical" href="http://example.org/Future_State_Data_Product/business-rules/contract-types/per-labor-hour/">
       
       
-        <link rel="prev" href="../fixed-fee/">
-      
-      
-        <link rel="next" href="../management-agreement/">
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
@@ -26,7 +20,7 @@
     
     
       
-        <title>Per Labor Hour - Towne Park Data Product</title>
+        <title>Per Labor Hour Contract Business Rules - Towne Park Data Product</title>
       
     
     
@@ -70,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#per-labor-hour" class="md-skip">
+        <a href="#per-labor-hour-contract-business-rules" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Per Labor Hour
+              Per Labor Hour Contract Business Rules
             
           </span>
         </div>
@@ -254,8 +248,6 @@
   
   
   
-    
-  
   
     
     
@@ -263,12 +255,10 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../overview/" class="md-tabs__link">
           
   
@@ -352,7 +342,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync/" class="md-tabs__link">
+        <a href="../../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync.md" class="md-tabs__link">
           
   
   
@@ -1496,31 +1486,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -1533,7 +1520,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Business Rules
@@ -1544,31 +1531,28 @@
                 
   
   
-    
   
   
-  
     
     
     
     
       
       
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
         
           
-          
         
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_1" >
         
           
-          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
             
   
   
@@ -1581,7 +1565,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             Contract Types
@@ -1661,32 +1645,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Per Labor Hour
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="./" class="md-nav__link">
         
   
   
@@ -1697,53 +1659,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#details" class="md-nav__link">
-    <span class="md-ellipsis">
-      Details
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#related-documents" class="md-nav__link">
-    <span class="md-ellipsis">
-      Related Documents
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1793,13 +1708,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -1808,7 +1720,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
         
           
-          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
             
   
   
@@ -2476,13 +2388,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -2491,7 +2400,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3" >
         
           
-          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
             
   
   
@@ -3046,13 +2955,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3061,7 +2967,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_4" >
         
           
-          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
             
   
   
@@ -3411,13 +3317,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3426,7 +3329,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_5" >
         
           
-          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
             
   
   
@@ -3557,13 +3460,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3572,7 +3472,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_6" >
         
           
-          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
             
   
   
@@ -3673,13 +3573,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3688,7 +3585,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_7" >
         
           
-          <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
             
   
   
@@ -3789,13 +3686,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -3804,7 +3698,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_8" >
         
           
-          <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
             
   
   
@@ -4256,6 +4150,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
 
       </a>
     </li>
@@ -4671,6 +4572,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
 
       </a>
     </li>
@@ -5071,6 +4979,13 @@
     Sprint 26 Features Technical Spec
     
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
   
 
       </a>
@@ -6544,6 +6459,13 @@
     
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
+  
 
       </a>
     </li>
@@ -7407,6 +7329,13 @@
     Sprint 26 Features User Processes
     
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--Active"></span>
+  
+
   
 
       </a>
@@ -8733,7 +8662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync/" class="md-nav__link">
+      <a href="../../../team-notes/20250718_Architecture_TeamMeetingNotes_WeeklySync.md" class="md-nav__link">
         
   
   
@@ -8741,13 +8670,6 @@
     Architecture Team Meeting Notes
     
   </span>
-  
-    
-  
-  
-    <span class="md-status md-status--Active"></span>
-  
-
   
 
       </a>
@@ -9790,18 +9712,327 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#details" class="md-nav__link">
+  <a href="#contract-definition" class="md-nav__link">
     <span class="md-ellipsis">
-      Details
+      Contract Definition
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contract Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#per-labor-hour-contract-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Per Labor Hour Contract Characteristics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contract-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contract Components
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#business-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Business Rules
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Business Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rate-calculation-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rate Calculation Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#billing-calculation-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Billing Calculation Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-tracking-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Tracking Rules
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation Rules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Guidelines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contract-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contract Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-tracking-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Tracking Configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#billing-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Billing Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#labor-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Labor Categories
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Labor Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-labor-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standard Labor Categories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specialized-labor-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specialized Labor Categories
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rate-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rate Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rate Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rate-setting-procedures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rate Setting Procedures
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rate-escalation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rate Escalation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-and-attendance-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time and Attendance Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Time and Attendance Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#payroll-system-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payroll System Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reporting-and-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reporting and Analytics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Documentation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#related-documents" class="md-nav__link">
+  <a href="#validation-and-compliance" class="md-nav__link">
     <span class="md-ellipsis">
-      Related Documents
+      Validation and Compliance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validation and Compliance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time-entry-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Time Entry Validation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rate-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rate Validation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#billing-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Billing Validation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Metrics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utilization-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilization Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#financial-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Financial Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Metrics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version History
     </span>
   </a>
   
@@ -9823,11 +10054,189 @@
 
 
 
-<h1 id="per-labor-hour">Per Labor Hour</h1>
-<p><em>This is a placeholder document. Replace this content with actual documentation.</em></p>
+<h1 id="per-labor-hour-contract-business-rules">Per Labor Hour Contract Business Rules</h1>
 <h2 id="overview">Overview</h2>
-<h2 id="details">Details</h2>
-<h2 id="related-documents">Related Documents</h2>
+<p>This section contains comprehensive business rules and specifications for per labor hour contract types within the Towne Park system. Per labor hour contracts represent agreements where Towne Park charges based on actual labor hours worked, typically with predetermined hourly rates and markup percentages.</p>
+<h2 id="contract-definition">Contract Definition</h2>
+<h3 id="per-labor-hour-contract-characteristics">Per Labor Hour Contract Characteristics</h3>
+<ul>
+<li><strong>Hourly Rate Structure</strong>: Predetermined rates for different labor categories</li>
+<li><strong>Markup Percentage</strong>: Towne Park markup applied to labor costs</li>
+<li><strong>Labor Categories</strong>: Different types of labor with specific rates</li>
+<li><strong>Billing Frequency</strong>: Regular billing cycles (monthly, bi-weekly)</li>
+</ul>
+<h3 id="contract-components">Contract Components</h3>
+<ul>
+<li><strong>Base Hourly Rates</strong>: Core hourly rates by labor category</li>
+<li><strong>Markup Calculation</strong>: Towne Park markup percentage or amount</li>
+<li><strong>Overtime Rules</strong>: Overtime rate calculations and thresholds</li>
+<li><strong>Holiday/Premium Pay</strong>: Special rate calculations for holidays and premium time</li>
+</ul>
+<h2 id="business-rules">Business Rules</h2>
+<h3 id="rate-calculation-rules">Rate Calculation Rules</h3>
+<ul>
+<li><strong>Rule PLH-001</strong>: Hourly rates are predetermined and documented in contract</li>
+<li><strong>Rule PLH-002</strong>: Markup percentage applies to all labor hours</li>
+<li><strong>Rule PLH-003</strong>: Overtime rates calculated at 1.5x base rate (unless specified otherwise)</li>
+<li><strong>Rule PLH-004</strong>: Holiday pay rates calculated at premium rate (typically 2x base rate)</li>
+</ul>
+<h3 id="billing-calculation-rules">Billing Calculation Rules</h3>
+<ul>
+<li><strong>Rule PLH-005</strong>: Total billing = (Hours × Rate × (1 + Markup Percentage))</li>
+<li><strong>Rule PLH-006</strong>: Regular hours and overtime hours calculated separately</li>
+<li><strong>Rule PLH-007</strong>: Holiday hours billed at holiday rate with markup</li>
+<li><strong>Rule PLH-008</strong>: Minimum billing increments (e.g., 15-minute increments)</li>
+</ul>
+<h3 id="time-tracking-rules">Time Tracking Rules</h3>
+<ul>
+<li><strong>Rule PLH-009</strong>: All labor hours must be tracked and documented</li>
+<li><strong>Rule PLH-010</strong>: Time entries require approval before billing</li>
+<li><strong>Rule PLH-011</strong>: Overtime hours require supervisor approval</li>
+<li><strong>Rule PLH-012</strong>: Holiday hours require special authorization</li>
+</ul>
+<h3 id="validation-rules">Validation Rules</h3>
+<ul>
+<li><strong>Rule PLH-013</strong>: Hours worked cannot exceed maximum daily/weekly limits</li>
+<li><strong>Rule PLH-014</strong>: All time entries must have valid labor category assignments</li>
+<li><strong>Rule PLH-015</strong>: Billing rates must match contracted rates</li>
+<li><strong>Rule PLH-016</strong>: Markup percentages must be within contracted ranges</li>
+</ul>
+<h2 id="implementation-guidelines">Implementation Guidelines</h2>
+<h3 id="contract-setup">Contract Setup</h3>
+<ul>
+<li>Define hourly rates for each labor category</li>
+<li>Specify markup percentages and calculation methods</li>
+<li>Establish overtime and holiday rate calculations</li>
+<li>Configure time tracking and approval workflows</li>
+</ul>
+<h3 id="time-tracking-configuration">Time Tracking Configuration</h3>
+<ul>
+<li>Set up labor categories and rate structures</li>
+<li>Configure time entry systems and validation rules</li>
+<li>Implement approval workflows for time entries</li>
+<li>Establish reporting and billing procedures</li>
+</ul>
+<h3 id="billing-configuration">Billing Configuration</h3>
+<ul>
+<li>Configure automatic billing calculations</li>
+<li>Set up markup application procedures</li>
+<li>Implement rate validation and verification</li>
+<li>Establish invoice generation and review processes</li>
+</ul>
+<h2 id="labor-categories">Labor Categories</h2>
+<h3 id="standard-labor-categories">Standard Labor Categories</h3>
+<ul>
+<li><strong>Management</strong>: Supervisory and management personnel</li>
+<li><strong>Operations</strong>: Front-line operational staff</li>
+<li><strong>Maintenance</strong>: Facility and equipment maintenance</li>
+<li><strong>Administrative</strong>: Administrative and clerical support</li>
+</ul>
+<h3 id="specialized-labor-categories">Specialized Labor Categories</h3>
+<ul>
+<li><strong>Technical</strong>: Specialized technical personnel</li>
+<li><strong>Security</strong>: Security and safety personnel</li>
+<li><strong>Customer Service</strong>: Customer-facing service personnel</li>
+<li><strong>Training</strong>: Training and development personnel</li>
+</ul>
+<h2 id="rate-management">Rate Management</h2>
+<h3 id="rate-setting-procedures">Rate Setting Procedures</h3>
+<ul>
+<li>Annual rate reviews and adjustments</li>
+<li>Market rate analysis and benchmarking</li>
+<li>Contract negotiation and rate approval</li>
+<li>Rate change notification and implementation</li>
+</ul>
+<h3 id="rate-escalation">Rate Escalation</h3>
+<ul>
+<li>Automatic annual rate increases (if contracted)</li>
+<li>Cost-of-living adjustments (COLA)</li>
+<li>Performance-based rate adjustments</li>
+<li>Market-driven rate modifications</li>
+</ul>
+<h2 id="time-and-attendance-integration">Time and Attendance Integration</h2>
+<h3 id="payroll-system-integration">Payroll System Integration</h3>
+<ul>
+<li>Real-time synchronization with payroll systems</li>
+<li>Automated time entry validation</li>
+<li>Exception handling and resolution</li>
+<li>Audit trail maintenance</li>
+</ul>
+<h3 id="reporting-and-analytics">Reporting and Analytics</h3>
+<ul>
+<li>Labor hour utilization reports</li>
+<li>Rate analysis and profitability reports</li>
+<li>Overtime and premium pay analysis</li>
+<li>Customer billing summaries</li>
+</ul>
+<h2 id="related-documentation">Related Documentation</h2>
+<ul>
+<li><a href="../">Contract Types Overview</a></li>
+<li><a href="../../contracts/">Contract Configuration Business Rules</a></li>
+<li><a href="../../billing/">Billing Business Rules</a></li>
+<li><a href="../../forecasting/payroll/index.md">Payroll Business Rules</a></li>
+<li><a href="../../../configuration/contracts/">Contract Configuration Setup</a></li>
+</ul>
+<h2 id="validation-and-compliance">Validation and Compliance</h2>
+<h3 id="time-entry-validation">Time Entry Validation</h3>
+<ul>
+<li>Verify all time entries are complete and accurate</li>
+<li>Validate labor category assignments</li>
+<li>Confirm supervisor approvals</li>
+<li>Review overtime and premium time authorizations</li>
+</ul>
+<h3 id="rate-validation">Rate Validation</h3>
+<ul>
+<li>Verify billing rates match contracted rates</li>
+<li>Validate markup calculations</li>
+<li>Confirm rate escalation applications</li>
+<li>Review special rate circumstances</li>
+</ul>
+<h3 id="billing-validation">Billing Validation</h3>
+<ul>
+<li>Validate total hour calculations</li>
+<li>Verify markup application accuracy</li>
+<li>Confirm invoice totals and breakdowns</li>
+<li>Review billing cycle compliance</li>
+</ul>
+<h2 id="performance-metrics">Performance Metrics</h2>
+<h3 id="utilization-metrics">Utilization Metrics</h3>
+<ul>
+<li>Labor hour utilization rates</li>
+<li>Productivity measurements</li>
+<li>Efficiency indicators</li>
+<li>Cost per hour analysis</li>
+</ul>
+<h3 id="financial-metrics">Financial Metrics</h3>
+<ul>
+<li>Revenue per labor hour</li>
+<li>Markup realization rates</li>
+<li>Profitability analysis</li>
+<li>Cost variance analysis</li>
+</ul>
+<h3 id="quality-metrics">Quality Metrics</h3>
+<ul>
+<li>Time entry accuracy rates</li>
+<li>Billing error rates</li>
+<li>Customer satisfaction scores</li>
+<li>Service level compliance</li>
+</ul>
+<h2 id="version-history">Version History</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>2025-07-28</td>
+<td>Initial creation of per labor hour contract business rules</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -9848,7 +10257,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 16, 2025 17:38:41 UTC">July 16, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 28, 2025 20:32:01 UTC">July 28, 2025</span>
   </span>
 
     

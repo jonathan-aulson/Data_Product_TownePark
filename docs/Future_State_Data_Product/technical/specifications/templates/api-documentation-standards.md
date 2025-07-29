@@ -403,7 +403,7 @@ console.log(data);
 
 ### Standards and Policies
 - [Documentation Standards](../../standards/)
-- [Development Standards](../../configuration/system-settings/20250718_Development_Standards_ComprehensiveGuide.md)
+- [Development Standards](../../../configuration/system-settings/20250718_Development_Standards_ComprehensiveGuide.md)
 
 ### Tools and Resources
 - [API Testing Tools](../../technical/operations/)
