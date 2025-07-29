@@ -1,5 +1,5 @@
 _Scrum Team • Financial Software for [Towne-Park]_  
-Version 1.0 • Last Updated: 2025-07-18  
+Version 1.1 • Last Updated: 2025-07-29  
 
 ---
 
@@ -19,7 +19,7 @@ Each User Story (or PBI) must meet **all** of the following before it can be mar
 | Automated Tests | • Unit tests written & passing (≥ 80% coverage) <br> • API/Integration tests updated & passing                                                             |
 | Peer Review     | • Feature is demo'ed to ≥ 1 peer <br>• Pull Request opened <br> • ≥ 1 peer review approval <br> • No unresolved comments                                   |
 | CI/CD Pipeline  | • Build artifact created successfully <br> • All pipeline stages green (lint, build, test)                                                                 |
-| Documentation   | • Internal-facing docs created (AI generated markdown file)                                                                                                |
+| Documentation   | • Internal-facing docs created or planned & placeholder created (AI generated markdown file)                                                                                                |
 | Configuration   | • DB migrations scripted & tested (if applicable)                                                                                                          |
 | Security & Perf | • Performance benchmarks met (where applicable)                                                                                                            |
 | QA Test Plan    | • The QA Test task on the user story with manual testing steps defined from Sprint Planning has been executed with tester comment and any open bugs linked |
