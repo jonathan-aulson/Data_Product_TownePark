@@ -1,6 +1,6 @@
 ---
 title: "AI Development Security"
-version: "1.0"
+version: "1.1"
 last_updated: "2025-07-24"
 author: "Towne Park Data Product Team"
 status: "Active"
