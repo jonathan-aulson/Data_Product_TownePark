@@ -1,0 +1,188 @@
+{
+  "metadata": {
+    "siteNumber": "2208",
+    "customerName": "Florida Panthers FLA Live Arena",
+    "customerID": "CUST-2208",
+    "contractEffectiveDate": "2025-05-23",
+    "contractEndDate": "",
+    "contractStatus": "active",
+    "lastModifiedDate": "2025-05-23",
+    "contractVersion": "1.0",
+    "contractType": "Per Labor Hour",
+    "accountManager": "Bryan Riascos",
+    "paymentTerms": "Due in 30 Days",
+    "notes": "plh rates increase by greater of 3% or ECI. Contract includes upcharge for OT but removed in new system since hours worked are for separate events and no historical OT.",
+    "location": {
+      "region": NaN,
+      "district": "D - Miami",
+      "state": "FL",
+      "city": "Sunrise",
+      "address": "1 Panther Parkway, Sunrise, FL 33323",
+      "siteType": ""
+    }
+  },
+  "original": {
+    "id": "3498c004-93d8-ef11-8eea-0022480a57ac",
+    "purchaseOrder": null,
+    "paymentTerms": "Due in 30 Days",
+    "billingType": "Arrears",
+    "incrementMonth": "September",
+    "incrementAmount": 3.0,
+    "consumerPriceIndex": false,
+    "notes": "plh rates increase by greater of 3% or ECI. Contract includes upcharge for OT but removed in new system since hours worked are for separate events and no historical OT.",
+    "deviationAmount": 2500.0,
+    "deviationPercentage": 10.0,
+    "deposits": false,
+    "contractType": "Per Labor Hour",
+    "supportingReports": [
+      "HoursBackupReport"
+    ],
+    "invoiceGrouping": {
+      "enabled": false,
+      "invoiceGroups": []
+    },
+    "fixedFee": {
+      "enabled": false,
+      "serviceRates": []
+    },
+    "perLaborHour": {
+      "enabled": true,
+      "hoursBackupReport": true,
+      "jobRates": [
+        {
+          "id": "5c348032-1ce4-ef11-a730-002248251de6",
+          "name": "Valet Services",
+          "displayName": "Team Leader - Events",
+          "rate": 31.29,
+          "overtimeRate": 31.29,
+          "jobCode": "TEAMLDR",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "5ef9c3f4-b7e0-ef11-a731-7c1e527e6e28",
+          "name": "Valet Services",
+          "displayName": "GSA - Events",
+          "rate": 31.29,
+          "overtimeRate": 31.29,
+          "jobCode": "GSA",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "5ff9c3f4-b7e0-ef11-a731-7c1e527e6e28",
+          "name": "Valet Services",
+          "displayName": "Manager",
+          "rate": 31.29,
+          "overtimeRate": 31.29,
+          "jobCode": "ACCTMGR",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "perOccupiedRoom": {
+      "enabled": false,
+      "roomRate": 0.0,
+      "invoiceGroup": 1
+    },
+    "revenueShare": {
+      "enabled": false,
+      "thresholdStructures": []
+    },
+    "bellServiceFee": {
+      "enabled": false,
+      "bellServices": []
+    },
+    "midMonthAdvance": {
+      "enabled": false,
+      "midMonthAdvances": []
+    },
+    "depositedRevenue": {
+      "enabled": false,
+      "depositData": []
+    },
+    "billableAccounts": {
+      "enabled": false,
+      "billableAccountsData": []
+    },
+    "managementAgreement": {
+      "enabled": false,
+      "ManagementFees": []
+    }
+  },
+  "flattened": {
+    "contract_id": "3498c004-93d8-ef11-8eea-0022480a57ac",
+    "contract_purchaseOrder": null,
+    "contract_paymentTerms": "Due in 30 Days",
+    "contract_billingType": "Arrears",
+    "contract_incrementMonth": "September",
+    "contract_incrementAmount": 3.0,
+    "contract_consumerPriceIndex": false,
+    "contract_notes": "plh rates increase by greater of 3% or ECI. Contract includes upcharge for OT but removed in new system since hours worked are for separate events and no historical OT.",
+    "contract_deviationAmount": 2500.0,
+    "contract_deviationPercentage": 10.0,
+    "contract_deposits": false,
+    "contract_contractType": "Per Labor Hour",
+    "contract_supportingReports_1": "HoursBackupReport",
+    "contract_invoiceGrouping_enabled": false,
+    "contract_fixedFee_enabled": false,
+    "contract_perLaborHour_enabled": true,
+    "contract_perLaborHour_hoursBackupReport": true,
+    "contract_perLaborHour_jobRates_1_id": "5c348032-1ce4-ef11-a730-002248251de6",
+    "contract_perLaborHour_jobRates_1_name": "Valet Services",
+    "contract_perLaborHour_jobRates_1_displayName": "Team Leader - Events",
+    "contract_perLaborHour_jobRates_1_rate": 31.29,
+    "contract_perLaborHour_jobRates_1_overtimeRate": 31.29,
+    "contract_perLaborHour_jobRates_1_jobCode": "TEAMLDR",
+    "contract_perLaborHour_jobRates_1_startDate": null,
+    "contract_perLaborHour_jobRates_1_endDate": null,
+    "contract_perLaborHour_jobRates_1_invoiceGroup": 1,
+    "contract_perLaborHour_jobRates_2_id": "5ef9c3f4-b7e0-ef11-a731-7c1e527e6e28",
+    "contract_perLaborHour_jobRates_2_name": "Valet Services",
+    "contract_perLaborHour_jobRates_2_displayName": "GSA - Events",
+    "contract_perLaborHour_jobRates_2_rate": 31.29,
+    "contract_perLaborHour_jobRates_2_overtimeRate": 31.29,
+    "contract_perLaborHour_jobRates_2_jobCode": "GSA",
+    "contract_perLaborHour_jobRates_2_startDate": null,
+    "contract_perLaborHour_jobRates_2_endDate": null,
+    "contract_perLaborHour_jobRates_2_invoiceGroup": 1,
+    "contract_perLaborHour_jobRates_3_id": "5ff9c3f4-b7e0-ef11-a731-7c1e527e6e28",
+    "contract_perLaborHour_jobRates_3_name": "Valet Services",
+    "contract_perLaborHour_jobRates_3_displayName": "Manager",
+    "contract_perLaborHour_jobRates_3_rate": 31.29,
+    "contract_perLaborHour_jobRates_3_overtimeRate": 31.29,
+    "contract_perLaborHour_jobRates_3_jobCode": "ACCTMGR",
+    "contract_perLaborHour_jobRates_3_startDate": null,
+    "contract_perLaborHour_jobRates_3_endDate": null,
+    "contract_perLaborHour_jobRates_3_invoiceGroup": 1,
+    "contract_perOccupiedRoom_enabled": false,
+    "contract_perOccupiedRoom_roomRate": 0.0,
+    "contract_perOccupiedRoom_invoiceGroup": 1,
+    "contract_revenueShare_enabled": false,
+    "contract_bellServiceFee_enabled": false,
+    "contract_midMonthAdvance_enabled": false,
+    "contract_depositedRevenue_enabled": false,
+    "contract_billableAccounts_enabled": false,
+    "contract_managementAgreement_enabled": false,
+    "contract_enabled_components": [
+      "perLaborHour"
+    ],
+    "contract_payroll_accounts_enabled": [],
+    "contract_expense_accounts_enabled": [],
+    "contract_financials": {
+      "annualContractValue": 0.0,
+      "estimatedMonthlyRevenue": 0.0,
+      "contractTerm": 36,
+      "contractTermUnit": "Months",
+      "contractType": "Per Labor Hour",
+      "billingType": "Arrears",
+      "district": "D - Miami",
+      "region": NaN,
+      "siteNumber": "2208"
+    }
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "siteNumber": "2220",
+    "customerName": "Blue Chip Casino Hotel Spa",
+    "customerID": "CUST-2220",
+    "contractEffectiveDate": "2025-05-23",
+    "contractEndDate": "",
+    "contractStatus": "active",
+    "lastModifiedDate": "2025-05-23",
+    "contractVersion": "1.0",
+    "contractType": "Fixed Fee; Deposited Revenue",
+    "accountManager": "Demetrice Faire",
+    "paymentTerms": "Due in 30 Days",
+    "notes": "FF and PLH rates increase by 3% every 12/1 (PLH is billed as an ad hoc item)\n",
+    "location": {
+      "region": NaN,
+      "district": "D - Indianapolis",
+      "state": "IN",
+      "city": "Michigan City",
+      "address": "777 Blue Chip Drive, Michigan City, IN 46360",
+      "siteType": ""
+    }
+  },
+  "original": {
+    "id": "3c3b3570-59f0-ef11-be20-7c1e5259f653",
+    "purchaseOrder": null,
+    "paymentTerms": "Due in 30 Days",
+    "billingType": "Arrears",
+    "incrementMonth": "December",
+    "incrementAmount": 3.0,
+    "consumerPriceIndex": false,
+    "notes": "FF and PLH rates increase by 3% every 12/1 (PLH is billed as an ad hoc item)\n",
+    "deviationAmount": 2500.0,
+    "deviationPercentage": 10.0,
+    "deposits": false,
+    "contractType": "Fixed Fee",
+    "supportingReports": [],
+    "invoiceGrouping": {
+      "enabled": false,
+      "invoiceGroups": []
+    },
+    "fixedFee": {
+      "enabled": true,
+      "serviceRates": [
+        {
+          "id": "dcf851ef-59f0-ef11-be20-7c1e5259f653",
+          "name": "Valet Services",
+          "displayName": "Valet Services",
+          "code": "4700",
+          "fee": 38110.0,
+          "startDate": "2025-02-21T13:44:20",
+          "endDate": null,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "perLaborHour": {
+      "enabled": false,
+      "hoursBackupReport": true,
+      "jobRates": []
+    },
+    "perOccupiedRoom": {
+      "enabled": false,
+      "roomRate": 0.0,
+      "invoiceGroup": 1
+    },
+    "revenueShare": {
+      "enabled": false,
+      "thresholdStructures": []
+    },
+    "bellServiceFee": {
+      "enabled": false,
+      "bellServices": []
+    },
+    "midMonthAdvance": {
+      "enabled": false,
+      "midMonthAdvances": []
+    },
+    "depositedRevenue": {
+      "enabled": true,
+      "depositData": [
+        {
+          "id": "dbf851ef-59f0-ef11-be20-7c1e5259f653",
+          "towneParkResponsibleForParkingTax": false,
+          "depositedRevenueEnabled": true,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "billableAccounts": {
+      "enabled": false,
+      "billableAccountsData": []
+    },
+    "managementAgreement": {
+      "enabled": false,
+      "ManagementFees": []
+    }
+  },
+  "flattened": {
+    "contract_id": "3c3b3570-59f0-ef11-be20-7c1e5259f653",
+    "contract_purchaseOrder": null,
+    "contract_paymentTerms": "Due in 30 Days",
+    "contract_billingType": "Arrears",
+    "contract_incrementMonth": "December",
+    "contract_incrementAmount": 3.0,
+    "contract_consumerPriceIndex": false,
+    "contract_notes": "FF and PLH rates increase by 3% every 12/1 (PLH is billed as an ad hoc item)\n",
+    "contract_deviationAmount": 2500.0,
+    "contract_deviationPercentage": 10.0,
+    "contract_deposits": false,
+    "contract_contractType": "Fixed Fee",
+    "contract_invoiceGrouping_enabled": false,
+    "contract_fixedFee_enabled": true,
+    "contract_fixedFee_serviceRates_1_id": "dcf851ef-59f0-ef11-be20-7c1e5259f653",
+    "contract_fixedFee_serviceRates_1_name": "Valet Services",
+    "contract_fixedFee_serviceRates_1_displayName": "Valet Services",
+    "contract_fixedFee_serviceRates_1_code": "4700",
+    "contract_fixedFee_serviceRates_1_fee": 38110.0,
+    "contract_fixedFee_serviceRates_1_startDate": "2025-02-21T13:44:20",
+    "contract_fixedFee_serviceRates_1_endDate": null,
+    "contract_fixedFee_serviceRates_1_invoiceGroup": 1,
+    "contract_perLaborHour_enabled": false,
+    "contract_perLaborHour_hoursBackupReport": true,
+    "contract_perOccupiedRoom_enabled": false,
+    "contract_perOccupiedRoom_roomRate": 0.0,
+    "contract_perOccupiedRoom_invoiceGroup": 1,
+    "contract_revenueShare_enabled": false,
+    "contract_bellServiceFee_enabled": false,
+    "contract_midMonthAdvance_enabled": false,
+    "contract_depositedRevenue_enabled": true,
+    "contract_depositedRevenue_depositData_1_id": "dbf851ef-59f0-ef11-be20-7c1e5259f653",
+    "contract_depositedRevenue_depositData_1_towneParkResponsibleForParkingTax": false,
+    "contract_depositedRevenue_depositData_1_depositedRevenueEnabled": true,
+    "contract_depositedRevenue_depositData_1_invoiceGroup": 1,
+    "contract_billableAccounts_enabled": false,
+    "contract_managementAgreement_enabled": false,
+    "contract_enabled_components": [
+      "fixedFee",
+      "depositedRevenue"
+    ],
+    "contract_payroll_accounts_enabled": [],
+    "contract_expense_accounts_enabled": [],
+    "contract_financials": {
+      "annualContractValue": 0.0,
+      "estimatedMonthlyRevenue": 0.0,
+      "contractTerm": 36,
+      "contractTermUnit": "Months",
+      "contractType": "Fixed Fee; Deposited Revenue",
+      "billingType": "Arrears",
+      "district": "D - Indianapolis",
+      "region": NaN,
+      "siteNumber": "2220"
+    }
+  }
+}

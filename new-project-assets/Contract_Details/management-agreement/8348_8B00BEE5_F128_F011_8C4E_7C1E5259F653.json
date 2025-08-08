@@ -1,0 +1,260 @@
+{
+  "metadata": {
+    "siteNumber": "8348",
+    "customerName": "Portland - 143 Fore St",
+    "customerID": "CUST-8348",
+    "contractEffectiveDate": "2025-05-23",
+    "contractEndDate": "",
+    "contractStatus": "active",
+    "lastModifiedDate": "2025-05-23",
+    "contractVersion": "1.0",
+    "contractType": "Deposited Revenue; Billing Account; Management Agreement",
+    "accountManager": NaN,
+    "paymentTerms": "Due on Receipt",
+    "notes": NaN,
+    "location": {
+      "region": NaN,
+      "district": "D - Portland UPP",
+      "state": "ME",
+      "city": "Portland",
+      "address": "143 Fore St, Portland, ME 04101",
+      "siteType": ""
+    }
+  },
+  "original": {
+    "id": "8c00bee5-f128-f011-8c4e-7c1e5259f653",
+    "purchaseOrder": null,
+    "paymentTerms": "Due on Receipt",
+    "billingType": "Arrears",
+    "incrementMonth": "January",
+    "incrementAmount": 0.0,
+    "consumerPriceIndex": false,
+    "notes": null,
+    "deviationAmount": 2500.0,
+    "deviationPercentage": 10.0,
+    "deposits": false,
+    "contractType": "Revenue Share",
+    "supportingReports": [],
+    "invoiceGrouping": {
+      "enabled": false,
+      "invoiceGroups": []
+    },
+    "fixedFee": {
+      "enabled": false,
+      "serviceRates": []
+    },
+    "perLaborHour": {
+      "enabled": false,
+      "hoursBackupReport": true,
+      "jobRates": []
+    },
+    "perOccupiedRoom": {
+      "enabled": false,
+      "roomRate": 0.0,
+      "invoiceGroup": 1
+    },
+    "revenueShare": {
+      "enabled": false,
+      "thresholdStructures": []
+    },
+    "bellServiceFee": {
+      "enabled": false,
+      "bellServices": []
+    },
+    "midMonthAdvance": {
+      "enabled": false,
+      "midMonthAdvances": []
+    },
+    "depositedRevenue": {
+      "enabled": true,
+      "depositData": [
+        {
+          "id": "7a0e6907-f228-f011-8c4e-7c1e5259f653",
+          "towneParkResponsibleForParkingTax": true,
+          "depositedRevenueEnabled": true,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "billableAccounts": {
+      "enabled": true,
+      "billableAccountsData": [
+        {
+          "id": "780e6907-f228-f011-8c4e-7c1e5259f653",
+          "payrollAccountsData": "[{\"code\":\"6000\",\"title\":\"Salaries - G & A\",\"isEnabled\":false},{\"code\":\"6002\",\"title\":\"Salaries - Contract Site\",\"isEnabled\":false},{\"code\":\"6003\",\"title\":\"Salaries - Human Resources\",\"isEnabled\":false},{\"code\":\"6004\",\"title\":\"Salaries - Sales & Marketing\",\"isEnabled\":false},{\"code\":\"6005\",\"title\":\"Salaries - Executive Office\",\"isEnabled\":false},{\"code\":\"6007\",\"title\":\"Salaries - Regional/District\",\"isEnabled\":false},{\"code\":\"6010\",\"title\":\"Salaries - Personal Leave & Sick Pay - Hourly\",\"isEnabled\":false},{\"code\":\"6012\",\"title\":\"Salaries - Stockholder Awards\",\"isEnabled\":false},{\"code\":\"6013\",\"title\":\"Salaries - Relocation\",\"isEnabled\":false},{\"code\":\"6014\",\"title\":\"Salaries - Other\",\"isEnabled\":false},{\"code\":\"6015\",\"title\":\"Salaries - Holiday\",\"isEnabled\":false},{\"code\":\"6016\",\"title\":\"Salaries - Holiday Premium Operations\",\"isEnabled\":false},{\"code\":\"6017\",\"title\":\"Salaries - Overtime\",\"isEnabled\":false},{\"code\":\"6019\",\"title\":\"Salaries - Personal Leave & Sick Pay - Salary\",\"isEnabled\":false},{\"code\":\"6030\",\"title\":\"Salaries - Communication Expense\",\"isEnabled\":false},{\"code\":\"6035\",\"title\":\"Salaries - Commuter Expense\",\"isEnabled\":false},{\"code\":\"6100\",\"title\":\"Salaries - Corporate Incentive Program\",\"isEnabled\":false},{\"code\":\"6101\",\"title\":\"Salaries - Sales Incentive Program\",\"isEnabled\":false},{\"code\":\"6110\",\"title\":\"Salaries - Local Incentive Program\",\"isEnabled\":false},{\"code\":\"6115\",\"title\":\"Salaries - Gratuities\",\"isEnabled\":false}]",
+          "payrollAccountsInvoiceGroup": 1,
+          "payrollAccountsLineTitle": "Site Salaries & Wages",
+          "payrollTaxesEnabled": false,
+          "payrollTaxesBillingType": "Actual",
+          "payrollTaxesLineTitle": "PTEB",
+          "payrollTaxesPercentage": null,
+          "payrollSupportAmount": null,
+          "payrollSupportBillingType": "Fixed",
+          "payrollSupportEnabled": false,
+          "payrollSupportLineTitle": "Support Services",
+          "payrollSupportPayrollType": "Billable",
+          "payrollExpenseAccountsData": "[{\"code\":\"7000\",\"title\":\"Advertising\",\"isEnabled\":false},{\"code\":\"7005\",\"title\":\"Bad Debt Expense\",\"isEnabled\":false},{\"code\":\"7010\",\"title\":\"Bank Fees\",\"isEnabled\":false},{\"code\":\"7011\",\"title\":\"Credit Card Fees\",\"isEnabled\":false},{\"code\":\"7015\",\"title\":\"Business Development\",\"isEnabled\":false},{\"code\":\"7016\",\"title\":\"Contract Improvements\",\"isEnabled\":false},{\"code\":\"7017\",\"title\":\"Computer Services\",\"isEnabled\":false},{\"code\":\"7018\",\"title\":\"Contract Lease Expense\",\"isEnabled\":false},{\"code\":\"7019\",\"title\":\"Contract Labor\",\"isEnabled\":false},{\"code\":\"7020\",\"title\":\"Contributions\",\"isEnabled\":false},{\"code\":\"7021\",\"title\":\"One Time Charges\",\"isEnabled\":false},{\"code\":\"7026\",\"title\":\"Equipment Cost\",\"isEnabled\":false},{\"code\":\"7030\",\"title\":\"Dues & Subscription\",\"isEnabled\":false},{\"code\":\"7040\",\"title\":\"Employee Meetings\",\"isEnabled\":false},{\"code\":\"7045\",\"title\":\"Employee Relations\",\"isEnabled\":false},{\"code\":\"7050\",\"title\":\"Employee Training\",\"isEnabled\":false},{\"code\":\"7055\",\"title\":\"Equipment Lease - Parking Equipment\",\"isEnabled\":false},{\"code\":\"7060\",\"title\":\"Equipment Lease - Vehicles\",\"isEnabled\":false},{\"code\":\"7065\",\"title\":\"Equipment Rental - Miscellaneous\",\"isEnabled\":false},{\"code\":\"7070\",\"title\":\"Equipment Rental - Vehicles\",\"isEnabled\":false},{\"code\":\"7072\",\"title\":\"Fines & Penalties\",\"isEnabled\":false},{\"code\":\"7075\",\"title\":\"Fuel - Vehicles\",\"isEnabled\":false},{\"code\":\"7080\",\"title\":\"Insurance - General Liability\",\"isEnabled\":false},{\"code\":\"7082\",\"title\":\"Insurance - Vehicle\",\"isEnabled\":false},{\"code\":\"7085\",\"title\":\"Insurance - Other\",\"isEnabled\":false},{\"code\":\"7090\",\"title\":\"Internet Expenses\",\"isEnabled\":false},{\"code\":\"7095\",\"title\":\"License & Permits\",\"isEnabled\":false},{\"code\":\"7099\",\"title\":\"Loss & Damage - Prior Year\",\"isEnabled\":false},{\"code\":\"7100\",\"title\":\"Loss & Damage\",\"isEnabled\":false},{\"code\":\"7101\",\"title\":\"Service Recovery\",\"isEnabled\":false},{\"code\":\"7102\",\"title\":\"Claims Handling Fees\",\"isEnabled\":false},{\"code\":\"7105\",\"title\":\"Meals & Entertainment\",\"isEnabled\":false},{\"code\":\"7110\",\"title\":\"Miscellaneous\",\"isEnabled\":false},{\"code\":\"7113\",\"title\":\"Office Supplies\",\"isEnabled\":false},{\"code\":\"7115\",\"title\":\"Outside Services\",\"isEnabled\":false},{\"code\":\"7120\",\"title\":\"Payroll Processing\",\"isEnabled\":false},{\"code\":\"7125\",\"title\":\"Personnel Recruitment\",\"isEnabled\":false},{\"code\":\"7126\",\"title\":\"Mvr Monitoring\",\"isEnabled\":false},{\"code\":\"7130\",\"title\":\"Postage\",\"isEnabled\":false},{\"code\":\"7131\",\"title\":\"Freight Expense\",\"isEnabled\":false},{\"code\":\"7135\",\"title\":\"Production & Collateral\",\"isEnabled\":false},{\"code\":\"7140\",\"title\":\"Professional Fees - Accounting\",\"isEnabled\":false},{\"code\":\"7145\",\"title\":\"Professional Fees - Legal\",\"isEnabled\":false},{\"code\":\"7150\",\"title\":\"Professional Fees - Other\",\"isEnabled\":false},{\"code\":\"7155\",\"title\":\"Promotion & Events\",\"isEnabled\":false},{\"code\":\"7160\",\"title\":\"Public Relations\",\"isEnabled\":false},{\"code\":\"7165\",\"title\":\"Relocations Expense\",\"isEnabled\":false},{\"code\":\"7170\",\"title\":\"Rents - Parking\",\"isEnabled\":false},{\"code\":\"7171\",\"title\":\"Rents - Office And Other\",\"isEnabled\":false},{\"code\":\"7175\",\"title\":\"Repairs & Maintenance\",\"isEnabled\":false},{\"code\":\"7178\",\"title\":\"Repairs & Maintenance - Vehicle\",\"isEnabled\":false},{\"code\":\"7180\",\"title\":\"Signage\",\"isEnabled\":false},{\"code\":\"7182\",\"title\":\"Smallwares\",\"isEnabled\":false},{\"code\":\"7185\",\"title\":\"Supplies & Equipment\",\"isEnabled\":false},{\"code\":\"7190\",\"title\":\"Taxes - Other\",\"isEnabled\":false},{\"code\":\"7195\",\"title\":\"Taxes - Non-Operating\",\"isEnabled\":false},{\"code\":\"7200\",\"title\":\"Telephone & Pagers\",\"isEnabled\":false},{\"code\":\"7205\",\"title\":\"Tickets & Printed Material\",\"isEnabled\":false},{\"code\":\"7210\",\"title\":\"Trade Shows\",\"isEnabled\":false},{\"code\":\"7215\",\"title\":\"Travel - General\",\"isEnabled\":false},{\"code\":\"7217\",\"title\":\"Travel - Airfare\",\"isEnabled\":false},{\"code\":\"7219\",\"title\":\"Travel - Lodging\",\"isEnabled\":false},{\"code\":\"7220\",\"title\":\"Uniforms\",\"isEnabled\":false},{\"code\":\"7225\",\"title\":\"Utilities\",\"isEnabled\":false},{\"code\":\"7230\",\"title\":\"Vehicle Expense\",\"isEnabled\":false},{\"code\":\"7240\",\"title\":\"Board Of Director Expenses\",\"isEnabled\":false},{\"code\":\"7245\",\"title\":\"Non-Employee Stock Compensation\",\"isEnabled\":false},{\"code\":\"7270\",\"title\":\"Royalty Fees - Starbucks\",\"isEnabled\":false},{\"code\":\"7275\",\"title\":\"Marketing Fees - Starbucks\",\"isEnabled\":false},{\"code\":\"7350\",\"title\":\"I.C. Management Service Fees\",\"isEnabled\":false},{\"code\":\"7351\",\"title\":\"Overhead Allocation Fee - Upp\",\"isEnabled\":false}]",
+          "payrollExpenseAccountsInvoiceGroup": 1,
+          "payrollExpenseAccountsLineTitle": "Total Other Expenses"
+        }
+      ]
+    },
+    "managementAgreement": {
+      "enabled": true,
+      "ManagementFees": [
+        {
+          "id": "790e6907-f228-f011-8c4e-7c1e5259f653",
+          "invoiceGroup": 1,
+          "managementAgreementType": "FixedFee",
+          "fixedFeeAmount": 0.0,
+          "laborHourJobCode": null,
+          "perLaborHourJobCodeData": [],
+          "laborHourRate": 0.0,
+          "laborHourOvertimeRate": 0.0,
+          "revenuePercentageAmount": 0.0,
+          "insuranceAdditionalPercentage": 0.0,
+          "insuranceEnabled": false,
+          "insuranceFixedFeeAmount": 0.0,
+          "insuranceLineTitle": null,
+          "insuranceType": "BasedOnBillableAccounts",
+          "claimsCapAmount": 0.0,
+          "claimsEnabled": false,
+          "claimsLineTitle": null,
+          "claimsType": "AnnualAnniversary",
+          "profitShareAccumulationType": "Monthly",
+          "profitShareEnabled": true,
+          "profitShareTierData": [
+            {
+              "sharePercentage": 50.0,
+              "amount": 0.0
+            }
+          ],
+          "validationThresholdAmount": null,
+          "validationThresholdEnabled": false,
+          "validationThresholdType": "ValidationAmount",
+          "nonGlBillableExpensesEnabled": true,
+          "nonGlBillableExpenses": [
+            {
+              "id": "cffd7198-8c29-48c8-b10d-3d1370184cbe",
+              "nonglexpensetype": "FixedAmount",
+              "expensepayrolltype": "Billable",
+              "expenseamount": 200.0,
+              "expensetitle": "Meter Connectivity Fee",
+              "finalperiodbilled": null
+            },
+            {
+              "id": "9d7c3b6f-408b-49fd-8c41-9f566263e38d",
+              "nonglexpensetype": "Revenue",
+              "expensepayrolltype": "Billable",
+              "expenseamount": 3.03,
+              "expensetitle": "Credit Card Fees",
+              "finalperiodbilled": null
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "flattened": {
+    "contract_id": "8c00bee5-f128-f011-8c4e-7c1e5259f653",
+    "contract_purchaseOrder": null,
+    "contract_paymentTerms": "Due on Receipt",
+    "contract_billingType": "Arrears",
+    "contract_incrementMonth": "January",
+    "contract_incrementAmount": 0.0,
+    "contract_consumerPriceIndex": false,
+    "contract_notes": null,
+    "contract_deviationAmount": 2500.0,
+    "contract_deviationPercentage": 10.0,
+    "contract_deposits": false,
+    "contract_contractType": "Revenue Share",
+    "contract_invoiceGrouping_enabled": false,
+    "contract_fixedFee_enabled": false,
+    "contract_perLaborHour_enabled": false,
+    "contract_perLaborHour_hoursBackupReport": true,
+    "contract_perOccupiedRoom_enabled": false,
+    "contract_perOccupiedRoom_roomRate": 0.0,
+    "contract_perOccupiedRoom_invoiceGroup": 1,
+    "contract_revenueShare_enabled": false,
+    "contract_bellServiceFee_enabled": false,
+    "contract_midMonthAdvance_enabled": false,
+    "contract_depositedRevenue_enabled": true,
+    "contract_depositedRevenue_depositData_1_id": "7a0e6907-f228-f011-8c4e-7c1e5259f653",
+    "contract_depositedRevenue_depositData_1_towneParkResponsibleForParkingTax": true,
+    "contract_depositedRevenue_depositData_1_depositedRevenueEnabled": true,
+    "contract_depositedRevenue_depositData_1_invoiceGroup": 1,
+    "contract_billableAccounts_enabled": true,
+    "contract_billableAccounts_billableAccountsData_1_id": "780e6907-f228-f011-8c4e-7c1e5259f653",
+    "contract_billableAccounts_billableAccountsData_1_payrollAccountsData": "[{\"code\":\"6000\",\"title\":\"Salaries - G & A\",\"isEnabled\":false},{\"code\":\"6002\",\"title\":\"Salaries - Contract Site\",\"isEnabled\":false},{\"code\":\"6003\",\"title\":\"Salaries - Human Resources\",\"isEnabled\":false},{\"code\":\"6004\",\"title\":\"Salaries - Sales & Marketing\",\"isEnabled\":false},{\"code\":\"6005\",\"title\":\"Salaries - Executive Office\",\"isEnabled\":false},{\"code\":\"6007\",\"title\":\"Salaries - Regional/District\",\"isEnabled\":false},{\"code\":\"6010\",\"title\":\"Salaries - Personal Leave & Sick Pay - Hourly\",\"isEnabled\":false},{\"code\":\"6012\",\"title\":\"Salaries - Stockholder Awards\",\"isEnabled\":false},{\"code\":\"6013\",\"title\":\"Salaries - Relocation\",\"isEnabled\":false},{\"code\":\"6014\",\"title\":\"Salaries - Other\",\"isEnabled\":false},{\"code\":\"6015\",\"title\":\"Salaries - Holiday\",\"isEnabled\":false},{\"code\":\"6016\",\"title\":\"Salaries - Holiday Premium Operations\",\"isEnabled\":false},{\"code\":\"6017\",\"title\":\"Salaries - Overtime\",\"isEnabled\":false},{\"code\":\"6019\",\"title\":\"Salaries - Personal Leave & Sick Pay - Salary\",\"isEnabled\":false},{\"code\":\"6030\",\"title\":\"Salaries - Communication Expense\",\"isEnabled\":false},{\"code\":\"6035\",\"title\":\"Salaries - Commuter Expense\",\"isEnabled\":false},{\"code\":\"6100\",\"title\":\"Salaries - Corporate Incentive Program\",\"isEnabled\":false},{\"code\":\"6101\",\"title\":\"Salaries - Sales Incentive Program\",\"isEnabled\":false},{\"code\":\"6110\",\"title\":\"Salaries - Local Incentive Program\",\"isEnabled\":false},{\"code\":\"6115\",\"title\":\"Salaries - Gratuities\",\"isEnabled\":false}]",
+    "contract_billableAccounts_billableAccountsData_1_payrollAccountsInvoiceGroup": 1,
+    "contract_billableAccounts_billableAccountsData_1_payrollAccountsLineTitle": "Site Salaries & Wages",
+    "contract_billableAccounts_billableAccountsData_1_payrollTaxesEnabled": false,
+    "contract_billableAccounts_billableAccountsData_1_payrollTaxesBillingType": "Actual",
+    "contract_billableAccounts_billableAccountsData_1_payrollTaxesLineTitle": "PTEB",
+    "contract_billableAccounts_billableAccountsData_1_payrollTaxesPercentage": null,
+    "contract_billableAccounts_billableAccountsData_1_payrollSupportAmount": null,
+    "contract_billableAccounts_billableAccountsData_1_payrollSupportBillingType": "Fixed",
+    "contract_billableAccounts_billableAccountsData_1_payrollSupportEnabled": false,
+    "contract_billableAccounts_billableAccountsData_1_payrollSupportLineTitle": "Support Services",
+    "contract_billableAccounts_billableAccountsData_1_payrollSupportPayrollType": "Billable",
+    "contract_billableAccounts_billableAccountsData_1_payrollExpenseAccountsData": "[{\"code\":\"7000\",\"title\":\"Advertising\",\"isEnabled\":false},{\"code\":\"7005\",\"title\":\"Bad Debt Expense\",\"isEnabled\":false},{\"code\":\"7010\",\"title\":\"Bank Fees\",\"isEnabled\":false},{\"code\":\"7011\",\"title\":\"Credit Card Fees\",\"isEnabled\":false},{\"code\":\"7015\",\"title\":\"Business Development\",\"isEnabled\":false},{\"code\":\"7016\",\"title\":\"Contract Improvements\",\"isEnabled\":false},{\"code\":\"7017\",\"title\":\"Computer Services\",\"isEnabled\":false},{\"code\":\"7018\",\"title\":\"Contract Lease Expense\",\"isEnabled\":false},{\"code\":\"7019\",\"title\":\"Contract Labor\",\"isEnabled\":false},{\"code\":\"7020\",\"title\":\"Contributions\",\"isEnabled\":false},{\"code\":\"7021\",\"title\":\"One Time Charges\",\"isEnabled\":false},{\"code\":\"7026\",\"title\":\"Equipment Cost\",\"isEnabled\":false},{\"code\":\"7030\",\"title\":\"Dues & Subscription\",\"isEnabled\":false},{\"code\":\"7040\",\"title\":\"Employee Meetings\",\"isEnabled\":false},{\"code\":\"7045\",\"title\":\"Employee Relations\",\"isEnabled\":false},{\"code\":\"7050\",\"title\":\"Employee Training\",\"isEnabled\":false},{\"code\":\"7055\",\"title\":\"Equipment Lease - Parking Equipment\",\"isEnabled\":false},{\"code\":\"7060\",\"title\":\"Equipment Lease - Vehicles\",\"isEnabled\":false},{\"code\":\"7065\",\"title\":\"Equipment Rental - Miscellaneous\",\"isEnabled\":false},{\"code\":\"7070\",\"title\":\"Equipment Rental - Vehicles\",\"isEnabled\":false},{\"code\":\"7072\",\"title\":\"Fines & Penalties\",\"isEnabled\":false},{\"code\":\"7075\",\"title\":\"Fuel - Vehicles\",\"isEnabled\":false},{\"code\":\"7080\",\"title\":\"Insurance - General Liability\",\"isEnabled\":false},{\"code\":\"7082\",\"title\":\"Insurance - Vehicle\",\"isEnabled\":false},{\"code\":\"7085\",\"title\":\"Insurance - Other\",\"isEnabled\":false},{\"code\":\"7090\",\"title\":\"Internet Expenses\",\"isEnabled\":false},{\"code\":\"7095\",\"title\":\"License & Permits\",\"isEnabled\":false},{\"code\":\"7099\",\"title\":\"Loss & Damage - Prior Year\",\"isEnabled\":false},{\"code\":\"7100\",\"title\":\"Loss & Damage\",\"isEnabled\":false},{\"code\":\"7101\",\"title\":\"Service Recovery\",\"isEnabled\":false},{\"code\":\"7102\",\"title\":\"Claims Handling Fees\",\"isEnabled\":false},{\"code\":\"7105\",\"title\":\"Meals & Entertainment\",\"isEnabled\":false},{\"code\":\"7110\",\"title\":\"Miscellaneous\",\"isEnabled\":false},{\"code\":\"7113\",\"title\":\"Office Supplies\",\"isEnabled\":false},{\"code\":\"7115\",\"title\":\"Outside Services\",\"isEnabled\":false},{\"code\":\"7120\",\"title\":\"Payroll Processing\",\"isEnabled\":false},{\"code\":\"7125\",\"title\":\"Personnel Recruitment\",\"isEnabled\":false},{\"code\":\"7126\",\"title\":\"Mvr Monitoring\",\"isEnabled\":false},{\"code\":\"7130\",\"title\":\"Postage\",\"isEnabled\":false},{\"code\":\"7131\",\"title\":\"Freight Expense\",\"isEnabled\":false},{\"code\":\"7135\",\"title\":\"Production & Collateral\",\"isEnabled\":false},{\"code\":\"7140\",\"title\":\"Professional Fees - Accounting\",\"isEnabled\":false},{\"code\":\"7145\",\"title\":\"Professional Fees - Legal\",\"isEnabled\":false},{\"code\":\"7150\",\"title\":\"Professional Fees - Other\",\"isEnabled\":false},{\"code\":\"7155\",\"title\":\"Promotion & Events\",\"isEnabled\":false},{\"code\":\"7160\",\"title\":\"Public Relations\",\"isEnabled\":false},{\"code\":\"7165\",\"title\":\"Relocations Expense\",\"isEnabled\":false},{\"code\":\"7170\",\"title\":\"Rents - Parking\",\"isEnabled\":false},{\"code\":\"7171\",\"title\":\"Rents - Office And Other\",\"isEnabled\":false},{\"code\":\"7175\",\"title\":\"Repairs & Maintenance\",\"isEnabled\":false},{\"code\":\"7178\",\"title\":\"Repairs & Maintenance - Vehicle\",\"isEnabled\":false},{\"code\":\"7180\",\"title\":\"Signage\",\"isEnabled\":false},{\"code\":\"7182\",\"title\":\"Smallwares\",\"isEnabled\":false},{\"code\":\"7185\",\"title\":\"Supplies & Equipment\",\"isEnabled\":false},{\"code\":\"7190\",\"title\":\"Taxes - Other\",\"isEnabled\":false},{\"code\":\"7195\",\"title\":\"Taxes - Non-Operating\",\"isEnabled\":false},{\"code\":\"7200\",\"title\":\"Telephone & Pagers\",\"isEnabled\":false},{\"code\":\"7205\",\"title\":\"Tickets & Printed Material\",\"isEnabled\":false},{\"code\":\"7210\",\"title\":\"Trade Shows\",\"isEnabled\":false},{\"code\":\"7215\",\"title\":\"Travel - General\",\"isEnabled\":false},{\"code\":\"7217\",\"title\":\"Travel - Airfare\",\"isEnabled\":false},{\"code\":\"7219\",\"title\":\"Travel - Lodging\",\"isEnabled\":false},{\"code\":\"7220\",\"title\":\"Uniforms\",\"isEnabled\":false},{\"code\":\"7225\",\"title\":\"Utilities\",\"isEnabled\":false},{\"code\":\"7230\",\"title\":\"Vehicle Expense\",\"isEnabled\":false},{\"code\":\"7240\",\"title\":\"Board Of Director Expenses\",\"isEnabled\":false},{\"code\":\"7245\",\"title\":\"Non-Employee Stock Compensation\",\"isEnabled\":false},{\"code\":\"7270\",\"title\":\"Royalty Fees - Starbucks\",\"isEnabled\":false},{\"code\":\"7275\",\"title\":\"Marketing Fees - Starbucks\",\"isEnabled\":false},{\"code\":\"7350\",\"title\":\"I.C. Management Service Fees\",\"isEnabled\":false},{\"code\":\"7351\",\"title\":\"Overhead Allocation Fee - Upp\",\"isEnabled\":false}]",
+    "contract_billableAccounts_billableAccountsData_1_payrollExpenseAccountsInvoiceGroup": 1,
+    "contract_billableAccounts_billableAccountsData_1_payrollExpenseAccountsLineTitle": "Total Other Expenses",
+    "contract_managementAgreement_enabled": true,
+    "contract_managementAgreement_ManagementFees_1_id": "790e6907-f228-f011-8c4e-7c1e5259f653",
+    "contract_managementAgreement_ManagementFees_1_invoiceGroup": 1,
+    "contract_managementAgreement_ManagementFees_1_managementAgreementType": "FixedFee",
+    "contract_managementAgreement_ManagementFees_1_fixedFeeAmount": 0.0,
+    "contract_managementAgreement_ManagementFees_1_laborHourJobCode": null,
+    "contract_managementAgreement_ManagementFees_1_laborHourRate": 0.0,
+    "contract_managementAgreement_ManagementFees_1_laborHourOvertimeRate": 0.0,
+    "contract_managementAgreement_ManagementFees_1_revenuePercentageAmount": 0.0,
+    "contract_managementAgreement_ManagementFees_1_insuranceAdditionalPercentage": 0.0,
+    "contract_managementAgreement_ManagementFees_1_insuranceEnabled": false,
+    "contract_managementAgreement_ManagementFees_1_insuranceFixedFeeAmount": 0.0,
+    "contract_managementAgreement_ManagementFees_1_insuranceLineTitle": null,
+    "contract_managementAgreement_ManagementFees_1_insuranceType": "BasedOnBillableAccounts",
+    "contract_managementAgreement_ManagementFees_1_claimsCapAmount": 0.0,
+    "contract_managementAgreement_ManagementFees_1_claimsEnabled": false,
+    "contract_managementAgreement_ManagementFees_1_claimsLineTitle": null,
+    "contract_managementAgreement_ManagementFees_1_claimsType": "AnnualAnniversary",
+    "contract_managementAgreement_ManagementFees_1_profitShareAccumulationType": "Monthly",
+    "contract_managementAgreement_ManagementFees_1_profitShareEnabled": true,
+    "contract_managementAgreement_ManagementFees_1_profitShareTierData_1_sharePercentage": 50.0,
+    "contract_managementAgreement_ManagementFees_1_profitShareTierData_1_amount": 0.0,
+    "contract_managementAgreement_ManagementFees_1_validationThresholdAmount": null,
+    "contract_managementAgreement_ManagementFees_1_validationThresholdEnabled": false,
+    "contract_managementAgreement_ManagementFees_1_validationThresholdType": "ValidationAmount",
+    "contract_managementAgreement_ManagementFees_1_nonGlBillableExpensesEnabled": true,
+    "contract_managementAgreement_ManagementFees_1_nonGlBillableExpenses_1_id": "cffd7198-8c29-48c8-b10d-3d1370184cbe",
+    "contract_managementAgreement_ManagementFees_1_nonGlBillableExpenses_1_nonglexpensetype": "FixedAmount",
+    "contract_managementAgreement_ManagementFees_1_nonGlBillableExpenses_1_expensepayrolltype": "Billable",
+    "contract_managementAgreement_ManagementFees_1_nonGlBillableExpenses_1_expenseamount": 200.0,
+    "contract_managementAgreement_ManagementFees_1_nonGlBillableExpenses_1_expensetitle": "Meter Connectivity Fee",
+    "contract_managementAgreement_ManagementFees_1_nonGlBillableExpenses_1_finalperiodbilled": null,
+    "contract_managementAgreement_ManagementFees_1_nonGlBillableExpenses_2_id": "9d7c3b6f-408b-49fd-8c41-9f566263e38d",
+    "contract_managementAgreement_ManagementFees_1_nonGlBillableExpenses_2_nonglexpensetype": "Revenue",
+    "contract_managementAgreement_ManagementFees_1_nonGlBillableExpenses_2_expensepayrolltype": "Billable",
+    "contract_managementAgreement_ManagementFees_1_nonGlBillableExpenses_2_expenseamount": 3.03,
+    "contract_managementAgreement_ManagementFees_1_nonGlBillableExpenses_2_expensetitle": "Credit Card Fees",
+    "contract_managementAgreement_ManagementFees_1_nonGlBillableExpenses_2_finalperiodbilled": null,
+    "contract_enabled_components": [
+      "depositedRevenue",
+      "billableAccounts",
+      "managementAgreement"
+    ],
+    "contract_payroll_accounts_enabled": [],
+    "contract_expense_accounts_enabled": [],
+    "contract_financials": {
+      "annualContractValue": 0.0,
+      "estimatedMonthlyRevenue": 0.0,
+      "contractTerm": 36,
+      "contractTermUnit": "Months",
+      "contractType": "Deposited Revenue; Billing Account; Management Agreement",
+      "billingType": "Arrears",
+      "district": "D - Portland UPP",
+      "region": NaN,
+      "siteNumber": "8348"
+    }
+  }
+}

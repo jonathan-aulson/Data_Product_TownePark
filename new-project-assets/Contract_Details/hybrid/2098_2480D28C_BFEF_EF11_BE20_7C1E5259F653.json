@@ -1,0 +1,279 @@
+{
+  "metadata": {
+    "siteNumber": "2098",
+    "customerName": "JW Marriott Anaheim Resort",
+    "customerID": "CUST-2098",
+    "contractEffectiveDate": "2025-05-23",
+    "contractEndDate": "",
+    "contractStatus": "active",
+    "lastModifiedDate": "2025-05-23",
+    "contractVersion": "1.0",
+    "contractType": "Per Labor Hour; Invoice Grouping; Revenue Share; Mid Month Advance; Deposited Revenue",
+    "accountManager": "Pete Munoz",
+    "paymentTerms": "Due in 30 Days",
+    "notes": "3% increase to PLH every Jan 1\n2/1/25 - pending addendum. 69.50% to TP. email saved in contract folder. Addendum received 4/2025. Adding a new lobby ambassador position at $34.50 and 1.5 times for OT. 3% increase 1/1 or ECI (greater of). Did not see in list of job codes - reached out to DM to confirm.\n",
+    "location": {
+      "region": NaN,
+      "district": "D - Orange County",
+      "state": "CA",
+      "city": "Anaheim",
+      "address": "1775 South Clementine Street, Anaheim, CA 92802",
+      "siteType": ""
+    }
+  },
+  "original": {
+    "id": "2580d28c-bfef-ef11-be20-7c1e5259f653",
+    "purchaseOrder": null,
+    "paymentTerms": "Due in 30 Days",
+    "billingType": "Arrears",
+    "incrementMonth": "January",
+    "incrementAmount": 3.0,
+    "consumerPriceIndex": false,
+    "notes": "3% increase to PLH every Jan 1\n2/1/25 - pending addendum. 69.50% to TP. email saved in contract folder. Addendum received 4/2025. Adding a new lobby ambassador position at $34.50 and 1.5 times for OT. 3% increase 1/1 or ECI (greater of). Did not see in list of job codes - reached out to DM to confirm.\n",
+    "deviationAmount": 2500.0,
+    "deviationPercentage": 10.0,
+    "deposits": false,
+    "contractType": "Revenue Share",
+    "supportingReports": [
+      "MixOfSales",
+      "ParkingDepartmentReport",
+      "ValidationReport"
+    ],
+    "invoiceGrouping": {
+      "enabled": true,
+      "invoiceGroups": [
+        {
+          "id": "79e3fb03-c2ef-ef11-be21-7c1e527e6e28",
+          "groupNumber": 1,
+          "title": "Rev Share",
+          "description": null,
+          "vendorId": null,
+          "siteNumber": null,
+          "customerName": null,
+          "billingContactEmails": null
+        },
+        {
+          "id": "7ae3fb03-c2ef-ef11-be21-7c1e527e6e28",
+          "groupNumber": 2,
+          "title": "PLH",
+          "description": null,
+          "vendorId": null,
+          "siteNumber": null,
+          "customerName": null,
+          "billingContactEmails": null
+        }
+      ]
+    },
+    "fixedFee": {
+      "enabled": false,
+      "serviceRates": []
+    },
+    "perLaborHour": {
+      "enabled": true,
+      "hoursBackupReport": true,
+      "jobRates": [
+        {
+          "id": "78e3fb03-c2ef-ef11-be21-7c1e527e6e28",
+          "name": "Parking Management",
+          "displayName": "Parking Management",
+          "rate": 30.75,
+          "overtimeRate": 46.12,
+          "jobCode": "HOSPAMBASS",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 2
+        }
+      ]
+    },
+    "perOccupiedRoom": {
+      "enabled": false,
+      "roomRate": 0.0,
+      "invoiceGroup": 1
+    },
+    "revenueShare": {
+      "enabled": true,
+      "thresholdStructures": [
+        {
+          "id": "4d10146b-4224-f011-8c4d-6045bdd46547",
+          "revenueCodes": [
+            "ADJ",
+            "OR1",
+            "OR2",
+            "SD1",
+            "SD2",
+            "SD3",
+            "SM1",
+            "SM2",
+            "SM3",
+            "SO1",
+            "SO2",
+            "SO3",
+            "VD1",
+            "VD2",
+            "VD3",
+            "VM1",
+            "VM2",
+            "VM3",
+            "VO1",
+            "VO2",
+            "VO3"
+          ],
+          "accumulationType": "Monthly",
+          "tiers": [
+            {
+              "sharePercentage": 69.5,
+              "amount": 0.0
+            }
+          ],
+          "validationThresholdType": "RevenuePercentage",
+          "validationThresholdAmount": 3.0,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "bellServiceFee": {
+      "enabled": false,
+      "bellServices": []
+    },
+    "midMonthAdvance": {
+      "enabled": true,
+      "midMonthAdvances": [
+        {
+          "id": "74e3fb03-c2ef-ef11-be21-7c1e527e6e28",
+          "amount": 45000.0,
+          "lineTitle": "MidMonthBilling",
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "depositedRevenue": {
+      "enabled": true,
+      "depositData": [
+        {
+          "id": "77e3fb03-c2ef-ef11-be21-7c1e527e6e28",
+          "towneParkResponsibleForParkingTax": false,
+          "depositedRevenueEnabled": true,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "billableAccounts": {
+      "enabled": false,
+      "billableAccountsData": []
+    },
+    "managementAgreement": {
+      "enabled": false,
+      "ManagementFees": []
+    }
+  },
+  "flattened": {
+    "contract_id": "2580d28c-bfef-ef11-be20-7c1e5259f653",
+    "contract_purchaseOrder": null,
+    "contract_paymentTerms": "Due in 30 Days",
+    "contract_billingType": "Arrears",
+    "contract_incrementMonth": "January",
+    "contract_incrementAmount": 3.0,
+    "contract_consumerPriceIndex": false,
+    "contract_notes": "3% increase to PLH every Jan 1\n2/1/25 - pending addendum. 69.50% to TP. email saved in contract folder. Addendum received 4/2025. Adding a new lobby ambassador position at $34.50 and 1.5 times for OT. 3% increase 1/1 or ECI (greater of). Did not see in list of job codes - reached out to DM to confirm.\n",
+    "contract_deviationAmount": 2500.0,
+    "contract_deviationPercentage": 10.0,
+    "contract_deposits": false,
+    "contract_contractType": "Revenue Share",
+    "contract_supportingReports_1": "MixOfSales",
+    "contract_supportingReports_2": "ParkingDepartmentReport",
+    "contract_supportingReports_3": "ValidationReport",
+    "contract_invoiceGrouping_enabled": true,
+    "contract_invoiceGrouping_invoiceGroups_1_id": "79e3fb03-c2ef-ef11-be21-7c1e527e6e28",
+    "contract_invoiceGrouping_invoiceGroups_1_groupNumber": 1,
+    "contract_invoiceGrouping_invoiceGroups_1_title": "Rev Share",
+    "contract_invoiceGrouping_invoiceGroups_1_description": null,
+    "contract_invoiceGrouping_invoiceGroups_1_vendorId": null,
+    "contract_invoiceGrouping_invoiceGroups_1_siteNumber": null,
+    "contract_invoiceGrouping_invoiceGroups_1_customerName": null,
+    "contract_invoiceGrouping_invoiceGroups_1_billingContactEmails": null,
+    "contract_invoiceGrouping_invoiceGroups_2_id": "7ae3fb03-c2ef-ef11-be21-7c1e527e6e28",
+    "contract_invoiceGrouping_invoiceGroups_2_groupNumber": 2,
+    "contract_invoiceGrouping_invoiceGroups_2_title": "PLH",
+    "contract_invoiceGrouping_invoiceGroups_2_description": null,
+    "contract_invoiceGrouping_invoiceGroups_2_vendorId": null,
+    "contract_invoiceGrouping_invoiceGroups_2_siteNumber": null,
+    "contract_invoiceGrouping_invoiceGroups_2_customerName": null,
+    "contract_invoiceGrouping_invoiceGroups_2_billingContactEmails": null,
+    "contract_fixedFee_enabled": false,
+    "contract_perLaborHour_enabled": true,
+    "contract_perLaborHour_hoursBackupReport": true,
+    "contract_perLaborHour_jobRates_1_id": "78e3fb03-c2ef-ef11-be21-7c1e527e6e28",
+    "contract_perLaborHour_jobRates_1_name": "Parking Management",
+    "contract_perLaborHour_jobRates_1_displayName": "Parking Management",
+    "contract_perLaborHour_jobRates_1_rate": 30.75,
+    "contract_perLaborHour_jobRates_1_overtimeRate": 46.12,
+    "contract_perLaborHour_jobRates_1_jobCode": "HOSPAMBASS",
+    "contract_perLaborHour_jobRates_1_startDate": null,
+    "contract_perLaborHour_jobRates_1_endDate": null,
+    "contract_perLaborHour_jobRates_1_invoiceGroup": 2,
+    "contract_perOccupiedRoom_enabled": false,
+    "contract_perOccupiedRoom_roomRate": 0.0,
+    "contract_perOccupiedRoom_invoiceGroup": 1,
+    "contract_revenueShare_enabled": true,
+    "contract_revenueShare_thresholdStructures_1_id": "4d10146b-4224-f011-8c4d-6045bdd46547",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_1": "ADJ",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_2": "OR1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_3": "OR2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_4": "SD1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_5": "SD2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_6": "SD3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_7": "SM1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_8": "SM2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_9": "SM3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_10": "SO1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_11": "SO2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_12": "SO3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_13": "VD1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_14": "VD2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_15": "VD3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_16": "VM1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_17": "VM2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_18": "VM3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_19": "VO1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_20": "VO2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_21": "VO3",
+    "contract_revenueShare_thresholdStructures_1_accumulationType": "Monthly",
+    "contract_revenueShare_thresholdStructures_1_tiers_1_sharePercentage": 69.5,
+    "contract_revenueShare_thresholdStructures_1_tiers_1_amount": 0.0,
+    "contract_revenueShare_thresholdStructures_1_validationThresholdType": "RevenuePercentage",
+    "contract_revenueShare_thresholdStructures_1_validationThresholdAmount": 3.0,
+    "contract_revenueShare_thresholdStructures_1_invoiceGroup": 1,
+    "contract_bellServiceFee_enabled": false,
+    "contract_midMonthAdvance_enabled": true,
+    "contract_midMonthAdvance_midMonthAdvances_1_id": "74e3fb03-c2ef-ef11-be21-7c1e527e6e28",
+    "contract_midMonthAdvance_midMonthAdvances_1_amount": 45000.0,
+    "contract_midMonthAdvance_midMonthAdvances_1_lineTitle": "MidMonthBilling",
+    "contract_midMonthAdvance_midMonthAdvances_1_invoiceGroup": 1,
+    "contract_depositedRevenue_enabled": true,
+    "contract_depositedRevenue_depositData_1_id": "77e3fb03-c2ef-ef11-be21-7c1e527e6e28",
+    "contract_depositedRevenue_depositData_1_towneParkResponsibleForParkingTax": false,
+    "contract_depositedRevenue_depositData_1_depositedRevenueEnabled": true,
+    "contract_depositedRevenue_depositData_1_invoiceGroup": 1,
+    "contract_billableAccounts_enabled": false,
+    "contract_managementAgreement_enabled": false,
+    "contract_enabled_components": [
+      "perLaborHour",
+      "revenueShare",
+      "midMonthAdvance",
+      "depositedRevenue"
+    ],
+    "contract_payroll_accounts_enabled": [],
+    "contract_expense_accounts_enabled": [],
+    "contract_financials": {
+      "annualContractValue": 0.0,
+      "estimatedMonthlyRevenue": 0.0,
+      "contractTerm": 36,
+      "contractTermUnit": "Months",
+      "contractType": "Per Labor Hour; Invoice Grouping; Revenue Share; Mid Month Advance; Deposited Revenue",
+      "billingType": "Arrears",
+      "district": "D - Orange County",
+      "region": NaN,
+      "siteNumber": "2098"
+    }
+  }
+}

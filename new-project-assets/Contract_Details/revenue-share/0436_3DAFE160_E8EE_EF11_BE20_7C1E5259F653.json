@@ -1,0 +1,206 @@
+{
+  "metadata": {
+    "siteNumber": "0436",
+    "customerName": "Los Angeles Airport Marriott",
+    "customerID": "CUST-0436",
+    "contractEffectiveDate": "2025-05-23",
+    "contractEndDate": "",
+    "contractStatus": "active",
+    "lastModifiedDate": "2025-05-23",
+    "contractVersion": "1.0",
+    "contractType": "Revenue Share; Deposited Revenue",
+    "accountManager": "Curtis-Lee Buchanan",
+    "paymentTerms": "Due in 15 Days",
+    "notes": NaN,
+    "location": {
+      "region": NaN,
+      "district": "D - Orange County",
+      "state": "CA",
+      "city": "Los Angeles",
+      "address": "5855 Century Boulevard, Los Angeles, CA 90045",
+      "siteType": ""
+    }
+  },
+  "original": {
+    "id": "3eafe160-e8ee-ef11-be20-7c1e5259f653",
+    "purchaseOrder": null,
+    "paymentTerms": "Due in 15 Days",
+    "billingType": "Arrears",
+    "incrementMonth": "January",
+    "incrementAmount": 0.0,
+    "consumerPriceIndex": false,
+    "notes": null,
+    "deviationAmount": 2500.0,
+    "deviationPercentage": 10.0,
+    "deposits": false,
+    "contractType": "Revenue Share",
+    "supportingReports": [
+      "MixOfSales",
+      "ParkingDepartmentReport"
+    ],
+    "invoiceGrouping": {
+      "enabled": false,
+      "invoiceGroups": []
+    },
+    "fixedFee": {
+      "enabled": false,
+      "serviceRates": []
+    },
+    "perLaborHour": {
+      "enabled": false,
+      "hoursBackupReport": true,
+      "jobRates": []
+    },
+    "perOccupiedRoom": {
+      "enabled": false,
+      "roomRate": 0.0,
+      "invoiceGroup": 1
+    },
+    "revenueShare": {
+      "enabled": true,
+      "thresholdStructures": [
+        {
+          "id": "64bb7cdf-e8ee-ef11-be20-7c1e5259f653",
+          "revenueCodes": [
+            "ADJ",
+            "OR1",
+            "OR2",
+            "SD1",
+            "SD2",
+            "SD3",
+            "SM1",
+            "SM2",
+            "SM3",
+            "SO1",
+            "SO2",
+            "SO3",
+            "VD1",
+            "VD2",
+            "VD3",
+            "VM1",
+            "VM2",
+            "VM3",
+            "VO1",
+            "VO2",
+            "VO3"
+          ],
+          "accumulationType": "Monthly",
+          "tiers": [
+            {
+              "sharePercentage": 25.0,
+              "amount": 0.0
+            }
+          ],
+          "validationThresholdType": null,
+          "validationThresholdAmount": 0.0,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "bellServiceFee": {
+      "enabled": false,
+      "bellServices": []
+    },
+    "midMonthAdvance": {
+      "enabled": false,
+      "midMonthAdvances": []
+    },
+    "depositedRevenue": {
+      "enabled": true,
+      "depositData": [
+        {
+          "id": "63bb7cdf-e8ee-ef11-be20-7c1e5259f653",
+          "towneParkResponsibleForParkingTax": false,
+          "depositedRevenueEnabled": true,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "billableAccounts": {
+      "enabled": false,
+      "billableAccountsData": []
+    },
+    "managementAgreement": {
+      "enabled": false,
+      "ManagementFees": []
+    }
+  },
+  "flattened": {
+    "contract_id": "3eafe160-e8ee-ef11-be20-7c1e5259f653",
+    "contract_purchaseOrder": null,
+    "contract_paymentTerms": "Due in 15 Days",
+    "contract_billingType": "Arrears",
+    "contract_incrementMonth": "January",
+    "contract_incrementAmount": 0.0,
+    "contract_consumerPriceIndex": false,
+    "contract_notes": null,
+    "contract_deviationAmount": 2500.0,
+    "contract_deviationPercentage": 10.0,
+    "contract_deposits": false,
+    "contract_contractType": "Revenue Share",
+    "contract_supportingReports_1": "MixOfSales",
+    "contract_supportingReports_2": "ParkingDepartmentReport",
+    "contract_invoiceGrouping_enabled": false,
+    "contract_fixedFee_enabled": false,
+    "contract_perLaborHour_enabled": false,
+    "contract_perLaborHour_hoursBackupReport": true,
+    "contract_perOccupiedRoom_enabled": false,
+    "contract_perOccupiedRoom_roomRate": 0.0,
+    "contract_perOccupiedRoom_invoiceGroup": 1,
+    "contract_revenueShare_enabled": true,
+    "contract_revenueShare_thresholdStructures_1_id": "64bb7cdf-e8ee-ef11-be20-7c1e5259f653",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_1": "ADJ",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_2": "OR1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_3": "OR2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_4": "SD1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_5": "SD2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_6": "SD3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_7": "SM1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_8": "SM2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_9": "SM3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_10": "SO1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_11": "SO2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_12": "SO3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_13": "VD1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_14": "VD2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_15": "VD3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_16": "VM1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_17": "VM2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_18": "VM3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_19": "VO1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_20": "VO2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_21": "VO3",
+    "contract_revenueShare_thresholdStructures_1_accumulationType": "Monthly",
+    "contract_revenueShare_thresholdStructures_1_tiers_1_sharePercentage": 25.0,
+    "contract_revenueShare_thresholdStructures_1_tiers_1_amount": 0.0,
+    "contract_revenueShare_thresholdStructures_1_validationThresholdType": null,
+    "contract_revenueShare_thresholdStructures_1_validationThresholdAmount": 0.0,
+    "contract_revenueShare_thresholdStructures_1_invoiceGroup": 1,
+    "contract_bellServiceFee_enabled": false,
+    "contract_midMonthAdvance_enabled": false,
+    "contract_depositedRevenue_enabled": true,
+    "contract_depositedRevenue_depositData_1_id": "63bb7cdf-e8ee-ef11-be20-7c1e5259f653",
+    "contract_depositedRevenue_depositData_1_towneParkResponsibleForParkingTax": false,
+    "contract_depositedRevenue_depositData_1_depositedRevenueEnabled": true,
+    "contract_depositedRevenue_depositData_1_invoiceGroup": 1,
+    "contract_billableAccounts_enabled": false,
+    "contract_managementAgreement_enabled": false,
+    "contract_enabled_components": [
+      "revenueShare",
+      "depositedRevenue"
+    ],
+    "contract_payroll_accounts_enabled": [],
+    "contract_expense_accounts_enabled": [],
+    "contract_financials": {
+      "annualContractValue": 0.0,
+      "estimatedMonthlyRevenue": 0.0,
+      "contractTerm": 36,
+      "contractTermUnit": "Months",
+      "contractType": "Revenue Share; Deposited Revenue",
+      "billingType": "Arrears",
+      "district": "D - Orange County",
+      "region": NaN,
+      "siteNumber": "0436"
+    }
+  }
+}

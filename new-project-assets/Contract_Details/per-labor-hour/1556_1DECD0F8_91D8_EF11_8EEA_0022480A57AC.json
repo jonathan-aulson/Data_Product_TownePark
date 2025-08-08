@@ -1,0 +1,208 @@
+{
+  "metadata": {
+    "siteNumber": "1556",
+    "customerName": "Union Hospital",
+    "customerID": "CUST-1556",
+    "contractEffectiveDate": "2025-05-23",
+    "contractEndDate": "",
+    "contractStatus": "active",
+    "lastModifiedDate": "2025-05-23",
+    "contractVersion": "1.0",
+    "contractType": "Per Labor Hour",
+    "accountManager": "Corey Laumen",
+    "paymentTerms": "Due by 20th of the Month",
+    "notes": "Rates increase 1/1 by CPI but maximum increase will be 3%",
+    "location": {
+      "region": NaN,
+      "district": "D - Indianapolis",
+      "state": "IN",
+      "city": "Terra Haute",
+      "address": "1606 N 7th St, Terra Haute, IN 47804",
+      "siteType": ""
+    }
+  },
+  "original": {
+    "id": "1eecd0f8-91d8-ef11-8eea-0022480a57ac",
+    "purchaseOrder": null,
+    "paymentTerms": "Due by 20th of the Month",
+    "billingType": "Arrears",
+    "incrementMonth": "January",
+    "incrementAmount": 3.0,
+    "consumerPriceIndex": false,
+    "notes": "Rates increase 1/1 by CPI but maximum increase will be 3%",
+    "deviationAmount": 2500.0,
+    "deviationPercentage": 10.0,
+    "deposits": false,
+    "contractType": "Per Labor Hour",
+    "supportingReports": [
+      "HoursBackupReport"
+    ],
+    "invoiceGrouping": {
+      "enabled": false,
+      "invoiceGroups": []
+    },
+    "fixedFee": {
+      "enabled": false,
+      "serviceRates": []
+    },
+    "perLaborHour": {
+      "enabled": true,
+      "hoursBackupReport": true,
+      "jobRates": [
+        {
+          "id": "d9f3c0e2-b7e0-ef11-a731-7c1e527e6e28",
+          "name": "Valet Services",
+          "displayName": "GSA",
+          "rate": 22.01,
+          "overtimeRate": 33.02,
+          "jobCode": "GSA",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "daf3c0e2-b7e0-ef11-a731-7c1e527e6e28",
+          "name": "Valet Services",
+          "displayName": "GSC - Bone/Joint",
+          "rate": 22.15,
+          "overtimeRate": 33.22,
+          "jobCode": "GSC",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "dbf3c0e2-b7e0-ef11-a731-7c1e527e6e28",
+          "name": "Valet Services",
+          "displayName": "GSA - Bone/Joint",
+          "rate": 21.37,
+          "overtimeRate": 32.06,
+          "jobCode": "GSA2",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "dcf3c0e2-b7e0-ef11-a731-7c1e527e6e28",
+          "name": "Valet Services",
+          "displayName": "Account Manager",
+          "rate": 32.89,
+          "overtimeRate": 49.33,
+          "jobCode": "ACCTMGR",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "perOccupiedRoom": {
+      "enabled": false,
+      "roomRate": 0.0,
+      "invoiceGroup": 1
+    },
+    "revenueShare": {
+      "enabled": false,
+      "thresholdStructures": []
+    },
+    "bellServiceFee": {
+      "enabled": false,
+      "bellServices": []
+    },
+    "midMonthAdvance": {
+      "enabled": false,
+      "midMonthAdvances": []
+    },
+    "depositedRevenue": {
+      "enabled": false,
+      "depositData": []
+    },
+    "billableAccounts": {
+      "enabled": false,
+      "billableAccountsData": []
+    },
+    "managementAgreement": {
+      "enabled": false,
+      "ManagementFees": []
+    }
+  },
+  "flattened": {
+    "contract_id": "1eecd0f8-91d8-ef11-8eea-0022480a57ac",
+    "contract_purchaseOrder": null,
+    "contract_paymentTerms": "Due by 20th of the Month",
+    "contract_billingType": "Arrears",
+    "contract_incrementMonth": "January",
+    "contract_incrementAmount": 3.0,
+    "contract_consumerPriceIndex": false,
+    "contract_notes": "Rates increase 1/1 by CPI but maximum increase will be 3%",
+    "contract_deviationAmount": 2500.0,
+    "contract_deviationPercentage": 10.0,
+    "contract_deposits": false,
+    "contract_contractType": "Per Labor Hour",
+    "contract_supportingReports_1": "HoursBackupReport",
+    "contract_invoiceGrouping_enabled": false,
+    "contract_fixedFee_enabled": false,
+    "contract_perLaborHour_enabled": true,
+    "contract_perLaborHour_hoursBackupReport": true,
+    "contract_perLaborHour_jobRates_1_id": "d9f3c0e2-b7e0-ef11-a731-7c1e527e6e28",
+    "contract_perLaborHour_jobRates_1_name": "Valet Services",
+    "contract_perLaborHour_jobRates_1_displayName": "GSA",
+    "contract_perLaborHour_jobRates_1_rate": 22.01,
+    "contract_perLaborHour_jobRates_1_overtimeRate": 33.02,
+    "contract_perLaborHour_jobRates_1_jobCode": "GSA",
+    "contract_perLaborHour_jobRates_1_startDate": null,
+    "contract_perLaborHour_jobRates_1_endDate": null,
+    "contract_perLaborHour_jobRates_1_invoiceGroup": 1,
+    "contract_perLaborHour_jobRates_2_id": "daf3c0e2-b7e0-ef11-a731-7c1e527e6e28",
+    "contract_perLaborHour_jobRates_2_name": "Valet Services",
+    "contract_perLaborHour_jobRates_2_displayName": "GSC - Bone/Joint",
+    "contract_perLaborHour_jobRates_2_rate": 22.15,
+    "contract_perLaborHour_jobRates_2_overtimeRate": 33.22,
+    "contract_perLaborHour_jobRates_2_jobCode": "GSC",
+    "contract_perLaborHour_jobRates_2_startDate": null,
+    "contract_perLaborHour_jobRates_2_endDate": null,
+    "contract_perLaborHour_jobRates_2_invoiceGroup": 1,
+    "contract_perLaborHour_jobRates_3_id": "dbf3c0e2-b7e0-ef11-a731-7c1e527e6e28",
+    "contract_perLaborHour_jobRates_3_name": "Valet Services",
+    "contract_perLaborHour_jobRates_3_displayName": "GSA - Bone/Joint",
+    "contract_perLaborHour_jobRates_3_rate": 21.37,
+    "contract_perLaborHour_jobRates_3_overtimeRate": 32.06,
+    "contract_perLaborHour_jobRates_3_jobCode": "GSA2",
+    "contract_perLaborHour_jobRates_3_startDate": null,
+    "contract_perLaborHour_jobRates_3_endDate": null,
+    "contract_perLaborHour_jobRates_3_invoiceGroup": 1,
+    "contract_perLaborHour_jobRates_4_id": "dcf3c0e2-b7e0-ef11-a731-7c1e527e6e28",
+    "contract_perLaborHour_jobRates_4_name": "Valet Services",
+    "contract_perLaborHour_jobRates_4_displayName": "Account Manager",
+    "contract_perLaborHour_jobRates_4_rate": 32.89,
+    "contract_perLaborHour_jobRates_4_overtimeRate": 49.33,
+    "contract_perLaborHour_jobRates_4_jobCode": "ACCTMGR",
+    "contract_perLaborHour_jobRates_4_startDate": null,
+    "contract_perLaborHour_jobRates_4_endDate": null,
+    "contract_perLaborHour_jobRates_4_invoiceGroup": 1,
+    "contract_perOccupiedRoom_enabled": false,
+    "contract_perOccupiedRoom_roomRate": 0.0,
+    "contract_perOccupiedRoom_invoiceGroup": 1,
+    "contract_revenueShare_enabled": false,
+    "contract_bellServiceFee_enabled": false,
+    "contract_midMonthAdvance_enabled": false,
+    "contract_depositedRevenue_enabled": false,
+    "contract_billableAccounts_enabled": false,
+    "contract_managementAgreement_enabled": false,
+    "contract_enabled_components": [
+      "perLaborHour"
+    ],
+    "contract_payroll_accounts_enabled": [],
+    "contract_expense_accounts_enabled": [],
+    "contract_financials": {
+      "annualContractValue": 0.0,
+      "estimatedMonthlyRevenue": 0.0,
+      "contractTerm": 36,
+      "contractTermUnit": "Months",
+      "contractType": "Per Labor Hour",
+      "billingType": "Arrears",
+      "district": "D - Indianapolis",
+      "region": NaN,
+      "siteNumber": "1556"
+    }
+  }
+}

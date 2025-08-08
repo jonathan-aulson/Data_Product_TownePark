@@ -1,0 +1,256 @@
+{
+  "metadata": {
+    "siteNumber": "2176",
+    "customerName": "Sonesta Fort Lauderdale Beach",
+    "customerID": "CUST-2176",
+    "contractEffectiveDate": "2025-05-23",
+    "contractEndDate": "",
+    "contractStatus": "active",
+    "lastModifiedDate": "2025-05-23",
+    "contractVersion": "1.0",
+    "contractType": "Per Labor Hour; Revenue Share; Bell Service; Mid Month Advance; Deposited Revenue",
+    "accountManager": "Ricardo Salcedo",
+    "paymentTerms": "Due in 30 Days",
+    "notes": "PLH rates increase by the greater of 3% or ECI every 4/1\n",
+    "location": {
+      "region": NaN,
+      "district": "D - Fort Lauderdale",
+      "state": "FL",
+      "city": "Fort Lauderdale",
+      "address": "999 N Fort Lauderdale Beach Blvd, Fort Lauderdale, FL 33304",
+      "siteType": ""
+    }
+  },
+  "original": {
+    "id": "b2ecf246-d5ef-ef11-be20-7c1e5247bfde",
+    "purchaseOrder": null,
+    "paymentTerms": "Due in 30 Days",
+    "billingType": "Arrears",
+    "incrementMonth": "January",
+    "incrementAmount": 0.0,
+    "consumerPriceIndex": false,
+    "notes": "PLH rates increase by the greater of 3% or ECI every 4/1\n",
+    "deviationAmount": 2500.0,
+    "deviationPercentage": 10.0,
+    "deposits": false,
+    "contractType": "Revenue Share",
+    "supportingReports": [
+      "MixOfSales",
+      "ParkingDepartmentReport",
+      "ValidationReport"
+    ],
+    "invoiceGrouping": {
+      "enabled": false,
+      "invoiceGroups": []
+    },
+    "fixedFee": {
+      "enabled": false,
+      "serviceRates": []
+    },
+    "perLaborHour": {
+      "enabled": true,
+      "hoursBackupReport": true,
+      "jobRates": [
+        {
+          "id": "5d29a1e2-d5ef-ef11-be20-6045bddcb6d7",
+          "name": "Bell",
+          "displayName": "Dedicated Bell Services",
+          "rate": 25.75,
+          "overtimeRate": 38.63,
+          "jobCode": "BELL",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "perOccupiedRoom": {
+      "enabled": false,
+      "roomRate": 0.0,
+      "invoiceGroup": 1
+    },
+    "revenueShare": {
+      "enabled": true,
+      "thresholdStructures": [
+        {
+          "id": "5e29a1e2-d5ef-ef11-be20-6045bddcb6d7",
+          "revenueCodes": [
+            "ADJ",
+            "OR1",
+            "OR2",
+            "SD1",
+            "SD2",
+            "SD3",
+            "SM1",
+            "SM2",
+            "SM3",
+            "SO1",
+            "SO2",
+            "SO3",
+            "VD1",
+            "VD2",
+            "VD3",
+            "VM1",
+            "VM2",
+            "VM3",
+            "VO1",
+            "VO2",
+            "VO3"
+          ],
+          "accumulationType": "AnnualCalendar",
+          "tiers": [
+            {
+              "sharePercentage": 45.0,
+              "amount": 825000.0
+            },
+            {
+              "sharePercentage": 35.0,
+              "amount": 0.0
+            }
+          ],
+          "validationThresholdType": "RevenuePercentage",
+          "validationThresholdAmount": 0.0,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "bellServiceFee": {
+      "enabled": true,
+      "bellServices": [
+        {
+          "id": "98a73207-cbf9-ef11-be20-7c1e5259f653",
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "midMonthAdvance": {
+      "enabled": true,
+      "midMonthAdvances": [
+        {
+          "id": "5b29a1e2-d5ef-ef11-be20-6045bddcb6d7",
+          "amount": 20000.0,
+          "lineTitle": "MidMonthBilling",
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "depositedRevenue": {
+      "enabled": true,
+      "depositData": [
+        {
+          "id": "5c29a1e2-d5ef-ef11-be20-6045bddcb6d7",
+          "towneParkResponsibleForParkingTax": false,
+          "depositedRevenueEnabled": true,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "billableAccounts": {
+      "enabled": false,
+      "billableAccountsData": []
+    },
+    "managementAgreement": {
+      "enabled": false,
+      "ManagementFees": []
+    }
+  },
+  "flattened": {
+    "contract_id": "b2ecf246-d5ef-ef11-be20-7c1e5247bfde",
+    "contract_purchaseOrder": null,
+    "contract_paymentTerms": "Due in 30 Days",
+    "contract_billingType": "Arrears",
+    "contract_incrementMonth": "January",
+    "contract_incrementAmount": 0.0,
+    "contract_consumerPriceIndex": false,
+    "contract_notes": "PLH rates increase by the greater of 3% or ECI every 4/1\n",
+    "contract_deviationAmount": 2500.0,
+    "contract_deviationPercentage": 10.0,
+    "contract_deposits": false,
+    "contract_contractType": "Revenue Share",
+    "contract_supportingReports_1": "MixOfSales",
+    "contract_supportingReports_2": "ParkingDepartmentReport",
+    "contract_supportingReports_3": "ValidationReport",
+    "contract_invoiceGrouping_enabled": false,
+    "contract_fixedFee_enabled": false,
+    "contract_perLaborHour_enabled": true,
+    "contract_perLaborHour_hoursBackupReport": true,
+    "contract_perLaborHour_jobRates_1_id": "5d29a1e2-d5ef-ef11-be20-6045bddcb6d7",
+    "contract_perLaborHour_jobRates_1_name": "Bell",
+    "contract_perLaborHour_jobRates_1_displayName": "Dedicated Bell Services",
+    "contract_perLaborHour_jobRates_1_rate": 25.75,
+    "contract_perLaborHour_jobRates_1_overtimeRate": 38.63,
+    "contract_perLaborHour_jobRates_1_jobCode": "BELL",
+    "contract_perLaborHour_jobRates_1_startDate": null,
+    "contract_perLaborHour_jobRates_1_endDate": null,
+    "contract_perLaborHour_jobRates_1_invoiceGroup": 1,
+    "contract_perOccupiedRoom_enabled": false,
+    "contract_perOccupiedRoom_roomRate": 0.0,
+    "contract_perOccupiedRoom_invoiceGroup": 1,
+    "contract_revenueShare_enabled": true,
+    "contract_revenueShare_thresholdStructures_1_id": "5e29a1e2-d5ef-ef11-be20-6045bddcb6d7",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_1": "ADJ",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_2": "OR1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_3": "OR2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_4": "SD1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_5": "SD2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_6": "SD3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_7": "SM1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_8": "SM2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_9": "SM3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_10": "SO1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_11": "SO2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_12": "SO3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_13": "VD1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_14": "VD2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_15": "VD3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_16": "VM1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_17": "VM2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_18": "VM3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_19": "VO1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_20": "VO2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_21": "VO3",
+    "contract_revenueShare_thresholdStructures_1_accumulationType": "AnnualCalendar",
+    "contract_revenueShare_thresholdStructures_1_tiers_1_sharePercentage": 45.0,
+    "contract_revenueShare_thresholdStructures_1_tiers_1_amount": 825000.0,
+    "contract_revenueShare_thresholdStructures_1_tiers_2_sharePercentage": 35.0,
+    "contract_revenueShare_thresholdStructures_1_tiers_2_amount": 0.0,
+    "contract_revenueShare_thresholdStructures_1_validationThresholdType": "RevenuePercentage",
+    "contract_revenueShare_thresholdStructures_1_validationThresholdAmount": 0.0,
+    "contract_revenueShare_thresholdStructures_1_invoiceGroup": 1,
+    "contract_bellServiceFee_enabled": true,
+    "contract_bellServiceFee_bellServices_1_id": "98a73207-cbf9-ef11-be20-7c1e5259f653",
+    "contract_bellServiceFee_bellServices_1_invoiceGroup": 1,
+    "contract_midMonthAdvance_enabled": true,
+    "contract_midMonthAdvance_midMonthAdvances_1_id": "5b29a1e2-d5ef-ef11-be20-6045bddcb6d7",
+    "contract_midMonthAdvance_midMonthAdvances_1_amount": 20000.0,
+    "contract_midMonthAdvance_midMonthAdvances_1_lineTitle": "MidMonthBilling",
+    "contract_midMonthAdvance_midMonthAdvances_1_invoiceGroup": 1,
+    "contract_depositedRevenue_enabled": true,
+    "contract_depositedRevenue_depositData_1_id": "5c29a1e2-d5ef-ef11-be20-6045bddcb6d7",
+    "contract_depositedRevenue_depositData_1_towneParkResponsibleForParkingTax": false,
+    "contract_depositedRevenue_depositData_1_depositedRevenueEnabled": true,
+    "contract_depositedRevenue_depositData_1_invoiceGroup": 1,
+    "contract_billableAccounts_enabled": false,
+    "contract_managementAgreement_enabled": false,
+    "contract_enabled_components": [
+      "perLaborHour",
+      "revenueShare",
+      "bellServiceFee",
+      "midMonthAdvance",
+      "depositedRevenue"
+    ],
+    "contract_payroll_accounts_enabled": [],
+    "contract_expense_accounts_enabled": [],
+    "contract_financials": {
+      "annualContractValue": 0.0,
+      "estimatedMonthlyRevenue": 0.0,
+      "contractTerm": 36,
+      "contractTermUnit": "Months",
+      "contractType": "Per Labor Hour; Revenue Share; Bell Service; Mid Month Advance; Deposited Revenue",
+      "billingType": "Arrears",
+      "district": "D - Fort Lauderdale",
+      "region": NaN,
+      "siteNumber": "2176"
+    }
+  }
+}

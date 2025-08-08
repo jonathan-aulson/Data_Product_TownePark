@@ -1,0 +1,124 @@
+{
+  "metadata": {
+    "siteNumber": "2113",
+    "customerName": "Lansdowne Resort & Spa",
+    "customerID": "CUST-2113",
+    "contractEffectiveDate": "2025-05-23",
+    "contractEndDate": "",
+    "contractStatus": "active",
+    "lastModifiedDate": "2025-05-23",
+    "contractVersion": "1.0",
+    "contractType": "Per Occupied Room",
+    "accountManager": "Joshua Dodson",
+    "paymentTerms": "Due in 30 Days",
+    "notes": NaN,
+    "location": {
+      "region": NaN,
+      "district": "D - DC",
+      "state": "VA",
+      "city": "Leesburg",
+      "address": "44050 Woodridge Parkway, Leesburg, VA 20176",
+      "siteType": ""
+    }
+  },
+  "original": {
+    "id": "7fd028ed-cbef-ef11-be20-7c1e5247bfde",
+    "purchaseOrder": null,
+    "paymentTerms": "Due in 30 Days",
+    "billingType": "Arrears",
+    "incrementMonth": "January",
+    "incrementAmount": 0.0,
+    "consumerPriceIndex": false,
+    "notes": null,
+    "deviationAmount": 2500.0,
+    "deviationPercentage": 10.0,
+    "deposits": false,
+    "contractType": "Revenue Share",
+    "supportingReports": [],
+    "invoiceGrouping": {
+      "enabled": false,
+      "invoiceGroups": []
+    },
+    "fixedFee": {
+      "enabled": false,
+      "serviceRates": []
+    },
+    "perLaborHour": {
+      "enabled": false,
+      "hoursBackupReport": true,
+      "jobRates": []
+    },
+    "perOccupiedRoom": {
+      "enabled": true,
+      "roomRate": 8.0,
+      "invoiceGroup": 1
+    },
+    "revenueShare": {
+      "enabled": false,
+      "thresholdStructures": []
+    },
+    "bellServiceFee": {
+      "enabled": false,
+      "bellServices": []
+    },
+    "midMonthAdvance": {
+      "enabled": false,
+      "midMonthAdvances": []
+    },
+    "depositedRevenue": {
+      "enabled": false,
+      "depositData": []
+    },
+    "billableAccounts": {
+      "enabled": false,
+      "billableAccountsData": []
+    },
+    "managementAgreement": {
+      "enabled": false,
+      "ManagementFees": []
+    }
+  },
+  "flattened": {
+    "contract_id": "7fd028ed-cbef-ef11-be20-7c1e5247bfde",
+    "contract_purchaseOrder": null,
+    "contract_paymentTerms": "Due in 30 Days",
+    "contract_billingType": "Arrears",
+    "contract_incrementMonth": "January",
+    "contract_incrementAmount": 0.0,
+    "contract_consumerPriceIndex": false,
+    "contract_notes": null,
+    "contract_deviationAmount": 2500.0,
+    "contract_deviationPercentage": 10.0,
+    "contract_deposits": false,
+    "contract_contractType": "Revenue Share",
+    "contract_invoiceGrouping_enabled": false,
+    "contract_fixedFee_enabled": false,
+    "contract_perLaborHour_enabled": false,
+    "contract_perLaborHour_hoursBackupReport": true,
+    "contract_perOccupiedRoom_enabled": true,
+    "contract_perOccupiedRoom_roomRate": 8.0,
+    "contract_perOccupiedRoom_invoiceGroup": 1,
+    "contract_revenueShare_enabled": false,
+    "contract_bellServiceFee_enabled": false,
+    "contract_midMonthAdvance_enabled": false,
+    "contract_depositedRevenue_enabled": false,
+    "contract_billableAccounts_enabled": false,
+    "contract_managementAgreement_enabled": false,
+    "contract_enabled_components": [
+      "perOccupiedRoom"
+    ],
+    "contract_payroll_accounts_enabled": [],
+    "contract_expense_accounts_enabled": [],
+    "contract_financials": {
+      "annualContractValue": 0.0,
+      "estimatedMonthlyRevenue": 0.0,
+      "contractTerm": 36,
+      "contractTermUnit": "Months",
+      "contractType": "Per Occupied Room",
+      "billingType": "Arrears",
+      "district": "D - DC",
+      "region": NaN,
+      "siteNumber": "2113"
+    }
+  }
+}

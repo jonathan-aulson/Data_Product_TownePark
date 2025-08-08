@@ -1,0 +1,210 @@
+{
+  "metadata": {
+    "siteNumber": "0830",
+    "customerName": "Upper Chesapeake Medical Center",
+    "customerID": "CUST-0830",
+    "contractEffectiveDate": "2025-05-23",
+    "contractEndDate": "",
+    "contractStatus": "active",
+    "lastModifiedDate": "2025-05-23",
+    "contractVersion": "1.0",
+    "contractType": "Fixed Fee; Per Labor Hour",
+    "accountManager": "Robert Applefeld",
+    "paymentTerms": "Due in 45 Days",
+    "notes": NaN,
+    "location": {
+      "region": NaN,
+      "district": "D - Baltimore",
+      "state": "MD",
+      "city": "Bel Air",
+      "address": "500 Upper Chesapeake Drive, Bel Air, MD 21014",
+      "siteType": ""
+    }
+  },
+  "original": {
+    "id": "2c4a4e36-91d8-ef11-8eea-0022480a57ac",
+    "purchaseOrder": "PO#23889-1-SVC",
+    "paymentTerms": "Due in 45 Days",
+    "billingType": "Arrears",
+    "incrementMonth": "July",
+    "incrementAmount": 3.0,
+    "consumerPriceIndex": false,
+    "notes": null,
+    "deviationAmount": 2500.0,
+    "deviationPercentage": 10.0,
+    "deposits": false,
+    "contractType": "Per Labor Hour",
+    "supportingReports": [
+      "MixOfSales",
+      "HoursBackupReport"
+    ],
+    "invoiceGrouping": {
+      "enabled": false,
+      "invoiceGroups": []
+    },
+    "fixedFee": {
+      "enabled": true,
+      "serviceRates": [
+        {
+          "id": "665389d0-b7e0-ef11-a731-7c1e527e6e28",
+          "name": "Parking Management",
+          "displayName": "Account Manager Fee",
+          "code": "4715",
+          "fee": 7096.27,
+          "startDate": "2025-01-27T17:38:53",
+          "endDate": null,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "perLaborHour": {
+      "enabled": true,
+      "hoursBackupReport": true,
+      "jobRates": [
+        {
+          "id": "675389d0-b7e0-ef11-a731-7c1e527e6e28",
+          "name": "Valet Services",
+          "displayName": "Cashier",
+          "rate": 25.03,
+          "overtimeRate": 37.55,
+          "jobCode": "CASH",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "685389d0-b7e0-ef11-a731-7c1e527e6e28",
+          "name": "Valet Services",
+          "displayName": "Concierge",
+          "rate": 25.03,
+          "overtimeRate": 37.55,
+          "jobCode": "CONCI",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "695389d0-b7e0-ef11-a731-7c1e527e6e28",
+          "name": "Valet Services",
+          "displayName": "Greeter",
+          "rate": 25.03,
+          "overtimeRate": 37.55,
+          "jobCode": "GREETER",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "perOccupiedRoom": {
+      "enabled": false,
+      "roomRate": 0.0,
+      "invoiceGroup": 1
+    },
+    "revenueShare": {
+      "enabled": false,
+      "thresholdStructures": []
+    },
+    "bellServiceFee": {
+      "enabled": false,
+      "bellServices": []
+    },
+    "midMonthAdvance": {
+      "enabled": false,
+      "midMonthAdvances": []
+    },
+    "depositedRevenue": {
+      "enabled": false,
+      "depositData": []
+    },
+    "billableAccounts": {
+      "enabled": false,
+      "billableAccountsData": []
+    },
+    "managementAgreement": {
+      "enabled": false,
+      "ManagementFees": []
+    }
+  },
+  "flattened": {
+    "contract_id": "2c4a4e36-91d8-ef11-8eea-0022480a57ac",
+    "contract_purchaseOrder": "PO#23889-1-SVC",
+    "contract_paymentTerms": "Due in 45 Days",
+    "contract_billingType": "Arrears",
+    "contract_incrementMonth": "July",
+    "contract_incrementAmount": 3.0,
+    "contract_consumerPriceIndex": false,
+    "contract_notes": null,
+    "contract_deviationAmount": 2500.0,
+    "contract_deviationPercentage": 10.0,
+    "contract_deposits": false,
+    "contract_contractType": "Per Labor Hour",
+    "contract_supportingReports_1": "MixOfSales",
+    "contract_supportingReports_2": "HoursBackupReport",
+    "contract_invoiceGrouping_enabled": false,
+    "contract_fixedFee_enabled": true,
+    "contract_fixedFee_serviceRates_1_id": "665389d0-b7e0-ef11-a731-7c1e527e6e28",
+    "contract_fixedFee_serviceRates_1_name": "Parking Management",
+    "contract_fixedFee_serviceRates_1_displayName": "Account Manager Fee",
+    "contract_fixedFee_serviceRates_1_code": "4715",
+    "contract_fixedFee_serviceRates_1_fee": 7096.27,
+    "contract_fixedFee_serviceRates_1_startDate": "2025-01-27T17:38:53",
+    "contract_fixedFee_serviceRates_1_endDate": null,
+    "contract_fixedFee_serviceRates_1_invoiceGroup": 1,
+    "contract_perLaborHour_enabled": true,
+    "contract_perLaborHour_hoursBackupReport": true,
+    "contract_perLaborHour_jobRates_1_id": "675389d0-b7e0-ef11-a731-7c1e527e6e28",
+    "contract_perLaborHour_jobRates_1_name": "Valet Services",
+    "contract_perLaborHour_jobRates_1_displayName": "Cashier",
+    "contract_perLaborHour_jobRates_1_rate": 25.03,
+    "contract_perLaborHour_jobRates_1_overtimeRate": 37.55,
+    "contract_perLaborHour_jobRates_1_jobCode": "CASH",
+    "contract_perLaborHour_jobRates_1_startDate": null,
+    "contract_perLaborHour_jobRates_1_endDate": null,
+    "contract_perLaborHour_jobRates_1_invoiceGroup": 1,
+    "contract_perLaborHour_jobRates_2_id": "685389d0-b7e0-ef11-a731-7c1e527e6e28",
+    "contract_perLaborHour_jobRates_2_name": "Valet Services",
+    "contract_perLaborHour_jobRates_2_displayName": "Concierge",
+    "contract_perLaborHour_jobRates_2_rate": 25.03,
+    "contract_perLaborHour_jobRates_2_overtimeRate": 37.55,
+    "contract_perLaborHour_jobRates_2_jobCode": "CONCI",
+    "contract_perLaborHour_jobRates_2_startDate": null,
+    "contract_perLaborHour_jobRates_2_endDate": null,
+    "contract_perLaborHour_jobRates_2_invoiceGroup": 1,
+    "contract_perLaborHour_jobRates_3_id": "695389d0-b7e0-ef11-a731-7c1e527e6e28",
+    "contract_perLaborHour_jobRates_3_name": "Valet Services",
+    "contract_perLaborHour_jobRates_3_displayName": "Greeter",
+    "contract_perLaborHour_jobRates_3_rate": 25.03,
+    "contract_perLaborHour_jobRates_3_overtimeRate": 37.55,
+    "contract_perLaborHour_jobRates_3_jobCode": "GREETER",
+    "contract_perLaborHour_jobRates_3_startDate": null,
+    "contract_perLaborHour_jobRates_3_endDate": null,
+    "contract_perLaborHour_jobRates_3_invoiceGroup": 1,
+    "contract_perOccupiedRoom_enabled": false,
+    "contract_perOccupiedRoom_roomRate": 0.0,
+    "contract_perOccupiedRoom_invoiceGroup": 1,
+    "contract_revenueShare_enabled": false,
+    "contract_bellServiceFee_enabled": false,
+    "contract_midMonthAdvance_enabled": false,
+    "contract_depositedRevenue_enabled": false,
+    "contract_billableAccounts_enabled": false,
+    "contract_managementAgreement_enabled": false,
+    "contract_enabled_components": [
+      "fixedFee",
+      "perLaborHour"
+    ],
+    "contract_payroll_accounts_enabled": [],
+    "contract_expense_accounts_enabled": [],
+    "contract_financials": {
+      "annualContractValue": 0.0,
+      "estimatedMonthlyRevenue": 0.0,
+      "contractTerm": 36,
+      "contractTermUnit": "Months",
+      "contractType": "Fixed Fee; Per Labor Hour",
+      "billingType": "Arrears",
+      "district": "D - Baltimore",
+      "region": NaN,
+      "siteNumber": "0830"
+    }
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "siteNumber": "2216",
+    "customerName": "JW San Antonio Hill Country Resort & Spa - Bell",
+    "customerID": "CUST-2216",
+    "contractEffectiveDate": "2025-05-23",
+    "contractEndDate": "",
+    "contractStatus": "active",
+    "lastModifiedDate": "2025-05-23",
+    "contractVersion": "1.0",
+    "contractType": "Per Occupied Room; Bell Service",
+    "accountManager": "Paola Payan",
+    "paymentTerms": "Due by 20th",
+    "notes": "Cost per occupied room increases by $0.04 every 1/1. ",
+    "location": {
+      "region": NaN,
+      "district": "D - San Antonio",
+      "state": "TX",
+      "city": "San Antonio",
+      "address": "23808 Resort Parkway, San Antonio, TX 78261",
+      "siteType": ""
+    }
+  },
+  "original": {
+    "id": "8cabcca2-ccef-ef11-be20-7c1e5259f653",
+    "purchaseOrder": null,
+    "paymentTerms": "Due by 20th",
+    "billingType": "Arrears",
+    "incrementMonth": "January",
+    "incrementAmount": 0.0,
+    "consumerPriceIndex": false,
+    "notes": "Cost per occupied room increases by $0.04 every 1/1. ",
+    "deviationAmount": 2500.0,
+    "deviationPercentage": 10.0,
+    "deposits": false,
+    "contractType": "Other",
+    "supportingReports": [],
+    "invoiceGrouping": {
+      "enabled": false,
+      "invoiceGroups": []
+    },
+    "fixedFee": {
+      "enabled": false,
+      "serviceRates": []
+    },
+    "perLaborHour": {
+      "enabled": false,
+      "hoursBackupReport": true,
+      "jobRates": []
+    },
+    "perOccupiedRoom": {
+      "enabled": true,
+      "roomRate": 1.3,
+      "invoiceGroup": 1
+    },
+    "revenueShare": {
+      "enabled": false,
+      "thresholdStructures": []
+    },
+    "bellServiceFee": {
+      "enabled": true,
+      "bellServices": [
+        {
+          "id": "113f03c9-ccef-ef11-be20-7c1e5259f653",
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "midMonthAdvance": {
+      "enabled": false,
+      "midMonthAdvances": []
+    },
+    "depositedRevenue": {
+      "enabled": false,
+      "depositData": []
+    },
+    "billableAccounts": {
+      "enabled": false,
+      "billableAccountsData": []
+    },
+    "managementAgreement": {
+      "enabled": false,
+      "ManagementFees": []
+    }
+  },
+  "flattened": {
+    "contract_id": "8cabcca2-ccef-ef11-be20-7c1e5259f653",
+    "contract_purchaseOrder": null,
+    "contract_paymentTerms": "Due by 20th",
+    "contract_billingType": "Arrears",
+    "contract_incrementMonth": "January",
+    "contract_incrementAmount": 0.0,
+    "contract_consumerPriceIndex": false,
+    "contract_notes": "Cost per occupied room increases by $0.04 every 1/1. ",
+    "contract_deviationAmount": 2500.0,
+    "contract_deviationPercentage": 10.0,
+    "contract_deposits": false,
+    "contract_contractType": "Other",
+    "contract_invoiceGrouping_enabled": false,
+    "contract_fixedFee_enabled": false,
+    "contract_perLaborHour_enabled": false,
+    "contract_perLaborHour_hoursBackupReport": true,
+    "contract_perOccupiedRoom_enabled": true,
+    "contract_perOccupiedRoom_roomRate": 1.3,
+    "contract_perOccupiedRoom_invoiceGroup": 1,
+    "contract_revenueShare_enabled": false,
+    "contract_bellServiceFee_enabled": true,
+    "contract_bellServiceFee_bellServices_1_id": "113f03c9-ccef-ef11-be20-7c1e5259f653",
+    "contract_bellServiceFee_bellServices_1_invoiceGroup": 1,
+    "contract_midMonthAdvance_enabled": false,
+    "contract_depositedRevenue_enabled": false,
+    "contract_billableAccounts_enabled": false,
+    "contract_managementAgreement_enabled": false,
+    "contract_enabled_components": [
+      "perOccupiedRoom",
+      "bellServiceFee"
+    ],
+    "contract_payroll_accounts_enabled": [],
+    "contract_expense_accounts_enabled": [],
+    "contract_financials": {
+      "annualContractValue": 0.0,
+      "estimatedMonthlyRevenue": 0.0,
+      "contractTerm": 36,
+      "contractTermUnit": "Months",
+      "contractType": "Per Occupied Room; Bell Service",
+      "billingType": "Arrears",
+      "district": "D - San Antonio",
+      "region": NaN,
+      "siteNumber": "2216"
+    }
+  }
+}

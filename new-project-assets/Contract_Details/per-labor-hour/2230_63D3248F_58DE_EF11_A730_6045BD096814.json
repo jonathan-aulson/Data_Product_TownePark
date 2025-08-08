@@ -1,0 +1,268 @@
+{
+  "metadata": {
+    "siteNumber": "2230",
+    "customerName": "BSWH - Temple Visitor Management",
+    "customerID": "CUST-2230",
+    "contractEffectiveDate": "2025-05-23",
+    "contractEndDate": "",
+    "contractStatus": "active",
+    "lastModifiedDate": "2025-05-23",
+    "contractVersion": "1.0",
+    "contractType": "Per Labor Hour",
+    "accountManager": "Lindsey Luckett",
+    "paymentTerms": "Due in 30 Days",
+    "notes": "PLH increase by LESSER of 3% or CPI every 12/1 (for 2024, deferred until July 2025)\n1/1/25 - removed OT rates per Brennen. Sensitive client issue.",
+    "location": {
+      "region": NaN,
+      "district": "D - Dallas - HC",
+      "state": "TX",
+      "city": "Temple",
+      "address": "2401 S. 31st St., Temple, TX 76508",
+      "siteType": ""
+    }
+  },
+  "original": {
+    "id": "64d3248f-58de-ef11-a730-6045bd096814",
+    "purchaseOrder": null,
+    "paymentTerms": "Due in 30 Days",
+    "billingType": "Arrears",
+    "incrementMonth": "July",
+    "incrementAmount": 3.0,
+    "consumerPriceIndex": false,
+    "notes": "PLH increase by LESSER of 3% or CPI every 12/1 (for 2024, deferred until July 2025)\n1/1/25 - removed OT rates per Brennen. Sensitive client issue.",
+    "deviationAmount": 0.0,
+    "deviationPercentage": 0.0,
+    "deposits": false,
+    "contractType": "Per Labor Hour",
+    "supportingReports": [
+      "HoursBackupReport"
+    ],
+    "invoiceGrouping": {
+      "enabled": false,
+      "invoiceGroups": []
+    },
+    "fixedFee": {
+      "enabled": false,
+      "serviceRates": []
+    },
+    "perLaborHour": {
+      "enabled": true,
+      "hoursBackupReport": true,
+      "jobRates": [
+        {
+          "id": "7fc457f8-622b-f011-8c4d-7c1e5259f653",
+          "name": "Account Manager",
+          "displayName": "System Director",
+          "rate": 44.95,
+          "overtimeRate": 44.95,
+          "jobCode": "AREAMGR",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "209a676f-0010-f011-9989-7c1e5259f653",
+          "name": "Valet Services",
+          "displayName": "Associate Manager",
+          "rate": 44.95,
+          "overtimeRate": 44.95,
+          "jobCode": "ASSOCM",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "46d6d706-b8e0-ef11-a731-7c1e527e6e28",
+          "name": "Valet Services",
+          "displayName": "Lead Visitor Management Concierge",
+          "rate": 28.95,
+          "overtimeRate": 28.95,
+          "jobCode": "LDVMGTCONCI",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "47d6d706-b8e0-ef11-a731-7c1e527e6e28",
+          "name": "Valet Services",
+          "displayName": "Visitor Management Concierge",
+          "rate": 28.95,
+          "overtimeRate": 28.95,
+          "jobCode": "VMGTCONCI",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "48d6d706-b8e0-ef11-a731-7c1e527e6e28",
+          "name": "Account Manager",
+          "displayName": "Account Manager",
+          "rate": 44.95,
+          "overtimeRate": 44.95,
+          "jobCode": "ACCTMGR",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "49d6d706-b8e0-ef11-a731-7c1e527e6e28",
+          "name": "Assistant Manager",
+          "displayName": "System Director",
+          "rate": 44.95,
+          "overtimeRate": 44.95,
+          "jobCode": "DISTMGR",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "4ad6d706-b8e0-ef11-a731-7c1e527e6e28",
+          "name": "Director",
+          "displayName": "Sr. Account Manager",
+          "rate": 44.95,
+          "overtimeRate": 44.95,
+          "jobCode": "SRACCTMGR",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "perOccupiedRoom": {
+      "enabled": false,
+      "roomRate": 0.0,
+      "invoiceGroup": 1
+    },
+    "revenueShare": {
+      "enabled": false,
+      "thresholdStructures": []
+    },
+    "bellServiceFee": {
+      "enabled": false,
+      "bellServices": []
+    },
+    "midMonthAdvance": {
+      "enabled": false,
+      "midMonthAdvances": []
+    },
+    "depositedRevenue": {
+      "enabled": false,
+      "depositData": []
+    },
+    "billableAccounts": {
+      "enabled": false,
+      "billableAccountsData": []
+    },
+    "managementAgreement": {
+      "enabled": false,
+      "ManagementFees": []
+    }
+  },
+  "flattened": {
+    "contract_id": "64d3248f-58de-ef11-a730-6045bd096814",
+    "contract_purchaseOrder": null,
+    "contract_paymentTerms": "Due in 30 Days",
+    "contract_billingType": "Arrears",
+    "contract_incrementMonth": "July",
+    "contract_incrementAmount": 3.0,
+    "contract_consumerPriceIndex": false,
+    "contract_notes": "PLH increase by LESSER of 3% or CPI every 12/1 (for 2024, deferred until July 2025)\n1/1/25 - removed OT rates per Brennen. Sensitive client issue.",
+    "contract_deviationAmount": 0.0,
+    "contract_deviationPercentage": 0.0,
+    "contract_deposits": false,
+    "contract_contractType": "Per Labor Hour",
+    "contract_supportingReports_1": "HoursBackupReport",
+    "contract_invoiceGrouping_enabled": false,
+    "contract_fixedFee_enabled": false,
+    "contract_perLaborHour_enabled": true,
+    "contract_perLaborHour_hoursBackupReport": true,
+    "contract_perLaborHour_jobRates_1_id": "7fc457f8-622b-f011-8c4d-7c1e5259f653",
+    "contract_perLaborHour_jobRates_1_name": "Account Manager",
+    "contract_perLaborHour_jobRates_1_displayName": "System Director",
+    "contract_perLaborHour_jobRates_1_rate": 44.95,
+    "contract_perLaborHour_jobRates_1_overtimeRate": 44.95,
+    "contract_perLaborHour_jobRates_1_jobCode": "AREAMGR",
+    "contract_perLaborHour_jobRates_1_startDate": null,
+    "contract_perLaborHour_jobRates_1_endDate": null,
+    "contract_perLaborHour_jobRates_1_invoiceGroup": 1,
+    "contract_perLaborHour_jobRates_2_id": "209a676f-0010-f011-9989-7c1e5259f653",
+    "contract_perLaborHour_jobRates_2_name": "Valet Services",
+    "contract_perLaborHour_jobRates_2_displayName": "Associate Manager",
+    "contract_perLaborHour_jobRates_2_rate": 44.95,
+    "contract_perLaborHour_jobRates_2_overtimeRate": 44.95,
+    "contract_perLaborHour_jobRates_2_jobCode": "ASSOCM",
+    "contract_perLaborHour_jobRates_2_startDate": null,
+    "contract_perLaborHour_jobRates_2_endDate": null,
+    "contract_perLaborHour_jobRates_2_invoiceGroup": 1,
+    "contract_perLaborHour_jobRates_3_id": "46d6d706-b8e0-ef11-a731-7c1e527e6e28",
+    "contract_perLaborHour_jobRates_3_name": "Valet Services",
+    "contract_perLaborHour_jobRates_3_displayName": "Lead Visitor Management Concierge",
+    "contract_perLaborHour_jobRates_3_rate": 28.95,
+    "contract_perLaborHour_jobRates_3_overtimeRate": 28.95,
+    "contract_perLaborHour_jobRates_3_jobCode": "LDVMGTCONCI",
+    "contract_perLaborHour_jobRates_3_startDate": null,
+    "contract_perLaborHour_jobRates_3_endDate": null,
+    "contract_perLaborHour_jobRates_3_invoiceGroup": 1,
+    "contract_perLaborHour_jobRates_4_id": "47d6d706-b8e0-ef11-a731-7c1e527e6e28",
+    "contract_perLaborHour_jobRates_4_name": "Valet Services",
+    "contract_perLaborHour_jobRates_4_displayName": "Visitor Management Concierge",
+    "contract_perLaborHour_jobRates_4_rate": 28.95,
+    "contract_perLaborHour_jobRates_4_overtimeRate": 28.95,
+    "contract_perLaborHour_jobRates_4_jobCode": "VMGTCONCI",
+    "contract_perLaborHour_jobRates_4_startDate": null,
+    "contract_perLaborHour_jobRates_4_endDate": null,
+    "contract_perLaborHour_jobRates_4_invoiceGroup": 1,
+    "contract_perLaborHour_jobRates_5_id": "48d6d706-b8e0-ef11-a731-7c1e527e6e28",
+    "contract_perLaborHour_jobRates_5_name": "Account Manager",
+    "contract_perLaborHour_jobRates_5_displayName": "Account Manager",
+    "contract_perLaborHour_jobRates_5_rate": 44.95,
+    "contract_perLaborHour_jobRates_5_overtimeRate": 44.95,
+    "contract_perLaborHour_jobRates_5_jobCode": "ACCTMGR",
+    "contract_perLaborHour_jobRates_5_startDate": null,
+    "contract_perLaborHour_jobRates_5_endDate": null,
+    "contract_perLaborHour_jobRates_5_invoiceGroup": 1,
+    "contract_perLaborHour_jobRates_6_id": "49d6d706-b8e0-ef11-a731-7c1e527e6e28",
+    "contract_perLaborHour_jobRates_6_name": "Assistant Manager",
+    "contract_perLaborHour_jobRates_6_displayName": "System Director",
+    "contract_perLaborHour_jobRates_6_rate": 44.95,
+    "contract_perLaborHour_jobRates_6_overtimeRate": 44.95,
+    "contract_perLaborHour_jobRates_6_jobCode": "DISTMGR",
+    "contract_perLaborHour_jobRates_6_startDate": null,
+    "contract_perLaborHour_jobRates_6_endDate": null,
+    "contract_perLaborHour_jobRates_6_invoiceGroup": 1,
+    "contract_perLaborHour_jobRates_7_id": "4ad6d706-b8e0-ef11-a731-7c1e527e6e28",
+    "contract_perLaborHour_jobRates_7_name": "Director",
+    "contract_perLaborHour_jobRates_7_displayName": "Sr. Account Manager",
+    "contract_perLaborHour_jobRates_7_rate": 44.95,
+    "contract_perLaborHour_jobRates_7_overtimeRate": 44.95,
+    "contract_perLaborHour_jobRates_7_jobCode": "SRACCTMGR",
+    "contract_perLaborHour_jobRates_7_startDate": null,
+    "contract_perLaborHour_jobRates_7_endDate": null,
+    "contract_perLaborHour_jobRates_7_invoiceGroup": 1,
+    "contract_perOccupiedRoom_enabled": false,
+    "contract_perOccupiedRoom_roomRate": 0.0,
+    "contract_perOccupiedRoom_invoiceGroup": 1,
+    "contract_revenueShare_enabled": false,
+    "contract_bellServiceFee_enabled": false,
+    "contract_midMonthAdvance_enabled": false,
+    "contract_depositedRevenue_enabled": false,
+    "contract_billableAccounts_enabled": false,
+    "contract_managementAgreement_enabled": false,
+    "contract_enabled_components": [
+      "perLaborHour"
+    ],
+    "contract_payroll_accounts_enabled": [],
+    "contract_expense_accounts_enabled": [],
+    "contract_financials": {
+      "annualContractValue": 0.0,
+      "estimatedMonthlyRevenue": 0.0,
+      "contractTerm": 36,
+      "contractTermUnit": "Months",
+      "contractType": "Per Labor Hour",
+      "billingType": "Arrears",
+      "district": "D - Dallas - HC",
+      "region": NaN,
+      "siteNumber": "2230"
+    }
+  }
+}

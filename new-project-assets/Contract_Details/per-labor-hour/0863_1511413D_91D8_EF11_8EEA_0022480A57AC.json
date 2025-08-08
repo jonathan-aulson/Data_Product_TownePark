@@ -1,0 +1,188 @@
+{
+  "metadata": {
+    "siteNumber": "0863",
+    "customerName": "Blessing Hospital",
+    "customerID": "CUST-0863",
+    "contractEffectiveDate": "2025-05-23",
+    "contractEndDate": "",
+    "contractStatus": "active",
+    "lastModifiedDate": "2025-05-23",
+    "contractVersion": "1.0",
+    "contractType": "Per Labor Hour",
+    "accountManager": "Sean Perry",
+    "paymentTerms": "Due in 10 Days",
+    "notes": NaN,
+    "location": {
+      "region": NaN,
+      "district": "D - Milwaukee",
+      "state": "IL",
+      "city": "Quincy",
+      "address": "1125 Hampshire Street, Quincy, IL 62305",
+      "siteType": ""
+    }
+  },
+  "original": {
+    "id": "1611413d-91d8-ef11-8eea-0022480a57ac",
+    "purchaseOrder": null,
+    "paymentTerms": "Due in 10 Days",
+    "billingType": "Arrears",
+    "incrementMonth": "March",
+    "incrementAmount": 3.0,
+    "consumerPriceIndex": false,
+    "notes": null,
+    "deviationAmount": 2500.0,
+    "deviationPercentage": 10.0,
+    "deposits": false,
+    "contractType": "Per Labor Hour",
+    "supportingReports": [
+      "HoursBackupReport"
+    ],
+    "invoiceGrouping": {
+      "enabled": false,
+      "invoiceGroups": []
+    },
+    "fixedFee": {
+      "enabled": false,
+      "serviceRates": []
+    },
+    "perLaborHour": {
+      "enabled": true,
+      "hoursBackupReport": true,
+      "jobRates": [
+        {
+          "id": "e2a6ec6c-f50d-f011-9989-7c1e5247bfde",
+          "name": "Valet Services",
+          "displayName": "Valet",
+          "rate": 21.5,
+          "overtimeRate": 21.5,
+          "jobCode": "GSA",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "648a0173-f50d-f011-9989-7c1e5247bfde",
+          "name": "Valet Services",
+          "displayName": "Lead Valet",
+          "rate": 21.5,
+          "overtimeRate": 21.5,
+          "jobCode": "GSC",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "b8468d67-f50d-f011-9989-7c1e5259f653",
+          "name": "Account Manager",
+          "displayName": "Account Manager",
+          "rate": 21.5,
+          "overtimeRate": 21.5,
+          "jobCode": "ACCTMGR",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "perOccupiedRoom": {
+      "enabled": false,
+      "roomRate": 0.0,
+      "invoiceGroup": 1
+    },
+    "revenueShare": {
+      "enabled": false,
+      "thresholdStructures": []
+    },
+    "bellServiceFee": {
+      "enabled": false,
+      "bellServices": []
+    },
+    "midMonthAdvance": {
+      "enabled": false,
+      "midMonthAdvances": []
+    },
+    "depositedRevenue": {
+      "enabled": false,
+      "depositData": []
+    },
+    "billableAccounts": {
+      "enabled": false,
+      "billableAccountsData": []
+    },
+    "managementAgreement": {
+      "enabled": false,
+      "ManagementFees": []
+    }
+  },
+  "flattened": {
+    "contract_id": "1611413d-91d8-ef11-8eea-0022480a57ac",
+    "contract_purchaseOrder": null,
+    "contract_paymentTerms": "Due in 10 Days",
+    "contract_billingType": "Arrears",
+    "contract_incrementMonth": "March",
+    "contract_incrementAmount": 3.0,
+    "contract_consumerPriceIndex": false,
+    "contract_notes": null,
+    "contract_deviationAmount": 2500.0,
+    "contract_deviationPercentage": 10.0,
+    "contract_deposits": false,
+    "contract_contractType": "Per Labor Hour",
+    "contract_supportingReports_1": "HoursBackupReport",
+    "contract_invoiceGrouping_enabled": false,
+    "contract_fixedFee_enabled": false,
+    "contract_perLaborHour_enabled": true,
+    "contract_perLaborHour_hoursBackupReport": true,
+    "contract_perLaborHour_jobRates_1_id": "e2a6ec6c-f50d-f011-9989-7c1e5247bfde",
+    "contract_perLaborHour_jobRates_1_name": "Valet Services",
+    "contract_perLaborHour_jobRates_1_displayName": "Valet",
+    "contract_perLaborHour_jobRates_1_rate": 21.5,
+    "contract_perLaborHour_jobRates_1_overtimeRate": 21.5,
+    "contract_perLaborHour_jobRates_1_jobCode": "GSA",
+    "contract_perLaborHour_jobRates_1_startDate": null,
+    "contract_perLaborHour_jobRates_1_endDate": null,
+    "contract_perLaborHour_jobRates_1_invoiceGroup": 1,
+    "contract_perLaborHour_jobRates_2_id": "648a0173-f50d-f011-9989-7c1e5247bfde",
+    "contract_perLaborHour_jobRates_2_name": "Valet Services",
+    "contract_perLaborHour_jobRates_2_displayName": "Lead Valet",
+    "contract_perLaborHour_jobRates_2_rate": 21.5,
+    "contract_perLaborHour_jobRates_2_overtimeRate": 21.5,
+    "contract_perLaborHour_jobRates_2_jobCode": "GSC",
+    "contract_perLaborHour_jobRates_2_startDate": null,
+    "contract_perLaborHour_jobRates_2_endDate": null,
+    "contract_perLaborHour_jobRates_2_invoiceGroup": 1,
+    "contract_perLaborHour_jobRates_3_id": "b8468d67-f50d-f011-9989-7c1e5259f653",
+    "contract_perLaborHour_jobRates_3_name": "Account Manager",
+    "contract_perLaborHour_jobRates_3_displayName": "Account Manager",
+    "contract_perLaborHour_jobRates_3_rate": 21.5,
+    "contract_perLaborHour_jobRates_3_overtimeRate": 21.5,
+    "contract_perLaborHour_jobRates_3_jobCode": "ACCTMGR",
+    "contract_perLaborHour_jobRates_3_startDate": null,
+    "contract_perLaborHour_jobRates_3_endDate": null,
+    "contract_perLaborHour_jobRates_3_invoiceGroup": 1,
+    "contract_perOccupiedRoom_enabled": false,
+    "contract_perOccupiedRoom_roomRate": 0.0,
+    "contract_perOccupiedRoom_invoiceGroup": 1,
+    "contract_revenueShare_enabled": false,
+    "contract_bellServiceFee_enabled": false,
+    "contract_midMonthAdvance_enabled": false,
+    "contract_depositedRevenue_enabled": false,
+    "contract_billableAccounts_enabled": false,
+    "contract_managementAgreement_enabled": false,
+    "contract_enabled_components": [
+      "perLaborHour"
+    ],
+    "contract_payroll_accounts_enabled": [],
+    "contract_expense_accounts_enabled": [],
+    "contract_financials": {
+      "annualContractValue": 0.0,
+      "estimatedMonthlyRevenue": 0.0,
+      "contractTerm": 36,
+      "contractTermUnit": "Months",
+      "contractType": "Per Labor Hour",
+      "billingType": "Arrears",
+      "district": "D - Milwaukee",
+      "region": NaN,
+      "siteNumber": "0863"
+    }
+  }
+}

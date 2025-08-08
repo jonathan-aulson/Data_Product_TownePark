@@ -1,0 +1,210 @@
+{
+  "metadata": {
+    "siteNumber": "2001",
+    "customerName": "Kimpton Hotel Palomar Los Angeles Beverly Hills",
+    "customerID": "CUST-2001",
+    "contractEffectiveDate": "2025-05-23",
+    "contractEndDate": "",
+    "contractStatus": "active",
+    "lastModifiedDate": "2025-05-23",
+    "contractVersion": "1.0",
+    "contractType": "Revenue Share; Deposited Revenue",
+    "accountManager": "Julio Martinez",
+    "paymentTerms": "Due in 30 Days",
+    "notes": "Rev split changes based on phase - see page 5 of contract. Requires 3 straight months of greater than $110k in revenue\n",
+    "location": {
+      "region": NaN,
+      "district": "D - Los Angeles",
+      "state": "CA",
+      "city": "Los Angeles",
+      "address": "10740 Wilshire Blvd, Los Angeles, CA 90024",
+      "siteType": ""
+    }
+  },
+  "original": {
+    "id": "5c36ee7c-a0ef-ef11-be20-7c1e5259f653",
+    "purchaseOrder": null,
+    "paymentTerms": "Due in 30 Days",
+    "billingType": "Arrears",
+    "incrementMonth": "January",
+    "incrementAmount": 0.0,
+    "consumerPriceIndex": false,
+    "notes": "Rev split changes based on phase - see page 5 of contract. Requires 3 straight months of greater than $110k in revenue\n",
+    "deviationAmount": 2500.0,
+    "deviationPercentage": 10.0,
+    "deposits": false,
+    "contractType": "Revenue Share",
+    "supportingReports": [
+      "MixOfSales",
+      "HoursBackupReport",
+      "ParkingDepartmentReport",
+      "ValidationReport"
+    ],
+    "invoiceGrouping": {
+      "enabled": false,
+      "invoiceGroups": []
+    },
+    "fixedFee": {
+      "enabled": false,
+      "serviceRates": []
+    },
+    "perLaborHour": {
+      "enabled": false,
+      "hoursBackupReport": true,
+      "jobRates": []
+    },
+    "perOccupiedRoom": {
+      "enabled": false,
+      "roomRate": 0.0,
+      "invoiceGroup": 1
+    },
+    "revenueShare": {
+      "enabled": true,
+      "thresholdStructures": [
+        {
+          "id": "c78d42a7-a0ef-ef11-be20-7c1e5259f653",
+          "revenueCodes": [
+            "ADJ",
+            "OR1",
+            "OR2",
+            "SD1",
+            "SD2",
+            "SD3",
+            "SM1",
+            "SM2",
+            "SM3",
+            "SO1",
+            "SO2",
+            "SO3",
+            "VD1",
+            "VD2",
+            "VD3",
+            "VM1",
+            "VM2",
+            "VM3",
+            "VO1",
+            "VO2",
+            "VO3"
+          ],
+          "accumulationType": "Monthly",
+          "tiers": [
+            {
+              "sharePercentage": 28.0,
+              "amount": 0.0
+            }
+          ],
+          "validationThresholdType": "RevenuePercentage",
+          "validationThresholdAmount": 5.0,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "bellServiceFee": {
+      "enabled": false,
+      "bellServices": []
+    },
+    "midMonthAdvance": {
+      "enabled": false,
+      "midMonthAdvances": []
+    },
+    "depositedRevenue": {
+      "enabled": true,
+      "depositData": [
+        {
+          "id": "6d8d42a7-a0ef-ef11-be20-7c1e5259f653",
+          "towneParkResponsibleForParkingTax": false,
+          "depositedRevenueEnabled": true,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "billableAccounts": {
+      "enabled": false,
+      "billableAccountsData": []
+    },
+    "managementAgreement": {
+      "enabled": false,
+      "ManagementFees": []
+    }
+  },
+  "flattened": {
+    "contract_id": "5c36ee7c-a0ef-ef11-be20-7c1e5259f653",
+    "contract_purchaseOrder": null,
+    "contract_paymentTerms": "Due in 30 Days",
+    "contract_billingType": "Arrears",
+    "contract_incrementMonth": "January",
+    "contract_incrementAmount": 0.0,
+    "contract_consumerPriceIndex": false,
+    "contract_notes": "Rev split changes based on phase - see page 5 of contract. Requires 3 straight months of greater than $110k in revenue\n",
+    "contract_deviationAmount": 2500.0,
+    "contract_deviationPercentage": 10.0,
+    "contract_deposits": false,
+    "contract_contractType": "Revenue Share",
+    "contract_supportingReports_1": "MixOfSales",
+    "contract_supportingReports_2": "HoursBackupReport",
+    "contract_supportingReports_3": "ParkingDepartmentReport",
+    "contract_supportingReports_4": "ValidationReport",
+    "contract_invoiceGrouping_enabled": false,
+    "contract_fixedFee_enabled": false,
+    "contract_perLaborHour_enabled": false,
+    "contract_perLaborHour_hoursBackupReport": true,
+    "contract_perOccupiedRoom_enabled": false,
+    "contract_perOccupiedRoom_roomRate": 0.0,
+    "contract_perOccupiedRoom_invoiceGroup": 1,
+    "contract_revenueShare_enabled": true,
+    "contract_revenueShare_thresholdStructures_1_id": "c78d42a7-a0ef-ef11-be20-7c1e5259f653",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_1": "ADJ",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_2": "OR1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_3": "OR2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_4": "SD1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_5": "SD2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_6": "SD3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_7": "SM1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_8": "SM2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_9": "SM3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_10": "SO1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_11": "SO2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_12": "SO3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_13": "VD1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_14": "VD2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_15": "VD3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_16": "VM1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_17": "VM2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_18": "VM3",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_19": "VO1",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_20": "VO2",
+    "contract_revenueShare_thresholdStructures_1_revenueCodes_21": "VO3",
+    "contract_revenueShare_thresholdStructures_1_accumulationType": "Monthly",
+    "contract_revenueShare_thresholdStructures_1_tiers_1_sharePercentage": 28.0,
+    "contract_revenueShare_thresholdStructures_1_tiers_1_amount": 0.0,
+    "contract_revenueShare_thresholdStructures_1_validationThresholdType": "RevenuePercentage",
+    "contract_revenueShare_thresholdStructures_1_validationThresholdAmount": 5.0,
+    "contract_revenueShare_thresholdStructures_1_invoiceGroup": 1,
+    "contract_bellServiceFee_enabled": false,
+    "contract_midMonthAdvance_enabled": false,
+    "contract_depositedRevenue_enabled": true,
+    "contract_depositedRevenue_depositData_1_id": "6d8d42a7-a0ef-ef11-be20-7c1e5259f653",
+    "contract_depositedRevenue_depositData_1_towneParkResponsibleForParkingTax": false,
+    "contract_depositedRevenue_depositData_1_depositedRevenueEnabled": true,
+    "contract_depositedRevenue_depositData_1_invoiceGroup": 1,
+    "contract_billableAccounts_enabled": false,
+    "contract_managementAgreement_enabled": false,
+    "contract_enabled_components": [
+      "revenueShare",
+      "depositedRevenue"
+    ],
+    "contract_payroll_accounts_enabled": [],
+    "contract_expense_accounts_enabled": [],
+    "contract_financials": {
+      "annualContractValue": 0.0,
+      "estimatedMonthlyRevenue": 0.0,
+      "contractTerm": 36,
+      "contractTermUnit": "Months",
+      "contractType": "Revenue Share; Deposited Revenue",
+      "billingType": "Arrears",
+      "district": "D - Los Angeles",
+      "region": NaN,
+      "siteNumber": "2001"
+    }
+  }
+}

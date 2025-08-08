@@ -1,0 +1,188 @@
+{
+  "metadata": {
+    "siteNumber": "1142",
+    "customerName": "Azzurra",
+    "customerID": "CUST-1142",
+    "contractEffectiveDate": "2025-05-23",
+    "contractEndDate": "",
+    "contractStatus": "active",
+    "lastModifiedDate": "2025-05-23",
+    "contractVersion": "1.0",
+    "contractType": "Per Labor Hour",
+    "accountManager": "Kelvin Yam",
+    "paymentTerms": "Due in 30 Days",
+    "notes": "Increase each 6/1 by the greater of 3% or ECI\n",
+    "location": {
+      "region": NaN,
+      "district": "D - Los Angeles - HC",
+      "state": "CA",
+      "city": "Marina Del Rey",
+      "address": "13700 Marina Pointe Drive, Marina Del Rey, CA 90292",
+      "siteType": ""
+    }
+  },
+  "original": {
+    "id": "4ada12a0-91d8-ef11-8eea-0022480a57ac",
+    "purchaseOrder": null,
+    "paymentTerms": "Due in 30 Days",
+    "billingType": "Arrears",
+    "incrementMonth": "June",
+    "incrementAmount": 3.0,
+    "consumerPriceIndex": false,
+    "notes": "Increase each 6/1 by the greater of 3% or ECI\n",
+    "deviationAmount": 2500.0,
+    "deviationPercentage": 10.0,
+    "deposits": false,
+    "contractType": "Per Labor Hour",
+    "supportingReports": [
+      "HoursBackupReport"
+    ],
+    "invoiceGrouping": {
+      "enabled": false,
+      "invoiceGroups": []
+    },
+    "fixedFee": {
+      "enabled": false,
+      "serviceRates": []
+    },
+    "perLaborHour": {
+      "enabled": true,
+      "hoursBackupReport": true,
+      "jobRates": [
+        {
+          "id": "50b4a9dc-b7e0-ef11-a731-7c1e527e6e28",
+          "name": "Valet Services",
+          "displayName": "GSA",
+          "rate": 29.92,
+          "overtimeRate": 44.88,
+          "jobCode": "GSA",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "51b4a9dc-b7e0-ef11-a731-7c1e527e6e28",
+          "name": "Valet Services",
+          "displayName": "GSC",
+          "rate": 29.92,
+          "overtimeRate": 44.88,
+          "jobCode": "GSC",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        },
+        {
+          "id": "52b4a9dc-b7e0-ef11-a731-7c1e527e6e28",
+          "name": "Valet Services",
+          "displayName": "Manager",
+          "rate": 29.92,
+          "overtimeRate": 44.88,
+          "jobCode": "ACCTMGR",
+          "startDate": null,
+          "endDate": null,
+          "invoiceGroup": 1
+        }
+      ]
+    },
+    "perOccupiedRoom": {
+      "enabled": false,
+      "roomRate": 0.0,
+      "invoiceGroup": 1
+    },
+    "revenueShare": {
+      "enabled": false,
+      "thresholdStructures": []
+    },
+    "bellServiceFee": {
+      "enabled": false,
+      "bellServices": []
+    },
+    "midMonthAdvance": {
+      "enabled": false,
+      "midMonthAdvances": []
+    },
+    "depositedRevenue": {
+      "enabled": false,
+      "depositData": []
+    },
+    "billableAccounts": {
+      "enabled": false,
+      "billableAccountsData": []
+    },
+    "managementAgreement": {
+      "enabled": false,
+      "ManagementFees": []
+    }
+  },
+  "flattened": {
+    "contract_id": "4ada12a0-91d8-ef11-8eea-0022480a57ac",
+    "contract_purchaseOrder": null,
+    "contract_paymentTerms": "Due in 30 Days",
+    "contract_billingType": "Arrears",
+    "contract_incrementMonth": "June",
+    "contract_incrementAmount": 3.0,
+    "contract_consumerPriceIndex": false,
+    "contract_notes": "Increase each 6/1 by the greater of 3% or ECI\n",
+    "contract_deviationAmount": 2500.0,
+    "contract_deviationPercentage": 10.0,
+    "contract_deposits": false,
+    "contract_contractType": "Per Labor Hour",
+    "contract_supportingReports_1": "HoursBackupReport",
+    "contract_invoiceGrouping_enabled": false,
+    "contract_fixedFee_enabled": false,
+    "contract_perLaborHour_enabled": true,
+    "contract_perLaborHour_hoursBackupReport": true,
+    "contract_perLaborHour_jobRates_1_id": "50b4a9dc-b7e0-ef11-a731-7c1e527e6e28",
+    "contract_perLaborHour_jobRates_1_name": "Valet Services",
+    "contract_perLaborHour_jobRates_1_displayName": "GSA",
+    "contract_perLaborHour_jobRates_1_rate": 29.92,
+    "contract_perLaborHour_jobRates_1_overtimeRate": 44.88,
+    "contract_perLaborHour_jobRates_1_jobCode": "GSA",
+    "contract_perLaborHour_jobRates_1_startDate": null,
+    "contract_perLaborHour_jobRates_1_endDate": null,
+    "contract_perLaborHour_jobRates_1_invoiceGroup": 1,
+    "contract_perLaborHour_jobRates_2_id": "51b4a9dc-b7e0-ef11-a731-7c1e527e6e28",
+    "contract_perLaborHour_jobRates_2_name": "Valet Services",
+    "contract_perLaborHour_jobRates_2_displayName": "GSC",
+    "contract_perLaborHour_jobRates_2_rate": 29.92,
+    "contract_perLaborHour_jobRates_2_overtimeRate": 44.88,
+    "contract_perLaborHour_jobRates_2_jobCode": "GSC",
+    "contract_perLaborHour_jobRates_2_startDate": null,
+    "contract_perLaborHour_jobRates_2_endDate": null,
+    "contract_perLaborHour_jobRates_2_invoiceGroup": 1,
+    "contract_perLaborHour_jobRates_3_id": "52b4a9dc-b7e0-ef11-a731-7c1e527e6e28",
+    "contract_perLaborHour_jobRates_3_name": "Valet Services",
+    "contract_perLaborHour_jobRates_3_displayName": "Manager",
+    "contract_perLaborHour_jobRates_3_rate": 29.92,
+    "contract_perLaborHour_jobRates_3_overtimeRate": 44.88,
+    "contract_perLaborHour_jobRates_3_jobCode": "ACCTMGR",
+    "contract_perLaborHour_jobRates_3_startDate": null,
+    "contract_perLaborHour_jobRates_3_endDate": null,
+    "contract_perLaborHour_jobRates_3_invoiceGroup": 1,
+    "contract_perOccupiedRoom_enabled": false,
+    "contract_perOccupiedRoom_roomRate": 0.0,
+    "contract_perOccupiedRoom_invoiceGroup": 1,
+    "contract_revenueShare_enabled": false,
+    "contract_bellServiceFee_enabled": false,
+    "contract_midMonthAdvance_enabled": false,
+    "contract_depositedRevenue_enabled": false,
+    "contract_billableAccounts_enabled": false,
+    "contract_managementAgreement_enabled": false,
+    "contract_enabled_components": [
+      "perLaborHour"
+    ],
+    "contract_payroll_accounts_enabled": [],
+    "contract_expense_accounts_enabled": [],
+    "contract_financials": {
+      "annualContractValue": 0.0,
+      "estimatedMonthlyRevenue": 0.0,
+      "contractTerm": 36,
+      "contractTermUnit": "Months",
+      "contractType": "Per Labor Hour",
+      "billingType": "Arrears",
+      "district": "D - Los Angeles - HC",
+      "region": NaN,
+      "siteNumber": "1142"
+    }
+  }
+}
