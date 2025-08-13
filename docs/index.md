@@ -97,6 +97,10 @@ tags:
     Comprehensive technical implementation context including integration patterns, platform architecture, and security frameworks for the financial platform ecosystem.
 
     [:octicons-arrow-right-24: System Architecture Hub](knowledge-corpus/system-architecture/integration-architecture/powerbill-integration-patterns.md)
+    
+    [:octicons-arrow-right-24: Revenue Datamart Daily Data Model](knowledge-corpus/technical-specifications/revenue-datamart-daily-data-model.md)
+    
+    [:octicons-arrow-right-24: Towne Park Forecasting System Architecture](knowledge-corpus/technical-specifications/towne-park-forecasting-system-comprehensive-master-architecture.md)
 
 -   :material-account-group:{ .lg .middle } __Role-Based Processes__
 
@@ -113,6 +117,8 @@ tags:
     Code validation and quality assurance documentation including contract validation, system validation, and business rule verification reports.
 
     [:octicons-arrow-right-24: Validation Reports Hub](knowledge-corpus/validation-reports/contract-validation-reports/revenue-share-validation.md)
+    
+    [:octicons-arrow-right-24: Revenue Datamart Daily Code Validation](knowledge-corpus/validation-reports/revenue-datamart-daily-code-validation-report.md)
 
 -   :material-account-voice:{ .lg .middle } __Meeting Transcripts__
 
@@ -160,10 +166,10 @@ The corpus structure supports enterprise knowledge graph generation with:
 ```mermaid
 graph TB
     subgraph "Contract Entities"
-        RS[Revenue Share Contracts]
-        MA[Management Agreements]  
-        PLH[Per Labor Hour Contracts]
         FF[Fixed Fee Contracts]
+        RS[Revenue Share Contracts]
+        MA[Management Agreements]
+        PLH[Per Labor Hour Contracts]
         HC[Hybrid Contracts]
     end
     
@@ -171,6 +177,7 @@ graph TB
         PR[Parking Revenue]
         VR[Valet Revenue]
         BR[Bell Service Revenue]
+        FS[Fixed Service Fees]
     end
     
     subgraph "System Architecture"
@@ -184,7 +191,13 @@ graph TB
         BP[Billing Processes]
         FP[Forecasting Processes]
         VP[Validation Processes]
+        PTEB[PTEB Calculations]
     end
+    
+    FF --> FS
+    FF --> GP
+    FF --> BP
+    FF --> PTEB
     
     RS --> PR
     RS --> VR
@@ -195,18 +208,17 @@ graph TB
     MA --> LG
     MA --> GP
     MA --> FP
+    MA --> PTEB
     
     PLH --> LG
     PLH --> BP
-    
-    FF --> GP
-    FF --> BP
     
     PB --> BP
     PB --> VP
     
     BP --> VP
     FP --> VP
+    PTEB --> VP
 ```
 
 ## :material-compass: AI-First Navigation Principles

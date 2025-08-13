@@ -1,0 +1,85 @@
+name: YAML Front-matter Validation
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'docs/knowledge-corpus/**/*.md'
+      - 'scripts/validate_yaml_frontmatter.py'
+      - 'scripts/validate_yaml_simple.py'
+      - 'validate-frontmatter.py'
+  pull_request:
+    branches: [ main, develop ]
+    paths:
+      - 'docs/knowledge-corpus/**/*.md'
+      - 'scripts/validate_yaml_frontmatter.py'
+      - 'scripts/validate_yaml_simple.py'
+      - 'validate-frontmatter.py'
+
+jobs:
+  validate-frontmatter:
+    runs-on: ubuntu-latest
+    name: Validate YAML Front-matter (Knowledge Corpus Only)
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r scripts/requirements.txt
+        
+    - name: Validate YAML front-matter (Knowledge Corpus Only - Strict Mode)
+      run: |
+        python scripts/validate_yaml_frontmatter.py --path docs/knowledge-corpus/ --strict --quiet
+        
+    - name: Generate validation report (on failure)
+      if: failure()
+      run: |
+        echo "## YAML Front-matter Validation Report (Knowledge Corpus Only)" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "The following issues were found in docs/knowledge-corpus/:" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo '```' >> $GITHUB_STEP_SUMMARY
+        python scripts/validate_yaml_frontmatter.py --path docs/knowledge-corpus/ --output text >> $GITHUB_STEP_SUMMARY
+        echo '```' >> $GITHUB_STEP_SUMMARY
+        
+    - name: Upload validation report as artifact (on failure)
+      if: failure()
+      uses: actions/upload-artifact@v3
+      with:
+        name: frontmatter-validation-report
+        path: |
+          validation-report.json
+        retention-days: 30
+      continue-on-error: true
+      
+    - name: Generate JSON report for artifact
+      if: failure()
+      run: |
+        python scripts/validate_yaml_frontmatter.py --path docs/knowledge-corpus/ --output json > validation-report.json
+
+  validate-frontmatter-fallback:
+    runs-on: ubuntu-latest
+    name: Validate YAML Front-matter (Fallback - Knowledge Corpus Only)
+    if: failure()
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Run simple validation (no dependencies - Knowledge Corpus only)
+      run: |
+        echo "Running fallback validation without external dependencies on docs/knowledge-corpus/..."
+        python scripts/validate_yaml_simple.py docs/knowledge-corpus/

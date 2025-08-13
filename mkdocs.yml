@@ -45,14 +45,28 @@ nav:
   - Home: index.md
   - Financial Entities:
     - Business Rules:
+      - Fixed Fee Contract Configuration Business Rules: knowledge-corpus/business-rules/fixed-fee-contract-configuration-business-rules.md
+      - Hybrid Contract Configuration Business Rules: knowledge-corpus/business-rules/hybrid-contract-configuration-business-rules.md
+      - Management Agreement Contract Business Rules: knowledge-corpus/business-rules/management-agreement-contract-business-rules.md
+      - Per Labor Hour Contract Configuration Business Rules: knowledge-corpus/business-rules/per-labor-hour-contract-configuration-business-rules.md
+      - Revenue Share Contract Business Rules: knowledge-corpus/business-rules/revenue-share-contract-business-rules.md
       - Forecasting Data Validation Business Rules: knowledge-corpus/business-rules/forecasting-data-validation-business-rules.md
   - System Architecture:
     - EDW Integration Technical Specification: knowledge-corpus/technical-specifications/edw-integration-technical-specification.md
+    - Revenue Datamart Daily Data Model: knowledge-corpus/technical-specifications/revenue-datamart-daily-data-model.md
+    - Towne Park Forecasting System Comprehensive Master Architecture: knowledge-corpus/technical-specifications/towne-park-forecasting-system-comprehensive-master-architecture.md
   - Role-Based Processes:
-    - AI-Assisted Sprint Planning Process Guide: knowledge-corpus/user-processes/ai-assisted-sprint-planning-process-guide.md
+     - AI-Assisted Sprint Planning Process Guide: knowledge-corpus/user-processes/ai-assisted-sprint-planning-process-guide.md
+     - Statement Management User Process: knowledge-corpus/user-processes/statement-management-user-process.md
+     - Territory Administration Territory Management Procedures: knowledge-corpus/user-processes/territory-admin-territory-management-procedures.md
   - Validation Reports:
-    - Management Agreement Code Validation: knowledge-corpus/validation-reports/management-agreement-code-validation-report.md
+    - Architecture Revenue Calculations Meeting Code Validation: knowledge-corpus/validation-reports/architecture-revenue-calculations-meeting-code-validation-report.md
+    - Management Agreement Business Rules Code Validation: knowledge-corpus/validation-reports/management-agreement-contract-configuration-business-rules-code-validation-report.md
+    - Validation Integrity Remediation Summary: knowledge-corpus/validation-reports/validation-integrity-remediation-summary-2025-08-08.md
   - Meeting Transcripts:
+    - 12-Month Forecast Architecture Planning - July 2025: knowledge-corpus/meeting-transcripts/12-month-forecast-architecture-planning-meeting-transcript-20250709.md
+    - Architecture & Revenue Calculations Team Notes - August 2025: knowledge-corpus/meeting-transcripts/architecture-revenue-calculations-team-notes-20250805.md
+    - Development Sprint Retrospective Process Improvements - July 2025: knowledge-corpus/meeting-transcripts/development-sprint-retrospective-process-improvements-20250731.md
     - Sprint 28 Management Agreement Development: knowledge-corpus/meeting-transcripts/sprint28-management-agreement-development-meeting.md
     - Sprint 29 Budget vs Actuals Development: knowledge-corpus/meeting-transcripts/sprint29-budget-actuals-development-meeting.md
     - Sprint 30 Forecasting Variance Development: knowledge-corpus/meeting-transcripts/sprint30-forecasting-variance-development-meeting.md

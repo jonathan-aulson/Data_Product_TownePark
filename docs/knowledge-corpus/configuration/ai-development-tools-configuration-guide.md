@@ -1,9 +1,13 @@
 ---
 title: "AI Development Tools Configuration Guide"
+description: "Comprehensive configuration instructions for AI development tools used by the Towne Park development team, including Root Code setup, model selection, API configuration, and profile management for optimal AI-assisted development workflows."
 date: "2025-07-23"
+created_date: "2025-07-23"
+last_updated_date: "2025-08-08"
 version: "1.0"
 status: "Active"
 author: "Towne Park Development Team"
+owner: "Javier Casas"
 reviewer: "Javier Casas"
 tags: ["AI-tools", "configuration", "development", "root-code", "API-setup", "model-management"]
 related_docs: 
@@ -16,12 +20,15 @@ effective_date: "2025-06-18"
 
 # FIBO Financial Ontology Classification
 fibo_classification:
+  fibo_type: "fibo-fnd-arr-doc:Document"
   primary_concept: "fibo-fnd-arr-doc:Document"
   secondary_concepts:
     - "fibo-fnd-gao-obj:Objective"
     - "fibo-fnd-utl-av:Arrangement"
     - "fibo-fnd-rel-rel:Reference"
     - "fibo-fbc-fct-fse:FinancialServiceEntity"
+  domain_extensions:
+    towne_park_context: "AI development tools configuration and management"
   towne_park_extensions:
     - "tp:AIToolsConfiguration"
     - "tp:DevelopmentEnvironmentSetup"
@@ -32,6 +39,35 @@ fibo_classification:
   ontology_version: "2024.Q3"
 
 # Policy Governance Framework
+governance:
+  access_level: "internal"
+  compliance_tags: ["AI-tools", "configuration", "development-standards", "security"]
+  policy_constraints: ["API key security", "model selection standards", "peer review required"]
+  policy_evaluation:
+    evaluated_date: "2025-08-08"
+    applicable_policies: ["AI Tool Usage Policy", "Development Standards", "Security Configuration Policy"]
+    compliance_status: "compliant"
+  governance_level: "enterprise"
+  policy_type: "configuration_standard"
+  enforcement_mechanism: "implementation_required"
+  compliance_requirements:
+    - "All AI development tools must follow standardized configuration procedures"
+    - "API key management must adhere to security best practices"
+    - "Model selection must consider cost optimization and performance requirements"
+    - "All AI-generated code must undergo peer review and quality validation"
+  audit_trail:
+    - policy_created: "2025-07-23"
+    - last_reviewed: "2025-07-23"
+    - next_review: "2025-10-23"
+  stakeholders:
+    - "Javier Casas"
+    - "Development Team"
+    - "DevOps Team"
+    - "System Administrators"
+  risk_level: "medium"
+  business_impact: "high"
+
+# Policy Governance Framework (Legacy)
 policy_governance:
   governance_level: "enterprise"
   policy_type: "configuration_standard"
@@ -89,6 +125,43 @@ knowledge_graph:
   last_validated: "2025-08-07"
 
 # Autonomous Context Discovery
+discovery_metadata:
+  discovered_date: "2025-08-07"
+  confidence_score: 0.95
+  validation_status: "validated"
+  knowledge_graph_id: "kg_ai_dev_tools_config_001"
+  discovery_method: "comprehensive_analysis"
+  key_insights:
+    - "Establishes standardized configuration framework for AI development tools across the team"
+    - "Provides comprehensive model profile management with cost optimization strategies"
+    - "Defines security best practices for API key management and data protection"
+    - "Implements quality assurance processes for AI-generated code review and validation"
+    - "Enables seamless integration with existing development workflows and tools"
+  business_value: "high"
+  technical_complexity: "medium"
+  implementation_priority: "high"
+  discovery_confidence: 0.95
+  related_processes:
+    - "Software Development Lifecycle"
+    - "Code Review Process"
+    - "API Management"
+    - "Security Compliance"
+    - "Developer Onboarding"
+  stakeholder_impact:
+    - role: "Development Team"
+      impact_level: "critical"
+      impact_type: "productivity"
+    - role: "DevOps Team"
+      impact_level: "high"
+      impact_type: "operational"
+    - role: "System Administrators"
+      impact_level: "medium"
+      impact_type: "configuration"
+    - role: "Security Team"
+      impact_level: "high"
+      impact_type: "compliance"
+
+# Context Discovery (Legacy)
 context_discovery:
   discovery_method: "comprehensive_analysis"
   key_insights:
@@ -138,6 +211,15 @@ enterprise_metadata:
     - "Security Configuration Standards"
   change_control: "version_controlled"
   approval_authority: "Javier Casas"
+
+# Business Domains
+business_domains:
+  - "Software Development"
+  - "AI Tool Configuration"
+  - "Development Environment Management"
+  - "API Integration"
+  - "Security Configuration"
+  - "Team Productivity"
 ---
 
 # AI Development Tools Configuration Guide

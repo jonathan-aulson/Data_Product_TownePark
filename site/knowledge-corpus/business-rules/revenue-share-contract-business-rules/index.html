@@ -1,0 +1,1715 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Comprehensive business rules and specifications for revenue share contract types, including calculation methods, validation rules, implementation guidelines, and Power Platform formula validation" name="description"/>
+<link href="https://jonathan-aulson.github.io/Data_Product_TownePark/knowledge-corpus/business-rules/revenue-share-contract-business-rules/" rel="canonical"/>
+<link href="../per-labor-hour-contract-configuration-business-rules/" rel="prev"/>
+<link href="../forecasting-data-validation-business-rules/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.15" name="generator"/>
+<title>Revenue Share Contract Business Rules - Towne Park Data Product</title>
+<link href="../../../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#revenue-share-contract-business-rules">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Towne Park Data Product" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Towne Park Data Product">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Towne Park Data Product
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Revenue Share Contract Business Rules
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../fixed-fee-contract-configuration-business-rules/">
+          
+  
+  
+  Financial Entities
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../technical-specifications/edw-integration-technical-specification/">
+          
+  
+  
+  System Architecture
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../user-processes/ai-assisted-sprint-planning-process-guide/">
+          
+  
+  
+  Role-Based Processes
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../validation-reports/architecture-revenue-calculations-meeting-code-validation-report/">
+          
+  
+  
+  Validation Reports
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../meeting-transcripts/12-month-forecast-architecture-planning-meeting-transcript-20250709/">
+          
+  
+  
+  Meeting Transcripts
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../standards/ai-content-safety-checklist/">
+          
+  
+  
+  Standards Framework
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../configuration/ai-development-tools-configuration-guide/">
+          
+  
+  
+  Configuration Guides
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Towne Park Data Product" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Towne Park Data Product">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Towne Park Data Product
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    Home
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    Financial Entities
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Financial Entities
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+<span class="md-ellipsis">
+    Business Rules
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            Business Rules
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../fixed-fee-contract-configuration-business-rules/">
+<span class="md-ellipsis">
+    Fixed Fee Contract Configuration Business Rules
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hybrid-contract-configuration-business-rules/">
+<span class="md-ellipsis">
+    Hybrid Contract Configuration Business Rules
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../management-agreement-contract-business-rules/">
+<span class="md-ellipsis">
+    Management Agreement Contract Business Rules
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../per-labor-hour-contract-configuration-business-rules/">
+<span class="md-ellipsis">
+    Per Labor Hour Contract Configuration Business Rules
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Revenue Share Contract Business Rules
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Revenue Share Contract Business Rules
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#contract-definition">
+<span class="md-ellipsis">
+      Contract Definition
+    </span>
+</a>
+<nav aria-label="Contract Definition" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#revenue-share-contract-characteristics">
+<span class="md-ellipsis">
+      Revenue Share Contract Characteristics
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#contract-components">
+<span class="md-ellipsis">
+      Contract Components
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rules">
+<span class="md-ellipsis">
+      Business Rules
+    </span>
+</a>
+<nav aria-label="Business Rules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core-revenue-share-calculation-rules">
+<span class="md-ellipsis">
+      Core Revenue Share Calculation Rules
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#progressive-tier-calculation-rules">
+<span class="md-ellipsis">
+      Progressive Tier Calculation Rules
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#revenue-code-processing-rules">
+<span class="md-ellipsis">
+      Revenue Code Processing Rules
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#revenue-recognition-rules">
+<span class="md-ellipsis">
+      Revenue Recognition Rules
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deposited-revenue-processing-rules">
+<span class="md-ellipsis">
+      Deposited Revenue Processing Rules
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#validation-rules">
+<span class="md-ellipsis">
+      Validation Rules
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation-guidelines">
+<span class="md-ellipsis">
+      Implementation Guidelines
+    </span>
+</a>
+<nav aria-label="Implementation Guidelines" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#contract-setup-configuration">
+<span class="md-ellipsis">
+      Contract Setup Configuration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#revenue-tracking-configuration">
+<span class="md-ellipsis">
+      Revenue Tracking Configuration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-configuration">
+<span class="md-ellipsis">
+      Calculation Configuration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#revenue-categories-and-code-classifications">
+<span class="md-ellipsis">
+      Revenue Categories and Code Classifications
+    </span>
+</a>
+<nav aria-label="Revenue Categories and Code Classifications" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#primary-revenue-categories">
+<span class="md-ellipsis">
+      Primary Revenue Categories
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#secondary-revenue-categories">
+<span class="md-ellipsis">
+      Secondary Revenue Categories
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#excluded-revenue-categories">
+<span class="md-ellipsis">
+      Excluded Revenue Categories
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#progressive-tier-structures">
+<span class="md-ellipsis">
+      Progressive Tier Structures
+    </span>
+</a>
+<nav aria-label="Progressive Tier Structures" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standard-tier-configuration">
+<span class="md-ellipsis">
+      Standard Tier Configuration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tier-calculation-methodology">
+<span class="md-ellipsis">
+      Tier Calculation Methodology
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#collection-model-processing">
+<span class="md-ellipsis">
+      Collection Model Processing
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#percentage-structures">
+<span class="md-ellipsis">
+      Percentage Structures
+    </span>
+</a>
+<nav aria-label="Percentage Structures" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#flat-percentage-structure">
+<span class="md-ellipsis">
+      Flat Percentage Structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tiered-percentage-structure">
+<span class="md-ellipsis">
+      Tiered Percentage Structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#category-specific-percentages">
+<span class="md-ellipsis">
+      Category-Specific Percentages
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#minimum-guarantees">
+<span class="md-ellipsis">
+      Minimum Guarantees
+    </span>
+</a>
+<nav aria-label="Minimum Guarantees" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#guarantee-types">
+<span class="md-ellipsis">
+      Guarantee Types
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#guarantee-application">
+<span class="md-ellipsis">
+      Guarantee Application
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#revenue-validation-and-compliance">
+<span class="md-ellipsis">
+      Revenue Validation and Compliance
+    </span>
+</a>
+<nav aria-label="Revenue Validation and Compliance" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#validation-procedures">
+<span class="md-ellipsis">
+      Validation Procedures
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#documentation-requirements">
+<span class="md-ellipsis">
+      Documentation Requirements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-validation">
+<span class="md-ellipsis">
+      Calculation Validation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reporting-validation">
+<span class="md-ellipsis">
+      Reporting Validation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performance-metrics">
+<span class="md-ellipsis">
+      Performance Metrics
+    </span>
+</a>
+<nav aria-label="Performance Metrics" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#revenue-metrics">
+<span class="md-ellipsis">
+      Revenue Metrics
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#share-metrics">
+<span class="md-ellipsis">
+      Share Metrics
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performance-metrics_1">
+<span class="md-ellipsis">
+      Performance Metrics
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#integration-points">
+<span class="md-ellipsis">
+      Integration Points
+    </span>
+</a>
+<nav aria-label="Integration Points" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#powerbill-system-integration">
+<span class="md-ellipsis">
+      PowerBill System Integration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hotel-pms-integration">
+<span class="md-ellipsis">
+      Hotel PMS Integration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#power-platform-integration">
+<span class="md-ellipsis">
+      Power Platform Integration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#great-plains-erp-integration">
+<span class="md-ellipsis">
+      Great Plains ERP Integration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#related-documentation">
+<span class="md-ellipsis">
+      Related Documentation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#version-history">
+<span class="md-ellipsis">
+      Version History
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../forecasting-data-validation-business-rules/">
+<span class="md-ellipsis">
+    Forecasting Data Validation Business Rules
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    System Architecture
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            System Architecture
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../technical-specifications/edw-integration-technical-specification/">
+<span class="md-ellipsis">
+    EDW Integration Technical Specification
+    
+  </span>
+<span class="md-status md-status--Draft"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../technical-specifications/revenue-datamart-daily-data-model/">
+<span class="md-ellipsis">
+    Revenue Datamart Daily Data Model
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../technical-specifications/towne-park-forecasting-system-comprehensive-master-architecture/">
+<span class="md-ellipsis">
+    Towne Park Forecasting System Comprehensive Master Architecture
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Role-Based Processes
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Role-Based Processes
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../user-processes/ai-assisted-sprint-planning-process-guide/">
+<span class="md-ellipsis">
+    AI-Assisted Sprint Planning Process Guide
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../user-processes/statement-management-user-process/">
+<span class="md-ellipsis">
+    Statement Management User Process
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../user-processes/territory-admin-territory-management-procedures/">
+<span class="md-ellipsis">
+    Territory Administration Territory Management Procedures
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Validation Reports
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Validation Reports
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../validation-reports/architecture-revenue-calculations-meeting-code-validation-report/">
+<span class="md-ellipsis">
+    Architecture Revenue Calculations Meeting Code Validation
+    
+  </span>
+<span class="md-status md-status--Validation Complete"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../validation-reports/management-agreement-contract-configuration-business-rules-code-validation-report/">
+<span class="md-ellipsis">
+    Management Agreement Business Rules Code Validation
+    
+  </span>
+<span class="md-status md-status--Validated"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../validation-reports/validation-integrity-remediation-summary-2025-08-08/">
+<span class="md-ellipsis">
+    Validation Integrity Remediation Summary
+    
+  </span>
+<span class="md-status md-status--Complete"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Meeting Transcripts
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Meeting Transcripts
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../meeting-transcripts/12-month-forecast-architecture-planning-meeting-transcript-20250709/">
+<span class="md-ellipsis">
+    12-Month Forecast Architecture Planning - July 2025
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../meeting-transcripts/architecture-revenue-calculations-team-notes-20250805/">
+<span class="md-ellipsis">
+    Architecture &amp; Revenue Calculations Team Notes - August 2025
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../meeting-transcripts/development-sprint-retrospective-process-improvements-20250731/">
+<span class="md-ellipsis">
+    Development Sprint Retrospective Process Improvements - July 2025
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../meeting-transcripts/sprint28-management-agreement-development-meeting/">
+<span class="md-ellipsis">
+    Sprint 28 Management Agreement Development
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../meeting-transcripts/sprint29-budget-actuals-development-meeting/">
+<span class="md-ellipsis">
+    Sprint 29 Budget vs Actuals Development
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../meeting-transcripts/sprint30-forecasting-variance-development-meeting/">
+<span class="md-ellipsis">
+    Sprint 30 Forecasting Variance Development
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../meeting-transcripts/daily-scrum-development-progress-team-notes/">
+<span class="md-ellipsis">
+    Daily Scrum Development Progress
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    Standards Framework
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            Standards Framework
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../standards/ai-content-safety-checklist/">
+<span class="md-ellipsis">
+    AI Content Safety Checklist
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
+    Configuration Guides
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            Configuration Guides
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../configuration/ai-development-tools-configuration-guide/">
+<span class="md-ellipsis">
+    AI Development Tools Configuration Guide
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#contract-definition">
+<span class="md-ellipsis">
+      Contract Definition
+    </span>
+</a>
+<nav aria-label="Contract Definition" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#revenue-share-contract-characteristics">
+<span class="md-ellipsis">
+      Revenue Share Contract Characteristics
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#contract-components">
+<span class="md-ellipsis">
+      Contract Components
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rules">
+<span class="md-ellipsis">
+      Business Rules
+    </span>
+</a>
+<nav aria-label="Business Rules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core-revenue-share-calculation-rules">
+<span class="md-ellipsis">
+      Core Revenue Share Calculation Rules
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#progressive-tier-calculation-rules">
+<span class="md-ellipsis">
+      Progressive Tier Calculation Rules
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#revenue-code-processing-rules">
+<span class="md-ellipsis">
+      Revenue Code Processing Rules
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#revenue-recognition-rules">
+<span class="md-ellipsis">
+      Revenue Recognition Rules
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deposited-revenue-processing-rules">
+<span class="md-ellipsis">
+      Deposited Revenue Processing Rules
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#validation-rules">
+<span class="md-ellipsis">
+      Validation Rules
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation-guidelines">
+<span class="md-ellipsis">
+      Implementation Guidelines
+    </span>
+</a>
+<nav aria-label="Implementation Guidelines" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#contract-setup-configuration">
+<span class="md-ellipsis">
+      Contract Setup Configuration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#revenue-tracking-configuration">
+<span class="md-ellipsis">
+      Revenue Tracking Configuration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-configuration">
+<span class="md-ellipsis">
+      Calculation Configuration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#revenue-categories-and-code-classifications">
+<span class="md-ellipsis">
+      Revenue Categories and Code Classifications
+    </span>
+</a>
+<nav aria-label="Revenue Categories and Code Classifications" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#primary-revenue-categories">
+<span class="md-ellipsis">
+      Primary Revenue Categories
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#secondary-revenue-categories">
+<span class="md-ellipsis">
+      Secondary Revenue Categories
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#excluded-revenue-categories">
+<span class="md-ellipsis">
+      Excluded Revenue Categories
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#progressive-tier-structures">
+<span class="md-ellipsis">
+      Progressive Tier Structures
+    </span>
+</a>
+<nav aria-label="Progressive Tier Structures" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standard-tier-configuration">
+<span class="md-ellipsis">
+      Standard Tier Configuration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tier-calculation-methodology">
+<span class="md-ellipsis">
+      Tier Calculation Methodology
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#collection-model-processing">
+<span class="md-ellipsis">
+      Collection Model Processing
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#percentage-structures">
+<span class="md-ellipsis">
+      Percentage Structures
+    </span>
+</a>
+<nav aria-label="Percentage Structures" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#flat-percentage-structure">
+<span class="md-ellipsis">
+      Flat Percentage Structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tiered-percentage-structure">
+<span class="md-ellipsis">
+      Tiered Percentage Structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#category-specific-percentages">
+<span class="md-ellipsis">
+      Category-Specific Percentages
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#minimum-guarantees">
+<span class="md-ellipsis">
+      Minimum Guarantees
+    </span>
+</a>
+<nav aria-label="Minimum Guarantees" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#guarantee-types">
+<span class="md-ellipsis">
+      Guarantee Types
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#guarantee-application">
+<span class="md-ellipsis">
+      Guarantee Application
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#revenue-validation-and-compliance">
+<span class="md-ellipsis">
+      Revenue Validation and Compliance
+    </span>
+</a>
+<nav aria-label="Revenue Validation and Compliance" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#validation-procedures">
+<span class="md-ellipsis">
+      Validation Procedures
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#documentation-requirements">
+<span class="md-ellipsis">
+      Documentation Requirements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-validation">
+<span class="md-ellipsis">
+      Calculation Validation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reporting-validation">
+<span class="md-ellipsis">
+      Reporting Validation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performance-metrics">
+<span class="md-ellipsis">
+      Performance Metrics
+    </span>
+</a>
+<nav aria-label="Performance Metrics" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#revenue-metrics">
+<span class="md-ellipsis">
+      Revenue Metrics
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#share-metrics">
+<span class="md-ellipsis">
+      Share Metrics
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performance-metrics_1">
+<span class="md-ellipsis">
+      Performance Metrics
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#integration-points">
+<span class="md-ellipsis">
+      Integration Points
+    </span>
+</a>
+<nav aria-label="Integration Points" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#powerbill-system-integration">
+<span class="md-ellipsis">
+      PowerBill System Integration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hotel-pms-integration">
+<span class="md-ellipsis">
+      Hotel PMS Integration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#power-platform-integration">
+<span class="md-ellipsis">
+      Power Platform Integration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#great-plains-erp-integration">
+<span class="md-ellipsis">
+      Great Plains ERP Integration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#related-documentation">
+<span class="md-ellipsis">
+      Related Documentation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#version-history">
+<span class="md-ellipsis">
+      Version History
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="revenue-share-contract-business-rules">Revenue Share Contract Business Rules</h1>
+<h2 id="overview">Overview</h2>
+<p>This document contains comprehensive business rules and specifications for revenue share contract types within the Towne Park financial systems. Revenue share contracts represent agreements where Towne Park receives a percentage of the total revenue generated from parking operations or other revenue-generating activities.</p>
+<p><strong>Key Characteristics:</strong>
+- Percentage-based compensation structure
+- Progressive tier calculations for revenue thresholds
+- Multiple revenue code classifications (SD1/SD2, VD1/VD2, VO1/VO2, OR1/OR2)
+- Deposited revenue vs. client collection models
+- Power Platform formula implementation with validation</p>
+<h2 id="contract-definition">Contract Definition</h2>
+<h3 id="revenue-share-contract-characteristics">Revenue Share Contract Characteristics</h3>
+<p><strong>Primary Features:</strong>
+- <strong>Percentage-Based Compensation</strong>: Towne Park receives a predetermined percentage of gross revenue
+- <strong>Revenue Categories</strong>: Different revenue streams with potentially different percentages
+- <strong>Minimum Guarantees</strong>: Optional minimum payment guarantees regardless of revenue
+- <strong>Revenue Reporting</strong>: Regular revenue reporting and validation requirements
+- <strong>Progressive Tiers</strong>: Escalating percentages based on revenue thresholds</p>
+<p><strong>Advanced Features:</strong>
+- <strong>Bell Service Integration</strong>: Special handling for OR1/OR2 revenue codes
+- <strong>Vehicle Count Validation</strong>: Integration with hotel PMS systems for occupancy verification
+- <strong>Deposited Revenue Processing</strong>: Automated handling of client-collected vs. Towne Park-collected revenue
+- <strong>Threshold Structures</strong>: Complex tier calculations with multiple breakpoints</p>
+<h3 id="contract-components">Contract Components</h3>
+<p><strong>Core Components:</strong>
+- <strong>Base Percentage</strong>: Core revenue share percentage
+- <strong>Tiered Percentages</strong>: Different percentages based on revenue thresholds
+- <strong>Revenue Categories</strong>: Specific revenue types included/excluded
+- <strong>Minimum Guarantees</strong>: Guaranteed minimum payments</p>
+<p><strong>Extended Components:</strong>
+- <strong>Revenue Code Mappings</strong>: SD1/SD2 (daily parking), VD1/VD2 (valet daily), VO1/VO2 (valet overnight), OR1/OR2 (bell services)
+- <strong>Collection Model Configuration</strong>: Deposited revenue vs. client collection processing
+- <strong>Threshold Tier Structures</strong>: Progressive percentage increases at defined revenue levels
+- <strong>Bell Service Integration Rules</strong>: Special processing for ancillary revenue streams</p>
+<h2 id="business-rules">Business Rules</h2>
+<h3 id="core-revenue-share-calculation-rules">Core Revenue Share Calculation Rules</h3>
+<ul>
+<li><strong>Rule RS-001</strong>: Revenue share = Gross Revenue × Revenue Share Percentage</li>
+<li><strong>Rule RS-002</strong>: Owner percentage = 100% - Towne Park percentage (with zero floor protection)</li>
+<li><strong>Rule RS-003</strong>: Minimum guarantee applies when calculated share is below minimum</li>
+<li><strong>Rule RS-004</strong>: Revenue categories are calculated separately if different percentages apply</li>
+</ul>
+<h3 id="progressive-tier-calculation-rules">Progressive Tier Calculation Rules</h3>
+<ul>
+<li><strong>Rule RS-005</strong>: Progressive tiers apply incremental percentage increases at defined thresholds</li>
+<li><strong>Rule RS-006</strong>: IF monthly_revenue &gt; $50K THEN base_rate + 2% tier adjustment</li>
+<li><strong>Rule RS-007</strong>: IF monthly_revenue &gt; $100K THEN base_rate + 5% tier adjustment</li>
+<li><strong>Rule RS-008</strong>: Tier calculations are cumulative and apply to revenue within each tier range</li>
+</ul>
+<h3 id="revenue-code-processing-rules">Revenue Code Processing Rules</h3>
+<ul>
+<li><strong>Rule RS-009</strong>: SD1/SD2 revenue codes processed as daily parking revenue</li>
+<li><strong>Rule RS-010</strong>: VD1/VD2 revenue codes processed as valet daily service revenue</li>
+<li><strong>Rule RS-011</strong>: VO1/VO2 revenue codes processed as valet overnight service revenue</li>
+<li><strong>Rule RS-012</strong>: OR1/OR2 revenue codes processed as bell service revenue with special integration</li>
+</ul>
+<h3 id="revenue-recognition-rules">Revenue Recognition Rules</h3>
+<ul>
+<li><strong>Rule RS-013</strong>: Only contracted revenue categories are included in calculations</li>
+<li><strong>Rule RS-014</strong>: Revenue must be validated and verified before calculation</li>
+<li><strong>Rule RS-015</strong>: Adjustments and refunds are deducted from gross revenue</li>
+<li><strong>Rule RS-016</strong>: Revenue is recognized in the period it is earned</li>
+</ul>
+<h3 id="deposited-revenue-processing-rules">Deposited Revenue Processing Rules</h3>
+<ul>
+<li><strong>Rule RS-017</strong>: Deposited revenue model: Towne Park collects and remits owner portion</li>
+<li><strong>Rule RS-018</strong>: Client collection model: Client collects and remits Towne Park portion</li>
+<li><strong>Rule RS-019</strong>: Collection model determines revenue processing workflow and timing</li>
+<li><strong>Rule RS-020</strong>: Revenue validation requirements vary by collection model</li>
+</ul>
+<h3 id="validation-rules">Validation Rules</h3>
+<ul>
+<li><strong>Rule RS-021</strong>: Revenue share percentage must be between 0% and 100%</li>
+<li><strong>Rule RS-022</strong>: Owner percentage calculation must include zero floor protection</li>
+<li><strong>Rule RS-023</strong>: Minimum guarantees cannot exceed maximum possible revenue share</li>
+<li><strong>Rule RS-024</strong>: All revenue must be supported by documentation</li>
+<li><strong>Rule RS-025</strong>: Vehicle count validation required for occupancy-based calculations</li>
+</ul>
+<h2 id="implementation-guidelines">Implementation Guidelines</h2>
+<h3 id="contract-setup-configuration">Contract Setup Configuration</h3>
+<p><strong>Primary Setup:</strong>
+- Define revenue share percentages for each revenue category
+- Establish tiered percentage structures if applicable
+- Configure minimum guarantee amounts and terms
+- Set up revenue reporting and validation procedures</p>
+<p><strong>Advanced Setup:</strong>
+- Configure revenue code mappings (SD1/SD2/VD1/VD2/VO1/VO2/OR1/OR2)
+- Set up progressive tier threshold structures
+- Configure deposited revenue vs. client collection processing
+- Establish bell service integration parameters</p>
+<h3 id="revenue-tracking-configuration">Revenue Tracking Configuration</h3>
+<p><strong>Standard Configuration:</strong>
+- Configure revenue category definitions and tracking
+- Set up automated revenue data collection
+- Implement revenue validation and verification procedures
+- Establish reporting cycles and deadlines</p>
+<p><strong>Advanced Configuration:</strong>
+- Configure hotel PMS integration for vehicle count validation
+- Set up revenue code classification and processing rules
+- Implement deposited revenue processing workflows
+- Configure bell service revenue integration (OR1/OR2 handling)</p>
+<h3 id="calculation-configuration">Calculation Configuration</h3>
+<p><strong>Core Calculation Setup:</strong>
+- Configure automated revenue share calculations
+- Set up tiered percentage calculation logic
+- Implement minimum guarantee comparison and application
+- Establish calculation validation and review procedures</p>
+<p><strong>Advanced Calculation Setup:</strong>
+- Configure progressive tier calculation algorithms
+- Set up revenue code-specific calculation rules
+- Implement collection model-specific processing logic
+- Configure Power Platform formula integration</p>
+<h2 id="revenue-categories-and-code-classifications">Revenue Categories and Code Classifications</h2>
+<h3 id="primary-revenue-categories">Primary Revenue Categories</h3>
+<p><strong>Daily Parking Revenue:</strong>
+- <strong>SD1</strong>: Standard Daily Parking - Tier 1
+  - Calculation method: daily_rate_tier_1
+  - Validation rules: positive_amount_daily_frequency
+  - Business impact: primary_daily_revenue_stream</p>
+<ul>
+<li><strong>SD2</strong>: Standard Daily Parking - Tier 2</li>
+<li>Calculation method: daily_rate_tier_2</li>
+<li>Validation rules: positive_amount_daily_frequency</li>
+<li>Business impact: secondary_daily_revenue_stream</li>
+</ul>
+<p><strong>Valet Service Revenue:</strong>
+- <strong>VD1</strong>: Valet Daily Service - Tier 1
+  - Calculation method: valet_daily_rate_tier_1
+  - Validation rules: positive_amount_service_validation
+  - Business impact: premium_service_revenue</p>
+<ul>
+<li><strong>VD2</strong>: Valet Daily Service - Tier 2</li>
+<li>Calculation method: valet_daily_rate_tier_2</li>
+<li>Validation rules: positive_amount_service_validation</li>
+<li>
+<p>Business impact: premium_service_revenue_tier_2</p>
+</li>
+<li>
+<p><strong>VO1</strong>: Valet Overnight Service - Tier 1</p>
+</li>
+<li>Calculation method: valet_overnight_rate_tier_1</li>
+<li>Validation rules: positive_amount_overnight_validation</li>
+<li>
+<p>Business impact: extended_service_revenue</p>
+</li>
+<li>
+<p><strong>VO2</strong>: Valet Overnight Service - Tier 2</p>
+</li>
+<li>Calculation method: valet_overnight_rate_tier_2</li>
+<li>Validation rules: positive_amount_overnight_validation</li>
+<li>Business impact: extended_service_revenue_tier_2</li>
+</ul>
+<p><strong>Bell Service Revenue:</strong>
+- <strong>OR1</strong>: Other Revenue - Bell Service Tier 1
+  - Calculation method: bell_service_rate_tier_1
+  - Validation rules: positive_amount_service_validation
+  - Business impact: ancillary_service_revenue
+  - Integration notes: Special handling for bell service integration</p>
+<ul>
+<li><strong>OR2</strong>: Other Revenue - Bell Service Tier 2</li>
+<li>Calculation method: bell_service_rate_tier_2</li>
+<li>Validation rules: positive_amount_service_validation</li>
+<li>Business impact: ancillary_service_revenue_tier_2</li>
+<li>Integration notes: Special handling for bell service integration</li>
+</ul>
+<h3 id="secondary-revenue-categories">Secondary Revenue Categories</h3>
+<p><strong>Monthly Parking:</strong>
+- <strong>SM1</strong>: Standard Monthly Parking - Tier 1
+- <strong>SM2</strong>: Standard Monthly Parking - Tier 2</p>
+<p><strong>Event and Validation Revenue:</strong>
+- Event Parking: Special event parking revenue
+- Validation Revenue: Parking validation revenue
+- Ancillary Services: Additional service revenue</p>
+<h3 id="excluded-revenue-categories">Excluded Revenue Categories</h3>
+<ul>
+<li><strong>Capital Improvements</strong>: Revenue from capital asset sales</li>
+<li><strong>Insurance Proceeds</strong>: Insurance claim proceeds</li>
+<li><strong>Tax Refunds</strong>: Government tax refunds</li>
+<li><strong>Interest Income</strong>: Investment interest income</li>
+</ul>
+<h2 id="progressive-tier-structures">Progressive Tier Structures</h2>
+<h3 id="standard-tier-configuration">Standard Tier Configuration</h3>
+<p><strong>Tier 1: Base Revenue (0 - $50,000)</strong>
+- Base percentage applies
+- No tier adjustment
+- Standard processing rules</p>
+<p><strong>Tier 2: Growth Revenue ($50,001 - $100,000)</strong>
+- Base percentage + 2% adjustment
+- Progressive calculation applies
+- Enhanced validation requirements</p>
+<p><strong>Tier 3: Premium Revenue ($100,001+)</strong>
+- Base percentage + 5% adjustment
+- Maximum tier benefits
+- Comprehensive audit requirements</p>
+<h3 id="tier-calculation-methodology">Tier Calculation Methodology</h3>
+<p><strong>Progressive Calculation Example:</strong>
+<div class="highlight"><pre><span></span><code>Monthly Revenue: $120,000
+Base Rate: 15%
+
+Tier 1 (0-50K): $50,000 × 15% = $7,500
+Tier 2 (50K-100K): $50,000 × 17% = $8,500
+Tier 3 (100K+): $20,000 × 20% = $4,000
+Total Revenue Share: $20,000
+</code></pre></div></p>
+<h3 id="collection-model-processing">Collection Model Processing</h3>
+<p><strong>Deposited Revenue Model:</strong>
+- Towne Park collects all revenue
+- Calculates owner portion
+- Remits owner percentage to client
+- Retains Towne Park percentage</p>
+<p><strong>Client Collection Model:</strong>
+- Client collects all revenue
+- Calculates Towne Park portion
+- Remits Towne Park percentage
+- Retains owner portion</p>
+<h2 id="percentage-structures">Percentage Structures</h2>
+<h3 id="flat-percentage-structure">Flat Percentage Structure</h3>
+<ul>
+<li>Single percentage applies to all qualifying revenue</li>
+<li>Simplest calculation method</li>
+<li>Most common for smaller operations</li>
+<li>Easy to understand and implement</li>
+</ul>
+<h3 id="tiered-percentage-structure">Tiered Percentage Structure</h3>
+<ul>
+<li>Different percentages for different revenue levels</li>
+<li>Incentivizes higher revenue performance</li>
+<li>More complex calculation requirements</li>
+<li>Common for larger operations</li>
+</ul>
+<h3 id="category-specific-percentages">Category-Specific Percentages</h3>
+<ul>
+<li>Different percentages for different revenue categories</li>
+<li>Reflects different profit margins by category</li>
+<li>Requires detailed revenue categorization</li>
+<li>More complex but more precise</li>
+</ul>
+<h2 id="minimum-guarantees">Minimum Guarantees</h2>
+<h3 id="guarantee-types">Guarantee Types</h3>
+<ul>
+<li><strong>Monthly Minimum</strong>: Guaranteed minimum monthly payment</li>
+<li><strong>Annual Minimum</strong>: Guaranteed minimum annual payment</li>
+<li><strong>Seasonal Minimum</strong>: Guaranteed minimum for specific seasons</li>
+<li><strong>Performance Minimum</strong>: Minimum based on performance metrics</li>
+</ul>
+<h3 id="guarantee-application">Guarantee Application</h3>
+<ul>
+<li>Applied when calculated revenue share is below guarantee</li>
+<li>Typically reconciled annually or at contract end</li>
+<li>May include true-up provisions for over-payments</li>
+<li>Often includes performance requirements</li>
+</ul>
+<h2 id="revenue-validation-and-compliance">Revenue Validation and Compliance</h2>
+<h3 id="validation-procedures">Validation Procedures</h3>
+<ul>
+<li>Monthly revenue reporting and reconciliation</li>
+<li>Third-party audit rights and procedures</li>
+<li>Revenue documentation and support requirements</li>
+<li>Dispute resolution procedures</li>
+</ul>
+<h3 id="documentation-requirements">Documentation Requirements</h3>
+<ul>
+<li>Daily revenue reports and cash reconciliation</li>
+<li>Monthly financial statements</li>
+<li>Annual audited financial statements</li>
+<li>Supporting documentation for all revenue</li>
+</ul>
+<h3 id="calculation-validation">Calculation Validation</h3>
+<ul>
+<li>Verify percentage calculations are accurate</li>
+<li>Validate tiered percentage applications</li>
+<li>Confirm minimum guarantee comparisons</li>
+<li>Review calculation methodology compliance</li>
+</ul>
+<h3 id="reporting-validation">Reporting Validation</h3>
+<ul>
+<li>Validate revenue reporting accuracy and completeness</li>
+<li>Verify reporting timeline compliance</li>
+<li>Confirm documentation requirements are met</li>
+<li>Review audit trail completeness</li>
+</ul>
+<h2 id="performance-metrics">Performance Metrics</h2>
+<h3 id="revenue-metrics">Revenue Metrics</h3>
+<ul>
+<li>Gross revenue by category</li>
+<li>Revenue growth trends</li>
+<li>Revenue per unit metrics</li>
+<li>Seasonal revenue patterns</li>
+</ul>
+<h3 id="share-metrics">Share Metrics</h3>
+<ul>
+<li>Revenue share amounts</li>
+<li>Percentage realization rates</li>
+<li>Minimum guarantee utilization</li>
+<li>Owner vs. Towne Park share analysis</li>
+</ul>
+<h3 id="performance-metrics_1">Performance Metrics</h3>
+<ul>
+<li>Revenue per space</li>
+<li>Occupancy rates</li>
+<li>Average transaction values</li>
+<li>Customer satisfaction scores</li>
+</ul>
+<h2 id="integration-points">Integration Points</h2>
+<h3 id="powerbill-system-integration">PowerBill System Integration</h3>
+<ul>
+<li>Contract configuration and setup</li>
+<li>Revenue data collection and processing</li>
+<li>Calculation engine integration</li>
+<li>Statement generation and distribution</li>
+</ul>
+<h3 id="hotel-pms-integration">Hotel PMS Integration</h3>
+<ul>
+<li>Occupancy data validation</li>
+<li>Vehicle count verification</li>
+<li>Revenue validation cross-checks</li>
+<li>Real-time data synchronization</li>
+</ul>
+<h3 id="power-platform-integration">Power Platform Integration</h3>
+<ul>
+<li>Formula-based calculations</li>
+<li>Workflow automation</li>
+<li>Approval processes</li>
+<li>Audit trail generation</li>
+</ul>
+<h3 id="great-plains-erp-integration">Great Plains ERP Integration</h3>
+<ul>
+<li>Financial posting and reconciliation</li>
+<li>General ledger integration</li>
+<li>Accounts receivable processing</li>
+<li>Financial reporting</li>
+</ul>
+<h2 id="related-documentation">Related Documentation</h2>
+<ul>
+<li><a href="contract-types-overview.md">Contract Types Overview</a></li>
+<li><a href="../management-agreement-contract-business-rules/">Management Agreement Contract Business Rules</a></li>
+<li><a href="../contracts/contract-configuration-business-rules.md">Contract Configuration Business Rules</a></li>
+<li><a href="../billing/billing-business-rules.md">Billing Business Rules</a></li>
+<li><a href="../billing/revenue-management-business-rules.md">Revenue Management Business Rules</a></li>
+<li><a href="../../configuration/contracts/contract-configuration-setup.md">Contract Configuration Setup</a></li>
+<li><a href="../validation-reports/revenue-share-contract-code-validation-report.md">Revenue Share Contract Code Validation Report</a></li>
+</ul>
+<h2 id="version-history">Version History</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>2025-07-28</td>
+<td>Initial creation of revenue share contract business rules</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>2025-08-08</td>
+<td>Enhanced with progressive tiers, revenue codes, collection models, Power Platform integration, and comprehensive validation rules</td>
+</tr>
+</tbody>
+</table>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="Last update">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 8, 2025 21:48:01 UTC">August 8, 2025</span>
+</span>
+</aside>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+<script src="../../../javascripts/extra.js"></script>
+</body>
+</html>

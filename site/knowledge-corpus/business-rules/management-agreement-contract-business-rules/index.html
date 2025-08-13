@@ -1,0 +1,3301 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Comprehensive business rules and calculation logic for Management Agreement contracts including management fees, billable accounts, insurance calculations, claims processing, profit sharing, and support services" name="description"/>
+<link href="https://jonathan-aulson.github.io/Data_Product_TownePark/knowledge-corpus/business-rules/management-agreement-contract-business-rules/" rel="canonical"/>
+<link href="../hybrid-contract-configuration-business-rules/" rel="prev"/>
+<link href="../per-labor-hour-contract-configuration-business-rules/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.15" name="generator"/>
+<title>Management Agreement Contract Business Rules - Towne Park Data Product</title>
+<link href="../../../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#management-agreement-contract-business-rules">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Towne Park Data Product" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Towne Park Data Product">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Towne Park Data Product
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Management Agreement Contract Business Rules
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../fixed-fee-contract-configuration-business-rules/">
+          
+  
+  
+  Financial Entities
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../technical-specifications/edw-integration-technical-specification/">
+          
+  
+  
+  System Architecture
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../user-processes/ai-assisted-sprint-planning-process-guide/">
+          
+  
+  
+  Role-Based Processes
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../validation-reports/architecture-revenue-calculations-meeting-code-validation-report/">
+          
+  
+  
+  Validation Reports
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../meeting-transcripts/12-month-forecast-architecture-planning-meeting-transcript-20250709/">
+          
+  
+  
+  Meeting Transcripts
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../standards/ai-content-safety-checklist/">
+          
+  
+  
+  Standards Framework
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../configuration/ai-development-tools-configuration-guide/">
+          
+  
+  
+  Configuration Guides
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Towne Park Data Product" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Towne Park Data Product">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Towne Park Data Product
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    Home
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    Financial Entities
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Financial Entities
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+<span class="md-ellipsis">
+    Business Rules
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            Business Rules
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../fixed-fee-contract-configuration-business-rules/">
+<span class="md-ellipsis">
+    Fixed Fee Contract Configuration Business Rules
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../hybrid-contract-configuration-business-rules/">
+<span class="md-ellipsis">
+    Hybrid Contract Configuration Business Rules
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Management Agreement Contract Business Rules
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Management Agreement Contract Business Rules
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#management-fee-calculation-rules">
+<span class="md-ellipsis">
+      Management Fee Calculation Rules
+    </span>
+</a>
+<nav aria-label="Management Fee Calculation Rules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fixed-fee-method">
+<span class="md-ellipsis">
+      Fixed Fee Method
+    </span>
+</a>
+<nav aria-label="Fixed Fee Method" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-001-fixed-fee-calculation">
+<span class="md-ellipsis">
+      Business Rule MA-001: Fixed Fee Calculation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-formula">
+<span class="md-ellipsis">
+      Calculation Formula
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example">
+<span class="md-ellipsis">
+      Example
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#per-labor-hour-method">
+<span class="md-ellipsis">
+      Per Labor Hour Method
+    </span>
+</a>
+<nav aria-label="Per Labor Hour Method" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-002-per-labor-hour-calculation">
+<span class="md-ellipsis">
+      Business Rule MA-002: Per Labor Hour Calculation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-formula_1">
+<span class="md-ellipsis">
+      Calculation Formula
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#job-code-rate-structure">
+<span class="md-ellipsis">
+      Job Code Rate Structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example_1">
+<span class="md-ellipsis">
+      Example
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#revenue-percentage-method">
+<span class="md-ellipsis">
+      Revenue Percentage Method
+    </span>
+</a>
+<nav aria-label="Revenue Percentage Method" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-003-revenue-percentage-calculation">
+<span class="md-ellipsis">
+      Business Rule MA-003: Revenue Percentage Calculation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-formula_2">
+<span class="md-ellipsis">
+      Calculation Formula
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example_2">
+<span class="md-ellipsis">
+      Example
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#billable-accounts-rules">
+<span class="md-ellipsis">
+      Billable Accounts Rules
+    </span>
+</a>
+<nav aria-label="Billable Accounts Rules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#payroll-account-inclusion-6000-series">
+<span class="md-ellipsis">
+      Payroll Account Inclusion (6000-series)
+    </span>
+</a>
+<nav aria-label="Payroll Account Inclusion (6000-series)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-004-payroll-account-configuration">
+<span class="md-ellipsis">
+      Business Rule MA-004: Payroll Account Configuration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standard-6000-series-accounts">
+<span class="md-ellipsis">
+      Standard 6000-Series Accounts
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#default-excluded-accounts">
+<span class="md-ellipsis">
+      Default Excluded Accounts
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#expense-account-inclusion-7000-series">
+<span class="md-ellipsis">
+      Expense Account Inclusion (7000-series)
+    </span>
+</a>
+<nav aria-label="Expense Account Inclusion (7000-series)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-005-expense-account-configuration">
+<span class="md-ellipsis">
+      Business Rule MA-005: Expense Account Configuration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standard-7000-series-accounts">
+<span class="md-ellipsis">
+      Standard 7000-Series Accounts
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#default-excluded-accounts_1">
+<span class="md-ellipsis">
+      Default Excluded Accounts
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#insurance-calculation-rules">
+<span class="md-ellipsis">
+      Insurance Calculation Rules
+    </span>
+</a>
+<nav aria-label="Insurance Calculation Rules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fixed-fee-insurance">
+<span class="md-ellipsis">
+      Fixed Fee Insurance
+    </span>
+</a>
+<nav aria-label="Fixed Fee Insurance" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-006-fixed-fee-insurance">
+<span class="md-ellipsis">
+      Business Rule MA-006: Fixed Fee Insurance
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-formula_3">
+<span class="md-ellipsis">
+      Calculation Formula
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#based-on-billable-accounts-insurance">
+<span class="md-ellipsis">
+      Based on Billable Accounts Insurance
+    </span>
+</a>
+<nav aria-label="Based on Billable Accounts Insurance" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-007-percentage-based-insurance-calculation">
+<span class="md-ellipsis">
+      Business Rule MA-007: Percentage-Based Insurance Calculation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-formula_4">
+<span class="md-ellipsis">
+      Calculation Formula
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#insurance-account-breakdown">
+<span class="md-ellipsis">
+      Insurance Account Breakdown
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-calculation">
+<span class="md-ellipsis">
+      Example Calculation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#claims-calculation-rules">
+<span class="md-ellipsis">
+      Claims Calculation Rules
+    </span>
+</a>
+<nav aria-label="Claims Calculation Rules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#claims-cap-application">
+<span class="md-ellipsis">
+      Claims Cap Application
+    </span>
+</a>
+<nav aria-label="Claims Cap Application" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-008-claims-cap-enforcement">
+<span class="md-ellipsis">
+      Business Rule MA-008: Claims Cap Enforcement
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#claims-type-reset-periods">
+<span class="md-ellipsis">
+      Claims Type Reset Periods
+    </span>
+</a>
+<nav aria-label="Claims Type Reset Periods" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#annual-calendar-reset">
+<span class="md-ellipsis">
+      Annual Calendar Reset
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#annual-anniversary-reset">
+<span class="md-ellipsis">
+      Annual Anniversary Reset
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#per-claim-reset">
+<span class="md-ellipsis">
+      Per Claim Reset
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#claims-account-codes">
+<span class="md-ellipsis">
+      Claims Account Codes
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-annual-calendar-cap">
+<span class="md-ellipsis">
+      Example: Annual Calendar Cap
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#profit-share-calculation-rules">
+<span class="md-ellipsis">
+      Profit Share Calculation Rules
+    </span>
+</a>
+<nav aria-label="Profit Share Calculation Rules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#profit-calculation-formula">
+<span class="md-ellipsis">
+      Profit Calculation Formula
+    </span>
+</a>
+<nav aria-label="Profit Calculation Formula" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-009-profit-determination">
+<span class="md-ellipsis">
+      Business Rule MA-009: Profit Determination
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#revenue-components">
+<span class="md-ellipsis">
+      Revenue Components
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#billable-expense-components">
+<span class="md-ellipsis">
+      Billable Expense Components
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#profit-share-determination">
+<span class="md-ellipsis">
+      Profit Share Determination
+    </span>
+</a>
+<nav aria-label="Profit Share Determination" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-010-tiered-profit-share-calculation">
+<span class="md-ellipsis">
+      Business Rule MA-010: Tiered Profit Share Calculation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-tier-structure">
+<span class="md-ellipsis">
+      Example Tier Structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#progressive-calculation-example">
+<span class="md-ellipsis">
+      Progressive Calculation Example
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#accumulation-types">
+<span class="md-ellipsis">
+      Accumulation Types
+    </span>
+</a>
+<nav aria-label="Accumulation Types" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monthly-accumulation">
+<span class="md-ellipsis">
+      Monthly Accumulation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#annual-calendar-accumulation">
+<span class="md-ellipsis">
+      Annual Calendar Accumulation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#annual-anniversary-accumulation">
+<span class="md-ellipsis">
+      Annual Anniversary Accumulation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#non-gl-billable-expenses-integration">
+<span class="md-ellipsis">
+      Non-GL Billable Expenses Integration
+    </span>
+</a>
+<nav aria-label="Non-GL Billable Expenses Integration" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-011-non-gl-expense-impact-on-profit">
+<span class="md-ellipsis">
+      Business Rule MA-011: Non-GL Expense Impact on Profit
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#non-gl-billable-expenses-rules">
+<span class="md-ellipsis">
+      Non-GL Billable Expenses Rules
+    </span>
+</a>
+<nav aria-label="Non-GL Billable Expenses Rules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-methods">
+<span class="md-ellipsis">
+      Calculation Methods
+    </span>
+</a>
+<nav aria-label="Calculation Methods" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fixed-amount-method">
+<span class="md-ellipsis">
+      Fixed Amount Method
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#percentage-of-payroll-method">
+<span class="md-ellipsis">
+      Percentage of Payroll Method
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#percentage-of-revenue-method">
+<span class="md-ellipsis">
+      Percentage of Revenue Method
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#billing-lifecycle">
+<span class="md-ellipsis">
+      Billing Lifecycle
+    </span>
+</a>
+<nav aria-label="Billing Lifecycle" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-012-non-gl-expense-lifecycle">
+<span class="md-ellipsis">
+      Business Rule MA-012: Non-GL Expense Lifecycle
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-non-gl-expenses">
+<span class="md-ellipsis">
+      Example Non-GL Expenses
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#payroll-tax-calculation-pteb-rules">
+<span class="md-ellipsis">
+      Payroll Tax Calculation (PTEB) Rules
+    </span>
+</a>
+<nav aria-label="Payroll Tax Calculation (PTEB) Rules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#actual-method">
+<span class="md-ellipsis">
+      Actual Method
+    </span>
+</a>
+<nav aria-label="Actual Method" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-013-actual-pteb-calculation">
+<span class="md-ellipsis">
+      Business Rule MA-013: Actual PTEB Calculation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#percentage-method">
+<span class="md-ellipsis">
+      Percentage Method
+    </span>
+</a>
+<nav aria-label="Percentage Method" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-014-percentage-pteb-calculation">
+<span class="md-ellipsis">
+      Business Rule MA-014: Percentage PTEB Calculation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pteb-account-components">
+<span class="md-ellipsis">
+      PTEB Account Components
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-formula_5">
+<span class="md-ellipsis">
+      Calculation Formula
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#support-services-calculation-rules">
+<span class="md-ellipsis">
+      Support Services Calculation Rules
+    </span>
+</a>
+<nav aria-label="Support Services Calculation Rules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fixed-support-services">
+<span class="md-ellipsis">
+      Fixed Support Services
+    </span>
+</a>
+<nav aria-label="Fixed Support Services" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-015-fixed-support-services">
+<span class="md-ellipsis">
+      Business Rule MA-015: Fixed Support Services
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#percentage-support-services">
+<span class="md-ellipsis">
+      Percentage Support Services
+    </span>
+</a>
+<nav aria-label="Percentage Support Services" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-016-percentage-based-support-services">
+<span class="md-ellipsis">
+      Business Rule MA-016: Percentage-Based Support Services
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#support-service-types">
+<span class="md-ellipsis">
+      Support Service Types
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-calculations">
+<span class="md-ellipsis">
+      Example Calculations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#general-ledger-account-mapping">
+<span class="md-ellipsis">
+      General Ledger Account Mapping
+    </span>
+</a>
+<nav aria-label="General Ledger Account Mapping" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standard-gl-account-mappings">
+<span class="md-ellipsis">
+      Standard GL Account Mappings
+    </span>
+</a>
+<nav aria-label="Standard GL Account Mappings" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#management-agreement-components">
+<span class="md-ellipsis">
+      Management Agreement Components
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#component-specific-mapping">
+<span class="md-ellipsis">
+      Component-Specific Mapping
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#escalation-rules">
+<span class="md-ellipsis">
+      Escalation Rules
+    </span>
+</a>
+<nav aria-label="Escalation Rules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#management-fee-escalation">
+<span class="md-ellipsis">
+      Management Fee Escalation
+    </span>
+</a>
+<nav aria-label="Management Fee Escalation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-017-management-fee-rate-increases">
+<span class="md-ellipsis">
+      Business Rule MA-017: Management Fee Rate Increases
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#insurance-escalation">
+<span class="md-ellipsis">
+      Insurance Escalation
+    </span>
+</a>
+<nav aria-label="Insurance Escalation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-018-insurance-rate-escalation">
+<span class="md-ellipsis">
+      Business Rule MA-018: Insurance Rate Escalation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#support-services-escalation">
+<span class="md-ellipsis">
+      Support Services Escalation
+    </span>
+</a>
+<nav aria-label="Support Services Escalation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-019-support-services-escalation">
+<span class="md-ellipsis">
+      Business Rule MA-019: Support Services Escalation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#validation-and-business-rules">
+<span class="md-ellipsis">
+      Validation and Business Rules
+    </span>
+</a>
+<nav aria-label="Validation and Business Rules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-completeness-validation">
+<span class="md-ellipsis">
+      Data Completeness Validation
+    </span>
+</a>
+<nav aria-label="Data Completeness Validation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-020-required-configuration-elements">
+<span class="md-ellipsis">
+      Business Rule MA-020: Required Configuration Elements
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-accuracy-validation">
+<span class="md-ellipsis">
+      Calculation Accuracy Validation
+    </span>
+</a>
+<nav aria-label="Calculation Accuracy Validation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-021-mathematical-consistency">
+<span class="md-ellipsis">
+      Business Rule MA-021: Mathematical Consistency
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monthly-calculation-consistency">
+<span class="md-ellipsis">
+      Monthly Calculation Consistency
+    </span>
+</a>
+<nav aria-label="Monthly Calculation Consistency" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-022-period-based-calculations">
+<span class="md-ellipsis">
+      Business Rule MA-022: Period-Based Calculations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#integration-requirements">
+<span class="md-ellipsis">
+      Integration Requirements
+    </span>
+</a>
+<nav aria-label="Integration Requirements" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#powerbill-integration">
+<span class="md-ellipsis">
+      PowerBill Integration
+    </span>
+</a>
+<nav aria-label="PowerBill Integration" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-synchronization">
+<span class="md-ellipsis">
+      Data Synchronization
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#great-plains-erp-integration">
+<span class="md-ellipsis">
+      Great Plains ERP Integration
+    </span>
+</a>
+<nav aria-label="Great Plains ERP Integration" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#financial-posting">
+<span class="md-ellipsis">
+      Financial Posting
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#payroll-system-integration">
+<span class="md-ellipsis">
+      Payroll System Integration
+    </span>
+</a>
+<nav aria-label="Payroll System Integration" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-requirements">
+<span class="md-ellipsis">
+      Data Requirements
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#compliance-and-audit-requirements">
+<span class="md-ellipsis">
+      Compliance and Audit Requirements
+    </span>
+</a>
+<nav aria-label="Compliance and Audit Requirements" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sox-compliance">
+<span class="md-ellipsis">
+      SOX Compliance
+    </span>
+</a>
+<nav aria-label="SOX Compliance" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-023-sox-controls">
+<span class="md-ellipsis">
+      Business Rule MA-023: SOX Controls
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#financial-reporting">
+<span class="md-ellipsis">
+      Financial Reporting
+    </span>
+</a>
+<nav aria-label="Financial Reporting" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-024-gaap-compliance">
+<span class="md-ellipsis">
+      Business Rule MA-024: GAAP Compliance
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#error-handling-and-exception-processing">
+<span class="md-ellipsis">
+      Error Handling and Exception Processing
+    </span>
+</a>
+<nav aria-label="Error Handling and Exception Processing" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-errors">
+<span class="md-ellipsis">
+      Configuration Errors
+    </span>
+</a>
+<nav aria-label="Configuration Errors" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#missing-configuration">
+<span class="md-ellipsis">
+      Missing Configuration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-errors">
+<span class="md-ellipsis">
+      Calculation Errors
+    </span>
+</a>
+<nav aria-label="Calculation Errors" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-validation-failures">
+<span class="md-ellipsis">
+      Data Validation Failures
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-logic-exceptions">
+<span class="md-ellipsis">
+      Business Logic Exceptions
+    </span>
+</a>
+<nav aria-label="Business Logic Exceptions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#claims-cap-exceeded">
+<span class="md-ellipsis">
+      Claims Cap Exceeded
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#profit-share-negative">
+<span class="md-ellipsis">
+      Profit Share Negative
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performance-and-scalability">
+<span class="md-ellipsis">
+      Performance and Scalability
+    </span>
+</a>
+<nav aria-label="Performance and Scalability" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-optimization">
+<span class="md-ellipsis">
+      Calculation Optimization
+    </span>
+</a>
+<nav aria-label="Calculation Optimization" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#batch-processing">
+<span class="md-ellipsis">
+      Batch Processing
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-volume-management">
+<span class="md-ellipsis">
+      Data Volume Management
+    </span>
+</a>
+<nav aria-label="Data Volume Management" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#historical-data">
+<span class="md-ellipsis">
+      Historical Data
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#related-documentation">
+<span class="md-ellipsis">
+      Related Documentation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quick-links">
+<span class="md-ellipsis">
+      Quick Links
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../per-labor-hour-contract-configuration-business-rules/">
+<span class="md-ellipsis">
+    Per Labor Hour Contract Configuration Business Rules
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../revenue-share-contract-business-rules/">
+<span class="md-ellipsis">
+    Revenue Share Contract Business Rules
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../forecasting-data-validation-business-rules/">
+<span class="md-ellipsis">
+    Forecasting Data Validation Business Rules
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    System Architecture
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            System Architecture
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../technical-specifications/edw-integration-technical-specification/">
+<span class="md-ellipsis">
+    EDW Integration Technical Specification
+    
+  </span>
+<span class="md-status md-status--Draft"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../technical-specifications/revenue-datamart-daily-data-model/">
+<span class="md-ellipsis">
+    Revenue Datamart Daily Data Model
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../technical-specifications/towne-park-forecasting-system-comprehensive-master-architecture/">
+<span class="md-ellipsis">
+    Towne Park Forecasting System Comprehensive Master Architecture
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Role-Based Processes
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Role-Based Processes
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../user-processes/ai-assisted-sprint-planning-process-guide/">
+<span class="md-ellipsis">
+    AI-Assisted Sprint Planning Process Guide
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../user-processes/statement-management-user-process/">
+<span class="md-ellipsis">
+    Statement Management User Process
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../user-processes/territory-admin-territory-management-procedures/">
+<span class="md-ellipsis">
+    Territory Administration Territory Management Procedures
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Validation Reports
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Validation Reports
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../validation-reports/architecture-revenue-calculations-meeting-code-validation-report/">
+<span class="md-ellipsis">
+    Architecture Revenue Calculations Meeting Code Validation
+    
+  </span>
+<span class="md-status md-status--Validation Complete"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../validation-reports/management-agreement-contract-configuration-business-rules-code-validation-report/">
+<span class="md-ellipsis">
+    Management Agreement Business Rules Code Validation
+    
+  </span>
+<span class="md-status md-status--Validated"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../validation-reports/validation-integrity-remediation-summary-2025-08-08/">
+<span class="md-ellipsis">
+    Validation Integrity Remediation Summary
+    
+  </span>
+<span class="md-status md-status--Complete"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-ellipsis">
+    Meeting Transcripts
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Meeting Transcripts
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../meeting-transcripts/12-month-forecast-architecture-planning-meeting-transcript-20250709/">
+<span class="md-ellipsis">
+    12-Month Forecast Architecture Planning - July 2025
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../meeting-transcripts/architecture-revenue-calculations-team-notes-20250805/">
+<span class="md-ellipsis">
+    Architecture &amp; Revenue Calculations Team Notes - August 2025
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../meeting-transcripts/development-sprint-retrospective-process-improvements-20250731/">
+<span class="md-ellipsis">
+    Development Sprint Retrospective Process Improvements - July 2025
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../meeting-transcripts/sprint28-management-agreement-development-meeting/">
+<span class="md-ellipsis">
+    Sprint 28 Management Agreement Development
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../meeting-transcripts/sprint29-budget-actuals-development-meeting/">
+<span class="md-ellipsis">
+    Sprint 29 Budget vs Actuals Development
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../meeting-transcripts/sprint30-forecasting-variance-development-meeting/">
+<span class="md-ellipsis">
+    Sprint 30 Forecasting Variance Development
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../meeting-transcripts/daily-scrum-development-progress-team-notes/">
+<span class="md-ellipsis">
+    Daily Scrum Development Progress
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    Standards Framework
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            Standards Framework
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../standards/ai-content-safety-checklist/">
+<span class="md-ellipsis">
+    AI Content Safety Checklist
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
+    Configuration Guides
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            Configuration Guides
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../configuration/ai-development-tools-configuration-guide/">
+<span class="md-ellipsis">
+    AI Development Tools Configuration Guide
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+<span class="md-ellipsis">
+      Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#management-fee-calculation-rules">
+<span class="md-ellipsis">
+      Management Fee Calculation Rules
+    </span>
+</a>
+<nav aria-label="Management Fee Calculation Rules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fixed-fee-method">
+<span class="md-ellipsis">
+      Fixed Fee Method
+    </span>
+</a>
+<nav aria-label="Fixed Fee Method" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-001-fixed-fee-calculation">
+<span class="md-ellipsis">
+      Business Rule MA-001: Fixed Fee Calculation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-formula">
+<span class="md-ellipsis">
+      Calculation Formula
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example">
+<span class="md-ellipsis">
+      Example
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#per-labor-hour-method">
+<span class="md-ellipsis">
+      Per Labor Hour Method
+    </span>
+</a>
+<nav aria-label="Per Labor Hour Method" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-002-per-labor-hour-calculation">
+<span class="md-ellipsis">
+      Business Rule MA-002: Per Labor Hour Calculation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-formula_1">
+<span class="md-ellipsis">
+      Calculation Formula
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#job-code-rate-structure">
+<span class="md-ellipsis">
+      Job Code Rate Structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example_1">
+<span class="md-ellipsis">
+      Example
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#revenue-percentage-method">
+<span class="md-ellipsis">
+      Revenue Percentage Method
+    </span>
+</a>
+<nav aria-label="Revenue Percentage Method" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-003-revenue-percentage-calculation">
+<span class="md-ellipsis">
+      Business Rule MA-003: Revenue Percentage Calculation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-formula_2">
+<span class="md-ellipsis">
+      Calculation Formula
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example_2">
+<span class="md-ellipsis">
+      Example
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#billable-accounts-rules">
+<span class="md-ellipsis">
+      Billable Accounts Rules
+    </span>
+</a>
+<nav aria-label="Billable Accounts Rules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#payroll-account-inclusion-6000-series">
+<span class="md-ellipsis">
+      Payroll Account Inclusion (6000-series)
+    </span>
+</a>
+<nav aria-label="Payroll Account Inclusion (6000-series)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-004-payroll-account-configuration">
+<span class="md-ellipsis">
+      Business Rule MA-004: Payroll Account Configuration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standard-6000-series-accounts">
+<span class="md-ellipsis">
+      Standard 6000-Series Accounts
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#default-excluded-accounts">
+<span class="md-ellipsis">
+      Default Excluded Accounts
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#expense-account-inclusion-7000-series">
+<span class="md-ellipsis">
+      Expense Account Inclusion (7000-series)
+    </span>
+</a>
+<nav aria-label="Expense Account Inclusion (7000-series)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-005-expense-account-configuration">
+<span class="md-ellipsis">
+      Business Rule MA-005: Expense Account Configuration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standard-7000-series-accounts">
+<span class="md-ellipsis">
+      Standard 7000-Series Accounts
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#default-excluded-accounts_1">
+<span class="md-ellipsis">
+      Default Excluded Accounts
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#insurance-calculation-rules">
+<span class="md-ellipsis">
+      Insurance Calculation Rules
+    </span>
+</a>
+<nav aria-label="Insurance Calculation Rules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fixed-fee-insurance">
+<span class="md-ellipsis">
+      Fixed Fee Insurance
+    </span>
+</a>
+<nav aria-label="Fixed Fee Insurance" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-006-fixed-fee-insurance">
+<span class="md-ellipsis">
+      Business Rule MA-006: Fixed Fee Insurance
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-formula_3">
+<span class="md-ellipsis">
+      Calculation Formula
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#based-on-billable-accounts-insurance">
+<span class="md-ellipsis">
+      Based on Billable Accounts Insurance
+    </span>
+</a>
+<nav aria-label="Based on Billable Accounts Insurance" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-007-percentage-based-insurance-calculation">
+<span class="md-ellipsis">
+      Business Rule MA-007: Percentage-Based Insurance Calculation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-formula_4">
+<span class="md-ellipsis">
+      Calculation Formula
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#insurance-account-breakdown">
+<span class="md-ellipsis">
+      Insurance Account Breakdown
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-calculation">
+<span class="md-ellipsis">
+      Example Calculation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#claims-calculation-rules">
+<span class="md-ellipsis">
+      Claims Calculation Rules
+    </span>
+</a>
+<nav aria-label="Claims Calculation Rules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#claims-cap-application">
+<span class="md-ellipsis">
+      Claims Cap Application
+    </span>
+</a>
+<nav aria-label="Claims Cap Application" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-008-claims-cap-enforcement">
+<span class="md-ellipsis">
+      Business Rule MA-008: Claims Cap Enforcement
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#claims-type-reset-periods">
+<span class="md-ellipsis">
+      Claims Type Reset Periods
+    </span>
+</a>
+<nav aria-label="Claims Type Reset Periods" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#annual-calendar-reset">
+<span class="md-ellipsis">
+      Annual Calendar Reset
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#annual-anniversary-reset">
+<span class="md-ellipsis">
+      Annual Anniversary Reset
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#per-claim-reset">
+<span class="md-ellipsis">
+      Per Claim Reset
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#claims-account-codes">
+<span class="md-ellipsis">
+      Claims Account Codes
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-annual-calendar-cap">
+<span class="md-ellipsis">
+      Example: Annual Calendar Cap
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#profit-share-calculation-rules">
+<span class="md-ellipsis">
+      Profit Share Calculation Rules
+    </span>
+</a>
+<nav aria-label="Profit Share Calculation Rules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#profit-calculation-formula">
+<span class="md-ellipsis">
+      Profit Calculation Formula
+    </span>
+</a>
+<nav aria-label="Profit Calculation Formula" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-009-profit-determination">
+<span class="md-ellipsis">
+      Business Rule MA-009: Profit Determination
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#revenue-components">
+<span class="md-ellipsis">
+      Revenue Components
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#billable-expense-components">
+<span class="md-ellipsis">
+      Billable Expense Components
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#profit-share-determination">
+<span class="md-ellipsis">
+      Profit Share Determination
+    </span>
+</a>
+<nav aria-label="Profit Share Determination" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-010-tiered-profit-share-calculation">
+<span class="md-ellipsis">
+      Business Rule MA-010: Tiered Profit Share Calculation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-tier-structure">
+<span class="md-ellipsis">
+      Example Tier Structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#progressive-calculation-example">
+<span class="md-ellipsis">
+      Progressive Calculation Example
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#accumulation-types">
+<span class="md-ellipsis">
+      Accumulation Types
+    </span>
+</a>
+<nav aria-label="Accumulation Types" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monthly-accumulation">
+<span class="md-ellipsis">
+      Monthly Accumulation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#annual-calendar-accumulation">
+<span class="md-ellipsis">
+      Annual Calendar Accumulation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#annual-anniversary-accumulation">
+<span class="md-ellipsis">
+      Annual Anniversary Accumulation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#non-gl-billable-expenses-integration">
+<span class="md-ellipsis">
+      Non-GL Billable Expenses Integration
+    </span>
+</a>
+<nav aria-label="Non-GL Billable Expenses Integration" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-011-non-gl-expense-impact-on-profit">
+<span class="md-ellipsis">
+      Business Rule MA-011: Non-GL Expense Impact on Profit
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#non-gl-billable-expenses-rules">
+<span class="md-ellipsis">
+      Non-GL Billable Expenses Rules
+    </span>
+</a>
+<nav aria-label="Non-GL Billable Expenses Rules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-methods">
+<span class="md-ellipsis">
+      Calculation Methods
+    </span>
+</a>
+<nav aria-label="Calculation Methods" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fixed-amount-method">
+<span class="md-ellipsis">
+      Fixed Amount Method
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#percentage-of-payroll-method">
+<span class="md-ellipsis">
+      Percentage of Payroll Method
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#percentage-of-revenue-method">
+<span class="md-ellipsis">
+      Percentage of Revenue Method
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#billing-lifecycle">
+<span class="md-ellipsis">
+      Billing Lifecycle
+    </span>
+</a>
+<nav aria-label="Billing Lifecycle" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-012-non-gl-expense-lifecycle">
+<span class="md-ellipsis">
+      Business Rule MA-012: Non-GL Expense Lifecycle
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-non-gl-expenses">
+<span class="md-ellipsis">
+      Example Non-GL Expenses
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#payroll-tax-calculation-pteb-rules">
+<span class="md-ellipsis">
+      Payroll Tax Calculation (PTEB) Rules
+    </span>
+</a>
+<nav aria-label="Payroll Tax Calculation (PTEB) Rules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#actual-method">
+<span class="md-ellipsis">
+      Actual Method
+    </span>
+</a>
+<nav aria-label="Actual Method" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-013-actual-pteb-calculation">
+<span class="md-ellipsis">
+      Business Rule MA-013: Actual PTEB Calculation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#percentage-method">
+<span class="md-ellipsis">
+      Percentage Method
+    </span>
+</a>
+<nav aria-label="Percentage Method" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-014-percentage-pteb-calculation">
+<span class="md-ellipsis">
+      Business Rule MA-014: Percentage PTEB Calculation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pteb-account-components">
+<span class="md-ellipsis">
+      PTEB Account Components
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-formula_5">
+<span class="md-ellipsis">
+      Calculation Formula
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#support-services-calculation-rules">
+<span class="md-ellipsis">
+      Support Services Calculation Rules
+    </span>
+</a>
+<nav aria-label="Support Services Calculation Rules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fixed-support-services">
+<span class="md-ellipsis">
+      Fixed Support Services
+    </span>
+</a>
+<nav aria-label="Fixed Support Services" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-015-fixed-support-services">
+<span class="md-ellipsis">
+      Business Rule MA-015: Fixed Support Services
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#percentage-support-services">
+<span class="md-ellipsis">
+      Percentage Support Services
+    </span>
+</a>
+<nav aria-label="Percentage Support Services" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-016-percentage-based-support-services">
+<span class="md-ellipsis">
+      Business Rule MA-016: Percentage-Based Support Services
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#support-service-types">
+<span class="md-ellipsis">
+      Support Service Types
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-calculations">
+<span class="md-ellipsis">
+      Example Calculations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#general-ledger-account-mapping">
+<span class="md-ellipsis">
+      General Ledger Account Mapping
+    </span>
+</a>
+<nav aria-label="General Ledger Account Mapping" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standard-gl-account-mappings">
+<span class="md-ellipsis">
+      Standard GL Account Mappings
+    </span>
+</a>
+<nav aria-label="Standard GL Account Mappings" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#management-agreement-components">
+<span class="md-ellipsis">
+      Management Agreement Components
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#component-specific-mapping">
+<span class="md-ellipsis">
+      Component-Specific Mapping
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#escalation-rules">
+<span class="md-ellipsis">
+      Escalation Rules
+    </span>
+</a>
+<nav aria-label="Escalation Rules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#management-fee-escalation">
+<span class="md-ellipsis">
+      Management Fee Escalation
+    </span>
+</a>
+<nav aria-label="Management Fee Escalation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-017-management-fee-rate-increases">
+<span class="md-ellipsis">
+      Business Rule MA-017: Management Fee Rate Increases
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#insurance-escalation">
+<span class="md-ellipsis">
+      Insurance Escalation
+    </span>
+</a>
+<nav aria-label="Insurance Escalation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-018-insurance-rate-escalation">
+<span class="md-ellipsis">
+      Business Rule MA-018: Insurance Rate Escalation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#support-services-escalation">
+<span class="md-ellipsis">
+      Support Services Escalation
+    </span>
+</a>
+<nav aria-label="Support Services Escalation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-019-support-services-escalation">
+<span class="md-ellipsis">
+      Business Rule MA-019: Support Services Escalation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#validation-and-business-rules">
+<span class="md-ellipsis">
+      Validation and Business Rules
+    </span>
+</a>
+<nav aria-label="Validation and Business Rules" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-completeness-validation">
+<span class="md-ellipsis">
+      Data Completeness Validation
+    </span>
+</a>
+<nav aria-label="Data Completeness Validation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-020-required-configuration-elements">
+<span class="md-ellipsis">
+      Business Rule MA-020: Required Configuration Elements
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-accuracy-validation">
+<span class="md-ellipsis">
+      Calculation Accuracy Validation
+    </span>
+</a>
+<nav aria-label="Calculation Accuracy Validation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-021-mathematical-consistency">
+<span class="md-ellipsis">
+      Business Rule MA-021: Mathematical Consistency
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#monthly-calculation-consistency">
+<span class="md-ellipsis">
+      Monthly Calculation Consistency
+    </span>
+</a>
+<nav aria-label="Monthly Calculation Consistency" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-022-period-based-calculations">
+<span class="md-ellipsis">
+      Business Rule MA-022: Period-Based Calculations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#integration-requirements">
+<span class="md-ellipsis">
+      Integration Requirements
+    </span>
+</a>
+<nav aria-label="Integration Requirements" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#powerbill-integration">
+<span class="md-ellipsis">
+      PowerBill Integration
+    </span>
+</a>
+<nav aria-label="PowerBill Integration" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-synchronization">
+<span class="md-ellipsis">
+      Data Synchronization
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#great-plains-erp-integration">
+<span class="md-ellipsis">
+      Great Plains ERP Integration
+    </span>
+</a>
+<nav aria-label="Great Plains ERP Integration" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#financial-posting">
+<span class="md-ellipsis">
+      Financial Posting
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#payroll-system-integration">
+<span class="md-ellipsis">
+      Payroll System Integration
+    </span>
+</a>
+<nav aria-label="Payroll System Integration" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-requirements">
+<span class="md-ellipsis">
+      Data Requirements
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#compliance-and-audit-requirements">
+<span class="md-ellipsis">
+      Compliance and Audit Requirements
+    </span>
+</a>
+<nav aria-label="Compliance and Audit Requirements" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sox-compliance">
+<span class="md-ellipsis">
+      SOX Compliance
+    </span>
+</a>
+<nav aria-label="SOX Compliance" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-023-sox-controls">
+<span class="md-ellipsis">
+      Business Rule MA-023: SOX Controls
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#financial-reporting">
+<span class="md-ellipsis">
+      Financial Reporting
+    </span>
+</a>
+<nav aria-label="Financial Reporting" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rule-ma-024-gaap-compliance">
+<span class="md-ellipsis">
+      Business Rule MA-024: GAAP Compliance
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#error-handling-and-exception-processing">
+<span class="md-ellipsis">
+      Error Handling and Exception Processing
+    </span>
+</a>
+<nav aria-label="Error Handling and Exception Processing" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-errors">
+<span class="md-ellipsis">
+      Configuration Errors
+    </span>
+</a>
+<nav aria-label="Configuration Errors" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#missing-configuration">
+<span class="md-ellipsis">
+      Missing Configuration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-errors">
+<span class="md-ellipsis">
+      Calculation Errors
+    </span>
+</a>
+<nav aria-label="Calculation Errors" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-validation-failures">
+<span class="md-ellipsis">
+      Data Validation Failures
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-logic-exceptions">
+<span class="md-ellipsis">
+      Business Logic Exceptions
+    </span>
+</a>
+<nav aria-label="Business Logic Exceptions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#claims-cap-exceeded">
+<span class="md-ellipsis">
+      Claims Cap Exceeded
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#profit-share-negative">
+<span class="md-ellipsis">
+      Profit Share Negative
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performance-and-scalability">
+<span class="md-ellipsis">
+      Performance and Scalability
+    </span>
+</a>
+<nav aria-label="Performance and Scalability" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-optimization">
+<span class="md-ellipsis">
+      Calculation Optimization
+    </span>
+</a>
+<nav aria-label="Calculation Optimization" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#batch-processing">
+<span class="md-ellipsis">
+      Batch Processing
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-volume-management">
+<span class="md-ellipsis">
+      Data Volume Management
+    </span>
+</a>
+<nav aria-label="Data Volume Management" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#historical-data">
+<span class="md-ellipsis">
+      Historical Data
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#related-documentation">
+<span class="md-ellipsis">
+      Related Documentation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quick-links">
+<span class="md-ellipsis">
+      Quick Links
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="management-agreement-contract-business-rules">Management Agreement Contract Business Rules</h1>
+<h2 id="overview">Overview</h2>
+<p>Management Agreement contracts represent one of the most complex contract types in Towne Park's billing system, requiring sophisticated calculations across multiple components including management fees, billable accounts, insurance, claims, profit sharing, and support services. These contracts typically involve comprehensive financial management where Towne Park provides full operational management services to client properties.</p>
+<h2 id="management-fee-calculation-rules">Management Fee Calculation Rules</h2>
+<p>Management Agreements require a management fee calculated using one of three distinct methods, each with specific business rules and calculation logic.</p>
+<h3 id="fixed-fee-method">Fixed Fee Method</h3>
+<h4 id="business-rule-ma-001-fixed-fee-calculation"><strong>Business Rule MA-001: Fixed Fee Calculation</strong></h4>
+<ul>
+<li><strong>Definition</strong>: Fixed monthly amount specified in contract</li>
+<li><strong>Application</strong>: Same amount billed each month regardless of other factors</li>
+<li><strong>GL Mapping</strong>: Always mapped to GL account #4790</li>
+<li><strong>Escalation</strong>: Subject to annual escalation if configured</li>
+<li><strong>Use Case</strong>: Contracts with predetermined management costs</li>
+</ul>
+<h4 id="calculation-formula"><strong>Calculation Formula</strong></h4>
+<div class="highlight"><pre><span></span><code>Management Fee = Fixed Fee Amount (from contract)
+</code></pre></div>
+<h4 id="example"><strong>Example</strong></h4>
+<ul>
+<li>Contract specifies: $15,000 monthly management fee</li>
+<li>Monthly billing: $15,000 (consistent each month)</li>
+<li>Annual total: $180,000</li>
+</ul>
+<h3 id="per-labor-hour-method">Per Labor Hour Method</h3>
+<h4 id="business-rule-ma-002-per-labor-hour-calculation"><strong>Business Rule MA-002: Per Labor Hour Calculation</strong></h4>
+<ul>
+<li><strong>Definition</strong>: Labor hours multiplied by specified rates per job code</li>
+<li><strong>Calculation</strong>: Total billable hours × applicable hourly rates</li>
+<li><strong>Rate Variation</strong>: Different job codes can have different billing rates</li>
+<li><strong>GL Mapping</strong>: Mapped to GL account #4790</li>
+<li><strong>Data Source</strong>: Hours tracked in Legion workforce management system</li>
+</ul>
+<h4 id="calculation-formula_1"><strong>Calculation Formula</strong></h4>
+<div class="highlight"><pre><span></span><code>Management Fee = Σ(Job Code Hours × Job Code Rate) for all billable job codes
+</code></pre></div>
+<h4 id="job-code-rate-structure"><strong>Job Code Rate Structure</strong></h4>
+<ul>
+<li><strong>Manager</strong>: Premium rate (typically $45-65/hour)</li>
+<li><strong>GSC (Guest Service Coordinator)</strong>: Standard rate (typically $25-35/hour)</li>
+<li><strong>GSA (Guest Service Associate)</strong>: Base rate (typically $18-25/hour)</li>
+<li><strong>Cashier</strong>: Base rate (typically $16-22/hour)</li>
+</ul>
+<h4 id="example_1"><strong>Example</strong></h4>
+<ul>
+<li>Manager: 40 hours × $55/hour = $2,200</li>
+<li>GSC: 80 hours × $30/hour = $2,400</li>
+<li>GSA: 160 hours × $22/hour = $3,520</li>
+<li><strong>Total Management Fee</strong>: $8,120</li>
+</ul>
+<h3 id="revenue-percentage-method">Revenue Percentage Method</h3>
+<h4 id="business-rule-ma-003-revenue-percentage-calculation"><strong>Business Rule MA-003: Revenue Percentage Calculation</strong></h4>
+<ul>
+<li><strong>Definition</strong>: Specified percentage of total revenue</li>
+<li><strong>Calculation</strong>: Total Revenue × Management Fee Percentage</li>
+<li><strong>Revenue Base</strong>: Calculated from all applicable revenue streams</li>
+<li><strong>GL Mapping</strong>: Mapped to GL account #4790</li>
+<li><strong>Typical Range</strong>: 3-8% of total revenue</li>
+</ul>
+<h4 id="calculation-formula_2"><strong>Calculation Formula</strong></h4>
+<div class="highlight"><pre><span></span><code>Management Fee = Total Revenue × Management Fee Percentage
+</code></pre></div>
+<h4 id="example_2"><strong>Example</strong></h4>
+<ul>
+<li>Total Revenue: $500,000</li>
+<li>Management Fee Percentage: 5%</li>
+<li><strong>Management Fee</strong>: $25,000</li>
+</ul>
+<h2 id="billable-accounts-rules">Billable Accounts Rules</h2>
+<p>Management Agreements require Billable Accounts to be enabled with specific account series and inclusion/exclusion logic.</p>
+<h3 id="payroll-account-inclusion-6000-series">Payroll Account Inclusion (6000-series)</h3>
+<h4 id="business-rule-ma-004-payroll-account-configuration"><strong>Business Rule MA-004: Payroll Account Configuration</strong></h4>
+<ul>
+<li><strong>Configuration</strong>: Payroll accounts can be marked as billable or excluded</li>
+<li><strong>Inclusion Logic</strong>: Accounts marked <code>isEnabled: true</code> in payrollAccountsData are billable</li>
+<li><strong>Calculation</strong>: Billable payroll is the sum of all enabled accounts</li>
+<li><strong>Revenue Integration</strong>: Billable Accounts are only included in Internal Revenue when Management Agreement is enabled</li>
+</ul>
+<h4 id="standard-6000-series-accounts"><strong>Standard 6000-Series Accounts</strong></h4>
+<ul>
+<li><strong>6000</strong>: Regular Payroll</li>
+<li><strong>6001</strong>: Overtime Payroll</li>
+<li><strong>6002</strong>: Holiday Pay</li>
+<li><strong>6003</strong>: Vacation Pay</li>
+<li><strong>6004</strong>: Sick Pay</li>
+<li><strong>6005</strong>: Bonus Pay</li>
+<li><strong>6006</strong>: Commission Pay</li>
+<li><strong>6007</strong>: Training Pay</li>
+</ul>
+<h4 id="default-excluded-accounts"><strong>Default Excluded Accounts</strong></h4>
+<ul>
+<li><strong>6010</strong>: PTO Hourly (excluded by default)</li>
+<li><strong>6014</strong>: Other (excluded by default)</li>
+</ul>
+<h3 id="expense-account-inclusion-7000-series">Expense Account Inclusion (7000-series)</h3>
+<h4 id="business-rule-ma-005-expense-account-configuration"><strong>Business Rule MA-005: Expense Account Configuration</strong></h4>
+<ul>
+<li><strong>Configuration</strong>: Expense accounts can be marked as billable or excluded</li>
+<li><strong>Inclusion Logic</strong>: Accounts marked <code>isEnabled: true</code> in payrollExpenseAccountsData are billable</li>
+<li><strong>Calculation</strong>: Billable expenses is the sum of all enabled accounts</li>
+<li><strong>Impact</strong>: Directly affects profit share calculations when enabled</li>
+</ul>
+<h4 id="standard-7000-series-accounts"><strong>Standard 7000-Series Accounts</strong></h4>
+<ul>
+<li><strong>7001</strong>: Office Supplies</li>
+<li><strong>7002</strong>: Uniforms</li>
+<li><strong>7003</strong>: Training Materials</li>
+<li><strong>7004</strong>: Equipment Rental</li>
+<li><strong>7006</strong>: Professional Services</li>
+<li><strong>7007</strong>: Maintenance Supplies</li>
+</ul>
+<h4 id="default-excluded-accounts_1"><strong>Default Excluded Accounts</strong></h4>
+<ul>
+<li><strong>7005</strong>: Bad Debt (excluded by default)</li>
+<li><strong>7016</strong>: Contract Improvements (excluded by default)</li>
+</ul>
+<h2 id="insurance-calculation-rules">Insurance Calculation Rules</h2>
+<p>Insurance costs are calculated using two distinct methods with specific business rules for each approach.</p>
+<h3 id="fixed-fee-insurance">Fixed Fee Insurance</h3>
+<h4 id="business-rule-ma-006-fixed-fee-insurance"><strong>Business Rule MA-006: Fixed Fee Insurance</strong></h4>
+<ul>
+<li><strong>Definition</strong>: Fixed monthly amount specified in contract</li>
+<li><strong>Application</strong>: Same amount billed each month</li>
+<li><strong>Use Case</strong>: Contracts with predetermined insurance costs</li>
+<li><strong>Escalation</strong>: Subject to annual escalation if configured</li>
+</ul>
+<h4 id="calculation-formula_3"><strong>Calculation Formula</strong></h4>
+<div class="highlight"><pre><span></span><code>Insurance Cost = Fixed Fee Amount (from contract)
+</code></pre></div>
+<h3 id="based-on-billable-accounts-insurance">Based on Billable Accounts Insurance</h3>
+<h4 id="business-rule-ma-007-percentage-based-insurance-calculation"><strong>Business Rule MA-007: Percentage-Based Insurance Calculation</strong></h4>
+<ul>
+<li><strong>Standard Rate</strong>: 5.77% of payroll plus vehicle insurance</li>
+<li><strong>Calculation Components</strong>:</li>
+<li>Sum of billable insurance accounts (7080, 7082, 7085)</li>
+<li>Plus insuranceAdditionalPercentage of these accounts</li>
+<li><strong>Vehicle Insurance</strong>: Account 7082 specifically included</li>
+<li><strong>Additional Percentage</strong>: Optional additional rate on billable accounts</li>
+</ul>
+<h4 id="calculation-formula_4"><strong>Calculation Formula</strong></h4>
+<div class="highlight"><pre><span></span><code>Insurance Cost = (Billable Payroll × 5.77%) + Vehicle Insurance (7082) + (Billable Insurance Accounts × Additional Percentage)
+</code></pre></div>
+<h4 id="insurance-account-breakdown"><strong>Insurance Account Breakdown</strong></h4>
+<ul>
+<li><strong>7080</strong>: General Liability Insurance</li>
+<li><strong>7082</strong>: Vehicle Insurance (always included)</li>
+<li><strong>7085</strong>: Workers Compensation Insurance</li>
+</ul>
+<h4 id="example-calculation"><strong>Example Calculation</strong></h4>
+<ul>
+<li>Billable Payroll: $100,000</li>
+<li>Base Insurance (5.77%): $5,770</li>
+<li>Vehicle Insurance (7082): $2,500</li>
+<li>Additional Percentage (2% of $8,270): $165</li>
+<li><strong>Total Insurance</strong>: $8,435</li>
+</ul>
+<h2 id="claims-calculation-rules">Claims Calculation Rules</h2>
+<p>Claims processing includes sophisticated capping mechanisms with different reset periods and enforcement logic.</p>
+<h3 id="claims-cap-application">Claims Cap Application</h3>
+<h4 id="business-rule-ma-008-claims-cap-enforcement"><strong>Business Rule MA-008: Claims Cap Enforcement</strong></h4>
+<ul>
+<li><strong>Cap Amount</strong>: Claims are capped based on claimsCapAmount specified in contract</li>
+<li><strong>Billing Logic</strong>: When cap is reached, additional claims are not billable for remainder of period</li>
+<li><strong>Tracking</strong>: Claims amounts tracked against cap throughout applicable period</li>
+<li><strong>Reset</strong>: Cap resets based on configured reset period type</li>
+</ul>
+<h3 id="claims-type-reset-periods">Claims Type Reset Periods</h3>
+<h4 id="annual-calendar-reset"><strong>Annual Calendar Reset</strong></h4>
+<ul>
+<li><strong>Period</strong>: Cap resets on calendar year (January-December)</li>
+<li><strong>Application</strong>: Claims tracked from January 1 through December 31</li>
+<li><strong>Reset Date</strong>: January 1st of each year</li>
+<li><strong>Use Case</strong>: Contracts aligned with calendar year budgeting</li>
+</ul>
+<h4 id="annual-anniversary-reset"><strong>Annual Anniversary Reset</strong></h4>
+<ul>
+<li><strong>Period</strong>: Cap resets on contract anniversary date</li>
+<li><strong>Application</strong>: Claims tracked for 12 months from contract start date</li>
+<li><strong>Reset Date</strong>: Contract anniversary date each year</li>
+<li><strong>Use Case</strong>: Contracts with specific start dates requiring anniversary-based tracking</li>
+</ul>
+<h4 id="per-claim-reset"><strong>Per Claim Reset</strong></h4>
+<ul>
+<li><strong>Period</strong>: Each individual claim has its own cap amount</li>
+<li><strong>Application</strong>: Each claim evaluated independently against cap</li>
+<li><strong>Reset</strong>: No reset - each claim stands alone</li>
+<li><strong>Use Case</strong>: Contracts with per-incident claim limits</li>
+</ul>
+<h4 id="claims-account-codes"><strong>Claims Account Codes</strong></h4>
+<ul>
+<li><strong>7099</strong>: General Claims</li>
+<li><strong>7100</strong>: Property Damage Claims</li>
+<li><strong>7101</strong>: Liability Claims</li>
+<li><strong>7102</strong>: Workers Compensation Claims</li>
+</ul>
+<h4 id="example-annual-calendar-cap"><strong>Example: Annual Calendar Cap</strong></h4>
+<ul>
+<li>Annual Cap: $50,000</li>
+<li>Q1 Claims: $15,000 (billable)</li>
+<li>Q2 Claims: $20,000 (billable)</li>
+<li>Q3 Claims: $18,000 (billable, but only $15,000 under cap)</li>
+<li>Q4 Claims: $10,000 (not billable - cap reached)</li>
+<li><strong>Total Billable</strong>: $50,000</li>
+</ul>
+<h2 id="profit-share-calculation-rules">Profit Share Calculation Rules</h2>
+<p>Profit sharing represents the most complex calculation component, requiring integration of all other Management Agreement calculations.</p>
+<h3 id="profit-calculation-formula">Profit Calculation Formula</h3>
+<h4 id="business-rule-ma-009-profit-determination"><strong>Business Rule MA-009: Profit Determination</strong></h4>
+<div class="highlight"><pre><span></span><code>Profit = Revenue - Billable Expenses
+</code></pre></div>
+<h4 id="revenue-components"><strong>Revenue Components</strong></h4>
+<ul>
+<li>External Revenue (from revenue share or other sources)</li>
+<li>Internal Revenue (from billable accounts and other internal sources)</li>
+</ul>
+<h4 id="billable-expense-components"><strong>Billable Expense Components</strong></h4>
+<ul>
+<li>Management Fees</li>
+<li>Insurance Costs</li>
+<li>Claims (subject to caps)</li>
+<li>Billable Accounts (6000/7000 series)</li>
+<li>Non-GL Billable Expenses</li>
+<li>Support Services</li>
+</ul>
+<h3 id="profit-share-determination">Profit Share Determination</h3>
+<h4 id="business-rule-ma-010-tiered-profit-share-calculation"><strong>Business Rule MA-010: Tiered Profit Share Calculation</strong></h4>
+<ul>
+<li><strong>Tier Application</strong>: Profit share tiers determine Towne Park's percentage of profit</li>
+<li><strong>Progressive Calculation</strong>: Similar to Revenue Share, profit share uses progressive tier calculations</li>
+<li><strong>Threshold Structure</strong>: Multiple tiers with increasing percentages</li>
+</ul>
+<h4 id="example-tier-structure"><strong>Example Tier Structure</strong></h4>
+<ul>
+<li><strong>Tier 1</strong>: $0 - $50,000 profit = 20% to Towne Park</li>
+<li><strong>Tier 2</strong>: $50,001 - $100,000 profit = 30% to Towne Park</li>
+<li><strong>Tier 3</strong>: $100,001+ profit = 40% to Towne Park</li>
+</ul>
+<h4 id="progressive-calculation-example"><strong>Progressive Calculation Example</strong></h4>
+<ul>
+<li>Total Profit: $125,000</li>
+<li>Tier 1: $50,000 × 20% = $10,000</li>
+<li>Tier 2: $50,000 × 30% = $15,000</li>
+<li>Tier 3: $25,000 × 40% = $10,000</li>
+<li><strong>Total Profit Share</strong>: $35,000</li>
+</ul>
+<h3 id="accumulation-types">Accumulation Types</h3>
+<h4 id="monthly-accumulation"><strong>Monthly Accumulation</strong></h4>
+<ul>
+<li><strong>Calculation</strong>: Profit calculated and shared monthly</li>
+<li><strong>Reset</strong>: Each month stands alone</li>
+<li><strong>Use Case</strong>: Contracts requiring monthly profit distribution</li>
+</ul>
+<h4 id="annual-calendar-accumulation"><strong>Annual Calendar Accumulation</strong></h4>
+<ul>
+<li><strong>Calculation</strong>: Profit accumulated and calculated on calendar year (January-December)</li>
+<li><strong>Reset</strong>: January 1st of each year</li>
+<li><strong>Use Case</strong>: Contracts aligned with calendar year business cycles</li>
+</ul>
+<h4 id="annual-anniversary-accumulation"><strong>Annual Anniversary Accumulation</strong></h4>
+<ul>
+<li><strong>Calculation</strong>: Profit accumulated and calculated on contract anniversary date</li>
+<li><strong>Reset</strong>: Contract anniversary date each year</li>
+<li><strong>Use Case</strong>: Contracts with specific start dates requiring anniversary-based calculations</li>
+</ul>
+<h3 id="non-gl-billable-expenses-integration">Non-GL Billable Expenses Integration</h3>
+<h4 id="business-rule-ma-011-non-gl-expense-impact-on-profit"><strong>Business Rule MA-011: Non-GL Expense Impact on Profit</strong></h4>
+<ul>
+<li><strong>Integration</strong>: Non-GL Billable Expenses are included in profit calculation as expenses</li>
+<li><strong>Impact</strong>: These expenses reduce the profit amount before profit share percentage is applied</li>
+<li><strong>Dual Effect</strong>: Expenses appear both as invoice line items and in profit calculations</li>
+</ul>
+<h2 id="non-gl-billable-expenses-rules">Non-GL Billable Expenses Rules</h2>
+<p>Non-GL Billable Expenses provide additional billing flexibility for costs not captured in standard GL accounts.</p>
+<h3 id="calculation-methods">Calculation Methods</h3>
+<h4 id="fixed-amount-method"><strong>Fixed Amount Method</strong></h4>
+<ul>
+<li><strong>Definition</strong>: Specific dollar amount per billing period</li>
+<li><strong>Application</strong>: Same amount billed each period</li>
+<li><strong>Use Case</strong>: Predetermined costs like equipment leases</li>
+</ul>
+<h4 id="percentage-of-payroll-method"><strong>Percentage of Payroll Method</strong></h4>
+<ul>
+<li><strong>Definition</strong>: Calculated as percentage of total or billable payroll</li>
+<li><strong>Payroll Types</strong>:</li>
+<li><strong>Billable Payroll</strong>: Percentage of enabled 6000-series accounts only</li>
+<li><strong>Total Payroll</strong>: Percentage of all payroll accounts</li>
+<li><strong>Use Case</strong>: Costs that scale with labor</li>
+</ul>
+<h4 id="percentage-of-revenue-method"><strong>Percentage of Revenue Method</strong></h4>
+<ul>
+<li><strong>Definition</strong>: Calculated as percentage of total revenue</li>
+<li><strong>Revenue Base</strong>: All revenue sources included</li>
+<li><strong>Use Case</strong>: Costs that scale with business volume</li>
+</ul>
+<h3 id="billing-lifecycle">Billing Lifecycle</h3>
+<h4 id="business-rule-ma-012-non-gl-expense-lifecycle"><strong>Business Rule MA-012: Non-GL Expense Lifecycle</strong></h4>
+<ul>
+<li><strong>End Date Handling</strong>: May have an end date (finalPeriodbilled) after which they stop billing</li>
+<li><strong>Dual Impact</strong>: Included both as invoice line items and in profit calculations</li>
+<li><strong>Profit Share Integration</strong>: When Profit Share is enabled, these expenses reduce the profit amount</li>
+</ul>
+<h4 id="example-non-gl-expenses"><strong>Example Non-GL Expenses</strong></h4>
+<ul>
+<li><strong>Equipment Lease</strong>: $2,500 fixed monthly</li>
+<li><strong>Technology Fee</strong>: 2% of revenue</li>
+<li><strong>Administrative Support</strong>: 3% of billable payroll</li>
+</ul>
+<h2 id="payroll-tax-calculation-pteb-rules">Payroll Tax Calculation (PTEB) Rules</h2>
+<p>PTEB (Payroll Tax, Employee Benefits) calculations support both actual and estimated methods.</p>
+<h3 id="actual-method">Actual Method</h3>
+<h4 id="business-rule-ma-013-actual-pteb-calculation"><strong>Business Rule MA-013: Actual PTEB Calculation</strong></h4>
+<ul>
+<li><strong>Definition</strong>: Bills actual payroll tax expense from accounting system</li>
+<li><strong>Data Source</strong>: Actual payroll tax amounts from financial records</li>
+<li><strong>Accuracy</strong>: Reflects true payroll tax costs</li>
+<li><strong>Use Case</strong>: When actual amounts are available and preferred</li>
+</ul>
+<h3 id="percentage-method">Percentage Method</h3>
+<h4 id="business-rule-ma-014-percentage-pteb-calculation"><strong>Business Rule MA-014: Percentage PTEB Calculation</strong></h4>
+<ul>
+<li><strong>Definition</strong>: Bills payrollTaxesPercentage of billable payroll</li>
+<li><strong>Calculation</strong>: Billable Payroll × Payroll Tax Percentage</li>
+<li><strong>Standard Rate</strong>: Typically 15-25% of payroll</li>
+<li><strong>Use Case</strong>: When actual amounts are not available or for simplified billing</li>
+</ul>
+<h4 id="pteb-account-components"><strong>PTEB Account Components</strong></h4>
+<ul>
+<li><strong>6200</strong>: Payroll Taxes</li>
+<li><strong>6399</strong>: Health Insurance Allocation</li>
+<li><strong>6500</strong>: Workers Compensation Insurance</li>
+</ul>
+<h4 id="calculation-formula_5"><strong>Calculation Formula</strong></h4>
+<div class="highlight"><pre><span></span><code>PTEB Amount = Billable Payroll × PTEB Percentage
+</code></pre></div>
+<h2 id="support-services-calculation-rules">Support Services Calculation Rules</h2>
+<p>Support services provide additional revenue streams for administrative and operational support.</p>
+<h3 id="fixed-support-services">Fixed Support Services</h3>
+<h4 id="business-rule-ma-015-fixed-support-services"><strong>Business Rule MA-015: Fixed Support Services</strong></h4>
+<ul>
+<li><strong>Definition</strong>: Bills fixed amount (payrollSupportAmount)</li>
+<li><strong>Application</strong>: Same amount billed each period regardless of payroll fluctuations</li>
+<li><strong>Use Case</strong>: Predetermined support costs</li>
+</ul>
+<h3 id="percentage-support-services">Percentage Support Services</h3>
+<h4 id="business-rule-ma-016-percentage-based-support-services"><strong>Business Rule MA-016: Percentage-Based Support Services</strong></h4>
+<ul>
+<li><strong>Billable Payroll Type</strong>: Bills percentage of billable payroll only</li>
+<li>Calculation: Billable Payroll × Support Services Percentage</li>
+<li><strong>Total Payroll Type</strong>: Bills percentage of total payroll</li>
+<li>Calculation: Total Payroll × Support Services Percentage</li>
+<li><strong>Configuration</strong>: Determined by payrollSupportPayrollType setting</li>
+</ul>
+<h4 id="support-service-types"><strong>Support Service Types</strong></h4>
+<ul>
+<li><strong>Administrative Support</strong>: Back-office functions</li>
+<li><strong>Technology Support</strong>: IT and system support</li>
+<li><strong>Training Services</strong>: Employee development</li>
+<li><strong>Operational Consulting</strong>: Process improvement</li>
+</ul>
+<h4 id="example-calculations"><strong>Example Calculations</strong></h4>
+<ul>
+<li><strong>Fixed</strong>: $5,000 monthly administrative support</li>
+<li><strong>Percentage of Billable</strong>: 8% × $100,000 billable payroll = $8,000</li>
+<li><strong>Percentage of Total</strong>: 6% × $150,000 total payroll = $9,000</li>
+</ul>
+<h2 id="general-ledger-account-mapping">General Ledger Account Mapping</h2>
+<h3 id="standard-gl-account-mappings">Standard GL Account Mappings</h3>
+<h4 id="management-agreement-components"><strong>Management Agreement Components</strong></h4>
+<ul>
+<li><strong>GL Account #4791</strong>: Management Agreement fees and related charges</li>
+<li><strong>Rationale</strong>: Separate from other contract types for financial reporting clarity</li>
+</ul>
+<h4 id="component-specific-mapping"><strong>Component-Specific Mapping</strong></h4>
+<ul>
+<li><strong>Management Fees</strong>: GL Account #4791</li>
+<li><strong>Insurance Costs</strong>: GL Account #4791</li>
+<li><strong>Claims</strong>: GL Account #4791</li>
+<li><strong>Support Services</strong>: GL Account #4791</li>
+<li><strong>PTEB</strong>: GL Account #4791</li>
+</ul>
+<h2 id="escalation-rules">Escalation Rules</h2>
+<h3 id="management-fee-escalation">Management Fee Escalation</h3>
+<h4 id="business-rule-ma-017-management-fee-rate-increases"><strong>Business Rule MA-017: Management Fee Rate Increases</strong></h4>
+<ul>
+<li><strong>Trigger</strong>: When incrementAmount &gt; 0, rates increase by that percentage in incrementMonth</li>
+<li><strong>Application Scope</strong>: Applies to Fixed Fee and Per Labor Hour management fees</li>
+<li><strong>Timing</strong>: Escalation occurs in the specified increment month</li>
+<li><strong>CPI Integration</strong>: When consumerPriceIndex is true, escalation based on CPI changes</li>
+</ul>
+<h3 id="insurance-escalation">Insurance Escalation</h3>
+<h4 id="business-rule-ma-018-insurance-rate-escalation"><strong>Business Rule MA-018: Insurance Rate Escalation</strong></h4>
+<ul>
+<li><strong>Fixed Fee Insurance</strong>: Subject to same escalation rules as management fees</li>
+<li><strong>Percentage-Based Insurance</strong>: Base percentage may be escalated annually</li>
+<li><strong>Vehicle Insurance</strong>: Actual costs from GL account 7082</li>
+</ul>
+<h3 id="support-services-escalation">Support Services Escalation</h3>
+<h4 id="business-rule-ma-019-support-services-escalation"><strong>Business Rule MA-019: Support Services Escalation</strong></h4>
+<ul>
+<li><strong>Fixed Support Services</strong>: Subject to annual escalation</li>
+<li><strong>Percentage Support Services</strong>: Base percentage may be escalated</li>
+<li><strong>Timing</strong>: Typically aligned with management fee escalation dates</li>
+</ul>
+<h2 id="validation-and-business-rules">Validation and Business Rules</h2>
+<h3 id="data-completeness-validation">Data Completeness Validation</h3>
+<h4 id="business-rule-ma-020-required-configuration-elements"><strong>Business Rule MA-020: Required Configuration Elements</strong></h4>
+<ul>
+<li><strong>Management Fee</strong>: Must specify calculation method and parameters</li>
+<li><strong>Billable Accounts</strong>: Must define enabled/disabled account lists</li>
+<li><strong>Insurance</strong>: Must specify calculation method (fixed or percentage)</li>
+<li><strong>Claims</strong>: Must define cap type and amounts if claims enabled</li>
+<li><strong>Profit Share</strong>: Must define accumulation type and tiers if enabled</li>
+</ul>
+<h3 id="calculation-accuracy-validation">Calculation Accuracy Validation</h3>
+<h4 id="business-rule-ma-021-mathematical-consistency"><strong>Business Rule MA-021: Mathematical Consistency</strong></h4>
+<ul>
+<li><strong>Sum Validation</strong>: All components must sum to total Management Agreement amount</li>
+<li><strong>Escalator Application</strong>: Escalators applied correctly by date</li>
+<li><strong>Account Exclusions</strong>: Excluded accounts properly omitted from calculations</li>
+<li><strong>Cap Enforcement</strong>: Claims caps properly enforced by period type</li>
+</ul>
+<h3 id="monthly-calculation-consistency">Monthly Calculation Consistency</h3>
+<h4 id="business-rule-ma-022-period-based-calculations"><strong>Business Rule MA-022: Period-Based Calculations</strong></h4>
+<ul>
+<li><strong>Escalator Timing</strong>: Escalators only affect periods on or after effective date</li>
+<li><strong>Cap Reset Validation</strong>: Claims caps reset properly based on configured type</li>
+<li><strong>Accumulation Periods</strong>: Profit share accumulation follows configured period type</li>
+</ul>
+<h2 id="integration-requirements">Integration Requirements</h2>
+<h3 id="powerbill-integration">PowerBill Integration</h3>
+<h4 id="data-synchronization"><strong>Data Synchronization</strong></h4>
+<ul>
+<li><strong>Contract Details</strong>: Management Agreement configuration</li>
+<li><strong>Account Mappings</strong>: Billable account enabled/disabled status</li>
+<li><strong>Rate Tables</strong>: Management fee rates and escalation schedules</li>
+<li><strong>Calculation Results</strong>: Monthly calculation outputs</li>
+</ul>
+<h3 id="great-plains-erp-integration">Great Plains ERP Integration</h3>
+<h4 id="financial-posting"><strong>Financial Posting</strong></h4>
+<ul>
+<li><strong>GL Account Mapping</strong>: All components post to appropriate GL accounts</li>
+<li><strong>Journal Entries</strong>: Detailed breakdown by calculation component</li>
+<li><strong>Audit Trail</strong>: Complete transaction history for SOX compliance</li>
+</ul>
+<h3 id="payroll-system-integration">Payroll System Integration</h3>
+<h4 id="data-requirements"><strong>Data Requirements</strong></h4>
+<ul>
+<li><strong>Hours Data</strong>: Actual hours by job code for Per Labor Hour calculations</li>
+<li><strong>Payroll Totals</strong>: Billable and total payroll amounts</li>
+<li><strong>PTEB Actuals</strong>: Actual payroll tax and benefit costs when using actual method</li>
+</ul>
+<h2 id="compliance-and-audit-requirements">Compliance and Audit Requirements</h2>
+<h3 id="sox-compliance">SOX Compliance</h3>
+<h4 id="business-rule-ma-023-sox-controls"><strong>Business Rule MA-023: SOX Controls</strong></h4>
+<ul>
+<li><strong>Segregation of Duties</strong>: Different users for setup vs. approval</li>
+<li><strong>Dual Approval</strong>: Management Agreement changes require dual approval</li>
+<li><strong>Audit Trail</strong>: Complete history of all configuration and calculation changes</li>
+<li><strong>Documentation</strong>: Supporting documentation for all calculation components</li>
+</ul>
+<h3 id="financial-reporting">Financial Reporting</h3>
+<h4 id="business-rule-ma-024-gaap-compliance"><strong>Business Rule MA-024: GAAP Compliance</strong></h4>
+<ul>
+<li><strong>Revenue Recognition</strong>: Management fees recognized when earned</li>
+<li><strong>Expense Matching</strong>: Billable expenses matched to appropriate periods</li>
+<li><strong>Profit Share</strong>: Recognized based on accumulation period type</li>
+<li><strong>Disclosure</strong>: Adequate disclosure of calculation methods in financial statements</li>
+</ul>
+<h2 id="error-handling-and-exception-processing">Error Handling and Exception Processing</h2>
+<h3 id="configuration-errors">Configuration Errors</h3>
+<h4 id="missing-configuration"><strong>Missing Configuration</strong></h4>
+<ul>
+<li><strong>Response</strong>: Display specific error messages identifying missing elements</li>
+<li><strong>Guidance</strong>: Provide configuration requirements and examples</li>
+<li><strong>Escalation</strong>: Route to appropriate administrator for resolution</li>
+</ul>
+<h3 id="calculation-errors">Calculation Errors</h3>
+<h4 id="data-validation-failures"><strong>Data Validation Failures</strong></h4>
+<ul>
+<li><strong>Validation Checks</strong>:</li>
+<li>Non-negative values for hours and amounts</li>
+<li>Valid date ranges for escalators</li>
+<li>Proper account number formats</li>
+<li>Percentage values within valid ranges (0-100%)</li>
+</ul>
+<h3 id="business-logic-exceptions">Business Logic Exceptions</h3>
+<h4 id="claims-cap-exceeded"><strong>Claims Cap Exceeded</strong></h4>
+<ul>
+<li><strong>Detection</strong>: Monitor claims against configured caps</li>
+<li><strong>Action</strong>: Stop billing additional claims when cap reached</li>
+<li><strong>Notification</strong>: Alert billing administrators of cap status</li>
+</ul>
+<h4 id="profit-share-negative"><strong>Profit Share Negative</strong></h4>
+<ul>
+<li><strong>Detection</strong>: Monitor for negative profit calculations</li>
+<li><strong>Action</strong>: Set profit share to zero (no negative sharing)</li>
+<li><strong>Investigation</strong>: Flag for business review of expense levels</li>
+</ul>
+<h2 id="performance-and-scalability">Performance and Scalability</h2>
+<h3 id="calculation-optimization">Calculation Optimization</h3>
+<h4 id="batch-processing"><strong>Batch Processing</strong></h4>
+<ul>
+<li><strong>Monthly Calculations</strong>: Process all sites in optimized batches</li>
+<li><strong>Parallel Processing</strong>: Calculate independent components simultaneously</li>
+<li><strong>Caching</strong>: Cache frequently accessed configuration data</li>
+</ul>
+<h3 id="data-volume-management">Data Volume Management</h3>
+<h4 id="historical-data"><strong>Historical Data</strong></h4>
+<ul>
+<li><strong>Retention</strong>: Maintain 7 years of calculation history for audit</li>
+<li><strong>Archival</strong>: Archive older data to maintain performance</li>
+<li><strong>Retrieval</strong>: Efficient access to historical calculations for analysis</li>
+</ul>
+<h2 id="related-documentation">Related Documentation</h2>
+<ul>
+<li><a href="../revenue-share-contract-business-rules/">Revenue Share Contract Business Rules</a> ✓ VERIFIED</li>
+<li><a href="../../technical-specifications/towne-park-forecasting-system-comprehensive-master-architecture/">Towne Park Forecasting System Architecture</a> ✓ VERIFIED</li>
+<li><a href="../validation-reports/management-agreement-code-validation-report.md">Management Agreement Code Validation Report</a> 🔄 PLANNED</li>
+<li><a href="contract-escalation-rules.md">Contract Escalation Rules</a> 🔄 PLANNED</li>
+<li><a href="../configuration/billable-accounts-setup.md">Billable Accounts Configuration Guide</a> 🔄 PLANNED</li>
+<li><a href="../technical-specifications/pteb-calculation-spec.md">PTEB Calculation Technical Specification</a> 🔄 PLANNED</li>
+<li><a href="../configuration/profit-share-setup.md">Profit Share Tier Configuration</a> 🔄 PLANNED</li>
+<li><a href="../technical-specifications/gl-account-mapping.md">GL Account Mapping Guide</a> 🔄 PLANNED</li>
+</ul>
+<h2 id="quick-links">Quick Links</h2>
+<ul>
+<li><a href="../revenue-share-contract-business-rules/">Revenue Share Business Rules</a></li>
+<li><a href="../../technical-specifications/towne-park-forecasting-system-comprehensive-master-architecture/">Forecasting System Architecture</a></li>
+<li><a href="../validation-reports/management-agreement-code-validation-report.md">Management Agreement Validation Report</a></li>
+</ul>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="Last update">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 8, 2025 21:48:01 UTC">August 8, 2025</span>
+</span>
+</aside>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+<script src="../../../javascripts/extra.js"></script>
+</body>
+</html>

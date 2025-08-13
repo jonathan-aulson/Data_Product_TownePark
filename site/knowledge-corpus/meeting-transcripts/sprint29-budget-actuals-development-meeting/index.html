@@ -1,0 +1,1418 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Development meeting transcript for Sprint 29 budget vs actuals display implementation with FIBO financial forecasting classification and strategic implementation decisions" name="description"/>
+<link href="https://jonathan-aulson.github.io/Data_Product_TownePark/knowledge-corpus/meeting-transcripts/sprint29-budget-actuals-development-meeting/" rel="canonical"/>
+<link href="../sprint28-management-agreement-development-meeting/" rel="prev"/>
+<link href="../sprint30-forecasting-variance-development-meeting/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.15" name="generator"/>
+<title>Sprint 29 Budget vs Actuals Implementation - Development Meeting - Towne Park Data Product</title>
+<link href="../../../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#sprint-29-budget-vs-actuals-implementation-development-meeting">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Towne Park Data Product" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Towne Park Data Product">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Towne Park Data Product
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Sprint 29 Budget vs Actuals Implementation - Development Meeting
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../business-rules/fixed-fee-contract-configuration-business-rules/">
+          
+  
+  
+  Financial Entities
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../technical-specifications/edw-integration-technical-specification/">
+          
+  
+  
+  System Architecture
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../user-processes/ai-assisted-sprint-planning-process-guide/">
+          
+  
+  
+  Role-Based Processes
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../validation-reports/architecture-revenue-calculations-meeting-code-validation-report/">
+          
+  
+  
+  Validation Reports
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../12-month-forecast-architecture-planning-meeting-transcript-20250709/">
+          
+  
+  
+  Meeting Transcripts
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../standards/ai-content-safety-checklist/">
+          
+  
+  
+  Standards Framework
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../configuration/ai-development-tools-configuration-guide/">
+          
+  
+  
+  Configuration Guides
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Towne Park Data Product" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Towne Park Data Product">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Towne Park Data Product
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    Home
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Financial Entities
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Financial Entities
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Business Rules
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            Business Rules
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../business-rules/fixed-fee-contract-configuration-business-rules/">
+<span class="md-ellipsis">
+    Fixed Fee Contract Configuration Business Rules
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../business-rules/hybrid-contract-configuration-business-rules/">
+<span class="md-ellipsis">
+    Hybrid Contract Configuration Business Rules
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../business-rules/management-agreement-contract-business-rules/">
+<span class="md-ellipsis">
+    Management Agreement Contract Business Rules
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../business-rules/per-labor-hour-contract-configuration-business-rules/">
+<span class="md-ellipsis">
+    Per Labor Hour Contract Configuration Business Rules
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../business-rules/revenue-share-contract-business-rules/">
+<span class="md-ellipsis">
+    Revenue Share Contract Business Rules
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../business-rules/forecasting-data-validation-business-rules/">
+<span class="md-ellipsis">
+    Forecasting Data Validation Business Rules
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    System Architecture
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            System Architecture
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../technical-specifications/edw-integration-technical-specification/">
+<span class="md-ellipsis">
+    EDW Integration Technical Specification
+    
+  </span>
+<span class="md-status md-status--Draft"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../technical-specifications/revenue-datamart-daily-data-model/">
+<span class="md-ellipsis">
+    Revenue Datamart Daily Data Model
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../technical-specifications/towne-park-forecasting-system-comprehensive-master-architecture/">
+<span class="md-ellipsis">
+    Towne Park Forecasting System Comprehensive Master Architecture
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Role-Based Processes
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Role-Based Processes
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../user-processes/ai-assisted-sprint-planning-process-guide/">
+<span class="md-ellipsis">
+    AI-Assisted Sprint Planning Process Guide
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../user-processes/statement-management-user-process/">
+<span class="md-ellipsis">
+    Statement Management User Process
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../user-processes/territory-admin-territory-management-procedures/">
+<span class="md-ellipsis">
+    Territory Administration Territory Management Procedures
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Validation Reports
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Validation Reports
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../validation-reports/architecture-revenue-calculations-meeting-code-validation-report/">
+<span class="md-ellipsis">
+    Architecture Revenue Calculations Meeting Code Validation
+    
+  </span>
+<span class="md-status md-status--Validation Complete"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../validation-reports/management-agreement-contract-configuration-business-rules-code-validation-report/">
+<span class="md-ellipsis">
+    Management Agreement Business Rules Code Validation
+    
+  </span>
+<span class="md-status md-status--Validated"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../validation-reports/validation-integrity-remediation-summary-2025-08-08/">
+<span class="md-ellipsis">
+    Validation Integrity Remediation Summary
+    
+  </span>
+<span class="md-status md-status--Complete"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+<span class="md-ellipsis">
+    Meeting Transcripts
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Meeting Transcripts
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../12-month-forecast-architecture-planning-meeting-transcript-20250709/">
+<span class="md-ellipsis">
+    12-Month Forecast Architecture Planning - July 2025
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../architecture-revenue-calculations-team-notes-20250805/">
+<span class="md-ellipsis">
+    Architecture &amp; Revenue Calculations Team Notes - August 2025
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../development-sprint-retrospective-process-improvements-20250731/">
+<span class="md-ellipsis">
+    Development Sprint Retrospective Process Improvements - July 2025
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../sprint28-management-agreement-development-meeting/">
+<span class="md-ellipsis">
+    Sprint 28 Management Agreement Development
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Sprint 29 Budget vs Actuals Development
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Sprint 29 Budget vs Actuals Development
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#executive-summary">
+<span class="md-ellipsis">
+      Executive Summary
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#meeting-details">
+<span class="md-ellipsis">
+      Meeting Details
+    </span>
+</a>
+<nav aria-label="Meeting Details" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#participants-and-roles">
+<span class="md-ellipsis">
+      Participants and Roles
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fibo-financial-ontology-classification">
+<span class="md-ellipsis">
+      FIBO Financial Ontology Classification
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#strategic-implementation-decisions">
+<span class="md-ellipsis">
+      Strategic Implementation Decisions
+    </span>
+</a>
+<nav aria-label="Strategic Implementation Decisions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-implementation-sequence-revision">
+<span class="md-ellipsis">
+      1. Implementation Sequence Revision
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-variance-calculation-methodology">
+<span class="md-ellipsis">
+      2. Variance Calculation Methodology
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-data-architecture-strategy">
+<span class="md-ellipsis">
+      3. Data Architecture Strategy
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#technical-implementation-specifications">
+<span class="md-ellipsis">
+      Technical Implementation Specifications
+    </span>
+</a>
+<nav aria-label="Technical Implementation Specifications" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#budget-display-implementation">
+<span class="md-ellipsis">
+      Budget Display Implementation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#actuals-implementation-preparation">
+<span class="md-ellipsis">
+      Actuals Implementation Preparation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-story-modifications-and-sprint-planning">
+<span class="md-ellipsis">
+      User Story Modifications and Sprint Planning
+    </span>
+</a>
+<nav aria-label="User Story Modifications and Sprint Planning" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-story-2347-scope-transformation">
+<span class="md-ellipsis">
+      User Story 2347 Scope Transformation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sprint-29-development-workflow">
+<span class="md-ellipsis">
+      Sprint 29 Development Workflow
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quality-assurance-and-testing-framework">
+<span class="md-ellipsis">
+      Quality Assurance and Testing Framework
+    </span>
+</a>
+<nav aria-label="Quality Assurance and Testing Framework" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#testing-requirements">
+<span class="md-ellipsis">
+      Testing Requirements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#acceptance-criteria">
+<span class="md-ellipsis">
+      Acceptance Criteria
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performance-optimization-strategy">
+<span class="md-ellipsis">
+      Performance Optimization Strategy
+    </span>
+</a>
+<nav aria-label="Performance Optimization Strategy" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#current-performance-baseline">
+<span class="md-ellipsis">
+      Current Performance Baseline
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#optimization-techniques">
+<span class="md-ellipsis">
+      Optimization Techniques
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#future-performance-considerations">
+<span class="md-ellipsis">
+      Future Performance Considerations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#integration-points-and-dependencies">
+<span class="md-ellipsis">
+      Integration Points and Dependencies
+    </span>
+</a>
+<nav aria-label="Integration Points and Dependencies" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#existing-system-integration">
+<span class="md-ellipsis">
+      Existing System Integration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#future-integration-requirements">
+<span class="md-ellipsis">
+      Future Integration Requirements
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#related-documentation-and-cross-references">
+<span class="md-ellipsis">
+      Related Documentation and Cross-References
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation-audit-trail">
+<span class="md-ellipsis">
+      Implementation Audit Trail
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../sprint30-forecasting-variance-development-meeting/">
+<span class="md-ellipsis">
+    Sprint 30 Forecasting Variance Development
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../daily-scrum-development-progress-team-notes/">
+<span class="md-ellipsis">
+    Daily Scrum Development Progress
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    Standards Framework
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            Standards Framework
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../standards/ai-content-safety-checklist/">
+<span class="md-ellipsis">
+    AI Content Safety Checklist
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
+    Configuration Guides
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            Configuration Guides
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../configuration/ai-development-tools-configuration-guide/">
+<span class="md-ellipsis">
+    AI Development Tools Configuration Guide
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#executive-summary">
+<span class="md-ellipsis">
+      Executive Summary
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#meeting-details">
+<span class="md-ellipsis">
+      Meeting Details
+    </span>
+</a>
+<nav aria-label="Meeting Details" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#participants-and-roles">
+<span class="md-ellipsis">
+      Participants and Roles
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fibo-financial-ontology-classification">
+<span class="md-ellipsis">
+      FIBO Financial Ontology Classification
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#strategic-implementation-decisions">
+<span class="md-ellipsis">
+      Strategic Implementation Decisions
+    </span>
+</a>
+<nav aria-label="Strategic Implementation Decisions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-implementation-sequence-revision">
+<span class="md-ellipsis">
+      1. Implementation Sequence Revision
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-variance-calculation-methodology">
+<span class="md-ellipsis">
+      2. Variance Calculation Methodology
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-data-architecture-strategy">
+<span class="md-ellipsis">
+      3. Data Architecture Strategy
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#technical-implementation-specifications">
+<span class="md-ellipsis">
+      Technical Implementation Specifications
+    </span>
+</a>
+<nav aria-label="Technical Implementation Specifications" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#budget-display-implementation">
+<span class="md-ellipsis">
+      Budget Display Implementation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#actuals-implementation-preparation">
+<span class="md-ellipsis">
+      Actuals Implementation Preparation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-story-modifications-and-sprint-planning">
+<span class="md-ellipsis">
+      User Story Modifications and Sprint Planning
+    </span>
+</a>
+<nav aria-label="User Story Modifications and Sprint Planning" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-story-2347-scope-transformation">
+<span class="md-ellipsis">
+      User Story 2347 Scope Transformation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sprint-29-development-workflow">
+<span class="md-ellipsis">
+      Sprint 29 Development Workflow
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quality-assurance-and-testing-framework">
+<span class="md-ellipsis">
+      Quality Assurance and Testing Framework
+    </span>
+</a>
+<nav aria-label="Quality Assurance and Testing Framework" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#testing-requirements">
+<span class="md-ellipsis">
+      Testing Requirements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#acceptance-criteria">
+<span class="md-ellipsis">
+      Acceptance Criteria
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performance-optimization-strategy">
+<span class="md-ellipsis">
+      Performance Optimization Strategy
+    </span>
+</a>
+<nav aria-label="Performance Optimization Strategy" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#current-performance-baseline">
+<span class="md-ellipsis">
+      Current Performance Baseline
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#optimization-techniques">
+<span class="md-ellipsis">
+      Optimization Techniques
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#future-performance-considerations">
+<span class="md-ellipsis">
+      Future Performance Considerations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#integration-points-and-dependencies">
+<span class="md-ellipsis">
+      Integration Points and Dependencies
+    </span>
+</a>
+<nav aria-label="Integration Points and Dependencies" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#existing-system-integration">
+<span class="md-ellipsis">
+      Existing System Integration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#future-integration-requirements">
+<span class="md-ellipsis">
+      Future Integration Requirements
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#related-documentation-and-cross-references">
+<span class="md-ellipsis">
+      Related Documentation and Cross-References
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation-audit-trail">
+<span class="md-ellipsis">
+      Implementation Audit Trail
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="sprint-29-budget-vs-actuals-implementation-development-meeting">Sprint 29 Budget vs Actuals Implementation - Development Meeting</h1>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>This strategic development meeting established a revised implementation approach for budget vs actuals functionality in the forecasting system. The team made the critical decision to prioritize budget display implementation before actuals, creating a solid foundation for comprehensive variance analysis capabilities.</p>
+<p><strong>Key Strategic Decision</strong>: Pivot from actuals-first to budget-first implementation approach<br/>
+<strong>Technical Impact</strong>: Simplified development path with clear dependency management<br/>
+<strong>Business Value</strong>: Enhanced financial planning capabilities with variance analysis foundation</p>
+<h2 id="meeting-details">Meeting Details</h2>
+<p><strong>Date</strong>: July 10, 2025<br/>
+<strong>Meeting Type</strong>: Sprint Tasking Addon Session<br/>
+<strong>Duration</strong>: Approximately 20 minutes<br/>
+<strong>Primary Focus</strong>: User Story 2347 implementation strategy and budget vs actuals display prioritization</p>
+<h3 id="participants-and-roles">Participants and Roles</h3>
+<ul>
+<li><strong>Javier Casas</strong> - Developer</li>
+<li><strong>Cesar Figueroa</strong> - Technical Lead</li>
+<li><strong>Jonathan Aulson</strong> - Product Owner/Business Analyst</li>
+<li><strong>Christopher Thompson</strong> - Senior Developer</li>
+<li><strong>Graham Olson</strong> - Developer</li>
+</ul>
+<h2 id="fibo-financial-ontology-classification">FIBO Financial Ontology Classification</h2>
+<p><strong>Primary Classification</strong>: <a href="../../FIBO-master-ontology/FBC/"><code>fibo-fbc-dae-dbt:Budget</code></a> with forecasting and variance analysis extensions<br/>
+<strong>Towne Park Extension</strong>: Budget vs Actuals forecasting system with variance calculation<br/>
+<strong>Regulatory Context</strong>: Financial planning standards, budget management practices, variance reporting requirements</p>
+<p><strong>Domain-Specific Properties:</strong>
+- <strong>Budget Display</strong>: Integration with existing forecasting table structure
+- <strong>Variance Calculation</strong>: Absolute values with percentage configuration options
+- <strong>Data Integration</strong>: Leveraging existing budget data sources and ETL processes
+- <strong>UI Enhancement</strong>: Responsive design with column-based budget display
+- <strong>Future Actuals</strong>: Foundation preparation for comprehensive budget vs actuals analysis</p>
+<h2 id="strategic-implementation-decisions">Strategic Implementation Decisions</h2>
+<h3 id="1-implementation-sequence-revision">1. Implementation Sequence Revision</h3>
+<p><strong>Original Strategy</strong>: Implement actuals display first (User Story 2347)</p>
+<p><strong>Revised Strategy</strong>: Budget-first implementation approach
+<div class="highlight"><pre><span></span><code><span class="nt">implementation_sequence</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">phase_1_sprint_29</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">focus</span><span class="p">:</span><span class="w"> </span><span class="s">"Budget</span><span class="nv"> </span><span class="s">display</span><span class="nv"> </span><span class="s">implementation"</span>
+<span class="w">    </span><span class="nt">user_story</span><span class="p">:</span><span class="w"> </span><span class="s">"2347</span><span class="nv"> </span><span class="s">(modified</span><span class="nv"> </span><span class="s">scope)"</span>
+<span class="w">    </span><span class="nt">deliverables</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"Budget</span><span class="nv"> </span><span class="s">column</span><span class="nv"> </span><span class="s">addition</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">forecasting</span><span class="nv"> </span><span class="s">tables"</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"Budget</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">display</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">formatting"</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"UI</span><span class="nv"> </span><span class="s">enhancements</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">budget</span><span class="nv"> </span><span class="s">visibility"</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"Foundation</span><span class="nv"> </span><span class="s">preparation</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">actuals</span><span class="nv"> </span><span class="s">integration"</span>
+
+<span class="w">  </span><span class="nt">phase_2_future_sprint</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">focus</span><span class="p">:</span><span class="w"> </span><span class="s">"Actuals</span><span class="nv"> </span><span class="s">display</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">variance</span><span class="nv"> </span><span class="s">calculation"</span>
+<span class="w">    </span><span class="nt">user_story</span><span class="p">:</span><span class="w"> </span><span class="s">"2477</span><span class="nv"> </span><span class="s">(new</span><span class="nv"> </span><span class="s">story)"</span>
+<span class="w">    </span><span class="nt">deliverables</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"Actuals</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">query</span><span class="nv"> </span><span class="s">implementation"</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"Actuals</span><span class="nv"> </span><span class="s">column</span><span class="nv"> </span><span class="s">display"</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"Variance</span><span class="nv"> </span><span class="s">calculation</span><span class="nv"> </span><span class="s">integration"</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"Complete</span><span class="nv"> </span><span class="s">budget</span><span class="nv"> </span><span class="s">vs</span><span class="nv"> </span><span class="s">actuals</span><span class="nv"> </span><span class="s">functionality"</span>
+</code></pre></div></p>
+<p><strong>Strategic Rationale</strong>:
+- <strong>Foundation Building</strong>: Budget implementation provides stable foundation for actuals comparison
+- <strong>Technical Simplification</strong>: Clear dependency management with sequential development
+- <strong>Risk Mitigation</strong>: Reduced complexity by separating concerns
+- <strong>User Value</strong>: Immediate budget visibility while preparing for comprehensive variance analysis</p>
+<h3 id="2-variance-calculation-methodology">2. Variance Calculation Methodology</h3>
+<p><strong>Technical Question</strong>: Should variance be displayed as absolute values or percentages?</p>
+<p><strong>Resolution Framework</strong>:
+<div class="highlight"><pre><span></span><code><span class="kd">interface</span><span class="w"> </span><span class="nx">VarianceDisplayConfig</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">defaultMethod</span><span class="o">:</span><span class="w"> </span><span class="s1">'absolute'</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">'percentage'</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">configurationOverride</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">calculationLogic</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">absolute</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">budget</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">actual</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">percentage</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">budget</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">actual</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="p">}</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">varianceConfig</span><span class="o">:</span><span class="w"> </span><span class="kt">VarianceDisplayConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">defaultMethod</span><span class="o">:</span><span class="w"> </span><span class="s1">'absolute'</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">configurationOverride</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">calculationLogic</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">absolute</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">budget</span><span class="p">,</span><span class="w"> </span><span class="nx">actual</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">actual</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">budget</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">percentage</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">budget</span><span class="p">,</span><span class="w"> </span><span class="nx">actual</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">budget</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="p">((</span><span class="nx">actual</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">budget</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">budget</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">100</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">0</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></p>
+<p><strong>Implementation Rules</strong>:
+- <strong>Default Display</strong>: Absolute values for all variance calculations
+- <strong>Configuration Override</strong>: Percentage display only where explicitly configured
+- <strong>Consistency</strong>: Maintain existing variance calculation patterns
+- <strong>Flexibility</strong>: Support both methods based on business requirements</p>
+<h3 id="3-data-architecture-strategy">3. Data Architecture Strategy</h3>
+<p><strong>Budget Data Integration</strong>:
+<div class="highlight"><pre><span></span><code><span class="c1">-- Existing budget data structure (already available)</span>
+<span class="k">SELECT</span><span class="w"> </span>
+<span class="w">  </span><span class="n">site_id</span><span class="p">,</span>
+<span class="w">  </span><span class="n">period_date</span><span class="p">,</span>
+<span class="w">  </span><span class="n">account_code</span><span class="p">,</span>
+<span class="w">  </span><span class="n">budget_amount</span><span class="p">,</span>
+<span class="w">  </span><span class="n">forecast_amount</span><span class="p">,</span>
+<span class="w">  </span><span class="n">variance_threshold</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">budget_data_mart</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">enabled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</code></pre></div></p>
+<p><strong>Table Structure Enhancement</strong>:
+<div class="highlight"><pre><span></span><code><span class="kd">interface</span><span class="w"> </span><span class="nx">ForecastingTableStructure</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">existingColumns</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">forecast</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">variance</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">period</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">account</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="w">  </span><span class="nx">newBudgetColumns</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">budget</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">budgetVariance</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">budgetPercentage?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="w">  </span><span class="nx">futureActualsColumns</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">actual?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">actualVariance?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">actualPercentage?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="technical-implementation-specifications">Technical Implementation Specifications</h2>
+<h3 id="budget-display-implementation">Budget Display Implementation</h3>
+<p><strong>Data Source Integration</strong>:
+- <strong>Existing Availability</strong>: Budget data already available in system
+- <strong>ETL Processes</strong>: Leverage existing data pipeline infrastructure
+- <strong>Performance</strong>: No additional API calls required for budget data
+- <strong>Data Quality</strong>: Utilize established data validation and cleansing processes</p>
+<p><strong>Frontend Implementation</strong>:
+<div class="highlight"><pre><span></span><code><span class="c1">// Budget column component implementation</span>
+<span class="kd">interface</span><span class="w"> </span><span class="nx">BudgetColumnProps</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">budgetData</span><span class="o">:</span><span class="w"> </span><span class="kt">BudgetData</span><span class="p">[];</span>
+<span class="w">  </span><span class="nx">displayFormat</span><span class="o">:</span><span class="w"> </span><span class="s1">'currency'</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">'percentage'</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">varianceCalculation</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">responsiveBreakpoints</span><span class="o">:</span><span class="w"> </span><span class="kt">BreakpointConfig</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">BudgetColumn</span><span class="o">:</span><span class="w"> </span><span class="kt">React.FC</span><span class="o">&lt;</span><span class="nx">BudgetColumnProps</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">({</span>
+<span class="w">  </span><span class="nx">budgetData</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">displayFormat</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">varianceCalculation</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">responsiveBreakpoints</span>
+<span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="nx">TableColumn</span>
+<span class="w">      </span><span class="nx">header</span><span class="o">=</span><span class="s2">"Budget"</span>
+<span class="w">      </span><span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="nx">budgetData</span><span class="p">}</span>
+<span class="w">      </span><span class="nx">formatter</span><span class="o">=</span><span class="p">{</span><span class="nx">displayFormat</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s1">'currency'</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">formatCurrency</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">formatPercentage</span><span class="p">}</span>
+<span class="w">      </span><span class="nx">variance</span><span class="o">=</span><span class="p">{</span><span class="nx">varianceCalculation</span><span class="p">}</span>
+<span class="w">      </span><span class="nx">responsive</span><span class="o">=</span><span class="p">{</span><span class="nx">responsiveBreakpoints</span><span class="p">}</span>
+<span class="w">    </span><span class="o">/&gt;</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div></p>
+<p><strong>Backend Integration</strong>:
+<div class="highlight"><pre><span></span><code><span class="c1">// Budget data service implementation</span>
+<span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">BudgetDataService</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">IBudgetDataService</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="o">&lt;</span><span class="n">BudgetData</span><span class="p">[]</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetBudgetDataAsync</span><span class="p">(</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">siteId</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="n">DateTime</span><span class="w"> </span><span class="n">startDate</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="n">DateTime</span><span class="w"> </span><span class="n">endDate</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Leverage existing data access patterns</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">_dataRepository</span><span class="p">.</span><span class="n">GetBudgetDataAsync</span><span class="p">(</span><span class="n">siteId</span><span class="p">,</span><span class="w"> </span><span class="n">startDate</span><span class="p">,</span><span class="w"> </span><span class="n">endDate</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">decimal</span><span class="w"> </span><span class="nf">CalculateVariance</span><span class="p">(</span><span class="kt">decimal</span><span class="w"> </span><span class="n">budget</span><span class="p">,</span><span class="w"> </span><span class="kt">decimal</span><span class="w"> </span><span class="n">forecast</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">forecast</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">budget</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">decimal</span><span class="w"> </span><span class="nf">CalculatePercentageVariance</span><span class="p">(</span><span class="kt">decimal</span><span class="w"> </span><span class="n">budget</span><span class="p">,</span><span class="w"> </span><span class="kt">decimal</span><span class="w"> </span><span class="n">forecast</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">budget</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="p">((</span><span class="n">forecast</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">budget</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">budget</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="actuals-implementation-preparation">Actuals Implementation Preparation</h3>
+<p><strong>Future Data Flow Architecture</strong>:
+<pre class="mermaid"><code>graph TD
+    A[Budget Data Source] --&gt; B[Budget Display]
+    C[Actuals Data Source] --&gt; D[Actuals Display]
+    B --&gt; E[Variance Calculation]
+    D --&gt; E
+    E --&gt; F[Variance Indicators]
+    F --&gt; G[Complete Budget vs Actuals View]</code></pre></p>
+<p><strong>Actuals Query Implementation</strong> (Future Sprint):
+<div class="highlight"><pre><span></span><code><span class="c1">-- Actuals data query (to be implemented)</span>
+<span class="k">SELECT</span><span class="w"> </span>
+<span class="w">  </span><span class="n">site_id</span><span class="p">,</span>
+<span class="w">  </span><span class="n">period_date</span><span class="p">,</span>
+<span class="w">  </span><span class="n">account_code</span><span class="p">,</span>
+<span class="w">  </span><span class="n">actual_amount</span><span class="p">,</span>
+<span class="w">  </span><span class="n">posting_date</span><span class="p">,</span>
+<span class="w">  </span><span class="n">data_source</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">actuals_data_mart</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">period_date</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="o">@</span><span class="n">start_date</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="o">@</span><span class="n">end_date</span>
+<span class="w">  </span><span class="k">AND</span><span class="w"> </span><span class="n">site_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">@</span><span class="n">site_id</span>
+<span class="w">  </span><span class="k">AND</span><span class="w"> </span><span class="n">data_quality_flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'VALIDATED'</span><span class="p">;</span>
+</code></pre></div></p>
+<h2 id="user-story-modifications-and-sprint-planning">User Story Modifications and Sprint Planning</h2>
+<h3 id="user-story-2347-scope-transformation">User Story 2347 Scope Transformation</h3>
+<p><strong>Original Scope</strong>: Actuals display implementation
+<div class="highlight"><pre><span></span><code><span class="nt">original_user_story_2347</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Implement</span><span class="nv"> </span><span class="s">Actuals</span><span class="nv"> </span><span class="s">Display</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">Forecasting"</span>
+<span class="w">  </span><span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="s">"Add</span><span class="nv"> </span><span class="s">actuals</span><span class="nv"> </span><span class="s">columns</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">variance</span><span class="nv"> </span><span class="s">calculation"</span>
+<span class="w">  </span><span class="nt">complexity</span><span class="p">:</span><span class="w"> </span><span class="s">"High"</span>
+<span class="w">  </span><span class="nt">dependencies</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"Budget</span><span class="nv"> </span><span class="s">data"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"Actuals</span><span class="nv"> </span><span class="s">data"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"Variance</span><span class="nv"> </span><span class="s">logic"</span><span class="p p-Indicator">]</span>
+</code></pre></div></p>
+<p><strong>Modified Scope</strong>: Budget display implementation
+<div class="highlight"><pre><span></span><code><span class="nt">modified_user_story_2347</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Implement</span><span class="nv"> </span><span class="s">Budget</span><span class="nv"> </span><span class="s">Display</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">Forecasting"</span>
+<span class="w">  </span><span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="s">"Add</span><span class="nv"> </span><span class="s">budget</span><span class="nv"> </span><span class="s">columns</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">prepare</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">actuals</span><span class="nv"> </span><span class="s">integration"</span>
+<span class="w">  </span><span class="nt">complexity</span><span class="p">:</span><span class="w"> </span><span class="s">"Medium"</span>
+<span class="w">  </span><span class="nt">dependencies</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"Existing</span><span class="nv"> </span><span class="s">budget</span><span class="nv"> </span><span class="s">data"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"Table</span><span class="nv"> </span><span class="s">structure</span><span class="nv"> </span><span class="s">enhancement"</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">deliverables</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"Budget</span><span class="nv"> </span><span class="s">column</span><span class="nv"> </span><span class="s">implementation"</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"Budget</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">display</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">formatting"</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"UI</span><span class="nv"> </span><span class="s">enhancements</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">budget</span><span class="nv"> </span><span class="s">visibility"</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"Foundation</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">actuals</span><span class="nv"> </span><span class="s">integration"</span>
+</code></pre></div></p>
+<p><strong>New User Story 2477</strong>: Actuals implementation
+<div class="highlight"><pre><span></span><code><span class="nt">new_user_story_2477</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Implement</span><span class="nv"> </span><span class="s">Actuals</span><span class="nv"> </span><span class="s">Display</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Variance</span><span class="nv"> </span><span class="s">Calculation"</span>
+<span class="w">  </span><span class="nt">scope</span><span class="p">:</span><span class="w"> </span><span class="s">"Complete</span><span class="nv"> </span><span class="s">budget</span><span class="nv"> </span><span class="s">vs</span><span class="nv"> </span><span class="s">actuals</span><span class="nv"> </span><span class="s">functionality"</span>
+<span class="w">  </span><span class="nt">complexity</span><span class="p">:</span><span class="w"> </span><span class="s">"High"</span>
+<span class="w">  </span><span class="nt">dependencies</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"User</span><span class="nv"> </span><span class="s">Story</span><span class="nv"> </span><span class="s">2347</span><span class="nv"> </span><span class="s">completion"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"Actuals</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">source"</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">deliverables</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"Actuals</span><span class="nv"> </span><span class="s">data</span><span class="nv"> </span><span class="s">query</span><span class="nv"> </span><span class="s">implementation"</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"Actuals</span><span class="nv"> </span><span class="s">column</span><span class="nv"> </span><span class="s">display"</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"Variance</span><span class="nv"> </span><span class="s">calculation</span><span class="nv"> </span><span class="s">integration"</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"Complete</span><span class="nv"> </span><span class="s">budget</span><span class="nv"> </span><span class="s">vs</span><span class="nv"> </span><span class="s">actuals</span><span class="nv"> </span><span class="s">functionality"</span>
+</code></pre></div></p>
+<h3 id="sprint-29-development-workflow">Sprint 29 Development Workflow</h3>
+<p><strong>Week 1: Analysis and Planning</strong>
+- Review existing table structure and data sources
+- Analyze budget data availability and quality
+- Plan UI/UX enhancements for budget display
+- Prepare development environment and dependencies</p>
+<p><strong>Week 2: Core Implementation</strong>
+- Implement budget column components
+- Develop budget data binding and display logic
+- Create responsive design enhancements
+- Integrate with existing table infrastructure</p>
+<p><strong>Week 3: Testing and Integration</strong>
+- Unit testing for budget display components
+- Integration testing with existing forecasting functionality
+- Performance testing with additional columns
+- User acceptance testing preparation</p>
+<p><strong>Week 4: Deployment and Documentation</strong>
+- Production deployment preparation
+- Documentation updates and code validation
+- Stakeholder demonstration and feedback
+- Foundation preparation for actuals implementation</p>
+<h2 id="quality-assurance-and-testing-framework">Quality Assurance and Testing Framework</h2>
+<h3 id="testing-requirements">Testing Requirements</h3>
+<p><strong>Budget Display Validation</strong>:
+<div class="highlight"><pre><span></span><code><span class="c1">// Test suite for budget display functionality</span>
+<span class="nx">describe</span><span class="p">(</span><span class="s1">'Budget Display Implementation'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">test</span><span class="p">(</span><span class="s1">'should display budget data accurately'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">budgetData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">mockBudgetData</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">component</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">BudgetColumn</span><span class="w"> </span><span class="nx">budgetData</span><span class="o">=</span><span class="p">{</span><span class="nx">budgetData</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="nx">component</span><span class="p">.</span><span class="nx">getByText</span><span class="p">(</span><span class="s1">'$10,000'</span><span class="p">)).</span><span class="nx">toBeInTheDocument</span><span class="p">();</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="nx">test</span><span class="p">(</span><span class="s1">'should calculate variance correctly'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">budget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10000</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">forecast</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12000</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">variance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">calculateVariance</span><span class="p">(</span><span class="nx">budget</span><span class="p">,</span><span class="w"> </span><span class="nx">forecast</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="nx">variance</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="mf">2000</span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="nx">test</span><span class="p">(</span><span class="s1">'should maintain responsive design'</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">component</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">BudgetColumn</span><span class="w"> </span><span class="nx">responsive</span><span class="o">=</span><span class="p">{</span><span class="kc">true</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">expect</span><span class="p">(</span><span class="nx">component</span><span class="p">.</span><span class="nx">container</span><span class="p">).</span><span class="nx">toHaveClass</span><span class="p">(</span><span class="s1">'responsive-table'</span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></p>
+<p><strong>Performance Testing</strong>:
+- <strong>Load Testing</strong>: Verify table performance with additional budget columns
+- <strong>Data Volume Testing</strong>: Test with large datasets and multiple sites
+- <strong>Responsive Testing</strong>: Ensure mobile and tablet compatibility
+- <strong>Integration Testing</strong>: Validate compatibility with existing variance logic</p>
+<p><strong>Regression Testing</strong>:
+- <strong>Existing Functionality</strong>: Ensure no impact on current forecasting features
+- <strong>Data Integrity</strong>: Verify budget data accuracy and consistency
+- <strong>UI Consistency</strong>: Maintain design patterns and user experience
+- <strong>Performance Baseline</strong>: Ensure no degradation in page load times</p>
+<h3 id="acceptance-criteria">Acceptance Criteria</h3>
+<p><strong>Budget Implementation Success Criteria</strong>:
+1. <strong>Data Accuracy</strong>: Budget columns display correct values from source systems
+2. <strong>UI Consistency</strong>: Budget display maintains existing design patterns
+3. <strong>Performance</strong>: No significant impact on table loading or rendering times
+4. <strong>Responsiveness</strong>: Budget columns adapt properly to different screen sizes
+5. <strong>Integration</strong>: Seamless integration with existing forecasting functionality</p>
+<p><strong>Quality Gates</strong>:
+- <strong>Code Review</strong>: Technical lead approval required
+- <strong>Testing Coverage</strong>: Minimum 90% test coverage for new components
+- <strong>Performance Benchmark</strong>: Page load time within 10% of baseline
+- <strong>Accessibility</strong>: WCAG 2.1 AA compliance for new UI elements</p>
+<h2 id="performance-optimization-strategy">Performance Optimization Strategy</h2>
+<h3 id="current-performance-baseline">Current Performance Baseline</h3>
+<ul>
+<li><strong>Existing Data</strong>: Budget data already available, no additional API overhead</li>
+<li><strong>Table Rendering</strong>: Leverage existing table optimization patterns</li>
+<li><strong>Data Loading</strong>: Utilize established caching and pagination strategies</li>
+</ul>
+<h3 id="optimization-techniques">Optimization Techniques</h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Performance optimization for budget display</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">BudgetDisplayOptimized</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">React</span><span class="p">.</span><span class="nx">memo</span><span class="p">(({</span><span class="w"> </span><span class="nx">budgetData</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">memoizedBudgetData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useMemo</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span>
+<span class="w">    </span><span class="nx">budgetData</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">({</span>
+<span class="w">      </span><span class="p">...</span><span class="nx">item</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">formattedBudget</span><span class="o">:</span><span class="w"> </span><span class="kt">formatCurrency</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">budget</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">variance</span><span class="o">:</span><span class="w"> </span><span class="kt">calculateVariance</span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">budget</span><span class="p">,</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">forecast</span><span class="p">)</span>
+<span class="w">    </span><span class="p">})),</span><span class="w"> </span><span class="p">[</span><span class="nx">budgetData</span><span class="p">]</span>
+<span class="w">  </span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="nx">VirtualizedTable</span>
+<span class="w">      </span><span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="nx">memoizedBudgetData</span><span class="p">}</span>
+<span class="w">      </span><span class="nx">rowHeight</span><span class="o">=</span><span class="p">{</span><span class="mf">40</span><span class="p">}</span>
+<span class="w">      </span><span class="nx">overscan</span><span class="o">=</span><span class="p">{</span><span class="mf">5</span><span class="p">}</span>
+<span class="w">    </span><span class="o">/&gt;</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<h3 id="future-performance-considerations">Future Performance Considerations</h3>
+<ul>
+<li><strong>Actuals Data Loading</strong>: Plan for additional query execution time</li>
+<li><strong>Variance Calculations</strong>: Optimize real-time calculation performance</li>
+<li><strong>Data Synchronization</strong>: Consider caching strategies for actuals data</li>
+<li><strong>UI Responsiveness</strong>: Maintain smooth user experience with increased data volume</li>
+</ul>
+<h2 id="integration-points-and-dependencies">Integration Points and Dependencies</h2>
+<h3 id="existing-system-integration">Existing System Integration</h3>
+<ul>
+<li><strong>Forecasting Tables</strong>: Seamless integration with current table infrastructure</li>
+<li><strong>Data Sources</strong>: Leverage existing budget data ETL processes</li>
+<li><strong>Variance Logic</strong>: Maintain compatibility with current variance calculations</li>
+<li><strong>User Permissions</strong>: Respect existing role-based access controls</li>
+</ul>
+<h3 id="future-integration-requirements">Future Integration Requirements</h3>
+<ul>
+<li><strong>Actuals Data Sources</strong>: Prepare integration points for actuals data</li>
+<li><strong>Variance Calculation Engine</strong>: Enhanced variance logic for budget vs actuals</li>
+<li><strong>Reporting Systems</strong>: Integration with financial reporting and analytics</li>
+<li><strong>Export Functionality</strong>: Support for budget vs actuals data export</li>
+</ul>
+<h2 id="related-documentation-and-cross-references">Related Documentation and Cross-References</h2>
+<ul>
+<li><a href="../../Future_State_Data_Product/systems/forecasting/forecasting-system-overview.md">Forecasting System Overview</a> 🔄 REQUIRES_VALIDATION</li>
+<li><a href="../../Future_State_Data_Product/business-rules/forecasting/20250724_PayrollDataDisplay_BusinessRules.md">Forecasting Business Rules</a> 🔄 REQUIRES_VALIDATION</li>
+<li><a href="../../Future_State_Data_Product/user-processes/account-manager/20250718_Forecasting_UserProcesses_AccountManagerWorkflows.md">Forecasting User Processes</a> 🔄 REQUIRES_VALIDATION</li>
+<li><a href="../../Future_State_Data_Product/user-processes/account-manager/20250716_Forecasting_DataTableEditing_UserProcess.md">Data Table Editing User Process</a> 🔄 REQUIRES_VALIDATION</li>
+<li><a href="../../Future_State_Data_Product/technical/forecasting/20250702_Forecasting_DataIntegration_TechnicalSpec.md">Forecasting Data Integration Technical Spec</a> 🔄 REQUIRES_VALIDATION</li>
+<li><a href="../sprint28-management-agreement-development-meeting/">Sprint 28 Management Agreement Development</a> ✓ VALIDATED</li>
+</ul>
+<h2 id="implementation-audit-trail">Implementation Audit Trail</h2>
+<p><strong>Meeting Date</strong>: July 10, 2025<br/>
+<strong>Documentation Date</strong>: August 6, 2025<br/>
+<strong>Knowledge Corpus Integration</strong>: August 7, 2025<br/>
+<strong>Sprint Execution</strong>: Sprint 29 (July 2025)<br/>
+<strong>Implementation Status</strong>: Budget display prioritized, actuals deferred to future sprint</p>
+<p><strong>Key Decision Makers</strong>:
+- <strong>Strategic Direction</strong>: Jonathan Aulson (Product Owner)
+- <strong>Technical Implementation</strong>: Cesar Figueroa (Technical Lead)
+- <strong>Development Team</strong>: Javier Casas, Christopher Thompson, Graham Olson</p>
+<p><strong>Quality Assurance</strong>:
+- <strong>Technical Review</strong>: Completed by technical lead
+- <strong>Business Validation</strong>: Approved by product owner
+- <strong>Implementation Strategy</strong>: Budget-first approach confirmed</p>
+<hr/>
+<p><em>This meeting transcript captures the strategic pivot in Sprint 29 implementation approach, establishing budget display as the foundation for comprehensive budget vs actuals functionality while maintaining development efficiency and reducing technical complexity.</em></p>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="Last update">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 8, 2025 16:10:01 UTC">August 8, 2025</span>
+</span>
+</aside>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+<script src="../../../javascripts/extra.js"></script>
+</body>
+</html>

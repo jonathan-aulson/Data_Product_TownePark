@@ -8,30 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "367d52d23bfbeb9a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "team-notes/AulsonJonathan-Notes/DataModel_v1.0_20250730_ACCOUNT_SUMMARY.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "DataModel_v1.0_20250730_ACCOUNT_SUMMARY"
-            }
-          },
-          {
             "id": "12a61dc872f90c8e",
             "type": "leaf",
             "state": {
@@ -41,8 +17,7 @@
               "title": "Graph view"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 490.5
   },
   "right": {
     "id": "eb64b48c5704e542",
@@ -188,43 +163,43 @@
   },
   "active": "12a61dc872f90c8e",
   "lastOpenFiles": [
-    "2025-08-08.md",
-    "technical/specifications/templates/README.md",
-    "technical/integrations/README.md",
-    "technical/database/README.md",
-    "technical/reports/README.md",
+    "validation-reports/management-agreement-contract-configuration-business-rules-code-validation-report.md",
+    "validation-reports/per-labor-hour-contract-configuration-business-rules-code-validation-report.md",
+    "validation-reports/management-agreement-contract-business-rules-code-validation-report.md",
+    "validation-reports/comprehensive-validation-summary-report.md",
+    "validation-reports/dual_validation_testing_report.md",
+    "validation-reports/final-validation-metrics-and-recommendations.md",
+    "validation-reports/ai-development-tools-configuration-guide-code-validation-report.md",
+    "validation-reports/architecture-revenue-calculations-team-notes-code-validation-report.md",
+    "validation-reports/validation-integrity-remediation-summary-2025-08-08.md",
+    "validation-reports/territory-admin-territory-management-procedures-code-validation-report.md",
+    "validation-reports/validation-status-analysis-2025-08-08.md",
+    "validation-reports/towne-park-forecasting-system-comprehensive-master-architecture-code-validation-report.md",
+    "validation-reports/revenue-datamart-daily-data-model-code-validation-report.md",
+    "validation-reports/edw-integration-technical-specification-code-validation-report.md",
+    "validation-reports/ai-content-safety-checklist-code-validation-report.md",
+    "validation-reports/development-sprint-retrospective-process-improvements-20250731-code-validation-report.md",
+    "validation-reports/daily-scrum-development-progress-team-notes-code-validation-report.md",
+    "validation-reports/sprint28-management-agreement-development-meeting-code-validation-report.md",
+    "validation-reports/12-month-forecast-architecture-planning-meeting-transcript-code-validation-report.md",
+    "validation-reports/hybrid-contract-configuration-business-rules-code-validation-report.md",
+    "validation-reports/forecasting-data-validation-business-rules-code-validation-report.md",
+    "validation-reports/revenue-share-contract-business-rules-code-validation-report.md",
+    "validation-reports/fixed-fee-contract-configuration-business-rules-code-validation-report.md",
+    "2025-08-11.md",
+    "validation-reports/quarantined/12-month-forecast-architecture-planning-code-validation-report.md",
+    "user-processes/territory-admin-territory-management-procedures.md",
+    "validation-reports/quarantined",
     "technical/reports",
-    "technical/specifications/templates/DataModel-Technical-Document-Template.md",
-    "technical/specifications/templates/Report-Technical-Document-Template.md",
-    "technical/specifications/templates/Integration-Technical-Document-Template.md",
-    "team-notes/AulsonJonathan-Notes/DataModel_v1.0_20250730_ACCOUNT_SUMMARY.md",
-    "2025-08-04.md",
-    "TP Product Roadmap.md",
-    "2025-07-21.md",
-    "2025-07-31.md",
     "Untitled 1.canvas",
     "team-notes/AulsonJonathan-Notes/Untitled 1",
     "team-notes/AulsonJonathan-Notes/Untitled",
-    "user-processes/district-manager/20250724_Forecasting_Workflows_UserProcess.md",
-    "team-notes/development/20250718_Development_DailyScrum_TeamNotes.md",
-    "business-rules/billing/integration-error-handling-rules.md",
-    "configuration/system-settings/webhook-management-configuration.md",
-    "configuration/system-settings/rss-system-configuration.md",
-    "technical/specifications/templates/integration-spec-template.md",
-    "technical/specifications/templates/api-documentation-standards.md",
-    "technical/specifications/templates/technical-spec-template.md",
     "technical/specifications/templates",
-    "technical/backend/external-code-repository-links.md",
-    "team-notes/development/20250723_SprintPlanning_ProcessGuide_AIAssisted.md",
-    "configuration/system-settings/20250724_Forecasting_SystemConfiguration.md",
-    "business-rules/security/ai-development-security.md",
-    "business-rules/security/development-security-standards.md",
     "business-rules/security",
     "business-rules/development",
     "technical/integration",
     "technical/api",
     "technical/architecture",
-    "systems/rss",
     "Untitled.canvas"
   ]
 }

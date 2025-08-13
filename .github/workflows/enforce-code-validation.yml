@@ -1,0 +1,107 @@
+name: Enforce Code Validation
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'docs/knowledge-corpus/validation-reports/**/*.md'
+      - 'docs/knowledge-corpus/**/*.md'
+  pull_request:
+    branches: [ main, develop ]
+    paths:
+      - 'docs/knowledge-corpus/validation-reports/**/*.md'
+      - 'docs/knowledge-corpus/**/*.md'
+
+jobs:
+  enforce-validation:
+    runs-on: ubuntu-latest
+    name: Enforce Code Validation Authenticity
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        # No external dependencies needed for enforcement script
+        
+    - name: Run Code Validation Enforcement
+      id: enforce
+      run: |
+        python scripts/enforce_code_validation.py --scan-all-reports --output enforcement-report.md
+        echo "exit_code=$?" >> $GITHUB_OUTPUT
+        
+    - name: Upload enforcement report
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: code-validation-enforcement-report
+        path: enforcement-report.md
+        retention-days: 30
+        
+    - name: Check for validation failures
+      run: |
+        if [ -f enforcement-report.md ]; then
+          echo "## Code Validation Enforcement Report" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          cat enforcement-report.md >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        # Fail the workflow if any validation reports are invalid
+        if python scripts/enforce_code_validation.py --scan-all-reports | grep -q '"invalid_reports": [1-9]'; then
+          echo "❌ Code validation enforcement failed - invalid validation reports detected"
+          echo "Please review the enforcement report and fix any fabricated or inaccurate validation reports."
+          exit 1
+        else
+          echo "✅ All code validation reports passed authenticity checks"
+        fi
+        
+    - name: Comment on PR with results
+      if: github.event_name == 'pull_request' && always()
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const fs = require('fs');
+          
+          let reportContent = '';
+          try {
+            reportContent = fs.readFileSync('enforcement-report.md', 'utf8');
+          } catch (error) {
+            reportContent = 'Enforcement report not generated';
+          }
+          
+          const comment = `## 🔍 Code Validation Enforcement Results
+          
+          This PR has been automatically checked for code validation authenticity.
+          
+          ### Enforcement Report
+          \`\`\`
+          ${reportContent}
+          \`\`\`
+          
+          ### What This Checks
+          - ✅ All referenced source code files actually exist
+          - ✅ Code snippets in validation reports match actual source code
+          - ✅ Technology stack references are consistent with our React/TypeScript/Azure stack
+          - ✅ No fabricated validation claims or template-generated content
+          
+          ### If This Check Fails
+          1. Review the enforcement report above
+          2. Fix any fabricated or inaccurate validation reports
+          3. Ensure all code validation is performed against actual source code
+          4. Re-run validation with proper source code analysis
+          
+          *This check is mandatory and must pass before merging.*`;
+          
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: comment
+          });

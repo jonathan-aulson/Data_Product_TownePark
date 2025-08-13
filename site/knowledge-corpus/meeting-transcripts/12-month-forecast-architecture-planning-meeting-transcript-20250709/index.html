@@ -1,0 +1,1523 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Comprehensive meeting transcript documenting critical architecture planning session for implementing 12-month forecast functionality with Azure Functions, data pipeline architecture, and technical implementation strategies" name="description"/>
+<link href="https://jonathan-aulson.github.io/Data_Product_TownePark/knowledge-corpus/meeting-transcripts/12-month-forecast-architecture-planning-meeting-transcript-20250709/" rel="canonical"/>
+<link href="../../validation-reports/validation-integrity-remediation-summary-2025-08-08/" rel="prev"/>
+<link href="../architecture-revenue-calculations-team-notes-20250805/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.15" name="generator"/>
+<title>12-Month Forecast Architecture Planning Meeting Transcript - Towne Park Data Product</title>
+<link href="../../../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#12-month-forecast-architecture-planning-meeting-transcript">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Towne Park Data Product" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Towne Park Data Product">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Towne Park Data Product
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              12-Month Forecast Architecture Planning Meeting Transcript
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../business-rules/fixed-fee-contract-configuration-business-rules/">
+          
+  
+  
+  Financial Entities
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../technical-specifications/edw-integration-technical-specification/">
+          
+  
+  
+  System Architecture
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../user-processes/ai-assisted-sprint-planning-process-guide/">
+          
+  
+  
+  Role-Based Processes
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../validation-reports/architecture-revenue-calculations-meeting-code-validation-report/">
+          
+  
+  
+  Validation Reports
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="./">
+          
+  
+  
+  Meeting Transcripts
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../standards/ai-content-safety-checklist/">
+          
+  
+  
+  Standards Framework
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../configuration/ai-development-tools-configuration-guide/">
+          
+  
+  
+  Configuration Guides
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Towne Park Data Product" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Towne Park Data Product">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Towne Park Data Product
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    Home
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Financial Entities
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Financial Entities
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Business Rules
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            Business Rules
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../business-rules/fixed-fee-contract-configuration-business-rules/">
+<span class="md-ellipsis">
+    Fixed Fee Contract Configuration Business Rules
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../business-rules/hybrid-contract-configuration-business-rules/">
+<span class="md-ellipsis">
+    Hybrid Contract Configuration Business Rules
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../business-rules/management-agreement-contract-business-rules/">
+<span class="md-ellipsis">
+    Management Agreement Contract Business Rules
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../business-rules/per-labor-hour-contract-configuration-business-rules/">
+<span class="md-ellipsis">
+    Per Labor Hour Contract Configuration Business Rules
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../business-rules/revenue-share-contract-business-rules/">
+<span class="md-ellipsis">
+    Revenue Share Contract Business Rules
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../business-rules/forecasting-data-validation-business-rules/">
+<span class="md-ellipsis">
+    Forecasting Data Validation Business Rules
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    System Architecture
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            System Architecture
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../technical-specifications/edw-integration-technical-specification/">
+<span class="md-ellipsis">
+    EDW Integration Technical Specification
+    
+  </span>
+<span class="md-status md-status--Draft"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../technical-specifications/revenue-datamart-daily-data-model/">
+<span class="md-ellipsis">
+    Revenue Datamart Daily Data Model
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../technical-specifications/towne-park-forecasting-system-comprehensive-master-architecture/">
+<span class="md-ellipsis">
+    Towne Park Forecasting System Comprehensive Master Architecture
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Role-Based Processes
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Role-Based Processes
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../user-processes/ai-assisted-sprint-planning-process-guide/">
+<span class="md-ellipsis">
+    AI-Assisted Sprint Planning Process Guide
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../user-processes/statement-management-user-process/">
+<span class="md-ellipsis">
+    Statement Management User Process
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../user-processes/territory-admin-territory-management-procedures/">
+<span class="md-ellipsis">
+    Territory Administration Territory Management Procedures
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Validation Reports
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Validation Reports
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../validation-reports/architecture-revenue-calculations-meeting-code-validation-report/">
+<span class="md-ellipsis">
+    Architecture Revenue Calculations Meeting Code Validation
+    
+  </span>
+<span class="md-status md-status--Validation Complete"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../validation-reports/management-agreement-contract-configuration-business-rules-code-validation-report/">
+<span class="md-ellipsis">
+    Management Agreement Business Rules Code Validation
+    
+  </span>
+<span class="md-status md-status--Validated"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../validation-reports/validation-integrity-remediation-summary-2025-08-08/">
+<span class="md-ellipsis">
+    Validation Integrity Remediation Summary
+    
+  </span>
+<span class="md-status md-status--Complete"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+<span class="md-ellipsis">
+    Meeting Transcripts
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Meeting Transcripts
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    12-Month Forecast Architecture Planning - July 2025
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    12-Month Forecast Architecture Planning - July 2025
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#meeting-overview">
+<span class="md-ellipsis">
+      Meeting Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#executive-summary">
+<span class="md-ellipsis">
+      Executive Summary
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-participants">
+<span class="md-ellipsis">
+      Key Participants
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#meeting-context">
+<span class="md-ellipsis">
+      Meeting Context
+    </span>
+</a>
+<nav aria-label="Meeting Context" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-status">
+<span class="md-ellipsis">
+      Project Status
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-driver">
+<span class="md-ellipsis">
+      Business Driver
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-discussion-topics">
+<span class="md-ellipsis">
+      Key Discussion Topics
+    </span>
+</a>
+<nav aria-label="Key Discussion Topics" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-current-state-analysis">
+<span class="md-ellipsis">
+      1. Current State Analysis
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-proposed-architecture-overview">
+<span class="md-ellipsis">
+      2. Proposed Architecture Overview
+    </span>
+</a>
+<nav aria-label="2. Proposed Architecture Overview" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#story-1-budget-data-retrieval">
+<span class="md-ellipsis">
+      Story 1: Budget Data Retrieval
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#story-2-baseline-forecast-creation">
+<span class="md-ellipsis">
+      Story 2: Baseline Forecast Creation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#story-3-calculation-logic-implementation">
+<span class="md-ellipsis">
+      Story 3: Calculation Logic Implementation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#story-4-account-manager-integration">
+<span class="md-ellipsis">
+      Story 4: Account Manager Integration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#story-5-trend-implementation">
+<span class="md-ellipsis">
+      Story 5: Trend Implementation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-technical-architecture-decisions">
+<span class="md-ellipsis">
+      3. Technical Architecture Decisions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-project-timeline-and-prioritization">
+<span class="md-ellipsis">
+      4. Project Timeline and Prioritization
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-future-roadmap-discussion">
+<span class="md-ellipsis">
+      5. Future Roadmap Discussion
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-technical-challenges-and-solutions">
+<span class="md-ellipsis">
+      6. Technical Challenges and Solutions
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#technical-specifications">
+<span class="md-ellipsis">
+      Technical Specifications
+    </span>
+</a>
+<nav aria-label="Technical Specifications" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-flow-architecture">
+<span class="md-ellipsis">
+      Data Flow Architecture
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#admin-panel-requirements">
+<span class="md-ellipsis">
+      Admin Panel Requirements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-service-design">
+<span class="md-ellipsis">
+      Calculation Service Design
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#azure-functions-architecture">
+<span class="md-ellipsis">
+      Azure Functions Architecture
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-impact">
+<span class="md-ellipsis">
+      Business Impact
+    </span>
+</a>
+<nav aria-label="Business Impact" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#accuracy-improvements">
+<span class="md-ellipsis">
+      Accuracy Improvements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performance-benefits">
+<span class="md-ellipsis">
+      Performance Benefits
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operational-efficiency">
+<span class="md-ellipsis">
+      Operational Efficiency
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#risk-mitigation">
+<span class="md-ellipsis">
+      Risk Mitigation
+    </span>
+</a>
+<nav aria-label="Risk Mitigation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#technical-risks">
+<span class="md-ellipsis">
+      Technical Risks
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-risks">
+<span class="md-ellipsis">
+      Project Risks
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#action-items-and-next-steps">
+<span class="md-ellipsis">
+      Action Items and Next Steps
+    </span>
+</a>
+<nav aria-label="Action Items and Next Steps" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#immediate-actions-july-10-2025">
+<span class="md-ellipsis">
+      Immediate Actions (July 10, 2025)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sprint-planning">
+<span class="md-ellipsis">
+      Sprint Planning
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#infrastructure-requirements">
+<span class="md-ellipsis">
+      Infrastructure Requirements
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#meeting-outcomes">
+<span class="md-ellipsis">
+      Meeting Outcomes
+    </span>
+</a>
+<nav aria-label="Meeting Outcomes" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#decisions-made">
+<span class="md-ellipsis">
+      Decisions Made
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#next-meeting-actions">
+<span class="md-ellipsis">
+      Next Meeting Actions
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation-strategy">
+<span class="md-ellipsis">
+      Implementation Strategy
+    </span>
+</a>
+<nav aria-label="Implementation Strategy" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phase-1-foundation-stories-1-2">
+<span class="md-ellipsis">
+      Phase 1: Foundation (Stories 1-2)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phase-2-core-logic-story-3">
+<span class="md-ellipsis">
+      Phase 2: Core Logic (Story 3)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phase-3-integration-stories-4-5">
+<span class="md-ellipsis">
+      Phase 3: Integration (Stories 4-5)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#related-documentation">
+<span class="md-ellipsis">
+      Related Documentation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../architecture-revenue-calculations-team-notes-20250805/">
+<span class="md-ellipsis">
+    Architecture &amp; Revenue Calculations Team Notes - August 2025
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../development-sprint-retrospective-process-improvements-20250731/">
+<span class="md-ellipsis">
+    Development Sprint Retrospective Process Improvements - July 2025
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../sprint28-management-agreement-development-meeting/">
+<span class="md-ellipsis">
+    Sprint 28 Management Agreement Development
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../sprint29-budget-actuals-development-meeting/">
+<span class="md-ellipsis">
+    Sprint 29 Budget vs Actuals Development
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../sprint30-forecasting-variance-development-meeting/">
+<span class="md-ellipsis">
+    Sprint 30 Forecasting Variance Development
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../daily-scrum-development-progress-team-notes/">
+<span class="md-ellipsis">
+    Daily Scrum Development Progress
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    Standards Framework
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            Standards Framework
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../standards/ai-content-safety-checklist/">
+<span class="md-ellipsis">
+    AI Content Safety Checklist
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
+    Configuration Guides
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            Configuration Guides
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../configuration/ai-development-tools-configuration-guide/">
+<span class="md-ellipsis">
+    AI Development Tools Configuration Guide
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#meeting-overview">
+<span class="md-ellipsis">
+      Meeting Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#executive-summary">
+<span class="md-ellipsis">
+      Executive Summary
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-participants">
+<span class="md-ellipsis">
+      Key Participants
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#meeting-context">
+<span class="md-ellipsis">
+      Meeting Context
+    </span>
+</a>
+<nav aria-label="Meeting Context" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-status">
+<span class="md-ellipsis">
+      Project Status
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-driver">
+<span class="md-ellipsis">
+      Business Driver
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#key-discussion-topics">
+<span class="md-ellipsis">
+      Key Discussion Topics
+    </span>
+</a>
+<nav aria-label="Key Discussion Topics" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-current-state-analysis">
+<span class="md-ellipsis">
+      1. Current State Analysis
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-proposed-architecture-overview">
+<span class="md-ellipsis">
+      2. Proposed Architecture Overview
+    </span>
+</a>
+<nav aria-label="2. Proposed Architecture Overview" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#story-1-budget-data-retrieval">
+<span class="md-ellipsis">
+      Story 1: Budget Data Retrieval
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#story-2-baseline-forecast-creation">
+<span class="md-ellipsis">
+      Story 2: Baseline Forecast Creation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#story-3-calculation-logic-implementation">
+<span class="md-ellipsis">
+      Story 3: Calculation Logic Implementation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#story-4-account-manager-integration">
+<span class="md-ellipsis">
+      Story 4: Account Manager Integration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#story-5-trend-implementation">
+<span class="md-ellipsis">
+      Story 5: Trend Implementation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-technical-architecture-decisions">
+<span class="md-ellipsis">
+      3. Technical Architecture Decisions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-project-timeline-and-prioritization">
+<span class="md-ellipsis">
+      4. Project Timeline and Prioritization
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-future-roadmap-discussion">
+<span class="md-ellipsis">
+      5. Future Roadmap Discussion
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-technical-challenges-and-solutions">
+<span class="md-ellipsis">
+      6. Technical Challenges and Solutions
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#technical-specifications">
+<span class="md-ellipsis">
+      Technical Specifications
+    </span>
+</a>
+<nav aria-label="Technical Specifications" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-flow-architecture">
+<span class="md-ellipsis">
+      Data Flow Architecture
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#admin-panel-requirements">
+<span class="md-ellipsis">
+      Admin Panel Requirements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-service-design">
+<span class="md-ellipsis">
+      Calculation Service Design
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#azure-functions-architecture">
+<span class="md-ellipsis">
+      Azure Functions Architecture
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-impact">
+<span class="md-ellipsis">
+      Business Impact
+    </span>
+</a>
+<nav aria-label="Business Impact" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#accuracy-improvements">
+<span class="md-ellipsis">
+      Accuracy Improvements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performance-benefits">
+<span class="md-ellipsis">
+      Performance Benefits
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operational-efficiency">
+<span class="md-ellipsis">
+      Operational Efficiency
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#risk-mitigation">
+<span class="md-ellipsis">
+      Risk Mitigation
+    </span>
+</a>
+<nav aria-label="Risk Mitigation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#technical-risks">
+<span class="md-ellipsis">
+      Technical Risks
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#project-risks">
+<span class="md-ellipsis">
+      Project Risks
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#action-items-and-next-steps">
+<span class="md-ellipsis">
+      Action Items and Next Steps
+    </span>
+</a>
+<nav aria-label="Action Items and Next Steps" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#immediate-actions-july-10-2025">
+<span class="md-ellipsis">
+      Immediate Actions (July 10, 2025)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sprint-planning">
+<span class="md-ellipsis">
+      Sprint Planning
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#infrastructure-requirements">
+<span class="md-ellipsis">
+      Infrastructure Requirements
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#meeting-outcomes">
+<span class="md-ellipsis">
+      Meeting Outcomes
+    </span>
+</a>
+<nav aria-label="Meeting Outcomes" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#decisions-made">
+<span class="md-ellipsis">
+      Decisions Made
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#next-meeting-actions">
+<span class="md-ellipsis">
+      Next Meeting Actions
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation-strategy">
+<span class="md-ellipsis">
+      Implementation Strategy
+    </span>
+</a>
+<nav aria-label="Implementation Strategy" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phase-1-foundation-stories-1-2">
+<span class="md-ellipsis">
+      Phase 1: Foundation (Stories 1-2)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phase-2-core-logic-story-3">
+<span class="md-ellipsis">
+      Phase 2: Core Logic (Story 3)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#phase-3-integration-stories-4-5">
+<span class="md-ellipsis">
+      Phase 3: Integration (Stories 4-5)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#related-documentation">
+<span class="md-ellipsis">
+      Related Documentation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="12-month-forecast-architecture-planning-meeting-transcript">12-Month Forecast Architecture Planning Meeting Transcript</h1>
+<h2 id="meeting-overview">Meeting Overview</h2>
+<p><strong>Date:</strong> July 9, 2025<br/>
+<strong>Duration:</strong> 37m 53s (primary session) + 2 technical planning sessions<br/>
+<strong>Meeting Type:</strong> Backlog Grooming &amp; Technical Architecture Planning<br/>
+<strong>Project Phase:</strong> Development Milestone 4 (ending August 26, 2025)</p>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>Critical architecture planning session for implementing 12-month forecast functionality. Team discussed comprehensive data pipeline architecture, technical implementation strategies, and project timeline implications. Key decisions made regarding data storage strategies, calculation service architecture, and integration patterns with Azure Functions and Power Automate orchestration.</p>
+<h2 id="key-participants">Key Participants</h2>
+<ul>
+<li><strong>Jonathan Aulson</strong> - Project Lead, Architecture Planning</li>
+<li><strong>Amy Sowells</strong> - Business Analyst, Requirements Validation  </li>
+<li><strong>Cesar Figueroa</strong> - Technical Architect, Implementation Strategy</li>
+<li><strong>Christopher Thompson</strong> - Developer, Technical Consultation</li>
+</ul>
+<h2 id="meeting-context">Meeting Context</h2>
+<h3 id="project-status">Project Status</h3>
+<ul>
+<li>Current milestone ending August 26, 2025</li>
+<li>Pilot starting September 2, 2025</li>
+<li>Project funded through November 4, 2025</li>
+<li>Discussion of phase 2 forecasting features and future roadmap</li>
+</ul>
+<h3 id="business-driver">Business Driver</h3>
+<p>Implementation of 12-month forecast system that pre-calculates forecast data using contract details to calculate Internal Revenue, addressing accuracy concerns with current Excel-based process.</p>
+<h2 id="key-discussion-topics">Key Discussion Topics</h2>
+<h3 id="1-current-state-analysis">1. Current State Analysis</h3>
+<p><strong>Excel Process Understanding:</strong>
+- Budget data remains static from January 1st (cannot change)
+- Forecast files contain contract terms for every month
+- Deal changes in February impact forecasted Internal Revenue from February forward
+- Automatic daily sync from forecast files to database tables</p>
+<p><strong>Amy Sowells (3:35):</strong> <em>"The way it works today is the budget is the budget and effective January 1st. It doesn't change. It cannot change. The forecast files today house a tab with a full year, it basically has like contract terms for every single month."</em></p>
+<h3 id="2-proposed-architecture-overview">2. Proposed Architecture Overview</h3>
+<p><strong>Five-Story Development Approach:</strong></p>
+<h4 id="story-1-budget-data-retrieval">Story 1: Budget Data Retrieval</h4>
+<ul>
+<li>Automated process to discover and retrieve budget data from EDW</li>
+<li>Pull budget final table data when new year's data becomes available</li>
+<li>Admin panel UI for monitoring data flow status</li>
+</ul>
+<h4 id="story-2-baseline-forecast-creation">Story 2: Baseline Forecast Creation</h4>
+<ul>
+<li>Transform budget data into forecast structure</li>
+<li>Store at monthly level initially, then convert to daily level</li>
+<li>Create intermediate data structures for calculation processing</li>
+</ul>
+<h4 id="story-3-calculation-logic-implementation">Story 3: Calculation Logic Implementation</h4>
+<ul>
+<li>Migrate current PNL calculation logic to separate Azure Functions service</li>
+<li>Split single endpoint into multiple calculation-specific endpoints</li>
+<li>Implement Power Automate orchestration for triggering calculations</li>
+</ul>
+<h4 id="story-4-account-manager-integration">Story 4: Account Manager Integration</h4>
+<ul>
+<li>Connect existing account manager editing functionality</li>
+<li>Ensure edits trigger recalculation through new architecture</li>
+<li>Maintain existing UI patterns while leveraging new backend</li>
+</ul>
+<h4 id="story-5-trend-implementation">Story 5: Trend Implementation</h4>
+<ul>
+<li>Current month forecast with daily replacement of forecast with actuals</li>
+<li>Integration with revenue daily detail data</li>
+<li>Real-time calculation updates</li>
+</ul>
+<h3 id="3-technical-architecture-decisions">3. Technical Architecture Decisions</h3>
+<p><strong>Data Storage Strategy:</strong>
+- <strong>Budget Monthly:</strong> 12 months of budget data stored monthly (not daily)
+- <strong>Baseline Forecast:</strong> 12 months of forecast data stored daily (editable by account managers)
+- <strong>Forecast Calculated:</strong> Post-calculation values with Internal Revenue and FLC calculations</p>
+<p><strong>Cesar Figueroa (14:22):</strong> <em>"For example for payroll we'll go way beyond than 3 gigabytes. That is basically the tier part of the entire tenant database for one year."</em></p>
+<p><strong>Calculation Service Architecture:</strong>
+- Migrate current backend calculation logic to separate Azure Functions service
+- Power Automate controls "what and when" to calculate
+- Backend code controls calculation logic and processing
+- Multiple instances for scalability and performance</p>
+<p><strong>Cesar Figueroa (37:46):</strong> <em>"What we already have as a single endpoint on our back end, that is the PNL view, will be a completely separate service that will run in Azure function like the building block."</em></p>
+<h3 id="4-project-timeline-and-prioritization">4. Project Timeline and Prioritization</h3>
+<p><strong>Development Phases:</strong>
+- <strong>Current Phase (through August 26):</strong> Focus on UI features and usability
+- <strong>Pilot Phase (September 2 - October 31):</strong> Underlying data architecture implementation
+- <strong>Post-Pilot:</strong> Complete 12-month forecast functionality</p>
+<p><strong>Backlog Prioritization:</strong>
+- Priority 1: Pre-pilot essential features (actuals, trend support)
+- Priority 2: Go-live features (summary cards, Legion schedule copy, variance tables)
+- Priority 3: 12-month forecast implementation (positioned at item 27)</p>
+<p><strong>Jonathan Aulson (25:30):</strong> <em>"The 12 month forecast being kind of pre calculated sits right here in between 26 and 27 because this guy has all of the consistent formatting stuff to make everything look the same from a red green perspective."</em></p>
+<h3 id="5-future-roadmap-discussion">5. Future Roadmap Discussion</h3>
+<p><strong>2026 Project Sequence:</strong>
+1. <strong>Q1 2026:</strong> Billing Phase 3 (10 percenters and RSS)
+2. <strong>Q2-Q3 2026:</strong> Budget system implementation<br/>
+3. <strong>Q4 2026:</strong> Revenue spreadsheet project
+4. <strong>Q4 2026:</strong> Return to forecasting phase 2 features</p>
+<p><strong>Resource Scaling Options:</strong>
+- Option 1: Maintain current pod size, sequential project delivery
+- Option 2: Add additional pod for parallel development
+- Option 3: Add 1-2 developers to existing pod for trickle forecasting work</p>
+<h3 id="6-technical-challenges-and-solutions">6. Technical Challenges and Solutions</h3>
+<p><strong>Load Testing Concerns:</strong>
+- System scalability validation required before pilot
+- Data gateway limitations affecting production billing during testing
+- Need for additional data gateways and separate testing environments</p>
+<p><strong>Calculation Performance:</strong>
+- Current PNL calculations for all sites/periods complete in under 1 minute
+- Background processing will improve perceived performance
+- Azure Functions provide better scalability than Power Automate flows</p>
+<p><strong>Data Integration Complexity:</strong>
+- Budget final structure differs significantly from forecast structure
+- Need for intermediate transformation layer
+- Daily vs. monthly storage optimization decisions</p>
+<h2 id="technical-specifications">Technical Specifications</h2>
+<h3 id="data-flow-architecture">Data Flow Architecture</h3>
+<div class="highlight"><pre><span></span><code>Budget Final (EDW) → Budget Monthly (Dataverse) → Baseline Forecast (Daily) → Forecast Calculated → PNL Display
+</code></pre></div>
+<h3 id="admin-panel-requirements">Admin Panel Requirements</h3>
+<ul>
+<li>Data flow monitoring dashboard</li>
+<li>Timestamp tracking for budget data retrieval</li>
+<li>Error message display and status monitoring</li>
+<li>Integration with existing job group management</li>
+</ul>
+<h3 id="calculation-service-design">Calculation Service Design</h3>
+<ul>
+<li><strong>Input:</strong> Site list, period list, calculation type</li>
+<li><strong>Processing:</strong> Fetch from Dataverse, apply business logic, insert results</li>
+<li><strong>Orchestration:</strong> Power Automate triggers based on data changes</li>
+<li><strong>Scalability:</strong> Multiple Azure Function instances</li>
+</ul>
+<h3 id="azure-functions-architecture">Azure Functions Architecture</h3>
+<p><strong>Service Separation Strategy:</strong>
+- Current single PNL endpoint migrated to separate Azure Functions service
+- Multiple calculation-specific endpoints for improved scalability
+- Power Automate orchestration for workflow management
+- Independent scaling and deployment capabilities</p>
+<p><strong>Performance Optimization:</strong>
+- Background processing eliminates user wait times
+- Multiple Azure Function instances for concurrent processing
+- Optimized data retrieval and calculation algorithms
+- Scalable architecture supporting 700+ user base</p>
+<h2 id="business-impact">Business Impact</h2>
+<h3 id="accuracy-improvements">Accuracy Improvements</h3>
+<ul>
+<li>Automated contract detail integration eliminates manual Excel processes</li>
+<li>Real-time calculation updates when deal terms change</li>
+<li>Consistent application of business rules across all forecasts</li>
+</ul>
+<h3 id="performance-benefits">Performance Benefits</h3>
+<ul>
+<li>Pre-calculated 12-month view available immediately upon login</li>
+<li>Background processing eliminates user wait times</li>
+<li>Scalable architecture supports 700+ user base</li>
+</ul>
+<h3 id="operational-efficiency">Operational Efficiency</h3>
+<ul>
+<li>Reduced manual intervention in forecast processes</li>
+<li>Automated data synchronization from EDW</li>
+<li>Centralized monitoring and alerting capabilities</li>
+</ul>
+<h2 id="risk-mitigation">Risk Mitigation</h2>
+<h3 id="technical-risks">Technical Risks</h3>
+<ul>
+<li><strong>Storage Capacity:</strong> 3GB+ data volume requires tenant upgrade consideration</li>
+<li><strong>Concurrency:</strong> 700 users may overwhelm Power Automate flows</li>
+<li><strong>Integration Complexity:</strong> Multiple data transformation layers increase failure points</li>
+</ul>
+<h3 id="project-risks">Project Risks</h3>
+<ul>
+<li><strong>Timeline Pressure:</strong> 2-sprint estimate for complex architecture changes</li>
+<li><strong>Resource Constraints:</strong> Limited development time before pilot</li>
+<li><strong>Dependency Management:</strong> EDW integration and data gateway availability</li>
+</ul>
+<h2 id="action-items-and-next-steps">Action Items and Next Steps</h2>
+<h3 id="immediate-actions-july-10-2025">Immediate Actions (July 10, 2025)</h3>
+<ol>
+<li><strong>Jonathan:</strong> Create detailed user stories for 5-story implementation approach</li>
+<li><strong>Cesar:</strong> Develop technical diagrams with storage capacity analysis</li>
+<li><strong>Team:</strong> Present architecture plan to John (stakeholder review)</li>
+</ol>
+<h3 id="sprint-planning">Sprint Planning</h3>
+<ul>
+<li><strong>Stories 1-3:</strong> Estimated 2 sprints of development work</li>
+<li><strong>Story 3:</strong> Most complex due to calculation logic migration</li>
+<li><strong>Stories 4-5:</strong> Integration and trend implementation</li>
+</ul>
+<h3 id="infrastructure-requirements">Infrastructure Requirements</h3>
+<ul>
+<li>Additional data gateways for load testing isolation</li>
+<li>Separate testing environment pointing to dev EDW</li>
+<li>Azure Functions service provisioning</li>
+</ul>
+<h2 id="meeting-outcomes">Meeting Outcomes</h2>
+<h3 id="decisions-made">Decisions Made</h3>
+<ol>
+<li><strong>Architecture Approach:</strong> Five-story sequential implementation approved</li>
+<li><strong>Technology Stack:</strong> Azure Functions + Power Automate hybrid approach</li>
+<li><strong>Timeline Strategy:</strong> UI features first, data architecture during pilot</li>
+<li><strong>Storage Strategy:</strong> Monthly budget data, daily forecast data structure</li>
+</ol>
+<h3 id="next-meeting-actions">Next Meeting Actions</h3>
+<ul>
+<li>Technical architecture presentation to stakeholders</li>
+<li>Detailed user story review and estimation</li>
+<li>Load testing strategy finalization</li>
+<li>Infrastructure provisioning planning</li>
+</ul>
+<h2 id="implementation-strategy">Implementation Strategy</h2>
+<h3 id="phase-1-foundation-stories-1-2">Phase 1: Foundation (Stories 1-2)</h3>
+<ul>
+<li>Budget data retrieval automation</li>
+<li>Baseline forecast creation infrastructure</li>
+<li>Data transformation layer implementation</li>
+</ul>
+<h3 id="phase-2-core-logic-story-3">Phase 2: Core Logic (Story 3)</h3>
+<ul>
+<li>Azure Functions service development</li>
+<li>Calculation logic migration</li>
+<li>Power Automate orchestration setup</li>
+</ul>
+<h3 id="phase-3-integration-stories-4-5">Phase 3: Integration (Stories 4-5)</h3>
+<ul>
+<li>Account manager functionality integration</li>
+<li>Trend implementation with real-time updates</li>
+<li>Performance optimization and testing</li>
+</ul>
+<h2 id="related-documentation">Related Documentation</h2>
+<ul>
+<li><a href="../../technical-specifications/towne-park-forecasting-system-comprehensive-master-architecture/">Towne Park Forecasting System Comprehensive Master Architecture</a></li>
+<li><a href="../../business-rules/forecasting-data-validation-business-rules/">Forecasting Data Validation Business Rules</a></li>
+<li><a href="../user-processes/account-manager/forecasting-data-table-editing-user-process.md">Account Manager Forecasting Data Table Editing User Process</a></li>
+</ul>
+<hr/>
+<p><strong>Meeting Transcript Source:</strong> Backlog Grooming Forecasting-20250709_183926-Meeting Recording<br/>
+<strong>Document Prepared By:</strong> AI Documentation System<br/>
+<strong>Review Status:</strong> Pending stakeholder review<br/>
+<strong>Distribution:</strong> Development team, business stakeholders, architecture review board</p>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="Last update">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 8, 2025 21:48:01 UTC">August 8, 2025</span>
+</span>
+</aside>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+<script src="../../../javascripts/extra.js"></script>
+</body>
+</html>

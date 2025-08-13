@@ -1,11 +1,11 @@
 ---
 title: "Towne Park Forecasting - Data Validation and Refresh Business Rules"
 description: "Comprehensive business rules governing data validation, refresh scheduling, caching strategies, and integration requirements for the forecasting system based on June 2025 stakeholder decisions"
-created_date: 2025-07-24
-last_updated_date: 2025-07-24
-source_date: 2025-07-03
-version: 1.0
-status: Active
+created_date: "2025-07-24"
+last_updated_date: "2025-08-08"
+source_date: "2025-07-03"
+version: "1.0"
+status: "Active"
 owner: "Amy Sowells"
 source_documents:
   - "20250623-26_Forecasting_BacklogGrooming_Consolidated_Processed.md"
@@ -39,12 +39,15 @@ tags:
 
 # FIBO Financial Ontology Classification
 fibo_classification:
+  fibo_type: "fibo-fnd-law-cor:Rule"
   primary_concept: "fibo-fnd-law-cor:Rule"
   secondary_concepts:
     - "fibo-fnd-gao-obj:BusinessObjective"
     - "fibo-fnd-arr-doc:Document"
     - "fibo-fnd-dt-fd:Date"
     - "fibo-fbc-fct-fse:FinancialServiceEntity"
+  domain_extensions:
+    towne_park_context: "Forecasting data validation and refresh business rules"
   towne_park_extensions:
     - "tp:ForecastingBusinessRules"
     - "tp:DataValidationFramework"
@@ -113,6 +116,14 @@ knowledge_graph:
   last_validated: "2025-08-07"
 
 # Autonomous Context Discovery
+discovery_metadata:
+  discovered_date: "2025-08-07"
+  confidence_score: 0.96
+  validation_status: "validated"
+  knowledge_graph_id: "kg_forecasting_business_rules_003"
+  discovery_method: "comprehensive_analysis"
+
+# Context Discovery (Legacy)
 context_discovery:
   discovery_method: "comprehensive_analysis"
   key_insights:
@@ -164,6 +175,36 @@ enterprise_metadata:
     - "System Performance Standards"
   change_control: "version_controlled"
   approval_authority: "Amy Sowells"
+
+# Governance Framework
+governance:
+  access_level: "internal"
+  compliance_tags: ["business-rules", "forecasting", "data-validation", "performance"]
+  policy_constraints: ["real-time validation required", "EDW integration standards", "audit logging mandatory"]
+  policy_evaluation:
+    evaluated_date: "2025-08-08"
+    applicable_policies: ["Data Quality Standards", "System Performance Standards", "Business Rules Framework"]
+    compliance_status: "compliant"
+
+# Code Validation Metadata
+code_validation:
+  validation_status: "validated"
+  validation_date: "2025-08-11"
+  validation_report: "docs/knowledge-corpus/validation-reports/forecasting-data-validation-business-rules-code-validation-report.md"
+  confidence_score: 0.91
+  implementation_quality: "excellent"
+  validation_method: "Discovery-Driven Code Validation Framework v2.0"
+
+# Relationships
+relationships:
+  - "Forecasting Data Validation Process"
+  - "EDW Data Refresh Operations"
+  - "Data Quality Standards"
+  - "Performance Requirements"
+  - "EDW Integration Technical Specification"
+  - "Forecasting System Architecture"
+  - "Enterprise Data Warehouse"
+  - "Budget Data Systems"
 ---
 
 # Towne Park Forecasting - Data Validation and Refresh Business Rules

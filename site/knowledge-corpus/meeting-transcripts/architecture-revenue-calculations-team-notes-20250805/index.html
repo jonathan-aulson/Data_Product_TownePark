@@ -1,0 +1,1808 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Comprehensive team meeting notes covering 12-month forecasting architecture, EDW internal revenue calculations, current month trending implementation, and PTEB calculation specifications" name="description"/>
+<link href="https://jonathan-aulson.github.io/Data_Product_TownePark/knowledge-corpus/meeting-transcripts/architecture-revenue-calculations-team-notes-20250805/" rel="canonical"/>
+<link href="../12-month-forecast-architecture-planning-meeting-transcript-20250709/" rel="prev"/>
+<link href="../development-sprint-retrospective-process-improvements-20250731/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.15" name="generator"/>
+<title>Architecture &amp; Revenue Calculations Team Meeting Notes - August 2025 - Towne Park Data Product</title>
+<link href="../../../assets/stylesheets/main.342714a4.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#architecture-revenue-calculations-team-meeting-notes-august-2025">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Towne Park Data Product" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="Towne Park Data Product">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Towne Park Data Product
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Architecture &amp; Revenue Calculations Team Meeting Notes - August 2025
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+<div class="md-search__suggest" data-md-component="search-suggest"></div>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../business-rules/fixed-fee-contract-configuration-business-rules/">
+          
+  
+  
+  Financial Entities
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../technical-specifications/edw-integration-technical-specification/">
+          
+  
+  
+  System Architecture
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../user-processes/ai-assisted-sprint-planning-process-guide/">
+          
+  
+  
+  Role-Based Processes
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../validation-reports/architecture-revenue-calculations-meeting-code-validation-report/">
+          
+  
+  
+  Validation Reports
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../12-month-forecast-architecture-planning-meeting-transcript-20250709/">
+          
+  
+  
+  Meeting Transcripts
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../standards/ai-content-safety-checklist/">
+          
+  
+  
+  Standards Framework
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../configuration/ai-development-tools-configuration-guide/">
+          
+  
+  
+  Configuration Guides
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Towne Park Data Product" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="Towne Park Data Product">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    Towne Park Data Product
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+<span class="md-ellipsis">
+    Home
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Financial Entities
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Financial Entities
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    Business Rules
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+            Business Rules
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../business-rules/fixed-fee-contract-configuration-business-rules/">
+<span class="md-ellipsis">
+    Fixed Fee Contract Configuration Business Rules
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../business-rules/hybrid-contract-configuration-business-rules/">
+<span class="md-ellipsis">
+    Hybrid Contract Configuration Business Rules
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../business-rules/management-agreement-contract-business-rules/">
+<span class="md-ellipsis">
+    Management Agreement Contract Business Rules
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../business-rules/per-labor-hour-contract-configuration-business-rules/">
+<span class="md-ellipsis">
+    Per Labor Hour Contract Configuration Business Rules
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../business-rules/revenue-share-contract-business-rules/">
+<span class="md-ellipsis">
+    Revenue Share Contract Business Rules
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../business-rules/forecasting-data-validation-business-rules/">
+<span class="md-ellipsis">
+    Forecasting Data Validation Business Rules
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-ellipsis">
+    System Architecture
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            System Architecture
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../technical-specifications/edw-integration-technical-specification/">
+<span class="md-ellipsis">
+    EDW Integration Technical Specification
+    
+  </span>
+<span class="md-status md-status--Draft"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../technical-specifications/revenue-datamart-daily-data-model/">
+<span class="md-ellipsis">
+    Revenue Datamart Daily Data Model
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../technical-specifications/towne-park-forecasting-system-comprehensive-master-architecture/">
+<span class="md-ellipsis">
+    Towne Park Forecasting System Comprehensive Master Architecture
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Role-Based Processes
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Role-Based Processes
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../user-processes/ai-assisted-sprint-planning-process-guide/">
+<span class="md-ellipsis">
+    AI-Assisted Sprint Planning Process Guide
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../user-processes/statement-management-user-process/">
+<span class="md-ellipsis">
+    Statement Management User Process
+    
+  </span>
+<span class="md-status md-status--Production"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../user-processes/territory-admin-territory-management-procedures/">
+<span class="md-ellipsis">
+    Territory Administration Territory Management Procedures
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-ellipsis">
+    Validation Reports
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Validation Reports
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../validation-reports/architecture-revenue-calculations-meeting-code-validation-report/">
+<span class="md-ellipsis">
+    Architecture Revenue Calculations Meeting Code Validation
+    
+  </span>
+<span class="md-status md-status--Validation Complete"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../validation-reports/management-agreement-contract-configuration-business-rules-code-validation-report/">
+<span class="md-ellipsis">
+    Management Agreement Business Rules Code Validation
+    
+  </span>
+<span class="md-status md-status--Validated"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../validation-reports/validation-integrity-remediation-summary-2025-08-08/">
+<span class="md-ellipsis">
+    Validation Integrity Remediation Summary
+    
+  </span>
+<span class="md-status md-status--Complete"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+<span class="md-ellipsis">
+    Meeting Transcripts
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Meeting Transcripts
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../12-month-forecast-architecture-planning-meeting-transcript-20250709/">
+<span class="md-ellipsis">
+    12-Month Forecast Architecture Planning - July 2025
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Architecture &amp; Revenue Calculations Team Notes - August 2025
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    Architecture &amp; Revenue Calculations Team Notes - August 2025
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#executive-summary">
+<span class="md-ellipsis">
+      Executive Summary
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#meeting-1-architecture-weekly-sync-2025-08-05">
+<span class="md-ellipsis">
+      Meeting 1: Architecture Weekly Sync (2025-08-05)
+    </span>
+</a>
+<nav aria-label="Meeting 1: Architecture Weekly Sync (2025-08-05)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#participants">
+<span class="md-ellipsis">
+      Participants
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12-month-forecasting-architecture-review">
+<span class="md-ellipsis">
+      12-Month Forecasting Architecture Review
+    </span>
+</a>
+<nav aria-label="12-Month Forecasting Architecture Review" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overall-process-design">
+<span class="md-ellipsis">
+      Overall Process Design
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#process-breakdown-and-requirements">
+<span class="md-ellipsis">
+      Process Breakdown and Requirements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#azure-data-factory-limitations-discussion">
+<span class="md-ellipsis">
+      Azure Data Factory Limitations Discussion
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#load-testing-considerations">
+<span class="md-ellipsis">
+      Load Testing Considerations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#next-steps-from-architecture-meeting">
+<span class="md-ellipsis">
+      Next Steps from Architecture Meeting
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#meeting-2-edw-internal-revenue-current-month-calculations-2025-08-05">
+<span class="md-ellipsis">
+      Meeting 2: EDW Internal Revenue Current Month Calculations (2025-08-05)
+    </span>
+</a>
+<nav aria-label="Meeting 2: EDW Internal Revenue Current Month Calculations (2025-08-05)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#participants_1">
+<span class="md-ellipsis">
+      Participants
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demo-cancellation-and-issues">
+<span class="md-ellipsis">
+      Demo Cancellation and Issues
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pteb-calculation-logic-deep-dive">
+<span class="md-ellipsis">
+      PTEB Calculation Logic Deep Dive
+    </span>
+</a>
+<nav aria-label="PTEB Calculation Logic Deep Dive" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#account-code-structure">
+<span class="md-ellipsis">
+      Account Code Structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#billing-implementation-details">
+<span class="md-ellipsis">
+      Billing Implementation Details
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#current-month-revenue-calculation-specifications">
+<span class="md-ellipsis">
+      Current Month Revenue Calculation Specifications
+    </span>
+</a>
+<nav aria-label="Current Month Revenue Calculation Specifications" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#external-revenue-query">
+<span class="md-ellipsis">
+      External Revenue Query
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#internal-revenue-calculation-process">
+<span class="md-ellipsis">
+      Internal Revenue Calculation Process
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#payroll-calculation-process">
+<span class="md-ellipsis">
+      Payroll Calculation Process
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#claims-calculation">
+<span class="md-ellipsis">
+      Claims Calculation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parking-rents-calculation">
+<span class="md-ellipsis">
+      Parking Rents Calculation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#other-expense-calculation">
+<span class="md-ellipsis">
+      Other Expense Calculation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pteb-and-insurance-handling">
+<span class="md-ellipsis">
+      PTEB and Insurance Handling
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#front-line-contribution-flc-calculation">
+<span class="md-ellipsis">
+      Front Line Contribution (FLC) Calculation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#flc-budget-variance-cumulative">
+<span class="md-ellipsis">
+      FLC Budget Variance (Cumulative)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#meeting-3-user-story-2655-current-month-internal-revenue-2025-08-04">
+<span class="md-ellipsis">
+      Meeting 3: User Story 2655 - Current Month Internal Revenue (2025-08-04)
+    </span>
+</a>
+<nav aria-label="Meeting 3: User Story 2655 - Current Month Internal Revenue (2025-08-04)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#participants_2">
+<span class="md-ellipsis">
+      Participants
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-story-context">
+<span class="md-ellipsis">
+      User Story Context
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#technical-implementation-discussion">
+<span class="md-ellipsis">
+      Technical Implementation Discussion
+    </span>
+</a>
+<nav aria-label="Technical Implementation Discussion" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-source-strategy">
+<span class="md-ellipsis">
+      Data Source Strategy
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#revenue-datamart-daily-table-structure">
+<span class="md-ellipsis">
+      Revenue Datamart Daily Table Structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-loading-challenges">
+<span class="md-ellipsis">
+      Data Loading Challenges
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-input-requirements">
+<span class="md-ellipsis">
+      Calculation Input Requirements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#integration-points">
+<span class="md-ellipsis">
+      Integration Points
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-validation-concerns">
+<span class="md-ellipsis">
+      Data Validation Concerns
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#development-action-items">
+<span class="md-ellipsis">
+      Development Action Items
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#technical-architecture-implications">
+<span class="md-ellipsis">
+      Technical Architecture Implications
+    </span>
+</a>
+<nav aria-label="Technical Architecture Implications" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-integration-requirements">
+<span class="md-ellipsis">
+      System Integration Requirements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-quality-and-validation">
+<span class="md-ellipsis">
+      Data Quality and Validation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performance-considerations">
+<span class="md-ellipsis">
+      Performance Considerations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-impact-analysis">
+<span class="md-ellipsis">
+      Business Impact Analysis
+    </span>
+</a>
+<nav aria-label="Business Impact Analysis" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#revenue-calculation-accuracy">
+<span class="md-ellipsis">
+      Revenue Calculation Accuracy
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operational-efficiency">
+<span class="md-ellipsis">
+      Operational Efficiency
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#compliance-and-reporting">
+<span class="md-ellipsis">
+      Compliance and Reporting
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#action-items-summary">
+<span class="md-ellipsis">
+      Action Items Summary
+    </span>
+</a>
+<nav aria-label="Action Items Summary" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#immediate-actions">
+<span class="md-ellipsis">
+      Immediate Actions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#medium-term-actions">
+<span class="md-ellipsis">
+      Medium-term Actions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#long-term-actions">
+<span class="md-ellipsis">
+      Long-term Actions
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#related-documentation">
+<span class="md-ellipsis">
+      Related Documentation
+    </span>
+</a>
+<nav aria-label="Related Documentation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#technical-specifications">
+<span class="md-ellipsis">
+      Technical Specifications
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rules">
+<span class="md-ellipsis">
+      Business Rules
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#integration-documentation">
+<span class="md-ellipsis">
+      Integration Documentation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../development-sprint-retrospective-process-improvements-20250731/">
+<span class="md-ellipsis">
+    Development Sprint Retrospective Process Improvements - July 2025
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../sprint28-management-agreement-development-meeting/">
+<span class="md-ellipsis">
+    Sprint 28 Management Agreement Development
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../sprint29-budget-actuals-development-meeting/">
+<span class="md-ellipsis">
+    Sprint 29 Budget vs Actuals Development
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../sprint30-forecasting-variance-development-meeting/">
+<span class="md-ellipsis">
+    Sprint 30 Forecasting Variance Development
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../daily-scrum-development-progress-team-notes/">
+<span class="md-ellipsis">
+    Daily Scrum Development Progress
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-ellipsis">
+    Standards Framework
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            Standards Framework
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../standards/ai-content-safety-checklist/">
+<span class="md-ellipsis">
+    AI Content Safety Checklist
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-ellipsis">
+    Configuration Guides
+    
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+            Configuration Guides
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../configuration/ai-development-tools-configuration-guide/">
+<span class="md-ellipsis">
+    AI Development Tools Configuration Guide
+    
+  </span>
+<span class="md-status md-status--Active"></span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#executive-summary">
+<span class="md-ellipsis">
+      Executive Summary
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#meeting-1-architecture-weekly-sync-2025-08-05">
+<span class="md-ellipsis">
+      Meeting 1: Architecture Weekly Sync (2025-08-05)
+    </span>
+</a>
+<nav aria-label="Meeting 1: Architecture Weekly Sync (2025-08-05)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#participants">
+<span class="md-ellipsis">
+      Participants
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12-month-forecasting-architecture-review">
+<span class="md-ellipsis">
+      12-Month Forecasting Architecture Review
+    </span>
+</a>
+<nav aria-label="12-Month Forecasting Architecture Review" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overall-process-design">
+<span class="md-ellipsis">
+      Overall Process Design
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#process-breakdown-and-requirements">
+<span class="md-ellipsis">
+      Process Breakdown and Requirements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#azure-data-factory-limitations-discussion">
+<span class="md-ellipsis">
+      Azure Data Factory Limitations Discussion
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#load-testing-considerations">
+<span class="md-ellipsis">
+      Load Testing Considerations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#next-steps-from-architecture-meeting">
+<span class="md-ellipsis">
+      Next Steps from Architecture Meeting
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#meeting-2-edw-internal-revenue-current-month-calculations-2025-08-05">
+<span class="md-ellipsis">
+      Meeting 2: EDW Internal Revenue Current Month Calculations (2025-08-05)
+    </span>
+</a>
+<nav aria-label="Meeting 2: EDW Internal Revenue Current Month Calculations (2025-08-05)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#participants_1">
+<span class="md-ellipsis">
+      Participants
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#demo-cancellation-and-issues">
+<span class="md-ellipsis">
+      Demo Cancellation and Issues
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pteb-calculation-logic-deep-dive">
+<span class="md-ellipsis">
+      PTEB Calculation Logic Deep Dive
+    </span>
+</a>
+<nav aria-label="PTEB Calculation Logic Deep Dive" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#account-code-structure">
+<span class="md-ellipsis">
+      Account Code Structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#billing-implementation-details">
+<span class="md-ellipsis">
+      Billing Implementation Details
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#current-month-revenue-calculation-specifications">
+<span class="md-ellipsis">
+      Current Month Revenue Calculation Specifications
+    </span>
+</a>
+<nav aria-label="Current Month Revenue Calculation Specifications" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#external-revenue-query">
+<span class="md-ellipsis">
+      External Revenue Query
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#internal-revenue-calculation-process">
+<span class="md-ellipsis">
+      Internal Revenue Calculation Process
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#payroll-calculation-process">
+<span class="md-ellipsis">
+      Payroll Calculation Process
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#claims-calculation">
+<span class="md-ellipsis">
+      Claims Calculation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parking-rents-calculation">
+<span class="md-ellipsis">
+      Parking Rents Calculation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#other-expense-calculation">
+<span class="md-ellipsis">
+      Other Expense Calculation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pteb-and-insurance-handling">
+<span class="md-ellipsis">
+      PTEB and Insurance Handling
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#front-line-contribution-flc-calculation">
+<span class="md-ellipsis">
+      Front Line Contribution (FLC) Calculation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#flc-budget-variance-cumulative">
+<span class="md-ellipsis">
+      FLC Budget Variance (Cumulative)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#meeting-3-user-story-2655-current-month-internal-revenue-2025-08-04">
+<span class="md-ellipsis">
+      Meeting 3: User Story 2655 - Current Month Internal Revenue (2025-08-04)
+    </span>
+</a>
+<nav aria-label="Meeting 3: User Story 2655 - Current Month Internal Revenue (2025-08-04)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#participants_2">
+<span class="md-ellipsis">
+      Participants
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#user-story-context">
+<span class="md-ellipsis">
+      User Story Context
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#technical-implementation-discussion">
+<span class="md-ellipsis">
+      Technical Implementation Discussion
+    </span>
+</a>
+<nav aria-label="Technical Implementation Discussion" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-source-strategy">
+<span class="md-ellipsis">
+      Data Source Strategy
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#revenue-datamart-daily-table-structure">
+<span class="md-ellipsis">
+      Revenue Datamart Daily Table Structure
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-loading-challenges">
+<span class="md-ellipsis">
+      Data Loading Challenges
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculation-input-requirements">
+<span class="md-ellipsis">
+      Calculation Input Requirements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#integration-points">
+<span class="md-ellipsis">
+      Integration Points
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-validation-concerns">
+<span class="md-ellipsis">
+      Data Validation Concerns
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#development-action-items">
+<span class="md-ellipsis">
+      Development Action Items
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#technical-architecture-implications">
+<span class="md-ellipsis">
+      Technical Architecture Implications
+    </span>
+</a>
+<nav aria-label="Technical Architecture Implications" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#system-integration-requirements">
+<span class="md-ellipsis">
+      System Integration Requirements
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#data-quality-and-validation">
+<span class="md-ellipsis">
+      Data Quality and Validation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#performance-considerations">
+<span class="md-ellipsis">
+      Performance Considerations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-impact-analysis">
+<span class="md-ellipsis">
+      Business Impact Analysis
+    </span>
+</a>
+<nav aria-label="Business Impact Analysis" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#revenue-calculation-accuracy">
+<span class="md-ellipsis">
+      Revenue Calculation Accuracy
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operational-efficiency">
+<span class="md-ellipsis">
+      Operational Efficiency
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#compliance-and-reporting">
+<span class="md-ellipsis">
+      Compliance and Reporting
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#action-items-summary">
+<span class="md-ellipsis">
+      Action Items Summary
+    </span>
+</a>
+<nav aria-label="Action Items Summary" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#immediate-actions">
+<span class="md-ellipsis">
+      Immediate Actions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#medium-term-actions">
+<span class="md-ellipsis">
+      Medium-term Actions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#long-term-actions">
+<span class="md-ellipsis">
+      Long-term Actions
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#related-documentation">
+<span class="md-ellipsis">
+      Related Documentation
+    </span>
+</a>
+<nav aria-label="Related Documentation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#technical-specifications">
+<span class="md-ellipsis">
+      Technical Specifications
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#business-rules">
+<span class="md-ellipsis">
+      Business Rules
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#integration-documentation">
+<span class="md-ellipsis">
+      Integration Documentation
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="architecture-revenue-calculations-team-meeting-notes-august-2025">Architecture &amp; Revenue Calculations Team Meeting Notes - August 2025</h1>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>This document consolidates critical team meeting discussions from August 4-5, 2025, covering architecture decisions for 12-month forecasting, EDW internal revenue calculation specifications, and current month trending implementation details. These meetings established foundational technical approaches for revenue calculation accuracy and system integration.</p>
+<h2 id="meeting-1-architecture-weekly-sync-2025-08-05">Meeting 1: Architecture Weekly Sync (2025-08-05)</h2>
+<h3 id="participants">Participants</h3>
+<ul>
+<li><strong>Cesar Figueroa</strong> - Lead Architect</li>
+<li><strong>Jonathan Aulson</strong> - Development Lead</li>
+<li><strong>Johnn Hesseltine</strong> - Project Manager</li>
+</ul>
+<h3 id="12-month-forecasting-architecture-review">12-Month Forecasting Architecture Review</h3>
+<h4 id="overall-process-design">Overall Process Design</h4>
+<p>Cesar presented the comprehensive architecture for 12-month forecasting with the following key components:</p>
+<ol>
+<li><strong>ETL Process for Daily Detail Data</strong></li>
+<li>Initial forecasting at daily detail level</li>
+<li>Same ETL process stores budget data without changes at monthly level</li>
+<li>
+<p>Triggering process calls Power Automate flow for monitoring</p>
+</li>
+<li>
+<p><strong>Power Automate Flow Integration</strong></p>
+</li>
+<li>Acts as monitor to create patches</li>
+<li>Paginates logic for performing calculations</li>
+<li>
+<p>Calculations stored in Dataverse table for availability across systems</p>
+</li>
+<li>
+<p><strong>Data Distribution</strong></p>
+</li>
+<li>Makes calculated data available for P&amp;L view</li>
+<li>Supports other microservices requiring forecast data</li>
+<li>Centralized storage approach in Dataverse</li>
+</ol>
+<h4 id="process-breakdown-and-requirements">Process Breakdown and Requirements</h4>
+<p>The team divided the process into discrete steps with specific requirements:</p>
+<ul>
+<li><strong>Step-by-step implementation approach</strong> agreed upon</li>
+<li><strong>Sample requirements creation</strong> completed for initial phases</li>
+<li><strong>Validation checkpoints</strong> established for each major component</li>
+</ul>
+<h4 id="azure-data-factory-limitations-discussion">Azure Data Factory Limitations Discussion</h4>
+<p><strong>Current Limitations Identified:</strong>
+- <strong>Evaluation Limits</strong>: Minimum 1000 evaluations per hour supported
+- <strong>Daily Processing Time</strong>: Maximum 8 hours daily for all data flows
+- <strong>Concurrent Processing</strong>: Maximum 1 evaluation concurrently
+- <strong>Documentation Gap</strong>: Azure doesn't publish exact source limits</p>
+<p><strong>Alternative Solutions Explored:</strong>
+- <strong>Data Factory Data Flows</strong>: Alternative approach identified
+- <strong>Current Adequacy</strong>: Present data flows working for current site and row volumes
+- <strong>Future Scalability</strong>: Option to review alternatives if current solution insufficient</p>
+<h4 id="load-testing-considerations">Load Testing Considerations</h4>
+<p><strong>Current Status:</strong>
+- Load testing approach not yet fully formed
+- Testing will be part of process validation
+- Production release will serve as real-world test with 2025 budget data</p>
+<p><strong>Action Items:</strong>
+- Jonathan to develop load testing plan
+- Consider involving Yash in load testing efforts
+- Plan for production release testing with full 2025 dataset</p>
+<h3 id="next-steps-from-architecture-meeting">Next Steps from Architecture Meeting</h3>
+<ol>
+<li><strong>Cesar</strong>: Review Data Factory alternatives if needed</li>
+<li><strong>Cesar</strong>: Document filtering solution based on forecast data presence</li>
+<li><strong>Jonathan</strong>: Coordinate next steps for implementation</li>
+<li><strong>Team</strong>: Continue systematic approach to process development</li>
+</ol>
+<h2 id="meeting-2-edw-internal-revenue-current-month-calculations-2025-08-05">Meeting 2: EDW Internal Revenue Current Month Calculations (2025-08-05)</h2>
+<h3 id="participants_1">Participants</h3>
+<ul>
+<li><strong>Jonathan Aulson</strong> - Development Lead</li>
+<li><strong>Andrew Scheuer</strong> - Developer</li>
+<li><strong>Christopher Thompson</strong> - Business Analyst</li>
+</ul>
+<h3 id="demo-cancellation-and-issues">Demo Cancellation and Issues</h3>
+<ul>
+<li>Demo cancelled due to issues with main client features</li>
+<li>Three bugs registered related to payroll functionality</li>
+<li>Copy feature problems identified and documented</li>
+</ul>
+<h3 id="pteb-calculation-logic-deep-dive">PTEB Calculation Logic Deep Dive</h3>
+<h4 id="account-code-structure">Account Code Structure</h4>
+<p><strong>PTEB Components</strong> (Payroll Tax and Employee Benefits):
+- <strong>Account 6200</strong>: General Ledger component
+- <strong>Account 6399</strong>: General Ledger component<br/>
+- <strong>Account 6500</strong>: General Ledger component
+- <strong>PTEB Total</strong>: Sum of all three accounts (6200 + 6399 + 6500)</p>
+<h4 id="billing-implementation-details">Billing Implementation Details</h4>
+<p><strong>Management Agreement Contracts:</strong>
+- Use specific account codes when actual PTEB enabled
+- Percentage-based calculation for billable payroll
+- Active payroll accounts determine calculation base</p>
+<p><strong>Calculation Methods:</strong>
+1. <strong>Actual PTEB</strong>: Uses three specific GL accounts
+2. <strong>Percentage of Billable Payroll</strong>: Uses active payroll accounts as base
+3. <strong>Budget Integration</strong>: All PTEB accounts get budgeted values</p>
+<h3 id="current-month-revenue-calculation-specifications">Current Month Revenue Calculation Specifications</h3>
+<h4 id="external-revenue-query">External Revenue Query</h4>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="p">[</span><span class="n">SITE</span><span class="p">],</span><span class="w">       </span>
+<span class="w">       </span><span class="k">SUM</span><span class="p">([</span><span class="n">NETEXTERNALREVENUE</span><span class="p">])</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TOTAL_NET_EXTERNAL_REVENUE</span>
+<span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">TP_EDW</span><span class="p">].[</span><span class="n">dbo</span><span class="p">].[</span><span class="n">REVENUE_DAILY_DETAIL</span><span class="p">]</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">[</span><span class="n">SITE</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'0170'</span><span class="w">  </span>
+<span class="w">  </span><span class="k">AND</span><span class="w"> </span><span class="p">[</span><span class="nb">DATE</span><span class="p">]</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w">       </span>
+<span class="w">      </span><span class="n">DATEADD</span><span class="p">(</span><span class="k">MONTH</span><span class="p">,</span><span class="w"> </span><span class="n">DATEDIFF</span><span class="p">(</span><span class="k">MONTH</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">GETDATE</span><span class="p">()),</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="c1">-- First day of current month      </span>
+<span class="w">      </span><span class="k">AND</span><span class="w"> </span><span class="n">GETDATE</span><span class="p">()</span><span class="w"> </span><span class="c1">-- Current date</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="p">[</span><span class="n">SITE</span><span class="p">]</span>
+</code></pre></div>
+<h4 id="internal-revenue-calculation-process">Internal Revenue Calculation Process</h4>
+<p><strong>STEP 1: Retrieve EDW Actual External Revenue</strong>
+- Use REVENUE_DAILY_DETAIL table
+- Filter by site and current month date range
+- Sum NETEXTERNALREVENUE for total</p>
+<p><strong>STEP 2: Retrieve EDW Actual Vehicles and Occupancy Data</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w">    </span><span class="p">[</span><span class="n">SITE</span><span class="p">],</span>
+<span class="w">    </span><span class="p">[</span><span class="nb">DATE</span><span class="p">],</span>
+<span class="w">    </span><span class="p">[</span><span class="n">DW_LOADED_DTTM</span><span class="p">],</span>
+<span class="w">    </span><span class="p">[</span><span class="n">REVENUE_CATEGORY</span><span class="p">],</span>
+<span class="w">    </span><span class="p">[</span><span class="n">VALUE_TYPE</span><span class="p">],</span>
+<span class="w">    </span><span class="k">SUM</span><span class="p">([</span><span class="n">VALUE</span><span class="p">])</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">TOTAL_VALUE</span>
+<span class="k">FROM</span><span class="w">     </span><span class="p">[</span><span class="n">TP_EDW</span><span class="p">].[</span><span class="n">dbo</span><span class="p">].[</span><span class="n">REVENUE_DATAMART_DAILY</span><span class="p">]</span>
+<span class="k">WHERE</span><span class="w">    </span><span class="p">[</span><span class="n">SITE</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'0170'</span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="p">[</span><span class="n">VALUE_TYPE</span><span class="p">]</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">'Other'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Vehicles'</span><span class="p">)</span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="p">[</span><span class="nb">DATE</span><span class="p">]</span><span class="w"> </span><span class="k">BETWEEN</span>
+<span class="w">        </span><span class="n">DATEADD</span><span class="p">(</span><span class="k">MONTH</span><span class="p">,</span><span class="w"> </span><span class="n">DATEDIFF</span><span class="p">(</span><span class="k">MONTH</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">GETDATE</span><span class="p">()),</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="c1">-- First day of current month</span>
+<span class="w">        </span><span class="k">AND</span><span class="w"> </span><span class="n">GETDATE</span><span class="p">()</span><span class="w"> </span><span class="c1">-- Current date</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w">    </span><span class="p">[</span><span class="n">SITE</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="nb">DATE</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="n">DW_LOADED_DTTM</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="n">REVENUE_CATEGORY</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="n">VALUE_TYPE</span><span class="p">]</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w">    </span><span class="p">[</span><span class="nb">DATE</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="n">DW_LOADED_DTTM</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="n">REVENUE_CATEGORY</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="n">VALUE_TYPE</span><span class="p">];</span>
+</code></pre></div></p>
+<p><strong>STEP 3: Use Legion Hours Worked by Job Code Data</strong>
+- Leverage existing payroll tab data
+- Integrate with EDW/Legion actuals</p>
+<p><strong>STEP 4: Perform Calculations with Actual Data</strong>
+- Replace forecasted external revenue with actual external revenue
+- Replace forecasted occupancy with actual occupancy<br/>
+- Replace forecasted payroll hours with actual payroll hours
+- Process on day-per-day basis up to DW_LOADED_DTTM</p>
+<p><strong>STEP 5: Calculate Forecast for Remaining Days</strong>
+- Calculate forecast for days (DW_LOADED_DTTM + 1) through end-of-month
+- Use existing forecasting logic for future days</p>
+<p><strong>STEP 6: Sum Results</strong>
+- Combine actual data (STEP 4) with forecasted data (STEP 5)
+- Provide complete current month trending</p>
+<h4 id="payroll-calculation-process">Payroll Calculation Process</h4>
+<p><strong>STEP 1: Query Actual Payroll to Current Date</strong>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="p">[</span><span class="n">WORK_LOCATION</span><span class="p">]</span>
+<span class="w">    </span><span class="p">,[</span><span class="n">TITLE</span><span class="p">]</span>
+<span class="w">    </span><span class="p">,</span><span class="k">SUM</span><span class="p">([</span><span class="n">TOTAL_DOLLARS</span><span class="p">])</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s1">'ACTUAL_CURRENT_COST'</span><span class="w">  </span>
+<span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">TP_LEGION</span><span class="p">].[</span><span class="n">dbo</span><span class="p">].[</span><span class="n">vwPAYROLL_SUMMARY</span><span class="p">]</span><span class="w">  </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">[</span><span class="n">WORK_LOCATION</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'0170'</span><span class="w">  </span>
+<span class="w">  </span><span class="k">AND</span><span class="w"> </span><span class="p">[</span><span class="nb">DATE</span><span class="p">]</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w">     </span>
+<span class="w">      </span><span class="n">DATEADD</span><span class="p">(</span><span class="k">MONTH</span><span class="p">,</span><span class="w"> </span><span class="n">DATEDIFF</span><span class="p">(</span><span class="k">MONTH</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">GETDATE</span><span class="p">()),</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="c1">-- First day of current month    </span>
+<span class="w">      </span><span class="k">AND</span><span class="w"> </span><span class="n">GETDATE</span><span class="p">()</span><span class="w"> </span><span class="c1">-- Current date</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="p">[</span><span class="n">WORK_LOCATION</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="n">TITLE</span><span class="p">]</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="p">[</span><span class="n">TITLE</span><span class="p">]</span>
+</code></pre></div></p>
+<p><strong>STEP 2: Query Dataverse for Forecasted Payroll</strong>
+- Retrieve forecasted payroll from DW_LOADED_DTTM date through end-of-month
+- Use existing Dataverse forecasting tables</p>
+<p><strong>STEP 3: Combine Actual and Forecasted</strong>
+- Add results of Step 1 (actual) and Step 2 (forecasted)
+- Provide complete current month payroll trending</p>
+<h4 id="claims-calculation">Claims Calculation</h4>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">SUM</span><span class="p">([</span><span class="n">BALANCE</span><span class="p">])</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">ACTUAL_CURRENT_CLAIMS</span>
+<span class="k">FROM</span><span class="w"> </span><span class="p">[</span><span class="n">TP_EDW</span><span class="p">].[</span><span class="n">dbo</span><span class="p">].[</span><span class="n">ACCOUNT_SUMMARY</span><span class="p">]</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">actual</span>
+<span class="k">JOIN</span><span class="w"> </span><span class="p">[</span><span class="n">TP_EDW</span><span class="p">].[</span><span class="n">dbo</span><span class="p">].[</span><span class="n">CHART_OF_ACCOUNT</span><span class="p">]</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">coa</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">actual</span><span class="p">.</span><span class="n">MAIN_ACCOUNT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coa</span><span class="p">.</span><span class="n">MAIN_ACCOUNT</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">[</span><span class="n">COST_CENTER</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'0170'</span>
+<span class="w">  </span><span class="k">AND</span><span class="w"> </span><span class="p">[</span><span class="k">PERIOD</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FORMAT</span><span class="p">(</span><span class="n">GETDATE</span><span class="p">(),</span><span class="w"> </span><span class="s1">'yyyyMM'</span><span class="p">)</span><span class="w"> </span><span class="c1">-- Dynamically get current period in YYYYMM format</span>
+<span class="w">  </span><span class="k">AND</span><span class="w"> </span><span class="p">[</span><span class="n">IS_SUMMARY_CATEGORY</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'CLAIMS'</span>
+</code></pre></div>
+<h4 id="parking-rents-calculation">Parking Rents Calculation</h4>
+<ul>
+<li>Compare Account_Summary and Other_Expenses (Parking Rents) forecast</li>
+<li>Display the greater of the two values</li>
+<li>Ensure accurate trending for parking rent expenses</li>
+</ul>
+<h4 id="other-expense-calculation">Other Expense Calculation</h4>
+<ul>
+<li>Same logic as Parking Rents</li>
+<li>Exclude specific account ranges:</li>
+<li>Parking Rents accounts</li>
+<li>Claims (4 accounts)</li>
+<li>Insurance (3 accounts)</li>
+<li>Focus on accounts 7000-7999 excluding specified exceptions</li>
+</ul>
+<h4 id="pteb-and-insurance-handling">PTEB and Insurance Handling</h4>
+<ul>
+<li><strong>PTEB</strong>: No current month calculation - show budgeted until month actualizes</li>
+<li><strong>Insurance</strong>: No current month calculation - show forecast until actual value appears</li>
+<li>Both actualize only after month end</li>
+</ul>
+<h4 id="front-line-contribution-flc-calculation">Front Line Contribution (FLC) Calculation</h4>
+<div class="highlight"><pre><span></span><code>FLC = [Trending Internal Revenue] 
+    - [Trending Payroll] 
+    - [Trending Claims] 
+    - [Trending Parking Rents] 
+    - [Trending Other Expenses] 
+    - [Trending PTEB] 
+    - [Trending Insurance]
+</code></pre></div>
+<h4 id="flc-budget-variance-cumulative">FLC Budget Variance (Cumulative)</h4>
+<div class="highlight"><pre><span></span><code>FLC $ to Budget = [Trending FLC $] - [Budgeted FLC $]
+</code></pre></div>
+<h2 id="meeting-3-user-story-2655-current-month-internal-revenue-2025-08-04">Meeting 3: User Story 2655 - Current Month Internal Revenue (2025-08-04)</h2>
+<h3 id="participants_2">Participants</h3>
+<ul>
+<li><strong>Jonathan Aulson</strong> - Development Lead</li>
+<li><strong>Andrew Scheuer</strong> - Developer</li>
+</ul>
+<h3 id="user-story-context">User Story Context</h3>
+<ul>
+<li><strong>Story ID</strong>: 2655</li>
+<li><strong>Focus</strong>: Current month internal revenue calculation implementation</li>
+<li><strong>Duration</strong>: 14 minutes 47 seconds</li>
+<li><strong>Status</strong>: Active development</li>
+</ul>
+<h3 id="technical-implementation-discussion">Technical Implementation Discussion</h3>
+<h4 id="data-source-strategy">Data Source Strategy</h4>
+<p><strong>Primary Challenge</strong>: Transition from monthly summary data to daily calculation approach
+- <strong>Previous Approach</strong>: Query account summary for monthly totals
+- <strong>New Approach</strong>: Calculate using daily actuals combined with forecasted data
+- <strong>Complexity</strong>: Requires real-time calculation rather than simple data retrieval</p>
+<h4 id="revenue-datamart-daily-table-structure">Revenue Datamart Daily Table Structure</h4>
+<p><strong>Key Table</strong>: <code>[TP_EDW].[dbo].[REVENUE_DATAMART_DAILY]</code></p>
+<p><strong>Table Design:</strong>
+- <strong>Single Value Column</strong>: All numeric data stored in one column
+- <strong>Value Type Indicator</strong>: Distinguishes between vehicle counts, occupancy, and revenue
+- <strong>Revenue Category Alignment</strong>: Maps to existing statistics categories
+- <strong>Daily Granularity</strong>: Supports day-by-day calculation requirements</p>
+<p><strong>Value Types:</strong>
+- <strong>"Revenue"</strong>: External revenue amounts for calculation input
+- <strong>"Vehicles"</strong>: Vehicle count data for occupancy calculations
+- <strong>"Other"</strong>: Occupancy numbers for per-occupied-room calculations</p>
+<h4 id="data-loading-challenges">Data Loading Challenges</h4>
+<p><strong>File Submission Issues:</strong>
+- Sites may submit empty files with zero values
+- Date loaded timestamp doesn't guarantee data presence
+- Must validate actual data values, not just file submission</p>
+<p><strong>Data Validation Logic:</strong>
+- Find most recent record with value &gt; 0
+- Consider entire day as loaded when valid data found
+- Cannot rely solely on DW_LOADED_DTTM for data availability</p>
+<h4 id="calculation-input-requirements">Calculation Input Requirements</h4>
+<p><strong>For Internal Revenue Calculation:</strong>
+1. <strong>Net External Revenue</strong>: Sum all revenue value types for all categories and adjustments
+2. <strong>Occupancy Data</strong>: Use "Other" value type for per-occupied-room calculations
+3. <strong>Vehicle Counts</strong>: Use "Vehicles" value type for capacity calculations
+4. <strong>Payroll Data</strong>: Integrate with Legion payroll system for actual hours</p>
+<h4 id="integration-points">Integration Points</h4>
+<p><strong>Revenue Datamart Daily Table:</strong>
+- Contains revenue, occupancy, and vehicle data
+- Single source for multiple calculation inputs
+- Daily granularity supports trending requirements</p>
+<p><strong>Legion Payroll Integration:</strong>
+- Separate data source for actual payroll costs
+- Daily level payroll data available
+- Integration required for complete calculation</p>
+<h4 id="data-validation-concerns">Data Validation Concerns</h4>
+<p>Jonathan identified potential discrepancy between:
+- External revenue from REVENUE_DATAMART_DAILY table
+- Net external revenue from REVENUE_DAILY_DETAIL table
+- Requires investigation to ensure data consistency</p>
+<h3 id="development-action-items">Development Action Items</h3>
+<ol>
+<li><strong>Andrew</strong>: Identify missing daily data components in current codebase</li>
+<li><strong>Andrew</strong>: Research data availability across required tables</li>
+<li><strong>Jonathan</strong>: Investigate revenue data discrepancies between tables</li>
+<li><strong>Team</strong>: Validate calculation inputs against existing forecast logic</li>
+</ol>
+<h2 id="technical-architecture-implications">Technical Architecture Implications</h2>
+<h3 id="system-integration-requirements">System Integration Requirements</h3>
+<p><strong>EDW Integration:</strong>
+- Primary data source for external revenue and occupancy data
+- Real-time data availability validation required
+- Multiple table coordination for complete calculations</p>
+<p><strong>Legion Integration:</strong>
+- Payroll data source for actual labor costs
+- Daily granularity payroll information
+- Integration with forecasting calculations</p>
+<p><strong>Dataverse Integration:</strong>
+- Centralized storage for calculated forecasting data
+- Power Automate flow coordination
+- Cross-system data availability</p>
+<p><strong>Power Platform Integration:</strong>
+- Power Automate flows for calculation orchestration
+- Monitoring and patch creation capabilities
+- Pagination logic for large data processing</p>
+<h3 id="data-quality-and-validation">Data Quality and Validation</h3>
+<p><strong>Data Consistency Challenges:</strong>
+- Multiple revenue data sources requiring reconciliation
+- File submission vs. actual data validation
+- Real-time calculation accuracy requirements</p>
+<p><strong>Validation Protocols:</strong>
+- Cross-table data verification
+- Value presence validation beyond timestamp checks
+- Calculation accuracy verification against business rules</p>
+<h3 id="performance-considerations">Performance Considerations</h3>
+<p><strong>Azure Data Factory Limitations:</strong>
+- Processing time constraints (8 hours daily maximum)
+- Concurrent processing limitations (1 evaluation)
+- Evaluation volume constraints (1000+ per hour)</p>
+<p><strong>Scalability Planning:</strong>
+- Alternative processing approaches identified
+- Load testing requirements established
+- Production testing with full 2025 dataset planned</p>
+<h2 id="business-impact-analysis">Business Impact Analysis</h2>
+<h3 id="revenue-calculation-accuracy">Revenue Calculation Accuracy</h3>
+<ul>
+<li><strong>Current Month Trending</strong>: Real-time revenue calculation capability</li>
+<li><strong>Forecasting Integration</strong>: Seamless actual-to-forecast transition</li>
+<li><strong>Business Intelligence</strong>: Enhanced P&amp;L view accuracy</li>
+</ul>
+<h3 id="operational-efficiency">Operational Efficiency</h3>
+<ul>
+<li><strong>Automated Calculations</strong>: Reduced manual calculation requirements</li>
+<li><strong>Real-time Updates</strong>: Current month trending capabilities</li>
+<li><strong>Cross-system Integration</strong>: Unified data processing approach</li>
+</ul>
+<h3 id="compliance-and-reporting">Compliance and Reporting</h3>
+<ul>
+<li><strong>PTEB Calculations</strong>: Accurate payroll tax and benefits calculations</li>
+<li><strong>Financial Reporting</strong>: Enhanced accuracy for management agreements</li>
+<li><strong>Audit Trail</strong>: Comprehensive calculation documentation</li>
+</ul>
+<h2 id="action-items-summary">Action Items Summary</h2>
+<h3 id="immediate-actions">Immediate Actions</h3>
+<ol>
+<li><strong>Architecture Team</strong>: Finalize 12-month forecasting ETL design</li>
+<li><strong>Development Team</strong>: Complete User Story 2655 implementation</li>
+<li><strong>Data Team</strong>: Resolve revenue data discrepancies between EDW tables</li>
+<li><strong>QA Team</strong>: Develop load testing strategy for production release</li>
+</ol>
+<h3 id="medium-term-actions">Medium-term Actions</h3>
+<ol>
+<li><strong>Infrastructure</strong>: Evaluate Azure Data Factory alternatives if needed</li>
+<li><strong>Development</strong>: Implement Power Automate calculation flows</li>
+<li><strong>Testing</strong>: Prepare for production testing with 2025 budget data</li>
+<li><strong>Documentation</strong>: Update technical specifications based on implementation</li>
+</ol>
+<h3 id="long-term-actions">Long-term Actions</h3>
+<ol>
+<li><strong>Architecture</strong>: Scale solution for increased data volumes</li>
+<li><strong>Performance</strong>: Optimize calculation performance for real-time trending</li>
+<li><strong>Integration</strong>: Enhance EDW-Legion-Dataverse data synchronization</li>
+<li><strong>Monitoring</strong>: Implement comprehensive data quality monitoring</li>
+</ol>
+<h2 id="related-documentation">Related Documentation</h2>
+<h3 id="technical-specifications">Technical Specifications</h3>
+<ul>
+<li><a href="../../technical-specifications/towne-park-forecasting-system-comprehensive-master-architecture/">Towne Park Forecasting System Comprehensive Master Architecture</a></li>
+<li><a href="../../technical-specifications/revenue-datamart-daily-data-model/">Revenue Datamart Daily Data Model</a></li>
+</ul>
+<h3 id="business-rules">Business Rules</h3>
+<ul>
+<li><a href="../../business-rules/management-agreement-contract-configuration-business-rules/">Management Agreement Contract Configuration Business Rules</a></li>
+</ul>
+<h3 id="integration-documentation">Integration Documentation</h3>
+<ul>
+<li>EDW Integration Technical Specifications</li>
+<li>Legion Payroll Integration Documentation</li>
+<li>Power Platform Solution Architecture</li>
+</ul>
+<hr/>
+<p><em>This meeting documentation captures critical architecture decisions and technical specifications for revenue calculation accuracy and system integration. All SQL queries and calculation logic should be validated against actual implementation in the source code.</em></p>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="Last update">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 8, 2025 21:48:01 UTC">August 8, 2025</span>
+</span>
+</aside>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+<script src="../../../javascripts/extra.js"></script>
+</body>
+</html>
